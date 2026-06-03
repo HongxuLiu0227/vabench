@@ -26,7 +26,7 @@ def _configure_file_handler(logger: logging.Logger, formatter: logging.Formatter
 
 def get_logger(name: Optional[str] = None) -> logging.Logger:
     """Return a logger with a consistent formatter across the pipeline."""
-    logger = logging.getLogger(name if name else "multi-agent-new")
+    logger = logging.getLogger(name if name else "multi_agent_new")
     if logger.handlers:
         return logger
 

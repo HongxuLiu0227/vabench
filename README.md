@@ -73,7 +73,7 @@ node render-project.js --project ../generated-react-app/project-name --output ..
 
 ### 1. 环境变量
 
-`multi-agent-react-gen` 与 `multi-agent-new` 都通过 `.env` 读取 LLM 相关配置，至少需要设置 `LLM_KEY`、`MODEL_NAME` 与 `LLM_BASE_URL`。
+`multi-agent-react-gen` 与 `multi_agent_new` 都通过 `.env` 读取 LLM 相关配置，至少需要设置 `LLM_KEY`、`MODEL_NAME` 与 `LLM_BASE_URL`。
 
 ### 2. 批量生成需求 Prompt
 

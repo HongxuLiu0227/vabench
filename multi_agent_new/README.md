@@ -28,7 +28,7 @@ Every gate produces actionable diagnostics so agents can regenerate precise segm
 ## Package Layout
 
 ```
-multi-agent-new/
+multi_agent_new/
 ├── README.md
 ├── __init__.py
 ├── config.py
