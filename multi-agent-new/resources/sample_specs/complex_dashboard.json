@@ -1,0 +1,33 @@
+{
+  "title": "Global Operations Insight Hub",
+  "personas": [
+    "Chief Operations Officer",
+    "Regional Manager",
+    "Data Analyst"
+  ],
+  "modules": [
+    {
+      "name": "Executive Overview",
+      "widgets": ["KPIGrid", "TrendChart", "AlertFeed"],
+      "description": "High-level operational indicators across regions with real-time updates."
+    },
+    {
+      "name": "Command Center",
+      "widgets": ["ResourceTable", "IncidentMap", "ActionDrawer"],
+      "description": "Manage incidents, assign owners, and visualize resource allocations."
+    },
+    {
+      "name": "Forecast Lab",
+      "widgets": ["ScenarioSimulator", "VarianceWaterfall", "RiskRadar"],
+      "description": "Explore forecasting scenarios and monitor variance drivers."
+    }
+  ],
+  "data_models": [
+    "Region",
+    "Incident",
+    "Resource",
+    "MetricSnapshot"
+  ],
+  "ant_patterns": ["Layout", "Grid", "Descriptions", "Statistic", "Card", "Tabs"]
+}
+
