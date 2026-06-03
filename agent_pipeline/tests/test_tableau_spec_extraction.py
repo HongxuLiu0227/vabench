@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from multi_agent_new.agents.tableau_requirement_generation_agent import (
+from agent_pipeline.agents.tableau_requirement_generation_agent import (
     derive_tableau_render_contract,
     extract_tableau_structured_spec,
     prepare_tableau_data_assets,

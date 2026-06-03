@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from multi_agent_new.logging_config import get_logger as _shared_get_logger
+from agent_pipeline.logging_config import get_logger as _shared_get_logger
 
 
 

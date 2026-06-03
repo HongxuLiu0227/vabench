@@ -6,11 +6,11 @@ import uuid
 from pathlib import Path
 from typing import Dict, Optional
 
-from multi_agent_new.cli_runner import ClaudeDriver, ClaudeDriverError
-from multi_agent_new.pipeline.context import PipelineState
-from multi_agent_new.pipeline.stage import PipelineStage, StageOutput
-from multi_agent_new.pipeline.utils import ensure_directory
-from multi_agent_new.snippets import summarize_snippet
+from agent_pipeline.cli_runner import ClaudeDriver, ClaudeDriverError
+from agent_pipeline.pipeline.context import PipelineState
+from agent_pipeline.pipeline.stage import PipelineStage, StageOutput
+from agent_pipeline.pipeline.utils import ensure_directory
+from agent_pipeline.snippets import summarize_snippet
 
 from ...config import PipelineConfig
 from ...logging_config import get_logger

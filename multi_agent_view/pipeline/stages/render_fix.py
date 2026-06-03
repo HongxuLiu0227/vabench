@@ -6,10 +6,10 @@ import subprocess
 from pathlib import Path
 from typing import List
 
-from multi_agent_new.pipeline.context import PipelineState
-from multi_agent_new.pipeline.knowledge_base import KnowledgeBase
-from multi_agent_new.pipeline.stage import PipelineStage, StageOutput
-from multi_agent_new.pipeline.utils import ensure_directory
+from agent_pipeline.pipeline.context import PipelineState
+from agent_pipeline.pipeline.knowledge_base import KnowledgeBase
+from agent_pipeline.pipeline.stage import PipelineStage, StageOutput
+from agent_pipeline.pipeline.utils import ensure_directory
 
 from ...config import PipelineConfig
 from ...logging_config import get_logger

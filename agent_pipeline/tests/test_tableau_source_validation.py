@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from multi_agent_new.pipeline.tableau_source_validation import validate_tableau_source
+from agent_pipeline.pipeline.tableau_source_validation import validate_tableau_source
 
 
 def _write_contract(path: Path) -> None:

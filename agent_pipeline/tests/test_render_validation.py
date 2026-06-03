@@ -3,13 +3,13 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
-from multi_agent_new.config import build_default_config
-from multi_agent_new.pipeline.context import PipelinePaths, PipelineState, WorkspaceArtifact
-from multi_agent_new.pipeline.knowledge_base import KnowledgeBase
-from multi_agent_new.pipeline.orchestrator import PipelineOrchestrator
-from multi_agent_new.pipeline.stage import PipelineStage, StageOutput
-from multi_agent_new.pipeline.stages.quality_assurance import QualityAssuranceStage
-from multi_agent_new.pipeline.stages.render_fix import RenderFixStage, _build_render_validation
+from agent_pipeline.config import build_default_config
+from agent_pipeline.pipeline.context import PipelinePaths, PipelineState, WorkspaceArtifact
+from agent_pipeline.pipeline.knowledge_base import KnowledgeBase
+from agent_pipeline.pipeline.orchestrator import PipelineOrchestrator
+from agent_pipeline.pipeline.stage import PipelineStage, StageOutput
+from agent_pipeline.pipeline.stages.quality_assurance import QualityAssuranceStage
+from agent_pipeline.pipeline.stages.render_fix import RenderFixStage, _build_render_validation
 
 
 def test_build_render_validation_flags_expected_failures(tmp_path):
@@ -55,7 +55,7 @@ def test_render_fix_preflight_reports_missing_node(tmp_path, monkeypatch):
     )
     config = build_default_config()
     knowledge_base = KnowledgeBase(tmp_path)
-    monkeypatch.setattr("multi_agent_new.pipeline.stages.render_fix.resolve_node_executable", lambda: None)
+    monkeypatch.setattr("agent_pipeline.pipeline.stages.render_fix.resolve_node_executable", lambda: None)
 
     output = RenderFixStage().execute(state, config, knowledge_base)
 
@@ -105,8 +105,8 @@ def test_render_fix_retries_port_collision(tmp_path, monkeypatch):
             stderr="",
         )
 
-    monkeypatch.setattr("multi_agent_new.pipeline.stages.render_fix.resolve_node_executable", lambda: Path("/usr/bin/node"))
-    monkeypatch.setattr("multi_agent_new.pipeline.stages.render_fix.subprocess.run", fake_run)
+    monkeypatch.setattr("agent_pipeline.pipeline.stages.render_fix.resolve_node_executable", lambda: Path("/usr/bin/node"))
+    monkeypatch.setattr("agent_pipeline.pipeline.stages.render_fix.subprocess.run", fake_run)
 
     output = RenderFixStage().execute(state, config, knowledge_base)
     validation = output.state_updates["extras"]["render_fix_validation"]

@@ -73,7 +73,7 @@ node render-project.js --project ../generated-react-app/project-name --output ..
 
 ### 1. 环境变量
 
-`multi-agent-react-gen` 与 `multi_agent_new` 都通过 `.env` 读取 LLM 相关配置，至少需要设置 `LLM_KEY`、`MODEL_NAME` 与 `LLM_BASE_URL`。
+`multi-agent-react-gen` 与 `agent_pipeline` 都通过 `.env` 读取 LLM 相关配置，至少需要设置 `LLM_KEY`、`MODEL_NAME` 与 `LLM_BASE_URL`。
 
 ### 2. 批量生成需求 Prompt
 
@@ -103,7 +103,7 @@ python3 multi_agent_batch_runner.py \
 
 ### 4. 执行并生成项目
 
-确认无误后去掉 `--dry-run`，脚本会并行调用 `python -m multi_agent_new.cli run`，将每条需求写入独立的输出目录：
+确认无误后去掉 `--dry-run`，脚本会并行调用 `python -m agent_pipeline.cli run`，将每条需求写入独立的输出目录：
 
 ```bash
 python3 multi_agent_batch_runner.py \

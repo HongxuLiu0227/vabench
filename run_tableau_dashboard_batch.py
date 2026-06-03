@@ -68,7 +68,7 @@ def parse_args() -> argparse.Namespace:
         "--python",
         type=str,
         default=sys.executable,
-        help="Python executable used to invoke `python -m multi_agent_new.cli run`.",
+        help="Python executable used to invoke `python -m agent_pipeline.cli run`.",
     )
     parser.add_argument(
         "--force",
@@ -130,7 +130,7 @@ def build_command(
     command = [
         python_exec,
         "-m",
-        "multi_agent_new.cli",
+        "agent_pipeline.cli",
         "run",
         "--tableau",
         display_path(tableau_dir, repo_dir),

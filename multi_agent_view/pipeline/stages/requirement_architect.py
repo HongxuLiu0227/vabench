@@ -5,9 +5,9 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List
 
-from multi_agent_new.pipeline.context import PipelineState, ProductSpec
-from multi_agent_new.pipeline.stage import PipelineStage, StageOutput
-from multi_agent_new.pipeline.utils import ensure_directory
+from agent_pipeline.pipeline.context import PipelineState, ProductSpec
+from agent_pipeline.pipeline.stage import PipelineStage, StageOutput
+from agent_pipeline.pipeline.utils import ensure_directory
 
 from ...config import PipelineConfig
 from ...logging_config import get_logger

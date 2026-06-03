@@ -7,12 +7,12 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, List, Optional
 
-from multi_agent_new.pipeline.context import PipelinePaths, PipelineState
-from multi_agent_new.pipeline.knowledge_base import KnowledgeBase
-from multi_agent_new.pipeline.metrics import PipelineMetrics
-from multi_agent_new.pipeline.scheduler import PipelineScheduler
-from multi_agent_new.pipeline.stage import PipelineStage, StageResult
-from multi_agent_new.snippets import load_snippet_library
+from agent_pipeline.pipeline.context import PipelinePaths, PipelineState
+from agent_pipeline.pipeline.knowledge_base import KnowledgeBase
+from agent_pipeline.pipeline.metrics import PipelineMetrics
+from agent_pipeline.pipeline.scheduler import PipelineScheduler
+from agent_pipeline.pipeline.stage import PipelineStage, StageResult
+from agent_pipeline.snippets import load_snippet_library
 
 from ..config import PipelineConfig, build_default_config, load_config
 from ..logging_config import get_logger

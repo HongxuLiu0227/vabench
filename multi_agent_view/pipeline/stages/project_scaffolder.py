@@ -8,10 +8,10 @@ import uuid
 from pathlib import Path
 from typing import Dict
 
-from multi_agent_new.agents.scaffold_agent import scaffold_with_vite
-from multi_agent_new.pipeline.context import PipelineState, WorkspaceArtifact
-from multi_agent_new.pipeline.stage import PipelineStage, StageOutput
-from multi_agent_new.pipeline.utils import ensure_directory
+from agent_pipeline.agents.scaffold_agent import scaffold_with_vite
+from agent_pipeline.pipeline.context import PipelineState, WorkspaceArtifact
+from agent_pipeline.pipeline.stage import PipelineStage, StageOutput
+from agent_pipeline.pipeline.utils import ensure_directory
 
 from ...config import PipelineConfig
 from ...logging_config import get_logger

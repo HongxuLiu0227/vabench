@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, Optional
 
-from multi_agent_new.config import (
+from agent_pipeline.config import (
     ComplexityThresholds,
     PipelineConfig,
     RuntimeFlags,

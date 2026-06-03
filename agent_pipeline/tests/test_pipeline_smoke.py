@@ -5,7 +5,7 @@ import shutil
 
 import pytest
 
-from multi_agent_new.pipeline import PipelineOrchestrator
+from agent_pipeline.pipeline import PipelineOrchestrator
 
 
 def test_pipeline_smoke(tmp_path):

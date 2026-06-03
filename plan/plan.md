@@ -6,7 +6,7 @@
 
 ## 1. 修复 `tableau_source_validation.py` 的 false positive 误报
 
-**文件**: `multi_agent_new/pipeline/tableau_source_validation.py`
+**文件**: `agent_pipeline/pipeline/tableau_source_validation.py`
 
 **问题**: `extract_contract_field_names` 将 `Name` 错误归类为 `numeric_fields`（因为出现在 `[cnt:Name:qk]` 中），导致 `inspect_csv_dataset` 对 `Name` 列做数值解析率检查，`parse_ratio=0.00` 触发 `csv_numeric_parse_risk` 错误。实际上 `Name` 是字符串列。
 
@@ -22,7 +22,7 @@
 
 ## 2. 添加断短路机制 (Circuit Breaker)
 
-**文件**: `multi_agent_new/pipeline/stages/tableau_source_compliance.py`
+**文件**: `agent_pipeline/pipeline/stages/tableau_source_compliance.py`
 
 **问题**: `tableau_source_compliance` 阶段连续 3 次尝试失败在同一类错误上，但重试循环没有检测停滞，每次都用相同的 instruction 和相同的验证器，浪费了 1068s 和 3 次 API 调用。
 
@@ -37,8 +37,8 @@
 ## 3. 数据加载策略：原始 CSV → 预聚合 JSON（推荐）
 
 **涉及文件**:
-- `multi_agent_new/agents/tableau_requirement_generation_agent.py`（`prepare_tableau_data_assets`）
-- `multi_agent_new/pipeline/stages/requirement_architect.py`
+- `agent_pipeline/agents/tableau_requirement_generation_agent.py`（`prepare_tableau_data_assets`）
+- `agent_pipeline/pipeline/stages/requirement_architect.py`
 - 生成项目的 `src/services/dataLoader.ts`
 - 生成项目的 `src/hooks/useData.ts`
 - 生成项目的 `src/pages/Dashboard.tsx`

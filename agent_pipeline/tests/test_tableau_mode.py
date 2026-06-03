@@ -3,10 +3,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from multi_agent_new.config import build_default_config
-from multi_agent_new.pipeline.context import PipelinePaths, PipelineState
-from multi_agent_new.pipeline.knowledge_base import KnowledgeBase
-from multi_agent_new.pipeline.stages.requirement_architect import RequirementArchitectStage
+from agent_pipeline.config import build_default_config
+from agent_pipeline.pipeline.context import PipelinePaths, PipelineState
+from agent_pipeline.pipeline.knowledge_base import KnowledgeBase
+from agent_pipeline.pipeline.stages.requirement_architect import RequirementArchitectStage
 
 
 def test_tableau_mode_copies_data_and_injects_sample(tmp_path, monkeypatch):

@@ -28,7 +28,7 @@ Every gate produces actionable diagnostics so agents can regenerate precise segm
 ## Package Layout
 
 ```
-multi_agent_new/
+agent_pipeline/
 ├── README.md
 ├── __init__.py
 ├── config.py
@@ -77,7 +77,7 @@ multi_agent_new/
 ## Quick Start
 
 ```bash
-python3 -m multi_agent_new.cli run \
+python3 -m agent_pipeline.cli run \
   --prompt "Complex Ant Design operations control center dashboard" \
   --output-dir generated-react-apps/complex-spa
 ```
@@ -87,7 +87,7 @@ python3 -m multi_agent_new.cli run \
 If you have a Tableau export directory that contains a `.twb` workbook (and optionally a `data/` folder with CSV/JSON files), you can run the pipeline in Tableau replication mode:
 
 ```bash
-python3 -m multi_agent_new.cli run \
+python3 -m agent_pipeline.cli run \
   --tableau output/dashboard/output_twbx/19_dash_dashboard0.png__Nihad_dashboard \
   --output-dir generated-react-apps/tableau-dashboard
 ```

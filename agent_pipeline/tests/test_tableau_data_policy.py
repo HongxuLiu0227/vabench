@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from multi_agent_new.config import build_default_config
-from multi_agent_new.pipeline.context import PipelinePaths, PipelineState
-from multi_agent_new.pipeline.stages.claude_cli_stages import (
+from agent_pipeline.config import build_default_config
+from agent_pipeline.pipeline.context import PipelinePaths, PipelineState
+from agent_pipeline.pipeline.stages.claude_cli_stages import (
     FirstGenerationStage,
     PlaceholderFixStage,
     build_snippet_context,

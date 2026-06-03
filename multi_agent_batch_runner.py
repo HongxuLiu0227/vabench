@@ -128,7 +128,7 @@ def build_tasks_from_prompt_files(prompt_files: Iterable[str]) -> List[BatchTask
 
 
 def run_task(task: BatchTask) -> None:
-    cmd = ["python", "-m", "multi_agent_new.cli", "run"]
+    cmd = ["python", "-m", "agent_pipeline.cli", "run"]
     if task.prompt is not None:
         cmd.extend(["--prompt", task.prompt])
     elif task.prompt_file is not None:
