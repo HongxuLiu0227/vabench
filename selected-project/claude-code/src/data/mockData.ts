@@ -1,0 +1,78 @@
+import { Post, User } from '../types';
+
+export const mockPosts: Post[] = [
+  {
+    id: '1',
+    authorId: '1',
+    content: 'Just launched my new React project! 🚀 So excited to share this with everyone. #reactjs #typescript #webdev',
+    media: ['https://via.placeholder.com/600x400'],
+    hashtags: ['reactjs', 'typescript', 'webdev'],
+    likes: ['2', '3'],
+    createdAt: '2023-01-01T10:00:00Z',
+    updatedAt: '2023-01-01T10:00:00Z',
+  },
+  {
+    id: '2',
+    authorId: '2',
+    content: 'Beautiful sunset at the beach today! 🌅 #nature #photography',
+    media: ['https://via.placeholder.com/600x400/FF6B6B/FFFFFF'],
+    hashtags: ['nature', 'photography'],
+    likes: ['1'],
+    createdAt: '2023-01-01T12:30:00Z',
+    updatedAt: '2023-01-01T12:30:00Z',
+  },
+  {
+    id: '3',
+    authorId: '1',
+    content: 'Working on some exciting new features for our social platform. Stay tuned! #socialmedia #tech',
+    hashtags: ['socialmedia', 'tech'],
+    likes: [],
+    createdAt: '2023-01-01T15:45:00Z',
+    updatedAt: '2023-01-01T15:45:00Z',
+  },
+];
+
+export const mockUsers: User[] = [
+  {
+    id: '1',
+    username: 'john_doe',
+    email: 'john@example.com',
+    fullName: 'John Doe',
+    bio: 'Software developer and tech enthusiast',
+    profilePicture: 'https://via.placeholder.com/150',
+    coverPhoto: 'https://via.placeholder.com/800x200',
+    gender: 'male',
+    dateOfBirth: '1990-01-01',
+    location: 'New York, NY',
+    privacySettings: {
+      profileVisibility: 'public',
+      friendRequests: 'everyone',
+      commentVisibility: 'everyone',
+      messageVisibility: 'friends',
+    },
+    role: 'user',
+    createdAt: '2023-01-01T00:00:00Z',
+    updatedAt: '2023-01-01T00:00:00Z',
+  },
+  {
+    id: '2',
+    username: 'admin_user',
+    email: 'admin@example.com',
+    fullName: 'Admin User',
+    bio: 'System administrator',
+    profilePicture: 'https://via.placeholder.com/150',
+    coverPhoto: 'https://via.placeholder.com/800x200',
+    gender: 'other',
+    dateOfBirth: '1985-01-01',
+    location: 'San Francisco, CA',
+    privacySettings: {
+      profileVisibility: 'public',
+      friendRequests: 'everyone',
+      commentVisibility: 'everyone',
+      messageVisibility: 'everyone',
+    },
+    role: 'admin',
+    createdAt: '2023-01-01T00:00:00Z',
+    updatedAt: '2023-01-01T00:00:00Z',
+  },
+];

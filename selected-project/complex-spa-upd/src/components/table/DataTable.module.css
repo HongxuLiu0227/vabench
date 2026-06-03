@@ -1,0 +1,50 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: white;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dataTable th, .dataTable td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.dataTable th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.sortableHeader {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sortableHeader:hover {
+  background-color: #e9ecef;
+}
+
+.tableRow:hover {
+  background-color: #f8f9fa;
+}
+
+.roleBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #e3f2fd;
+  color: #1976d2;
+}

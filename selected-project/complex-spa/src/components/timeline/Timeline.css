@@ -1,0 +1,65 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-event {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-left: 3px solid #1890ff;
+  background-color: #fafafa;
+  border-radius: 4px;
+}
+
+.timeline-event:hover {
+  background-color: #f0f0f0;
+}
+
+.timeline-event-date {
+  font-weight: 500;
+  color: #1890ff;
+  min-width: 100px;
+}
+
+.timeline-event-content {
+  flex: 1;
+}
+
+.timeline-event-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.timeline-event-description {
+  color: #666;
+  font-size: 14px;
+}
+
+.timeline-event-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.timeline-event-action {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timeline-event-action.primary {
+  background-color: #1890ff;
+  color: white;
+}
+
+.timeline-event-action.secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}

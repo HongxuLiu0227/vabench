@@ -1,0 +1,115 @@
+.timelineContainer {
+  --primary-color: #4f46e5;
+  --completed-color: #10b981;
+  --in-progress-color: #f59e0b;
+  --upcoming-color: #94a3b8;
+  --text-color: #1e293b;
+  --bg-color: #ffffff;
+  --border-radius: 0.5rem;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e2e8f0;
+}
+
+.event {
+  position: relative;
+  padding: 1rem 0 1rem 2rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.eventMarker {
+  position: absolute;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--upcoming-color);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.event.completed .eventMarker {
+  background-color: var(--completed-color);
+}
+
+.event.in-progress .eventMarker {
+  background-color: var(--in-progress-color);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.eventContent {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.event:hover .eventContent {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.eventTitle {
+  color: var(--text-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.eventDate {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.eventDescription {
+  color: #475569;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .timelineContainer {
+    padding: 1rem;
+  }
+  
+  .event {
+    padding-left: 1.5rem;
+  }
+}

@@ -1,0 +1,71 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userTable th, .userTable td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.userTable th {
+  background: #f5f7fa;
+  color: #34495e;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.userTable tr:hover td {
+  background: #f8fafc;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusBadge.active {
+  background: #e3fcef;
+  color: #2ecc71;
+}
+
+.statusBadge.inactive {
+  background: #fef3f2;
+  color: #e74c3c;
+}
+
+.statusBadge.pending {
+  background: #fff8e1;
+  color: #f39c12;
+}
+
+.actionButton {
+  background: transparent;
+  border: 1px solid #3498db;
+  color: #3498db;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background: #3498db;
+  color: white;
+}

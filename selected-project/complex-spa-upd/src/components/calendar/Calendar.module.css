@@ -1,0 +1,80 @@
+.calendarContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #3f51b5;
+  color: white;
+}
+
+.monthTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 12px;
+}
+
+.dayHeader {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dayCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.dayCell:hover {
+  background-color: #e0e0e0;
+}
+
+.selected {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.otherMonth {
+  color: #aaa;
+  pointer-events: none;
+}

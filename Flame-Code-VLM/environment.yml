@@ -1,0 +1,69 @@
+name: flame
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - pip
+  - python=3.10.16
+  # - _libgcc_mutex
+  - bzip2
+  - ca-certificates
+  - libffi
+  - libuuid
+  - ncurses
+  - openssl
+  - readline
+  - setuptools
+  - sqlite
+  - tk
+  - tzdata
+  - wheel
+  - xz
+  - zlib
+
+  - pip:
+      - annotated-types
+      - anyio
+      - certifi
+      - charset-normalizer
+      - click
+      - distro
+      - exceptiongroup
+      - h11
+      - httpcore
+      - httpx
+      - idna
+      - imageio
+      - jiter
+      - joblib
+      - lazy-loader
+      - networkx
+      - nltk
+      - numpy
+      - openai
+      - opencv-python-headless
+      - packaging
+      - pillow
+      - pydantic
+      - pydantic-core
+      - pytesseract
+      - python-dotenv
+      - regex
+      - requests
+      - scikit-image
+      - scikit-learn
+      - scipy
+      - six
+      - sniffio
+      - threadpoolctl
+      - tifffile
+      - tqdm
+      - typing-extensions
+      - urllib3
+      - zss
+
+      - "libstdcxx-ng ; sys_platform == 'linux'"
+      - "libgomp ; sys_platform == 'linux'"
+      - "libgcc-ng ; sys_platform == 'linux'"
+      - "ld_impl_linux-64 ; sys_platform == 'linux'"

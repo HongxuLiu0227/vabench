@@ -1,0 +1,97 @@
+.progressContainer {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #e9ecef;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem 0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progressBar {
+  height: 100%;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progressLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Variants */
+.primary .progressBar {
+  background-color: #4e73df;
+}
+
+.secondary .progressBar {
+  background-color: #858796;
+}
+
+.success .progressBar {
+  background-color: #1cc88a;
+}
+
+.warning .progressBar {
+  background-color: #f6c23e;
+}
+
+danger .progressBar {
+  background-color: #e74a3b;
+}
+
+/* Animated variant */
+.animated {
+  background: linear-gradient(90deg, #4e73df, #1cc88a);
+  background-size: 200% 100%;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Segmented variant */
+.segmentedContainer {
+  display: flex;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.segmentedLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.segmentLabel {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #5a5c69;
+}
+
+.colorIndicator {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
