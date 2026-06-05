@@ -549,10 +549,11 @@ Steps to follow:
 9. Implement a dedicated data-loading layer (e.g., `src/services/` or `src/lib/`) that fetches full datasets from `/data/...` and maps them into chart/table view models.
 10. Parse numeric measures explicitly (`Number(...)` / `parseFloat(...)`) before aggregation; do not allow string concatenation in metrics.
 11. Visualization requirement: implement chart rendering with D3 (`d3-scale`, `d3-shape`, `d3-axis`, etc.) directly or thin wrappers over D3. Do not rely on Ant Design chart wrappers.
-12. Keep visual styling Tableau-faithful: avoid invented global hero headers/footers and avoid decorative card shadows/borders unless explicitly present in workbook zones.
-13. Resolve dependencies by running `pnpm install`; treat a clean install as your signal that versions are compatible. Only adjust versions if the install reports conflicts.
-14. If the app includes authentication, require the credentials username=`admin` and password=`admin`, display helper text with those values, and store them in a dedicated auth utility.
-15. Run `pnpm lint -- --max-warnings 0`, `pnpm test -- --runInBand`, and `pnpm build` to confirm the scaffolded project is healthy.
+12. Color encoding: if a worksheet contract includes `color_encoding`, use ONLY the specified field and palette type to build the color scale. When `type` is "diverging", use a diverging scale (e.g. red-white-blue or green-white-red via `d3.scaleDiverging`). When `type` is "sequential", use `d3.scaleSequential`. When `type` is "interpolated", use a continuous interpolator. If `palette` is specified (e.g. "tableau-map-blue-green"), map it to the closest D3 scheme. If only `field` is present, build a sensible default color scale for that field's data type. Always include a matching color legend when `color_encoding` is present.
+13. Keep visual styling Tableau-faithful: avoid invented global hero headers/footers and avoid decorative card shadows/borders unless explicitly present in workbook zones.
+14. Resolve dependencies by running `pnpm install`; treat a clean install as your signal that versions are compatible. Only adjust versions if the install reports conflicts.
+15. If the app includes authentication, require the credentials username=`admin` and password=`admin`, display helper text with those values, and store them in a dedicated auth utility.
+16. Run `pnpm lint -- --max-warnings 0`, `pnpm test -- --runInBand`, and `pnpm build` to confirm the scaffolded project is healthy.
 
 {tableau_policy}
 {tableau_spec_policy}

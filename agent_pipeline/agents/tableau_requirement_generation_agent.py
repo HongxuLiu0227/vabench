@@ -270,12 +270,29 @@ def _parse_encodings(worksheet: ET.Element) -> Dict[str, List[Dict[str, Any]]]:
     panes = _find_first_child(table, "panes")
     encodings: Dict[str, List[Dict[str, Any]]] = {}
 
+    # Extract palette/type from style-rule mark encoding
+    style = _find_first_child(table, "style")
+    mark_palette = ""
+    mark_palette_type = ""
+    if style is not None:
+        for style_rule in _iter_child_elements(style, "style-rule"):
+            if str(style_rule.attrib.get("element") or "").strip() != "mark":
+                continue
+            for enc_node in _iter_child_elements(style_rule, "encoding"):
+                if str(enc_node.attrib.get("attr") or "").strip() == "color":
+                    mark_palette = str(enc_node.attrib.get("palette") or "").strip()
+                    mark_palette_type = str(enc_node.attrib.get("type") or "").strip()
+
     for pane_index, pane in enumerate(_iter_child_elements(panes, "pane")):
         pane_encodings = _find_first_child(pane, "encodings")
         for encoding_node in _iter_child_elements(pane_encodings):
             key = _local_name(encoding_node.tag)
             entry = dict(encoding_node.attrib)
             entry["pane_index"] = pane_index
+            # Augment color entries with style-rule palette info
+            if key == "color" and mark_palette:
+                entry["palette"] = mark_palette
+                entry["type"] = mark_palette_type
             encodings.setdefault(key, []).append(entry)
 
     return encodings
@@ -887,7 +904,9 @@ def _infer_chart_intent(
     if "treemap" in normalized_chart_type or has_treemap_signature:
         return "custom_tableau_view", None
 
-    if (col_has_temporal and row_has_measure) or (row_has_temporal and col_has_measure):
+    # Line chart: only when original mark type is explicitly Line (not Bar) AND has temporal+measure
+    is_explicit_line = normalized_chart_type in {"line", "shape"}
+    if is_explicit_line and ((col_has_temporal and row_has_measure) or (row_has_temporal and col_has_measure)):
         return "line_chart", None
 
     if not _is_bar_compatible_mark(chart_type):
@@ -1292,10 +1311,20 @@ def derive_tableau_render_contract(tableau_spec: Dict[str, Any]) -> Dict[str, An
         rows_raw = str(rows.get("raw") or "")
         cols_raw = str(cols.get("raw") or "")
         slices = worksheet.get("slices") if isinstance(worksheet.get("slices"), list) else []
-        color_encoding = ""
+        color_encoding: Dict[str, str] = {}
         color_entries = encodings.get("color")
         if isinstance(color_entries, list) and color_entries and isinstance(color_entries[0], dict):
-            color_encoding = str(color_entries[0].get("column") or "")
+            entry = color_entries[0]
+            field = str(entry.get("column") or "")
+            palette = str(entry.get("palette") or "")
+            palette_type = str(entry.get("type") or "")
+            if field:
+                color_encoding = {"field": field}
+                if palette:
+                    color_encoding["palette"] = palette
+                if palette_type:
+                    color_encoding["type"] = palette_type
+        color_field = color_encoding.get("field", "")
 
         row_tokens = _axis_field_tokens(rows, rows_raw)
         col_tokens = _axis_field_tokens(cols, cols_raw)
@@ -1308,7 +1337,7 @@ def derive_tableau_render_contract(tableau_spec: Dict[str, Any]) -> Dict[str, An
             reference_lines=reference_lines,
             style_rule_elements=style_rule_elements,
         )
-        series_field = color_encoding or (slices[0] if slices else "")
+        series_field = color_field or (slices[0] if slices else "")
         chart_intent, orientation = _infer_chart_intent(
             chart_type=chart_type,
             row_tokens=row_tokens,
@@ -1445,6 +1474,7 @@ def derive_tableau_render_contract(tableau_spec: Dict[str, Any]) -> Dict[str, An
                     "expected_series_values": series_order,
                 },
                 "filter_members": filter_members,
+                "color_encoding": color_encoding if color_encoding else None,
                 "title_runs": title_runs,
                 "axis_title_rows": axis_title_rows,
                 "axis_title_cols": axis_title_cols,
