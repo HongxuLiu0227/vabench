@@ -43,11 +43,12 @@ class ClaudeDriver:
             raise ClaudeDriverError(
                 "claude_agent_sdk is not installed; cannot run Claude-driven pipeline stages."
             )
-        self.api_key = os.getenv("LLM_KEY")
-        self.anthropic_base_url = os.getenv("ANTHROPIC_BASE_URL")
-        self.model_name = os.getenv("MODEL_NAME")
+        # Dedicated Claude Code credentials (fall back to shared vars)
+        self.api_key = os.getenv("CLAUDE_CODE_KEY") or os.getenv("LLM_KEY")
+        self.anthropic_base_url = os.getenv("CLAUDE_CODE_BASE_URL") or os.getenv("ANTHROPIC_BASE_URL")
+        self.model_name = os.getenv("CLAUDE_CODE_MODEL") or os.getenv("MODEL_NAME")
         if not self.api_key:
-            raise ClaudeDriverError("LLM_KEY is not set; cannot authenticate to Claude.")
+            raise ClaudeDriverError("CLAUDE_CODE_KEY or LLM_KEY is not set; cannot authenticate to Claude.")
         self.timeout_seconds = timeout_seconds
 
     def run(
@@ -89,21 +90,28 @@ class ClaudeDriver:
         )
 
         async def _run() -> str:
-            async with ClaudeSDKClient(options=options) as client:
-                await client.connect()
-                await client.query(instruction, session_id=session_id or "default")
-                async def collect_response() -> str:
-                    collected: list[str] = []
-                    async for message in client.receive_response():
-                        text = _extract_text(message)
-                        if text:
-                            collected.append(text)
-                    return "\n".join(collected)
+            async def _run_with_deadline() -> str:
+                async with ClaudeSDKClient(options=options) as client:
+                    await asyncio.wait_for(client.connect(), timeout=60)
+                    await asyncio.wait_for(client.query(instruction, session_id=session_id or "default"), timeout=30)
 
-                try:
-                    return await asyncio.wait_for(collect_response(), timeout=self.timeout_seconds)
-                except asyncio.TimeoutError as exc:
-                    raise ClaudeDriverError(f"Claude SDK timed out after {self.timeout_seconds}s") from exc
+                    async def collect_response() -> str:
+                        collected: list[str] = []
+                        async for message in client.receive_response():
+                            text = _extract_text(message)
+                            if text:
+                                collected.append(text)
+                        return "\n".join(collected)
+
+                    try:
+                        return await asyncio.wait_for(collect_response(), timeout=self.timeout_seconds)
+                    except asyncio.TimeoutError as exc:
+                        raise ClaudeDriverError(f"Claude SDK timed out after {self.timeout_seconds}s") from exc
+
+            try:
+                return await asyncio.wait_for(_run_with_deadline(), timeout=self.timeout_seconds + 120)
+            except asyncio.TimeoutError as exc:
+                raise ClaudeDriverError(f"Claude SDK stage timed out after {self.timeout_seconds + 120}s") from exc
 
         try:
             return asyncio.run(_run())

@@ -61,12 +61,14 @@ class PipelineConfig:
 def build_default_config() -> PipelineConfig:
     """Return a default configuration tuned for complex React dashboards."""
     stage_defaults: Dict[str, StageSettings] = {
-        "requirement_enrichment": StageSettings(timeout_seconds=900, max_retries=1),
-        "project_scaffolder": StageSettings(timeout_seconds=900, max_retries=1),
-        "first_generation": StageSettings(timeout_seconds=3600, max_retries=2),
-        "placeholder_fix": StageSettings(timeout_seconds=1800, max_retries=1),
-        "bug_fix": StageSettings(timeout_seconds=1800, max_retries=1),
-        "render_fix": StageSettings(timeout_seconds=1800, max_retries=1),
+        "requirement_enrichment": StageSettings(timeout_seconds=0, max_retries=1),
+        "project_scaffolder": StageSettings(timeout_seconds=0, max_retries=1),
+        "first_generation": StageSettings(timeout_seconds=1500, max_retries=2),
+        "tableau_source_compliance": StageSettings(timeout_seconds=600, max_retries=2),
+        "placeholder_fix": StageSettings(timeout_seconds=900, max_retries=1),
+        "bug_fix": StageSettings(timeout_seconds=900, max_retries=1),
+        "render_fix": StageSettings(timeout_seconds=900, max_retries=1),
+        "quality_assurance": StageSettings(timeout_seconds=600, max_retries=1),
     }
 
     complexity = ComplexityThresholds(

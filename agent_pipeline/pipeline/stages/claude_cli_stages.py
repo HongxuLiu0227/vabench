@@ -485,7 +485,7 @@ class ClaudeCLIStage(PipelineStage):
     @property
     def runner(self) -> ClaudeDriver:
         if self._runner is None:
-            self._runner = ClaudeDriver(timeout_seconds=7200)
+            self._runner = ClaudeDriver(timeout_seconds=1800)
         return self._runner
 
     def get_workdir(self, state: PipelineState) -> Path:

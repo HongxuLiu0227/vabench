@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -69,6 +70,13 @@ def load_tableau_seed(tableau_dir: str) -> tuple[str, dict]:
     # If multiple workbooks exist, pick the largest (best chance it contains all dashboard definitions).
     twb_path = max(twb_files, key=lambda p: (p.stat().st_size, p.name))
     twb_xml = twb_path.read_text(encoding="utf-8", errors="replace").strip()
+    # Strip base64 thumbnails (~71% of file size, useless for LLM token consumption)
+    twb_xml = re.sub(
+        r"<thumbnails>.*?</thumbnails>",
+        "<thumbnails />",
+        twb_xml,
+        flags=re.DOTALL,
+    )
     if not twb_xml:
         raise ValueError(f"Selected .twb file is empty: {twb_path}")
 
