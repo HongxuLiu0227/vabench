@@ -64,7 +64,7 @@ def build_default_config() -> PipelineConfig:
         "requirement_enrichment": StageSettings(timeout_seconds=0, max_retries=1),
         "project_scaffolder": StageSettings(timeout_seconds=0, max_retries=1),
         "first_generation": StageSettings(timeout_seconds=1500, max_retries=2),
-        "tableau_source_compliance": StageSettings(timeout_seconds=600, max_retries=2),
+        "tableau_source_compliance": StageSettings(timeout_seconds=700, max_retries=2),
         "placeholder_fix": StageSettings(timeout_seconds=900, max_retries=1),
         "bug_fix": StageSettings(timeout_seconds=900, max_retries=1),
         "render_fix": StageSettings(timeout_seconds=900, max_retries=1),

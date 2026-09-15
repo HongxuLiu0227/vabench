@@ -5,10 +5,11 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import shutil
 from pathlib import Path
 from typing import Any
-from typing import Dict, Iterable, List
+from typing import Dict, Iterable, List, Optional
 
 from ...agents.requirement_analysis_agent import analyze_requirements
 from ...agents.tableau_requirement_generation_agent import (
@@ -31,6 +32,105 @@ logger = get_logger(__name__)
 
 TABLEAU_REQUIREMENT_CACHE_VERSION = "tableau_requirements_v2"
 GENERAL_REQUIREMENT_CACHE_VERSION = "requirements_v1"
+
+REVIEW_SYSTEM_PROMPT = """You are a Tableau visualization expert reviewing a render contract.
+
+A render contract is a JSON file that describes a dashboard's worksheets, chart types,
+color encodings, layout zones, and fidelity rules. It was auto-generated from a .twb
+XML file by a rule-based parser. Some fields may be incorrect.
+
+Your task: review each worksheet and fix any errors. You may ONLY modify:
+- chart_intent: correct any misidentified chart types (e.g. a grouped bar chart over time
+  should NOT be line_chart unless the original Tableau mark was explicitly Line)
+- color_encoding: if the spec contains palette/type info for a color encoding, ensure
+  it is correctly captured in the contract's color_encoding field
+- fidelity_rules: remove rules that don't match the chart type, add missing ones
+
+You MUST NOT modify:
+- worksheet names, field references, zone coordinates, legend config, interaction config
+- dashboard_size, dashboard_text_zones, dashboard_actions, highlight_bindings
+- summary counts
+
+Return ONLY the corrected full contract JSON wrapped in ```json ... ```."""
+
+
+def _llm_review_render_contract(
+    draft_contract: Dict[str, Any],
+    tableau_spec: Dict[str, Any],
+) -> Optional[Dict[str, Any]]:
+    """Send the draft contract to an LLM for review and correction."""
+    import openai
+
+    api_key = os.getenv("LLM_KEY")
+    base_url = os.getenv("LLM_BASE_URL", "https://api.deepseek.com")
+    model = os.getenv("MODEL_NAME", "deepseek-chat")
+    if not api_key:
+        logger.warning("No LLM_KEY configured; skipping contract LLM review.")
+        return None
+
+    # Send only compact spec summary + draft contract (not the full .twb)
+    spec_compact = []
+    for ws in tableau_spec.get("worksheets", []):
+        spec_compact.append({
+            "name": ws.get("name"),
+            "chart_type": ws.get("chart_type"),
+            "encodings": ws.get("encodings"),
+            "rows": ws.get("rows", {}).get("raw", ""),
+            "cols": ws.get("cols", {}).get("raw", ""),
+        })
+
+    user_prompt = (
+        "Review and correct this draft render contract. The original .twb spec is provided for reference.\n\n"
+        "Original spec (worksheets summary):\n```json\n"
+        + json.dumps(spec_compact, ensure_ascii=False, indent=2)
+        + "\n```\n\n"
+        "Draft contract to review:\n```json\n"
+        + json.dumps(draft_contract, ensure_ascii=False, indent=2)
+        + "\n```"
+    )
+
+    try:
+        client = openai.OpenAI(api_key=api_key, base_url=base_url)
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": REVIEW_SYSTEM_PROMPT},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=0.3,
+            max_tokens=16384,
+        )
+        text = response.choices[0].message.content
+        if not text:
+            logger.warning("LLM contract review returned empty response.")
+            return None
+
+        # Extract JSON from response
+        json_match = re.search(r"```json\s*([\s\S]*?)\s*```", text)
+        if json_match:
+            reviewed = json.loads(json_match.group(1))
+        else:
+            json_match = re.search(r"\{[\s\S]*\}", text)
+            if json_match:
+                reviewed = json.loads(json_match.group(0))
+            else:
+                logger.warning("Could not parse LLM contract review response.")
+                return None
+
+        # Quick validation
+        if not isinstance(reviewed, dict) or "worksheets" not in reviewed:
+            logger.warning("LLM-reviewed contract missing 'worksheets' key.")
+            return None
+        if len(reviewed["worksheets"]) != len(draft_contract.get("worksheets", [])):
+            logger.warning("LLM-reviewed contract worksheet count mismatch; discarding.")
+            return None
+
+        logger.info("LLM contract review completed successfully.")
+        return reviewed
+
+    except Exception as exc:
+        logger.warning("LLM contract review failed, falling back to draft: %s", exc)
+        return None
 
 
 def _cache_root() -> Path:
@@ -144,6 +244,14 @@ class RequirementArchitectStage(PipelineStage):
                         "derive_error": str(exc),
                     },
                 }
+
+            # LLM review pass: correct misidentified chart types, color encodings, etc.
+            if tableau_render_contract.get("worksheets"):
+                reviewed = _llm_review_render_contract(tableau_render_contract, tableau_spec)
+                if reviewed is not None:
+                    tableau_render_contract = reviewed
+                else:
+                    logger.info("Using draft contract (LLM review skipped or failed).")
             tableau_render_contract_path.write_text(
                 json.dumps(tableau_render_contract, ensure_ascii=False, indent=2),
                 encoding="utf-8",
