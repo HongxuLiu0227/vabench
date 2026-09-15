@@ -1,0 +1,95 @@
+============================================================
+  Kimi 评测结果汇总
+============================================================
+生成时间: 2026-06-27 15:25:22
+
+数据来源:
+  - 静态指标: kimi/evaluation_details-full.txt
+  - 交互/数据指标: metric_results/kimi/batch_report.json（3014 静态+动态均已更新）
+
+Overall 计算方式:
+  每个 dashboard 先算: overall_i = Ex_i × ((静态_i + S_data_i + S_int_i) / 3)
+  其中 静态_i = (SSIM + 1-MSE + CLIP + TreeBLEU) / 4
+  汇总 Overall = mean(overall_i)
+
+------------------------------------------------------------
+一、子集 re（72 项）
+------------------------------------------------------------
+  项目数     : 72
+  Ex         : 0.9861  (71/72 有 result.png)
+  静态       : 0.7523
+  S_data     : 0.3202  (batch 成功 71/72)
+  Overall    : 0.4044
+
+------------------------------------------------------------
+二、子集 sy（31 项）
+------------------------------------------------------------
+  项目数     : 31
+  Ex         : 0.9677  (30/31 有 result.png)
+  静态       : 0.7708
+  S_data     : 0.0894  (batch 成功 7/31)
+  Overall    : 0.2784
+
+------------------------------------------------------------
+三、并集 full（103 项）
+------------------------------------------------------------
+  项目数     : 103
+  Ex         : 0.9806  (101/103 有 result.png)
+  静态       : 0.7578
+  S_data     : 0.2508  (batch 成功 78/103)
+  S_int      : 0.1056
+  Overall    : 0.3665
+
+  静态指标明细 (full, 仅 Ex=1 项目):
+    SSIM     : 0.7608
+    1-MSE    : 0.9736
+    CLIP     : 0.8439
+    TreeBLEU : 0.4530
+
+------------------------------------------------------------
+四、tableau_dashboard_3014
+------------------------------------------------------------
+  Ex         : 1
+  SSIM       : 0.6793
+  1-MSE      : 0.9802
+  CLIP       : 0.7442
+  TreeBLEU   : 0.5070
+  静态       : 0.7277
+  S_data     : 0.2558
+  S_int      : 0.0000
+  Overall    : 0.3278
+
+------------------------------------------------------------
+五、异常项目
+------------------------------------------------------------
+  缺 result.png (2):
+    - tableau_dashboard_2685
+    - tableau_dashboard_refine5_483
+  batch S_data/S_int 失败 (25):
+    - tableau_dashboard_3259
+    - tableau_dashboard_refine5_155
+    - tableau_dashboard_refine5_157
+    - tableau_dashboard_refine5_167
+    - tableau_dashboard_refine5_171
+    - tableau_dashboard_refine5_177
+    - tableau_dashboard_refine5_182
+    - tableau_dashboard_refine5_184
+    - tableau_dashboard_refine5_186
+    - tableau_dashboard_refine5_190
+    - tableau_dashboard_refine5_196
+    - tableau_dashboard_refine5_206
+    - tableau_dashboard_refine5_216
+    - tableau_dashboard_refine5_405
+    - tableau_dashboard_refine5_415
+    - tableau_dashboard_refine5_425
+    - tableau_dashboard_refine5_451
+    - tableau_dashboard_refine5_455
+    - tableau_dashboard_refine5_460
+    - tableau_dashboard_refine5_483
+    - tableau_dashboard_refine5_495
+    - tableau_dashboard_refine5_505
+    - tableau_dashboard_refine5_520
+    - tableau_dashboard_refine5_586
+    - tableau_dashboard_refine5_603
+
+============================================================

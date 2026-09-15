@@ -1,0 +1,318 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "964",
+    "maxwidth": "1016",
+    "sizing-mode": "range"
+  },
+  "worksheets": [
+    {
+      "name": "Gender Trips by Hour of Day",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Start Station ID:qk]",
+      "cols_field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:qk]",
+      "series_field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+      "slices": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (Gender,DAY(Start Time (copy)))]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (DAY(Start Time (copy)))]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time (copy)))]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "1",
+        "2"
+      ],
+      "title_runs": [
+        {
+          "text": "Trips by Hour of Day",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "9350",
+          "y": "9036",
+          "w": "12205",
+          "h": "11747",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.0934,
+            "y_ratio": 0.0897,
+            "w_ratio": 0.1219,
+            "h_ratio": 0.1166
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[MDY(Start Time) Set]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time (copy)_33495564085821443:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[io:MDY(Start Time) Set:nk]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[md:Start Time:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time (copy)_33495564085821443:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time:ok]"
+        ]
+      },
+      "zone": {
+        "x": "-197",
+        "y": "-151",
+        "w": "51378",
+        "h": "100904",
+        "aspect_ratio": 0.5092,
+        "normalized": {
+          "x_ratio": -0.002,
+          "y_ratio": -0.0015,
+          "w_ratio": 0.5133,
+          "h_ratio": 1.0015
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Trips by Day of Month",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Start Station ID:qk]",
+      "cols_field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+      "series_field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Trips by Day of Month",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "85433",
+          "y": "9629",
+          "w": "13780",
+          "h": "23898",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.8535,
+            "y_ratio": 0.0956,
+            "w_ratio": 0.1377,
+            "h_ratio": 0.2372
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 3",
+              "type": "sheet",
+              "worksheet": "Trips by Day of Month"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 3"
+            },
+            "field_captions": [],
+            "target": "Dashboard 3"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[MDY(Start Time) Set]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:qk]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time (copy)_33495564085821443:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[io:MDY(Start Time) Set:nk]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[md:Start Time:ok]",
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time:ok]"
+        ]
+      },
+      "zone": {
+        "x": "53445",
+        "y": "-301",
+        "w": "46654",
+        "h": "100753",
+        "aspect_ratio": 0.4631,
+        "normalized": {
+          "x_ratio": 0.5339,
+          "y_ratio": -0.003,
+          "w_ratio": 0.4661,
+          "h_ratio": 1.0
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 3",
+        "type": "sheet",
+        "worksheet": "Trips by Day of Month"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 3"
+      },
+      "field_captions": [],
+      "target": "Dashboard 3"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 3",
+      "viewpoint_name": "Gender Trips by Hour of Day",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 3",
+      "viewpoint_name": "Trips by Day of Month",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender Trips by Hour of Day",
+      "viewpoint_name": "Gender Trips by Hour of Day",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[MDY(Start Time) Set]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[io:MDY(Start Time) Set:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[md:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Trips by Day of Month",
+      "viewpoint_name": "Trips by Day of Month",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[MDY(Start Time) Set]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:qk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[io:MDY(Start Time) Set:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[md:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 1,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Gender Trips by Hour of Day",
+      "Trips by Day of Month"
+    ],
+    "legend_anchor_positions": {
+      "Gender Trips by Hour of Day": "overlay",
+      "Trips by Day of Month": "overlay"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Gender Trips by Hour of Day",
+      "Trips by Day of Month"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

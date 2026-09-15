@@ -1,0 +1,743 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Bottom 10 End",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "true"
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations (end)",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Trips"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action5_C45C2334F59B442292529553EC82F860]",
+            "caption": "Filter 5 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Station Use DB",
+              "type": "sheet",
+              "worksheet": "Bottom 10 End"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Station Use DB"
+            },
+            "field_captions": [],
+            "target": "Station Use DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+        ]
+      },
+      "zone": {
+        "x": "74759",
+        "y": "58188",
+        "w": "24758",
+        "h": "40883",
+        "aspect_ratio": 0.6056,
+        "normalized": {
+          "x_ratio": 0.7476,
+          "y_ratio": 0.5819,
+          "w_ratio": 0.2476,
+          "h_ratio": 0.4088
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Bottom 10 Start",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "true"
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations (start)",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Trips"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action7_614A459F643B4E4F9FFBD3BEBB3E36A2]",
+            "caption": "Filter 7 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Station Use DB",
+              "type": "sheet",
+              "worksheet": "Bottom 10 Start"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Station Use DB"
+            },
+            "field_captions": [],
+            "target": "Station Use DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+        ]
+      },
+      "zone": {
+        "x": "25242",
+        "y": "58188",
+        "w": "24758",
+        "h": "40883",
+        "aspect_ratio": 0.6056,
+        "normalized": {
+          "x_ratio": 0.2524,
+          "y_ratio": 0.5819,
+          "w_ratio": 0.2476,
+          "h_ratio": 0.4088
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Citymap End",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station latitude:qk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station longitude:qk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Exclusions (End Station Latitude,End Station Longitude)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "0.0",
+        "0.0"
+      ],
+      "title_runs": [
+        {
+          "text": "Most Popular Journey Ending Locations",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "929",
+        "w": "49517",
+        "h": "57259",
+        "aspect_ratio": 0.8648,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.0093,
+          "w_ratio": 0.4952,
+          "h_ratio": 0.5726
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Citymap Start",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station latitude:qk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station longitude:qk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Most Popular Journey Starting Locations",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "88896",
+          "y": "8130",
+          "w": "9656",
+          "h": "8478",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.889,
+            "y_ratio": 0.0813,
+            "w_ratio": 0.0966,
+            "h_ratio": 0.0848
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[attr:start station name:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "929",
+        "w": "49517",
+        "h": "57259",
+        "aspect_ratio": 0.8648,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.0093,
+          "w_ratio": 0.4952,
+          "h_ratio": 0.5726
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Top 10 End",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "true"
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations (end)",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Trips"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+            "caption": "Filter 6 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Station Use DB",
+              "type": "sheet",
+              "worksheet": "Top 10 End"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Station Use DB"
+            },
+            "field_captions": [],
+            "target": "Station Use DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "58188",
+        "w": "24759",
+        "h": "40883",
+        "aspect_ratio": 0.6056,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.5819,
+          "w_ratio": 0.2476,
+          "h_ratio": 0.4088
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Top 10 Start",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "true"
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations (start)",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Trips"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+            "caption": "Filter 8 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Station Use DB",
+              "type": "sheet",
+              "worksheet": "Top 10 Start"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Station Use DB"
+            },
+            "field_captions": [],
+            "target": "Station Use DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "58188",
+        "w": "24759",
+        "h": "40883",
+        "aspect_ratio": 0.6056,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.5819,
+          "w_ratio": 0.2476,
+          "h_ratio": 0.4088
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action5_C45C2334F59B442292529553EC82F860]",
+      "caption": "Filter 5 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Bottom 10 End"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    },
+    {
+      "name": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+      "caption": "Filter 6 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Top 10 End"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    },
+    {
+      "name": "[Action7_614A459F643B4E4F9FFBD3BEBB3E36A2]",
+      "caption": "Filter 7 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Bottom 10 Start"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    },
+    {
+      "name": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+      "caption": "Filter 8 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Top 10 Start"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Citymap Start",
+      "viewpoint_name": "Citymap Start",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[attr:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Citymap End",
+      "viewpoint_name": "Citymap End",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 Start",
+      "viewpoint_name": "Top 10 Start",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 End",
+      "viewpoint_name": "Top 10 End",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 Start",
+      "viewpoint_name": "Bottom 10 Start",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 End",
+      "viewpoint_name": "Bottom 10 End",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 6,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 6
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Citymap Start"
+    ],
+    "legend_anchor_positions": {
+      "Citymap Start": "right"
+    },
+    "axis_title_worksheets": [
+      "Bottom 10 End",
+      "Bottom 10 Start",
+      "Top 10 End",
+      "Top 10 Start"
+    ],
+    "interaction_worksheets": [
+      "Bottom 10 End",
+      "Bottom 10 Start",
+      "Citymap End",
+      "Citymap Start",
+      "Top 10 End",
+      "Top 10 Start"
+    ],
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 6
+  }
+}

@@ -1,0 +1,609 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Close",
+      "dashboard_name": "Exploring data patterns",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[avg:close:qk]",
+      "cols_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+      "series_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[Action (MONTH(Date))]",
+      "slices": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[Action (MONTH(Date))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Date"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Exploring data patterns",
+              "type": "sheet",
+              "worksheet": "Close"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Exploring data patterns"
+            },
+            "field_captions": [],
+            "target": "Exploring data patterns"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "21820",
+        "y": "63447",
+        "w": "76309",
+        "h": "36797",
+        "aspect_ratio": 2.0738,
+        "normalized": {
+          "x_ratio": 0.2177,
+          "y_ratio": 0.6329,
+          "w_ratio": 0.7612,
+          "h_ratio": 0.3671
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Go to home",
+      "dashboard_name": "Exploring data patterns",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]"
+        ]
+      },
+      "zone": {
+        "x": "91910",
+        "y": "1222",
+        "w": "6596",
+        "h": "7090",
+        "aspect_ratio": 0.9303,
+        "normalized": {
+          "x_ratio": 0.9168,
+          "y_ratio": 0.0122,
+          "w_ratio": 0.0658,
+          "h_ratio": 0.0707
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Max close",
+      "dashboard_name": "Exploring data patterns",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_1729663792037629953:qk]",
+      "slices": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_1729663792037629953:qk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "125",
+        "y": "65159",
+        "w": "17207",
+        "h": "21149",
+        "aspect_ratio": 0.8136,
+        "normalized": {
+          "x_ratio": 0.0012,
+          "y_ratio": 0.65,
+          "w_ratio": 0.1716,
+          "h_ratio": 0.211
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Max open",
+      "dashboard_name": "Exploring data patterns",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_509469767997857792:qk]",
+      "slices": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_509469767997857792:qk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1683",
+        "y": "23227",
+        "w": "16459",
+        "h": "14425",
+        "aspect_ratio": 1.141,
+        "normalized": {
+          "x_ratio": 0.0168,
+          "y_ratio": 0.2317,
+          "w_ratio": 0.1642,
+          "h_ratio": 0.1439
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Open",
+      "dashboard_name": "Exploring data patterns",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[avg:open:qk]",
+      "cols_field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Date"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Exploring data patterns",
+              "type": "sheet",
+              "worksheet": "Open"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Exploring data patterns"
+            },
+            "field_captions": [],
+            "target": "Exploring data patterns"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "22007",
+        "y": "19560",
+        "w": "76060",
+        "h": "35086",
+        "aspect_ratio": 2.1678,
+        "normalized": {
+          "x_ratio": 0.2195,
+          "y_ratio": 0.1951,
+          "w_ratio": 0.7587,
+          "h_ratio": 0.35
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "15",
+      "x": "62",
+      "y": "-122",
+      "w": "100187",
+      "h": "9413",
+      "text": "Exploring data patterns",
+      "text_runs": [
+        {
+          "text": "Exploring data patterns",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "24",
+      "x": "56172",
+      "y": "12592",
+      "w": "20075",
+      "h": "4645",
+      "text": "Average monthly open stock prices",
+      "text_runs": [
+        {
+          "text": "Average monthly open stock prices",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "25",
+      "x": "2120",
+      "y": "12225",
+      "w": "17768",
+      "h": "6601",
+      "text": "Maximum open stock price and day of occurance",
+      "text_runs": [
+        {
+          "text": "Maximum open stock price and day of occurance",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "26",
+      "x": "57170",
+      "y": "58680",
+      "w": "20012",
+      "h": "3667",
+      "text": "Average monthly close stock prices",
+      "text_runs": [
+        {
+          "text": "Average monthly close stock prices",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "27",
+      "x": "3928",
+      "y": "56846",
+      "w": "15960",
+      "h": "6479",
+      "text": "Maximum close stock price and day of occurance",
+      "text_runs": [
+        {
+          "text": "Maximum close stock price and day of occurance",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Exploring data patterns",
+        "type": "sheet",
+        "worksheet": "Open"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Exploring data patterns"
+      },
+      "field_captions": [],
+      "target": "Exploring data patterns"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Exploring data patterns",
+        "type": "sheet",
+        "worksheet": "Close"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Exploring data patterns"
+      },
+      "field_captions": [],
+      "target": "Exploring data patterns"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Close",
+      "viewpoint_name": "Close",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Go to home",
+      "viewpoint_name": "Go to home",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Max close",
+      "viewpoint_name": "Max close",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Max open",
+      "viewpoint_name": "Max open",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Open",
+      "viewpoint_name": "Open",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_text_zone_count": 5,
+    "intent_counts": {
+      "line_chart": 2,
+      "custom_tableau_view": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [
+      "Close",
+      "Open"
+    ],
+    "interaction_worksheets": [
+      "Close",
+      "Go to home",
+      "Max close",
+      "Max open",
+      "Open"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 5
+  }
+}

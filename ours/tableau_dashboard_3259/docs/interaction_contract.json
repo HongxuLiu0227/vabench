@@ -1,0 +1,1119 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_3259/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:34.980305Z"
+  },
+  "dashboard": {
+    "name": "Twitterデータの可視化",
+    "worksheet_count": 16
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_unknown",
+        "name": "いいねユーザ日別",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "いいねユーザ日別"
+        }
+      },
+      {
+        "id": "ws_unknown_2",
+        "name": "いいね数",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "いいね数"
+        }
+      },
+      {
+        "id": "ws_unknown_3",
+        "name": "いいね数(ユーザ別)",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "いいね数(ユーザ別)"
+        }
+      },
+      {
+        "id": "ws_unknown_4",
+        "name": "いいね数(投稿別)",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "いいね数(投稿別)"
+        }
+      },
+      {
+        "id": "ws_unknown_5",
+        "name": "コメントユーザ(ユーザ別)",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "コメントユーザ(ユーザ別)"
+        }
+      },
+      {
+        "id": "ws_unknown_6",
+        "name": "コメントユーザ(投稿別)",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 5,
+          "worksheet_name": "コメントユーザ(投稿別)"
+        }
+      },
+      {
+        "id": "ws_unknown_7",
+        "name": "コメントユーザ日別",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 6,
+          "worksheet_name": "コメントユーザ日別"
+        }
+      },
+      {
+        "id": "ws_unknown_8",
+        "name": "コメント数",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 7,
+          "worksheet_name": "コメント数"
+        }
+      },
+      {
+        "id": "ws_unknown_9",
+        "name": "データ数",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 8,
+          "worksheet_name": "データ数"
+        }
+      },
+      {
+        "id": "ws_unknown_10",
+        "name": "ユーザ別投稿数ランキング",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 9,
+          "worksheet_name": "ユーザ別投稿数ランキング"
+        }
+      },
+      {
+        "id": "ws_unknown_11",
+        "name": "リツイート(ユーザ別)",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 10,
+          "worksheet_name": "リツイート(ユーザ別)"
+        }
+      },
+      {
+        "id": "ws_unknown_12",
+        "name": "リツイート(投稿別)",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 11,
+          "worksheet_name": "リツイート(投稿別)"
+        }
+      },
+      {
+        "id": "ws_unknown_13",
+        "name": "リツイート日別",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 12,
+          "worksheet_name": "リツイート日別"
+        }
+      },
+      {
+        "id": "ws_unknown_14",
+        "name": "リツート数",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 13,
+          "worksheet_name": "リツート数"
+        }
+      },
+      {
+        "id": "ws_unknown_15",
+        "name": "収集データ",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 14,
+          "worksheet_name": "収集データ"
+        }
+      },
+      {
+        "id": "ws_unknown_16",
+        "name": "検索ワード",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 15,
+          "worksheet_name": "検索ワード"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_unknown",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:いいね数:qk]",
+        "normalized": "いいね数",
+        "role": "measure"
+      },
+      {
+        "id": "field_unknown_2",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+        "normalized": "投稿日時",
+        "role": "dimension"
+      },
+      {
+        "id": "field_action",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "normalized": "Action (日(投稿日時))",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_269090137308614656",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137308614656:nk]",
+        "normalized": "Calculation_269090137308614656",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_url",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+        "normalized": "投稿URL/キャプチャー",
+        "role": "dimension"
+      },
+      {
+        "id": "field_url_2",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "normalized": "ユーザプロフィールURL",
+        "role": "dimension"
+      },
+      {
+        "id": "field_action_url",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "normalized": "Action (ユーザプロフィールURL)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_unknown_3",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:コメント数:qk]",
+        "normalized": "コメント数",
+        "role": "measure"
+      },
+      {
+        "id": "field_calculation_269090137311887363",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137311887363:nk]",
+        "normalized": "Calculation_269090137311887363",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_number_of_records",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+        "normalized": "Number of Records",
+        "role": "measure"
+      },
+      {
+        "id": "field_unknown_4",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:リツイート数:qk]",
+        "normalized": "リツイート数",
+        "role": "measure"
+      },
+      {
+        "id": "field_calculation_269090137310105601",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137310105601:nk]",
+        "normalized": "Calculation_269090137310105601",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_unknown_5",
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:検索ワード:nk]",
+        "normalized": "検索ワード",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_3"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_5"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 4,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_6"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 5,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_005",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_7"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 6,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_006",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_10"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 9,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_007",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_11"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 10,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_008",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_unknown_13"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 12,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "コメントユーザ(ユーザ別)"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "ユーザ別投稿数ランキング"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "いいねユーザ日別"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      },
+      {
+        "id": "da_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "リツイート日別"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 3
+        }
+      },
+      {
+        "id": "da_005",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "コメントユーザ日別"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 4
+        }
+      },
+      {
+        "id": "da_006",
+        "kind_raw": "custom_action",
+        "kind_semantic": "unknown",
+        "command": "",
+        "trigger": {
+          "event_raw": "unknown",
+          "event_semantic": "unknown",
+          "auto_clear": null,
+          "source_type": "datasource",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "unknown",
+          "target_worksheet_id": null,
+          "target_dashboard_name": null,
+          "target_name_raw": null
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 5
+        }
+      },
+      {
+        "id": "da_007",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "いいね数(ユーザ別)"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 6
+        }
+      },
+      {
+        "id": "da_008",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "リツイート(ユーザ別)"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 7
+        }
+      },
+      {
+        "id": "da_009",
+        "kind_raw": "custom_action",
+        "kind_semantic": "unknown",
+        "command": "",
+        "trigger": {
+          "event_raw": "unknown",
+          "event_semantic": "unknown",
+          "auto_clear": null,
+          "source_type": "datasource",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "unknown",
+          "target_worksheet_id": null,
+          "target_dashboard_name": null,
+          "target_name_raw": null
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 8
+        }
+      },
+      {
+        "id": "da_010",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Twitterデータの可視化",
+          "source_worksheet_name": "コメントユーザ(投稿別)"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Twitterデータの可視化",
+          "target_name_raw": "Twitterデータの可視化"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 9
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "dashboard",
+        "window_name": "Twitterデータの可視化",
+        "viewpoint_name": "リツート数",
+        "field_ids": [
+          "field_unknown_4"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "検索ワード",
+        "viewpoint_name": "検索ワード",
+        "field_ids": [
+          "field_unknown_5"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "収集データ",
+        "viewpoint_name": "収集データ",
+        "field_ids": [
+          "field_unknown_2",
+          "field_unknown_2",
+          "field_unknown_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "ユーザ別投稿数ランキング",
+        "viewpoint_name": "ユーザ別投稿数ランキング",
+        "field_ids": [
+          "field_number_of_records",
+          "field_number_of_records",
+          "field_url_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "いいね数",
+        "viewpoint_name": "いいね数",
+        "field_ids": [
+          "field_calculation_269090137308614656",
+          "field_unknown",
+          "field_url"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "いいねユーザ日別",
+        "viewpoint_name": "いいねユーザ日別",
+        "field_ids": [
+          "field_unknown",
+          "field_unknown_2",
+          "field_unknown_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "worksheet",
+        "window_name": "いいね数(投稿別)",
+        "viewpoint_name": "いいね数(投稿別)",
+        "field_ids": [
+          "field_unknown",
+          "field_url"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      },
+      {
+        "id": "hb_008",
+        "window_class": "worksheet",
+        "window_name": "いいね数(ユーザ別)",
+        "viewpoint_name": "いいね数(ユーザ別)",
+        "field_ids": [
+          "field_unknown",
+          "field_url_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 7
+        }
+      },
+      {
+        "id": "hb_009",
+        "window_class": "worksheet",
+        "window_name": "リツート数",
+        "viewpoint_name": "リツート数",
+        "field_ids": [
+          "field_calculation_269090137310105601",
+          "field_unknown_4"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 8
+        }
+      },
+      {
+        "id": "hb_010",
+        "window_class": "worksheet",
+        "window_name": "リツイート日別",
+        "viewpoint_name": "リツイート日別",
+        "field_ids": [
+          "field_unknown_4",
+          "field_unknown_2",
+          "field_unknown_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 9
+        }
+      },
+      {
+        "id": "hb_011",
+        "window_class": "worksheet",
+        "window_name": "リツイート(投稿別)",
+        "viewpoint_name": "リツイート(投稿別)",
+        "field_ids": [
+          "field_unknown_4",
+          "field_url"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 10
+        }
+      },
+      {
+        "id": "hb_012",
+        "window_class": "worksheet",
+        "window_name": "リツイート(ユーザ別)",
+        "viewpoint_name": "リツイート(ユーザ別)",
+        "field_ids": [
+          "field_url_2",
+          "field_unknown_4"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 11
+        }
+      },
+      {
+        "id": "hb_013",
+        "window_class": "worksheet",
+        "window_name": "コメント数",
+        "viewpoint_name": "コメント数",
+        "field_ids": [
+          "field_calculation_269090137311887363",
+          "field_unknown_3"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 12
+        }
+      },
+      {
+        "id": "hb_014",
+        "window_class": "worksheet",
+        "window_name": "コメントユーザ日別",
+        "viewpoint_name": "コメントユーザ日別",
+        "field_ids": [
+          "field_unknown_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 13
+        }
+      },
+      {
+        "id": "hb_015",
+        "window_class": "worksheet",
+        "window_name": "コメントユーザ(投稿別)",
+        "viewpoint_name": "コメントユーザ(投稿別)",
+        "field_ids": [
+          "field_unknown_3",
+          "field_url"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 14
+        }
+      },
+      {
+        "id": "hb_016",
+        "window_class": "worksheet",
+        "window_name": "コメントユーザ(ユーザ別)",
+        "viewpoint_name": "コメントユーザ(ユーザ別)",
+        "field_ids": [
+          "field_unknown_3",
+          "field_url_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 15
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_unknown",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown",
+          "field_unknown_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_2",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_269090137308614656",
+          "field_unknown",
+          "field_url"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_3",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown",
+          "field_url_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_4",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown",
+          "field_url"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_5",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_3",
+          "field_url_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_6",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_3",
+          "field_url"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_7",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_8",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_269090137311887363",
+          "field_unknown_3"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_9",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_unknown_10",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_number_of_records",
+          "field_url_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_11",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_4",
+          "field_url_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_12",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_4",
+          "field_url"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_13",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_2",
+          "field_unknown_4"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_14",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_269090137310105601",
+          "field_unknown_4"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_15",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_2"
+        ]
+      },
+      {
+        "worksheet_id": "ws_unknown_16",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_unknown_5"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 16,
+    "worksheet_action_count": 8,
+    "dashboard_action_count": 10,
+    "highlight_binding_count": 16,
+    "field_count": 13
+  }
+}

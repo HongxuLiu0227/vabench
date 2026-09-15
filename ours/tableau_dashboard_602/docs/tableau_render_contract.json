@@ -1,0 +1,247 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Gender Gap",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1nootr000bhdfw14p7u8a08vc5al].[sum:6-month premium:ok]",
+      "cols_field": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+      "series_field": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "Male",
+        "Female",
+        "%all%"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "Male",
+          "Female",
+          "%all%"
+        ]
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Disparity in premium cost by gender",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "9400",
+          "y": "65750",
+          "w": "7800",
+          "h": "5875",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.094,
+            "y_ratio": 0.6575,
+            "w_ratio": 0.078,
+            "h_ratio": 0.0587
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[Age & Gender (group)]",
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[avg:Age:ok]",
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[io:Set 1:nk]",
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:6-month premium:ok]",
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[sum:Age:ok]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "50000",
+        "w": "98400",
+        "h": "49000",
+        "aspect_ratio": 2.0082,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.5,
+          "w_ratio": 0.984,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Premiums Fall",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1nootr000bhdfw14p7u8a08vc5al].[avg:6-month premium:qk]",
+      "cols_field": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Premiums fall as age increases",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "98400",
+        "h": "49000",
+        "aspect_ratio": 2.0082,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.984,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender",
+        "target": "Dashboard"
+      },
+      "field_captions": [
+        "Gender"
+      ],
+      "target": "Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Premiums Fall",
+      "viewpoint_name": "Premiums Fall",
+      "fields": [
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender Gap",
+      "viewpoint_name": "Gender Gap",
+      "fields": [
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[Age & Gender (group)]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[avg:Age:ok]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[io:Set 1:nk]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:6-month premium:ok]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[sum:Age:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Gender Gap",
+      "fields": [
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Gender Gap"
+    ],
+    "legend_anchor_positions": {
+      "Gender Gap": "overlay"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Gender Gap",
+      "Premiums Fall"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

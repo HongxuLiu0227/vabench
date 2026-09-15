@@ -1,0 +1,920 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.4.0 (20204.20.1106.0321)",
+      "source-platform": "mac",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Daily Cases",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "([federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[yr:date:ok] / [federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[mn:date:ok])",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[yr:date:ok]",
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[mn:date:ok]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[sum:new_cases_per_million:qk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[sum:new_cases_per_million:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[mn:date:ok]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[mn:date:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[mn:date:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "3",
+                  "function": "range",
+                  "level": "[mn:date:ok]",
+                  "to": "12",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top 10",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:location:nk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[none:location:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[sum:new_deaths:qk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[sum:new_deaths:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:location:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:location:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:location:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"Afghanistan\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"Australia\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"Brazil\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"France\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"India\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"Italy\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"Russia\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"South Africa\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"Turkey\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"United Kingdom\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:location:nk]",
+                      "member": "\"United States\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 countries having more deaths",
+          "style": {}
+        }
+      ],
+      "title_text": "Top 10 countries having more deaths",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Cases",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[avg:new_cases:qk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[avg:new_cases:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[none:continent:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"Africa\"",
+                  "function": "range",
+                  "level": "[none:continent:nk]",
+                  "to": "\"South America\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Cases Continent Wise",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Cases Continent Wise",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Deaths",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[avg:new_deaths_per_million:qk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[avg:new_deaths_per_million:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]",
+        "fields": [
+          "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr]",
+          "[none:continent:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"Africa\"",
+                  "function": "range",
+                  "level": "[none:continent:nk]",
+                  "to": "\"South America\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "643",
+          "y": "990",
+          "w": "98714",
+          "h": "98020",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "title",
+          "x": "643",
+          "y": "990",
+          "w": "98714",
+          "h": "10272",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "643",
+          "y": "11262",
+          "w": "98714",
+          "h": "87748",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "643",
+          "y": "11262",
+          "w": "98714",
+          "h": "87748",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Top 10",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "643",
+          "y": "11262",
+          "w": "35903",
+          "h": "40223",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Daily Cases",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "643",
+          "y": "51485",
+          "w": "98714",
+          "h": "47525",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Total Deaths",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "68032",
+          "y": "11262",
+          "w": "31325",
+          "h": "40223",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "Total Cases",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "36546",
+          "y": "11262",
+          "w": "31486",
+          "h": "40223",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "36225",
+          "y": "51114",
+          "w": "28032",
+          "h": "8416",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Purvit Vashishtha\nCOVID-19 Analysis Dashboard",
+              "style": {}
+            }
+          ],
+          "text": "Purvit Vashishtha\nCOVID-19 Analysis Dashboard"
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard",
+      "id": "11",
+      "x": "36225",
+      "y": "51114",
+      "w": "28032",
+      "h": "8416",
+      "text": "Purvit Vashishtha\nCOVID-19 Analysis Dashboard",
+      "text_runs": [
+        {
+          "text": "Purvit Vashishtha\nCOVID-19 Analysis Dashboard",
+          "style": {}
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Dashboard",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "1420",
+        "minheight": "700",
+        "minwidth": "1220",
+        "sizing-mode": "range"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "643",
+          "y": "990",
+          "w": "98714",
+          "h": "98020",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "title",
+          "x": "643",
+          "y": "990",
+          "w": "98714",
+          "h": "10272",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "643",
+          "y": "11262",
+          "w": "98714",
+          "h": "87748",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "643",
+          "y": "11262",
+          "w": "98714",
+          "h": "87748",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Top 10",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "643",
+          "y": "11262",
+          "w": "35903",
+          "h": "40223",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Daily Cases",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "643",
+          "y": "51485",
+          "w": "98714",
+          "h": "47525",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Total Deaths",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "68032",
+          "y": "11262",
+          "w": "31325",
+          "h": "40223",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "Total Cases",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "36546",
+          "y": "11262",
+          "w": "31486",
+          "h": "40223",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "36225",
+          "y": "51114",
+          "w": "28032",
+          "h": "8416",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Purvit Vashishtha\nCOVID-19 Analysis Dashboard",
+              "style": {}
+            }
+          ],
+          "text": "Purvit Vashishtha\nCOVID-19 Analysis Dashboard"
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action4]",
+      "caption": "Highlight 1 (generated) 1 1 1",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10",
+      "viewpoint_name": "Top 10",
+      "fields": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[sum:new_deaths:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Daily Cases",
+      "viewpoint_name": "Daily Cases",
+      "fields": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[mn:date:ok]",
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[qr:date:ok]",
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[sum:new_cases_per_million:qk]",
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[tmn:date:ok]",
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[tyr:date:ok]",
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Cases",
+      "viewpoint_name": "Total Cases",
+      "fields": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Deaths",
+      "viewpoint_name": "Total Deaths",
+      "fields": [
+        "[federated.17ox5ky0iutaqo1ecxaon1e8t3yr].[none:continent:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

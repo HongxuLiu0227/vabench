@@ -1,0 +1,254 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_8501/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:36.787529Z"
+  },
+  "dashboard": {
+    "name": "9_AGE_POSITION",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_9a_min_age_position",
+        "name": "9a_Min_age_position",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "9a_Min_age_position"
+        }
+      },
+      {
+        "id": "ws_9b_max_age_position",
+        "name": "9b_Max_age_position",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "9b_Max_age_position"
+        }
+      },
+      {
+        "id": "ws_9c_avg_age_position",
+        "name": "9c_Avg_age_position",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "9c_Avg_age_position"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_age",
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[min:Age:qk]",
+        "normalized": "Age",
+        "role": "dimension"
+      },
+      {
+        "id": "field_position",
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "normalized": "Position",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_9a_min_age_position"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "9_AGE_POSITION",
+          "target_name_raw": "9_AGE_POSITION"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_9b_max_age_position"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "9_AGE_POSITION",
+          "target_name_raw": "9_AGE_POSITION"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_9c_avg_age_position"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "9_AGE_POSITION",
+          "target_name_raw": "9_AGE_POSITION"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "9_AGE_POSITION",
+          "source_worksheet_name": "9a_Min_age_position"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "9_AGE_POSITION",
+          "target_name_raw": "9_AGE_POSITION"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "9_AGE_POSITION",
+          "source_worksheet_name": "9b_Max_age_position"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "9_AGE_POSITION",
+          "target_name_raw": "9_AGE_POSITION"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "9_AGE_POSITION",
+          "source_worksheet_name": "9c_Avg_age_position"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "9_AGE_POSITION",
+          "target_name_raw": "9_AGE_POSITION"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      }
+    ],
+    "highlight_bindings": []
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_9a_min_age_position",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_9b_max_age_position",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_9c_avg_age_position",
+        "supports": [],
+        "focus_field_ids": []
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "Highlight or action state auto-clears.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 3,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 0,
+    "field_count": 2
+  }
+}

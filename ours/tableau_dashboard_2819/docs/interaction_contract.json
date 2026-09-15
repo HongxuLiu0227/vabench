@@ -1,0 +1,267 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_2819/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:34.661684Z"
+  },
+  "dashboard": {
+    "name": "Dashboard 1",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_plot_of_sales",
+        "name": "Plot of Sales",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Plot of Sales"
+        }
+      },
+      {
+        "id": "ws_sales_by_region",
+        "name": "Sales by Region",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Sales by Region"
+        }
+      },
+      {
+        "id": "ws_sales_by_segment",
+        "name": "Sales by Segment",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Sales by Segment"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_profit",
+        "raw": "[excel.41612.552811354166].[sum:Profit:qk]",
+        "normalized": "Profit",
+        "role": "measure"
+      },
+      {
+        "id": "field_sales",
+        "raw": "[excel.41612.552811354166].[sum:Sales:qk]",
+        "normalized": "Sales",
+        "role": "measure"
+      },
+      {
+        "id": "field_customer_segment",
+        "raw": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+        "normalized": "Customer Segment",
+        "role": "dimension"
+      },
+      {
+        "id": "field_category",
+        "raw": "[excel.41359.464717638890].[none:Category:nk]",
+        "normalized": "Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_country_region",
+        "raw": "[excel.41612.552811354166].[none:Country / Region:nk]",
+        "normalized": "Country / Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_continent",
+        "raw": "[excel.41359.464717638890].[none:Continent:nk]",
+        "normalized": "Continent",
+        "role": "dimension"
+      },
+      {
+        "id": "field_region",
+        "raw": "[excel.41612.552811354166].[none:Region:nk]",
+        "normalized": "Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_subregion",
+        "raw": "[excel.41612.552811354166].[none:SubRegion:nk]",
+        "normalized": "SubRegion",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_sales_by_segment"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Sales by Segment"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Sales by Segment",
+        "viewpoint_name": "Sales by Segment",
+        "field_ids": [
+          "field_customer_segment"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Sales by Region",
+        "viewpoint_name": "Sales by Region",
+        "field_ids": [
+          "field_continent",
+          "field_country_region",
+          "field_country_region",
+          "field_region",
+          "field_subregion",
+          "field_profit"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Plot of Sales",
+        "viewpoint_name": "Plot of Sales",
+        "field_ids": [
+          "field_category",
+          "field_customer_segment"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_plot_of_sales",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_category",
+          "field_customer_segment"
+        ]
+      },
+      {
+        "worksheet_id": "ws_sales_by_region",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_continent",
+          "field_country_region",
+          "field_profit",
+          "field_region",
+          "field_subregion"
+        ]
+      },
+      {
+        "worksheet_id": "ws_sales_by_segment",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_customer_segment"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3,
+    "field_count": 8
+  }
+}

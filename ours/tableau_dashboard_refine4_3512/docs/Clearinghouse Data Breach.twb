@@ -1,0 +1,1004 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0409.1705                               -->
+<workbook original-version='10.5' source-build='10.5.2 (10500.18.0305.1200)' source-platform='win' version='10.5' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location derived-from='https://public.tableau.com/workbooks/ClearinghouseDataBreach?rev=1.0' id='ClearinghouseDataBreach' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (privacy rights)' inline='true' name='federated.0ywgyjs0gtcd061djvygu022q3tx' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='privacy rights' name='excel-direct.0097ba21f11dq61g1u2711wohzdg'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/govin/Downloads/Tableau-master/IDS 520 Final Project/privacy rights.xlsx' interpretationMode='0' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0097ba21f11dq61g1u2711wohzdg' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:J738:no:A1:J738:0' header='yes' outcome='2'>
+            <column datatype='date' name='Date Made Public' ordinal='0' />
+            <column datatype='string' name='Company' ordinal='1' />
+            <column datatype='string' name='Location' ordinal='2' />
+            <column datatype='string' name='Type of breach' ordinal='3' />
+            <column datatype='string' name='Type of organization' ordinal='4' />
+            <column datatype='string' name='Records Breached' ordinal='5' />
+            <column datatype='string' name='Total Records' ordinal='6' />
+            <column datatype='string' name='Description of incident' ordinal='7' />
+            <column datatype='string' name='Information Source' ordinal='8' />
+            <column datatype='string' name='Source URL' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Date Made Public</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date Made Public]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Date Made Public</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Company]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Company</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type of breach</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type of breach]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Type of breach</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type of organization</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type of organization]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Type of organization</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Records Breached</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Records Breached]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Records Breached</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Records</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Total Records]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Total Records</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description of incident</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description of incident]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Description of incident</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Information Source</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Information Source]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Information Source</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Source URL</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Source URL]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Source URL</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J738:no:A1:J738:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Information Source]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Location]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+        <semantic-values semantic-role='[State].[Name]'>
+          <semantic-value key='&quot;Akron, Ohio&quot;' value='&quot;Ohio&quot;' />
+          <semantic-value key='&quot;Yardley, Pennsylvania&quot;' value='&quot;Pennsylvania&quot;' />
+          <semantic-value key='&quot;York, Pennsylvania&quot;' value='&quot;Pennsylvania&quot;' />
+          <semantic-value key='&quot;Yuma, Arizona&quot;' value='&quot;Arizona&quot;' />
+        </semantic-values>
+      </column>
+      <column aggregation='None' datatype='integer' name='[Number of Records (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Number of Records]' peg='0' size='1' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' datatype-customized='true' name='[Records Breached]' role='dimension' type='nominal' />
+      <column datatype='integer' datatype-customized='true' name='[Total Records]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Type of breach]' role='dimension' type='nominal' />
+      <column-instance column='[Information Source]' derivation='None' name='[none:Information Source:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Type of breach]' derivation='None' name='[none:Type of breach:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Date Made Public]' derivation='Year-Trunc' name='[tyr:Date Made Public:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Type of breach)' hidden='true' name='[Action (Type of breach)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Type of breach]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (YEAR(Date Made Public),Type of breach)' hidden='true' name='[Action (YEAR(Date Made Public),Type of breach)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tyr:Date Made Public:ok]' />
+          <groupfilter function='level-members' level='[Type of breach]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_0remyjs0msga5a1eprth20vm607r.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/06/2018 09:46:17 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date Made Public</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date Made Public]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date Made Public</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>686</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Company</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Company]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Company</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>737</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>737</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type of breach</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type of breach]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type of breach</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type of organization</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type of organization]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type of organization</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Records Breached</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Records Breached]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Records Breached</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>737</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Records</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Records</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>146</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description of incident</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description of incident]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Description of incident</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>737</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Information Source</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Information Source]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Information Source</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Source URL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Source URL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Source URL</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.716946' measure-ordering='alphabetic' measure-percentage='0.283054' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Information Source:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Media&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Government Agency&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;PHIPrivacy.net&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Health IT Security&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;California Attorney General&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;HHS via Databreaches.net&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Security Breach Letter&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;HHS via PHIPrivacy.net&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Databreaches.net&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Vermont Attorney General&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Dataloss DB&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Type of breach:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;DISC&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PORT&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;PHYS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;UNKN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;INSD&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;STAT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HACK&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Annual % by Type &amp; Year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Annual % by Type &amp; Year'>
+      <repository-location id='AnnualbyTypeYear' path='/workbooks/ClearinghouseDataBreach' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (privacy rights)' name='federated.0ywgyjs0gtcd061djvygu022q3tx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ywgyjs0gtcd061djvygu022q3tx'>
+            <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+            <column datatype='integer' datatype-customized='true' name='[Total Records]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type of breach]' role='dimension' type='nominal' />
+            <column-instance column='[Type of breach]' derivation='None' name='[none:Type of breach:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total Records]' derivation='Count' name='[pcto:cnt:Total Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Total Records]' derivation='Count' name='[pcto:cnt:Total Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Table' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Date Made Public]' derivation='Year-Trunc' name='[tyr:Date Made Public:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]'>
+            <groupfilter from='&quot;DISC&quot;' function='range' level='[none:Type of breach:nk]' to='&quot;UNKN&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]' included-values='all' />
+          <slices>
+            <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]</column>
+            <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]' />
+              <wedge-size column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[pcto:cnt:Total Records:qk:2]' />
+              <size column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[pcto:cnt:Total Records:qk]' />
+              <lod column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Type of breach:&#9;</run>
+                <run bold='true'>&lt;[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Year of Date Made Public:&#9;</run>
+                <run bold='true'>&lt;[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>% of Total Count of Total Records :&#9;</run>
+                <run bold='true'>&lt;[federated.0ywgyjs0gtcd061djvygu022q3tx].[pcto:cnt:Total Records:qk:2]&gt;</run>
+                <run bold='true'>Æ </run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <percentages enabled='true' mode='table' />
+      </table>
+    </worksheet>
+    <worksheet name='Date made Public'>
+      <repository-location id='DatemadePublic' path='/workbooks/ClearinghouseDataBreach' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (privacy rights)' name='federated.0ywgyjs0gtcd061djvygu022q3tx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ywgyjs0gtcd061djvygu022q3tx'>
+            <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+            <column datatype='integer' datatype-customized='true' name='[Total Records]' role='measure' type='quantitative' />
+            <column-instance column='[Total Records]' derivation='Count' name='[cnt:Total Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date Made Public]' derivation='Quarter' name='[qr:Date Made Public:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date Made Public]' derivation='Year' name='[yr:Date Made Public:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]</rows>
+        <cols>([federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok] / [federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Information Source for Breach'>
+      <repository-location id='InformationSourceforBreach' path='/workbooks/ClearinghouseDataBreach' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (privacy rights)' name='federated.0ywgyjs0gtcd061djvygu022q3tx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ywgyjs0gtcd061djvygu022q3tx'>
+            <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Information Source]' role='dimension' type='nominal' />
+            <column datatype='integer' datatype-customized='true' name='[Total Records]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type of breach]' role='dimension' type='nominal' />
+            <column-instance column='[Total Records]' derivation='Count' name='[cnt:Total Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Information Source]' derivation='None' name='[none:Information Source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type of breach]' derivation='None' name='[none:Type of breach:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date Made Public]' derivation='Year-Trunc' name='[tyr:Date Made Public:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tyr:Date Made Public:ok]' />
+              <groupfilter function='level-members' level='[Type of breach]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Information Source:nk]' />
+              <groupfilter function='member' level='[none:Information Source:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]</column>
+            <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]</rows>
+        <cols>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Types of Breach'>
+      <repository-location id='TypesofBreach' path='/workbooks/ClearinghouseDataBreach' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (privacy rights)' name='federated.0ywgyjs0gtcd061djvygu022q3tx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ywgyjs0gtcd061djvygu022q3tx'>
+            <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+            <column datatype='integer' datatype-customized='true' name='[Total Records]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type of breach]' role='dimension' type='nominal' />
+            <column-instance column='[Total Records]' derivation='Count' name='[cnt:Total Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Type of breach]' derivation='None' name='[none:Type of breach:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date Made Public]' derivation='Year-Trunc' name='[tyr:Date Made Public:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tyr:Date Made Public:ok]' />
+              <groupfilter function='level-members' level='[Type of breach]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]'>
+            <groupfilter function='level-members' level='[none:Type of breach:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</column>
+            <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]</rows>
+        <cols>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</cols>
+        <show-full-range>
+          <column>[federated.0ywgyjs0gtcd061djvygu022q3tx].[Number of Records (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='YTD'>
+      <repository-location id='YTD' path='/workbooks/ClearinghouseDataBreach' revision='' />
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>YTD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (privacy rights)' name='federated.0ywgyjs0gtcd061djvygu022q3tx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ywgyjs0gtcd061djvygu022q3tx'>
+            <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Location]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+              <semantic-values semantic-role='[State].[Name]'>
+                <semantic-value key='&quot;Akron, Ohio&quot;' value='&quot;Ohio&quot;' />
+                <semantic-value key='&quot;Yardley, Pennsylvania&quot;' value='&quot;Pennsylvania&quot;' />
+                <semantic-value key='&quot;York, Pennsylvania&quot;' value='&quot;Pennsylvania&quot;' />
+                <semantic-value key='&quot;Yuma, Arizona&quot;' value='&quot;Arizona&quot;' />
+              </semantic-values>
+            </column>
+            <column datatype='string' datatype-customized='true' name='[Records Breached]' role='dimension' type='nominal' />
+            <column-instance column='[Location]' derivation='None' name='[none:Location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Records Breached]' derivation='None' name='[none:Records Breached:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date Made Public]' derivation='Quarter' name='[qr:Date Made Public:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date Made Public]' derivation='Year' name='[yr:Date Made Public:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='5' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Records Breached:nk]' value='364' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok] / ([federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok] / ([federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Location:nk] / [federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Records Breached:nk])))</rows>
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <repository-location id='Dashboard1' path='/workbooks/ClearinghouseDataBreach' revision='' />
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <datasources>
+        <datasource caption='Sheet1 (privacy rights)' name='federated.0ywgyjs0gtcd061djvygu022q3tx' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ywgyjs0gtcd061djvygu022q3tx'>
+        <column datatype='date' name='[Date Made Public]' role='dimension' type='ordinal' />
+        <column-instance column='[Date Made Public]' derivation='Year-Trunc' name='[tyr:Date Made Public:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97616' id='6' param='horz' type='layout-flow' w='97538' x='1231' y='1192'>
+            <zone h='97616' id='4' type='layout-basic' w='70153' x='1231' y='1192'>
+              <zone h='48808' id='1' name='Types of Breach' w='35078' x='1231' y='1192'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48808' id='3' name='Information Source for Breach' w='70153' x='1231' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48808' id='8' name='Annual % by Type &amp; Year' w='35075' x='36309' y='1192'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='178' h='97616' id='5' is-fixed='true' param='vert' type='layout-flow' w='27385' x='71384' y='1192'>
+              <zone h='38897' id='7' name='Information Source for Breach' pane-specification-id='0' param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]' type='color' w='27385' x='71384' y='1192'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10879' id='10' name='Annual % by Type &amp; Year' param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]' type='filter' w='27385' x='71384' y='40089'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='26378' id='9' name='Annual % by Type &amp; Year' pane-specification-id='0' param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]' type='color' w='27385' x='71384' y='50968'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Types of Breach'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[sum:Number of Records:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[sum:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>737</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[:Measure Names]</field>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='YTD'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Location:nk]</field>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Date made Public'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok]</field>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Information Source for Breach'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]</field>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Annual % by Type &amp; Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]</field>
+            <field>[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='2' />
+        <default-map-tool-selection tool='8' />
+      </viewpoint>
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Annual % by Type &amp; Year'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Information Source for Breach'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Types of Breach'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+  </windows>
+</workbook>

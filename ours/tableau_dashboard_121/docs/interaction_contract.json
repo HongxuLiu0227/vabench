@@ -1,0 +1,282 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_121/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:33.696392Z"
+  },
+  "dashboard": {
+    "name": "Dashboard 1",
+    "worksheet_count": 4
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_bar",
+        "name": "Bar",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Bar"
+        }
+      },
+      {
+        "id": "ws_highlight_table",
+        "name": "Highlight Table",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Highlight Table"
+        }
+      },
+      {
+        "id": "ws_line",
+        "name": "Line",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Line"
+        }
+      },
+      {
+        "id": "ws_scatterplot",
+        "name": "Scatterplot",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Scatterplot"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_category",
+        "raw": "([federated.0azm2i115epm0e12562z51akj8sy].[none:Category:nk] / [federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk])",
+        "normalized": "Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_sales",
+        "raw": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+        "normalized": "Sales",
+        "role": "measure"
+      },
+      {
+        "id": "field_sub_category",
+        "raw": "[federated.0azm2i115epm0e12562z51akj8sy].[ctd:Sub-Category:ok]",
+        "normalized": "Sub-Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_market",
+        "raw": "[federated.0azm2i115epm0e12562z51akj8sy].[none:Market:nk]",
+        "normalized": "Market",
+        "role": "dimension"
+      },
+      {
+        "id": "field_order_date",
+        "raw": "[federated.0azm2i115epm0e12562z51akj8sy].[tmn:Order Date:qk]",
+        "normalized": "Order Date",
+        "role": "dimension"
+      },
+      {
+        "id": "field_profit",
+        "raw": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Profit:qk]",
+        "normalized": "Profit",
+        "role": "measure"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_bar"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Bar"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Bar",
+        "viewpoint_name": "Bar",
+        "field_ids": [
+          "field_sub_category",
+          "field_category",
+          "field_sub_category"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Line",
+        "viewpoint_name": "Line",
+        "field_ids": [
+          "field_order_date"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Highlight Table",
+        "viewpoint_name": "Highlight Table",
+        "field_ids": [
+          "field_market",
+          "field_sub_category"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Scatterplot",
+        "viewpoint_name": "Scatterplot",
+        "field_ids": [
+          "field_sales"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_bar",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_category",
+          "field_sub_category"
+        ]
+      },
+      {
+        "worksheet_id": "ws_highlight_table",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_market",
+          "field_sub_category"
+        ]
+      },
+      {
+        "worksheet_id": "ws_line",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_order_date"
+        ]
+      },
+      {
+        "worksheet_id": "ws_scatterplot",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_sales"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 4,
+    "worksheet_action_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4,
+    "field_count": 6
+  }
+}

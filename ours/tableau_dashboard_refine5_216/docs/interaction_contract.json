@@ -1,0 +1,152 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_refine5_216/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:37.891372Z"
+  },
+  "dashboard": {
+    "name": "Synthetic Dashboard 216",
+    "worksheet_count": 4
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_p1225_total_sales_each_year",
+        "name": "P1225__total_sales_each_year",
+        "chart_intent": "line_chart",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "P1225__total_sales_each_year"
+        }
+      },
+      {
+        "id": "ws_p1968_customer_overview",
+        "name": "P1968__customer_overview",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "P1968__customer_overview"
+        }
+      },
+      {
+        "id": "ws_p121_scatterplot",
+        "name": "P121__scatterplot",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "P121__scatterplot"
+        }
+      },
+      {
+        "id": "ws_p121_bar",
+        "name": "P121__bar",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "P121__bar"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_sales",
+        "raw": "[ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+        "normalized": "Sales",
+        "role": "measure"
+      },
+      {
+        "id": "field_order_date",
+        "raw": "[ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+        "normalized": "Order Date",
+        "role": "dimension"
+      },
+      {
+        "id": "field_region",
+        "raw": "[ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+        "normalized": "Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml_measure_names_ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml_multiple_values",
+        "raw": "([ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names] * [ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[Multiple Values])",
+        "normalized": "([ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names] * [ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[Multiple Values])",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_345932813618278400",
+        "raw": "[ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+        "normalized": "Calculation_345932813618278400",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_profit",
+        "raw": "[ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]",
+        "normalized": "Profit",
+        "role": "measure"
+      },
+      {
+        "id": "field_category",
+        "raw": "([ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk] / [ds_p1968_federated_11oeaww0axzaij1b29ohm0h7pnml].[none:Sub-Category:nk])",
+        "normalized": "Category",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [],
+    "dashboard_actions": [],
+    "highlight_bindings": []
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [],
+      "default_trigger_event": "unknown",
+      "default_auto_clear": null
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_p1225_total_sales_each_year",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_p1968_customer_overview",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_p121_scatterplot",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_p121_bar",
+        "supports": [],
+        "focus_field_ids": []
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 4,
+    "worksheet_action_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0,
+    "field_count": 7
+  }
+}

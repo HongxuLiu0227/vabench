@@ -1,0 +1,114 @@
+/**
+ * Unit tests for CSV parser
+ * NOTE: This file requires vitest to be installed to run
+ * To use, install vitest as devDependency and add test script to package.json
+ *
+ * Tests cover:
+ * - Header normalization (triple quotes, double quotes, BOM removal)
+ * - CSV line splitting with quote handling
+ * - Full CSV parsing with preamble detection
+ * - Field validation
+ *
+ * Example test cases (commented out):
+ *
+ * describe('CSV Parser', () => {
+ *   describe('normalizeHeader', () => {
+ *     it('should remove triple quotes', () => {
+ *       expect(normalizeHeader('"""Field Name"""')).toBe('Field Name');
+ *     });
+ *
+ *     it('should remove double quotes', () => {
+ *       expect(normalizeHeader('"Field Name"')).toBe('Field Name');
+ *     });
+ *
+ *     it('should remove BOM', () => {
+ *       expect(normalizeHeader('\uFEFF"""Field"""')).toBe('Field');
+ *     });
+ *
+ *     it('should trim whitespace', () => {
+ *       expect(normalizeHeader('  "Field"  ')).toBe('Field');
+ *     });
+ *
+ *     it('should handle unquoted headers', () => {
+ *       expect(normalizeHeader('Field Name')).toBe('Field Name');
+ *     });
+ *   });
+ *
+ *   describe('splitCSVLine', () => {
+ *     it('should split simple CSV', () => {
+ *       const line = 'a,b,c';
+ *       expect(splitCSVLine(line)).toEqual(['a', 'b', 'c']);
+ *     });
+ *
+ *     it('should handle triple-quoted fields', () => {
+ *       const line = '"""a""","""b""","""c"""';
+ *       expect(splitCSVLine(line)).toEqual(['a', 'b', 'c']);
+ *     });
+ *
+ *     it('should handle quoted fields with commas', () => {
+ *       const line = '"a, b",c,"d, e"';
+ *       expect(splitCSVLine(line)).toEqual(['a, b', 'c', 'd, e']);
+ *     });
+ *
+ *     it('should handle empty fields', () => {
+ *       const line = 'a,,c';
+ *       expect(splitCSVLine(line)).toEqual(['a', '', 'c']);
+ *     });
+ *   });
+ *
+ *   describe('parseNormalizedCSV', () => {
+ *     it('should parse CSV with triple-quoted headers', () => {
+ *       const csv = '"""Name""","""Age"""\nAlice,30\nBob,25';
+ *       const result = parseNormalizedCSV(csv);
+ *
+ *       expect(result).toHaveLength(2);
+ *       expect(result[0]).toEqual({ Name: 'Alice', Age: '30' });
+ *       expect(result[1]).toEqual({ Name: 'Bob', Age: '25' });
+ *     });
+ *
+ *     it('should skip preamble rows', () => {
+ *       const csv = 'Some preamble text\n\n"""Name""","""Age"""\nAlice,30';
+ *       const result = parseNormalizedCSV(csv);
+ *
+ *       expect(result).toHaveLength(1);
+ *       expect(result[0]).toEqual({ Name: 'Alice', Age: '30' });
+ *     });
+ *
+ *     it('should apply row transformer', () => {
+ *       const csv = '"""Name""","""Age"""\nAlice,30';
+ *       const result = parseNormalizedCSV(csv, (row) => ({
+ *         name: row['Name'],
+ *         age: Number(row['Age']),
+ *       }));
+ *
+ *       expect(result[0]).toEqual({ name: 'Alice', age: 30 });
+ *     });
+ *   });
+ *
+ *   describe('validateFields', () => {
+ *     it('should validate present fields', () => {
+ *       const data = [{ a: 1, b: 2, c: 3 }];
+ *       const result = validateFields(data, ['a', 'b']);
+ *
+ *       expect(result.valid).toBe(true);
+ *       expect(result.missing).toEqual([]);
+ *     });
+ *
+ *     it('should detect missing fields', () => {
+ *       const data = [{ a: 1, b: 2 }];
+ *       const result = validateFields(data, ['a', 'c']);
+ *
+ *       expect(result.valid).toBe(false);
+ *       expect(result.missing).toEqual(['c']);
+ *     });
+ *
+ *     it('should handle empty data', () => {
+ *       const data = [];
+ *       const result = validateFields(data, ['a', 'b']);
+ *
+ *       expect(result.valid).toBe(false);
+ *       expect(result.missing).toEqual(['a', 'b']);
+ *     });
+ *   });
+ * });
+ */

@@ -1,0 +1,490 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2020.3.0 (20203.20.0801.1333)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Country Details",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Country:nk]",
+        "fields": [
+          "[federated.0xur38p0m5fgy31bel3po020k9qv]",
+          "[none:Country:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+        "fields": [
+          "[federated.0xur38p0m5fgy31bel3po020k9qv]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[Action (Region)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0xur38p0m5fgy31bel3po020k9qv].[Multiple Values]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Expenditures  (US Dollars):qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Users:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Volumes:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0xur38p0m5fgy31bel3po020k9qv].[Action (Region)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0xur38p0m5fgy31bel3po020k9qv].[Action (Region)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[Region]",
+                  "member": "\"Middle East\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Libraries by Region",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Region:nk]",
+        "fields": [
+          "[federated.0xur38p0m5fgy31bel3po020k9qv]",
+          "[none:Region:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Libraries:qk]",
+        "fields": [
+          "[federated.0xur38p0m5fgy31bel3po020k9qv]",
+          "[sum:Total Libraries:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Country Details by Region",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "7875",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "8875",
+          "w": "98400",
+          "h": "90125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Total Libraries by Region",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "8875",
+          "w": "98400",
+          "h": "45062",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Country Details",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "53937",
+          "w": "98400",
+          "h": "45063",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Country Details by Region",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "7875",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "8875",
+          "w": "98400",
+          "h": "90125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Total Libraries by Region",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "8875",
+          "w": "98400",
+          "h": "45062",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Country Details",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "53937",
+          "w": "98400",
+          "h": "45063",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Country Details by Region",
+        "type": "sheet",
+        "worksheet": "Total Libraries by Region"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Country Details by Region"
+      },
+      "field_captions": [],
+      "target": "Country Details by Region"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Libraries by Region",
+      "viewpoint_name": "Total Libraries by Region",
+      "fields": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Country Details",
+      "viewpoint_name": "Country Details",
+      "fields": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Country:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

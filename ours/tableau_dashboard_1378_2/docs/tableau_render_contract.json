@@ -1,0 +1,375 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "G-Map: Sepsis",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Latitude:qk]",
+      "cols_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Longitude:qk]",
+      "series_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "NJ",
+        "NY"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "89643",
+          "y": "1974",
+          "w": "9011",
+          "h": "27914",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.8964,
+            "y_ratio": 0.0197,
+            "w_ratio": 0.0901,
+            "h_ratio": 0.2791
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Sepsis: Interactive",
+              "type": "sheet",
+              "worksheet": "G-Map: Sepsis"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Sepsis: Interactive"
+            },
+            "field_captions": [],
+            "target": "Sepsis: Interactive"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "468",
+        "y": "752",
+        "w": "99064",
+        "h": "29886",
+        "aspect_ratio": 3.3147,
+        "normalized": {
+          "x_ratio": 0.0047,
+          "y_ratio": 0.0075,
+          "w_ratio": 0.9906,
+          "h_ratio": 0.2989
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Linear: Sepsis",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk] * [federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk])",
+      "cols_field": "([federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Total Payments :qk] + [federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk])",
+      "series_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "NJ",
+        "NY"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Average Total Payments ($)",
+        "Average Medicare Payments ($)"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Covered Charges :qk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Total Payments :qk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Calculation_1166995304830603266:qk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "468",
+        "y": "30638",
+        "w": "99064",
+        "h": "29511",
+        "aspect_ratio": 3.3568,
+        "normalized": {
+          "x_ratio": 0.0047,
+          "y_ratio": 0.3064,
+          "w_ratio": 0.9906,
+          "h_ratio": 0.2951
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sepsis: ACC vs AMP",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk] * [federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Covered Charges :qk])",
+      "cols_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+      "series_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "NJ",
+        "NY"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [
+        "Average Covered Charges ($)"
+      ],
+      "axis_title_cols": [
+        "Average Medicare Payments ($)"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Hospital Referral Region Description - Split 2:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]"
+        ]
+      },
+      "zone": {
+        "x": "468",
+        "y": "60149",
+        "w": "99064",
+        "h": "39099",
+        "aspect_ratio": 2.5337,
+        "normalized": {
+          "x_ratio": 0.0047,
+          "y_ratio": 0.6015,
+          "w_ratio": 0.9906,
+          "h_ratio": 0.391
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Sepsis: Interactive",
+        "type": "sheet",
+        "worksheet": "G-Map: Sepsis"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Sepsis: Interactive"
+      },
+      "field_captions": [],
+      "target": "Sepsis: Interactive"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sepsis: ACC vs AMP",
+      "viewpoint_name": "Sepsis: ACC vs AMP",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Hospital Referral Region Description - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "G-Map: Sepsis",
+      "viewpoint_name": "G-Map: Sepsis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Linear: Sepsis",
+      "viewpoint_name": "Linear: Sepsis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Covered Charges :qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Total Payments :qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Calculation_1166995304830603266:qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Sepsis: Interactive",
+      "viewpoint_name": "G-Map: Sepsis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "G-Map: Sepsis"
+    ],
+    "legend_anchor_positions": {
+      "G-Map: Sepsis": "overlay"
+    },
+    "axis_title_worksheets": [
+      "Linear: Sepsis",
+      "Sepsis: ACC vs AMP"
+    ],
+    "interaction_worksheets": [
+      "G-Map: Sepsis",
+      "Linear: Sepsis",
+      "Sepsis: ACC vs AMP"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

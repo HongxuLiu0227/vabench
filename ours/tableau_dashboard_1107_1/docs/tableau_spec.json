@@ -1,0 +1,570 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.1.1 (20211.21.0420.1112)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Female Trip YOY",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[none:Calculation_2945072721971425291:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[yr:starttime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcdf:cnt:TripID:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "diff-options": "Relative",
+          "ordering-type": "Rows",
+          "type": "PctDiff",
+          "column_instance": "[pcdf:cnt:TripID:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Overall YOY",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[yr:starttime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcdf:cnt:TripID:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "diff-options": "Relative",
+          "ordering-type": "Rows",
+          "type": "PctDiff",
+          "column_instance": "[pcdf:cnt:TripID:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "UserType and Gender YOY",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[cnt:TripID:qk]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[cnt:TripID:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk] / ([federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk] / [federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]))",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[none:usertype:nk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[none:Calculation_2945072721971425291:nk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[yr:starttime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[cnt:TripID:qk]",
+            "title": "Count of Trips"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "FemaleRidershipDashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "962",
+          "w": "97538",
+          "h": "98076",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "962",
+          "w": "71692",
+          "h": "98076",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "UserType and Gender YOY",
+          "parent_id": "10",
+          "zone_type": "color",
+          "x": "72923",
+          "y": "962",
+          "w": "25846",
+          "h": "98076",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Overall YOY",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "37077",
+          "y": "962",
+          "w": "35846",
+          "h": "24038",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Female Trip YOY",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "1231",
+          "y": "962",
+          "w": "35846",
+          "h": "24038",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "UserType and Gender YOY",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "1231",
+          "y": "25000",
+          "w": "71692",
+          "h": "74038",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "FemaleRidershipDashboard",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "962",
+          "w": "97538",
+          "h": "98076",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "962",
+          "w": "71692",
+          "h": "98076",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "UserType and Gender YOY",
+          "parent_id": "10",
+          "zone_type": "color",
+          "x": "72923",
+          "y": "962",
+          "w": "25846",
+          "h": "98076",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Overall YOY",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "37077",
+          "y": "962",
+          "w": "35846",
+          "h": "24038",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Female Trip YOY",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "1231",
+          "y": "962",
+          "w": "35846",
+          "h": "24038",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "UserType and Gender YOY",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "1231",
+          "y": "25000",
+          "w": "71692",
+          "h": "74038",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_B8282730A7F946D2862C4A219DD2AE17]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Pct of Trips by Gender"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text",
+        "target": "Pct of Trips by Gender"
+      },
+      "field_captions": [
+        "Gender Text"
+      ],
+      "target": "Pct of Trips by Gender"
+    },
+    {
+      "name": "[Action5_B78B9DE2B3684A5090442ACD7177FEDD]",
+      "caption": "Highlight 3 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "FemaleRidershipDashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text",
+        "target": "FemaleRidershipDashboard"
+      },
+      "field_captions": [
+        "Gender Text"
+      ],
+      "target": "FemaleRidershipDashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "UserType and Gender YOY",
+      "viewpoint_name": "UserType and Gender YOY",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Female Trip YOY",
+      "viewpoint_name": "Female Trip YOY",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Overall YOY",
+      "viewpoint_name": "Overall YOY",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 3
+  }
+}

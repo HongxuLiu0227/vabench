@@ -1,0 +1,208 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "860",
+    "maxwidth": "650",
+    "minheight": "560",
+    "minwidth": "420"
+  },
+  "worksheets": [
+    {
+      "name": "Peak hours for trip end",
+      "dashboard_name": "Dashboard-Start&End time",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+      "cols_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[hr:stoptime:ok]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "Number of Records"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:stoptime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "50000",
+        "w": "97538",
+        "h": "48897",
+        "aspect_ratio": 1.9948,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.5,
+          "w_ratio": 0.9754,
+          "h_ratio": 0.489
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Peak hours for trip start",
+      "dashboard_name": "Dashboard-Start&End time",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+      "cols_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[hr:starttime:ok]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "Number of Records"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:starttime:qk]",
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:starttime:ok]",
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:stoptime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "1103",
+        "w": "97538",
+        "h": "48897",
+        "aspect_ratio": 1.9948,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.011,
+          "w_ratio": 0.9754,
+          "h_ratio": 0.489
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action3]",
+      "caption": "Highlight1",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-hover"
+      },
+      "source": {
+        "dashboard": "Dashboard-Start&End time",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard-Start&End time"
+      },
+      "field_captions": [],
+      "target": "Dashboard-Start&End time"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Peak hours for trip start",
+      "viewpoint_name": "Peak hours for trip start",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:starttime:qk]",
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:starttime:ok]",
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Peak hours for trip end",
+      "viewpoint_name": "Peak hours for trip end",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "line_chart": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [
+      "Peak hours for trip end",
+      "Peak hours for trip start"
+    ],
+    "interaction_worksheets": [
+      "Peak hours for trip end",
+      "Peak hours for trip start"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

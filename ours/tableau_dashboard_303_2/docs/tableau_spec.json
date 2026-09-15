@@ -1,0 +1,955 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "9.3.3 (9300.16.0606.1812)",
+      "source-platform": "win",
+      "version": "9.3"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Q2_Weather",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[none:Weather_Conditions:nk]"
+        ]
+      },
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "pane",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Light Conditions (group)]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Speed_limit]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Road_Surface_Conditions]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "No. of Accidents in different Weather conditions",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "title_text": "No. of Accidents in different Weather conditions",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 28",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[none:Speed_limit:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Light Conditions (group)]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Road_Surface_Conditions]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Effect of Light condition, Speed and Weather on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "title_text": "Effect of Light condition, Speed and Weather on Number of Accidents",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "sheet13",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk] / [textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Surface_Conditions:nk])",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[none:Weather_Conditions:nk]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[none:Road_Surface_Conditions:nk]"
+        ]
+      },
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Light Conditions (group)]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Speed_limit]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Light Conditions (group)]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Impact of Weather and Road Surface Conditions on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "title_text": "Impact of Weather and Road Surface Conditions on Number of Accidents",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard2",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Sheet 28",
+          "parent_id": "14",
+          "zone_type": "color",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "34616",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Sheet 28",
+          "parent_id": "14",
+          "zone_type": "size",
+          "x": "86219",
+          "y": "34616",
+          "w": "13781",
+          "h": "20569",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "9",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "title",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "6689",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "6689",
+          "w": "86219",
+          "h": "92642",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Q2_Weather",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "0",
+          "y": "6689",
+          "w": "43110",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sheet 28",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "0",
+          "y": "53010",
+          "w": "86219",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "sheet13",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "43110",
+          "y": "6689",
+          "w": "43109",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard2",
+      "size": {},
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Sheet 28",
+          "parent_id": "14",
+          "zone_type": "color",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "34616",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Sheet 28",
+          "parent_id": "14",
+          "zone_type": "size",
+          "x": "86219",
+          "y": "34616",
+          "w": "13781",
+          "h": "20569",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "9",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "title",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "6689",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "6689",
+          "w": "86219",
+          "h": "92642",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Q2_Weather",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "0",
+          "y": "6689",
+          "w": "43110",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sheet 28",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "0",
+          "y": "53010",
+          "w": "86219",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "sheet13",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "43110",
+          "y": "6689",
+          "w": "43109",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action4]",
+      "caption": "Effect of Weather <[Weather_Conditions]>",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard2",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard2"
+      },
+      "field_captions": [],
+      "target": "Dashboard2"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Q2_Weather",
+      "viewpoint_name": "Q2_Weather",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard2",
+      "viewpoint_name": "Sheet 28",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 28",
+      "viewpoint_name": "Sheet 28",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "sheet13",
+      "viewpoint_name": "sheet13",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Surface_Conditions:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Type:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

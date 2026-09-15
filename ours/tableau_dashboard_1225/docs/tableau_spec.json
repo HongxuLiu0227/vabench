@@ -1,0 +1,681 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.3.1 (20203.20.0918.1727)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Total Profits Each Year",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1y5sksx1v7xong1ajck090hysarw].[yr:Order Date:ok]",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[yr:Order Date:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[yr:Order Date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Profits by Sub-Categories",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk] / [federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk])",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[none:Category:nk]",
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[none:Sub-Category:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Copiers",
+            "Phones",
+            "Accessories",
+            "Paper",
+            "Binders",
+            "Chairs",
+            "Storage",
+            "Appliances",
+            "Furnishings",
+            "Envelopes",
+            "Art",
+            "Labels",
+            "Machines",
+            "Fasteners",
+            "Supplies",
+            "Bookcases",
+            "Tables",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[yr:Order Date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Sales Each Year",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1y5sksx1v7xong1ajck090hysarw].[yr:Order Date:ok]",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[yr:Order Date:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Sales by Sub-Categories",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk] / [federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk])",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[none:Category:nk]",
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[none:Sub-Category:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+        "fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Phones",
+            "Chairs",
+            "Storage",
+            "Tables",
+            "Binders",
+            "Machines",
+            "Accessories",
+            "Copiers",
+            "Bookcases",
+            "Appliances",
+            "Furnishings",
+            "Paper",
+            "Supplies",
+            "Art",
+            "Envelopes",
+            "Labels",
+            "Fasteners",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[yr:Order Date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Sales and Profits",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Total Sales Each Year",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Total Sales by Sub-Categories",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Total Profits by Sub-Categories",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Total Profits Each Year",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Sales and Profits",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Total Sales Each Year",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Total Sales by Sub-Categories",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Total Profits by Sub-Categories",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Total Profits Each Year",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Sales and Profits",
+        "type": "sheet",
+        "worksheet": "Total Sales Each Year"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Sales and Profits"
+      },
+      "field_captions": [],
+      "target": "Sales and Profits"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Sales by Sub-Categories",
+      "viewpoint_name": "Total Sales by Sub-Categories",
+      "fields": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk]",
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 1
+  }
+}

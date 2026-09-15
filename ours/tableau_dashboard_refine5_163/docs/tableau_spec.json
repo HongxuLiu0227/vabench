@@ -1,0 +1,716 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.3.3 (20213.21.1018.0949)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "P121__scatterplot",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Profit:qk]",
+        "fields": [
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+        "fields": [
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Quantity:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[none:Product Name:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Scatterplot",
+          "style": {}
+        }
+      ],
+      "title_text": "Scatterplot",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "P1225__total_sales_each_year",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+        "fields": [
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[yr:Order Date:ok]",
+        "fields": [
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[yr:Order Date:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Total Sales Each Year",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Sales Each Year",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "P1968__customer_overview",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[none:Region:nk]",
+        "fields": [
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[none:Region:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "([ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[:Measure Names] * [ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[Multiple Values])",
+        "fields": [
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[:Measure Names]",
+          "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31]",
+          "[Multiple Values]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[usr:Profit Ratio:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[ctd:Customer Name:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Quantity:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[usr:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Profit:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[usr:Profit Ratio:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "quick-filter"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[usr:Sales:qk]",
+            "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+            "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Quantity:qk]",
+            "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Profit:qk]",
+            "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[usr:Profit Ratio:qk]"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Customer Overview",
+          "style": {}
+        }
+      ],
+      "title_text": "Customer Overview",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Synthetic Dashboard 163",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "61750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "62750",
+          "w": "98400",
+          "h": "36250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "61750",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#e6e6e6"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "50000",
+          "y": "1000",
+          "w": "49200",
+          "h": "61750",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "62750",
+          "w": "98400",
+          "h": "36250",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "61748",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "P1225__total_sales_each_year",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1000",
+          "w": "49200",
+          "h": "61750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "P1968__customer_overview",
+          "parent_id": "15",
+          "zone_type": "",
+          "x": "800",
+          "y": "62750",
+          "w": "98400",
+          "h": "36250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "P121__scatterplot",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "61748",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Synthetic Dashboard 163",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "61750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "62750",
+          "w": "98400",
+          "h": "36250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "61750",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#e6e6e6"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "50000",
+          "y": "1000",
+          "w": "49200",
+          "h": "61750",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "62750",
+          "w": "98400",
+          "h": "36250",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "61748",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "P1225__total_sales_each_year",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1000",
+          "w": "49200",
+          "h": "61750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "P1968__customer_overview",
+          "parent_id": "15",
+          "zone_type": "",
+          "x": "800",
+          "y": "62750",
+          "w": "98400",
+          "h": "36250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "P121__scatterplot",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "61748",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

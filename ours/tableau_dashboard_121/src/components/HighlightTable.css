@@ -1,0 +1,48 @@
+.highlight-table-container {
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.highlight-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+.highlight-table th,
+.highlight-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: right;
+}
+
+.highlight-table th.row-header {
+  text-align: left;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  position: sticky;
+  left: 0;
+  z-index: 10;
+}
+
+.highlight-table td.row-header {
+  text-align: left;
+  font-weight: 500;
+  background-color: #fff;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.highlight-table th {
+  background-color: #f0f0f0;
+  font-weight: 500;
+}
+
+.highlight-table .cell {
+  white-space: nowrap;
+}
+
+.highlight-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

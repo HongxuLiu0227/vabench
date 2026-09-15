@@ -1,0 +1,1568 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.2.1 (20212.21.0712.0907)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Bottom 10 End",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:end station name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "column_instance": "[usr:Calculation_949696574854787079:nk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[end station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:end station name:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[usr:Calculation_949696574854787079:nk]",
+                  "member": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations (end)",
+          "style": {}
+        }
+      ],
+      "title_text": "Bottom 10 Stations (end)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Bottom 10 Start",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:start station name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "column_instance": "[usr:Calculation_949696574854787079:nk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[end station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:start station name:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-exclude": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection-all-when-empty": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection-is-empty": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[usr:Calculation_949696574854787079:nk]",
+                  "member": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations (start)",
+          "style": {}
+        }
+      ],
+      "title_text": "Bottom 10 Stations (start)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Citymap End",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station latitude:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:end station latitude:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station longitude:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:end station longitude:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Exclusions (End Station Latitude,End Station Longitude)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[attr:end station name:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "map-layer",
+        "map",
+        "map-data-layer"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[end station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Exclusions (End Station Latitude,End Station Longitude)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Exclusions (End Station Latitude,End Station Longitude)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "crossjoin"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station latitude:qk]"
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station longitude:qk]"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "crossjoin"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:end station latitude:qk]",
+                          "member": "0.0"
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:end station longitude:qk]",
+                          "member": "0.0"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "expression": "COUNT([end station name]) > 10",
+                  "function": "filter",
+                  "{http://www.tableausoftware.com/xml/user}ui-filter-by-field": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "filter-by"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:end station name:nk]",
+                      "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Most Popular Journey Ending Locations",
+          "style": {}
+        }
+      ],
+      "title_text": "Most Popular Journey Ending Locations",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Citymap Start",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station latitude:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:start station latitude:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station longitude:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:start station longitude:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+      ],
+      "encodings": {
+        "tooltip": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[attr:start station name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "legend-title-text",
+        "map-layer",
+        "map",
+        "map-data-layer"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[end station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Most Popular Journey Starting Locations",
+          "style": {}
+        }
+      ],
+      "title_text": "Most Popular Journey Starting Locations",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top 10 End",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:end station name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "column_instance": "[usr:Calculation_949696574855196681:nk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[usr:Calculation_949696574855196681:nk]",
+                  "member": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations (end)",
+          "style": {}
+        }
+      ],
+      "title_text": "Top 10 Stations (end)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top 10 Start",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:start station name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "column_instance": "[usr:Calculation_949696574855196681:nk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (End Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[end station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[usr:Calculation_949696574855196681:nk]",
+                  "member": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations (start)",
+          "style": {}
+        }
+      ],
+      "title_text": "Top 10 Stations (start)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Station Use DB",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Citymap Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "929",
+          "w": "49517",
+          "h": "57259",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Citymap End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "929",
+          "w": "49517",
+          "h": "57259",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Top 10 Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "58188",
+          "w": "24759",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Top 10 End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "58188",
+          "w": "24759",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Bottom 10 Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "25242",
+          "y": "58188",
+          "w": "24758",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Bottom 10 End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "74759",
+          "y": "58188",
+          "w": "24758",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "88896",
+          "y": "8130",
+          "w": "9656",
+          "h": "33333",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Citymap Start",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "88896",
+          "y": "8130",
+          "w": "9656",
+          "h": "8478",
+          "param": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Citymap Start",
+          "parent_id": "6",
+          "zone_type": "size",
+          "x": "88896",
+          "y": "16608",
+          "w": "9656",
+          "h": "18118",
+          "param": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Station Use DB",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Citymap Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "929",
+          "w": "49517",
+          "h": "57259",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Citymap End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "929",
+          "w": "49517",
+          "h": "57259",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Top 10 Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "58188",
+          "w": "24759",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Top 10 End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "58188",
+          "w": "24759",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Bottom 10 Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "25242",
+          "y": "58188",
+          "w": "24758",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Bottom 10 End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "74759",
+          "y": "58188",
+          "w": "24758",
+          "h": "40883",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "88896",
+          "y": "8130",
+          "w": "9656",
+          "h": "33333",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Citymap Start",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "88896",
+          "y": "8130",
+          "w": "9656",
+          "h": "8478",
+          "param": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Citymap Start",
+          "parent_id": "6",
+          "zone_type": "size",
+          "x": "88896",
+          "y": "16608",
+          "w": "9656",
+          "h": "18118",
+          "param": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action5_C45C2334F59B442292529553EC82F860]",
+      "caption": "Filter 5 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Bottom 10 End"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    },
+    {
+      "name": "[Action6_0F107AB4DF344E2E9C3C095BDA1F773D]",
+      "caption": "Filter 6 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Top 10 End"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    },
+    {
+      "name": "[Action7_614A459F643B4E4F9FFBD3BEBB3E36A2]",
+      "caption": "Filter 7 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Bottom 10 Start"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    },
+    {
+      "name": "[Action8_319E0A4A1C9A4BC6AACB60489ACD7A4A]",
+      "caption": "Filter 8 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Station Use DB",
+        "type": "sheet",
+        "worksheet": "Top 10 Start"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Station Use DB"
+      },
+      "field_captions": [],
+      "target": "Station Use DB"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Citymap Start",
+      "viewpoint_name": "Citymap Start",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[attr:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Citymap End",
+      "viewpoint_name": "Citymap End",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 Start",
+      "viewpoint_name": "Top 10 Start",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 End",
+      "viewpoint_name": "Top 10 End",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 Start",
+      "viewpoint_name": "Bottom 10 Start",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 End",
+      "viewpoint_name": "Bottom 10 End",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 6,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 6
+  }
+}

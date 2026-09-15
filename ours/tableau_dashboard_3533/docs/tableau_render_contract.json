@@ -1,0 +1,726 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "batman vs runs",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]",
+      "cols_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+      "series_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Kolkata Knight Riders"
+      ],
+      "title_runs": [
+        {
+          "text": "Top Batsmen",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Batsmen Runs"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]"
+        ]
+      },
+      "zone": {
+        "x": "693",
+        "y": "55297",
+        "w": "49261",
+        "h": "43352",
+        "aspect_ratio": 1.1363,
+        "normalized": {
+          "x_ratio": 0.0069,
+          "y_ratio": 0.553,
+          "w_ratio": 0.4926,
+          "h_ratio": 0.4335
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "team vs total runs",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:total_runs:qk]",
+      "cols_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "venue",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]",
+      "cols_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+      "series_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Kolkata Knight Riders"
+      ],
+      "title_runs": [
+        {
+          "text": "Venue (",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        },
+        {
+          "text": "Where Match Take place)",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "9",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]"
+        ]
+      },
+      "zone": {
+        "x": "49954",
+        "y": "55298",
+        "w": "49353",
+        "h": "43351",
+        "aspect_ratio": 1.1385,
+        "normalized": {
+          "x_ratio": 0.4995,
+          "y_ratio": 0.553,
+          "w_ratio": 0.4935,
+          "h_ratio": 0.4335
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "win by runs",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]",
+      "cols_field": "([federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk] / [federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk])",
+      "series_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Kolkata Knight Riders"
+      ],
+      "title_runs": [
+        {
+          "text": "Win By Runs",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+        ]
+      },
+      "zone": {
+        "x": "49954",
+        "y": "11977",
+        "w": "24686",
+        "h": "43321",
+        "aspect_ratio": 0.5698,
+        "normalized": {
+          "x_ratio": 0.4995,
+          "y_ratio": 0.1198,
+          "w_ratio": 0.2469,
+          "h_ratio": 0.4332
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "win by wickets",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_wickets:qk]",
+      "cols_field": "([federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk] / [federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk])",
+      "series_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Kolkata Knight Riders"
+      ],
+      "title_runs": [
+        {
+          "text": "Win By Wickets",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:dismissal_kind:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:result:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+        ]
+      },
+      "zone": {
+        "x": "74640",
+        "y": "11977",
+        "w": "24667",
+        "h": "43321",
+        "aspect_ratio": 0.5694,
+        "normalized": {
+          "x_ratio": 0.7464,
+          "y_ratio": 0.1198,
+          "w_ratio": 0.2467,
+          "h_ratio": 0.4332
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "winner vs count",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]",
+      "cols_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+      "series_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Top Winning Teams",
+          "style": {
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter1",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "winner vs count"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "exclude": "winner vs count",
+              "on-empty": "none",
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+        ]
+      },
+      "zone": {
+        "x": "693",
+        "y": "11977",
+        "w": "49261",
+        "h": "43320",
+        "aspect_ratio": 1.1371,
+        "normalized": {
+          "x_ratio": 0.0069,
+          "y_ratio": 0.1198,
+          "w_ratio": 0.4926,
+          "h_ratio": 0.4332
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "winner vs win by runs",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]",
+      "cols_field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "11",
+      "x": "693",
+      "y": "1351",
+      "w": "98614",
+      "h": "10626",
+      "text": "Best Cricket Teams & Players\n-Imam Abdullah Khan",
+      "text_runs": [
+        {
+          "text": "Best Cricket Teams & Players",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Times New Roman",
+            "fontsize": "22",
+            "underline": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "2"
+          }
+        },
+        {
+          "text": "-Imam Abdullah Khan",
+          "style": {
+            "bold": "true",
+            "fontalignment": "2",
+            "fontcolor": "#000000",
+            "fontname": "Times New Roman",
+            "fontsize": "11",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "winner vs count"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "winner vs count",
+        "on-empty": "none",
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "winner vs win by runs",
+      "viewpoint_name": "winner vs win by runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "team vs total runs",
+      "viewpoint_name": "team vs total runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "winner vs count",
+      "viewpoint_name": "winner vs count",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "batman vs runs",
+      "viewpoint_name": "batman vs runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "venue",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "win by runs",
+      "viewpoint_name": "win by runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "win by wickets",
+      "viewpoint_name": "win by wickets",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:dismissal_kind:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:result:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "venue",
+      "viewpoint_name": "venue",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 7,
+    "dashboard_text_zone_count": 1,
+    "intent_counts": {
+      "vertical_ranked_bar": 7
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [
+      "batman vs runs"
+    ],
+    "interaction_worksheets": [
+      "batman vs runs",
+      "team vs total runs",
+      "venue",
+      "win by runs",
+      "win by wickets",
+      "winner vs count",
+      "winner vs win by runs"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 8
+  }
+}

@@ -1,0 +1,911 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2021.3.1 (20213.21.0917.1006)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Swimmers by Age",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "([federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk] * [federated.15oasa50fhs26j1fbotsl1pz1pfh].[ctd:SwimmerId:qk])",
+        "fields": [
+          "[federated.15oasa50fhs26j1fbotsl1pz1pfh]",
+          "[none:GenderSwimmer:nk]",
+          "[federated.15oasa50fhs26j1fbotsl1pz1pfh]",
+          "[ctd:SwimmerId:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:BirthDateSwimmers (copy)_818529261980127232:ok]",
+        "fields": [
+          "[federated.15oasa50fhs26j1fbotsl1pz1pfh]",
+          "[none:BirthDateSwimmers (copy)_818529261980127232:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]",
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]",
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[Action (RankSwimmers,RankTrainer)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "quick-filter"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[Action (RankSwimmers,RankTrainer)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[Action (RankSwimmers,RankTrainer)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_7CE117BA8F8B4FDE8F33FE4B32815FF6]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[RankSwimmers]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[RankTrainer]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:GenderSwimmer:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:GenderSwimmer:nk]",
+                      "member": "%null%"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Сountry:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Amount of swimmers by Age\n",
+          "style": {}
+        }
+      ],
+      "title_text": "Amount of swimmers by Age",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Swimmers by Country",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[Action (RankSwimmers,RankTrainer)]"
+      ],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[ctd:SwimmerId:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[ctd:SwimmerId:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[Action (RankSwimmers,RankTrainer)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[Action (RankSwimmers,RankTrainer)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_7CE117BA8F8B4FDE8F33FE4B32815FF6]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[RankSwimmers]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[RankTrainer]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Amount of swimmers by Country",
+          "style": {}
+        }
+      ],
+      "title_text": "Amount of swimmers by Country",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Swimmers by Rank ",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:RankSwimmers:nk]",
+        "fields": [
+          "[federated.15oasa50fhs26j1fbotsl1pz1pfh]",
+          "[none:RankSwimmers:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:RankTrainer:nk] * [federated.15oasa50fhs26j1fbotsl1pz1pfh].[ctd:SwimmerId:qk])",
+        "fields": [
+          "[federated.15oasa50fhs26j1fbotsl1pz1pfh]",
+          "[none:RankTrainer:nk]",
+          "[federated.15oasa50fhs26j1fbotsl1pz1pfh]",
+          "[ctd:SwimmerId:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[attr:RankSwimmers:nk]",
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:CountrySwimmers:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "field-labels",
+        "field-labels-decoration",
+        "field-labels-spanner",
+        "label",
+        "mark",
+        "table",
+        "quick-filter"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[attr:RankSwimmers:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[attr:RankSwimmers:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"1\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"2\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"3\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"CMS\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"MS\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"U1\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"U2\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "\"U3\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[attr:RankSwimmers:nk]",
+                      "member": "%many-values%"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:CountrySwimmers:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:CountrySwimmers:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:CountrySwimmers:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Rank by Swimmers by Trainers Rank",
+          "style": {}
+        }
+      ],
+      "title_text": "Rank by Swimmers by Trainers Rank",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Swimmers Overview",
+      "zones": [
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "684",
+          "y": "967",
+          "w": "98632",
+          "h": "98066",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "title",
+          "x": "684",
+          "y": "967",
+          "w": "98632",
+          "h": "6046",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-basic",
+          "x": "684",
+          "y": "7013",
+          "w": "98632",
+          "h": "92020",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Swimmers by Country",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "599",
+          "y": "44135",
+          "w": "44825",
+          "h": "74002",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Swimmers by Rank ",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1796",
+          "y": "7013",
+          "w": "79042",
+          "h": "35067",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Swimmers by Rank ",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83062",
+          "y": "7497",
+          "w": "15997",
+          "h": "6651",
+          "param": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:CountrySwimmers:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Swimmers by Age",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "46621",
+          "y": "45345",
+          "w": "51326",
+          "h": "53930",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Swimmers by Age",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "82549",
+          "y": "43047",
+          "w": "15569",
+          "h": "6288",
+          "param": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Swimmers by Age",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "85287",
+          "y": "55744",
+          "w": "11976",
+          "h": "7739",
+          "param": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Swimmers Overview",
+      "size": {
+        "maxheight": "827",
+        "maxwidth": "1169",
+        "minheight": "827",
+        "minwidth": "1169",
+        "preset-index": "16",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "684",
+          "y": "967",
+          "w": "98632",
+          "h": "98066",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "title",
+          "x": "684",
+          "y": "967",
+          "w": "98632",
+          "h": "6046",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-basic",
+          "x": "684",
+          "y": "7013",
+          "w": "98632",
+          "h": "92020",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Swimmers by Country",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "599",
+          "y": "44135",
+          "w": "44825",
+          "h": "74002",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Swimmers by Rank ",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1796",
+          "y": "7013",
+          "w": "79042",
+          "h": "35067",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Swimmers by Rank ",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83062",
+          "y": "7497",
+          "w": "15997",
+          "h": "6651",
+          "param": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:CountrySwimmers:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Swimmers by Age",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "46621",
+          "y": "45345",
+          "w": "51326",
+          "h": "53930",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Swimmers by Age",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "82549",
+          "y": "43047",
+          "w": "15569",
+          "h": "6288",
+          "param": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Swimmers by Age",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "85287",
+          "y": "55744",
+          "w": "11976",
+          "h": "7739",
+          "param": "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_7CE117BA8F8B4FDE8F33FE4B32815FF6]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Swimmers Overview",
+        "type": "sheet",
+        "worksheet": "Swimmers by Rank "
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Swimmers Overview"
+      },
+      "field_captions": [],
+      "target": "Swimmers Overview"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Swimmers by Rank ",
+      "viewpoint_name": "Swimmers by Rank ",
+      "fields": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:RankTrainer:nk]",
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:TrainerID:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Swimmers by Country",
+      "viewpoint_name": "Swimmers by Country",
+      "fields": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:Сountry:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Swimmers by Age",
+      "viewpoint_name": "Swimmers by Age",
+      "fields": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Swimmers Overview",
+      "viewpoint_name": "Swimmers by Age",
+      "fields": [
+        "[federated.15oasa50fhs26j1fbotsl1pz1pfh].[none:GenderSwimmer:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

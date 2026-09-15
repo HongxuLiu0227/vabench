@@ -1,0 +1,1110 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2021.1.1 (20211.21.0420.1112)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "game_crit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u]",
+          "[none:game:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Multiple Values]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "header",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_CB70D7F2B2A24B1E8729F88D4AE3BC7F]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[game]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tmn:release_date:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Critics",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "Critics",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "game_meta",
+      "chart_type": "Shape",
+      "rows": {
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+        "fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u]",
+          "[avg:metascore:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+        "fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u]",
+          "[tmn:release_date:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]"
+      ],
+      "encodings": {
+        "lod": [
+          {
+            "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "refline",
+        "legend-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[game]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_5B2CFEAB4C89430AB59CE0B91737B327]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:game:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection-all-when-empty": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection-is-empty": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Games",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Games",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+            "title": "Average Metascore"
+          }
+        ],
+        "cols": [
+          {
+            "field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+            "title": "Month of release"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": "center"
+      }
+    },
+    {
+      "name": "game_users",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u]",
+          "[none:game:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Multiple Values]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "header",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]",
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]",
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]",
+            "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[game]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_E23F2A4330E444168D7B4A00A8DB1CEB]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_CB70D7F2B2A24B1E8729F88D4AE3BC7F]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[game]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tmn:release_date:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Users",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "Users",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "game",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "text",
+          "x": "800",
+          "y": "95000",
+          "w": "49200",
+          "h": "4000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Source: ",
+              "style": {
+                "fontcolor": "#c0c0c0"
+              }
+            },
+            {
+              "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+              "style": {
+                "auto-url": "true",
+                "fontcolor": "#c0c0c0",
+                "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+              }
+            }
+          ],
+          "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019"
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "text",
+          "x": "50000",
+          "y": "95000",
+          "w": "49200",
+          "h": "4000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Created by Sergio Funes",
+              "style": {
+                "fontalignment": "2",
+                "fontcolor": "#c0c0c0"
+              }
+            }
+          ],
+          "text": "Created by Sergio Funes"
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "game_meta",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "46995",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "game_crit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "47995",
+          "w": "49200",
+          "h": "47005",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "game_users",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "47995",
+          "w": "49200",
+          "h": "47005",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "game",
+      "id": "21",
+      "x": "800",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+      "text_runs": [
+        {
+          "text": "Source: ",
+          "style": {
+            "fontcolor": "#c0c0c0"
+          }
+        },
+        {
+          "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+          "style": {
+            "auto-url": "true",
+            "fontcolor": "#c0c0c0",
+            "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "game",
+      "id": "22",
+      "x": "50000",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Created by Sergio Funes",
+      "text_runs": [
+        {
+          "text": "Created by Sergio Funes",
+          "style": {
+            "fontalignment": "2",
+            "fontcolor": "#c0c0c0"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "game",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "text",
+          "x": "800",
+          "y": "95000",
+          "w": "49200",
+          "h": "4000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Source: ",
+              "style": {
+                "fontcolor": "#c0c0c0"
+              }
+            },
+            {
+              "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+              "style": {
+                "auto-url": "true",
+                "fontcolor": "#c0c0c0",
+                "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+              }
+            }
+          ],
+          "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019"
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "text",
+          "x": "50000",
+          "y": "95000",
+          "w": "49200",
+          "h": "4000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Created by Sergio Funes",
+              "style": {
+                "fontalignment": "2",
+                "fontcolor": "#c0c0c0"
+              }
+            }
+          ],
+          "text": "Created by Sergio Funes"
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "94000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "game_meta",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "46995",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "game_crit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "47995",
+          "w": "49200",
+          "h": "47005",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "game_users",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "47995",
+          "w": "49200",
+          "h": "47005",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_CB70D7F2B2A24B1E8729F88D4AE3BC7F]",
+      "caption": "Filtro 1 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "game",
+        "type": "sheet",
+        "worksheet": "game_meta"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "game"
+      },
+      "field_captions": [],
+      "target": "game"
+    },
+    {
+      "name": "[Action2_E23F2A4330E444168D7B4A00A8DB1CEB]",
+      "caption": "Filtro 2 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "game",
+        "type": "sheet",
+        "worksheet": "game_crit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "game"
+      },
+      "field_captions": [],
+      "target": "game"
+    },
+    {
+      "name": "[Action6_23E523DB97F5473F82FDD3E69BF9073E]",
+      "caption": "Filtro 6 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "game",
+        "type": "sheet",
+        "worksheet": "game_users"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "game"
+      },
+      "field_captions": [],
+      "target": "game"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "game_meta",
+      "viewpoint_name": "game_meta",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:2:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:3:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "game_crit",
+      "viewpoint_name": "game_crit",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "game_users",
+      "viewpoint_name": "game_users",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 2,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 3
+  }
+}

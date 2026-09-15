@@ -1,0 +1,58 @@
+.questao1-container {
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Tableau', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.questao1-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ffffff;
+}
+
+.questao1-title {
+  color: #ffffff;
+  font-family: 'Tableau Bold', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px 20px;
+  padding: 0;
+}
+
+.questao1-chart {
+  flex: 1;
+  overflow: visible;
+}
+
+.bar-group {
+  transition: opacity 0.2s;
+}
+
+.bar-group:hover rect {
+  fill: #66aadd !important;
+}
+
+.bar-group.highlighted {
+  opacity: 1;
+}
+
+.bar-group.dimmed {
+  opacity: 0.3;
+}
+
+.x-axis text {
+  font-size: 10px;
+  fill: #999;
+}
+
+.x-axis line {
+  stroke: #666;
+  stroke-width: 1;
+}

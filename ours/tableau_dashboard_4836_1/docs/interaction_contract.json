@@ -1,0 +1,152 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_4836_1/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:35.711927Z"
+  },
+  "dashboard": {
+    "name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+    "worksheet_count": 2
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_list_of_emr_sites_dwh_uploads_3",
+        "name": "List of EMR Sites / DWH Uploads (3)",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "List of EMR Sites / DWH Uploads (3)"
+        }
+      },
+      {
+        "id": "ws_summary_stats",
+        "name": "Summary Stats",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Summary Stats"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_displaycounty",
+        "raw": "([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayFacilityName:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869476466693:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869483032587:nk] / [federated.0se4v9q15j8hfi17f25m50pn59wd].[none:SiteabstractionDate (copy):nk])))))",
+        "normalized": "DisplayCounty",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_1593429869478662153",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869478662153:nk]",
+        "normalized": "Calculation_1593429869478662153",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_fixed_site_copy",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Fixed Site (copy):qk]",
+        "normalized": "Fixed Site (copy)",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_summary_stats"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+          "target_name_raw": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+          "source_worksheet_name": "Summary Stats"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+          "target_name_raw": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      }
+    ],
+    "highlight_bindings": []
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_list_of_emr_sites_dwh_uploads_3",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_summary_stats",
+        "supports": [],
+        "focus_field_ids": []
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "Highlight or action state auto-clears.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 2,
+    "worksheet_action_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 0,
+    "field_count": 3
+  }
+}

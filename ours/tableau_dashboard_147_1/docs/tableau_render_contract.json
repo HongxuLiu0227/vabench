@@ -1,0 +1,289 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "End Station Map",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Latitude:qk]",
+      "cols_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Longitude:qk]",
+      "series_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[sum:Number of Records:qk]",
+      "slices": [
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[Exclusions (End Station Latitude,End Station Longitude)]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[Action (End Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "0.0",
+        "0.0"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Latitude:qk]",
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Longitude:qk]",
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "2700",
+        "y": "1875",
+        "w": "82200",
+        "h": "45000",
+        "aspect_ratio": 1.8267,
+        "normalized": {
+          "x_ratio": 0.027,
+          "y_ratio": 0.0187,
+          "w_ratio": 0.822,
+          "h_ratio": 0.45
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Trips by End Station-Bottom 10",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+      "cols_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[sum:Number of Records:qk]",
+      "series_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+      "slices": [
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[Action (End Station Latitude,End Station Longitude,End Station Name)]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[Action (End Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:Start Station Name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "41100",
+        "y": "43875",
+        "w": "41000",
+        "h": "39500",
+        "aspect_ratio": 1.038,
+        "normalized": {
+          "x_ratio": 0.411,
+          "y_ratio": 0.4387,
+          "w_ratio": 0.41,
+          "h_ratio": 0.395
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Trips by End Station-Top 10",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+      "cols_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[sum:Number of Records:qk]",
+      "series_field": "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+      "slices": [
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[Action (End Station Latitude,End Station Longitude,End Station Name)]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[Action (End Station Name)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+          "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:Start Station Name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "2800",
+        "y": "43375",
+        "w": "32700",
+        "h": "41500",
+        "aspect_ratio": 0.788,
+        "normalized": {
+          "x_ratio": 0.028,
+          "y_ratio": 0.4338,
+          "w_ratio": 0.327,
+          "h_ratio": 0.415
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action2]",
+      "caption": "Filter1 1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "EndStation",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "EndStation"
+      },
+      "field_captions": [],
+      "target": "EndStation"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "End Station Map",
+      "viewpoint_name": "End Station Map",
+      "fields": [
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Latitude:qk]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Longitude:qk]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Trips by End Station-Bottom 10",
+      "viewpoint_name": "Trips by End Station-Bottom 10",
+      "fields": [
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:Start Station Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Trips by End Station-Top 10",
+      "viewpoint_name": "Trips by End Station-Top 10",
+      "fields": [
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:End Station Name:nk]",
+        "[federated.01dkfvi1fptbes1h4mzna02djglj].[none:Start Station Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "End Station Map",
+      "Trips by End Station-Bottom 10",
+      "Trips by End Station-Top 10"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

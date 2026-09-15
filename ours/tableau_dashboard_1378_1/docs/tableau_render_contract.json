@@ -1,0 +1,238 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "G: Number of Records per Diagnosis",
+      "dashboard_name": "G: Number of Records per Diagnosis and Total Discharges",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83850",
+          "y": "1504",
+          "w": "14394",
+          "h": "10338",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.8385,
+            "y_ratio": 0.015,
+            "w_ratio": 0.1439,
+            "h_ratio": 0.1034
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "G: Number of Records per Diagnosis and Total Discharges",
+              "type": "sheet",
+              "worksheet": "G: Number of Records per Diagnosis"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "G: Number of Records per Diagnosis and Total Discharges"
+            },
+            "field_captions": [],
+            "target": "G: Number of Records per Diagnosis and Total Discharges"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "468",
+        "y": "752",
+        "w": "99064",
+        "h": "49249",
+        "aspect_ratio": 2.0115,
+        "normalized": {
+          "x_ratio": 0.0047,
+          "y_ratio": 0.0075,
+          "w_ratio": 0.9906,
+          "h_ratio": 0.4925
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "G: Total Discharges vs Diagnosis",
+      "dashboard_name": "G: Number of Records per Diagnosis and Total Discharges",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+      "cols_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+      "series_field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Diagnosis)]",
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Diagnosis)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "468",
+        "y": "50001",
+        "w": "99064",
+        "h": "49247",
+        "aspect_ratio": 2.0116,
+        "normalized": {
+          "x_ratio": 0.0047,
+          "y_ratio": 0.5,
+          "w_ratio": 0.9906,
+          "h_ratio": 0.4925
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "G: Number of Records per Diagnosis and Total Discharges",
+        "type": "sheet",
+        "worksheet": "G: Number of Records per Diagnosis"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "G: Number of Records per Diagnosis and Total Discharges"
+      },
+      "field_captions": [],
+      "target": "G: Number of Records per Diagnosis and Total Discharges"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "G: Total Discharges vs Diagnosis",
+      "viewpoint_name": "G: Total Discharges vs Diagnosis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "G: Number of Records per Diagnosis",
+      "viewpoint_name": "G: Number of Records per Diagnosis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 1,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "G: Number of Records per Diagnosis"
+    ],
+    "legend_anchor_positions": {
+      "G: Number of Records per Diagnosis": "overlay"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "G: Number of Records per Diagnosis",
+      "G: Total Discharges vs Diagnosis"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.4.2 (20204.21.0217.1203)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Peak hours for trip end",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[hr:stoptime:ok]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[hr:stoptime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+            "title": "Number of Records"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Peak hours for trip start",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[hr:starttime:ok]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[hr:starttime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+            "title": "Number of Records"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard-Start&End time",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Peak hours for trip start",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1103",
+          "w": "97538",
+          "h": "48897",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Peak hours for trip end",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "50000",
+          "w": "97538",
+          "h": "48897",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard-Start&End time",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Peak hours for trip start",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1103",
+          "w": "97538",
+          "h": "48897",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Peak hours for trip end",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "50000",
+          "w": "97538",
+          "h": "48897",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action3]",
+      "caption": "Highlight1",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-hover"
+      },
+      "source": {
+        "dashboard": "Dashboard-Start&End time",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard-Start&End time"
+      },
+      "field_captions": [],
+      "target": "Dashboard-Start&End time"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Peak hours for trip start",
+      "viewpoint_name": "Peak hours for trip start",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:starttime:qk]",
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:starttime:ok]",
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Peak hours for trip end",
+      "viewpoint_name": "Peak hours for trip end",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

@@ -1,0 +1,2837 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.3.2 (20203.20.1018.2303)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://dub01.online.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Averaged Global sales by Genre",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "fields": [
+          "[federated.0yrk2r51de03wg19dphp80w7wm3o]",
+          "[none:Genre:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+        "fields": [
+          "[federated.0yrk2r51de03wg19dphp80w7wm3o]",
+          "[avg:Global_Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]"
+      ],
+      "encodings": {
+        "lod": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[attr:Platform:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [
+        {
+          "axis-column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "boxplot-mark-exclusion": "false",
+          "boxplot-whisker-type": "standard",
+          "enable-instant-analytics": "true",
+          "formula": "average",
+          "id": "refline0",
+          "label-type": "automatic",
+          "probability": "95",
+          "scope": "per-cell",
+          "symmetric": "false",
+          "value-column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "z-order": "1",
+          "pane_index": 0
+        }
+      ],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "field-labels",
+        "label",
+        "pane",
+        "table",
+        "refboxplot",
+        "axis-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Genre]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Platform]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+              "included-values": "in-range-or-null"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "2.5"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "82.739999999999995"
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Genre:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+            "title": "Avg. Global Sales (in millions)"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Game sales overview of the year 1980-2016",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+        "fields": [
+          "[federated.0yrk2r51de03wg19dphp80w7wm3o]",
+          "[sum:Global_Sales:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+        "fields": [
+          "[federated.0yrk2r51de03wg19dphp80w7wm3o]",
+          "[none:Year:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Genre]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Name]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Platform]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Publisher:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "1980.0",
+                  "function": "range",
+                  "level": "[none:Year:ok]",
+                  "to": "2016.0",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<Sheet Name>",
+          "style": {
+            "fontsize": "14"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Popular Video Games between 1980-1999",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Genre]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Name]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Platform]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "#1980-01-01#"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "#1999-01-01#"
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<Sheet Name>",
+          "style": {}
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Popular Video Games between 1999-2016",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[sum:Global_Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Genre]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Name]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Publisher,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Platform,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Platform]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "#1999-01-01#"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "#2016-01-01#"
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Publisher and sales performance",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+        "fields": [
+          "[federated.0yrk2r51de03wg19dphp80w7wm3o]",
+          "[none:Publisher:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+        "fields": [
+          "[federated.0yrk2r51de03wg19dphp80w7wm3o]",
+          "[avg:Global_Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Averaged_Sales:qk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [
+        {
+          "axis-column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "boxplot-mark-exclusion": "false",
+          "boxplot-whisker-type": "standard",
+          "enable-instant-analytics": "true",
+          "formula": "average",
+          "id": "refline0",
+          "label-type": "automatic",
+          "probability": "95",
+          "scope": "per-cell",
+          "symmetric": "false",
+          "value-column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "z-order": "1",
+          "pane_index": 0
+        }
+      ],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "field-labels",
+        "field-labels-decoration",
+        "field-labels-spanner",
+        "label",
+        "refboxplot"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Genre]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Name,Publisher)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Name]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Publisher]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[Action (Genre,Year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Genre]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Averaged_Sales:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Averaged_Sales:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "0.64781491000000002"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "3.7818123394583352"
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Platform:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Publisher:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+            "title": "Avg. Global Sales (in millions)"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "1030",
+          "w": "99034",
+          "h": "97940",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "title",
+          "x": "483",
+          "y": "1030",
+          "w": "99034",
+          "h": "6435",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "7465",
+          "w": "99034",
+          "h": "91505",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "7465",
+          "w": "86481",
+          "h": "91505",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "86964",
+          "y": "7465",
+          "w": "12553",
+          "h": "91505",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "7465",
+          "w": "86481",
+          "h": "91505",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Publisher and sales performance",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "7465",
+          "w": "12553",
+          "h": "7851",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "15316",
+          "w": "12553",
+          "h": "7851",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "Averaged Global sales by Genre",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "23167",
+          "w": "12553",
+          "h": "9396",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "46",
+          "name": "Publisher and sales performance",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "32563",
+          "w": "12553",
+          "h": "7851",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "79",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "16",
+          "zone_type": "highlighter",
+          "x": "86964",
+          "y": "40414",
+          "w": "12553",
+          "h": "7208",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "51",
+          "name": "",
+          "parent_id": "16",
+          "zone_type": "text",
+          "x": "86964",
+          "y": "47622",
+          "w": "12553",
+          "h": "44273",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "We were not able to discover a definitive trend over time, but found a volatile gaming market. That changed trends rapidly without much warning and favor to publishers. Nintendo got lucky and had it's success streak for a while until more recent times.",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "The data indicates that the shooter genre took off after the 2009 and has seen continuous popularity and success",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            }
+          ],
+          "text": "We were not able to discover a definitive trend over time, but found a volatile gaming market. That changed trends rapidly without much warning and favor to publishers. Nintendo got lucky and had it's success streak for a while until more recent times.\nThe data indicates that the shooter genre took off after the 2009 and has seen continuous popularity and success"
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "7465",
+          "w": "86481",
+          "h": "91505",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "7465",
+          "w": "36656",
+          "h": "34354",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Averaged Global sales by Genre",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "43717",
+          "y": "7465",
+          "w": "43247",
+          "h": "42463",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Popular Video Games between 1980-1999",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "43717",
+          "y": "58937",
+          "w": "21618",
+          "h": "40033",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Popular Video Games between 1999-2016",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "65335",
+          "y": "58937",
+          "w": "21629",
+          "h": "40033",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Publisher and sales performance",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "60352",
+          "w": "43234",
+          "h": "38618",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "37139",
+          "y": "7465",
+          "w": "6578",
+          "h": "52887",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "42",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "text",
+          "x": "483",
+          "y": "41819",
+          "w": "36656",
+          "h": "18533",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "We have an overview break down global game sales from 1980 to 2016. Using a stacked plot we attempt to establish if there is a dominant genre or visible trend from the data plotted. We can somewhat see that sports genre had more of a success between 2006 to 2009. Then the shooter genre took off as the dominant genre in sales. To explore this more, we dive to a more indepth break down by looking at the publishers and their sales performance. ",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            }
+          ],
+          "text": "We have an overview break down global game sales from 1980 to 2016. Using a stacked plot we attempt to establish if there is a dominant genre or visible trend from the data plotted. We can somewhat see that sports genre had more of a success between 2006 to 2009. Then the shooter genre took off as the dominant genre in sales. To explore this more, we dive to a more indepth break down by looking at the publishers and their sales performance."
+        },
+        {
+          "id": "43",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "text",
+          "x": "43717",
+          "y": "49928",
+          "w": "43247",
+          "h": "9009",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "From breaking down the publishers, we know that Nintendo thrived over the other publishers between 2004 and 2008. Setting record with Wii Sports. But that dominance, did not last long until the new shooter genres took over with the Call of Duty series and other titles. ",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            }
+          ],
+          "text": "From breaking down the publishers, we know that Nintendo thrived over the other publishers between 2004 and 2008. Setting record with Wii Sports. But that dominance, did not last long until the new shooter genres took over with the Call of Duty series and other titles."
+        },
+        {
+          "id": "35",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "79059",
+          "y": "1673",
+          "w": "7423",
+          "h": "15444",
+          "param": "Image/kontroller-2022084_1280.png",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "36",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "70308",
+          "y": "4247",
+          "w": "7182",
+          "h": "11583",
+          "param": "Image/controller-1827840_1280.png",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "29",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "86964",
+          "y": "1287",
+          "w": "11949",
+          "h": "8237",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Filters located here",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontsize": "12"
+              }
+            }
+          ],
+          "text": "Filters located here"
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "id": "51",
+      "x": "86964",
+      "y": "47622",
+      "w": "12553",
+      "h": "44273",
+      "text": "We were not able to discover a definitive trend over time, but found a volatile gaming market. That changed trends rapidly without much warning and favor to publishers. Nintendo got lucky and had it's success streak for a while until more recent times.\nThe data indicates that the shooter genre took off after the 2009 and has seen continuous popularity and success",
+      "text_runs": [
+        {
+          "text": "We were not able to discover a definitive trend over time, but found a volatile gaming market. That changed trends rapidly without much warning and favor to publishers. Nintendo got lucky and had it's success streak for a while until more recent times.",
+          "style": {
+            "fontcolor": "#000000"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "The data indicates that the shooter genre took off after the 2009 and has seen continuous popularity and success",
+          "style": {
+            "fontcolor": "#000000"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "id": "42",
+      "x": "483",
+      "y": "41819",
+      "w": "36656",
+      "h": "18533",
+      "text": "We have an overview break down global game sales from 1980 to 2016. Using a stacked plot we attempt to establish if there is a dominant genre or visible trend from the data plotted. We can somewhat see that sports genre had more of a success between 2006 to 2009. Then the shooter genre took off as the dominant genre in sales. To explore this more, we dive to a more indepth break down by looking at the publishers and their sales performance.",
+      "text_runs": [
+        {
+          "text": "We have an overview break down global game sales from 1980 to 2016. Using a stacked plot we attempt to establish if there is a dominant genre or visible trend from the data plotted. We can somewhat see that sports genre had more of a success between 2006 to 2009. Then the shooter genre took off as the dominant genre in sales. To explore this more, we dive to a more indepth break down by looking at the publishers and their sales performance. ",
+          "style": {
+            "fontcolor": "#000000"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "id": "43",
+      "x": "43717",
+      "y": "49928",
+      "w": "43247",
+      "h": "9009",
+      "text": "From breaking down the publishers, we know that Nintendo thrived over the other publishers between 2004 and 2008. Setting record with Wii Sports. But that dominance, did not last long until the new shooter genres took over with the Call of Duty series and other titles.",
+      "text_runs": [
+        {
+          "text": "From breaking down the publishers, we know that Nintendo thrived over the other publishers between 2004 and 2008. Setting record with Wii Sports. But that dominance, did not last long until the new shooter genres took over with the Call of Duty series and other titles. ",
+          "style": {
+            "fontcolor": "#000000"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "id": "29",
+      "x": "86964",
+      "y": "1287",
+      "w": "11949",
+      "h": "8237",
+      "text": "Filters located here",
+      "text_runs": [
+        {
+          "text": "Filters located here",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontsize": "12"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "1030",
+          "w": "99034",
+          "h": "97940",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "title",
+          "x": "483",
+          "y": "1030",
+          "w": "99034",
+          "h": "6435",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "7465",
+          "w": "99034",
+          "h": "91505",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "7465",
+          "w": "86481",
+          "h": "91505",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "86964",
+          "y": "7465",
+          "w": "12553",
+          "h": "91505",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "7465",
+          "w": "86481",
+          "h": "91505",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Publisher and sales performance",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "7465",
+          "w": "12553",
+          "h": "7851",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "15316",
+          "w": "12553",
+          "h": "7851",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "Averaged Global sales by Genre",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "23167",
+          "w": "12553",
+          "h": "9396",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "46",
+          "name": "Publisher and sales performance",
+          "parent_id": "16",
+          "zone_type": "filter",
+          "x": "86964",
+          "y": "32563",
+          "w": "12553",
+          "h": "7851",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "79",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "16",
+          "zone_type": "highlighter",
+          "x": "86964",
+          "y": "40414",
+          "w": "12553",
+          "h": "7208",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "51",
+          "name": "",
+          "parent_id": "16",
+          "zone_type": "text",
+          "x": "86964",
+          "y": "47622",
+          "w": "12553",
+          "h": "44273",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "We were not able to discover a definitive trend over time, but found a volatile gaming market. That changed trends rapidly without much warning and favor to publishers. Nintendo got lucky and had it's success streak for a while until more recent times.",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "The data indicates that the shooter genre took off after the 2009 and has seen continuous popularity and success",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            }
+          ],
+          "text": "We were not able to discover a definitive trend over time, but found a volatile gaming market. That changed trends rapidly without much warning and favor to publishers. Nintendo got lucky and had it's success streak for a while until more recent times.\nThe data indicates that the shooter genre took off after the 2009 and has seen continuous popularity and success"
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "7465",
+          "w": "86481",
+          "h": "91505",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "7465",
+          "w": "36656",
+          "h": "34354",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Averaged Global sales by Genre",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "43717",
+          "y": "7465",
+          "w": "43247",
+          "h": "42463",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Popular Video Games between 1980-1999",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "43717",
+          "y": "58937",
+          "w": "21618",
+          "h": "40033",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Popular Video Games between 1999-2016",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "65335",
+          "y": "58937",
+          "w": "21629",
+          "h": "40033",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Publisher and sales performance",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "60352",
+          "w": "43234",
+          "h": "38618",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Game sales overview of the year 1980-2016",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "37139",
+          "y": "7465",
+          "w": "6578",
+          "h": "52887",
+          "param": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "42",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "text",
+          "x": "483",
+          "y": "41819",
+          "w": "36656",
+          "h": "18533",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "We have an overview break down global game sales from 1980 to 2016. Using a stacked plot we attempt to establish if there is a dominant genre or visible trend from the data plotted. We can somewhat see that sports genre had more of a success between 2006 to 2009. Then the shooter genre took off as the dominant genre in sales. To explore this more, we dive to a more indepth break down by looking at the publishers and their sales performance. ",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            }
+          ],
+          "text": "We have an overview break down global game sales from 1980 to 2016. Using a stacked plot we attempt to establish if there is a dominant genre or visible trend from the data plotted. We can somewhat see that sports genre had more of a success between 2006 to 2009. Then the shooter genre took off as the dominant genre in sales. To explore this more, we dive to a more indepth break down by looking at the publishers and their sales performance."
+        },
+        {
+          "id": "43",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "text",
+          "x": "43717",
+          "y": "49928",
+          "w": "43247",
+          "h": "9009",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "From breaking down the publishers, we know that Nintendo thrived over the other publishers between 2004 and 2008. Setting record with Wii Sports. But that dominance, did not last long until the new shooter genres took over with the Call of Duty series and other titles. ",
+              "style": {
+                "fontcolor": "#000000"
+              }
+            }
+          ],
+          "text": "From breaking down the publishers, we know that Nintendo thrived over the other publishers between 2004 and 2008. Setting record with Wii Sports. But that dominance, did not last long until the new shooter genres took over with the Call of Duty series and other titles."
+        },
+        {
+          "id": "35",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "79059",
+          "y": "1673",
+          "w": "7423",
+          "h": "15444",
+          "param": "Image/kontroller-2022084_1280.png",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "36",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "70308",
+          "y": "4247",
+          "w": "7182",
+          "h": "11583",
+          "param": "Image/controller-1827840_1280.png",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "29",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "86964",
+          "y": "1287",
+          "w": "11949",
+          "h": "8237",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Filters located here",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontsize": "12"
+              }
+            }
+          ],
+          "text": "Filters located here"
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "type": "sheet",
+        "worksheet": "Game sales overview of the year 1980-2016"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+      },
+      "field_captions": [],
+      "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "type": "sheet",
+        "worksheet": "Publisher and sales performance"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+      },
+      "field_captions": [],
+      "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "type": "sheet",
+        "worksheet": "Popular Video Games between 1980-1999"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+      },
+      "field_captions": [],
+      "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Filter 4 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "type": "sheet",
+        "worksheet": "Popular Video Games between 1999-2016"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+      },
+      "field_captions": [],
+      "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+    },
+    {
+      "name": "[Action5]",
+      "caption": "Filter 5 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "type": "sheet",
+        "worksheet": "Averaged Global sales by Genre"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+      },
+      "field_captions": [],
+      "target": "Dashboard: A look at the sales trend of Games from 1980-2016"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Averaged Global sales by Genre",
+      "viewpoint_name": "Averaged Global sales by Genre",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[attr:Platform:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Name:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Game sales overview of the year 1980-2016",
+      "viewpoint_name": "Game sales overview of the year 1980-2016",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Name:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Publisher and sales performance",
+      "viewpoint_name": "Publisher and sales performance",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Platform:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Popular Video Games between 1980-1999",
+      "viewpoint_name": "Popular Video Games between 1980-1999",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Popular Video Games between 1999-2016",
+      "viewpoint_name": "Popular Video Games between 1999-2016",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "viewpoint_name": "Averaged Global sales by Genre",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Name:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "viewpoint_name": "Game sales overview of the year 1980-2016",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+      "viewpoint_name": "Publisher and sales performance",
+      "fields": [
+        "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 4,
+    "dashboard_action_count": 5,
+    "highlight_binding_count": 8
+  }
+}

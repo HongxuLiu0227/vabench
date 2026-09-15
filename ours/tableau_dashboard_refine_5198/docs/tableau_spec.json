@@ -1,0 +1,1482 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.1.2 (20191.19.0321.1733)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "+ Retweeteados",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:full_text:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:retweet_count:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:retweet_count:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "+ Retweeteados",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "title_text": "+ Retweeteados",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Evolución Tipo de Tweets",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk] * [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk])",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:label:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[tmi:created_at:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[tmi:created_at:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"negative\"",
+                  "function": "range",
+                  "level": "[none:label:nk]",
+                  "to": "\"positive\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Favs x Tipo de Tweets",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:favorite_count:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:favorite_count:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk] / [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk])",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:label:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"negative\"",
+                  "function": "range",
+                  "level": "[none:label:nk]",
+                  "to": "\"positive\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Favs x Tipo de Tweets",
+          "style": {}
+        }
+      ],
+      "title_text": "Favs x Tipo de Tweets",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "RT x Tipos de Tweets",
+      "chart_type": "Shape",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:retweet_count:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:retweet_count:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk] / [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk])",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:label:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"negative\"",
+                  "function": "range",
+                  "level": "[none:label:nk]",
+                  "to": "\"positive\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Tipos de Tweets x Objeto de Estudio",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:flag:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[Action (Objeto de Estudio,Label)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "field-labels-decoration",
+        "field-labels-spanner",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[Action (Objeto de Estudio,Label)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[Action (Objeto de Estudio,Label)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[flag]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[label]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Tweets Favoritos",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:full_text:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:favorite_count:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:favorite_count:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Tweets Favoritos",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "title_text": "Tweets Favoritos",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Tweets por Usuario",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk] * [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk])",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:label:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "header",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:flag:nk]",
+                  "member": "\"Kirchner\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"negative\"",
+                  "function": "range",
+                  "level": "[none:label:nk]",
+                  "to": "\"positive\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Tweets x Tiempo",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[hr:created_at:ok] / [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[mi:created_at:ok])",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[hr:created_at:ok]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[mi:created_at:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:full_text:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Tweets x Tiempo",
+          "style": {
+            "bold": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "title_text": "Tweets x Tiempo",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Users x followers count",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:followers_count:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:followers_count:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "tooltip": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Users con mayor número de seguidores.",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "title_text": "Users con mayor número de seguidores.",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Usuarios con + Tweets",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[none:name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+        "fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:full_text:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Usuarios con + Tweets",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "title_text": "Usuarios con + Tweets",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "49000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Tipos de Tweets x Objeto de Estudio",
+          "parent_id": "2",
+          "zone_type": "",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "82400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-flow",
+          "x": "83200",
+          "y": "1000",
+          "w": "16000",
+          "h": "49000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Usuarios con + Tweets",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "82400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Usuarios con + Tweets",
+          "parent_id": "4",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "1000",
+          "w": "16000",
+          "h": "13250",
+          "param": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Historia 1",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "787",
+          "y": "830",
+          "w": "98426",
+          "h": "98340",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "title",
+          "x": "787",
+          "y": "830",
+          "w": "98426",
+          "h": "5394",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "787",
+          "y": "6224",
+          "w": "98426",
+          "h": "92946",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard-nav",
+          "x": "787",
+          "y": "6224",
+          "w": "98426",
+          "h": "10477",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard",
+          "x": "787",
+          "y": "16701",
+          "w": "98426",
+          "h": "82469",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "49000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Tipos de Tweets x Objeto de Estudio",
+          "parent_id": "2",
+          "zone_type": "",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "82400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-flow",
+          "x": "83200",
+          "y": "1000",
+          "w": "16000",
+          "h": "49000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Usuarios con + Tweets",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "82400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Usuarios con + Tweets",
+          "parent_id": "4",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "1000",
+          "w": "16000",
+          "h": "13250",
+          "param": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "Historia 1",
+      "size": {
+        "maxheight": "964",
+        "maxwidth": "1016",
+        "minheight": "964",
+        "minwidth": "1016"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "787",
+          "y": "830",
+          "w": "98426",
+          "h": "98340",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "title",
+          "x": "787",
+          "y": "830",
+          "w": "98426",
+          "h": "5394",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "787",
+          "y": "6224",
+          "w": "98426",
+          "h": "92946",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard-nav",
+          "x": "787",
+          "y": "6224",
+          "w": "98426",
+          "h": "10477",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard",
+          "x": "787",
+          "y": "16701",
+          "w": "98426",
+          "h": "82469",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Resaltar1",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Usuarios con + Tweets"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "exclude": "Tipos de Tweets x Objeto de Estudio",
+        "field-captions": "ATTR(Full Text),Label,Objeto de Estudio,Usuario",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [
+        "ATTR(Full Text)",
+        "Label",
+        "Objeto de Estudio",
+        "Usuario"
+      ],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filtro 1 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Tipos de Tweets x Objeto de Estudio"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Tipos de Tweets x Objeto de Estudio"
+      },
+      "field_captions": [],
+      "target": "Tipos de Tweets x Objeto de Estudio"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Tipos de Tweets x Objeto de Estudio",
+      "viewpoint_name": "Tipos de Tweets x Objeto de Estudio",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Evolución Tipo de Tweets",
+      "viewpoint_name": "Evolución Tipo de Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[yr:created_at:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Favs x Tipo de Tweets",
+      "viewpoint_name": "Favs x Tipo de Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "RT x Tipos de Tweets",
+      "viewpoint_name": "RT x Tipos de Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Tweets por Usuario",
+      "viewpoint_name": "Tweets por Usuario",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Usuarios con + Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Users x followers count",
+      "viewpoint_name": "Users x followers count",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Tweets Favoritos",
+      "viewpoint_name": "Tweets Favoritos",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "+ Retweeteados",
+      "viewpoint_name": "+ Retweeteados",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Usuarios con + Tweets",
+      "viewpoint_name": "Usuarios con + Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Tweets x Tiempo",
+      "viewpoint_name": "Tweets x Tiempo",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[:Measure Names]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 10,
+    "dashboard_count": 2,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 11
+  }
+}

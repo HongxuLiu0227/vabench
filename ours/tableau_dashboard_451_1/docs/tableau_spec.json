@@ -1,0 +1,491 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.2.0 (20202.20.0415.1946)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Map Sale",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Latitude (generated)]",
+        "fields": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q]",
+          "[Latitude (generated)]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Longitude (generated)]",
+        "fields": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q]",
+          "[Longitude (generated)]"
+        ]
+      },
+      "slices": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[Action (Region)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:State:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Profit:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[usr:Calculation_536209883642138625:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "geometry": [
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Geometry (generated)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "map",
+        "tooltip"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Action (Region)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Action (Region)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Region]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[yr:Order Date:ok]",
+                  "member": "2017",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sale Region",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Region:nk]",
+        "fields": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q]",
+          "[none:Region:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+        "fields": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Multiple Values]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+            "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Profit:qk]",
+            "[federated.1xne2po0ilkfwt1feprz80g0671q].[usr:Calculation_536209883642138625:qk]"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Profit:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.1xne2po0ilkfwt1feprz80g0671q].[usr:Calculation_536209883642138625:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[yr:Order Date:ok]",
+                  "member": "2017",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "1",
+          "name": "Map Sale",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1500",
+          "y": "1500",
+          "w": "97800",
+          "h": "63375",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "2",
+          "name": "Sale Region",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1600",
+          "y": "65375",
+          "w": "50700",
+          "h": "15875",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Map Sale",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83200",
+          "y": "50875",
+          "w": "16000",
+          "h": "13875",
+          "param": "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "dashboard-object",
+          "x": "83300",
+          "y": "93250",
+          "w": "16400",
+          "h": "6500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000",
+        "preset-index": "1",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "1",
+          "name": "Map Sale",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1500",
+          "y": "1500",
+          "w": "97800",
+          "h": "63375",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "2",
+          "name": "Sale Region",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1600",
+          "y": "65375",
+          "w": "50700",
+          "h": "15875",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Map Sale",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83200",
+          "y": "50875",
+          "w": "16000",
+          "h": "13875",
+          "param": "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "dashboard-object",
+          "x": "83300",
+          "y": "93250",
+          "w": "16400",
+          "h": "6500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-hover"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sale Region"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Map Sale",
+      "viewpoint_name": "Map Sale",
+      "fields": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:City:nk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Country/Region:nk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:State:nk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sale Region",
+      "viewpoint_name": "Sale Region",
+      "fields": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

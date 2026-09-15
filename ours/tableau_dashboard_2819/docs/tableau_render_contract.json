@@ -1,0 +1,334 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Plot of Sales",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[excel.41612.552811354166].[sum:Profit:qk]",
+      "cols_field": "[excel.41612.552811354166].[sum:Sales:qk]",
+      "series_field": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+      "slices": [
+        "[excel.41612.552811354166].[none:Customer Segment:nk]",
+        "[excel.41612.552811354166].[Action (Customer Segment)]",
+        "[excel.41612.552811354166].[none:Region:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Corporate"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[excel.41359.464717638890].[none:Category:nk]",
+          "[excel.41612.552811354166].[none:Customer Segment:nk]"
+        ]
+      },
+      "zone": {
+        "x": "33300",
+        "y": "6000",
+        "w": "49600",
+        "h": "46500",
+        "aspect_ratio": 1.0667,
+        "normalized": {
+          "x_ratio": 0.333,
+          "y_ratio": 0.06,
+          "w_ratio": 0.496,
+          "h_ratio": 0.465
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Region",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[excel.41612.552811354166].[none:Country / Region:nk]",
+      "cols_field": "[excel.41612.552811354166].[sum:Sales:qk]",
+      "series_field": "[excel.41612.552811354166].[sum:Profit:qk]",
+      "slices": [
+        "[excel.41612.552811354166].[none:Region:nk]",
+        "[excel.41612.552811354166].[Action (Customer Segment)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Corporate"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[excel.41612.552811354166].[sum:Profit:qk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "82900",
+          "y": "35500",
+          "w": "16300",
+          "h": "7500",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.829,
+            "y_ratio": 0.355,
+            "w_ratio": 0.163,
+            "h_ratio": 0.075
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[excel.41359.464717638890].[none:Continent:nk]",
+          "[excel.41359.464717638890].[none:Country / Region:nk]",
+          "[excel.41612.552811354166].[none:Country / Region:nk]",
+          "[excel.41612.552811354166].[none:Region:nk]",
+          "[excel.41612.552811354166].[none:SubRegion:nk]",
+          "[excel.41612.552811354166].[sum:Profit:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "52500",
+        "w": "82100",
+        "h": "46500",
+        "aspect_ratio": 1.7656,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.525,
+          "w_ratio": 0.821,
+          "h_ratio": 0.465
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Segment",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+      "slices": [
+        "[excel.41612.552811354166].[none:Region:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "82900",
+          "y": "6000",
+          "w": "16300",
+          "h": "13125",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.829,
+            "y_ratio": 0.06,
+            "w_ratio": 0.163,
+            "h_ratio": 0.1313
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sales by Segment"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[excel.41612.552811354166].[none:Customer Segment:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "6000",
+        "w": "32500",
+        "h": "46500",
+        "aspect_ratio": 0.6989,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.06,
+          "w_ratio": 0.325,
+          "h_ratio": 0.465
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales by Segment"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Segment",
+      "viewpoint_name": "Sales by Segment",
+      "fields": [
+        "[excel.41612.552811354166].[none:Customer Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Region",
+      "viewpoint_name": "Sales by Region",
+      "fields": [
+        "[excel.41359.464717638890].[none:Continent:nk]",
+        "[excel.41359.464717638890].[none:Country / Region:nk]",
+        "[excel.41612.552811354166].[none:Country / Region:nk]",
+        "[excel.41612.552811354166].[none:Region:nk]",
+        "[excel.41612.552811354166].[none:SubRegion:nk]",
+        "[excel.41612.552811354166].[sum:Profit:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Plot of Sales",
+      "viewpoint_name": "Plot of Sales",
+      "fields": [
+        "[excel.41359.464717638890].[none:Category:nk]",
+        "[excel.41612.552811354166].[none:Customer Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Sales by Region",
+      "Sales by Segment"
+    ],
+    "legend_anchor_positions": {
+      "Sales by Region": "above",
+      "Sales by Segment": "right"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Plot of Sales",
+      "Sales by Region",
+      "Sales by Segment"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

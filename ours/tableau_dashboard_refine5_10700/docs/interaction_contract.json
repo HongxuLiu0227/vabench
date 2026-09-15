@@ -1,0 +1,1057 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_refine5_10700/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:37.105762Z"
+  },
+  "dashboard": {
+    "name": "Dashboard 1",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_diag1_vs_readmit",
+        "name": "Diag1 vs Readmit",
+        "chart_intent": "horizontal_stacked_percentage_bar",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Diag1 vs Readmit"
+        }
+      },
+      {
+        "id": "ws_diag2_vs_readmit",
+        "name": "Diag2 vs Readmit",
+        "chart_intent": "horizontal_stacked_percentage_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Diag2 vs Readmit"
+        }
+      },
+      {
+        "id": "ws_diag3_vs_readmit",
+        "name": "Diag3 vs Readmit",
+        "chart_intent": "horizontal_stacked_percentage_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Diag3 vs Readmit"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_cnt",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "normalized": "cnt",
+        "role": "measure"
+      },
+      {
+        "id": "field_diag_1",
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "normalized": "diag_1",
+        "role": "dimension"
+      },
+      {
+        "id": "field_readmitted_group",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+        "normalized": "readmitted (group)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_diag_2",
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "normalized": "diag_2",
+        "role": "dimension"
+      },
+      {
+        "id": "field_diag_3",
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "normalized": "diag_3",
+        "role": "dimension"
+      },
+      {
+        "id": "field_a1cresult",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]",
+        "normalized": "A1Cresult",
+        "role": "dimension"
+      },
+      {
+        "id": "field_gender",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+        "normalized": "gender",
+        "role": "dimension"
+      },
+      {
+        "id": "field_admission_source_id",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+        "normalized": "admission_source_id",
+        "role": "dimension"
+      },
+      {
+        "id": "field_admission_type_id",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]",
+        "normalized": "admission_type_id",
+        "role": "dimension"
+      },
+      {
+        "id": "field_age",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:age:nk]",
+        "normalized": "age",
+        "role": "dimension"
+      },
+      {
+        "id": "field_change",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]",
+        "normalized": "change",
+        "role": "dimension"
+      },
+      {
+        "id": "field_diabetesmed",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diabetesMed:nk]",
+        "normalized": "diabetesMed",
+        "role": "dimension"
+      },
+      {
+        "id": "field_discharge_disposition_id",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok]",
+        "normalized": "discharge_disposition_id",
+        "role": "dimension"
+      },
+      {
+        "id": "field_max_glu_serum",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]",
+        "normalized": "max_glu_serum",
+        "role": "dimension"
+      },
+      {
+        "id": "field_race",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]",
+        "normalized": "race",
+        "role": "dimension"
+      },
+      {
+        "id": "field_num_lab_procedures_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_lab_procedures (bin):qk]",
+        "normalized": "num_lab_procedures (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_num_medications_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_medications (bin):qk]",
+        "normalized": "num_medications (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_num_procedures_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_procedures (bin):qk]",
+        "normalized": "num_procedures (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_number_diagnoses_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_diagnoses (bin):qk]",
+        "normalized": "number_diagnoses (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_number_emergency_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_emergency (bin):qk]",
+        "normalized": "number_emergency (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_number_inpatient_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_inpatient (bin):qk]",
+        "normalized": "number_inpatient (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_number_outpatient_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_outpatient (bin):qk]",
+        "normalized": "number_outpatient (bin)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_time_in_hospital_bin",
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:time_in_hospital (bin):qk]",
+        "normalized": "time_in_hospital (bin)",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_diag1_vs_readmit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_diag2_vs_readmit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_diag3_vs_readmit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Diag1 vs Readmit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Diag2 vs Readmit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Diag3 vs Readmit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "A1Cresult",
+        "viewpoint_name": "A1Cresult",
+        "field_ids": [
+          "field_a1cresult"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "A1Cresult vs Readmit",
+        "viewpoint_name": "A1Cresult vs Readmit",
+        "field_ids": [
+          "field_a1cresult",
+          "field_diag_3",
+          "field_gender",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Admin_Source_Id",
+        "viewpoint_name": "Admin_Source_Id",
+        "field_ids": [
+          "field_admission_source_id"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Admin_Source_Id vs Readmit",
+        "viewpoint_name": "Admin_Source_Id vs Readmit",
+        "field_ids": [
+          "field_admission_source_id",
+          "field_admission_type_id",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Admin_Type_Id",
+        "viewpoint_name": "Admin_Type_Id",
+        "field_ids": [
+          "field_admission_source_id",
+          "field_admission_type_id"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "Admin_Type_Id vs Readmit",
+        "viewpoint_name": "Admin_Type_Id vs Readmit",
+        "field_ids": [
+          "field_admission_source_id",
+          "field_admission_type_id",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "worksheet",
+        "window_name": "Age Distribution",
+        "viewpoint_name": "Age Distribution",
+        "field_ids": [
+          "field_age"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      },
+      {
+        "id": "hb_008",
+        "window_class": "worksheet",
+        "window_name": "Age vs Readmission",
+        "viewpoint_name": "Age vs Readmission",
+        "field_ids": [
+          "field_age",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 7
+        }
+      },
+      {
+        "id": "hb_009",
+        "window_class": "worksheet",
+        "window_name": "Change",
+        "viewpoint_name": "Change",
+        "field_ids": [
+          "field_a1cresult",
+          "field_change"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 8
+        }
+      },
+      {
+        "id": "hb_010",
+        "window_class": "worksheet",
+        "window_name": "Change vs Readmit",
+        "viewpoint_name": "Change vs Readmit",
+        "field_ids": [
+          "field_change",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 9
+        }
+      },
+      {
+        "id": "hb_011",
+        "window_class": "worksheet",
+        "window_name": "DiabetesMed",
+        "viewpoint_name": "DiabetesMed",
+        "field_ids": [
+          "field_diabetesmed"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 10
+        }
+      },
+      {
+        "id": "hb_012",
+        "window_class": "worksheet",
+        "window_name": "DiabetesMed vs Readmit",
+        "viewpoint_name": "DiabetesMed vs Readmit",
+        "field_ids": [
+          "field_diabetesmed",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 11
+        }
+      },
+      {
+        "id": "hb_013",
+        "window_class": "worksheet",
+        "window_name": "Diag_1",
+        "viewpoint_name": "Diag_1",
+        "field_ids": [
+          "field_diag_1"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 12
+        }
+      },
+      {
+        "id": "hb_014",
+        "window_class": "worksheet",
+        "window_name": "Diag1 vs Readmit",
+        "viewpoint_name": "Diag1 vs Readmit",
+        "field_ids": [
+          "field_diag_1",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 13
+        }
+      },
+      {
+        "id": "hb_015",
+        "window_class": "worksheet",
+        "window_name": "Diag_2",
+        "viewpoint_name": "Diag_2",
+        "field_ids": [
+          "field_diag_2"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 14
+        }
+      },
+      {
+        "id": "hb_016",
+        "window_class": "worksheet",
+        "window_name": "Diag2 vs Readmit",
+        "viewpoint_name": "Diag2 vs Readmit",
+        "field_ids": [
+          "field_diag_2",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 15
+        }
+      },
+      {
+        "id": "hb_017",
+        "window_class": "worksheet",
+        "window_name": "Diag_3",
+        "viewpoint_name": "Diag_3",
+        "field_ids": [
+          "field_diag_3"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 16
+        }
+      },
+      {
+        "id": "hb_018",
+        "window_class": "worksheet",
+        "window_name": "Diag3 vs Readmit",
+        "viewpoint_name": "Diag3 vs Readmit",
+        "field_ids": [
+          "field_diag_3",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 17
+        }
+      },
+      {
+        "id": "hb_019",
+        "window_class": "worksheet",
+        "window_name": "Dis_Id",
+        "viewpoint_name": "Dis_Id",
+        "field_ids": [
+          "field_discharge_disposition_id"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 18
+        }
+      },
+      {
+        "id": "hb_020",
+        "window_class": "worksheet",
+        "window_name": "Dis_Id vs Readmit",
+        "viewpoint_name": "Dis_Id vs Readmit",
+        "field_ids": [
+          "field_discharge_disposition_id",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 19
+        }
+      },
+      {
+        "id": "hb_021",
+        "window_class": "worksheet",
+        "window_name": "Gender",
+        "viewpoint_name": "Gender",
+        "field_ids": [
+          "field_gender"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 20
+        }
+      },
+      {
+        "id": "hb_022",
+        "window_class": "worksheet",
+        "window_name": "Gender vs Readmission",
+        "viewpoint_name": "Gender vs Readmission",
+        "field_ids": [
+          "field_gender",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 21
+        }
+      },
+      {
+        "id": "hb_023",
+        "window_class": "worksheet",
+        "window_name": "Max Glu Serum",
+        "viewpoint_name": "Max Glu Serum",
+        "field_ids": [
+          "field_max_glu_serum"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 22
+        }
+      },
+      {
+        "id": "hb_024",
+        "window_class": "worksheet",
+        "window_name": "Max Glu Serum vs Readmission",
+        "viewpoint_name": "Max Glu Serum vs Readmission",
+        "field_ids": [
+          "field_max_glu_serum",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 23
+        }
+      },
+      {
+        "id": "hb_025",
+        "window_class": "worksheet",
+        "window_name": "Race",
+        "viewpoint_name": "Race",
+        "field_ids": [
+          "field_race"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 24
+        }
+      },
+      {
+        "id": "hb_026",
+        "window_class": "worksheet",
+        "window_name": "Race vs Readmission",
+        "viewpoint_name": "Race vs Readmission",
+        "field_ids": [
+          "field_race",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 25
+        }
+      },
+      {
+        "id": "hb_027",
+        "window_class": "worksheet",
+        "window_name": "Avg Lab Procs vs Readmission",
+        "viewpoint_name": "Avg Lab Procs vs Readmission",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 26
+        }
+      },
+      {
+        "id": "hb_028",
+        "window_class": "worksheet",
+        "window_name": "No. Lab Procs vs Readmission",
+        "viewpoint_name": "No. Lab Procs vs Readmission",
+        "field_ids": [
+          "field_num_lab_procedures_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 27
+        }
+      },
+      {
+        "id": "hb_029",
+        "window_class": "worksheet",
+        "window_name": "Avg No. Medics vs Readmision",
+        "viewpoint_name": "Avg No. Medics vs Readmision",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 28
+        }
+      },
+      {
+        "id": "hb_030",
+        "window_class": "worksheet",
+        "window_name": "No. Medics vs Readmission",
+        "viewpoint_name": "No. Medics vs Readmission",
+        "field_ids": [
+          "field_num_medications_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 29
+        }
+      },
+      {
+        "id": "hb_031",
+        "window_class": "worksheet",
+        "window_name": "Avg No. Procs vs Readmission",
+        "viewpoint_name": "Avg No. Procs vs Readmission",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 30
+        }
+      },
+      {
+        "id": "hb_032",
+        "window_class": "worksheet",
+        "window_name": "No. Procs vs Readmission",
+        "viewpoint_name": "No. Procs vs Readmission",
+        "field_ids": [
+          "field_num_procedures_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 31
+        }
+      },
+      {
+        "id": "hb_033",
+        "window_class": "worksheet",
+        "window_name": "Avg No. Diagnoses vs Readmission",
+        "viewpoint_name": "Avg No. Diagnoses vs Readmission",
+        "field_ids": [
+          "field_number_diagnoses_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 32
+        }
+      },
+      {
+        "id": "hb_034",
+        "window_class": "worksheet",
+        "window_name": "No. Diagnoses vs Readmission",
+        "viewpoint_name": "No. Diagnoses vs Readmission",
+        "field_ids": [
+          "field_number_diagnoses_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 33
+        }
+      },
+      {
+        "id": "hb_035",
+        "window_class": "worksheet",
+        "window_name": "Avg No. Emergency vs Readmission",
+        "viewpoint_name": "Avg No. Emergency vs Readmission",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 34
+        }
+      },
+      {
+        "id": "hb_036",
+        "window_class": "worksheet",
+        "window_name": "No. Emergency vs Readmission",
+        "viewpoint_name": "No. Emergency vs Readmission",
+        "field_ids": [
+          "field_number_emergency_bin",
+          "field_number_inpatient_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 35
+        }
+      },
+      {
+        "id": "hb_037",
+        "window_class": "worksheet",
+        "window_name": "Avg No. Inpatient vs Readmission",
+        "viewpoint_name": "Avg No. Inpatient vs Readmission",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 36
+        }
+      },
+      {
+        "id": "hb_038",
+        "window_class": "worksheet",
+        "window_name": "No. Inpatient vs Readmission",
+        "viewpoint_name": "No. Inpatient vs Readmission",
+        "field_ids": [
+          "field_number_inpatient_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 37
+        }
+      },
+      {
+        "id": "hb_039",
+        "window_class": "worksheet",
+        "window_name": "Avg No. Outpatient vs Readmission",
+        "viewpoint_name": "Avg No. Outpatient vs Readmission",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 38
+        }
+      },
+      {
+        "id": "hb_040",
+        "window_class": "worksheet",
+        "window_name": "No. Outpatient vs Readmission",
+        "viewpoint_name": "No. Outpatient vs Readmission",
+        "field_ids": [
+          "field_number_outpatient_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 39
+        }
+      },
+      {
+        "id": "hb_041",
+        "window_class": "worksheet",
+        "window_name": "Avg Time vs Readmission",
+        "viewpoint_name": "Avg Time vs Readmission",
+        "field_ids": [
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 40
+        }
+      },
+      {
+        "id": "hb_042",
+        "window_class": "worksheet",
+        "window_name": "Time vs Readmission",
+        "viewpoint_name": "Time vs Readmission",
+        "field_ids": [
+          "field_time_in_hospital_bin",
+          "field_readmitted_group"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 41
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_diag1_vs_readmit",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_diag_1",
+          "field_readmitted_group"
+        ]
+      },
+      {
+        "worksheet_id": "ws_diag2_vs_readmit",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_diag_2",
+          "field_readmitted_group"
+        ]
+      },
+      {
+        "worksheet_id": "ws_diag3_vs_readmit",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_diag_3",
+          "field_readmitted_group"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 3,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 42,
+    "field_count": 23
+  }
+}

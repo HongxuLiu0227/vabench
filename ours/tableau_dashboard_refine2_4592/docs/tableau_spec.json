@@ -1,0 +1,1191 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.4.0 (20194.19.1010.1202)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Line chart",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[sum:Calculation_1414411819444039680:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0rvcsld1bk0txg17inoxj0v7uuv9].[yr:Order_Date:ok] / [federated.0rvcsld1bk0txg17inoxj0v7uuv9].[mn:Order_Date:ok])",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[yr:Order_Date:ok]",
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[mn:Order_Date:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Item]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Sales representative]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales region vs Revenue",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[sum:Calculation_1414411819444039680:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales Region:nk] / [federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk])",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[none:Sales Region:nk]",
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[none:Sales representative:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales rep vs Units",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Units Sold:qk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[sum:Units Sold:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[none:Sales representative:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Item]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[yr:Order_Date:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[mn:Order_Date:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Treemap",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Units Sold:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales Region:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "datatable",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[none:Item:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Multiple Values]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Units Sold:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Sales representative]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[yr:Order_Date:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[mn:Order_Date:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "sales rep vs revenue",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[sum:Calculation_1414411819444039680:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]",
+        "fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9]",
+          "[none:Sales representative:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Item]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Sales representative]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[yr:Order_Date:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[mn:Order_Date:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sales rep vs Units",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "929",
+          "w": "49517",
+          "h": "49013",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "sales rep vs revenue",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "929",
+          "w": "49517",
+          "h": "49013",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "datatable",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "49942",
+          "w": "15981",
+          "h": "49129",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Line chart",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "16464",
+          "y": "49942",
+          "w": "83053",
+          "h": "49129",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sales rep vs Units",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "181",
+          "y": "67480",
+          "w": "10682",
+          "h": "33333",
+          "param": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "sales rep vs revenue",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "724",
+          "y": "73519",
+          "w": "8449",
+          "h": "14750",
+          "param": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sales rep vs Units",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "929",
+          "w": "49517",
+          "h": "49013",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "sales rep vs revenue",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "929",
+          "w": "49517",
+          "h": "49013",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "datatable",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "49942",
+          "w": "15981",
+          "h": "49129",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Line chart",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "16464",
+          "y": "49942",
+          "w": "83053",
+          "h": "49129",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sales rep vs Units",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "181",
+          "y": "67480",
+          "w": "10682",
+          "h": "33333",
+          "param": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "sales rep vs revenue",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "724",
+          "y": "73519",
+          "w": "8449",
+          "h": "14750",
+          "param": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales rep vs Units"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "sales rep vs revenue"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "datatable"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Filter 4 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Line chart"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales rep vs Units",
+      "viewpoint_name": "Sales rep vs Units",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "sales rep vs revenue",
+      "viewpoint_name": "sales rep vs revenue",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales region vs Revenue",
+      "viewpoint_name": "Sales region vs Revenue",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales Region:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "datatable",
+      "viewpoint_name": "datatable",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sales rep vs Units",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "sales rep vs revenue",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Line chart",
+      "viewpoint_name": "Line chart",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[yr:Order_Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Treemap",
+      "viewpoint_name": "Treemap",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 6,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 8
+  }
+}

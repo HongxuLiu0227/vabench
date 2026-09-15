@@ -1,0 +1,517 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.4.0 (20194.19.1010.1202)",
+      "source-platform": "mac",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Confusion Matrix",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]",
+        "fields": [
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr]",
+          "[none:True Label:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+        "fields": [
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr]",
+          "[none:Predicted Label:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[pcto:sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[pcto:sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "pane"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:sum:Number of Records:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "View Posts",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[sum:True_XY:qk]",
+        "fields": [
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr]",
+          "[sum:True_XY:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[sum:Predicted_XY:qk]",
+        "fields": [
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr]",
+          "[sum:Predicted_XY:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label,True Label)]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label1,True Label1)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+            "pane_index": 0
+          }
+        ],
+        "shape": [
+          {
+            "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:F1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[attr:Post:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label,True Label)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label,True Label)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Predicted Label]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[True Label]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label1,True Label1)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label1,True Label1)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Predicted Label]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[True Label]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[sum:True_XY:qk]",
+            "title": "True"
+          }
+        ],
+        "cols": [
+          {
+            "field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[sum:Predicted_XY:qk]",
+            "title": "Predicted"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "681",
+          "y": "53058",
+          "w": "98638",
+          "h": "45894",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Confusion Matrix",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "681",
+          "y": "1048",
+          "w": "98638",
+          "h": "52010",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "681",
+          "y": "53058",
+          "w": "98638",
+          "h": "45894",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "View Posts",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "681",
+          "y": "53058",
+          "w": "98638",
+          "h": "45894",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "681",
+          "y": "53058",
+          "w": "98638",
+          "h": "45894",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Confusion Matrix",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "681",
+          "y": "1048",
+          "w": "98638",
+          "h": "52010",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "681",
+          "y": "53058",
+          "w": "98638",
+          "h": "45894",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "View Posts",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "681",
+          "y": "53058",
+          "w": "98638",
+          "h": "45894",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet",
+        "worksheet": "Confusion Matrix"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "View Posts",
+      "fields": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "View Posts",
+      "viewpoint_name": "View Posts",
+      "fields": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Post:nk]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Confusion Matrix",
+      "viewpoint_name": "Confusion Matrix",
+      "fields": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

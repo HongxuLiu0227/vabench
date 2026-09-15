@@ -1,0 +1,199 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_refine_334/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:38.777632Z"
+  },
+  "dashboard": {
+    "name": "Country Details by Region",
+    "worksheet_count": 2
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_country_details",
+        "name": "Country Details",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Country Details"
+        }
+      },
+      {
+        "id": "ws_total_libraries_by_region",
+        "name": "Total Libraries by Region",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Total Libraries by Region"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_country",
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Country:nk]",
+        "normalized": "Country",
+        "role": "dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_region",
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Region:nk]",
+        "normalized": "Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_total_libraries",
+        "raw": "[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Libraries:qk]",
+        "normalized": "Total Libraries",
+        "role": "measure"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_total_libraries_by_region"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Country Details by Region",
+          "target_name_raw": "Country Details by Region"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Country Details by Region",
+          "source_worksheet_name": "Total Libraries by Region"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Country Details by Region",
+          "target_name_raw": "Country Details by Region"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Total Libraries by Region",
+        "viewpoint_name": "Total Libraries by Region",
+        "field_ids": [
+          "field_region"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Country Details",
+        "viewpoint_name": "Country Details",
+        "field_ids": [
+          "field_country"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_country_details",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_country"
+        ]
+      },
+      {
+        "worksheet_id": "ws_total_libraries_by_region",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_region"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 2,
+    "worksheet_action_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2,
+    "field_count": 4
+  }
+}

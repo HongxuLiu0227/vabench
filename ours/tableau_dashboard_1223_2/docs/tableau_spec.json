@@ -1,0 +1,217 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.3.0 (20193.19.0904.1638)",
+      "source-platform": "mac",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Market Penetration",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[usr:Calculation_53128439857385472:qk]",
+        "fields": [
+          "[federated.0wys7u413bis7d1g2ya3b07pv7ay]",
+          "[usr:Calculation_53128439857385472:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[none:Geography:nk]",
+        "fields": [
+          "[federated.0wys7u413bis7d1g2ya3b07pv7ay]",
+          "[none:Geography:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[usr:Calculation_53128439857385472:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[usr:Calculation_53128439857385472:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [
+        {
+          "axis-column": "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[usr:Calculation_53128439857385472:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "average",
+          "id": "refline0",
+          "label-type": "value",
+          "probability": "95",
+          "scope": "per-pane",
+          "value-column": "[Parameters].[Parameter 1]",
+          "z-order": "1",
+          "pane_index": 0
+        }
+      ],
+      "style_rule_elements": [
+        "cell",
+        "label",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 3",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Market Penetration",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "989",
+          "w": "97538",
+          "h": "98022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 3",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Market Penetration",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "989",
+          "w": "97538",
+          "h": "98022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Market Penetration",
+      "viewpoint_name": "Market Penetration",
+      "fields": [
+        "[federated.0wys7u413bis7d1g2ya3b07pv7ay].[none:Geography:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 1,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 1
+  }
+}

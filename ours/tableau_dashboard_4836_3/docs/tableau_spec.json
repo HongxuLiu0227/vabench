@@ -1,0 +1,1498 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2020.4.3 (20204.21.0315.1000)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://data.kenyahmis.org"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Partner: Distributon",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[none:DisplayMechanism:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:County Denominator Expected Reports (copy):qk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[sum:County Denominator Expected Reports (copy):qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]"
+      ],
+      "encodings": {
+        "lod": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Overview Expected EMR Sites County (copy):qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:NoOfPatients (copy):qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "pane",
+        "table",
+        "worksheet",
+        "dropline",
+        "refline",
+        "zeroline",
+        "table-div",
+        "title",
+        "quick-filter",
+        "quick-filter-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+              "context": "true",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[DisplayAgency (group)]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+              "context": "true",
+              "filter-group": "7"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayCounty:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+              "context": "true",
+              "filter-group": "8"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayMechanism:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "d",
+          "style": {
+            "fontcolor": "#ffffff",
+            "fontname": "Verdana",
+            "fontsize": "8"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Distribution of",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": " EMR Sites by Partner",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "d Distribution of EMR Sites by Partner",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:County Denominator Expected Reports (copy):qk]",
+            "title": "Number of EMR Sites by Partner"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Partner: Overall",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[none:DisplayMechanism:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy):qk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[usr:County Percent Uploads Proportions (copy):qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy):nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:County Denominator Expected Reports (copy):qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:NoOfPatients (copy):qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Overview Expected EMR Sites County (copy):qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "pane",
+        "table",
+        "worksheet",
+        "dropline",
+        "refline",
+        "gridline",
+        "zeroline",
+        "table-div",
+        "title",
+        "legend-title-text",
+        "quick-filter",
+        "quick-filter-title",
+        "tooltip"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy):nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Above 67\\%",
+            "34 - 66\\%",
+            "Below 33\\%",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+              "context": "true",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[DisplayAgency (group)]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+              "context": "true",
+              "filter-group": "7"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayCounty:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+              "context": "true",
+              "filter-group": "8"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayMechanism:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "expression": "Month([UploadDate])=Month([Parameters].[Parameter 1])\r\nAND Year([UploadDate])=Year([Parameters].[Parameter 1])\r\nOR\r\n(Day([UploadDate])>=1 AND Day([UploadDate])<=5\r\nAND Month([UploadDate])=MONTH((Dateadd('month', 1, [Parameters].[Parameter 1])))\r\nAND Year([UploadDate])=Year([Parameters].[Parameter 1]))",
+                  "function": "filter",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "filter-by"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:UploadDate:ok]",
+                      "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Overall Reporting Care & Treatment by Partner",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#333333",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#333333",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "Overall Reporting Care & Treatment by Partner <[Parameters].[Parameter 1]>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy):qk]",
+            "title": "% C&T Uploads"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Partner: Recency",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[none:DisplayMechanism:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Partner Percent Uploaded (copy):qk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[usr:Partner Percent Uploaded (copy):qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:PArtner Color  (copy):nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Overview Expected EMR Sites County (copy):qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:County Denominator Expected Reports (copy):qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:NoOfPatients (copy):qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Number of Sites Uploaded CT (copy):qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "pane",
+        "table",
+        "worksheet",
+        "dropline",
+        "refline",
+        "zeroline",
+        "table-div",
+        "title",
+        "quick-filter",
+        "quick-filter-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:PArtner Color  (copy):nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Above 67\\%",
+            "34 - 66\\%",
+            "Below 33\\%",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+              "context": "true",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[DisplayAgency (group)]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+              "context": "true",
+              "filter-group": "7"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayCounty:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+              "context": "true",
+              "filter-group": "8"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayMechanism:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "expression": "Month([UploadDate_MPI])=Month([Parameters].[Parameter 1])\r\nAND Year([UploadDate_MPI])=Year([Parameters].[Parameter 1])\r\nOR\r\n(Day([UploadDate_MPI])>=1 AND Day([UploadDate_MPI])<=5\r\nAND Month([UploadDate_MPI])=MONTH((Dateadd('month', 1, [Parameters].[Parameter 1])))\r\nAND Year([UploadDate_MPI])=Year([Parameters].[Parameter 1]))",
+                  "function": "filter",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "filter-by"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:UploadDate_MPI:ok]",
+                      "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Overall Reporting PKVs by Partner",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "Overall Reporting PKVs by Partner <[Parameters].[Parameter 1]>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Partner Percent Uploaded (copy):qk]",
+            "title": "% PKV Uploads"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "zones": [
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "3547",
+          "w": "98701",
+          "h": "8615",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "Partner: Distributon",
+          "parent_id": "10",
+          "zone_type": "filter",
+          "x": "693",
+          "y": "3547",
+          "w": "24676",
+          "h": "8615",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Partner: Distributon",
+          "parent_id": "10",
+          "zone_type": "filter",
+          "x": "25369",
+          "y": "3547",
+          "w": "24675",
+          "h": "8615",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "Partner: Distributon",
+          "parent_id": "10",
+          "zone_type": "filter",
+          "x": "50044",
+          "y": "3547",
+          "w": "24675",
+          "h": "8615",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "paramctrl",
+          "x": "74719",
+          "y": "3547",
+          "w": "24675",
+          "h": "8615",
+          "param": "[Parameters].[Parameter 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "260",
+          "y": "12500",
+          "w": "99394",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "260",
+          "y": "12500",
+          "w": "33132",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "33392",
+          "y": "12500",
+          "w": "33131",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "66523",
+          "y": "12500",
+          "w": "33131",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "2",
+          "name": "Partner: Distributon",
+          "parent_id": "1",
+          "zone_type": "",
+          "x": "347",
+          "y": "12669",
+          "w": "32958",
+          "h": "68919",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "Partner: Overall",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "33479",
+          "y": "12669",
+          "w": "32957",
+          "h": "68919",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Partner: Recency",
+          "parent_id": "11",
+          "zone_type": "",
+          "x": "66610",
+          "y": "12669",
+          "w": "32957",
+          "h": "68919",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "260",
+          "y": "82264",
+          "w": "99394",
+          "h": "17399",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "",
+          "parent_id": "22",
+          "zone_type": "text",
+          "x": "260",
+          "y": "82264",
+          "w": "61818",
+          "h": "17399",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "The ",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "Overall reporting rate",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "PKVs = Patient Key Value",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​"
+        },
+        {
+          "id": "25",
+          "name": "Partner: Overall",
+          "parent_id": "22",
+          "zone_type": "color",
+          "x": "62078",
+          "y": "82264",
+          "w": "37576",
+          "h": "17399",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy):nk]",
+          "show_title": "",
+          "legend_item_layout": "horz",
+          "pane_specification_id": "1",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "id": "23",
+      "x": "260",
+      "y": "82264",
+      "w": "61818",
+      "h": "17399",
+      "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+      "text_runs": [
+        {
+          "text": "The ",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Overall reporting rate",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "PKVs = Patient Key Value",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "3547",
+          "w": "98701",
+          "h": "8615",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "Partner: Distributon",
+          "parent_id": "10",
+          "zone_type": "filter",
+          "x": "693",
+          "y": "3547",
+          "w": "24676",
+          "h": "8615",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Partner: Distributon",
+          "parent_id": "10",
+          "zone_type": "filter",
+          "x": "25369",
+          "y": "3547",
+          "w": "24675",
+          "h": "8615",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "Partner: Distributon",
+          "parent_id": "10",
+          "zone_type": "filter",
+          "x": "50044",
+          "y": "3547",
+          "w": "24675",
+          "h": "8615",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "paramctrl",
+          "x": "74719",
+          "y": "3547",
+          "w": "24675",
+          "h": "8615",
+          "param": "[Parameters].[Parameter 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "260",
+          "y": "12500",
+          "w": "99394",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "260",
+          "y": "12500",
+          "w": "33132",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "33392",
+          "y": "12500",
+          "w": "33131",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "66523",
+          "y": "12500",
+          "w": "33131",
+          "h": "69257",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "2",
+          "name": "Partner: Distributon",
+          "parent_id": "1",
+          "zone_type": "",
+          "x": "347",
+          "y": "12669",
+          "w": "32958",
+          "h": "68919",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "Partner: Overall",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "33479",
+          "y": "12669",
+          "w": "32957",
+          "h": "68919",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Partner: Recency",
+          "parent_id": "11",
+          "zone_type": "",
+          "x": "66610",
+          "y": "12669",
+          "w": "32957",
+          "h": "68919",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "260",
+          "y": "82264",
+          "w": "99394",
+          "h": "17399",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "",
+          "parent_id": "22",
+          "zone_type": "text",
+          "x": "260",
+          "y": "82264",
+          "w": "61818",
+          "h": "17399",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "The ",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "Overall reporting rate",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "PKVs = Patient Key Value",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+              "style": {
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​"
+        },
+        {
+          "id": "25",
+          "name": "Partner: Overall",
+          "parent_id": "22",
+          "zone_type": "color",
+          "x": "62078",
+          "y": "82264",
+          "w": "37576",
+          "h": "17399",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy):nk]",
+          "show_title": "",
+          "legend_item_layout": "horz",
+          "pane_specification_id": "1",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 1,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

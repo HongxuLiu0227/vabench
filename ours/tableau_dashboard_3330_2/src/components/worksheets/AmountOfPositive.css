@@ -1,0 +1,39 @@
+.worksheet {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.amount-of-positive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.amount-of-positive:hover {
+  opacity: 0.8;
+}
+
+.amount-of-positive.highlighted {
+  outline: 2px solid #4E79A7;
+  outline-offset: 2px;
+}
+
+.amount-display {
+  text-align: center;
+}
+
+.amount-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4E79A7;
+  line-height: 1;
+}
+
+.amount-label {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}

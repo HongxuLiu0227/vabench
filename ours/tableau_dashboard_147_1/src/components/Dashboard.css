@@ -1,0 +1,97 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dashboard-header {
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  height: calc(100vh - 120px);
+  min-height: 800px;
+}
+
+.dashboard-row-top {
+  flex: 0 0 55%;
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-row-bottom {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.worksheet {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.worksheet-map {
+  flex: 1;
+  width: 100%;
+}
+
+.worksheet-top {
+  flex: 0 0 45%;
+  width: 45%;
+}
+
+.worksheet-bottom {
+  flex: 1;
+  width: 55%;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    height: auto;
+    min-height: auto;
+  }
+  
+  .dashboard-row-top {
+    flex-direction: column;
+    height: 500px;
+  }
+  
+  .dashboard-row-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .worksheet-top,
+  .worksheet-bottom {
+    width: 100%;
+    height: 400px;
+  }
+}

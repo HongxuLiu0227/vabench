@@ -1,0 +1,1003 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.2.2 (20192.19.0718.1543)",
+      "source-platform": "mac",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 2",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:event:nk]",
+        "fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17]",
+          "[none:event:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:ok] * [federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk])",
+        "fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17]",
+          "[none:control:ok]",
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17]",
+          "[usr:Calculation_5721612283639615488:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[campaign]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[channel]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[channel]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[control]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:campaign:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Воронка",
+          "style": {}
+        }
+      ],
+      "title_text": "Воронка",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 3",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+      ],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[campaign]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[channel]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[control]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Каналы",
+          "style": {}
+        }
+      ],
+      "title_text": "Каналы",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 4",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+      ],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:ok]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[campaign]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[channel]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[channel]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Группы",
+          "style": {}
+        }
+      ],
+      "title_text": "Группы",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 5",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17]",
+          "[none:campaign:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+        "fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17]",
+          "[usr:Calculation_5721612283639615488:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[channel]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Кампании",
+          "style": {}
+        }
+      ],
+      "title_text": "Кампании",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 2",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "38375",
+          "w": "61100",
+          "h": "60625",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Sheet 3",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "61899",
+          "y": "1000",
+          "w": "37301",
+          "h": "37375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sheet 4",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "61099",
+          "h": "37375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Sheet 5",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "61900",
+          "y": "38375",
+          "w": "37300",
+          "h": "60625",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 2",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "38375",
+          "w": "61100",
+          "h": "60625",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Sheet 3",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "61899",
+          "y": "1000",
+          "w": "37301",
+          "h": "37375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sheet 4",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "61099",
+          "h": "37375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Sheet 5",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "61900",
+          "y": "38375",
+          "w": "37300",
+          "h": "60625",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 4"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 3"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 5"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:ok]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:event:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 5",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 5",
+      "viewpoint_name": "Sheet 5",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 6
+  }
+}

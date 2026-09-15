@@ -1,0 +1,380 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "600",
+    "maxwidth": "800",
+    "minheight": "600",
+    "minwidth": "800",
+    "preset-index": "3",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "Plot of Sales",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Profit:qk]",
+      "cols_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Sales:qk]",
+      "series_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]",
+      "slices": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Category:nk]",
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Region:nk]"
+        ]
+      },
+      "zone": {
+        "x": "40000",
+        "y": "8333",
+        "w": "39000",
+        "h": "41499",
+        "aspect_ratio": 0.9398,
+        "normalized": {
+          "x_ratio": 0.4,
+          "y_ratio": 0.0833,
+          "w_ratio": 0.39,
+          "h_ratio": 0.415
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Market",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Country:nk]",
+      "cols_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Sales:qk]",
+      "series_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Profit:qk]",
+      "slices": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Country:nk]",
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1000",
+        "y": "49832",
+        "w": "98000",
+        "h": "48835",
+        "aspect_ratio": 2.0068,
+        "normalized": {
+          "x_ratio": 0.01,
+          "y_ratio": 0.4983,
+          "w_ratio": 0.98,
+          "h_ratio": 0.4884
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Segment",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]",
+      "slices": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Sales Dashboard",
+              "type": "sheet",
+              "worksheet": "Sales by Segment"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Sales Dashboard"
+            },
+            "field_captions": [],
+            "target": "Sales Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1000",
+        "y": "8333",
+        "w": "39000",
+        "h": "41499",
+        "aspect_ratio": 0.9398,
+        "normalized": {
+          "x_ratio": 0.01,
+          "y_ratio": 0.0833,
+          "w_ratio": 0.39,
+          "h_ratio": 0.415
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Sales Dashboard",
+        "type": "sheet",
+        "worksheet": "Sales by Segment"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Sales Dashboard"
+      },
+      "field_captions": [],
+      "target": "Sales Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Segment",
+      "viewpoint_name": "Sales by Segment",
+      "fields": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Plot of Sales",
+      "viewpoint_name": "Plot of Sales",
+      "fields": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Category:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Market",
+      "viewpoint_name": "Sales by Market",
+      "fields": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Country:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Plot of Sales",
+      "Sales by Market",
+      "Sales by Segment"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

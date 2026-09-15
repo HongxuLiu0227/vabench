@@ -1,0 +1,2765 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "dev_crit",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Critics",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action7_325B1BFBBAB5426AA705FE2C3E3D57F9]",
+            "caption": "Filtro 7 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "dev",
+              "type": "sheet",
+              "worksheet": "dev_crit"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "dev"
+            },
+            "field_captions": [],
+            "target": "dev"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "50100",
+        "w": "49200",
+        "h": "44900",
+        "aspect_ratio": 1.0958,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.501,
+          "w_ratio": 0.492,
+          "h_ratio": 0.449
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "dev_meta",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (developer)]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (developer)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Developers",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Average Metascore"
+      ],
+      "axis_title_cols": [
+        "Month of release"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action9_AD4B8734FAB5425183D18515E9487CBB]",
+            "caption": "Filtro 9 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "dev",
+              "type": "sheet",
+              "worksheet": "dev_meta"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "dev"
+            },
+            "field_captions": [],
+            "target": "dev"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "98400",
+        "h": "49100",
+        "aspect_ratio": 2.0041,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.984,
+          "h_ratio": 0.491
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "dev_users",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (developer)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Users",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action8_2D1B1F41CC8640878DD2BE56303911BE]",
+            "caption": "Filtro 8 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "dev",
+              "type": "sheet",
+              "worksheet": "dev_users"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "dev"
+            },
+            "field_captions": [],
+            "target": "dev"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "50100",
+        "w": "49200",
+        "h": "44900",
+        "aspect_ratio": 1.0958,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.501,
+          "w_ratio": 0.492,
+          "h_ratio": 0.449
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "game_crit",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Critics",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2_E23F2A4330E444168D7B4A00A8DB1CEB]",
+            "caption": "Filtro 2 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "game",
+              "type": "sheet",
+              "worksheet": "game_crit"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "game"
+            },
+            "field_captions": [],
+            "target": "game"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "game_meta",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Games",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Average Metascore"
+      ],
+      "axis_title_cols": [
+        "Month of release"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1_CB70D7F2B2A24B1E8729F88D4AE3BC7F]",
+            "caption": "Filtro 1 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "game",
+              "type": "sheet",
+              "worksheet": "game_meta"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "game"
+            },
+            "field_captions": [],
+            "target": "game"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:2:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:3:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "game_users",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Users",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action6_23E523DB97F5473F82FDD3E69BF9073E]",
+            "caption": "Filtro 6 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "game",
+              "type": "sheet",
+              "worksheet": "game_users"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "game"
+            },
+            "field_captions": [],
+            "target": "game"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "genre_crit",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Critics",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action11_F180BB835D8B43AA890E97D2AC49AE2A]",
+            "caption": "Filtro 11 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "genre",
+              "type": "sheet",
+              "worksheet": "genre_crit"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "genre"
+            },
+            "field_captions": [],
+            "target": "genre"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "genre_meta",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[attr:game:nk]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[attr:game:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "2064: Read Only Memories",
+        "3D Fantasy Zone II W",
+        "3D Thunder Blade",
+        "A Normal Lost Phone",
+        "ABZU",
+        "Act of Aggression",
+        "Alan Wake's American Nightmare",
+        "Alekhine's Gun",
+        "Alone in the Dark: Illumination",
+        "American Truck Simulator",
+        "Animal Crossing: amiibo Festival",
+        "Animal Crossing: Happy Home Designer",
+        "Anna",
+        "Anodyne",
+        "Anomaly: Warzone Earth",
+        "APB: Reloaded",
+        "Apotheon",
+        "Assassin's Creed Chronicles: China",
+        "Assassin's Creed IV: Black Flag - Freedom Cry",
+        "Assassin's Creed Rogue",
+        "Assassin's Creed Syndicate",
+        "Atelier Ayesha Plus: The Alchemist of Dusk",
+        "Atlas Reactor",
+        "Atom Zombie Smasher",
+        "Avernum 2: Crystal Souls",
+        "Back to the Future: The Game - Episode II: Get Tannen!",
+        "Baldur's Gate II: Enhanced Edition",
+        "Baseball Riot",
+        "Batman: Arkham Knight",
+        "Batman: Arkham Origins Blackgate - Deluxe Edition",
+        "Battlefield Hardline",
+        "Battlezone 98 Redux",
+        "Beatbuddy: Tale of the Guardians",
+        "Betrayer",
+        "Bientot l'ete",
+        "Bit.Trip Saga",
+        "Blade & Soul",
+        "Borderlands: The Handsome Collection",
+        "Bound by Flame",
+        "BoxBoxBoy!",
+        "Brain Age: Concentration Training",
+        "Bravely Default",
+        "Brawlout",
+        "Bridge Constructor Portal",
+        "Broken Age",
+        "Bulletstorm",
+        "Bus Simulator 16",
+        "Bust-A-Move Universe",
+        "Call of Duty: Black Ops Declassified",
+        "Call of Duty: Modern Warfare Remastered",
+        "Cargo! The Quest for Gravity",
+        "Carmageddon: Max Damage",
+        "Chime Sharp",
+        "Chronovolt",
+        "Cities in Motion",
+        "Cities: Skylines",
+        "Clandestine",
+        "Claybook",
+        "Clockwork Empires",
+        "Colour Bind",
+        "Conception II: Children of the Seven Stars",
+        "Conga Master Party!",
+        "CONSORTIUM",
+        "Cooking Mama: Sweet Shop",
+        "Cosmic Star Heroine",
+        "Cradle",
+        "Crash Bandicoot N. Sane Trilogy",
+        "Crasher",
+        "Crimson Shroud",
+        "Crusader Kings II: Sons of Abraham",
+        "DARK",
+        "Dark Souls II",
+        "Darksiders II",
+        "Darkspore",
+        "Daylight",
+        "Dead Horde",
+        "Dead Island",
+        "Deadpool",
+        "Death Rally (2012)",
+        "Defiance",
+        "Depth",
+        "Diablo III: Reaper of Souls",
+        "Diablo III: Ultimate Evil Edition",
+        "Diaries of a Spaceport Janitor",
+        "DiRT 3",
+        "DiRT Rally",
+        "Dirty Bomb",
+        "Disc Jam",
+        "Disgaea 4: A Promise Revisited",
+        "Disney Planes",
+        "Divinity: Original Sin",
+        "Divinity: Original Sin II",
+        "Door Kickers",
+        "Dragon Age: Inquisition",
+        "Dragon Quest Heroes: The World Tree's Woe and the Blight Below",
+        "Dream Daddy: A Dad Dating Simulator",
+        "Dreamfall Chapters",
+        "Driveclub",
+        "DualPenSports",
+        "Duelyst",
+        "Dungeons 3",
+        "EA Sports UFC 3",
+        "Eastshade",
+        "Edna & Harvey: The Breakout",
+        "Elite: Dangerous",
+        "Etrian Odyssey IV: Legends of the Titan",
+        "Everybody's Golf",
+        "F.E.A.R. 3",
+        "F1 2012",
+        "F1 2013",
+        "F1 Race Stars",
+        "F1 Race Stars: Powered Up Edition",
+        "Fantasia: Music Evolved",
+        "Farming Simulator 15",
+        "FAST Racing NEO",
+        "FIFA Manager 13",
+        "Final Fantasy XIV: Heavensward",
+        "Final Fantasy XV",
+        "Fire Emblem Fates: Conquest",
+        "Flip Wars",
+        "Flockers",
+        "Football Manager 2014",
+        "Football Manager 2019",
+        "Forza Horizon 2 Presents Fast & Furious",
+        "Forza Motorsport 5",
+        "Forza Motorsport 6",
+        "Friday the 13th: The Game",
+        "Frozen Synapse",
+        "Gears of War 4",
+        "Get Even",
+        "Ghost of a Tale",
+        "Goat Simulator",
+        "Gone Home: Console Edition",
+        "GRID 2",
+        "Grim Dawn",
+        "Guild Wars 2",
+        "Guns of Icarus Alliance",
+        "Hakuoki: Memories of the Shinsengumi",
+        "Halo 5: Guardians",
+        "Hamilton's Great Adventure",
+        "Hand of Fate 2",
+        "Hardware: Rivals",
+        "Harvest Moon 3D: A New Beginning",
+        "Harvest Moon: Skytree Village",
+        "Hatred",
+        "Hearthstone: Heroes of Warcraft",
+        "Hearts of Iron IV",
+        "Hellblade: Senua's Sacrifice",
+        "Helldivers",
+        "Hitman",
+        "Homefront: The Revolution",
+        "Homeworld Remastered Collection",
+        "Human Resource Machine",
+        "I Am Alive",
+        "Ignite",
+        "IL-2 Sturmovik: Battle of Stalingrad",
+        "IL-2 Sturmovik: Cliffs of Dover",
+        "Infestation: Survivor Stories (The War Z)",
+        "Infinite Crisis",
+        "Infinite Minigolf",
+        "Insurgency",
+        "Invizimals: The Alliance",
+        "Ironcast",
+        "Jacob Jones and the Bigfoot Mystery: Episode One - A Bump in the Night",
+        "Jagged Alliance: Crossfire",
+        "Jurassic Park: The Game",
+        "Kenshi",
+        "Killing Floor 2",
+        "King Arthur II: The Role-Playing Wargame",
+        "Kingdom Hearts III",
+        "Knock-knock",
+        "Law & Order: Legacies",
+        "LawBreakers",
+        "Layton's Mystery Journey: Katrielle and The Millionaires' Conspiracy",
+        "Legend of Grimrock",
+        "LEGO The Hobbit",
+        "Let's Golf 3D",
+        "Lets Fish! Hooked On",
+        "Liberation Maiden",
+        "Life is Strange",
+        "Lilly Looking Through",
+        "Loadout",
+        "Lords of the Fallen",
+        "Lovers in a Dangerous Spacetime",
+        "Lumino City",
+        "Lust for Darkness",
+        "Madden NFL 15",
+        "Madden NFL 17",
+        "Magicka",
+        "Magicka: Vietnam",
+        "Mario and Donkey Kong: Minis on the Move",
+        "Mario Kart 8",
+        "Mario Kart 8 Deluxe",
+        "Mario Kart 8 DLC Pack 2",
+        "Mario Party 10",
+        "Mario Party: Island Tour",
+        "Mario Tennis Open",
+        "Mass Effect 3: Special Edition",
+        "Mass Effect: Andromeda",
+        "Max: The Curse of Brotherhood",
+        "Mega Man Legacy Collection",
+        "Metal Gear Solid V: Ground Zeroes",
+        "Metal Gear Solid V: The Phantom Pain",
+        "Microsoft Flight",
+        "Might & Magic X: Legacy",
+        "Might & Magic: Heroes VII",
+        "Mighty No. 9",
+        "Minecraft: Story Mode - Episode 3: The Last Place You Look",
+        "MirrorMoon EP",
+        "MLB 13: The Show",
+        "MLB 15: The Show",
+        "MLB The Show 18",
+        "MLB The Show 19",
+        "Moto Racer 4",
+        "N++",
+        "NaissanceE",
+        "NBA 2K18",
+        "NBA 2K19",
+        "NBA Playgrounds",
+        "Need for Speed: The Run",
+        "Neverending Nightmares",
+        "Ni no Kuni II: Revenant Kingdom",
+        "Nickelodeon Kart Racers",
+        "Night in the Woods",
+        "Nippon Marathon",
+        "Obliteracers",
+        "Octodad: Dadliest Catch",
+        "Octopath Traveler",
+        "Oddworld: Abe's Oddysee - New 'n' Tasty",
+        "Oddworld: Stranger's Wrath HD",
+        "OlliOlli",
+        "Omega Quintet",
+        "OneShot",
+        "Outlast",
+        "OVERKILL's The Walking Dead",
+        "Owlboy",
+        "Painkiller: Redemption",
+        "Path of Exile",
+        "Pato Box",
+        "Picross 3D: Round 2",
+        "Pikuniku",
+        "Pillars of Eternity",
+        "Planetary Annihilation",
+        "Pokemon Mystery Dungeon: Gates to Infinity",
+        "Pokemon Picross",
+        "Postal III",
+        "Pro Cycling Manager Season 2012: Le Tour de France",
+        "Pro Cycling Manager Season 2013: Le Tour de France - 100th Edition",
+        "Pro Cycling Manager Season 2015",
+        "Professor Layton and the Miracle Mask",
+        "Prototype 2",
+        "Puddle",
+        "Punch Club",
+        "Pure Pool",
+        "Pushmo World",
+        "Q.U.B.E. 2",
+        "Q.U.B.E. Director's Cut",
+        "Rad Rodgers",
+        "Railworks 3: Train Simulator 2012",
+        "Raven's Cry",
+        "Resident Evil: Revelations 2",
+        "Richard & Alice",
+        "Rick and Morty: Virtual Rick-ality",
+        "Ride 2",
+        "Ride to Hell: Retribution",
+        "Rise of the Tomb Raider",
+        "Road Not Taken",
+        "Road Redemption",
+        "Rocket League",
+        "RollerCoaster Tycoon World",
+        "Rory McIlroy PGA Tour",
+        "Roundabout",
+        "Sacred 3",
+        "Satellite Reign",
+        "Scribblenauts Unlimited",
+        "Scribblenauts Unmasked: A DC Comics Adventure",
+        "Seasons After Fall",
+        "Sebastien Loeb Rally Evo",
+        "Seduce Me",
+        "Sega Ages: OutRun",
+        "Severed",
+        "Shantae and the Pirate's Curse",
+        "Sherlock Holmes: Crimes & Punishments",
+        "Shin Megami Tensei: Devil Survivor Overclocked",
+        "Siesta Fiesta",
+        "SimCity: Cities of Tomorrow Expansion Pack",
+        "Sleeping Dogs",
+        "Slender: The Arrival",
+        "Sniper Elite: Nazi Zombie Army 2",
+        "Snipperclips Plus: Cut It Out, Together!",
+        "SOMA",
+        "Sonic & All-Stars Racing Transformed",
+        "Soul Axiom",
+        "SpaceChem",
+        "Spectra: 8bit Racing",
+        "Speedball 2 HD",
+        "Stacking",
+        "Star Wars: The Old Republic",
+        "Starbound",
+        "Starcraft II: Heart of the Swarm",
+        "Starlink: Battle for Atlas",
+        "State of Decay: Year One Survival Edition",
+        "Steel Diver: Sub Wars",
+        "Steep",
+        "Steep: Road to the Olympics",
+        "Steins;Gate",
+        "Story of Seasons",
+        "Stronghold: Crusader II",
+        "Submerged",
+        "Sunset",
+        "Sunset Overdrive",
+        "Super Lucky's Tale",
+        "Super Mega Baseball",
+        "Super Smash Bros. for Nintendo 3DS",
+        "Super Toy Cars",
+        "Swords & Soldiers II",
+        "Syberia 3",
+        "Table Top Racing",
+        "Table Top Tanks",
+        "Tactical Intervention",
+        "Tales of Berseria",
+        "Tennis in the Face",
+        "Test Drive Unlimited 2",
+        "Tetris Ultimate",
+        "The Adventures of Tintin: The Game",
+        "The Age of Decadence",
+        "The Amazing Spider-Man",
+        "The Banner Saga",
+        "The Binding of Isaac: Rebirth",
+        "The Bridge (2013)",
+        "The Crew",
+        "The Delusions of Von Sottendorff and His Squared Mind",
+        "The Elder Scrolls Online",
+        "The Elder Scrolls Online: Tamriel Unlimited",
+        "The Evil Within",
+        "The Forest",
+        "The Golf Club",
+        "The Guest",
+        "The Journey Down: Chapter Two",
+        "The Last Guardian",
+        "The Legend of Heroes: Trails in the Sky SC",
+        "The Legend of Zelda: A Link Between Worlds",
+        "The Legend of Zelda: Breath of the Wild",
+        "The Legend of Zelda: Majora's Mask 3D",
+        "The Long Dark",
+        "The Old City: Leviathan",
+        "The Sims 3: Generations",
+        "The Sims 3: Showtime",
+        "The Sims 4",
+        "The Sims 4: Get Together",
+        "The Sims 4: Outdoor Retreat",
+        "The Sims Medieval: Pirates & Nobles",
+        "The Walking Dead: A Telltale Games Series",
+        "The Witcher 3: Wild Hunt",
+        "The Wolf Among Us: Episode 4 - In Sheep's Clothing",
+        "The Wolf Among Us: Episode 5 - Cry Wolf",
+        "theHunter: Call of the Wild",
+        "Tokyo Mirage Sessions \\#FE",
+        "Tom Clancy's Rainbow Six Siege",
+        "Tom Clancy's The Division",
+        "Tom Clancy's The Division 2",
+        "Torment: Tides of Numenera",
+        "Total War: Arena",
+        "Train Fever",
+        "TRI",
+        "Trials Fusion",
+        "Tropico 5",
+        "Two Point Hospital",
+        "Two Worlds II: Pirates of the Flying Fortress",
+        "UEFA EURO 2016",
+        "Uncharted: Fight for Fortune",
+        "Unstoppable Gorg",
+        "VA-11 Hall-A: Cyberpunk Bartender Action",
+        "Verdun",
+        "VIDEOBALL",
+        "Vroom in the Night Sky",
+        "Warhammer 40,000: Dawn of War III",
+        "Warhammer 40,000: Regicide",
+        "Wasteland 2",
+        "Watch Dogs",
+        "Waveform",
+        "Werewolves Within",
+        "World of Tanks",
+        "World of Warcraft: Mists of Pandaria",
+        "WRC 3: FIA World Rally Championship",
+        "WRC 4: FIA World Rally Championship",
+        "Wreckfest",
+        "XCOM: Enemy Within",
+        "Xenoblade Chronicles X",
+        "Xenon Racer",
+        "Xenonauts",
+        "Yatagarasu: Attack on Cataclysm",
+        "Yesterday",
+        "Yo-kai Watch",
+        "Ys VI: The Ark of Napishtim",
+        "Ys: Memories of Celceta",
+        "Yumi's Odd Odyssey",
+        "ZombiU",
+        "Zoo Tycoon",
+        "%many-values%"
+      ],
+      "title_runs": [
+        {
+          "text": "Genres",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Average Metascore"
+      ],
+      "axis_title_cols": [
+        "Month of release"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action10_BCABAE33BCD947DBB4854F955B446CF5]",
+            "caption": "Filtro 10 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "genre",
+              "type": "sheet",
+              "worksheet": "genre_meta"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "genre"
+            },
+            "field_captions": [],
+            "target": "genre"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "genre_users",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Users",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action12_6A85D29537824E3CB31039046F31E108]",
+            "caption": "Filtro 12 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "genre",
+              "type": "sheet",
+              "worksheet": "genre_users"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "genre"
+            },
+            "field_captions": [],
+            "target": "genre"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "name_games",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+      "cols_field": "",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Tooltip (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Tooltip (developer,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Tooltip (genre,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Tooltip (number_players,MES(release_date))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "numb_crit",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:number_players:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Critics",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action14_49381132562F4C4F895C69C1F72B978E]",
+            "caption": "Filtro 14 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "number",
+              "type": "sheet",
+              "worksheet": "numb_crit"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "number"
+            },
+            "field_captions": [],
+            "target": "number"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:number_players:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "numb_meta",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Number of players",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Average Metascore"
+      ],
+      "axis_title_cols": [
+        "Month of release"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action15_77FB0FA1E4EF4991BDA44BCA2A817466]",
+            "caption": "Filtro 15 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "number",
+              "type": "sheet",
+              "worksheet": "numb_meta"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "number"
+            },
+            "field_captions": [],
+            "target": "number"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "numb_users",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:number_players:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Users",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action13_8E182C71926F4BCF8AF62805D74A529F]",
+            "caption": "Filtro 13 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "number",
+              "type": "sheet",
+              "worksheet": "numb_users"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "number"
+            },
+            "field_captions": [],
+            "target": "number"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:number_players:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "plat_crit",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_critics:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522679025665:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Critics",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action4_2AF450A68B3A4CBEA73FAC995C76471C]",
+            "caption": "Filtro 4 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "plat",
+              "type": "sheet",
+              "worksheet": "plat_crit"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "plat"
+            },
+            "field_captions": [],
+            "target": "plat"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "plat_meta",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Platforms",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Average Metascore"
+      ],
+      "axis_title_cols": [
+        "Month of release"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3_A94B77E0C2294FA6989C9030988F85CE]",
+            "caption": "Filtro 3 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "plat",
+              "type": "sheet",
+              "worksheet": "plat_meta"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "plat"
+            },
+            "field_captions": [],
+            "target": "plat"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "plat_users",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+      "cols_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+      "series_field": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+      "slices": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game)]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform,MES(release_date))]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (platform)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:neutral_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:negative_users:qk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:Calculation_652740522680942595:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Users",
+          "style": {
+            "fontcolor": "#c0c0c0",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action5_A927A4E11C6B42B682B15BAEA83B09DC]",
+            "caption": "Filtro 5 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "plat",
+              "type": "sheet",
+              "worksheet": "plat_users"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "plat"
+            },
+            "field_captions": [],
+            "target": "plat"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+          "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "dev",
+      "id": "11",
+      "x": "800",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+      "text_runs": [
+        {
+          "text": "Source: ",
+          "style": {
+            "fontcolor": "#c0c0c0"
+          }
+        },
+        {
+          "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+          "style": {
+            "auto-url": "true",
+            "fontcolor": "#c0c0c0",
+            "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "dev",
+      "id": "12",
+      "x": "50000",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Created by Sergio Funes",
+      "text_runs": [
+        {
+          "text": "Created by Sergio Funes",
+          "style": {
+            "fontalignment": "2",
+            "fontcolor": "#c0c0c0"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "game",
+      "id": "21",
+      "x": "800",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+      "text_runs": [
+        {
+          "text": "Source: ",
+          "style": {
+            "fontcolor": "#c0c0c0"
+          }
+        },
+        {
+          "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+          "style": {
+            "auto-url": "true",
+            "fontcolor": "#c0c0c0",
+            "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "game",
+      "id": "22",
+      "x": "50000",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Created by Sergio Funes",
+      "text_runs": [
+        {
+          "text": "Created by Sergio Funes",
+          "style": {
+            "fontalignment": "2",
+            "fontcolor": "#c0c0c0"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "genre",
+      "id": "11",
+      "x": "800",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+      "text_runs": [
+        {
+          "text": "Source: ",
+          "style": {
+            "fontcolor": "#c0c0c0"
+          }
+        },
+        {
+          "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+          "style": {
+            "auto-url": "true",
+            "fontcolor": "#c0c0c0",
+            "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "genre",
+      "id": "12",
+      "x": "50000",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Created by Sergio Funes",
+      "text_runs": [
+        {
+          "text": "Created by Sergio Funes",
+          "style": {
+            "fontalignment": "2",
+            "fontcolor": "#c0c0c0"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "number",
+      "id": "11",
+      "x": "800",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+      "text_runs": [
+        {
+          "text": "Source: ",
+          "style": {
+            "fontcolor": "#c0c0c0"
+          }
+        },
+        {
+          "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+          "style": {
+            "auto-url": "true",
+            "fontcolor": "#c0c0c0",
+            "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "number",
+      "id": "12",
+      "x": "50000",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Created by Sergio Funes",
+      "text_runs": [
+        {
+          "text": "Created by Sergio Funes",
+          "style": {
+            "fontalignment": "2",
+            "fontcolor": "#c0c0c0"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "plat",
+      "id": "15",
+      "x": "800",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Source: https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+      "text_runs": [
+        {
+          "text": "Source: ",
+          "style": {
+            "fontcolor": "#c0c0c0"
+          }
+        },
+        {
+          "text": "https://www.kaggle.com/skateddu/metacritic-games-stats-20112019",
+          "style": {
+            "auto-url": "true",
+            "fontcolor": "#c0c0c0",
+            "hyperlink": "tabdoc:load-url url=&quot;https://www.kaggle.com/skateddu/metacritic-games-stats-20112019&quot;"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "plat",
+      "id": "16",
+      "x": "50000",
+      "y": "95000",
+      "w": "49200",
+      "h": "4000",
+      "text": "Created by Sergio Funes",
+      "text_runs": [
+        {
+          "text": "Created by Sergio Funes",
+          "style": {
+            "fontalignment": "2",
+            "fontcolor": "#c0c0c0"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action10_BCABAE33BCD947DBB4854F955B446CF5]",
+      "caption": "Filtro 10 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "genre",
+        "type": "sheet",
+        "worksheet": "genre_meta"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "genre"
+      },
+      "field_captions": [],
+      "target": "genre"
+    },
+    {
+      "name": "[Action11_F180BB835D8B43AA890E97D2AC49AE2A]",
+      "caption": "Filtro 11 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "genre",
+        "type": "sheet",
+        "worksheet": "genre_crit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "genre"
+      },
+      "field_captions": [],
+      "target": "genre"
+    },
+    {
+      "name": "[Action12_6A85D29537824E3CB31039046F31E108]",
+      "caption": "Filtro 12 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "genre",
+        "type": "sheet",
+        "worksheet": "genre_users"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "genre"
+      },
+      "field_captions": [],
+      "target": "genre"
+    },
+    {
+      "name": "[Action13_8E182C71926F4BCF8AF62805D74A529F]",
+      "caption": "Filtro 13 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "number",
+        "type": "sheet",
+        "worksheet": "numb_users"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "number"
+      },
+      "field_captions": [],
+      "target": "number"
+    },
+    {
+      "name": "[Action14_49381132562F4C4F895C69C1F72B978E]",
+      "caption": "Filtro 14 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "number",
+        "type": "sheet",
+        "worksheet": "numb_crit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "number"
+      },
+      "field_captions": [],
+      "target": "number"
+    },
+    {
+      "name": "[Action15_77FB0FA1E4EF4991BDA44BCA2A817466]",
+      "caption": "Filtro 15 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "number",
+        "type": "sheet",
+        "worksheet": "numb_meta"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "number"
+      },
+      "field_captions": [],
+      "target": "number"
+    },
+    {
+      "name": "[Action1_CB70D7F2B2A24B1E8729F88D4AE3BC7F]",
+      "caption": "Filtro 1 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "game",
+        "type": "sheet",
+        "worksheet": "game_meta"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "game"
+      },
+      "field_captions": [],
+      "target": "game"
+    },
+    {
+      "name": "[Action2_E23F2A4330E444168D7B4A00A8DB1CEB]",
+      "caption": "Filtro 2 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "game",
+        "type": "sheet",
+        "worksheet": "game_crit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "game"
+      },
+      "field_captions": [],
+      "target": "game"
+    },
+    {
+      "name": "[Action3_A94B77E0C2294FA6989C9030988F85CE]",
+      "caption": "Filtro 3 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "plat",
+        "type": "sheet",
+        "worksheet": "plat_meta"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "plat"
+      },
+      "field_captions": [],
+      "target": "plat"
+    },
+    {
+      "name": "[Action4_2AF450A68B3A4CBEA73FAC995C76471C]",
+      "caption": "Filtro 4 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "plat",
+        "type": "sheet",
+        "worksheet": "plat_crit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "plat"
+      },
+      "field_captions": [],
+      "target": "plat"
+    },
+    {
+      "name": "[Action5_A927A4E11C6B42B682B15BAEA83B09DC]",
+      "caption": "Filtro 5 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "plat",
+        "type": "sheet",
+        "worksheet": "plat_users"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "plat"
+      },
+      "field_captions": [],
+      "target": "plat"
+    },
+    {
+      "name": "[Action6_23E523DB97F5473F82FDD3E69BF9073E]",
+      "caption": "Filtro 6 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "game",
+        "type": "sheet",
+        "worksheet": "game_users"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "game"
+      },
+      "field_captions": [],
+      "target": "game"
+    },
+    {
+      "name": "[Action7_325B1BFBBAB5426AA705FE2C3E3D57F9]",
+      "caption": "Filtro 7 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "dev",
+        "type": "sheet",
+        "worksheet": "dev_crit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "dev"
+      },
+      "field_captions": [],
+      "target": "dev"
+    },
+    {
+      "name": "[Action8_2D1B1F41CC8640878DD2BE56303911BE]",
+      "caption": "Filtro 8 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "dev",
+        "type": "sheet",
+        "worksheet": "dev_users"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "dev"
+      },
+      "field_captions": [],
+      "target": "dev"
+    },
+    {
+      "name": "[Action9_AD4B8734FAB5425183D18515E9487CBB]",
+      "caption": "Filtro 9 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "dev",
+        "type": "sheet",
+        "worksheet": "dev_meta"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "dev"
+      },
+      "field_captions": [],
+      "target": "dev"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "game_meta",
+      "viewpoint_name": "game_meta",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:2:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:3:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "game_crit",
+      "viewpoint_name": "game_crit",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "game_users",
+      "viewpoint_name": "game_users",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "plat_meta",
+      "viewpoint_name": "plat_meta",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "plat_crit",
+      "viewpoint_name": "plat_crit",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "plat_users",
+      "viewpoint_name": "plat_users",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "dev_meta",
+      "viewpoint_name": "dev_meta",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "dev_crit",
+      "viewpoint_name": "dev_crit",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "dev_users",
+      "viewpoint_name": "dev_users",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "genre_meta",
+      "viewpoint_name": "genre_meta",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "genre_crit",
+      "viewpoint_name": "genre_crit",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "genre_users",
+      "viewpoint_name": "genre_users",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "numb_meta",
+      "viewpoint_name": "numb_meta",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "numb_crit",
+      "viewpoint_name": "numb_crit",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:number_players:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "numb_users",
+      "viewpoint_name": "numb_users",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:developer:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:genre:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:number_players:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "name_games",
+      "viewpoint_name": "name_games",
+      "fields": [
+        "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 16,
+    "dashboard_text_zone_count": 10,
+    "intent_counts": {
+      "custom_tableau_view": 16
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [
+      "dev_meta",
+      "game_meta",
+      "genre_meta",
+      "numb_meta",
+      "plat_meta"
+    ],
+    "interaction_worksheets": [
+      "dev_crit",
+      "dev_meta",
+      "dev_users",
+      "game_crit",
+      "game_meta",
+      "game_users",
+      "genre_crit",
+      "genre_meta",
+      "genre_users",
+      "name_games",
+      "numb_crit",
+      "numb_meta",
+      "numb_users",
+      "plat_crit",
+      "plat_meta",
+      "plat_users"
+    ],
+    "dashboard_action_count": 15,
+    "highlight_binding_count": 16
+  }
+}

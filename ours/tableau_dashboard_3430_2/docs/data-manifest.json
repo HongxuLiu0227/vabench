@@ -1,0 +1,163 @@
+{
+  "schema_version": "data_manifest_v1",
+  "dataset": {
+    "filename": "TEMP_0dadi4n02dru231bavf6q0qrp5qq.csv",
+    "url": "/data/TEMP_0dadi4n02dru231bavf6q0qrp5qq.csv",
+    "format": "CSV",
+    "encoding": "UTF-8",
+    "header_format": "triple_quoted",
+    "description": "2020 Citi Bike trip data with demographic information"
+  },
+  "raw_csv_columns": [
+    {
+      "csv_name": "tripduration",
+      "normalized_name": "tripduration",
+      "data_type": "numeric",
+      "description": "Trip duration in seconds"
+    },
+    {
+      "csv_name": "starttime",
+      "normalized_name": "starttime",
+      "data_type": "datetime",
+      "description": "Trip start date and time"
+    },
+    {
+      "csv_name": "stoptime",
+      "normalized_name": "stoptime",
+      "data_type": "datetime",
+      "description": "Trip end date and time"
+    },
+    {
+      "csv_name": "start station id",
+      "normalized_name": "start station id",
+      "data_type": "numeric",
+      "description": "Starting station ID"
+    },
+    {
+      "csv_name": "start station name",
+      "normalized_name": "start station name",
+      "data_type": "string",
+      "description": "Starting station name"
+    },
+    {
+      "csv_name": "start station latitude",
+      "normalized_name": "start station latitude",
+      "data_type": "numeric",
+      "description": "Starting station latitude"
+    },
+    {
+      "csv_name": "start station longitude",
+      "normalized_name": "start station longitude",
+      "data_type": "numeric",
+      "description": "Starting station longitude"
+    },
+    {
+      "csv_name": "end station id",
+      "normalized_name": "end station id",
+      "data_type": "numeric",
+      "description": "Ending station ID"
+    },
+    {
+      "csv_name": "end station name",
+      "normalized_name": "end station name",
+      "data_type": "string",
+      "description": "Ending station name"
+    },
+    {
+      "csv_name": "end station latitude",
+      "normalized_name": "end station latitude",
+      "data_type": "numeric",
+      "description": "Ending station latitude"
+    },
+    {
+      "csv_name": "end station longitude",
+      "normalized_name": "end station longitude",
+      "data_type": "numeric",
+      "description": "Ending station longitude"
+    },
+    {
+      "csv_name": "bikeid",
+      "normalized_name": "bikeid",
+      "data_type": "numeric",
+      "description": "Bike ID"
+    },
+    {
+      "csv_name": "usertype",
+      "normalized_name": "usertype",
+      "data_type": "categorical",
+      "description": "User type: Customer or Subscriber",
+      "values": ["Customer", "Subscriber"]
+    },
+    {
+      "csv_name": "birth year",
+      "normalized_name": "birth year",
+      "data_type": "numeric",
+      "description": "Birth year (4-digit year, not a full date)",
+      "note": "Stored as year number (e.g., 1990), not as a date. Used to compute Age."
+    },
+    {
+      "csv_name": "gender",
+      "normalized_name": "gender",
+      "data_type": "categorical",
+      "description": "Gender: Male (1), Female (2), or Unknown (0)",
+      "values": ["Male", "Female", "Unknown"]
+    }
+  ],
+  "computed_fields": [
+    {
+      "field_name": "age",
+      "data_type": "numeric",
+      "computation": "2020 - birth year",
+      "source_field": "birth year",
+      "description": "Rider age in years (calculated from birth year, assuming 2020 as data year)",
+      "null_handling": "If birth year is null, invalid, or out of range, age is null"
+    },
+    {
+      "field_name": "ageGroup",
+      "tableau_name": "Age Groups",
+      "data_type": "categorical",
+      "computation": "Age binning",
+      "source_field": "age",
+      "bins": [
+        {"min": 17, "max": 20, "label": "17-20"},
+        {"min": 21, "max": 30, "label": "21-30"},
+        {"min": 31, "max": 40, "label": "31-40"},
+        {"min": 41, "max": 50, "label": "41-50"},
+        {"min": 51, "max": 60, "label": "51-60"},
+        {"min": 61, "max": 70, "label": "61-70"},
+        {"min": 71, "max": 150, "label": "71+"}
+      ],
+      "description": "Age group bin for visualization and filtering"
+    },
+    {
+      "field_name": "cnt",
+      "data_type": "numeric",
+      "computation": "Constant value 1 per row",
+      "description": "Count field for Tableau aggregations. Each row represents one trip, so cnt=1 allows SUM(cnt) to count trips."
+    },
+    {
+      "field_name": "month",
+      "data_type": "numeric",
+      "computation": "MONTH(starttime)",
+      "source_field": "starttime",
+      "description": "Month extracted from trip start time (0=January, 11=December)"
+    }
+  ],
+  "header_normalization_rules": [
+    {
+      "rule": "strip_triple_quotes",
+      "description": "Headers are wrapped in triple quotes: \"\"\"fieldname\"\"\" -> fieldname"
+    },
+    {
+      "rule": "strip_whitespace",
+      "description": "Remove leading/trailing whitespace"
+    }
+  ],
+  "notes": [
+    "The CSV headers use triple-quote wrapping which must be normalized during parsing.",
+    "'birth year' is stored as a 4-digit year number, not a full date. It's used to compute age.",
+    "'Age' and 'cnt' are NOT raw CSV columns - they are computed fields by the data loader.",
+    "'Age Groups' (tableau_name) is computed as 'ageGroup' in the data loader.",
+    "The data loader automatically computes age, ageGroup, cnt, and month for each row."
+  ]
+}

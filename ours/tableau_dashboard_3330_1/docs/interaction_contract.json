@@ -1,0 +1,743 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_3330_1/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:35.038776Z"
+  },
+  "dashboard": {
+    "name": "Dashboard",
+    "worksheet_count": 8
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_age_overall_pie",
+        "name": "Age - Overall Pie",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Age - Overall Pie"
+        }
+      },
+      {
+        "id": "ws_amount_of_negative",
+        "name": "Amount of  Negative",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Amount of  Negative"
+        }
+      },
+      {
+        "id": "ws_amount_of_negative_2",
+        "name": "Amount of  Negative %",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Amount of  Negative %"
+        }
+      },
+      {
+        "id": "ws_amount_of_positive",
+        "name": "Amount of Positive",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Amount of Positive"
+        }
+      },
+      {
+        "id": "ws_amount_of_positive_2",
+        "name": "Amount of Positive %",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Amount of Positive %"
+        }
+      },
+      {
+        "id": "ws_ethnicity_overall_pie",
+        "name": "Ethnicity - Overall Pie",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 5,
+          "worksheet_name": "Ethnicity - Overall Pie"
+        }
+      },
+      {
+        "id": "ws_gender_overall_pie",
+        "name": "Gender-Overall Pie",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 6,
+          "worksheet_name": "Gender-Overall Pie"
+        }
+      },
+      {
+        "id": "ws_marital_status_overall_pie",
+        "name": "Marital status - Overall Pie",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 7,
+          "worksheet_name": "Marital status - Overall Pie"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_age",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "normalized": "Age",
+        "role": "dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_positive_score",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[attr:Positive-Score:qk]",
+        "normalized": "Positive-Score",
+        "role": "dimension"
+      },
+      {
+        "id": "field_response_id",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Response ID:ok]",
+        "normalized": "Response ID",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_1536853401494085638",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_1536853401494085638:qk]",
+        "normalized": "Calculation_1536853401494085638",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_multiple_values",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "normalized": "Multiple Values",
+        "role": "dimension"
+      },
+      {
+        "id": "field_after_a_performance_consume_non_prescription_depressants",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "normalized": "After a performance,  consume non-prescription depressants",
+        "role": "dimension"
+      },
+      {
+        "id": "field_annual_income",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "normalized": "Annual income",
+        "role": "dimension"
+      },
+      {
+        "id": "field_education",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "normalized": "Education",
+        "role": "dimension"
+      },
+      {
+        "id": "field_employment_status_as_a_musician",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "normalized": "Employment status as a musician",
+        "role": "dimension"
+      },
+      {
+        "id": "field_ethnicity",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "normalized": "Ethnicity",
+        "role": "dimension"
+      },
+      {
+        "id": "field_gender",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "normalized": "Gender",
+        "role": "dimension"
+      },
+      {
+        "id": "field_marital_status",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "normalized": "Marital status",
+        "role": "dimension"
+      },
+      {
+        "id": "field_shows_a_year",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "normalized": "Shows a year",
+        "role": "dimension"
+      },
+      {
+        "id": "field_years_of_experience_as_a_musician",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "normalized": "Years of experience as a musician",
+        "role": "dimension"
+      },
+      {
+        "id": "field_negative_score",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "normalized": "Negative Score",
+        "role": "measure"
+      },
+      {
+        "id": "field_number_of_records",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "normalized": "Number of Records",
+        "role": "measure"
+      },
+      {
+        "id": "field_total_p_copy_1536853401496895496",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]",
+        "normalized": "Total-P (copy)_1536853401496895496",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_1536853401516253194",
+        "raw": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Calculation_1536853401516253194:qk]",
+        "normalized": "Calculation_1536853401516253194",
+        "role": "derived_dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_amount_of_positive"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 3,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": "Amount of Positive"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": "Marital status - Bar"
+        },
+        "target": {
+          "target_type": "unknown",
+          "target_worksheet_id": null,
+          "target_dashboard_name": null,
+          "target_name_raw": "Marital status - Bar"
+        },
+        "driving_field_ids": [
+          "field_marital_status"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [
+          "field_age"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      },
+      {
+        "id": "da_004",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": "Age -Score - Bar"
+        },
+        "target": {
+          "target_type": "unknown",
+          "target_worksheet_id": null,
+          "target_dashboard_name": null,
+          "target_name_raw": "Age -Score - Bar"
+        },
+        "driving_field_ids": [
+          "field_age"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 3
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Gender-Overall Pie",
+        "viewpoint_name": "Gender-Overall Pie",
+        "field_ids": [
+          "field_measure_names",
+          "field_calculation_1536853401516253194",
+          "field_gender",
+          "field_total_p_copy_1536853401496895496"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Age - Overall Pie",
+        "viewpoint_name": "Age - Overall Pie",
+        "field_ids": [
+          "field_measure_names",
+          "field_positive_score",
+          "field_age",
+          "field_response_id",
+          "field_calculation_1536853401494085638"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Marital status - Overall Pie",
+        "viewpoint_name": "Marital status - Overall Pie",
+        "field_ids": [
+          "field_measure_names",
+          "field_marital_status"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Ethnicity - Overall Pie",
+        "viewpoint_name": "Ethnicity - Overall Pie",
+        "field_ids": [
+          "field_ethnicity"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Amount of Positive %",
+        "viewpoint_name": "Amount of Positive %",
+        "field_ids": [
+          "field_measure_names",
+          "field_multiple_values",
+          "field_response_id",
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_marital_status",
+          "field_shows_a_year",
+          "field_years_of_experience_as_a_musician",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_total_p_copy_1536853401496895496"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "Amount of Positive",
+        "viewpoint_name": "Amount of Positive",
+        "field_ids": [
+          "field_measure_names",
+          "field_multiple_values",
+          "field_response_id",
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_marital_status",
+          "field_shows_a_year",
+          "field_years_of_experience_as_a_musician",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_total_p_copy_1536853401496895496"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "worksheet",
+        "window_name": "Amount of  Negative %",
+        "viewpoint_name": "Amount of  Negative %",
+        "field_ids": [
+          "field_measure_names",
+          "field_multiple_values",
+          "field_response_id",
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_gender",
+          "field_marital_status",
+          "field_shows_a_year",
+          "field_years_of_experience_as_a_musician",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_total_p_copy_1536853401496895496"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      },
+      {
+        "id": "hb_008",
+        "window_class": "worksheet",
+        "window_name": "Amount of  Negative",
+        "viewpoint_name": "Amount of  Negative",
+        "field_ids": [
+          "field_measure_names",
+          "field_multiple_values",
+          "field_response_id",
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_gender",
+          "field_marital_status",
+          "field_shows_a_year",
+          "field_years_of_experience_as_a_musician",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_total_p_copy_1536853401496895496"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 7
+        }
+      },
+      {
+        "id": "hb_009",
+        "window_class": "dashboard",
+        "window_name": "Dashboard",
+        "viewpoint_name": "Ethnicity - Overall Pie",
+        "field_ids": [
+          "field_ethnicity"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 8
+        }
+      },
+      {
+        "id": "hb_010",
+        "window_class": "dashboard",
+        "window_name": "Dashboard",
+        "viewpoint_name": "Gender-Overall Pie",
+        "field_ids": [
+          "field_gender"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 9
+        }
+      },
+      {
+        "id": "hb_011",
+        "window_class": "dashboard",
+        "window_name": "Dashboard",
+        "viewpoint_name": "Marital status - Overall Pie",
+        "field_ids": [
+          "field_marital_status"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 10
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter",
+        "highlight"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_age_overall_pie",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_age",
+          "field_calculation_1536853401494085638",
+          "field_measure_names",
+          "field_positive_score",
+          "field_response_id"
+        ]
+      },
+      {
+        "worksheet_id": "ws_amount_of_negative",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_gender",
+          "field_marital_status",
+          "field_measure_names",
+          "field_multiple_values",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_response_id",
+          "field_shows_a_year",
+          "field_total_p_copy_1536853401496895496",
+          "field_years_of_experience_as_a_musician"
+        ]
+      },
+      {
+        "worksheet_id": "ws_amount_of_negative_2",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_gender",
+          "field_marital_status",
+          "field_measure_names",
+          "field_multiple_values",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_response_id",
+          "field_shows_a_year",
+          "field_total_p_copy_1536853401496895496",
+          "field_years_of_experience_as_a_musician"
+        ]
+      },
+      {
+        "worksheet_id": "ws_amount_of_positive",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_marital_status",
+          "field_measure_names",
+          "field_multiple_values",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_response_id",
+          "field_shows_a_year",
+          "field_total_p_copy_1536853401496895496",
+          "field_years_of_experience_as_a_musician"
+        ]
+      },
+      {
+        "worksheet_id": "ws_amount_of_positive_2",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_after_a_performance_consume_non_prescription_depressants",
+          "field_age",
+          "field_annual_income",
+          "field_education",
+          "field_employment_status_as_a_musician",
+          "field_ethnicity",
+          "field_marital_status",
+          "field_measure_names",
+          "field_multiple_values",
+          "field_negative_score",
+          "field_number_of_records",
+          "field_response_id",
+          "field_shows_a_year",
+          "field_total_p_copy_1536853401496895496",
+          "field_years_of_experience_as_a_musician"
+        ]
+      },
+      {
+        "worksheet_id": "ws_ethnicity_overall_pie",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_ethnicity"
+        ]
+      },
+      {
+        "worksheet_id": "ws_gender_overall_pie",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_1536853401516253194",
+          "field_gender",
+          "field_measure_names",
+          "field_total_p_copy_1536853401496895496"
+        ]
+      },
+      {
+        "worksheet_id": "ws_marital_status_overall_pie",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_marital_status",
+          "field_measure_names"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 8,
+    "worksheet_action_count": 1,
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 11,
+    "field_count": 19
+  }
+}

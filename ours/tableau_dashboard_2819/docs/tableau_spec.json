@@ -1,0 +1,833 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2019.4.5 (20194.20.0323.1706)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Plot of Sales",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[excel.41612.552811354166].[sum:Profit:qk]",
+        "fields": [
+          "[excel.41612.552811354166]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[excel.41612.552811354166].[sum:Sales:qk]",
+        "fields": [
+          "[excel.41612.552811354166]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[excel.41612.552811354166].[none:Customer Segment:nk]",
+        "[excel.41612.552811354166].[Action (Customer Segment)]",
+        "[excel.41612.552811354166].[none:Region:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[excel.41612.552811354166].[none:Category:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[excel.41612.552811354166].[Action (Customer Segment)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[excel.41612.552811354166].[Action (Customer Segment)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[Customer Segment]",
+                  "member": "\"Corporate\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[excel.41612.552811354166].[none:Customer Segment:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Customer Segment:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales by Region",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[excel.41612.552811354166].[none:Country / Region:nk]",
+        "fields": [
+          "[excel.41612.552811354166]",
+          "[none:Country / Region:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[excel.41612.552811354166].[sum:Sales:qk]",
+        "fields": [
+          "[excel.41612.552811354166]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[excel.41612.552811354166].[none:Region:nk]",
+        "[excel.41612.552811354166].[Action (Customer Segment)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[excel.41612.552811354166].[sum:Profit:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[excel.41612.552811354166].[Action (Customer Segment)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[excel.41612.552811354166].[Action (Customer Segment)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[Customer Segment]",
+                  "member": "\"Corporate\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales by Segment",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[excel.41612.552811354166].[none:Region:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[excel.41612.552811354166].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[excel.41612.552811354166].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "5000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "6000",
+          "w": "98400",
+          "h": "93000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "6000",
+          "w": "82100",
+          "h": "93000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "82900",
+          "y": "6000",
+          "w": "16300",
+          "h": "93000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sales by Segment",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "6000",
+          "w": "32500",
+          "h": "46500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sales by Region",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "52500",
+          "w": "82100",
+          "h": "46500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Plot of Sales",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "33300",
+          "y": "6000",
+          "w": "49600",
+          "h": "46500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sales by Segment",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "82900",
+          "y": "6000",
+          "w": "16300",
+          "h": "13125",
+          "param": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Sales by Region",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "82900",
+          "y": "19125",
+          "w": "16300",
+          "h": "16375",
+          "param": "[excel.41612.552811354166].[none:Region:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Sales by Region",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "82900",
+          "y": "35500",
+          "w": "16300",
+          "h": "7500",
+          "param": "[excel.41612.552811354166].[sum:Profit:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "5000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "6000",
+          "w": "98400",
+          "h": "93000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "6000",
+          "w": "82100",
+          "h": "93000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "82900",
+          "y": "6000",
+          "w": "16300",
+          "h": "93000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sales by Segment",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "6000",
+          "w": "32500",
+          "h": "46500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sales by Region",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "52500",
+          "w": "82100",
+          "h": "46500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Plot of Sales",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "33300",
+          "y": "6000",
+          "w": "49600",
+          "h": "46500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sales by Segment",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "82900",
+          "y": "6000",
+          "w": "16300",
+          "h": "13125",
+          "param": "[excel.41612.552811354166].[none:Customer Segment:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Sales by Region",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "82900",
+          "y": "19125",
+          "w": "16300",
+          "h": "16375",
+          "param": "[excel.41612.552811354166].[none:Region:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Sales by Region",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "82900",
+          "y": "35500",
+          "w": "16300",
+          "h": "7500",
+          "param": "[excel.41612.552811354166].[sum:Profit:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales by Segment"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Segment",
+      "viewpoint_name": "Sales by Segment",
+      "fields": [
+        "[excel.41612.552811354166].[none:Customer Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Region",
+      "viewpoint_name": "Sales by Region",
+      "fields": [
+        "[excel.41359.464717638890].[none:Continent:nk]",
+        "[excel.41359.464717638890].[none:Country / Region:nk]",
+        "[excel.41612.552811354166].[none:Country / Region:nk]",
+        "[excel.41612.552811354166].[none:Region:nk]",
+        "[excel.41612.552811354166].[none:SubRegion:nk]",
+        "[excel.41612.552811354166].[sum:Profit:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Plot of Sales",
+      "viewpoint_name": "Plot of Sales",
+      "fields": [
+        "[excel.41359.464717638890].[none:Category:nk]",
+        "[excel.41612.552811354166].[none:Customer Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

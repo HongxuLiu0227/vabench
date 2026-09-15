@@ -1,0 +1,309 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_1979/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:34.442501Z"
+  },
+  "dashboard": {
+    "name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+    "worksheet_count": 4
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_breakdown_of_where_tourism_demand_comes_from",
+        "name": "Breakdown of Where Tourism Demand Comes From -",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Breakdown of Where Tourism Demand Comes From -"
+        }
+      },
+      {
+        "id": "ws_provinces_with_highest_demand_2017",
+        "name": "Provinces with Highest Demand (2017)",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Provinces with Highest Demand (2017)"
+        }
+      },
+      {
+        "id": "ws_provincial_tourism_growth_rates_2014_17",
+        "name": "Provincial Tourism Growth Rates (2014-17)",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Provincial Tourism Growth Rates (2014-17)"
+        }
+      },
+      {
+        "id": "ws_total_tourism_demand_2014_17",
+        "name": "Total Tourism Demand (2014-17)",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Total Tourism Demand (2014-17)"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_location_group_1",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+        "normalized": "Location (group) 1",
+        "role": "dimension"
+      },
+      {
+        "id": "field_indicators",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "normalized": "Indicators",
+        "role": "dimension"
+      },
+      {
+        "id": "field_latitude_generated",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Latitude (generated)]",
+        "normalized": "Latitude (generated)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_longitude_generated",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Longitude (generated)]",
+        "normalized": "Longitude (generated)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_value",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+        "normalized": "Value",
+        "role": "dimension"
+      },
+      {
+        "id": "field_location",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "normalized": "Location",
+        "role": "dimension"
+      },
+      {
+        "id": "field_year",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+        "normalized": "Year",
+        "role": "dimension"
+      },
+      {
+        "id": "field_products",
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Products:nk]",
+        "normalized": "Products",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+          "target_name_raw": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?"
+        },
+        "driving_field_ids": [
+          "field_location_group_1"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Total Tourism Demand (2014-17)",
+        "viewpoint_name": "Total Tourism Demand (2014-17)",
+        "field_ids": [
+          "field_indicators",
+          "field_location",
+          "field_products",
+          "field_year"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Provincial Tourism Growth Rates (2014-17)",
+        "viewpoint_name": "Provincial Tourism Growth Rates (2014-17)",
+        "field_ids": [
+          "field_location_group_1",
+          "field_year"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Provinces with Highest Demand (2017)",
+        "viewpoint_name": "Provinces with Highest Demand (2017)",
+        "field_ids": [
+          "field_value",
+          "field_indicators",
+          "field_location",
+          "field_year"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "dashboard",
+        "window_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+        "viewpoint_name": "Breakdown of Where Tourism Demand Comes From - ",
+        "field_ids": [
+          "field_indicators"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "dashboard",
+        "window_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+        "viewpoint_name": "Total Tourism Demand (2014-17)",
+        "field_ids": [
+          "field_location_group_1"
+        ],
+        "modes": [
+          "bucket-selection"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "Breakdown of Where Tourism Demand Comes From - ",
+        "viewpoint_name": "Breakdown of Where Tourism Demand Comes From - ",
+        "field_ids": [
+          "field_indicators",
+          "field_year"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "highlight"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_breakdown_of_where_tourism_demand_comes_from",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_provinces_with_highest_demand_2017",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_indicators",
+          "field_location",
+          "field_value",
+          "field_year"
+        ]
+      },
+      {
+        "worksheet_id": "ws_provincial_tourism_growth_rates_2014_17",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_location_group_1",
+          "field_year"
+        ]
+      },
+      {
+        "worksheet_id": "ws_total_tourism_demand_2014_17",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_indicators",
+          "field_location",
+          "field_location_group_1",
+          "field_products",
+          "field_year"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 4,
+    "worksheet_action_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 6,
+    "field_count": 8
+  }
+}

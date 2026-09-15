@@ -1,0 +1,995 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "10.5",
+      "source-build": "10.5.2 (10500.18.0305.1200)",
+      "source-platform": "win",
+      "version": "10.5",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Annual % by Type & Year",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[pcto:cnt:Total Records:qk:2]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[pcto:cnt:Total Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:Total Records:qk:2]"
+        },
+        {
+          "ordering-type": "Table",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:Total Records:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"DISC\"",
+                  "function": "range",
+                  "level": "[none:Type of breach:nk]",
+                  "to": "\"UNKN\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+              "included-values": "all"
+            }
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Date made Public",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[cnt:Total Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok] / [federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok])",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[yr:Date Made Public:ok]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[qr:Date Made Public:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Information Source for Breach",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[cnt:Total Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[none:Type of breach:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tyr:Date Made Public:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Type of breach]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Information Source:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Information Source:nk]",
+                      "member": "%null%"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Types of Breach",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[cnt:Total Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[none:Type of breach:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tyr:Date Made Public:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Type of breach]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Type of breach:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "YTD",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok] / ([federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok] / ([federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Location:nk] / [federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Records Breached:nk])))",
+        "fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[yr:Date Made Public:ok]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[qr:Date Made Public:ok]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[none:Location:nk]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx]",
+          "[none:Records Breached:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "header"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "YTD",
+          "style": {}
+        }
+      ],
+      "title_text": "YTD",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "1192",
+          "w": "97538",
+          "h": "97616",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "6",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "1192",
+          "w": "70153",
+          "h": "97616",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "6",
+          "zone_type": "layout-flow",
+          "x": "71384",
+          "y": "1192",
+          "w": "27385",
+          "h": "97616",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Types of Breach",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1192",
+          "w": "35078",
+          "h": "48808",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Information Source for Breach",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "50000",
+          "w": "70153",
+          "h": "48808",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Annual % by Type & Year",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "36309",
+          "y": "1192",
+          "w": "35075",
+          "h": "48808",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Information Source for Breach",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "71384",
+          "y": "1192",
+          "w": "27385",
+          "h": "38897",
+          "param": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Annual % by Type & Year",
+          "parent_id": "5",
+          "zone_type": "filter",
+          "x": "71384",
+          "y": "40089",
+          "w": "27385",
+          "h": "10879",
+          "param": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Annual % by Type & Year",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "71384",
+          "y": "50968",
+          "w": "27385",
+          "h": "26378",
+          "param": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "1192",
+          "w": "97538",
+          "h": "97616",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "6",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "1192",
+          "w": "70153",
+          "h": "97616",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "6",
+          "zone_type": "layout-flow",
+          "x": "71384",
+          "y": "1192",
+          "w": "27385",
+          "h": "97616",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Types of Breach",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1192",
+          "w": "35078",
+          "h": "48808",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Information Source for Breach",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "50000",
+          "w": "70153",
+          "h": "48808",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Annual % by Type & Year",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "36309",
+          "y": "1192",
+          "w": "35075",
+          "h": "48808",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Information Source for Breach",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "71384",
+          "y": "1192",
+          "w": "27385",
+          "h": "38897",
+          "param": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Annual % by Type & Year",
+          "parent_id": "5",
+          "zone_type": "filter",
+          "x": "71384",
+          "y": "40089",
+          "w": "27385",
+          "h": "10879",
+          "param": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Annual % by Type & Year",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "71384",
+          "y": "50968",
+          "w": "27385",
+          "h": "26378",
+          "param": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Annual % by Type & Year"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Types of Breach",
+      "viewpoint_name": "Types of Breach",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[:Measure Names]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "YTD",
+      "viewpoint_name": "YTD",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Location:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Date made Public",
+      "viewpoint_name": "Date made Public",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Information Source for Breach",
+      "viewpoint_name": "Information Source for Breach",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Annual % by Type & Year",
+      "viewpoint_name": "Annual % by Type & Year",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Annual % by Type & Year",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Information Source for Breach",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 7
+  }
+}

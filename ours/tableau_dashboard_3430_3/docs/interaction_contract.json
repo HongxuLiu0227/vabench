@@ -1,0 +1,525 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_3430_3/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:35.181075Z"
+  },
+  "dashboard": {
+    "name": "Station Use DB",
+    "worksheet_count": 6
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_bottom_10_end",
+        "name": "Bottom 10 End",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Bottom 10 End"
+        }
+      },
+      {
+        "id": "ws_bottom_10_start",
+        "name": "Bottom 10 Start",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Bottom 10 Start"
+        }
+      },
+      {
+        "id": "ws_citymap_end",
+        "name": "Citymap End",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Citymap End"
+        }
+      },
+      {
+        "id": "ws_citymap_start",
+        "name": "Citymap Start",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Citymap Start"
+        }
+      },
+      {
+        "id": "ws_top_10_end",
+        "name": "Top 10 End",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Top 10 End"
+        }
+      },
+      {
+        "id": "ws_top_10_start",
+        "name": "Top 10 Start",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 5,
+          "worksheet_name": "Top 10 Start"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_end_station_name",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station name:nk]",
+        "normalized": "end station name",
+        "role": "dimension"
+      },
+      {
+        "id": "field_2020_citibike_tripdata_csv_2f3efcfe222f4686b0ea2ff8a40bd19a",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "normalized": "2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A",
+        "role": "measure"
+      },
+      {
+        "id": "field_calculation_949696574854787079",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574854787079:nk]",
+        "normalized": "Calculation_949696574854787079",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_start_station_name",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station name:nk]",
+        "normalized": "start station name",
+        "role": "dimension"
+      },
+      {
+        "id": "field_end_station_latitude",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station latitude:qk]",
+        "normalized": "end station latitude",
+        "role": "dimension"
+      },
+      {
+        "id": "field_end_station_longitude",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:end station longitude:qk]",
+        "normalized": "end station longitude",
+        "role": "dimension"
+      },
+      {
+        "id": "field_start_station_latitude",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station latitude:qk]",
+        "normalized": "start station latitude",
+        "role": "dimension"
+      },
+      {
+        "id": "field_start_station_longitude",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:start station longitude:qk]",
+        "normalized": "start station longitude",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_949696574855196681",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574855196681:nk]",
+        "normalized": "Calculation_949696574855196681",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_949696574853439494",
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[usr:Calculation_949696574853439494:nk]",
+        "normalized": "Calculation_949696574853439494",
+        "role": "derived_dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_bottom_10_end"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_bottom_10_start"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_top_10_end"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 4,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_top_10_start"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 5,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Station Use DB",
+          "source_worksheet_name": "Bottom 10 End"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Station Use DB",
+          "source_worksheet_name": "Top 10 End"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Station Use DB",
+          "source_worksheet_name": "Bottom 10 Start"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      },
+      {
+        "id": "da_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Station Use DB",
+          "source_worksheet_name": "Top 10 Start"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Station Use DB",
+          "target_name_raw": "Station Use DB"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 3
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Citymap Start",
+        "viewpoint_name": "Citymap Start",
+        "field_ids": [
+          "field_start_station_name",
+          "field_start_station_name"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Citymap End",
+        "viewpoint_name": "Citymap End",
+        "field_ids": [
+          "field_end_station_name"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Top 10 Start",
+        "viewpoint_name": "Top 10 Start",
+        "field_ids": [
+          "field_end_station_name",
+          "field_start_station_name",
+          "field_calculation_949696574853439494",
+          "field_calculation_949696574855196681"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Top 10 End",
+        "viewpoint_name": "Top 10 End",
+        "field_ids": [
+          "field_end_station_name",
+          "field_calculation_949696574853439494",
+          "field_calculation_949696574854787079",
+          "field_calculation_949696574855196681"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Bottom 10 Start",
+        "viewpoint_name": "Bottom 10 Start",
+        "field_ids": [
+          "field_start_station_name",
+          "field_calculation_949696574854787079"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "Bottom 10 End",
+        "viewpoint_name": "Bottom 10 End",
+        "field_ids": [
+          "field_end_station_name",
+          "field_calculation_949696574854787079"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_bottom_10_end",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_949696574854787079",
+          "field_end_station_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_bottom_10_start",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_949696574854787079",
+          "field_start_station_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_citymap_end",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_end_station_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_citymap_start",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_start_station_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_top_10_end",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_949696574853439494",
+          "field_calculation_949696574854787079",
+          "field_calculation_949696574855196681",
+          "field_end_station_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_top_10_start",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_949696574853439494",
+          "field_calculation_949696574855196681",
+          "field_end_station_name",
+          "field_start_station_name"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 6,
+    "worksheet_action_count": 4,
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 6,
+    "field_count": 10
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "860",
+    "maxwidth": "650",
+    "minheight": "560",
+    "minwidth": "420"
+  },
+  "worksheets": [
+    {
+      "name": "Female Trip YOY",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+      "cols_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "962",
+        "w": "35846",
+        "h": "24038",
+        "aspect_ratio": 1.4912,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.0096,
+          "w_ratio": 0.3585,
+          "h_ratio": 0.2404
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Overall YOY",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "37077",
+        "y": "962",
+        "w": "35846",
+        "h": "24038",
+        "aspect_ratio": 1.4912,
+        "normalized": {
+          "x_ratio": 0.3708,
+          "y_ratio": 0.0096,
+          "w_ratio": 0.3585,
+          "h_ratio": 0.2404
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "UserType and Gender YOY",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[cnt:TripID:qk]",
+      "cols_field": "([federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk] / ([federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk] / [federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]))",
+      "series_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "Count of Trips"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "72923",
+          "y": "962",
+          "w": "25846",
+          "h": "98076",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.7292,
+            "y_ratio": 0.0096,
+            "w_ratio": 0.2585,
+            "h_ratio": 0.9808
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "25000",
+        "w": "71692",
+        "h": "74038",
+        "aspect_ratio": 0.9683,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.25,
+          "w_ratio": 0.7169,
+          "h_ratio": 0.7404
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_B8282730A7F946D2862C4A219DD2AE17]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Pct of Trips by Gender"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text",
+        "target": "Pct of Trips by Gender"
+      },
+      "field_captions": [
+        "Gender Text"
+      ],
+      "target": "Pct of Trips by Gender"
+    },
+    {
+      "name": "[Action5_B78B9DE2B3684A5090442ACD7177FEDD]",
+      "caption": "Highlight 3 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "FemaleRidershipDashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text",
+        "target": "FemaleRidershipDashboard"
+      },
+      "field_captions": [
+        "Gender Text"
+      ],
+      "target": "FemaleRidershipDashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "UserType and Gender YOY",
+      "viewpoint_name": "UserType and Gender YOY",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Female Trip YOY",
+      "viewpoint_name": "Female Trip YOY",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Overall YOY",
+      "viewpoint_name": "Overall YOY",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "UserType and Gender YOY"
+    ],
+    "legend_anchor_positions": {
+      "UserType and Gender YOY": "right"
+    },
+    "axis_title_worksheets": [
+      "UserType and Gender YOY"
+    ],
+    "interaction_worksheets": [
+      "Female Trip YOY",
+      "Overall YOY",
+      "UserType and Gender YOY"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 3
+  }
+}

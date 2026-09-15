@@ -1,0 +1,117 @@
+.numb-crit-worksheet {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.worksheet-title {
+  padding: 8px 12px;
+  font-weight: normal;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-container {
+  flex: 1;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: #e8e8e8;
+  z-index: 10;
+}
+
+th {
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #d0d0d0;
+  white-space: nowrap;
+}
+
+.row-header {
+  position: sticky;
+  left: 0;
+  background: #e8e8e8;
+  z-index: 20;
+  min-width: 150px;
+}
+
+.measure-header {
+  text-align: right;
+  min-width: 100px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+tbody tr:hover {
+  background-color: #e6f0ff;
+}
+
+tbody tr.selected {
+  background-color: #cce5ff !important;
+}
+
+tbody tr.highlighted {
+  background-color: #fff3cd;
+}
+
+td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.row-label {
+  position: sticky;
+  left: 0;
+  background: inherit;
+  font-weight: 500;
+  border-right: 1px solid #e0e0e0;
+  z-index: 5;
+}
+
+.measure-cell {
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.measure-cell.positive {
+  color: #28a745;
+}
+
+.measure-cell.neutral {
+  color: #ffc107;
+}
+
+.measure-cell.negative {
+  color: #dc3545;
+}
+
+.measure-cell.total {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+tfoot tr.grand-total {
+  background: #e0e0e0;
+  font-weight: 600;
+  position: sticky;
+  bottom: 0;
+}
+
+tfoot td {
+  border-top: 2px solid #b0b0b0;
+}

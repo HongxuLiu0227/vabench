@@ -1,0 +1,407 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Partner: Distributon",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:County Denominator Expected Reports (copy):qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "d",
+          "style": {
+            "fontcolor": "#ffffff",
+            "fontname": "Verdana",
+            "fontsize": "8"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Distribution of",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": " EMR Sites by Partner",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of EMR Sites by Partner"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "347",
+        "y": "12669",
+        "w": "32958",
+        "h": "68919",
+        "aspect_ratio": 0.4782,
+        "normalized": {
+          "x_ratio": 0.0035,
+          "y_ratio": 0.1271,
+          "w_ratio": 0.3307,
+          "h_ratio": 0.6915
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "Partner: Overall",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy):qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy):nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [
+        "Above 67\\%",
+        "34 - 66\\%",
+        "Below 33\\%",
+        "%all%"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "Above 67\\%",
+          "34 - 66\\%",
+          "Below 33\\%",
+          "%all%"
+        ]
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Overall Reporting Care & Treatment by Partner",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#333333",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#333333",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "% C&T Uploads"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy):nk]",
+        "layout": "horz",
+        "title": "",
+        "zone": {
+          "x": "62078",
+          "y": "82264",
+          "w": "37576",
+          "h": "17399",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.6229,
+            "y_ratio": 0.8254,
+            "w_ratio": 0.3771,
+            "h_ratio": 0.1746
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "33479",
+        "y": "12669",
+        "w": "32957",
+        "h": "68919",
+        "aspect_ratio": 0.4782,
+        "normalized": {
+          "x_ratio": 0.336,
+          "y_ratio": 0.1271,
+          "w_ratio": 0.3307,
+          "h_ratio": 0.6915
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting."
+      ]
+    },
+    {
+      "name": "Partner: Recency",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Partner Percent Uploaded (copy):qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:PArtner Color  (copy):nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[DisplayAgency (group)]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [
+        "Above 67\\%",
+        "34 - 66\\%",
+        "Below 33\\%",
+        "%all%"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "Above 67\\%",
+          "34 - 66\\%",
+          "Below 33\\%",
+          "%all%"
+        ]
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Overall Reporting PKVs by Partner",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "% PKV Uploads"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "66610",
+        "y": "12669",
+        "w": "32957",
+        "h": "68919",
+        "aspect_ratio": 0.4782,
+        "normalized": {
+          "x_ratio": 0.6684,
+          "y_ratio": 0.1271,
+          "w_ratio": 0.3307,
+          "h_ratio": 0.6915
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By Partner",
+      "id": "23",
+      "x": "260",
+      "y": "82264",
+      "w": "61818",
+      "h": "17399",
+      "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+      "text_runs": [
+        {
+          "text": "The ",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Overall reporting rate",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "PKVs = Patient Key Value",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 1,
+    "intent_counts": {
+      "horizontal_ranked_bar": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Partner: Overall"
+    ],
+    "legend_anchor_positions": {
+      "Partner: Overall": "below"
+    },
+    "axis_title_worksheets": [
+      "Partner: Distributon",
+      "Partner: Overall",
+      "Partner: Recency"
+    ],
+    "interaction_worksheets": [],
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

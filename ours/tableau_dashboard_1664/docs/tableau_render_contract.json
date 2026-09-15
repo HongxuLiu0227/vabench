@@ -1,0 +1,529 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]",
+      "cols_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:sol:qk]",
+      "series_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120371273730:nk]",
+      "slices": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Maximum Temperatures",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Max Temp"
+      ],
+      "axis_title_cols": [
+        "Sols Elapsed"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1_8D2840C444CD43DEB13564390CBBEC6E]",
+            "caption": "Highlight 1 (generated)",
+            "kind": "highlight_brush",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "type": "sheet",
+              "worksheet": "Sheet 1"
+            },
+            "command": "tsc:brush",
+            "params": {
+              "field-captions": "Sol (group)",
+              "target": "Sheet 1"
+            },
+            "field_captions": [
+              "Sol (group)"
+            ],
+            "target": "Sheet 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120371273730:nk]",
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+        ]
+      },
+      "zone": {
+        "x": "425",
+        "y": "12225",
+        "w": "78268",
+        "h": "48764",
+        "aspect_ratio": 1.605,
+        "normalized": {
+          "x_ratio": 0.0043,
+          "y_ratio": 0.1222,
+          "w_ratio": 0.7827,
+          "h_ratio": 0.4876
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 2",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Multiple Values]",
+      "cols_field": "([federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk] / [federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names])",
+      "series_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+      "slices": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:min_temp:qk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Average Temperature Fluctuations",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Temperature (Celsius)"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "63155",
+          "y": "60024",
+          "w": "15150",
+          "h": "6357",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.6315,
+            "y_ratio": 0.6002,
+            "w_ratio": 0.1515,
+            "h_ratio": 0.0636
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2_29329A4DA3A242B7BFF6DD2B622D2874]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Mars: The Next Big Tourist Destination?",
+              "type": "sheet",
+              "worksheet": "Sheet 2"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Mars: The Next Big Tourist Destination?"
+            },
+            "field_captions": [],
+            "target": "Mars: The Next Big Tourist Destination?"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120362745857:qk]",
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+        ]
+      },
+      "zone": {
+        "x": "425",
+        "y": "60989",
+        "w": "78268",
+        "h": "38033",
+        "aspect_ratio": 2.0579,
+        "normalized": {
+          "x_ratio": 0.0043,
+          "y_ratio": 0.6099,
+          "w_ratio": 0.7827,
+          "h_ratio": 0.3803
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 3",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "([federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:min_temp:qk] + [federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk])",
+      "cols_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]",
+      "series_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 4",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[sum:sol:qk]",
+      "cols_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:ok]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Temperature Fluctuation",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:ok]",
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 5",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+      "cols_field": "",
+      "series_field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]",
+      "slices": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Can You Handle the Pressure?",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Pressure (Pa)"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "78693",
+        "y": "12225",
+        "w": "20882",
+        "h": "86797",
+        "aspect_ratio": 0.2406,
+        "normalized": {
+          "x_ratio": 0.7869,
+          "y_ratio": 0.1222,
+          "w_ratio": 0.2088,
+          "h_ratio": 0.868
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_8D2840C444CD43DEB13564390CBBEC6E]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Sheet 1"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Sol (group)",
+        "target": "Sheet 1"
+      },
+      "field_captions": [
+        "Sol (group)"
+      ],
+      "target": "Sheet 1"
+    },
+    {
+      "name": "[Action2_29329A4DA3A242B7BFF6DD2B622D2874]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Mars: The Next Big Tourist Destination?",
+        "type": "sheet",
+        "worksheet": "Sheet 2"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Mars: The Next Big Tourist Destination?"
+      },
+      "field_captions": [],
+      "target": "Mars: The Next Big Tourist Destination?"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Mars: The Next Big Tourist Destination?",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120371273730:nk]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120362745857:qk]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:ok]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 3,
+      "vertical_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Sheet 2"
+    ],
+    "legend_anchor_positions": {
+      "Sheet 2": "overlay"
+    },
+    "axis_title_worksheets": [
+      "Sheet 1",
+      "Sheet 2",
+      "Sheet 5"
+    ],
+    "interaction_worksheets": [
+      "Sheet 1",
+      "Sheet 2",
+      "Sheet 3",
+      "Sheet 4"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 5
+  }
+}

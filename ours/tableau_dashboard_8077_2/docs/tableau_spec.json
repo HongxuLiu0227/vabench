@@ -1,0 +1,1202 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.3.2 (20203.20.1018.2303)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Bottom Stations",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+        "fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079]",
+          "[cnt:bikeid (copy)_705939293799452673:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079]",
+          "[none:start station name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "table",
+        "worksheet",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:end station latitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:end station longitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[end station name]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "bottom",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "COUNT([start station id])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:start station name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations by Start Station (Count)",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Bottom 10 Stations by Start Station (Count)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Map 1",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station latitude:qk]",
+        "fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079]",
+          "[none:end station latitude:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station longitude:qk]",
+        "fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079]",
+          "[none:end station longitude:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Exclusions (end station latitude,end station longitude,end station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station name:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "legend",
+        "legend-title-text",
+        "map-layer",
+        "map",
+        "map-data-layer",
+        "quick-filter",
+        "quick-filter-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Exclusions (end station latitude,end station longitude,end station name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Exclusions (end station latitude,end station longitude,end station name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "crossjoin"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station latitude:qk]"
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station longitude:qk]"
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station name:nk]"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "crossjoin"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:end station latitude:qk]",
+                          "member": "0.0"
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "crossjoin"
+                        },
+                        "children": [
+                          {
+                            "tag": "groupfilter",
+                            "attributes": {
+                              "function": "member",
+                              "level": "[none:end station longitude:qk]",
+                              "member": "0.0"
+                            }
+                          },
+                          {
+                            "tag": "groupfilter",
+                            "attributes": {
+                              "function": "union"
+                            },
+                            "children": [
+                              {
+                                "tag": "groupfilter",
+                                "attributes": {
+                                  "function": "member",
+                                  "level": "[none:end station name:nk]",
+                                  "member": "\"Indiana\""
+                                }
+                              },
+                              {
+                                "tag": "groupfilter",
+                                "attributes": {
+                                  "function": "member",
+                                  "level": "[none:end station name:nk]",
+                                  "member": "\"JSQ Don't Use\""
+                                }
+                              },
+                              {
+                                "tag": "groupfilter",
+                                "attributes": {
+                                  "function": "member",
+                                  "level": "[none:end station name:nk]",
+                                  "member": "\"WS Don't Use\""
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "expression": "COUNT([end station id]) <> 0",
+                  "function": "filter",
+                  "{http://www.tableausoftware.com/xml/user}ui-filter-by-field": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "filter-by"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:start station name:nk]",
+                      "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Popularity of End Station",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Popularity of End Station",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top Stations",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+        "fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079]",
+          "[cnt:bikeid (copy)_705939293799452673:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079]",
+          "[none:start station name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "table",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:end station latitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:end station longitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[end station name]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "COUNT([start station id])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:start station name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations by Start Station (Count)",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Top 10 Stations by Start Station (Count)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Popularity of Stations",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Map 1",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "59258",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Top Stations",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "727",
+          "y": "60147",
+          "w": "49272",
+          "h": "38964",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Bottom Stations",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "49999",
+          "y": "60147",
+          "w": "49274",
+          "h": "38964",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Map 1",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "73909",
+          "y": "53889",
+          "w": "24818",
+          "h": "5667",
+          "param": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Map 1",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83455",
+          "y": "6444",
+          "w": "15273",
+          "h": "5111",
+          "param": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Map 1",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83636",
+          "y": "11111",
+          "w": "14545",
+          "h": "4889",
+          "param": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Popularity of Stations",
+      "size": {
+        "maxheight": "900",
+        "maxwidth": "1100",
+        "minheight": "900",
+        "minwidth": "1100",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "98222",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Map 1",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "727",
+          "y": "889",
+          "w": "98546",
+          "h": "59258",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Top Stations",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "727",
+          "y": "60147",
+          "w": "49272",
+          "h": "38964",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Bottom Stations",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "49999",
+          "y": "60147",
+          "w": "49274",
+          "h": "38964",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Map 1",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "73909",
+          "y": "53889",
+          "w": "24818",
+          "h": "5667",
+          "param": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Map 1",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83455",
+          "y": "6444",
+          "w": "15273",
+          "h": "5111",
+          "param": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Map 1",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "83636",
+          "y": "11111",
+          "w": "14545",
+          "h": "4889",
+          "param": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Popularity of Stations",
+        "type": "sheet",
+        "worksheet": "Map 1"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Popularity of Stations"
+      },
+      "field_captions": [],
+      "target": "Popularity of Stations"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Popularity of Stations",
+        "type": "sheet",
+        "worksheet": "Bottom Stations"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Popularity of Stations"
+      },
+      "field_captions": [],
+      "target": "Popularity of Stations"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Popularity of Stations",
+        "type": "sheet",
+        "worksheet": "Top Stations"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Popularity of Stations"
+      },
+      "field_captions": [],
+      "target": "Popularity of Stations"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Map 1",
+      "viewpoint_name": "Map 1",
+      "fields": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station latitude:qk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station longitude:qk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top Stations",
+      "viewpoint_name": "Top Stations",
+      "fields": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom Stations",
+      "viewpoint_name": "Bottom Stations",
+      "fields": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 3
+  }
+}

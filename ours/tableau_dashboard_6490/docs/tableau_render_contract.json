@@ -1,0 +1,242 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Confusion Matrix",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]",
+      "cols_field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard",
+              "type": "sheet",
+              "worksheet": "Confusion Matrix"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard"
+            },
+            "field_captions": [],
+            "target": "Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "681",
+        "y": "1048",
+        "w": "98638",
+        "h": "52010",
+        "aspect_ratio": 1.8965,
+        "normalized": {
+          "x_ratio": 0.0068,
+          "y_ratio": 0.0105,
+          "w_ratio": 0.9864,
+          "h_ratio": 0.5201
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "View Posts",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[sum:True_XY:qk]",
+      "cols_field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[sum:Predicted_XY:qk]",
+      "series_field": "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+      "slices": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label,True Label)]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[Action (Predicted Label1,True Label1)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "True"
+      ],
+      "axis_title_cols": [
+        "Predicted"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]",
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Post:nk]",
+          "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "681",
+        "y": "53058",
+        "w": "98638",
+        "h": "45894",
+        "aspect_ratio": 2.1493,
+        "normalized": {
+          "x_ratio": 0.0068,
+          "y_ratio": 0.5306,
+          "w_ratio": 0.9864,
+          "h_ratio": 0.4589
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet",
+        "worksheet": "Confusion Matrix"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "View Posts",
+      "fields": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "View Posts",
+      "viewpoint_name": "View Posts",
+      "fields": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Post:nk]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Confusion Matrix",
+      "viewpoint_name": "Confusion Matrix",
+      "fields": [
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:Predicted Label:nk]",
+        "[federated.1hlnovp00seyjs1bjoccw04wt9vr].[none:True Label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 1,
+      "custom_tableau_view": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [
+      "View Posts"
+    ],
+    "interaction_worksheets": [
+      "Confusion Matrix",
+      "View Posts"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

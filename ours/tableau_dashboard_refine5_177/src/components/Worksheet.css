@@ -1,0 +1,97 @@
+.worksheet-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.worksheet-header {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+.worksheet-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.worksheet-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.worksheet-content svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* D3 Axis Styling */
+.x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+  stroke: #333;
+  stroke-width: 1;
+}
+
+.x-axis text,
+.y-axis text {
+  font-size: 11px;
+  fill: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.grid line {
+  stroke: #e0e0e0;
+}
+
+.zero-line {
+  stroke: #999;
+  stroke-dasharray: 5, 5;
+}
+
+.axis-label {
+  font-size: 12px;
+  font-weight: 500;
+  fill: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}

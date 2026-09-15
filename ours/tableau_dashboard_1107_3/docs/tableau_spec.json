@@ -1,0 +1,931 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.1.1 (20211.21.0420.1112)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "PCT of Trips By UserType",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[pcto:cnt:TripID:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[tmn:starttime:ok]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[tmn:starttime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:TripID:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+            "title": "% of Total Trips"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Pct of Trips by Gender",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[pcto:cnt:TripID:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[tmn:starttime:ok]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[tmn:starttime:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Name)]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Latitude,Start Station Longitude,Start Station Name)]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:TripID:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_CE453C0AA72349F48987908683F51FDF]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tmn:starttime:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Latitude,Start Station Longitude,Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Latitude,Start Station Longitude,Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_CE453C0AA72349F48987908683F51FDF]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:start station latitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:start station longitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[start station name]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[start station name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_CE453C0AA72349F48987908683F51FDF]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"Female\"",
+                  "function": "range",
+                  "level": "[none:Calculation_2945072721971425291:nk]",
+                  "to": "\"Unknown\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+            "title": "% of Total Trips"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Trips Over Time",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.1vyl1wt0bikyvw19huemw1m5isqu].[avg:Calculation_2945072721954668554:qk] + [federated.1vyl1wt0bikyvw19huemw1m5isqu].[cnt:TripID:qk])",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[avg:Calculation_2945072721954668554:qk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[cnt:TripID:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[tmn:starttime:qk]",
+        "fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu]",
+          "[tmn:starttime:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+            "pane_index": 2
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_CE453C0AA72349F48987908683F51FDF]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tmn:starttime:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "TripDashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "40624",
+          "w": "97538",
+          "h": "58414",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "Trips Over Time",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "962",
+          "w": "97538",
+          "h": "39662",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "40624",
+          "w": "79384",
+          "h": "58414",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "80615",
+          "y": "40624",
+          "w": "18154",
+          "h": "58414",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "PCT of Trips By UserType",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "40624",
+          "w": "79384",
+          "h": "32272",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Pct of Trips by Gender",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "72896",
+          "w": "79384",
+          "h": "26142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Trips Over Time",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "80615",
+          "y": "40624",
+          "w": "18154",
+          "h": "7933",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "1",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "PCT of Trips By UserType",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "80615",
+          "y": "48557",
+          "w": "18154",
+          "h": "7933",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "2",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Pct of Trips by Gender",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "80615",
+          "y": "56490",
+          "w": "18154",
+          "h": "10698",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "4",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "TripDashboard",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "40624",
+          "w": "97538",
+          "h": "58414",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "Trips Over Time",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "962",
+          "w": "97538",
+          "h": "39662",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "40624",
+          "w": "79384",
+          "h": "58414",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "80615",
+          "y": "40624",
+          "w": "18154",
+          "h": "58414",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "PCT of Trips By UserType",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "40624",
+          "w": "79384",
+          "h": "32272",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Pct of Trips by Gender",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "72896",
+          "w": "79384",
+          "h": "26142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Trips Over Time",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "80615",
+          "y": "40624",
+          "w": "18154",
+          "h": "7933",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "1",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "PCT of Trips By UserType",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "80615",
+          "y": "48557",
+          "w": "18154",
+          "h": "7933",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "2",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Pct of Trips by Gender",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "80615",
+          "y": "56490",
+          "w": "18154",
+          "h": "10698",
+          "param": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "4",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_B8282730A7F946D2862C4A219DD2AE17]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Pct of Trips by Gender"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text",
+        "target": "Pct of Trips by Gender"
+      },
+      "field_captions": [
+        "Gender Text"
+      ],
+      "target": "Pct of Trips by Gender"
+    },
+    {
+      "name": "[Action2_4F80C6CDB72E461DBB18C8B32EB48072]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "TripDashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text,Measure Names",
+        "target": "TripDashboard"
+      },
+      "field_captions": [
+        "Gender Text",
+        "Measure Names"
+      ],
+      "target": "TripDashboard"
+    },
+    {
+      "name": "[Action3_CE453C0AA72349F48987908683F51FDF]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "TripDashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "TripDashboard"
+      },
+      "field_captions": [],
+      "target": "TripDashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Trips Over Time",
+      "viewpoint_name": "Trips Over Time",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "PCT of Trips By UserType",
+      "viewpoint_name": "PCT of Trips By UserType",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Pct of Trips by Gender",
+      "viewpoint_name": "Pct of Trips by Gender",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[attr:gender:qk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:gender:qk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "TripDashboard",
+      "viewpoint_name": "PCT of Trips By UserType",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 4
+  }
+}

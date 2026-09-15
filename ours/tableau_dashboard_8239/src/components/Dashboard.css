@@ -1,0 +1,191 @@
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #8138f7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  padding: 16px 24px;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.dashboard-title {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title-part-1 {
+  color: #8138f7;
+}
+
+.title-part-2 {
+  color: #000000;
+}
+
+.dashboard-subtitle {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.subtitle-highlight {
+  color: #8138f7;
+}
+
+.dashboard-footer {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8138f7;
+  text-align: right;
+}
+
+/* Dashboard Grid Layout - Based on Tableau contract zones */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  gap: 8px;
+  height: calc(100vh - 120px);
+  min-height: 600px;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Year - Top row, middle-right */
+.year-item {
+  grid-column: 41 / 59;
+  grid-row: 1 / 5;
+}
+
+/* Month - Top row, full width */
+.month-item {
+  grid-column: 6 / 92;
+  grid-row: 4 / 8;
+}
+
+/* Total Profit - Middle left */
+.total-profit-item {
+  grid-column: 1 / 15;
+  grid-row: 20 / 32;
+}
+
+/* Sales Quantity - Middle center-left */
+.sales-quantity-item {
+  grid-column: 30 / 46;
+  grid-row: 20 / 32;
+}
+
+/* Profit by Year - Top right */
+.profit-by-year-item {
+  grid-column: 51 / 97;
+  grid-row: 8 / 36;
+}
+
+/* Profit % by Category - Middle right */
+.profit-by-category-item {
+  grid-column: 55 / 74;
+  grid-row: 37 / 72;
+}
+
+/* Top 5 items by Sales - Right side */
+.top-5-items-item {
+  grid-column: 77 / 96;
+  grid-row: 37 / 72;
+}
+
+/* Profit by Markets - Left side, tall */
+.profit-by-markets-item {
+  grid-column: 1 / 26;
+  grid-row: 31 / 101;
+}
+
+/* Sales Quantity by Markets - Center-left, tall */
+.sales-quantity-by-markets-item {
+  grid-column: 28 / 54;
+  grid-row: 31 / 101;
+}
+
+/* Orders by Region & Category - Bottom right */
+.orders-by-region-item {
+  grid-column: 58 / 90;
+  grid-row: 69 / 101;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .grid-item {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .dashboard-title,
+  .dashboard-subtitle,
+  .dashboard-footer {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: center;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

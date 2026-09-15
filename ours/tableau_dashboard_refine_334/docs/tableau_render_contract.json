@@ -1,0 +1,226 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Country Details",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Country:nk]",
+      "cols_field": "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+      "series_field": "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+      "slices": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[:Measure Names]",
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[Action (Region)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Expenditures  (US Dollars):qk]",
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Users:qk]",
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Volumes:qk]",
+        "Middle East"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Country:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "53937",
+        "w": "98400",
+        "h": "45063",
+        "aspect_ratio": 2.1836,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.5394,
+          "w_ratio": 0.984,
+          "h_ratio": 0.4506
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Total Libraries by Region",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Region:nk]",
+      "cols_field": "[federated.0xur38p0m5fgy31bel3po020k9qv].[sum:Total Libraries:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Country Details by Region",
+              "type": "sheet",
+              "worksheet": "Total Libraries by Region"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Country Details by Region"
+            },
+            "field_captions": [],
+            "target": "Country Details by Region"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Region:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "8875",
+        "w": "98400",
+        "h": "45062",
+        "aspect_ratio": 2.1837,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.0887,
+          "w_ratio": 0.984,
+          "h_ratio": 0.4506
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Country Details by Region",
+        "type": "sheet",
+        "worksheet": "Total Libraries by Region"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Country Details by Region"
+      },
+      "field_captions": [],
+      "target": "Country Details by Region"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Libraries by Region",
+      "viewpoint_name": "Total Libraries by Region",
+      "fields": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Country Details",
+      "viewpoint_name": "Country Details",
+      "fields": [
+        "[federated.0xur38p0m5fgy31bel3po020k9qv].[none:Country:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 1,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Country Details",
+      "Total Libraries by Region"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

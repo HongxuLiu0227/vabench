@@ -1,0 +1,442 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "1169",
+    "maxwidth": "827",
+    "minheight": "1169",
+    "minwidth": "827",
+    "preset-index": "15",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "Number of Boats Sold By Brokers(Price Cut)",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+      "cols_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+      "series_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]",
+      "slices": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Brent Hermann",
+        "Caroline Laviolette",
+        "Chris Block",
+        "John Anderson",
+        "Michael Harris",
+        "Mike Auton",
+        "Mike Nystrum",
+        "Monte Cottrell",
+        "Peter Gulick",
+        "Staley Weidman"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Boats Sold"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "88437",
+          "y": "25340",
+          "w": "10596",
+          "h": "36198",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.8844,
+            "y_ratio": 0.2534,
+            "w_ratio": 0.106,
+            "h_ratio": 0.362
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Highlight 1 (generated)",
+            "kind": "highlight_brush",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "type": "sheet",
+              "worksheet": "Number of Boats Sold By Brokers(Price Cut)"
+            },
+            "command": "tsc:brush",
+            "params": {
+              "field-captions": "HasPriceCut",
+              "target": "Number of Boats Sold By Brokers(Price Cut)"
+            },
+            "field_captions": [
+              "HasPriceCut"
+            ],
+            "target": "Number of Boats Sold By Brokers(Price Cut)"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "967",
+        "y": "25340",
+        "w": "87470",
+        "h": "36198",
+        "aspect_ratio": 2.4164,
+        "normalized": {
+          "x_ratio": 0.0097,
+          "y_ratio": 0.2534,
+          "w_ratio": 0.8747,
+          "h_ratio": 0.362
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+      "cols_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+      "series_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+      "slices": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Brent Hermann",
+        "Caroline Laviolette",
+        "Chris Block",
+        "John Anderson",
+        "Michael Harris",
+        "Mike Auton",
+        "Mike Nystrum",
+        "Monte Cottrell",
+        "Peter Gulick",
+        "Staley Weidman"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Boats Sold"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "88437",
+          "y": "684",
+          "w": "10596",
+          "h": "24656",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.8844,
+            "y_ratio": 0.0068,
+            "w_ratio": 0.106,
+            "h_ratio": 0.2466
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]"
+        ]
+      },
+      "zone": {
+        "x": "967",
+        "y": "684",
+        "w": "87470",
+        "h": "24656",
+        "aspect_ratio": 3.5476,
+        "normalized": {
+          "x_ratio": 0.0097,
+          "y_ratio": 0.0068,
+          "w_ratio": 0.8747,
+          "h_ratio": 0.2466
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Number of Boats Sold By Brokers(Used vs New)",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+      "cols_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+      "series_field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+      "slices": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Brent Hermann",
+        "Caroline Laviolette",
+        "Chris Block",
+        "John Anderson",
+        "Michael Harris",
+        "Mike Auton",
+        "Mike Nystrum",
+        "Monte Cottrell",
+        "Peter Gulick",
+        "Staley Weidman"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Boats Sold"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "88437",
+          "y": "61538",
+          "w": "10596",
+          "h": "37778",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.8844,
+            "y_ratio": 0.6154,
+            "w_ratio": 0.106,
+            "h_ratio": 0.3778
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[:Measure Names]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "967",
+        "y": "61538",
+        "w": "87470",
+        "h": "37778",
+        "aspect_ratio": 2.3154,
+        "normalized": {
+          "x_ratio": 0.0097,
+          "y_ratio": 0.6154,
+          "w_ratio": 0.8747,
+          "h_ratio": 0.3778
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Number of Boats Sold By Brokers(Price Cut)"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "HasPriceCut",
+        "target": "Number of Boats Sold By Brokers(Price Cut)"
+      },
+      "field_captions": [
+        "HasPriceCut"
+      ],
+      "target": "Number of Boats Sold By Brokers(Price Cut)"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Brokers Stats",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "HasPriceCut",
+        "target": "Brokers Stats"
+      },
+      "field_captions": [
+        "HasPriceCut"
+      ],
+      "target": "Brokers Stats"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Number of Boats Sold By Brokers(Price Cut)",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Price Cut)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Number of Boats Sold By Brokers(Used vs New)",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Used vs New)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[:Measure Names]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Brokers Stats",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Brokers Stats",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Used vs New)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Number of Boats Sold By Brokers(Price Cut)",
+      "Number of Boats Sold By Brokers(Sail vs Power)",
+      "Number of Boats Sold By Brokers(Used vs New)"
+    ],
+    "legend_anchor_positions": {
+      "Number of Boats Sold By Brokers(Price Cut)": "right",
+      "Number of Boats Sold By Brokers(Sail vs Power)": "right",
+      "Number of Boats Sold By Brokers(Used vs New)": "right"
+    },
+    "axis_title_worksheets": [
+      "Number of Boats Sold By Brokers(Price Cut)",
+      "Number of Boats Sold By Brokers(Sail vs Power)",
+      "Number of Boats Sold By Brokers(Used vs New)"
+    ],
+    "interaction_worksheets": [
+      "Number of Boats Sold By Brokers(Price Cut)",
+      "Number of Boats Sold By Brokers(Sail vs Power)",
+      "Number of Boats Sold By Brokers(Used vs New)"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 5
+  }
+}

@@ -1,0 +1,3888 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.1.10 (20191.19.1110.1721)",
+      "source-platform": "mac",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://10az.online.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "いいねユーザ日別",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:いいね数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[sum:いいね数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[tdy:投稿日時:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "いいね数",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[pcto:sum:Number of Records:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "title"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:sum:Number of Records:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:いいね数:ok]"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "いいね数(ユーザ別)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:いいね数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[avg:いいね数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[none:ユーザプロフィールURL:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:ユーザプロフィールURL:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "union"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:ユーザプロフィールURL:nk]",
+                          "member": "\"https://twitter.com/M97LLAx87Vt3C1c\""
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:ユーザプロフィールURL:nk]",
+                          "member": "\"https://twitter.com/sugar_masami\""
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "いいね数(投稿別)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:いいね数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[sum:いいね数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:投稿URL/キャプチャー:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-exclude": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "コメントユーザ(ユーザ別)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:コメント数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[avg:コメント数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[none:ユーザプロフィールURL:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "1000",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "AVG([コメント数])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:ユーザプロフィールURL:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "コメントユーザ(投稿別)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:コメント数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[sum:コメント数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:投稿URL/キャプチャー:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:投稿URL/キャプチャー:nk]",
+                      "member": "\"https://twitter.com/akari_0711/status/1199143813639364608\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "コメントユーザ日別",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:コメント数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[sum:コメント数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[tdy:投稿日時:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "コメント数",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[pcto:sum:Number of Records:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "title"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:sum:Number of Records:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "データ数",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "worksheet",
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "ユーザ別投稿数ランキング",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action6]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:ユーザプロフィールURL:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-exclude": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "> ",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+            "title": "投稿数"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "リツイート(ユーザ別)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:リツイート数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[avg:リツイート数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[none:ユーザプロフィールURL:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:ユーザプロフィールURL:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-exclude": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "リツイート(投稿別)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:リツイート数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[sum:リツイート数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "リツイート日別",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:リツイート数:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[sum:リツイート数:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+        "fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd]",
+          "[tdy:投稿日時:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "リツート数",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[pcto:sum:Number of Records:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "title"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:sum:Number of Records:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "収集データ",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[min:投稿日時:ok]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[max:投稿日時:ok]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:いいね数:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "caption",
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "検索ワード",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:検索ワード:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "worksheet",
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[ユーザプロフィールURL]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[投稿URL/キャプチャー]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action9]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:投稿日時:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "README",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "32",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1143",
+          "y": "889",
+          "w": "97714",
+          "h": "98222",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "",
+          "parent_id": "32",
+          "zone_type": "layout-basic",
+          "x": "1143",
+          "y": "889",
+          "w": "97714",
+          "h": "98222",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "30",
+          "zone_type": "web",
+          "x": "1143",
+          "y": "889",
+          "w": "97714",
+          "h": "98222",
+          "param": "https://docs.google.com/document/d/e/2PACX-1vSkU38BIlG87qxCi3DauCeyf5rSsdaI8yMT-Quam9l5joUpPmhJFU3Nir2HoZ_WgiGyYHIme1ZtuENe/pub",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "29",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "dashboard-object",
+          "x": "89714",
+          "y": "1625",
+          "w": "4857",
+          "h": "4250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Twitterデータの可視化",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "88",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "91",
+          "name": "コメントユーザ(投稿別)",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "659",
+          "y": "82219",
+          "w": "98682",
+          "h": "9966",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "134",
+          "name": "コメントユーザ(ユーザ別)",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "659",
+          "y": "92185",
+          "w": "98682",
+          "h": "7550",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "88",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "title",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "1391",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-basic",
+          "x": "659",
+          "y": "1656",
+          "w": "98682",
+          "h": "80563",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "データ数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "68911",
+          "y": "1656",
+          "w": "30430",
+          "h": "3439",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "収集データ",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "30072",
+          "y": "1656",
+          "w": "38839",
+          "h": "3439",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "リツート数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "42808",
+          "w": "49368",
+          "h": "9793",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "コメント数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "71715",
+          "w": "49368",
+          "h": "10504",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "74",
+          "name": "いいねユーザ日別",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50000",
+          "y": "14570",
+          "w": "49341",
+          "h": "10807",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "いいね数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "14570",
+          "w": "49341",
+          "h": "10807",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "ユーザ別投稿数ランキング",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "5095",
+          "w": "98682",
+          "h": "9475",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "75",
+          "name": "リツイート日別",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50027",
+          "y": "42808",
+          "w": "49314",
+          "h": "9793",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "76",
+          "name": "コメントユーザ日別",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50027",
+          "y": "71715",
+          "w": "49314",
+          "h": "10504",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "81",
+          "name": "検索ワード",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "1656",
+          "w": "29413",
+          "h": "3439",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "86",
+          "name": "いいね数(投稿別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "25377",
+          "w": "98682",
+          "h": "8144",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "90",
+          "name": "リツイート(投稿別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "52601",
+          "w": "98682",
+          "h": "9703",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "132",
+          "name": "いいね数(ユーザ別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "33521",
+          "w": "98682",
+          "h": "9287",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "133",
+          "name": "リツイート(ユーザ別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "62304",
+          "w": "98682",
+          "h": "9411",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "README",
+      "size": {
+        "maxheight": "900",
+        "maxwidth": "700",
+        "minheight": "900",
+        "minwidth": "700",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "32",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1143",
+          "y": "889",
+          "w": "97714",
+          "h": "98222",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "",
+          "parent_id": "32",
+          "zone_type": "layout-basic",
+          "x": "1143",
+          "y": "889",
+          "w": "97714",
+          "h": "98222",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "30",
+          "zone_type": "web",
+          "x": "1143",
+          "y": "889",
+          "w": "97714",
+          "h": "98222",
+          "param": "https://docs.google.com/document/d/e/2PACX-1vSkU38BIlG87qxCi3DauCeyf5rSsdaI8yMT-Quam9l5joUpPmhJFU3Nir2HoZ_WgiGyYHIme1ZtuENe/pub",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "29",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "dashboard-object",
+          "x": "89714",
+          "y": "1625",
+          "w": "4857",
+          "h": "4250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "Twitterデータの可視化",
+      "size": {
+        "maxheight": "3520",
+        "maxwidth": "1500",
+        "minheight": "3020",
+        "minwidth": "1200",
+        "sizing-mode": "range"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "88",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "91",
+          "name": "コメントユーザ(投稿別)",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "659",
+          "y": "82219",
+          "w": "98682",
+          "h": "9966",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "134",
+          "name": "コメントユーザ(ユーザ別)",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "659",
+          "y": "92185",
+          "w": "98682",
+          "h": "7550",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "88",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "81954",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "title",
+          "x": "659",
+          "y": "265",
+          "w": "98682",
+          "h": "1391",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-basic",
+          "x": "659",
+          "y": "1656",
+          "w": "98682",
+          "h": "80563",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "データ数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "68911",
+          "y": "1656",
+          "w": "30430",
+          "h": "3439",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "収集データ",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "30072",
+          "y": "1656",
+          "w": "38839",
+          "h": "3439",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "リツート数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "42808",
+          "w": "49368",
+          "h": "9793",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "コメント数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "71715",
+          "w": "49368",
+          "h": "10504",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "74",
+          "name": "いいねユーザ日別",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50000",
+          "y": "14570",
+          "w": "49341",
+          "h": "10807",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "いいね数",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "14570",
+          "w": "49341",
+          "h": "10807",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "ユーザ別投稿数ランキング",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "5095",
+          "w": "98682",
+          "h": "9475",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "75",
+          "name": "リツイート日別",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50027",
+          "y": "42808",
+          "w": "49314",
+          "h": "9793",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "76",
+          "name": "コメントユーザ日別",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50027",
+          "y": "71715",
+          "w": "49314",
+          "h": "10504",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "81",
+          "name": "検索ワード",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "1656",
+          "w": "29413",
+          "h": "3439",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "86",
+          "name": "いいね数(投稿別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "25377",
+          "w": "98682",
+          "h": "8144",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "90",
+          "name": "リツイート(投稿別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "52601",
+          "w": "98682",
+          "h": "9703",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "132",
+          "name": "いいね数(ユーザ別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "33521",
+          "w": "98682",
+          "h": "9287",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "133",
+          "name": "リツイート(ユーザ別)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "659",
+          "y": "62304",
+          "w": "98682",
+          "h": "9411",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action10]",
+      "caption": "フィルター 8 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "コメントユーザ(ユーザ別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action1]",
+      "caption": "フィルター 1 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "ユーザ別投稿数ランキング"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "フィルター 2 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "いいねユーザ日別"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "フィルター 3 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "リツイート日別"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "フィルター 4 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "コメントユーザ日別"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action5]",
+      "caption": "ユーザ別投稿数ランキング プロフィール遷移",
+      "kind": "custom_action",
+      "activation": {},
+      "source": {
+        "datasource": "federated.0nnqf130tzgecx1a44up50632gpd",
+        "type": "datasource"
+      },
+      "command": "",
+      "params": {},
+      "field_captions": [],
+      "target": ""
+    },
+    {
+      "name": "[Action6]",
+      "caption": "フィルター 5 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "いいね数(ユーザ別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action7]",
+      "caption": "フィルター 6 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "リツイート(ユーザ別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action8]",
+      "caption": "投稿別URL",
+      "kind": "custom_action",
+      "activation": {},
+      "source": {
+        "datasource": "federated.0nnqf130tzgecx1a44up50632gpd",
+        "type": "datasource"
+      },
+      "command": "",
+      "params": {},
+      "field_captions": [],
+      "target": ""
+    },
+    {
+      "name": "[Action9]",
+      "caption": "フィルター 7 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "コメントユーザ(投稿別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Twitterデータの可視化",
+      "viewpoint_name": "リツート数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "検索ワード",
+      "viewpoint_name": "検索ワード",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:検索ワード:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "収集データ",
+      "viewpoint_name": "収集データ",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[max:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[qr:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "ユーザ別投稿数ランキング",
+      "viewpoint_name": "ユーザ別投稿数ランキング",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいね数",
+      "viewpoint_name": "いいね数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137308614656:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいねユーザ日別",
+      "viewpoint_name": "いいねユーザ日別",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいね数(投稿別)",
+      "viewpoint_name": "いいね数(投稿別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいね数(ユーザ別)",
+      "viewpoint_name": "いいね数(ユーザ別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツート数",
+      "viewpoint_name": "リツート数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137310105601:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツイート日別",
+      "viewpoint_name": "リツイート日別",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツイート(投稿別)",
+      "viewpoint_name": "リツイート(投稿別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツイート(ユーザ別)",
+      "viewpoint_name": "リツイート(ユーザ別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメント数",
+      "viewpoint_name": "コメント数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137311887363:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメントユーザ日別",
+      "viewpoint_name": "コメントユーザ日別",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメントユーザ(投稿別)",
+      "viewpoint_name": "コメントユーザ(投稿別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメントユーザ(ユーザ別)",
+      "viewpoint_name": "コメントユーザ(ユーザ別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 16,
+    "dashboard_count": 2,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 10,
+    "highlight_binding_count": 16
+  }
+}

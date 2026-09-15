@@ -1,0 +1,4033 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.3.0 (20203.20.0801.1333)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "A1Cresult",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:A1Cresult:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "A1Cresult vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:A1Cresult:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "None",
+            ">8",
+            "Norm",
+            ">7",
+            "%all%"
+          ]
+        },
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Admin_Source_Id",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:admission_source_id:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+          "direction": "ASC",
+          "buckets": [
+            "7",
+            "1",
+            "17",
+            "4",
+            "6",
+            "2",
+            "5",
+            "3",
+            "20",
+            "9",
+            "8",
+            "22",
+            "10",
+            "25",
+            "14",
+            "11",
+            "13",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Admin_Source_Id vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:admission_source_id:ok]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Admin_Type_Id",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:admission_type_id:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]",
+          "direction": "ASC",
+          "buckets": [
+            "1",
+            "3",
+            "2",
+            "6",
+            "5",
+            "8",
+            "7",
+            "4",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Admin_Type_Id vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:admission_type_id:ok]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Age Distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:age:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:age:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:age:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Age vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:age:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:age:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg Lab Procs vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:num_lab_procedures:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:num_lab_procedures:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg No. Diagnoses vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_diagnoses:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_diagnoses:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg No. Emergency vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_emergency:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_emergency:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg No. Inpatient vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_inpatient:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_inpatient:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg No. Medics vs Readmision",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:num_medications:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:num_medications:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg No. Outpatient vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_outpatient:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:number_outpatient:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg No. Procs vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:num_procedures:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:num_procedures:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Avg Time vs Readmission",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:time_in_hospital:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[avg:time_in_hospital:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Change",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "No",
+            "Ch",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Change vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:change:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "No",
+            "Ch",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "DiabetesMed",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diabetesMed:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diabetesMed:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "DiabetesMed vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diabetesMed:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diabetesMed:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Diag1 vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diag_1:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "%all%"
+          ]
+        },
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Diag2 vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diag_2:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1,readmitted (group))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "%all%"
+          ]
+        },
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1,readmitted (group))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1,readmitted (group))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[diag_1]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[readmitted (group)]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Diag3 vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diag_3:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1,readmitted (group))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Circulatory",
+            "Diabetes",
+            "Endocrine, Nutritional, Metabolic, Immunity",
+            "Respiratory",
+            "Genitourinary",
+            "External causes of injury",
+            "Digestive",
+            "Mental Disorders",
+            "Skin and Subcutaneous Tissue",
+            "Blood and Blood-Forming Organs",
+            "Other Symptoms",
+            "Injury and Poisoning",
+            "Musculoskeletal System and Connective Tissue",
+            "Infectious and Parasitic",
+            "Neoplasms",
+            "Nervous",
+            "Not Required",
+            "Congenital Anomalies",
+            "Pregnancy, Childbirth",
+            "Sense Organs",
+            "%all%"
+          ]
+        },
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1,readmitted (group))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1,readmitted (group))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[diag_1]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[readmitted (group)]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Diag_1",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diag_1:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_2)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_2)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_2)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[diag_2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Diag_2",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diag_2:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Circulatory",
+            "Diabetes",
+            "Respiratory",
+            "Genitourinary",
+            "Endocrine, Nutritional, Metabolic, Immunity",
+            "Digestive",
+            "Skin and Subcutaneous Tissue",
+            "Blood and Blood-Forming Organs",
+            "Mental Disorders",
+            "External causes of injury",
+            "Neoplasms",
+            "Other Symptoms",
+            "Injury and Poisoning",
+            "Infectious and Parasitic",
+            "Musculoskeletal System and Connective Tissue",
+            "Nervous",
+            "Congenital Anomalies",
+            "Pregnancy, Childbirth",
+            "Not Required",
+            "Sense Organs",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[diag_1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Diag_3",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:diag_3:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1)]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_2)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Circulatory",
+            "Diabetes",
+            "Endocrine, Nutritional, Metabolic, Immunity",
+            "Respiratory",
+            "Genitourinary",
+            "External causes of injury",
+            "Digestive",
+            "Mental Disorders",
+            "Skin and Subcutaneous Tissue",
+            "Blood and Blood-Forming Organs",
+            "Other Symptoms",
+            "Injury and Poisoning",
+            "Musculoskeletal System and Connective Tissue",
+            "Infectious and Parasitic",
+            "Neoplasms",
+            "Nervous",
+            "Not Required",
+            "Congenital Anomalies",
+            "Pregnancy, Childbirth",
+            "Sense Organs",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_1)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[diag_1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_2)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0an9erx07ypvk517e4x211dma9am].[Action (diag_2)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[diag_2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Dis_Id",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:discharge_disposition_id:ok]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok]",
+          "direction": "ASC",
+          "buckets": [
+            "1",
+            "3",
+            "6",
+            "18",
+            "2",
+            "22",
+            "11",
+            "5",
+            "25",
+            "4",
+            "7",
+            "23",
+            "13",
+            "14",
+            "28",
+            "8",
+            "15",
+            "24",
+            "9",
+            "17",
+            "16",
+            "19",
+            "10",
+            "27",
+            "12",
+            "20",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Dis_Id vs Readmit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:discharge_disposition_id:ok]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Gender",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Female",
+            "Male",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Gender vs Readmission",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk:19]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Female",
+            "Male",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Max Glu Serum",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:max_glu_serum:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "None",
+            "Norm",
+            ">200",
+            ">300",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Max Glu Serum vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:max_glu_serum:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "None",
+            "Norm",
+            ">200",
+            ">300",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Diagnoses Distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:number_diagnoses:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:number_diagnoses:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_diagnoses (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_diagnoses (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:number_diagnoses:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Diagnoses vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:number_diagnoses (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_diagnoses (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Emergency Visits",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:number_emergency:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:number_emergency:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_emergency (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_emergency (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:number_emergency:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Emergency vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:number_emergency (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_emergency (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Inpatient Visits",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:number_inpatient:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:number_inpatient:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_inpatient (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_inpatient (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:number_inpatient:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Inpatient vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:number_inpatient (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_inpatient (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Lab Procedures",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:num_lab_procedures:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:num_lab_procedures:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_lab_procedures (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:num_lab_procedures (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:num_lab_procedures:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Lab Procs vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:num_lab_procedures (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:num_lab_procedures (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Medics Distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:num_medications:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:num_medications:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_medications (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:num_medications (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:num_medications:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Medics vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:num_medications (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:num_medications (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Outpatient Visits",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:number_outpatient:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:number_outpatient:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_outpatient (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_outpatient (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:number_outpatient:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Outpatient vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:number_outpatient (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:number_outpatient (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Procedures Distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:num_procedures:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:num_procedures:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_procedures (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:num_procedures (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:num_procedures:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "No. Procs vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:num_procedures (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:num_procedures (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Race",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:race:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Caucasian",
+            "AfricanAmerican",
+            "?",
+            "Hispanic",
+            "Other",
+            "Asian",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Race vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk] / [federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:race:nk]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Caucasian",
+            "AfricanAmerican",
+            "Hispanic",
+            "Other",
+            "Asian",
+            "%all%"
+          ]
+        },
+        {
+          "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+          "direction": "ASC",
+          "buckets": [
+            "Not Readmitted",
+            "<30",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Time in Hospital",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[pcto:cnt:time_in_hospital:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[pcto:cnt:time_in_hospital:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[none:time_in_hospital (bin):qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:time_in_hospital (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:time_in_hospital:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Time vs Readmission",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0an9erx07ypvk517e4x211dma9am].[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[__tableau_internal_object_id__]",
+          "[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)] * [federated.0an9erx07ypvk517e4x211dma9am].[none:time_in_hospital (bin):qk])",
+        "fields": [
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[readmitted (group)]",
+          "[federated.0an9erx07ypvk517e4x211dma9am]",
+          "[none:time_in_hospital (bin):qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:Diabetes_OnlyDiag123Cleaned_19Cats.csv_F882F7FE6E8A4616A9B7B9127921A2C1:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Diag1 vs Readmit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "32433",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Diag2 vs Readmit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "33784",
+          "w": "98614",
+          "h": "32432",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Diag3 vs Readmit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "66216",
+          "w": "98614",
+          "h": "32433",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Diag1 vs Readmit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "32433",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Diag2 vs Readmit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "33784",
+          "w": "98614",
+          "h": "32432",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Diag3 vs Readmit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "66216",
+          "w": "98614",
+          "h": "32433",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Diag1 vs Readmit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Diag2 vs Readmit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Diag3 vs Readmit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "A1Cresult",
+      "viewpoint_name": "A1Cresult",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "A1Cresult vs Readmit",
+      "viewpoint_name": "A1Cresult vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Admin_Source_Id",
+      "viewpoint_name": "Admin_Source_Id",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Admin_Source_Id vs Readmit",
+      "viewpoint_name": "Admin_Source_Id vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Admin_Type_Id",
+      "viewpoint_name": "Admin_Type_Id",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Admin_Type_Id vs Readmit",
+      "viewpoint_name": "Admin_Type_Id vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_source_id:ok]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:admission_type_id:ok]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Age Distribution",
+      "viewpoint_name": "Age Distribution",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:age:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Age vs Readmission",
+      "viewpoint_name": "Age vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:age:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Change",
+      "viewpoint_name": "Change",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:A1Cresult:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Change vs Readmit",
+      "viewpoint_name": "Change vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:change:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "DiabetesMed",
+      "viewpoint_name": "DiabetesMed",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diabetesMed:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "DiabetesMed vs Readmit",
+      "viewpoint_name": "DiabetesMed vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diabetesMed:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Diag_1",
+      "viewpoint_name": "Diag_1",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Diag1 vs Readmit",
+      "viewpoint_name": "Diag1 vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_1:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Diag_2",
+      "viewpoint_name": "Diag_2",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Diag2 vs Readmit",
+      "viewpoint_name": "Diag2 vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_2:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Diag_3",
+      "viewpoint_name": "Diag_3",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Diag3 vs Readmit",
+      "viewpoint_name": "Diag3 vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:diag_3:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Dis_Id",
+      "viewpoint_name": "Dis_Id",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Dis_Id vs Readmit",
+      "viewpoint_name": "Dis_Id vs Readmit",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:discharge_disposition_id:ok]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender",
+      "viewpoint_name": "Gender",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender vs Readmission",
+      "viewpoint_name": "Gender vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:gender:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Max Glu Serum",
+      "viewpoint_name": "Max Glu Serum",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Max Glu Serum vs Readmission",
+      "viewpoint_name": "Max Glu Serum vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:max_glu_serum:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Race",
+      "viewpoint_name": "Race",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Race vs Readmission",
+      "viewpoint_name": "Race vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:race:nk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg Lab Procs vs Readmission",
+      "viewpoint_name": "Avg Lab Procs vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Lab Procs vs Readmission",
+      "viewpoint_name": "No. Lab Procs vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_lab_procedures (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg No. Medics vs Readmision",
+      "viewpoint_name": "Avg No. Medics vs Readmision",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Medics vs Readmission",
+      "viewpoint_name": "No. Medics vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_medications (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg No. Procs vs Readmission",
+      "viewpoint_name": "Avg No. Procs vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Procs vs Readmission",
+      "viewpoint_name": "No. Procs vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:num_procedures (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg No. Diagnoses vs Readmission",
+      "viewpoint_name": "Avg No. Diagnoses vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_diagnoses (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Diagnoses vs Readmission",
+      "viewpoint_name": "No. Diagnoses vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_diagnoses (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg No. Emergency vs Readmission",
+      "viewpoint_name": "Avg No. Emergency vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Emergency vs Readmission",
+      "viewpoint_name": "No. Emergency vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_emergency (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_inpatient (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg No. Inpatient vs Readmission",
+      "viewpoint_name": "Avg No. Inpatient vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Inpatient vs Readmission",
+      "viewpoint_name": "No. Inpatient vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_inpatient (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg No. Outpatient vs Readmission",
+      "viewpoint_name": "Avg No. Outpatient vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "No. Outpatient vs Readmission",
+      "viewpoint_name": "No. Outpatient vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:number_outpatient (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg Time vs Readmission",
+      "viewpoint_name": "Avg Time vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Time vs Readmission",
+      "viewpoint_name": "Time vs Readmission",
+      "fields": [
+        "[federated.0an9erx07ypvk517e4x211dma9am].[none:time_in_hospital (bin):qk]",
+        "[federated.0an9erx07ypvk517e4x211dma9am].[readmitted (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 50,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 42
+  }
+}

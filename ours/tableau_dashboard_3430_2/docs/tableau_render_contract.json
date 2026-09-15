@@ -1,0 +1,574 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Age Comparison",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Age Groups]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "Number of Trips"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "90706",
+          "y": "10918",
+          "w": "8449",
+          "h": "9640",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.9071,
+            "y_ratio": 0.1092,
+            "w_ratio": 0.0845,
+            "h_ratio": 0.0964
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3_B1FA779B4BC24BB3AE50DB4DE48BA961]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Customers vs Subscribers DB",
+              "type": "sheet",
+              "worksheet": "Age Comparison"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Customers vs Subscribers DB"
+            },
+            "field_captions": [],
+            "target": "Customers vs Subscribers DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Age Groups]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:Age (bin):ok]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:Calculation_949696574842662915:ok]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[tyr:birth year:qk]"
+        ]
+      },
+      "zone": {
+        "x": "49998",
+        "y": "56676",
+        "w": "49519",
+        "h": "42395",
+        "aspect_ratio": 1.168,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.5668,
+          "w_ratio": 0.4952,
+          "h_ratio": 0.4239
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Customers vs Subsribers Totals",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cum:cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[mn:starttime:ok]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Customers vs Subscribers Totals",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "Number of Trips"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action4_2C18B568C9344024993CFFE8D08ED3A5]",
+            "caption": "Filter 4 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Customers vs Subscribers DB",
+              "type": "sheet",
+              "worksheet": "Customers vs Subsribers Totals"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Customers vs Subscribers DB"
+            },
+            "field_captions": [],
+            "target": "Customers vs Subscribers DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[mn:starttime:ok]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[yr:starttime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "49998",
+        "y": "14286",
+        "w": "49519",
+        "h": "42390",
+        "aspect_ratio": 1.1682,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.1429,
+          "w_ratio": 0.4952,
+          "h_ratio": 0.4239
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Male vs Female Totals",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "cols_field": "([federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk] / [federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk])",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Unknown"
+      ],
+      "title_runs": [
+        {
+          "text": "Male vs Female Rider Totals",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "Number of People"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1_15988D3299834A83AB155B6CC8E7CC38]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Customers vs Subscribers DB",
+              "type": "sheet",
+              "worksheet": "Male vs Female Totals"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Customers vs Subscribers DB"
+            },
+            "field_captions": [],
+            "target": "Customers vs Subscribers DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "14286",
+        "w": "49515",
+        "h": "42390",
+        "aspect_ratio": 1.1681,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.1429,
+          "w_ratio": 0.4951,
+          "h_ratio": 0.4239
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Total Trips 2020",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+      "cols_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+      "series_field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Amount of trips total during 2020",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "Number of Trips"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2_BBFB3D0A52B644488621B8443BB6203B]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Customers vs Subscribers DB",
+              "type": "sheet",
+              "worksheet": "Total Trips 2020"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Customers vs Subscribers DB"
+            },
+            "field_captions": [],
+            "target": "Customers vs Subscribers DB"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "56676",
+        "w": "49515",
+        "h": "42395",
+        "aspect_ratio": 1.1679,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.5668,
+          "w_ratio": 0.4951,
+          "h_ratio": 0.4239
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_15988D3299834A83AB155B6CC8E7CC38]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Male vs Female Totals"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    },
+    {
+      "name": "[Action2_BBFB3D0A52B644488621B8443BB6203B]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Total Trips 2020"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    },
+    {
+      "name": "[Action3_B1FA779B4BC24BB3AE50DB4DE48BA961]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Age Comparison"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    },
+    {
+      "name": "[Action4_2C18B568C9344024993CFFE8D08ED3A5]",
+      "caption": "Filter 4 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Customers vs Subsribers Totals"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Trips 2020",
+      "viewpoint_name": "Total Trips 2020",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Customers vs Subsribers Totals",
+      "viewpoint_name": "Customers vs Subsribers Totals",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[mn:starttime:ok]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Male vs Female Totals",
+      "viewpoint_name": "Male vs Female Totals",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Age Comparison",
+      "viewpoint_name": "Age Comparison",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Age Groups]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:Age (bin):ok]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:Calculation_949696574842662915:ok]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[tyr:birth year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Customers vs Subscribers DB",
+      "viewpoint_name": "Age Comparison",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2,
+      "vertical_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Age Comparison"
+    ],
+    "legend_anchor_positions": {
+      "Age Comparison": "above"
+    },
+    "axis_title_worksheets": [
+      "Age Comparison",
+      "Customers vs Subsribers Totals",
+      "Male vs Female Totals",
+      "Total Trips 2020"
+    ],
+    "interaction_worksheets": [
+      "Age Comparison",
+      "Customers vs Subsribers Totals",
+      "Male vs Female Totals",
+      "Total Trips 2020"
+    ],
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 5
+  }
+}

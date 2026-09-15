@@ -1,0 +1,1257 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.3.2 (20203.20.1018.2303)",
+      "source-platform": "mac",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": " Number of participants",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[cnt:client_id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk] / [federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk])",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:process_step:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "start",
+            "step_1",
+            "step_2",
+            "step_3",
+            "confirm",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Variation]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Participants at Each Stage: Control vs Test",
+          "style": {}
+        }
+      ],
+      "title_text": "Participants at Each Stage: Control vs Test",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "balance vs age",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:bal:qk]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[avg:bal:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[Clnt Age (group)]"
+        ]
+      },
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"F\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"M\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:process_step:nk]",
+                  "member": "\"start\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants per Gender: Control vs Test",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Number of Participants per Gender: Control vs Test",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "balance vs age (2)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:client_id:ok]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[:Measure Names]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[:Measure Names]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417541140484:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Multiple Values]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:bal:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417540866050:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417541140484:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[Variation]",
+                  "member": "\"Test\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[Clnt Age (group)]",
+                  "member": "\"Age 17-30\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417541140484:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417541140484:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "0.0"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "38962.0827762353"
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"F\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"M\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:process_step:nk]",
+                  "member": "\"start\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Group 1 Age: Balance Filter Above Average",
+          "style": {}
+        }
+      ],
+      "title_text": "Group 1 Age: Balance Filter Above Average",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "gender",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[cnt:client_id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk] / [federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk])",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:gendr:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"F\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"M\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:process_step:nk]",
+                  "member": "\"start\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants per Gender: Control vs Test",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Number of Participants per Gender: Control vs Test",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "gender %",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[pcto:cnt:client_id:qk:11]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[pcto:cnt:client_id:qk:11]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk] / [federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk])",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:gendr:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[pcto:cnt:client_id:qk:12]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Variation]",
+          "ordering-type": "Field",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:client_id:qk:11]"
+        },
+        {
+          "ordering-type": "Field",
+          "type": "PctTotal",
+          "column_instance": "[pcto:cnt:client_id:qk:12]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Variation]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"F\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gendr:nk]",
+                      "member": "\"M\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:process_step:nk]",
+                  "member": "\"start\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants per Gender: Control vs Test",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Number of Participants per Gender: Control vs Test",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "total number of participants",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[cnt:client_id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz]",
+          "[none:Variation:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:process_step:nk]",
+                  "member": "\"start\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants: Control vs Test",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Number of Participants: Control vs Test",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": " Number of participants",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "total number of participants",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "balance vs age (2)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50000",
+          "y": "50000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "gender %",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "800",
+          "y": "50000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": " Number of participants",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "total number of participants",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "balance vs age (2)",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "50000",
+          "y": "50000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "gender %",
+          "parent_id": "8",
+          "zone_type": "",
+          "x": "800",
+          "y": "50000",
+          "w": "49200",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "total number of participants"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "balance vs age (2)",
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": " Number of participants",
+      "viewpoint_name": " Number of participants",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "total number of participants",
+      "viewpoint_name": "total number of participants",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "gender",
+      "viewpoint_name": "gender",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "gender %",
+      "viewpoint_name": "gender %",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "balance vs age",
+      "viewpoint_name": "balance vs age",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "balance vs age (2)",
+      "viewpoint_name": "balance vs age (2)",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Calculation_503488417541140484:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 6,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 6
+  }
+}

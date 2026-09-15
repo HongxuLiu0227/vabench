@@ -1,0 +1,244 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_1107_1/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:33.592437Z"
+  },
+  "dashboard": {
+    "name": "FemaleRidershipDashboard",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_female_trip_yoy",
+        "name": "Female Trip YOY",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Female Trip YOY"
+        }
+      },
+      {
+        "id": "ws_overall_yoy",
+        "name": "Overall YOY",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Overall YOY"
+        }
+      },
+      {
+        "id": "ws_usertype_and_gender_yoy",
+        "name": "UserType and Gender YOY",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "UserType and Gender YOY"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_calculation_2945072721971425291",
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+        "normalized": "Calculation_2945072721971425291",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_starttime",
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]",
+        "normalized": "starttime",
+        "role": "dimension"
+      },
+      {
+        "id": "field_tripid",
+        "raw": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[cnt:TripID:qk]",
+        "normalized": "TripID",
+        "role": "measure"
+      },
+      {
+        "id": "field_usertype",
+        "raw": "([federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk] / ([federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk] / [federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]))",
+        "normalized": "usertype",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_gender_text",
+        "raw": "Gender Text",
+        "normalized": "Gender Text",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "FemaleRidershipDashboard",
+          "source_worksheet_name": "Pct of Trips by Gender"
+        },
+        "target": {
+          "target_type": "unknown",
+          "target_worksheet_id": null,
+          "target_dashboard_name": null,
+          "target_name_raw": "Pct of Trips by Gender"
+        },
+        "driving_field_ids": [
+          "field_gender_text"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "FemaleRidershipDashboard",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "FemaleRidershipDashboard",
+          "target_name_raw": "FemaleRidershipDashboard"
+        },
+        "driving_field_ids": [
+          "field_gender_text"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "UserType and Gender YOY",
+        "viewpoint_name": "UserType and Gender YOY",
+        "field_ids": [
+          "field_calculation_2945072721971425291"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Female Trip YOY",
+        "viewpoint_name": "Female Trip YOY",
+        "field_ids": [
+          "field_calculation_2945072721971425291",
+          "field_starttime"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Overall YOY",
+        "viewpoint_name": "Overall YOY",
+        "field_ids": [
+          "field_starttime"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "highlight"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_female_trip_yoy",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_2945072721971425291",
+          "field_starttime"
+        ]
+      },
+      {
+        "worksheet_id": "ws_overall_yoy",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_starttime"
+        ]
+      },
+      {
+        "worksheet_id": "ws_usertype_and_gender_yoy",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_2945072721971425291"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 3,
+    "field_count": 5
+  }
+}

@@ -1,0 +1,983 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "locale": "en_GB",
+      "original-version": "18.1",
+      "source-build": "2018.2.2 (20182.18.0925.2120)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "G-Map: Sepsis",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Latitude:qk]",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Provider Latitude:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Longitude:qk]",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Provider Longitude:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider Name:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Average Medicare Payments:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Average Total Payments :qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "worksheet",
+        "map-layer",
+        "map"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]"
+            }
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Provider State:nk]",
+                      "member": "\"NJ\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Provider State:nk]",
+                      "member": "\"NY\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Linear: Sepsis",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk] * [federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk])",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Provider State:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[sum:Total Discharges :qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Total Payments :qk] + [federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk])",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Average Total Payments :qk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Average Medicare Payments:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]"
+      ],
+      "encodings": {
+        "tooltip": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider Name:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:DRG Definition - Split 2:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider Name:nk]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:DRG Definition - Split 2:nk]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider Name:nk]",
+            "pane_index": 2
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+            "pane_index": 2
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:DRG Definition - Split 2:nk]",
+            "pane_index": 2
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Provider Latitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Provider Longitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Provider State]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]"
+            }
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Provider State:nk]",
+                      "member": "\"NJ\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Provider State:nk]",
+                      "member": "\"NY\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Total Payments :qk]",
+            "title": "Average Total Payments ($)"
+          },
+          {
+            "field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+            "title": "Average Medicare Payments ($)"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sepsis: ACC vs AMP",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk] * [federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Covered Charges :qk])",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Provider State:nk]",
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Average Covered Charges :qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:Average Medicare Payments:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider Name:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:DRG Definition - Split 2:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "mark",
+        "worksheet",
+        "map-layer",
+        "map"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Provider Latitude,Provider Longitude,Provider State)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Provider Latitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Provider Longitude:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Provider State]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]"
+            }
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Provider State:nk]",
+                      "member": "\"NJ\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Provider State:nk]",
+                      "member": "\"NY\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Covered Charges :qk]",
+            "title": "Average Covered Charges ($)"
+          }
+        ],
+        "cols": [
+          {
+            "field": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+            "title": "Average Medicare Payments ($)"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Sepsis: Interactive",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "G-Map: Sepsis",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "29886",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Linear: Sepsis",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "468",
+          "y": "30638",
+          "w": "99064",
+          "h": "29511",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sepsis: ACC vs AMP",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "468",
+          "y": "60149",
+          "w": "99064",
+          "h": "39099",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "G-Map: Sepsis",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "77238",
+          "y": "2538",
+          "w": "12229",
+          "h": "27444",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "G-Map: Sepsis",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "89643",
+          "y": "1974",
+          "w": "9011",
+          "h": "27914",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "G-Map: Sepsis",
+          "parent_id": null,
+          "zone_type": "size",
+          "x": "819",
+          "y": "1410",
+          "w": "8192",
+          "h": "23590",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Sepsis: Interactive",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "G-Map: Sepsis",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "29886",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Linear: Sepsis",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "468",
+          "y": "30638",
+          "w": "99064",
+          "h": "29511",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sepsis: ACC vs AMP",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "468",
+          "y": "60149",
+          "w": "99064",
+          "h": "39099",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "G-Map: Sepsis",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "77238",
+          "y": "2538",
+          "w": "12229",
+          "h": "27444",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "G-Map: Sepsis",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "89643",
+          "y": "1974",
+          "w": "9011",
+          "h": "27914",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "G-Map: Sepsis",
+          "parent_id": null,
+          "zone_type": "size",
+          "x": "819",
+          "y": "1410",
+          "w": "8192",
+          "h": "23590",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Sepsis: Interactive",
+        "type": "sheet",
+        "worksheet": "G-Map: Sepsis"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Sepsis: Interactive"
+      },
+      "field_captions": [],
+      "target": "Sepsis: Interactive"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sepsis: ACC vs AMP",
+      "viewpoint_name": "Sepsis: ACC vs AMP",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Hospital Referral Region Description - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "G-Map: Sepsis",
+      "viewpoint_name": "G-Map: Sepsis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[attr:Provider State:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Linear: Sepsis",
+      "viewpoint_name": "Linear: Sepsis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Covered Charges :qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Medicare Payments:qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Average Total Payments :qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Calculation_1166995304830603266:qk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider Name:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Sepsis: Interactive",
+      "viewpoint_name": "G-Map: Sepsis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

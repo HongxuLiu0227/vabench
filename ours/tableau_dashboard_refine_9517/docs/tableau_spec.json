@@ -1,0 +1,1051 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.4.2 (20204.21.0217.1203)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Bottom 10 Customers",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[Sample - Superstore].[none:Customer Name:nk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[none:Customer Name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[Sample - Superstore].[sum:Sales:qk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[none:Customer Name:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[Sample - Superstore].[none:Customer Name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[Sample - Superstore].[none:Customer Name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "bottom",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([Sales])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:Customer Name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Customer Sales & Profits",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[Sample - Superstore].[sum:Profit:qk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[Sample - Superstore].[sum:Sales:qk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[Sample - Superstore].[sum:Profit:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[Sample - Superstore].[sum:Quantity:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[Sample - Superstore].[none:Customer Name:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Calculation_317222333014716416]",
+                      "member": "\"Canon PC1060 Personal Laser Copier\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Sub-Category]",
+                      "member": "\"Copiers\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales Map",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[Sample - Superstore].[Latitude (generated)]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[Latitude (generated)]"
+        ]
+      },
+      "cols": {
+        "raw": "[Sample - Superstore].[Longitude (generated)]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[Longitude (generated)]"
+        ]
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[Sample - Superstore].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[Sample - Superstore].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[Sample - Superstore].[none:State:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[Sample - Superstore].[none:City:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[Sample - Superstore].[none:Country:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "map"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales by Sub Category ",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([Sample - Superstore].[none:Sub-Category:nk] / [Sample - Superstore].[none:Calculation_317222333014716416:nk])",
+        "fields": [
+          "[Sample - Superstore]",
+          "[none:Sub-Category:nk]",
+          "[Sample - Superstore]",
+          "[none:Calculation_317222333014716416:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[Sample - Superstore].[sum:Sales:qk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Calculation_317222333014716416:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[Sample - Superstore].[none:Calculation_317222333014716416:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[Sample - Superstore].[none:Calculation_317222333014716416:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([Sales])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:Calculation_317222333014716416:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[Sample - Superstore].[none:Category:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[Sample - Superstore].[none:Category:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:Category:nk]",
+                  "member": "\"Technology\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales by city",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[Sample - Superstore].[none:City:nk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[none:City:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[Sample - Superstore].[sum:Sales:qk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Calculation_317222333014716416]",
+                      "member": "\"Canon PC1060 Personal Laser Copier\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Sub-Category]",
+                      "member": "\"Copiers\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top 10 Customers",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[Sample - Superstore].[none:Customer Name:nk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[none:Customer Name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[Sample - Superstore].[sum:Sales:qk]",
+        "fields": [
+          "[Sample - Superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[none:Customer Name:nk]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[Sample - Superstore].[none:Customer Name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[Sample - Superstore].[none:Customer Name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([Sales])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:Customer Name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "info",
+      "chart_type": "Shape",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "encodings": {
+        "shape": [
+          {
+            "column": "[Sample - Superstore].[none:Calculation_1941051468927434752:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Informative dashboard",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "586",
+          "y": "1042",
+          "w": "98828",
+          "h": "97916",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "586",
+          "y": "1042",
+          "w": "98828",
+          "h": "97916",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Sales by city",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "586",
+          "y": "1042",
+          "w": "49414",
+          "h": "97916",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Sales by Sub Category ",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1042",
+          "w": "49414",
+          "h": "48958",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Customer Sales & Profits",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "50000",
+          "y": "50000",
+          "w": "49414",
+          "h": "48958",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Informative dashboard",
+      "size": {
+        "maxheight": "768",
+        "maxwidth": "1366",
+        "minheight": "768",
+        "minwidth": "1366",
+        "preset-index": "0",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "586",
+          "y": "1042",
+          "w": "98828",
+          "h": "97916",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "586",
+          "y": "1042",
+          "w": "98828",
+          "h": "97916",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Sales by city",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "586",
+          "y": "1042",
+          "w": "49414",
+          "h": "97916",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Sales by Sub Category ",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1042",
+          "w": "49414",
+          "h": "48958",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Customer Sales & Profits",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "50000",
+          "y": "50000",
+          "w": "49414",
+          "h": "48958",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action2]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Informative dashboard",
+        "type": "sheet",
+        "worksheet": "Sales by Sub Category "
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Informative dashboard"
+      },
+      "field_captions": [],
+      "target": "Informative dashboard"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Informative dashboard",
+        "type": "sheet",
+        "worksheet": "Sales by city"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Informative dashboard"
+      },
+      "field_captions": [],
+      "target": "Informative dashboard"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Informative dashboard",
+        "type": "sheet",
+        "worksheet": "Customer Sales & Profits"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Informative dashboard"
+      },
+      "field_captions": [],
+      "target": "Informative dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales Map",
+      "viewpoint_name": "Sales Map",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:City:nk]",
+        "[Sample - Superstore].[none:Country:nk]",
+        "[Sample - Superstore].[none:Order Date:qk]",
+        "[Sample - Superstore].[none:Segment:nk]",
+        "[Sample - Superstore].[none:State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by city",
+      "viewpoint_name": "Sales by city",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:City:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]",
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Sub Category ",
+      "viewpoint_name": "Sales by Sub Category ",
+      "fields": [
+        "[Sample - Superstore].[none:Calculation_317222333014716416:nk]",
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:State:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]",
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 Customers",
+      "viewpoint_name": "Top 10 Customers",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Customer Name:nk]",
+        "[Sample - Superstore].[none:Region:nk]",
+        "[Sample - Superstore].[none:State:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 Customers",
+      "viewpoint_name": "Bottom 10 Customers",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Customer Name:nk]",
+        "[Sample - Superstore].[none:Profit (bin):ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Customer Sales & Profits",
+      "viewpoint_name": "Customer Sales & Profits",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Customer Name:nk]",
+        "[Sample - Superstore].[none:Product Name:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Informative dashboard",
+      "viewpoint_name": "Sales by city",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "info",
+      "viewpoint_name": "info",
+      "fields": [
+        "[Sample - Superstore].[none:Calculation_1941051468927434752:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 7,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 8
+  }
+}

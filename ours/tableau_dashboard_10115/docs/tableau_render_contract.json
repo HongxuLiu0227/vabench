@@ -1,0 +1,555 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+      "cols_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:year:qk]",
+      "series_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Thailand"
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates Per Year",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sheet 1"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "8246",
+        "w": "58841",
+        "h": "45413",
+        "aspect_ratio": 1.2957,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.0825,
+          "w_ratio": 0.5884,
+          "h_ratio": 0.4541
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 2",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+      "cols_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:generation:nk]",
+      "series_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Thailand"
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates Between Sex and Generations",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sheet 2"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:generation:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]"
+        ]
+      },
+      "zone": {
+        "x": "59324",
+        "y": "53659",
+        "w": "40193",
+        "h": "45412",
+        "aspect_ratio": 0.8851,
+        "normalized": {
+          "x_ratio": 0.5932,
+          "y_ratio": 0.5366,
+          "w_ratio": 0.4019,
+          "h_ratio": 0.4541
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 3",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+      "cols_field": "",
+      "series_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Thailand"
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates By Ages",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]"
+        ]
+      },
+      "zone": {
+        "x": "59324",
+        "y": "8246",
+        "w": "40193",
+        "h": "38444",
+        "aspect_ratio": 1.0455,
+        "normalized": {
+          "x_ratio": 0.5932,
+          "y_ratio": 0.0825,
+          "w_ratio": 0.4019,
+          "h_ratio": 0.3844
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 4",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+      "cols_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:gdp_for_year ($):qk]",
+      "series_field": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Thailand"
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates By GDP",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sheet 4"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:gdp_for_year ($):qk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:year:qk]",
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:gdp_per_capita ($):qk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "53659",
+        "w": "58841",
+        "h": "45412",
+        "aspect_ratio": 1.2957,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.5366,
+          "w_ratio": 0.5884,
+          "h_ratio": 0.4541
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "12",
+      "x": "483",
+      "y": "929",
+      "w": "99034",
+      "h": "7317",
+      "text": "Suicide Trends In Thailand",
+      "text_runs": [
+        {
+          "text": "Suicide Trends In Thailand",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt SemiBold",
+            "fontsize": "36"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 1"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 2"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 4"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:generation:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:gdp_for_year ($):qk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:year:qk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:gdp_per_capita ($):qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 1,
+    "intent_counts": {
+      "custom_tableau_view": 3,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Sheet 1",
+      "Sheet 2",
+      "Sheet 3",
+      "Sheet 4"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 4
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_1665/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:34.330001Z"
+  },
+  "dashboard": {
+    "name": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan",
+    "worksheet_count": 5
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_mean_recognizability_by_age_when_song_was_released",
+        "name": "Mean Recognizability by Age When Song Was Released",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Mean Recognizability by Age When Song Was Released"
+        }
+      },
+      {
+        "id": "ws_millenials_vs_gen_zs",
+        "name": "Millenials vs. Gen-Zs",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Millenials vs. Gen-Zs"
+        }
+      },
+      {
+        "id": "ws_number_of_songs_in_the_90s",
+        "name": "Number of Songs in the 90s",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Number of Songs in the 90s"
+        }
+      },
+      {
+        "id": "ws_number_of_songs_vs_recognizability",
+        "name": "Number of Songs vs. Recognizability",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Number of Songs vs. Recognizability"
+        }
+      },
+      {
+        "id": "ws_recognizability_by_age_when_song_was_released",
+        "name": "Recognizability by Age When Song Was Released",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Recognizability by Age When Song Was Released"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_multiple_values",
+        "raw": "[federated.0c41x7800cm3vo122xn0d15j97ro].[Multiple Values]",
+        "normalized": "Multiple Values",
+        "role": "dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.0c41x7800cm3vo122xn0d15j97ro].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_788129974626648065",
+        "raw": "[federated.0c41x7800cm3vo122xn0d15j97ro].[none:Calculation_788129974626648065:qk]",
+        "normalized": "Calculation_788129974626648065",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_year_born",
+        "raw": "[federated.0c41x7800cm3vo122xn0d15j97ro].[none:Year Born:qk]",
+        "normalized": "Year Born",
+        "role": "dimension"
+      },
+      {
+        "id": "field_artist",
+        "raw": "[federated.0c41x7800cm3vo122xn0d15j97ro].[none:artist:nk]",
+        "normalized": "artist",
+        "role": "dimension"
+      },
+      {
+        "id": "field_no_of_songs",
+        "raw": "[federated.0c41x7800cm3vo122xn0d15j97ro].[sum:No. of Songs:qk]",
+        "normalized": "No. of Songs",
+        "role": "measure"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_number_of_songs_in_the_90s"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan",
+          "target_name_raw": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan",
+          "source_worksheet_name": "Number of Songs in the 90s"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan",
+          "target_name_raw": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Number of Songs in the 90s",
+        "viewpoint_name": "Number of Songs in the 90s",
+        "field_ids": [
+          "field_artist"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Recognizability by Age When Song Was Released",
+        "viewpoint_name": "Recognizability by Age When Song Was Released",
+        "field_ids": [
+          "field_measure_names",
+          "field_calculation_788129974626648065",
+          "field_year_born",
+          "field_artist"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Mean Recognizability by Age When Song Was Released",
+        "viewpoint_name": "Mean Recognizability by Age When Song Was Released",
+        "field_ids": [
+          "field_measure_names",
+          "field_calculation_788129974626648065",
+          "field_year_born",
+          "field_artist"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Millenials vs. Gen-Zs",
+        "viewpoint_name": "Millenials vs. Gen-Zs",
+        "field_ids": [
+          "field_measure_names",
+          "field_artist"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Number of Songs vs. Recognizability",
+        "viewpoint_name": "Number of Songs vs. Recognizability",
+        "field_ids": [
+          "field_measure_names",
+          "field_artist"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "dashboard",
+        "window_name": "Recognizability of 90's Artists in 2020 by Millenials and Gen-Zs - Andrew Liawan",
+        "viewpoint_name": "Recognizability by Age When Song Was Released",
+        "field_ids": [
+          "field_artist"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_mean_recognizability_by_age_when_song_was_released",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_artist",
+          "field_calculation_788129974626648065",
+          "field_measure_names",
+          "field_year_born"
+        ]
+      },
+      {
+        "worksheet_id": "ws_millenials_vs_gen_zs",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_artist",
+          "field_measure_names"
+        ]
+      },
+      {
+        "worksheet_id": "ws_number_of_songs_in_the_90s",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_artist"
+        ]
+      },
+      {
+        "worksheet_id": "ws_number_of_songs_vs_recognizability",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_artist",
+          "field_measure_names"
+        ]
+      },
+      {
+        "worksheet_id": "ws_recognizability_by_age_when_song_was_released",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_artist",
+          "field_calculation_788129974626648065",
+          "field_measure_names",
+          "field_year_born"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 5,
+    "worksheet_action_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 6,
+    "field_count": 6
+  }
+}

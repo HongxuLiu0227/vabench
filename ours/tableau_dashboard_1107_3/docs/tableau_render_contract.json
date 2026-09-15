@@ -1,0 +1,402 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "860",
+    "maxwidth": "650",
+    "minheight": "560",
+    "minwidth": "420"
+  },
+  "worksheets": [
+    {
+      "name": "PCT of Trips By UserType",
+      "dashboard_name": "TripDashboard",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+      "cols_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[tmn:starttime:ok]",
+      "series_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "% of Total Trips"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "80615",
+          "y": "48557",
+          "w": "18154",
+          "h": "7933",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.8062,
+            "y_ratio": 0.4856,
+            "w_ratio": 0.1815,
+            "h_ratio": 0.0793
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "40624",
+        "w": "79384",
+        "h": "32272",
+        "aspect_ratio": 2.4598,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.4062,
+          "w_ratio": 0.7938,
+          "h_ratio": 0.3227
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Pct of Trips by Gender",
+      "dashboard_name": "TripDashboard",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[pcto:cnt:TripID:qk]",
+      "cols_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[tmn:starttime:ok]",
+      "series_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+      "slices": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Name)]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (Start Station Latitude,Start Station Longitude,Start Station Name)]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Female",
+        "Unknown"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [
+        "% of Total Trips"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:Calculation_2945072721971425291:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "80615",
+          "y": "56490",
+          "w": "18154",
+          "h": "10698",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.8062,
+            "y_ratio": 0.5649,
+            "w_ratio": 0.1815,
+            "h_ratio": 0.107
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1_B8282730A7F946D2862C4A219DD2AE17]",
+            "caption": "Highlight 1 (generated)",
+            "kind": "highlight_brush",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "type": "sheet",
+              "worksheet": "Pct of Trips by Gender"
+            },
+            "command": "tsc:brush",
+            "params": {
+              "field-captions": "Gender Text",
+              "target": "Pct of Trips by Gender"
+            },
+            "field_captions": [
+              "Gender Text"
+            ],
+            "target": "Pct of Trips by Gender"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[attr:gender:qk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:gender:qk]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "72896",
+        "w": "79384",
+        "h": "26142",
+        "aspect_ratio": 3.0366,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.729,
+          "w_ratio": 0.7938,
+          "h_ratio": 0.2614
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Trips Over Time",
+      "dashboard_name": "TripDashboard",
+      "chart_intent": "line_chart",
+      "rows_field": "([federated.1vyl1wt0bikyvw19huemw1m5isqu].[avg:Calculation_2945072721954668554:qk] + [federated.1vyl1wt0bikyvw19huemw1m5isqu].[cnt:TripID:qk])",
+      "cols_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[tmn:starttime:qk]",
+      "series_field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+      "slices": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "80615",
+          "y": "40624",
+          "w": "18154",
+          "h": "7933",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.8062,
+            "y_ratio": 0.4062,
+            "w_ratio": 0.1815,
+            "h_ratio": 0.0793
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+          "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "962",
+        "w": "97538",
+        "h": "39662",
+        "aspect_ratio": 2.4592,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.0096,
+          "w_ratio": 0.9754,
+          "h_ratio": 0.3966
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_B8282730A7F946D2862C4A219DD2AE17]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Pct of Trips by Gender"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text",
+        "target": "Pct of Trips by Gender"
+      },
+      "field_captions": [
+        "Gender Text"
+      ],
+      "target": "Pct of Trips by Gender"
+    },
+    {
+      "name": "[Action2_4F80C6CDB72E461DBB18C8B32EB48072]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "TripDashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender Text,Measure Names",
+        "target": "TripDashboard"
+      },
+      "field_captions": [
+        "Gender Text",
+        "Measure Names"
+      ],
+      "target": "TripDashboard"
+    },
+    {
+      "name": "[Action3_CE453C0AA72349F48987908683F51FDF]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "TripDashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "TripDashboard"
+      },
+      "field_captions": [],
+      "target": "TripDashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Trips Over Time",
+      "viewpoint_name": "Trips Over Time",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[:Measure Names]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "PCT of Trips By UserType",
+      "viewpoint_name": "PCT of Trips By UserType",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Pct of Trips by Gender",
+      "viewpoint_name": "Pct of Trips by Gender",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[attr:gender:qk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:gender:qk]",
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "TripDashboard",
+      "viewpoint_name": "PCT of Trips By UserType",
+      "fields": [
+        "[federated.1vyl1wt0bikyvw19huemw1m5isqu].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "line_chart": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "PCT of Trips By UserType",
+      "Pct of Trips by Gender",
+      "Trips Over Time"
+    ],
+    "legend_anchor_positions": {
+      "PCT of Trips By UserType": "right",
+      "Pct of Trips by Gender": "above",
+      "Trips Over Time": "below"
+    },
+    "axis_title_worksheets": [
+      "PCT of Trips By UserType",
+      "Pct of Trips by Gender"
+    ],
+    "interaction_worksheets": [
+      "PCT of Trips By UserType",
+      "Pct of Trips by Gender",
+      "Trips Over Time"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 4
+  }
+}

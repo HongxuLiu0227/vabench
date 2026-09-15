@@ -1,0 +1,775 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_8239/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:36.735536Z"
+  },
+  "dashboard": {
+    "name": "Superstore Sales Insight Dashboard",
+    "worksheet_count": 10
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_month",
+        "name": "Month",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Month"
+        }
+      },
+      {
+        "id": "ws_orders_by_region_category",
+        "name": "Orders by Region & Category",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Orders by Region & Category"
+        }
+      },
+      {
+        "id": "ws_profit_by_category",
+        "name": "Profit % by Category",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Profit % by Category"
+        }
+      },
+      {
+        "id": "ws_profit_by_markets",
+        "name": "Profit by Markets",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Profit by Markets"
+        }
+      },
+      {
+        "id": "ws_profit_by_year",
+        "name": "Profit by Year",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Profit by Year"
+        }
+      },
+      {
+        "id": "ws_sales_quantity",
+        "name": "Sales Quantity",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 5,
+          "worksheet_name": "Sales Quantity"
+        }
+      },
+      {
+        "id": "ws_sales_quantity_by_markets",
+        "name": "Sales Quantity by Markets",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 6,
+          "worksheet_name": "Sales Quantity by Markets"
+        }
+      },
+      {
+        "id": "ws_top_5_items_by_sales",
+        "name": "Top 5 items by Sales",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 7,
+          "worksheet_name": "Top 5 items by Sales"
+        }
+      },
+      {
+        "id": "ws_total_profit",
+        "name": "Total Profit",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 8,
+          "worksheet_name": "Total Profit"
+        }
+      },
+      {
+        "id": "ws_year",
+        "name": "Year",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 9,
+          "worksheet_name": "Year"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_order_date",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[mn:Order Date:ok]",
+        "normalized": "Order Date",
+        "role": "dimension"
+      },
+      {
+        "id": "field_action_blank_year_order_date",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "normalized": "Action (Blank,YEAR(Order Date))",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_6943002545466433537",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Calculation_6943002545466433537:nk]",
+        "normalized": "Calculation_6943002545466433537",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_order_id",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[cnt:Order ID:qk]",
+        "normalized": "Order ID",
+        "role": "measure"
+      },
+      {
+        "id": "field_region",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Region:nk]",
+        "normalized": "Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_category",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]",
+        "normalized": "Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_state",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:State:nk]",
+        "normalized": "State",
+        "role": "dimension"
+      },
+      {
+        "id": "field_profit",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[sum:Profit:qk]",
+        "normalized": "Profit",
+        "role": "measure"
+      },
+      {
+        "id": "field_quantity",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[sum:Quantity:qk]",
+        "normalized": "Quantity",
+        "role": "measure"
+      },
+      {
+        "id": "field_sub_category",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Sub-Category:nk]",
+        "normalized": "Sub-Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_action_blank_month_order_date",
+        "raw": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "normalized": "Action (Blank,MONTH(Order Date))",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_month"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_orders_by_region_category"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_profit_by_category"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_profit_by_markets"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 3,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_005",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_profit_by_year"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 4,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_006",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_sales_quantity_by_markets"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 6,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_007",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_top_5_items_by_sales"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 7,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_008",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_year"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 9,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Year"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Month"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Sales Quantity by Markets"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      },
+      {
+        "id": "da_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Profit by Markets"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 3
+        }
+      },
+      {
+        "id": "da_005",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Profit % by Category"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 4
+        }
+      },
+      {
+        "id": "da_006",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Top 5 items by Sales"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 5
+        }
+      },
+      {
+        "id": "da_007",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Orders by Region & Category"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 6
+        }
+      },
+      {
+        "id": "da_008",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Superstore Sales Insight Dashboard",
+          "source_worksheet_name": "Profit by Year"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Superstore Sales Insight Dashboard",
+          "target_name_raw": "Superstore Sales Insight Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 7
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Sales Quantity by Markets",
+        "viewpoint_name": "Sales Quantity by Markets",
+        "field_ids": [
+          "field_state"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Top 5 items by Sales",
+        "viewpoint_name": "Top 5 items by Sales",
+        "field_ids": [
+          "field_sub_category"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Orders by Region & Category",
+        "viewpoint_name": "Orders by Region & Category",
+        "field_ids": [
+          "field_category",
+          "field_order_id"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Profit % by Category",
+        "viewpoint_name": "Profit % by Category",
+        "field_ids": [
+          "field_category"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Year",
+        "viewpoint_name": "Year",
+        "field_ids": [
+          "field_calculation_6943002545466433537"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "Month",
+        "viewpoint_name": "Month",
+        "field_ids": [
+          "field_calculation_6943002545466433537"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "dashboard",
+        "window_name": "Superstore Sales Insight Dashboard",
+        "viewpoint_name": "Profit % by Category",
+        "field_ids": [
+          "field_category"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_month",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_6943002545466433537"
+        ]
+      },
+      {
+        "worksheet_id": "ws_orders_by_region_category",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_category",
+          "field_order_id"
+        ]
+      },
+      {
+        "worksheet_id": "ws_profit_by_category",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_category"
+        ]
+      },
+      {
+        "worksheet_id": "ws_profit_by_markets",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_profit_by_year",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_sales_quantity",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_sales_quantity_by_markets",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_state"
+        ]
+      },
+      {
+        "worksheet_id": "ws_top_5_items_by_sales",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_sub_category"
+        ]
+      },
+      {
+        "worksheet_id": "ws_total_profit",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_year",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_6943002545466433537"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 10,
+    "worksheet_action_count": 8,
+    "dashboard_action_count": 8,
+    "highlight_binding_count": 7,
+    "field_count": 11
+  }
+}

@@ -1,0 +1,1402 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.2.1 (20212.21.0712.0907)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Age Comparison",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Age Groups]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[Age Groups]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_15988D3299834A83AB155B6CC8E7CC38]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[gender]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4_2C18B568C9344024993CFFE8D08ED3A5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[mn:starttime:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[usertype]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_BBFB3D0A52B644488621B8443BB6203B]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Customers vs Subsribers Totals",
+      "chart_type": "Line",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cum:cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cum:cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[mn:starttime:ok]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[mn:starttime:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "worksheet"
+      ],
+      "table_calc": [
+        {
+          "aggregation": "Sum",
+          "ordering-type": "Rows",
+          "type": "CumTotal",
+          "column_instance": "[__tableau_internal_object_id__].[cum:cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_B1FA779B4BC24BB3AE50DB4DE48BA961]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Age Groups]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_15988D3299834A83AB155B6CC8E7CC38]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[gender]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[usertype]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_BBFB3D0A52B644488621B8443BB6203B]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Customers vs Subscribers Totals",
+          "style": {}
+        }
+      ],
+      "title_text": "Customers vs Subscribers Totals",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cum:cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Male vs Female Totals",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk] / [federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk])",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:gender:nk]",
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:usertype:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_B1FA779B4BC24BB3AE50DB4DE48BA961]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Age Groups]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4_2C18B568C9344024993CFFE8D08ED3A5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[mn:starttime:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[usertype]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_BBFB3D0A52B644488621B8443BB6203B]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection-all-when-empty": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:gender:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:gender:nk]",
+                      "member": "\"Unknown\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Male vs Female Rider Totals",
+          "style": {}
+        }
+      ],
+      "title_text": "Male vs Female Rider Totals",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of People"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Trips 2020",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+        "fields": [
+          "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7]",
+          "[none:usertype:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Age Groups,Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3_B1FA779B4BC24BB3AE50DB4DE48BA961]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Age Groups]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (Gender,Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1_15988D3299834A83AB155B6CC8E7CC38]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[gender]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Action (MONTH(Starttime),Usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4_2C18B568C9344024993CFFE8D08ED3A5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[mn:starttime:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Amount of trips total during 2020",
+          "style": {}
+        }
+      ],
+      "title_text": "Amount of trips total during 2020",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[__tableau_internal_object_id__].[cnt:2020-citibike-tripdata.csv_2F3EFCFE222F4686B0EA2FF8A40BD19A:qk]",
+            "title": "Number of Trips"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Customers vs Subscribers DB",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "13357",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "14286",
+          "w": "99034",
+          "h": "84785",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "title",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "9640",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "20",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "14286",
+          "w": "99034",
+          "h": "84785",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Age Comparison",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "49998",
+          "y": "56676",
+          "w": "49519",
+          "h": "42395",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Male vs Female Totals",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "483",
+          "y": "14286",
+          "w": "49515",
+          "h": "42390",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Customers vs Subsribers Totals",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "49998",
+          "y": "14286",
+          "w": "49519",
+          "h": "42390",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Total Trips 2020",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "483",
+          "y": "56676",
+          "w": "49515",
+          "h": "42395",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "724",
+          "y": "1278",
+          "w": "20036",
+          "h": "11731",
+          "param": "Image/Citi_Bike_logo.svg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Age Comparison",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "90706",
+          "y": "10918",
+          "w": "8449",
+          "h": "9640",
+          "param": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Customers vs Subscribers DB",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "13357",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "14286",
+          "w": "99034",
+          "h": "84785",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "title",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "9640",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "20",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "14286",
+          "w": "99034",
+          "h": "84785",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Age Comparison",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "49998",
+          "y": "56676",
+          "w": "49519",
+          "h": "42395",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Male vs Female Totals",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "483",
+          "y": "14286",
+          "w": "49515",
+          "h": "42390",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Customers vs Subsribers Totals",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "49998",
+          "y": "14286",
+          "w": "49519",
+          "h": "42390",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Total Trips 2020",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "483",
+          "y": "56676",
+          "w": "49515",
+          "h": "42395",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "724",
+          "y": "1278",
+          "w": "20036",
+          "h": "11731",
+          "param": "Image/Citi_Bike_logo.svg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Age Comparison",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "90706",
+          "y": "10918",
+          "w": "8449",
+          "h": "9640",
+          "param": "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_15988D3299834A83AB155B6CC8E7CC38]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Male vs Female Totals"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    },
+    {
+      "name": "[Action2_BBFB3D0A52B644488621B8443BB6203B]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Total Trips 2020"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    },
+    {
+      "name": "[Action3_B1FA779B4BC24BB3AE50DB4DE48BA961]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Age Comparison"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    },
+    {
+      "name": "[Action4_2C18B568C9344024993CFFE8D08ED3A5]",
+      "caption": "Filter 4 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Customers vs Subscribers DB",
+        "type": "sheet",
+        "worksheet": "Customers vs Subsribers Totals"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Customers vs Subscribers DB"
+      },
+      "field_captions": [],
+      "target": "Customers vs Subscribers DB"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Trips 2020",
+      "viewpoint_name": "Total Trips 2020",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Customers vs Subsribers Totals",
+      "viewpoint_name": "Customers vs Subsribers Totals",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[mn:starttime:ok]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Male vs Female Totals",
+      "viewpoint_name": "Male vs Female Totals",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:gender:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Age Comparison",
+      "viewpoint_name": "Age Comparison",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[Age Groups]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:Age (bin):ok]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:Calculation_949696574842662915:ok]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]",
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[tyr:birth year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Customers vs Subscribers DB",
+      "viewpoint_name": "Age Comparison",
+      "fields": [
+        "[federated.1av8hvy0u9aebv1fsz5tj1j5hdb7].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 5
+  }
+}

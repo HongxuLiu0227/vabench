@@ -1,0 +1,826 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.1.2 (20211.21.0511.0935)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Bottom 10 Stations - End",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[cnt:end station id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[none:end station name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "bottom",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([bikeid])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations - End",
+          "style": {}
+        }
+      ],
+      "title_text": "Bottom 10 Stations - End",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Bottom 10 Stations - Start",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[cnt:start station id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[none:start station name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "bottom",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "COUNT([start station id])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:start station name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations - Start",
+          "style": {}
+        }
+      ],
+      "title_text": "Bottom 10 Stations - Start",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top 10 Stations - End",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[cnt:end station id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[none:end station name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([bikeid])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:end station name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations - End",
+          "style": {}
+        }
+      ],
+      "title_text": "Top 10 Stations - End",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top 10 Stations - Start",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[cnt:start station id:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+        "fields": [
+          "[federated.1x4cg220zswnce1b47xi10rs3rs4]",
+          "[none:start station name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "COUNT([start station id])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:start station name:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations - Start",
+          "style": {}
+        }
+      ],
+      "title_text": "Top 10 Stations - Start",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Top 10 and Bottom 10",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "1429",
+          "w": "97538",
+          "h": "97142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "1429",
+          "w": "97538",
+          "h": "97142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Top 10 Stations - Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1429",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Top 10 Stations - End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1429",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Bottom 10 Stations - Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "50000",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Bottom 10 Stations - End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "50000",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Top 10 and Bottom 10",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "1231",
+          "y": "1429",
+          "w": "97538",
+          "h": "97142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "1231",
+          "y": "1429",
+          "w": "97538",
+          "h": "97142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Top 10 Stations - Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1429",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Top 10 Stations - End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1429",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Bottom 10 Stations - Start",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "1231",
+          "y": "50000",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Bottom 10 Stations - End",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "50000",
+          "w": "48769",
+          "h": "48571",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 Stations - Start",
+      "viewpoint_name": "Top 10 Stations - Start",
+      "fields": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 Stations - End",
+      "viewpoint_name": "Top 10 Stations - End",
+      "fields": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 Stations - Start",
+      "viewpoint_name": "Bottom 10 Stations - Start",
+      "fields": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 Stations - End",
+      "viewpoint_name": "Bottom 10 Stations - End",
+      "fields": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]",
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]",
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Top 10 and Bottom 10",
+      "viewpoint_name": "Top 10 Stations - End",
+      "fields": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Top 10 and Bottom 10",
+      "viewpoint_name": "Top 10 Stations - Start",
+      "fields": [
+        "[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 6
+  }
+}

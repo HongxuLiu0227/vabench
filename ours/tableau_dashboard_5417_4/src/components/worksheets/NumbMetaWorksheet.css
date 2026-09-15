@@ -1,0 +1,75 @@
+.numb-meta-worksheet {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.worksheet-title {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+svg {
+  flex: 1;
+}
+
+.axis line,
+.axis path {
+  stroke: #666;
+  stroke-width: 1;
+}
+
+.grid line {
+  stroke: #ccc;
+  stroke-dasharray: 3, 3;
+}
+
+.axis text {
+  fill: #333;
+  font-size: 11px;
+}
+
+.axis-title {
+  fill: #333;
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.y-axis-title {
+  text-anchor: middle !important;
+}
+
+.x-axis-title {
+  text-anchor: middle;
+}
+
+.line {
+  fill: none;
+  stroke: #4a90a4;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dot {
+  fill: #fff;
+  stroke: #4a90a4;
+  stroke-width: 2;
+  transition: all 0.15s ease;
+}
+
+.dot:hover {
+  fill: #4a90a4;
+}
+
+.tooltip rect {
+  fill: rgba(0, 0, 0, 0.85);
+}
+
+.tooltip text {
+  fill: #fff;
+}

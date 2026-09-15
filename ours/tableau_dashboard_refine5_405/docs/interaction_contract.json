@@ -1,0 +1,132 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_refine5_405/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:38.028498Z"
+  },
+  "dashboard": {
+    "name": "Synthetic Dashboard 405",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_p2648_discount_overview_by_region",
+        "name": "P2648__discount_overview_by_region",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "P2648__discount_overview_by_region"
+        }
+      },
+      {
+        "id": "ws_p9517_sales_by_sub_category",
+        "name": "P9517__sales_by_sub_category",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "P9517__sales_by_sub_category"
+        }
+      },
+      {
+        "id": "ws_p121_scatterplot",
+        "name": "P121__scatterplot",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "P121__scatterplot"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_region",
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[none:Region:nk]",
+        "normalized": "Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31_measure_names_ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31_multiple_values",
+        "raw": "([ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[:Measure Names] * [ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[Multiple Values])",
+        "normalized": "([ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[:Measure Names] * [ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[Multiple Values])",
+        "role": "dimension"
+      },
+      {
+        "id": "field_discount",
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[avg:Discount:qk]",
+        "normalized": "Discount",
+        "role": "measure"
+      },
+      {
+        "id": "field_sub_category",
+        "raw": "([ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[none:Sub-Category:nk] / [ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[none:Product Name:nk])",
+        "normalized": "Sub-Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_sales",
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Sales:qk]",
+        "normalized": "Sales",
+        "role": "measure"
+      },
+      {
+        "id": "field_profit",
+        "raw": "[ds_p2648_federated_17b79zd17x1dqo12u5yju1corl31].[sum:Profit:qk]",
+        "normalized": "Profit",
+        "role": "measure"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [],
+    "dashboard_actions": [],
+    "highlight_bindings": []
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [],
+      "default_trigger_event": "unknown",
+      "default_auto_clear": null
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_p2648_discount_overview_by_region",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_p9517_sales_by_sub_category",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_p121_scatterplot",
+        "supports": [],
+        "focus_field_ids": []
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0,
+    "field_count": 6
+  }
+}

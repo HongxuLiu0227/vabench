@@ -1,0 +1,3224 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.1.0 (20211.21.0507.1603)",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "http://localhost:9100"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Backup",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:OnlineBackup:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Online Backup",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Online Backup",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Churn rate",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "([federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344581492999:qk] + [federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344581746953:qk])",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[usr:Calculation_1852668344581492999:qk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[usr:Calculation_1852668344581746953:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "wedge-size": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 1
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+            "pane_index": 1
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 2
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "label",
+        "worksheet"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Citizen",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[:Measure Names]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[Multiple Values]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[Multiple Values]"
+        ]
+      },
+      "slices": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344589979918:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[sum:SeniorCitizen:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label",
+        "mark",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344589979918:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.19jtpq90ymq6fq14rs9nt1hebysn].[sum:SeniorCitizen:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Contract",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:Contract:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Dependents",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:Dependents:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Yes",
+            "No"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Device Protection",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:DeviceProtection:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "<Sheet Name>",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Gender",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:gender:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label",
+        "worksheet",
+        "legend",
+        "legend-title",
+        "quick-filter",
+        "parameter-ctrl"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Movies",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:StreamingMovies:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Streaming Movies",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Streaming Movies",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Partner",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:Partner:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Yes",
+            "No"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Payment Method",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:PaymentMethod:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Phone service",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "([federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344621695264:qk] + [federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344621789474:qk])",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[usr:Calculation_1852668344621695264:qk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[usr:Calculation_1852668344621789474:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "wedge-size": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 1
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+            "pane_index": 2
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 2
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label",
+        "worksheet"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Security",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:OnlineSecurity:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Online Security",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Online Security",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Support",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:TechSupport:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Tech Support",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Tech Support",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "TV",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:StreamingTV:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Streaming TV",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Streaming TV",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "churn",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[cum:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk:2]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "refline"
+      ],
+      "table_calc": [
+        {
+          "aggregation": "Sum",
+          "ordering-field": "",
+          "ordering-type": "Field",
+          "type": "CumTotal",
+          "column_instance": "[cum:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk:2]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "churn (2)",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "refline"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "internet service",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:InternetService:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "lines",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[none:MultipleLines:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Yes",
+            "No",
+            "No phone service"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "phs",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[cum:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk:2]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "refline"
+      ],
+      "table_calc": [
+        {
+          "aggregation": "Sum",
+          "ordering-field": "",
+          "ordering-type": "Field",
+          "type": "CumTotal",
+          "column_instance": "[cum:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk:2]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "phs (2)",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+        "fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "refline"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[__tableau_internal_object_id__].[pcto:cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "text",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "7125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "                     Telco Customer Churn",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#f28e2b",
+                "fontname": "Tableau Bold",
+                "fontsize": "18"
+              }
+            },
+            {
+              "text": ", ",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "a",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#4e79a7",
+                "fontsize": "14"
+              }
+            },
+            {
+              "text": " ",
+              "style": {
+                "fontalignment": "1",
+                "fontsize": "14"
+              }
+            },
+            {
+              "text": "telephone company business scenario",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#4e79a7",
+                "fontsize": "14"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontsize": "8"
+              }
+            }
+          ],
+          "text": "Telco Customer Churn, a telephone company business scenario\n                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers"
+        },
+        {
+          "id": "24",
+          "name": "Gender",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Partner",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "25200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "Citizen",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "49200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "27",
+          "name": "Dependents",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "73200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "28",
+          "name": "lines",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1200",
+          "y": "27000",
+          "w": "22500",
+          "h": "18750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "29",
+          "name": "Contract",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "25200",
+          "y": "27000",
+          "w": "22500",
+          "h": "18750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "internet service",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "48800",
+          "y": "27000",
+          "w": "23300",
+          "h": "14000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "31",
+          "name": "Payment Method",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "71900",
+          "y": "27000",
+          "w": "26400",
+          "h": "18750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "34",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "1700",
+          "y": "46125",
+          "w": "24000",
+          "h": "3750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Managed Services Usage",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Managed Services Usage"
+        },
+        {
+          "id": "35",
+          "name": "Device Protection",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1300",
+          "y": "52500",
+          "w": "22300",
+          "h": "17000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "36",
+          "name": "Backup",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "25000",
+          "y": "54875",
+          "w": "13800",
+          "h": "14750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "37",
+          "name": "Security",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "38600",
+          "y": "54875",
+          "w": "13500",
+          "h": "14500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "38",
+          "name": "Movies",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "53000",
+          "y": "54875",
+          "w": "15700",
+          "h": "14125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "39",
+          "name": "TV",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "70200",
+          "y": "54875",
+          "w": "12800",
+          "h": "13875",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "40",
+          "name": "Support",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "85000",
+          "y": "54875",
+          "w": "12900",
+          "h": "12875",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "46",
+          "name": "phs",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "47300",
+          "y": "87000",
+          "w": "28200",
+          "h": "3125",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "81",
+          "name": "churn",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "2100",
+          "y": "87500",
+          "w": "21400",
+          "h": "3750",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "82",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "1800",
+          "y": "76125",
+          "w": "20300",
+          "h": "8125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Churn Rate",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontname": "Tableau Bold",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "Orange ",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#f28e2b",
+                "fontname": "Tableau Bold",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "indicates customers lost",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontname": "Tableau Bold",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "Churn Rate\n\nOrange indicates customers lost"
+        },
+        {
+          "id": "85",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "47000",
+          "y": "76125",
+          "w": "28300",
+          "h": "8125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Phone Service Usage",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "Orange ",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#f28e2b",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "indicates customers not using service",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "Phone Service Usage\n\nOrange indicates customers not using service"
+        },
+        {
+          "id": "86",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "36200",
+          "y": "96250",
+          "w": "22100",
+          "h": "3750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": " Project Data Source:",
+              "style": {
+                "fontname": "Tableau Bold",
+                "fontsize": "12"
+              }
+            },
+            {
+              "text": " Kaggle ",
+              "style": {
+                "fontcolor": "#b6992d",
+                "fontname": "Tableau Bold",
+                "fontsize": "12"
+              }
+            },
+            {
+              "text": " ",
+              "style": {
+                "fontname": "Tableau Bold",
+                "fontsize": "12"
+              }
+            }
+          ],
+          "text": "Project Data Source: Kaggle"
+        },
+        {
+          "id": "92",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "23800",
+          "y": "76125",
+          "w": "21700",
+          "h": "18875",
+          "param": "Image/cr.jpg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "95",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "77500",
+          "y": "76125",
+          "w": "20200",
+          "h": "22000",
+          "param": "Image/ph.jpg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "102",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "1700",
+          "y": "9500",
+          "w": "24800",
+          "h": "3750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Customer Demographics",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Customer Demographics"
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "5",
+      "x": "800",
+      "y": "1000",
+      "w": "98400",
+      "h": "7125",
+      "text": "Telco Customer Churn, a telephone company business scenario\n                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers",
+      "text_runs": [
+        {
+          "text": "                     Telco Customer Churn",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#f28e2b",
+            "fontname": "Tableau Bold",
+            "fontsize": "18"
+          }
+        },
+        {
+          "text": ", ",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "a",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#4e79a7",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": " ",
+          "style": {
+            "fontalignment": "1",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": "telephone company business scenario",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#4e79a7",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "8"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "34",
+      "x": "1700",
+      "y": "46125",
+      "w": "24000",
+      "h": "3750",
+      "text": "Managed Services Usage",
+      "text_runs": [
+        {
+          "text": "Managed Services Usage",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "82",
+      "x": "1800",
+      "y": "76125",
+      "w": "20300",
+      "h": "8125",
+      "text": "Churn Rate\n\nOrange indicates customers lost",
+      "text_runs": [
+        {
+          "text": "Churn Rate",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontname": "Tableau Bold",
+            "fontsize": "15"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "Orange ",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#f28e2b",
+            "fontname": "Tableau Bold",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "indicates customers lost",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Bold",
+            "fontsize": "10"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "85",
+      "x": "47000",
+      "y": "76125",
+      "w": "28300",
+      "h": "8125",
+      "text": "Phone Service Usage\n\nOrange indicates customers not using service",
+      "text_runs": [
+        {
+          "text": "Phone Service Usage",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontsize": "15"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "Orange ",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#f28e2b",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "indicates customers not using service",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontsize": "10"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "86",
+      "x": "36200",
+      "y": "96250",
+      "w": "22100",
+      "h": "3750",
+      "text": "Project Data Source: Kaggle",
+      "text_runs": [
+        {
+          "text": " Project Data Source:",
+          "style": {
+            "fontname": "Tableau Bold",
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": " Kaggle ",
+          "style": {
+            "fontcolor": "#b6992d",
+            "fontname": "Tableau Bold",
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": " ",
+          "style": {
+            "fontname": "Tableau Bold",
+            "fontsize": "12"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "102",
+      "x": "1700",
+      "y": "9500",
+      "w": "24800",
+      "h": "3750",
+      "text": "Customer Demographics",
+      "text_runs": [
+        {
+          "text": "Customer Demographics",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontsize": "15"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "text",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "7125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "                     Telco Customer Churn",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#f28e2b",
+                "fontname": "Tableau Bold",
+                "fontsize": "18"
+              }
+            },
+            {
+              "text": ", ",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "a",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#4e79a7",
+                "fontsize": "14"
+              }
+            },
+            {
+              "text": " ",
+              "style": {
+                "fontalignment": "1",
+                "fontsize": "14"
+              }
+            },
+            {
+              "text": "telephone company business scenario",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#4e79a7",
+                "fontsize": "14"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontsize": "8"
+              }
+            }
+          ],
+          "text": "Telco Customer Churn, a telephone company business scenario\n                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers"
+        },
+        {
+          "id": "24",
+          "name": "Gender",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Partner",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "25200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "Citizen",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "49200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "27",
+          "name": "Dependents",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "73200",
+          "y": "11875",
+          "w": "20500",
+          "h": "14375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "28",
+          "name": "lines",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1200",
+          "y": "27000",
+          "w": "22500",
+          "h": "18750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "29",
+          "name": "Contract",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "25200",
+          "y": "27000",
+          "w": "22500",
+          "h": "18750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "internet service",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "48800",
+          "y": "27000",
+          "w": "23300",
+          "h": "14000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "31",
+          "name": "Payment Method",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "71900",
+          "y": "27000",
+          "w": "26400",
+          "h": "18750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "34",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "1700",
+          "y": "46125",
+          "w": "24000",
+          "h": "3750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Managed Services Usage",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Managed Services Usage"
+        },
+        {
+          "id": "35",
+          "name": "Device Protection",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1300",
+          "y": "52500",
+          "w": "22300",
+          "h": "17000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "36",
+          "name": "Backup",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "25000",
+          "y": "54875",
+          "w": "13800",
+          "h": "14750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "37",
+          "name": "Security",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "38600",
+          "y": "54875",
+          "w": "13500",
+          "h": "14500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "38",
+          "name": "Movies",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "53000",
+          "y": "54875",
+          "w": "15700",
+          "h": "14125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "39",
+          "name": "TV",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "70200",
+          "y": "54875",
+          "w": "12800",
+          "h": "13875",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "40",
+          "name": "Support",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "85000",
+          "y": "54875",
+          "w": "12900",
+          "h": "12875",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "46",
+          "name": "phs",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "47300",
+          "y": "87000",
+          "w": "28200",
+          "h": "3125",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "81",
+          "name": "churn",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "2100",
+          "y": "87500",
+          "w": "21400",
+          "h": "3750",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "82",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "1800",
+          "y": "76125",
+          "w": "20300",
+          "h": "8125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Churn Rate",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontname": "Tableau Bold",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "Orange ",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#f28e2b",
+                "fontname": "Tableau Bold",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "indicates customers lost",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontname": "Tableau Bold",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "Churn Rate\n\nOrange indicates customers lost"
+        },
+        {
+          "id": "85",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "47000",
+          "y": "76125",
+          "w": "28300",
+          "h": "8125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Phone Service Usage",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "\n",
+              "style": {}
+            },
+            {
+              "text": "Orange ",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#f28e2b",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "indicates customers not using service",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#000000",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "Phone Service Usage\n\nOrange indicates customers not using service"
+        },
+        {
+          "id": "86",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "36200",
+          "y": "96250",
+          "w": "22100",
+          "h": "3750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": " Project Data Source:",
+              "style": {
+                "fontname": "Tableau Bold",
+                "fontsize": "12"
+              }
+            },
+            {
+              "text": " Kaggle ",
+              "style": {
+                "fontcolor": "#b6992d",
+                "fontname": "Tableau Bold",
+                "fontsize": "12"
+              }
+            },
+            {
+              "text": " ",
+              "style": {
+                "fontname": "Tableau Bold",
+                "fontsize": "12"
+              }
+            }
+          ],
+          "text": "Project Data Source: Kaggle"
+        },
+        {
+          "id": "92",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "23800",
+          "y": "76125",
+          "w": "21700",
+          "h": "18875",
+          "param": "Image/cr.jpg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "95",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "bitmap",
+          "x": "77500",
+          "y": "76125",
+          "w": "20200",
+          "h": "22000",
+          "param": "Image/ph.jpg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "102",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "1700",
+          "y": "9500",
+          "w": "24800",
+          "h": "3750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Customer Demographics",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#4e79a7",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Customer Demographics"
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_8A6B2C65DAAF4B398CE4F5D983319641]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Gender"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender",
+        "target": "Gender"
+      },
+      "field_captions": [
+        "Gender"
+      ],
+      "target": "Gender"
+    },
+    {
+      "name": "[Action2_62D114801E8C45B3A97E5AFD74148F3A]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender",
+      "viewpoint_name": "Gender",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Partner",
+      "viewpoint_name": "Partner",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Citizen",
+      "viewpoint_name": "Citizen",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Dependents",
+      "viewpoint_name": "Dependents",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "lines",
+      "viewpoint_name": "lines",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Contract",
+      "viewpoint_name": "Contract",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "internet service",
+      "viewpoint_name": "internet service",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Payment Method",
+      "viewpoint_name": "Payment Method",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Device Protection",
+      "viewpoint_name": "Device Protection",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Backup",
+      "viewpoint_name": "Backup",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Security",
+      "viewpoint_name": "Security",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Movies",
+      "viewpoint_name": "Movies",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "TV",
+      "viewpoint_name": "TV",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Support",
+      "viewpoint_name": "Support",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Churn rate",
+      "viewpoint_name": "Churn rate",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Phone service",
+      "viewpoint_name": "Phone service",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "churn",
+      "viewpoint_name": "churn",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "churn (2)",
+      "viewpoint_name": "churn (2)",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "phs",
+      "viewpoint_name": "phs",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "phs (2)",
+      "viewpoint_name": "phs (2)",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Contract",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Device Protection",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "churn",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "lines",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 20,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 6,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 24
+  }
+}

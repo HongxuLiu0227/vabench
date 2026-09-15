@@ -1,0 +1,1106 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.2.2 (20202.20.0614.2338)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Number of Boats Sold By Brokers(Price Cut)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6]",
+          "[none:Selling Broker:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+        "fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "quantitative",
+          "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "#2012-01-21#"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "#2020-07-06#"
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Brent Hermann\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Caroline Laviolette\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Chris Block\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"John Anderson\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Michael Harris\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Mike Auton\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Mike Nystrum\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Monte Cottrell\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Peter Gulick\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Staley Weidman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+            "title": "Number of Boats Sold"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6]",
+          "[none:Selling Broker:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+        "fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "quantitative",
+          "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "#2012-01-21#"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "#2020-07-06#"
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Brent Hermann\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Caroline Laviolette\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Chris Block\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"John Anderson\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Michael Harris\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Mike Auton\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Mike Nystrum\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Monte Cottrell\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Peter Gulick\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Staley Weidman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+            "title": "Number of Boats Sold"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Number of Boats Sold By Brokers(Used vs New)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6]",
+          "[none:Selling Broker:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+        "fields": [
+          "[federated.0xc14ao1st9wyu1h40zo40lm8av6]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "quantitative",
+          "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "#2012-01-21#"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "#2020-07-06#"
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Brent Hermann\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Caroline Laviolette\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Chris Block\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"John Anderson\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Michael Harris\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Mike Auton\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Mike Nystrum\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Monte Cottrell\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Peter Gulick\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Selling Broker:nk]",
+                      "member": "\"Staley Weidman\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]",
+            "title": "Number of Boats Sold"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Brokers Stats",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "967",
+          "y": "684",
+          "w": "98066",
+          "h": "98632",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "967",
+          "y": "684",
+          "w": "98066",
+          "h": "98632",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Number of Boats Sold By Brokers(Price Cut)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "967",
+          "y": "25340",
+          "w": "87470",
+          "h": "36198",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Number of Boats Sold By Brokers(Used vs New)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "967",
+          "y": "61538",
+          "w": "87470",
+          "h": "37778",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Number of Boats Sold By Brokers(Sail vs Power)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "967",
+          "y": "684",
+          "w": "87470",
+          "h": "24656",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Number of Boats Sold By Brokers(Used vs New)",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "88437",
+          "y": "61538",
+          "w": "10596",
+          "h": "37778",
+          "param": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Number of Boats Sold By Brokers(Price Cut)",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "88437",
+          "y": "25340",
+          "w": "10596",
+          "h": "36198",
+          "param": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Number of Boats Sold By Brokers(Sail vs Power)",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "88437",
+          "y": "684",
+          "w": "10596",
+          "h": "24656",
+          "param": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Brokers Stats",
+      "size": {
+        "maxheight": "1169",
+        "maxwidth": "827",
+        "minheight": "1169",
+        "minwidth": "827",
+        "preset-index": "15",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "967",
+          "y": "684",
+          "w": "98066",
+          "h": "98632",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "967",
+          "y": "684",
+          "w": "98066",
+          "h": "98632",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Number of Boats Sold By Brokers(Price Cut)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "967",
+          "y": "25340",
+          "w": "87470",
+          "h": "36198",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Number of Boats Sold By Brokers(Used vs New)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "967",
+          "y": "61538",
+          "w": "87470",
+          "h": "37778",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Number of Boats Sold By Brokers(Sail vs Power)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "967",
+          "y": "684",
+          "w": "87470",
+          "h": "24656",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Number of Boats Sold By Brokers(Used vs New)",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "88437",
+          "y": "61538",
+          "w": "10596",
+          "h": "37778",
+          "param": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Number of Boats Sold By Brokers(Price Cut)",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "88437",
+          "y": "25340",
+          "w": "10596",
+          "h": "36198",
+          "param": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Number of Boats Sold By Brokers(Sail vs Power)",
+          "parent_id": "5",
+          "zone_type": "color",
+          "x": "88437",
+          "y": "684",
+          "w": "10596",
+          "h": "24656",
+          "param": "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Number of Boats Sold By Brokers(Price Cut)"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "HasPriceCut",
+        "target": "Number of Boats Sold By Brokers(Price Cut)"
+      },
+      "field_captions": [
+        "HasPriceCut"
+      ],
+      "target": "Number of Boats Sold By Brokers(Price Cut)"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Brokers Stats",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "HasPriceCut",
+        "target": "Brokers Stats"
+      },
+      "field_captions": [
+        "HasPriceCut"
+      ],
+      "target": "Brokers Stats"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Number of Boats Sold By Brokers(Price Cut)",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Price Cut)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Number of Boats Sold By Brokers(Used vs New)",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Used vs New)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[:Measure Names]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]",
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Brokers Stats",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Sail vs Power)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Brokers Stats",
+      "viewpoint_name": "Number of Boats Sold By Brokers(Used vs New)",
+      "fields": [
+        "[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 5
+  }
+}

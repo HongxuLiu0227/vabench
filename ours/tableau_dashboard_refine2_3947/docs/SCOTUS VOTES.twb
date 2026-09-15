@@ -1,0 +1,1018 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0612.1552                               -->
+<workbook include-phone-layouts='false' original-version='18.1' source-build='2019.2.0 (20192.19.0515.1630)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IncludePhoneLayoutsOptOut ignorable='true' predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/SCOTUSVOTES?rev=1.3' id='SCOTUSVOTES' path='/workbooks' revision='1.4' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='full_votes' inline='true' name='federated.1xqbuif0zy7qie17waup21fe5cdu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='full_votes' name='textscan.1ayn7xa1b8xvqe1d95p9x0z8oiuu'>
+            <connection class='textscan' directory='C:/Users/Emily/Desktop/SCOTUS/Resources' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ayn7xa1b8xvqe1d95p9x0z8oiuu' name='full_votes.csv' table='[full_votes#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='justice' ordinal='1' />
+            <column datatype='string' name='justiceName' ordinal='2' />
+            <column datatype='integer' name='majVotes' ordinal='3' />
+            <column datatype='integer' name='minVotes' ordinal='4' />
+            <column datatype='integer' name='decisionDirection' ordinal='5' />
+            <column datatype='integer' name='majority' ordinal='6' />
+            <column datatype='string' name='caseId' ordinal='7' />
+            <column datatype='integer' name='term' ordinal='8' />
+            <column datatype='integer' name='partyWinning' ordinal='9' />
+            <column datatype='integer' name='precedentAlteration' ordinal='10' />
+            <column datatype='integer' name='vote' ordinal='11' />
+            <column datatype='integer' name='issueArea' ordinal='12' />
+            <column datatype='integer' name='vote_direction' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>justice</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[justice]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>justice</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>justiceName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[justiceName]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>justiceName</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>majVotes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[majVotes]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>majVotes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minVotes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[minVotes]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>minVotes</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>decisionDirection</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[decisionDirection]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>decisionDirection</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>majority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[majority]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>majority</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>caseId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[caseId]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>caseId</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>term</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[term]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>term</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partyWinning</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[partyWinning]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>partyWinning</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>precedentAlteration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[precedentAlteration]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>precedentAlteration</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vote]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>vote</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>issueArea</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[issueArea]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>issueArea</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote_direction</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vote_direction]</local-name>
+            <parent-name>[full_votes.csv]</parent-name>
+            <remote-alias>vote_direction</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Case Id' datatype='string' name='[caseId]' role='dimension' type='nominal' />
+      <column caption='Decision Direction' datatype='integer' name='[decisionDirection]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Issue Area' datatype='integer' name='[issueArea]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='1' value='Criminal Procedure' />
+          <alias key='2' value='Civil Rights' />
+          <alias key='3' value='First Amendment' />
+          <alias key='4' value='Due Process' />
+          <alias key='5' value='Privacy' />
+          <alias key='6' value='Attorneys' />
+          <alias key='7' value='Unions' />
+          <alias key='8' value='Economic Activity' />
+          <alias key='9' value='Judicial Power' />
+          <alias key='10' value='Federalism' />
+          <alias key='11' value='Interstate Relations' />
+          <alias key='12' value='Federal Taxation' />
+          <alias key='13' value='Miscellaneous' />
+          <alias key='14' value='Private Action' />
+        </aliases>
+      </column>
+      <column caption='Justice Name' datatype='string' name='[justiceName]' role='dimension' type='nominal' />
+      <column caption='Justice' datatype='integer' name='[justice]' role='measure' type='quantitative' />
+      <column caption='Maj Votes' datatype='integer' name='[majVotes]' role='measure' type='quantitative' />
+      <column caption='Majority' datatype='integer' name='[majority]' role='measure' type='quantitative' />
+      <column caption='Min Votes' datatype='integer' name='[minVotes]' role='measure' type='quantitative' />
+      <column caption='Party Winning' datatype='integer' name='[partyWinning]' role='measure' type='quantitative' />
+      <column caption='Precedent Alteration' datatype='integer' name='[precedentAlteration]' role='measure' type='quantitative' />
+      <column caption='Term' datatype='integer' name='[term]' role='measure' type='quantitative' />
+      <column caption='Vote' datatype='integer' name='[vote]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Vote Direction' datatype='integer' name='[vote_direction]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='No Vote' />
+          <alias key='1' value='Conservative' />
+          <alias key='2' value='Liberal' />
+          <alias key='3' value='Unspecifiable' />
+        </aliases>
+      </column>
+      <column-instance column='[justiceName]' derivation='None' name='[none:justiceName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[vote_direction]' derivation='None' name='[none:vote_direction:ok]' pivot='key' type='ordinal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/TEMP_17c8nuo10pkc6t16hq2ut064xifx.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='06/24/2019 01:21:55 PM' updated-database='C:/Users/Emily/AppData/Local/Temp/TableauTemp/#TableauTemp_08jfv5x068662e144ggaa1jso6ln.hyper'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='full_votes' increment-value='%null%' refresh-type='create' rows-inserted='79612' timestamp-start='2019-06-24 13:21:55.884' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79612</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>justice</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[justice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>justice</remote-alias>
+              <ordinal>1</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>justiceName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[justiceName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>justiceName</remote-alias>
+              <ordinal>2</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>majVotes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[majVotes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>majVotes</remote-alias>
+              <ordinal>3</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>minVotes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[minVotes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>minVotes</remote-alias>
+              <ordinal>4</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>decisionDirection</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[decisionDirection]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>decisionDirection</remote-alias>
+              <ordinal>5</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>majority</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[majority]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>majority</remote-alias>
+              <ordinal>6</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>caseId</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[caseId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>caseId</remote-alias>
+              <ordinal>7</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17234</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>term</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[term]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>term</remote-alias>
+              <ordinal>8</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>partyWinning</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[partyWinning]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>partyWinning</remote-alias>
+              <ordinal>9</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>precedentAlteration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[precedentAlteration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>precedentAlteration</remote-alias>
+              <ordinal>10</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vote</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vote]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vote</remote-alias>
+              <ordinal>11</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>issueArea</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[issueArea]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>issueArea</remote-alias>
+              <ordinal>12</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vote_direction</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vote_direction]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vote_direction</remote-alias>
+              <ordinal>13</ordinal>
+              <family>full_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.411271' measure-ordering='alphabetic' measure-percentage='0.588729' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:justiceName:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;CThomas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SAAlito&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;RBGinsburg&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SSotomayor&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;JGRoberts&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;SGBreyer&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;EKagan&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;NMGorsuch&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:vote_direction:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter1' name='[Action1]'>
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>SCOTUS Votes 1991 - 2017</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/SCOTUSVOTES/Sheet1?rev=' id='Sheet1' path='/workbooks/SCOTUSVOTES' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='full_votes' name='federated.1xqbuif0zy7qie17waup21fe5cdu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xqbuif0zy7qie17waup21fe5cdu'>
+            <column-instance column='[vote_direction]' derivation='Count' name='[cnt:vote_direction:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Issue Area' datatype='integer' name='[issueArea]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Criminal Procedure' />
+                <alias key='2' value='Civil Rights' />
+                <alias key='3' value='First Amendment' />
+                <alias key='4' value='Due Process' />
+                <alias key='5' value='Privacy' />
+                <alias key='6' value='Attorneys' />
+                <alias key='7' value='Unions' />
+                <alias key='8' value='Economic Activity' />
+                <alias key='9' value='Judicial Power' />
+                <alias key='10' value='Federalism' />
+                <alias key='11' value='Interstate Relations' />
+                <alias key='12' value='Federal Taxation' />
+                <alias key='13' value='Miscellaneous' />
+                <alias key='14' value='Private Action' />
+              </aliases>
+            </column>
+            <column caption='Justice Name' datatype='string' name='[justiceName]' role='dimension' type='nominal' />
+            <column-instance column='[issueArea]' derivation='None' name='[none:issueArea:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[justiceName]' derivation='None' name='[none:justiceName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[vote_direction]' derivation='None' name='[none:vote_direction:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Vote Direction' datatype='integer' name='[vote_direction]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='No Vote' />
+                <alias key='1' value='Conservative' />
+                <alias key='2' value='Liberal' />
+                <alias key='3' value='Unspecifiable' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]'>
+            <groupfilter function='level-members' level='[none:issueArea:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;CThomas&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;EKagan&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;JGRoberts&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;NMGorsuch&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;RBGinsburg&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SAAlito&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SGBreyer&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SSotomayor&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</column>
+            <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]' value='124' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' />
+              <text column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:vote_direction:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Justice:&#9;</run>
+                <run bold='true'>&lt;[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Vote Direction:&#9;</run>
+                <run bold='true'>&lt;[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Number of Votes:&#9;</run>
+                <run bold='true'>&lt;[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:vote_direction:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='shape' value=':filled/square' />
+                <format attr='size' value='1.4942541122436523' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:vote_direction:qk]</rows>
+        <cols>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</cols>
+      </table>
+      <simple-id uuid='{1F1FE263-9A88-463D-BFFB-27269892733E}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Precedent Changing Votes (1949 - 2018)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/SCOTUSVOTES/Sheet3?rev=' id='Sheet3' path='/workbooks/SCOTUSVOTES' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='full_votes' name='federated.1xqbuif0zy7qie17waup21fe5cdu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xqbuif0zy7qie17waup21fe5cdu'>
+            <column aggregation='Sum' caption='Issue Area' datatype='integer' name='[issueArea]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Criminal Procedure' />
+                <alias key='2' value='Civil Rights' />
+                <alias key='3' value='First Amendment' />
+                <alias key='4' value='Due Process' />
+                <alias key='5' value='Privacy' />
+                <alias key='6' value='Attorneys' />
+                <alias key='7' value='Unions' />
+                <alias key='8' value='Economic Activity' />
+                <alias key='9' value='Judicial Power' />
+                <alias key='10' value='Federalism' />
+                <alias key='11' value='Interstate Relations' />
+                <alias key='12' value='Federal Taxation' />
+                <alias key='13' value='Miscellaneous' />
+                <alias key='14' value='Private Action' />
+              </aliases>
+            </column>
+            <column caption='Justice Name' datatype='string' name='[justiceName]' role='dimension' type='nominal' />
+            <column-instance column='[issueArea]' derivation='None' name='[none:issueArea:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[justiceName]' derivation='None' name='[none:justiceName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[vote_direction]' derivation='None' name='[none:vote_direction:ok]' pivot='key' type='ordinal' />
+            <column caption='Precedent Alteration' datatype='integer' name='[precedentAlteration]' role='measure' type='quantitative' />
+            <column-instance column='[precedentAlteration]' derivation='Sum' name='[sum:precedentAlteration:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Vote Direction' datatype='integer' name='[vote_direction]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='No Vote' />
+                <alias key='1' value='Conservative' />
+                <alias key='2' value='Liberal' />
+                <alias key='3' value='Unspecifiable' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='1' function='range' level='[none:issueArea:ok]' to='10' />
+              <groupfilter function='member' level='[none:issueArea:ok]' member='12' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;CThomas&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;EKagan&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;JGRoberts&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;NMGorsuch&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;RBGinsburg&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SAAlito&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SGBreyer&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SSotomayor&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</column>
+            <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='auto-subtitle' class='0' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]' field-type='quantitative' major-origin='0' major-show='false' major-spacing='10' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]' value='109' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' />
+              <text column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]</rows>
+        <cols>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]</cols>
+      </table>
+      <simple-id uuid='{C193A1DB-6DAC-4778-BB7F-C1F0853C707E}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Career Votes to Date</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/SCOTUSVOTES/Sheet4?rev=' id='Sheet4' path='/workbooks/SCOTUSVOTES' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='full_votes' name='federated.1xqbuif0zy7qie17waup21fe5cdu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xqbuif0zy7qie17waup21fe5cdu'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Number of Records]' derivation='Count' name='[cnt:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Justice Name' datatype='string' name='[justiceName]' role='dimension' type='nominal' />
+            <column-instance column='[justiceName]' derivation='None' name='[none:justiceName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[term]' derivation='None' name='[none:term:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[vote_direction]' derivation='None' name='[none:vote_direction:ok]' pivot='key' type='ordinal' />
+            <column caption='Term' datatype='integer' name='[term]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Vote Direction' datatype='integer' name='[vote_direction]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='No Vote' />
+                <alias key='1' value='Conservative' />
+                <alias key='2' value='Liberal' />
+                <alias key='3' value='Unspecifiable' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;CThomas&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;EKagan&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;JGRoberts&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;NMGorsuch&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;RBGinsburg&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SAAlito&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SGBreyer&quot;' />
+              <groupfilter function='member' level='[none:justiceName:nk]' member='&quot;SSotomayor&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]'>
+            <groupfilter from='0' function='range' level='[none:vote_direction:ok]' to='2' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</column>
+            <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]' field-type='quantitative' range-type='independent' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:Number of Records:qk]' scope='rows' value='Votes' />
+            <format attr='title' class='0' field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]' scope='cols' value='Year' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear'>
+              <excluded-factors>
+                <column>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</column>
+              </excluded-factors>
+            </trendline>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='1' />
+                <format attr='stroke-color' value='#0000002a' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:Number of Records:qk]</rows>
+        <cols>([federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk] * [federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk])</cols>
+      </table>
+      <simple-id uuid='{678ACAD5-7AB5-427A-80A0-738F27D4938B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/SCOTUSVOTES/Dashboard1?rev=' id='Dashboard1' path='/workbooks/SCOTUSVOTES' revision='' />
+      <style>
+        <style-rule element='dash-subtitle'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+      </style>
+      <size maxheight='1660' maxwidth='1920' minheight='1660' minwidth='1520' sizing-mode='range' />
+      <datasources>
+        <datasource caption='full_votes' name='federated.1xqbuif0zy7qie17waup21fe5cdu' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1xqbuif0zy7qie17waup21fe5cdu'>
+        <column aggregation='Sum' caption='Issue Area' datatype='integer' name='[issueArea]' role='dimension' type='ordinal'>
+          <aliases>
+            <alias key='1' value='Criminal Procedure' />
+            <alias key='2' value='Civil Rights' />
+            <alias key='3' value='First Amendment' />
+            <alias key='4' value='Due Process' />
+            <alias key='5' value='Privacy' />
+            <alias key='6' value='Attorneys' />
+            <alias key='7' value='Unions' />
+            <alias key='8' value='Economic Activity' />
+            <alias key='9' value='Judicial Power' />
+            <alias key='10' value='Federalism' />
+            <alias key='11' value='Interstate Relations' />
+            <alias key='12' value='Federal Taxation' />
+            <alias key='13' value='Miscellaneous' />
+            <alias key='14' value='Private Action' />
+          </aliases>
+        </column>
+        <column caption='Justice Name' datatype='string' name='[justiceName]' role='dimension' type='nominal' />
+        <column-instance column='[issueArea]' derivation='None' name='[none:issueArea:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[justiceName]' derivation='None' name='[none:justiceName:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='31687' id='1' name='Sheet 1' w='52924' x='7797' y='783' />
+        <zone h='32470' id='8' name='Sheet 3' w='56054' x='7206' y='35120' />
+        <zone h='5241' id='9' mode='checkdropdown' name='Sheet 3' param='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]' type='filter' values='database' w='14235' x='49025' y='33133' />
+        <zone h='11987' id='6' name='Sheet 1' pane-specification-id='1' param='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' type='color' w='10396' x='591' y='641' />
+        <zone h='2821' id='7' mode='dropdown' name='Sheet 1' param='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]' show-search='false' type='filter' values='database' w='9451' x='48848' y='1474' />
+        <zone h='30602' id='10' name='Sheet 4' w='65918' x='236' y='68072' />
+      </zones>
+      <simple-id uuid='{34325802-1ABC-45BB-B0B8-AB99BB976EBD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:caseId:nk]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:qk]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A2005942-3410-481C-8512-37C18AAC0A0C}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D0199CF3-162A-4BF4-A019-8F5079F4BEE4}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]</field>
+            <field>[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5AE60A1E-3567-4EC2-BA67-798657BF9F7F}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{2C6B661C-7749-4565-BE0C-B2C324D6CC7E}' />
+    </window>
+  </windows>
+</workbook>

@@ -1,0 +1,1003 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.3.3 (20213.21.1018.0949)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "chart_type": "Shape",
+      "rows": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[avg:max_temp:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:sol:qk]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[none:sol:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120371273730:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "constant",
+          "id": "refline0",
+          "label-type": "automatic",
+          "scope": "per-table",
+          "value": "0.0",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]",
+          "z-order": "1",
+          "pane_index": 0
+        }
+      ],
+      "style_rule_elements": [
+        "axis",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[month]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_29329A4DA3A242B7BFF6DD2B622D2874]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Maximum Temperatures",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Maximum Temperatures",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]",
+            "title": "Max Temp"
+          }
+        ],
+        "cols": [
+          {
+            "field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:sol:qk]",
+            "title": "Sols Elapsed"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 2",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Multiple Values]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[Multiple Values]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk] / [federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names])",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[none:month:nk]",
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:min_temp:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Average Temperature Fluctuations",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Average Temperature Fluctuations",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Multiple Values]",
+            "title": "Temperature (Celsius)"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 3",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "([federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:min_temp:qk] + [federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:max_temp:qk])",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[avg:min_temp:qk]",
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[avg:max_temp:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[none:month:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+            "pane_index": 1
+          },
+          {
+            "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+            "pane_index": 2
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 4",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[sum:sol:qk]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[sum:sol:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:ok]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[none:Calculation_1174595120373465091:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Temperature Fluctuation",
+          "style": {}
+        }
+      ],
+      "title_text": "Temperature Fluctuation",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 5",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+        "fields": [
+          "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58]",
+          "[avg:pressure:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]"
+      ],
+      "encodings": {},
+      "reference_lines": [
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "constant",
+          "id": "refline0",
+          "label": "Mt. Everest",
+          "label-type": "custom",
+          "paired-id": "refline4",
+          "scope": "per-table",
+          "symmetric": "false",
+          "value": "33700.0",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "z-order": "3",
+          "pane_index": 0
+        },
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "constant",
+          "id": "refline1",
+          "label": "Armstrong Limit",
+          "label-type": "custom",
+          "paired-id": "refline5",
+          "scope": "per-pane",
+          "symmetric": "false",
+          "value": "6250.0",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "z-order": "5",
+          "pane_index": 0
+        },
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "max",
+          "id": "refline2",
+          "label-type": "automatic",
+          "paired-id": "refline1",
+          "scope": "per-table",
+          "symmetric": "false",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "z-order": "2",
+          "pane_index": 0
+        },
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "max",
+          "id": "refline3",
+          "label-type": "automatic",
+          "paired-id": "refline2",
+          "scope": "per-table",
+          "symmetric": "false",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "z-order": "1",
+          "pane_index": 0
+        },
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "max",
+          "id": "refline4",
+          "label-type": "computation",
+          "paired-id": "refline0",
+          "scope": "per-table",
+          "symmetric": "false",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "z-order": "4",
+          "pane_index": 0
+        },
+        {
+          "axis-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "enable-instant-analytics": "true",
+          "formula": "max",
+          "id": "refline5",
+          "label-type": "automatic",
+          "paired-id": "refline1",
+          "scope": "per-pane",
+          "symmetric": "false",
+          "value-column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+          "z-order": "6",
+          "pane_index": 0
+        }
+      ],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "refband"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[Action (Month)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[month]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2_29329A4DA3A242B7BFF6DD2B622D2874]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Can You Handle the Pressure?",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Can You Handle the Pressure?",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[avg:pressure:qk]",
+            "title": "Pressure (Pa)"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Mars: The Next Big Tourist Destination?",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "425",
+          "y": "978",
+          "w": "99150",
+          "h": "98044",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "11",
+          "zone_type": "title",
+          "x": "425",
+          "y": "978",
+          "w": "99150",
+          "h": "11247",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "11",
+          "zone_type": "layout-flow",
+          "x": "425",
+          "y": "12225",
+          "w": "99150",
+          "h": "86797",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-basic",
+          "x": "425",
+          "y": "12225",
+          "w": "78268",
+          "h": "86797",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "78693",
+          "y": "12225",
+          "w": "20882",
+          "h": "86797",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 2",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "425",
+          "y": "60989",
+          "w": "78268",
+          "h": "38033",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Sheet 1",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "425",
+          "y": "12225",
+          "w": "78268",
+          "h": "48764",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sheet 5",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "78693",
+          "y": "12225",
+          "w": "20882",
+          "h": "86797",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 2",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "63155",
+          "y": "60024",
+          "w": "15150",
+          "h": "6357",
+          "param": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Mars: The Next Big Tourist Destination?",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "425",
+          "y": "978",
+          "w": "99150",
+          "h": "98044",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "11",
+          "zone_type": "title",
+          "x": "425",
+          "y": "978",
+          "w": "99150",
+          "h": "11247",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "11",
+          "zone_type": "layout-flow",
+          "x": "425",
+          "y": "12225",
+          "w": "99150",
+          "h": "86797",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-basic",
+          "x": "425",
+          "y": "12225",
+          "w": "78268",
+          "h": "86797",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "78693",
+          "y": "12225",
+          "w": "20882",
+          "h": "86797",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 2",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "425",
+          "y": "60989",
+          "w": "78268",
+          "h": "38033",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Sheet 1",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "425",
+          "y": "12225",
+          "w": "78268",
+          "h": "48764",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sheet 5",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "78693",
+          "y": "12225",
+          "w": "20882",
+          "h": "86797",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 2",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "63155",
+          "y": "60024",
+          "w": "15150",
+          "h": "6357",
+          "param": "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_8D2840C444CD43DEB13564390CBBEC6E]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Sheet 1"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Sol (group)",
+        "target": "Sheet 1"
+      },
+      "field_captions": [
+        "Sol (group)"
+      ],
+      "target": "Sheet 1"
+    },
+    {
+      "name": "[Action2_29329A4DA3A242B7BFF6DD2B622D2874]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Mars: The Next Big Tourist Destination?",
+        "type": "sheet",
+        "worksheet": "Sheet 2"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Mars: The Next Big Tourist Destination?"
+      },
+      "field_captions": [],
+      "target": "Mars: The Next Big Tourist Destination?"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Mars: The Next Big Tourist Destination?",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120371273730:nk]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[:Measure Names]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120362745857:qk]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:month:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:ok]",
+        "[federated.0hbn5jb01pcjiv1fjiptj1ctfi58].[none:Calculation_1174595120373465091:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 5
+  }
+}

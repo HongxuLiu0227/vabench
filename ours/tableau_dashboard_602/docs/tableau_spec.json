@@ -1,0 +1,463 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.2.2 (20202.20.0614.2338)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Gender Gap",
+      "chart_type": "Line",
+      "rows": {
+        "raw": "[federated.1nootr000bhdfw14p7u8a08vc5al].[sum:6-month premium:ok]",
+        "fields": [
+          "[federated.1nootr000bhdfw14p7u8a08vc5al]",
+          "[sum:6-month premium:ok]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+        "fields": [
+          "[federated.1nootr000bhdfw14p7u8a08vc5al]",
+          "[none:Age:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "label",
+        "table",
+        "worksheet",
+        "legend-title",
+        "annotation"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Male",
+            "Female",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Disparity in premium cost by gender",
+          "style": {}
+        }
+      ],
+      "title_text": "Disparity in premium cost by gender",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": "right"
+      }
+    },
+    {
+      "name": "Premiums Fall",
+      "chart_type": "Shape",
+      "rows": {
+        "raw": "[federated.1nootr000bhdfw14p7u8a08vc5al].[avg:6-month premium:qk]",
+        "fields": [
+          "[federated.1nootr000bhdfw14p7u8a08vc5al]",
+          "[avg:6-month premium:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+        "fields": [
+          "[federated.1nootr000bhdfw14p7u8a08vc5al]",
+          "[none:Age:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "label",
+        "mark",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Premiums fall as age increases",
+          "style": {}
+        }
+      ],
+      "title_text": "Premiums fall as age increases",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Premiums Fall",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Gender Gap",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Gender Gap",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "9400",
+          "y": "65750",
+          "w": "7800",
+          "h": "5875",
+          "param": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Premiums Fall",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Gender Gap",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "50000",
+          "w": "98400",
+          "h": "49000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Gender Gap",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "9400",
+          "y": "65750",
+          "w": "7800",
+          "h": "5875",
+          "param": "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender",
+        "target": "Dashboard"
+      },
+      "field_captions": [
+        "Gender"
+      ],
+      "target": "Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Premiums Fall",
+      "viewpoint_name": "Premiums Fall",
+      "fields": [
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender Gap",
+      "viewpoint_name": "Gender Gap",
+      "fields": [
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[Age & Gender (group)]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[avg:Age:ok]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[io:Set 1:nk]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:6-month premium:ok]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Age:ok]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]",
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[sum:Age:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Gender Gap",
+      "fields": [
+        "[federated.1nootr000bhdfw14p7u8a08vc5al].[none:Gender:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

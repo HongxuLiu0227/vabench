@@ -1,0 +1,65 @@
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chart-zone {
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: #ffffff;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 400px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-zone {
+    min-height: 350px;
+  }
+}
+
+/* Ensure proper box sizing */
+* {
+  box-sizing: border-box;
+}

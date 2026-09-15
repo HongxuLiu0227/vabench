@@ -1,0 +1,908 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "9.3.3 (9300.16.0606.1812)",
+      "source-platform": "win",
+      "version": "9.3"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Q10_Day",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number_of_Casualties:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[sum:Number_of_Casualties:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[hr:Time:ok]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[hr:Time:ok]"
+        ]
+      },
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Day of Week)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "field-labels",
+        "field-labels-decoration",
+        "field-labels-spanner",
+        "annotation"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Day of Week)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Day of Week)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Day_of_Week:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Impact of Time of Day on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "title_text": "Impact of Time of Day on Number of Accidents",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Q4_Time",
+      "chart_type": "Area",
+      "rows": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[qr:Date:ok]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[qr:Date:ok]"
+        ]
+      },
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Day of Week)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "field-labels-spanner"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Day of Week)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Day of Week)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Day_of_Week:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Light_Conditions]",
+                      "member": "\"1\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[hr:Time:ok]",
+                      "member": "11"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Light_Conditions:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[hr:Time:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Number of Accidents in Different Quarters",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "title_text": "Number of Accidents in Different Quarters",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 29",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Day_of_Week:qk]",
+        "fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt]",
+          "[none:Day_of_Week:qk]"
+        ]
+      },
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Light Conditions (group)]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Speed_limit]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Weather_Conditions]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action5]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Light_Conditions]",
+                      "member": "\"1\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[hr:Time:ok]",
+                      "member": "11"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Light_Conditions:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[hr:Time:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Impact of Day of the week on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "title_text": "Impact of Day of the week on Number of Accidents",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard1",
+      "zones": [
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "title",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "6689",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "6689",
+          "w": "86219",
+          "h": "92642",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Q4_Time",
+          "parent_id": "23",
+          "zone_type": "color",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "14549",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "2",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "27",
+          "name": "Q10_Day",
+          "parent_id": "23",
+          "zone_type": "color",
+          "x": "86219",
+          "y": "14549",
+          "w": "13781",
+          "h": "20569",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "Q4_Time",
+          "parent_id": "20",
+          "zone_type": "",
+          "x": "0",
+          "y": "53010",
+          "w": "86219",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "Q10_Day",
+          "parent_id": "20",
+          "zone_type": "",
+          "x": "43109",
+          "y": "6689",
+          "w": "43110",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "28",
+          "name": "Sheet 29",
+          "parent_id": "20",
+          "zone_type": "",
+          "x": "0",
+          "y": "6689",
+          "w": "43109",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard1",
+      "size": {},
+      "zones": [
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "100000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "title",
+          "x": "0",
+          "y": "0",
+          "w": "86219",
+          "h": "6689",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "6689",
+          "w": "86219",
+          "h": "92642",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "Q4_Time",
+          "parent_id": "23",
+          "zone_type": "color",
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "14549",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "2",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "27",
+          "name": "Q10_Day",
+          "parent_id": "23",
+          "zone_type": "color",
+          "x": "86219",
+          "y": "14549",
+          "w": "13781",
+          "h": "20569",
+          "param": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "Q4_Time",
+          "parent_id": "20",
+          "zone_type": "",
+          "x": "0",
+          "y": "53010",
+          "w": "86219",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "Q10_Day",
+          "parent_id": "20",
+          "zone_type": "",
+          "x": "43109",
+          "y": "6689",
+          "w": "43110",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "28",
+          "name": "Sheet 29",
+          "parent_id": "20",
+          "zone_type": "",
+          "x": "0",
+          "y": "6689",
+          "w": "43109",
+          "h": "46321",
+          "param": "",
+          "show_title": "true",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action5]",
+      "caption": "No of Accidents in week day No<[Day_of_Week]>",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard1",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard1"
+      },
+      "field_captions": [],
+      "target": "Dashboard1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Q4_Time",
+      "viewpoint_name": "Q4_Time",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[yr:Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Q10_Day",
+      "viewpoint_name": "Q10_Day",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[hr:Time:ok]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard1",
+      "viewpoint_name": "Q10_Day",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard1",
+      "viewpoint_name": "Q4_Time",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 29",
+      "viewpoint_name": "Sheet 29",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[hr:Time:ok]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Day_of_Week:qk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Urban_or_Rural_Area:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 5
+  }
+}

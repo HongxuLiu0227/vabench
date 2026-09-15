@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Dashboard Styles */
+.trip-dashboard {
+  min-height: 100vh;
+}
+
+/* Chart Styles */
+.trips-over-time-chart,
+.percentage-line-chart {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 0.2s;
+}
+
+.tooltip div {
+  margin: 2px 0;
+}
+
+.chart-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Legend Styles */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legend-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  user-select: none;
+}
+
+.legend-item:hover {
+  opacity: 0.8 !important;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.legend-label {
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* SVG Styles */
+svg {
+  display: block;
+}
+
+/* Axis Labels */
+text {
+  fill: #333;
+}
+
+/* Line and Point Styles */
+circle {
+  transition: r 0.2s;
+}
+
+circle:hover {
+  r: 6 !important;
+}
+
+/* Filter Status */
+.filter-status {
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.filter-status button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 16px;
+  transition: background-color 0.2s;
+}
+
+.filter-status button:hover {
+  background-color: #1565c0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-bottom {
+    flex-direction: column;
+  }
+
+  .dashboard-left,
+  .dashboard-right {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "tableau_calculated_fields_v1",
+  "description": "This document defines Tableau calculated fields that are computed at runtime from raw CSV columns. These fields should NOT be expected in the source CSV file.",
+  "calculated_fields": [
+    {
+      "field_name": "Calculation_1314769640457560064",
+      "tableau_field_ref": "[federated.11puer61m90mpg19d40mw1ku60q8].[usr:Calculation_1314769640457560064:nk]",
+      "calculation_type": "user_computed",
+      "description": "School Name Title - Combines conference and school for action filter",
+      "formula": "CONCAT(conference, ', ', school)",
+      "source_columns": ["conference", "school"],
+      "data_type": "string",
+      "runtime_implementation": {
+        "file": "src/services/dataService.ts",
+        "line": 44,
+        "code": "Calculation_1314769640457560064: `${conference}, ${school}`"
+      },
+      "usage": [
+        {
+          "worksheet": "Dynamic Title",
+          "encoding": "text",
+          "purpose": "Display title that changes based on filter selection"
+        }
+      ],
+      "validation_rules": {
+        "should_exist_in_csv": false,
+        "should_exist_in_runtime_data": true,
+        "csv_source_columns": ["conference", "school"]
+      }
+    }
+  ],
+  "csv_columns": {
+    "raw_headers": [
+      "school",
+      "conference",
+      "song_name",
+      "writers",
+      "year",
+      "student_writer",
+      "official_song",
+      "contest",
+      "bpm",
+      "sec_duration",
+      "fight",
+      "number_fights",
+      "victory",
+      "win_won",
+      "victory_win_won",
+      "rah",
+      "nonsense",
+      "colors",
+      "men",
+      "opponents",
+      "spelling",
+      "trope_count",
+      "spotify_id"
+    ],
+    "total_count": 23
+  },
+  "validator_notes": [
+    "Fields prefixed with 'Calculation_' or having tableau field format '[usr:...:nk]' are computed at runtime",
+    "These calculated fields should NOT be validated against CSV headers",
+    "Instead, validate that their source_columns exist in the CSV",
+    "Validate that the calculated field is correctly computed in the runtime data loading service"
+  ]
+}

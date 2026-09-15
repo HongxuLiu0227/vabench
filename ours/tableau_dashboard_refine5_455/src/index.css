@@ -1,0 +1,49 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+#root {
+  width: 100%;
+}
+
+/* D3 axis styling */
+.x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+.x-axis text,
+.y-axis text {
+  fill: #666;
+}
+
+.x-axis path.domain,
+.y-axis path.domain {
+  stroke: #888;
+}

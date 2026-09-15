@@ -1,0 +1,421 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "County: Distributon",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By County",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:Calculation_714102023265128449:qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "d",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#ffffff",
+            "fontname": "Verdana",
+            "fontsize": "8"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Distribution of",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": " EMR Sites by County",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "f",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#ffffff",
+            "fontname": "Verdana",
+            "fontsize": "8"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Number of Facilities by County"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "174",
+        "y": "10980",
+        "w": "32958",
+        "h": "71621",
+        "aspect_ratio": 0.4602,
+        "normalized": {
+          "x_ratio": 0.0017,
+          "y_ratio": 0.1104,
+          "w_ratio": 0.3299,
+          "h_ratio": 0.7199
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "County: PKV Recency",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By County",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy 3):qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy 2):nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Overall Reporting - PKVs by County",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "% PKV Uploads"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "66437",
+        "y": "10980",
+        "w": "32957",
+        "h": "71621",
+        "aspect_ratio": 0.4602,
+        "normalized": {
+          "x_ratio": 0.6649,
+          "y_ratio": 0.1104,
+          "w_ratio": 0.3299,
+          "h_ratio": 0.7199
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "County:Overall rate",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By County",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_714102023265861635:qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [
+        "Above 67\\%",
+        "34 - 66\\%",
+        "Below 34\\%",
+        "%all%"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "Above 67\\%",
+          "34 - 66\\%",
+          "Below 34\\%",
+          "%all%"
+        ]
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Overall Reporting Care & Treatment by County",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "% C&T Uploads"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+        "layout": "grid",
+        "title": "",
+        "zone": {
+          "x": "79220",
+          "y": "83615",
+          "w": "20347",
+          "h": "15878",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.7929,
+            "y_ratio": 0.8404,
+            "w_ratio": 0.2036,
+            "h_ratio": 0.1596
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "33306",
+        "y": "10980",
+        "w": "32957",
+        "h": "71621",
+        "aspect_ratio": 0.4602,
+        "normalized": {
+          "x_ratio": 0.3334,
+          "y_ratio": 0.1104,
+          "w_ratio": 0.3299,
+          "h_ratio": 0.7199
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By County",
+      "id": "18",
+      "x": "346",
+      "y": "83615",
+      "w": "78874",
+      "h": "15878",
+      "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+      "text_runs": [
+        {
+          "text": "The ",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Overall reporting rate",
+          "style": {
+            "bold": "true",
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "0"
+          }
+        },
+        {
+          "text": "PKVs = Patient Key Value",
+          "style": {
+            "bold": "true",
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "0"
+          }
+        },
+        {
+          "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 1,
+    "intent_counts": {
+      "horizontal_ranked_bar": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "County:Overall rate"
+    ],
+    "legend_anchor_positions": {
+      "County:Overall rate": "below"
+    },
+    "axis_title_worksheets": [
+      "County: Distributon",
+      "County: PKV Recency",
+      "County:Overall rate"
+    ],
+    "interaction_worksheets": [],
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

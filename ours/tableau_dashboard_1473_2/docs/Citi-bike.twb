@@ -1,0 +1,2131 @@
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" original-version="18.1" source-build="2021.1.2 (20211.21.0511.0935)" source-platform="win" version="18.1" xml:base="https://public.tableau.com">
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from="https://public.tableau.com/workbooks/Citi-bike?rev=1.5" id="Citi-bike" path="/workbooks" revision="1.6" />
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <datasources>
+    <datasource caption="clean_data" inline="true" name="federated.1x4cg220zswnce1b47xi10rs3rs4" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="clean_data" name="textscan.1sai1px1ogawez1g8bmf90tu10o4">
+            <connection class="textscan" directory="C:/Users/212611330/Downloads/clean_data" filename="clean_data.csv" server="" workgroup-auth-mode="as-is" />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection="textscan.1sai1px1ogawez1g8bmf90tu10o4" name="clean_data.csv" table="[clean_data#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="integer" name="F1" ordinal="0" />
+            <column datatype="real" name="tripduration" ordinal="1" />
+            <column datatype="datetime" name="starttime" ordinal="2" />
+            <column datatype="datetime" name="stoptime" ordinal="3" />
+            <column datatype="real" name="start station id" ordinal="4" />
+            <column datatype="string" name="start station name" ordinal="5" />
+            <column datatype="real" name="start station latitude" ordinal="6" />
+            <column datatype="real" name="start station longitude" ordinal="7" />
+            <column datatype="real" name="end station id" ordinal="8" />
+            <column datatype="string" name="end station name" ordinal="9" />
+            <column datatype="real" name="end station latitude" ordinal="10" />
+            <column datatype="real" name="end station longitude" ordinal="11" />
+            <column datatype="real" name="bikeid" ordinal="12" />
+            <column datatype="string" name="usertype" ordinal="13" />
+            <column datatype="real" name="birth year" ordinal="14" />
+            <column datatype="real" name="gender" ordinal="15" />
+            <column datatype="string" name="ride_id" ordinal="16" />
+            <column datatype="string" name="rideable_type" ordinal="17" />
+            <column datatype="string" name="started_at" ordinal="18" />
+            <column datatype="string" name="ended_at" ordinal="19" />
+            <column datatype="string" name="start_station_name" ordinal="20" />
+            <column datatype="string" name="start_station_id" ordinal="21" />
+            <column datatype="string" name="end_station_name" ordinal="22" />
+            <column datatype="string" name="end_station_id" ordinal="23" />
+            <column datatype="string" name="start_lat" ordinal="24" />
+            <column datatype="string" name="start_lng" ordinal="25" />
+            <column datatype="string" name="end_lat" ordinal="26" />
+            <column datatype="string" name="end_lng" ordinal="27" />
+            <column datatype="string" name="member_casual" ordinal="28" />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection="textscan.1sai1px1ogawez1g8bmf90tu10o4" name="clean_data.csv" table="[clean_data#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="integer" name="F1" ordinal="0" />
+            <column datatype="real" name="tripduration" ordinal="1" />
+            <column datatype="datetime" name="starttime" ordinal="2" />
+            <column datatype="datetime" name="stoptime" ordinal="3" />
+            <column datatype="real" name="start station id" ordinal="4" />
+            <column datatype="string" name="start station name" ordinal="5" />
+            <column datatype="real" name="start station latitude" ordinal="6" />
+            <column datatype="real" name="start station longitude" ordinal="7" />
+            <column datatype="real" name="end station id" ordinal="8" />
+            <column datatype="string" name="end station name" ordinal="9" />
+            <column datatype="real" name="end station latitude" ordinal="10" />
+            <column datatype="real" name="end station longitude" ordinal="11" />
+            <column datatype="real" name="bikeid" ordinal="12" />
+            <column datatype="string" name="usertype" ordinal="13" />
+            <column datatype="real" name="birth year" ordinal="14" />
+            <column datatype="real" name="gender" ordinal="15" />
+            <column datatype="string" name="ride_id" ordinal="16" />
+            <column datatype="string" name="rideable_type" ordinal="17" />
+            <column datatype="string" name="started_at" ordinal="18" />
+            <column datatype="string" name="ended_at" ordinal="19" />
+            <column datatype="string" name="start_station_name" ordinal="20" />
+            <column datatype="string" name="start_station_id" ordinal="21" />
+            <column datatype="string" name="end_station_name" ordinal="22" />
+            <column datatype="string" name="end_station_id" ordinal="23" />
+            <column datatype="string" name="start_lat" ordinal="24" />
+            <column datatype="string" name="start_lng" ordinal="25" />
+            <column datatype="string" name="end_lat" ordinal="26" />
+            <column datatype="string" name="end_lng" ordinal="27" />
+            <column datatype="string" name="member_casual" ordinal="28" />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class="capability">
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="character-set">"UTF-8"</attribute>
+              <attribute datatype="string" name="collation">"en_US"</attribute>
+              <attribute datatype="string" name="field-delimiter">","</attribute>
+              <attribute datatype="string" name="header-row">"true"</attribute>
+              <attribute datatype="string" name="locale">"en_US"</attribute>
+              <attribute datatype="string" name="single-char">""</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>tripduration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start station id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end station id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>bikeid</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>birth year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>gender</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>ride_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ride_id]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>ride_id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>rideable_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rideable_type]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>rideable_type</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>started_at</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[started_at]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>started_at</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>ended_at</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ended_at]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>ended_at</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start_station_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start_station_name]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start_station_name</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start_station_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start_station_id]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start_station_id</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end_station_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end_station_name]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end_station_name</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end_station_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end_station_id]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end_station_id</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start_lat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start_lat]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start_lat</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>start_lng</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start_lng]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>start_lng</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end_lat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end_lat]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end_lat</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>end_lng</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end_lng]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>end_lng</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual]</local-name>
+            <parent-name>[clean_data.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="YOB" datatype="string" name="[Calculation_1974547018868379648]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="str([birth year])" />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption="clean_data.csv" datatype="table" name="[__tableau_internal_object_id__].[clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7]" role="measure" type="quantitative" />
+      <column caption="Bikeid" datatype="real" name="[bikeid]" role="measure" type="quantitative" />
+      <column caption="Birth Year" datatype="real" hidden="true" name="[birth year]" role="dimension" type="quantitative" />
+      <column caption="End Station Id" datatype="real" name="[end station id]" role="measure" type="quantitative" />
+      <column aggregation="Avg" caption="End Station Latitude" datatype="real" name="[end station latitude]" role="measure" semantic-role="[Geographical].[Latitude]" type="quantitative" />
+      <column aggregation="Avg" caption="End Station Longitude" datatype="real" name="[end station longitude]" role="measure" semantic-role="[Geographical].[Longitude]" type="quantitative" />
+      <column caption="End Station Name" datatype="string" name="[end station name]" role="dimension" type="nominal" />
+      <column caption="End Lat" datatype="string" name="[end_lat]" role="dimension" type="nominal" />
+      <column caption="End Lng" datatype="string" name="[end_lng]" role="dimension" type="nominal" />
+      <column caption="End Station Id1" datatype="string" name="[end_station_id]" role="dimension" type="nominal" />
+      <column caption="End Station Name1" datatype="string" name="[end_station_name]" role="dimension" type="nominal" />
+      <column caption="Ended At" datatype="string" name="[ended_at]" role="dimension" type="nominal" />
+      <column caption="Gender" datatype="real" name="[gender]" role="measure" type="quantitative" />
+      <column caption="Member Casual" datatype="string" name="[member_casual]" role="dimension" type="nominal" />
+      <column caption="Ride Id" datatype="string" name="[ride_id]" role="dimension" type="nominal" />
+      <column caption="Rideable Type" datatype="string" name="[rideable_type]" role="dimension" type="nominal" />
+      <column caption="Start Station Id" datatype="real" name="[start station id]" role="measure" type="quantitative" />
+      <column aggregation="Avg" caption="Start Station Latitude" datatype="real" name="[start station latitude]" role="measure" semantic-role="[Geographical].[Latitude]" type="quantitative" />
+      <column aggregation="Avg" caption="Start Station Longitude" datatype="real" name="[start station longitude]" role="measure" semantic-role="[Geographical].[Longitude]" type="quantitative" />
+      <column caption="Start Station Name" datatype="string" name="[start station name]" role="dimension" type="nominal" />
+      <column caption="Start Lat" datatype="string" name="[start_lat]" role="dimension" type="nominal" />
+      <column caption="Start Lng" datatype="string" name="[start_lng]" role="dimension" type="nominal" />
+      <column caption="Start Station Id1" datatype="string" name="[start_station_id]" role="dimension" type="nominal" />
+      <column caption="Start Station Name1" datatype="string" name="[start_station_name]" role="dimension" type="nominal" />
+      <column caption="Started At" datatype="string" name="[started_at]" role="dimension" type="nominal" />
+      <column caption="Starttime" datatype="datetime" name="[starttime]" role="dimension" type="ordinal" />
+      <column caption="Stoptime" datatype="datetime" name="[stoptime]" role="dimension" type="ordinal" />
+      <column caption="Tripduration" datatype="real" name="[tripduration]" role="measure" type="quantitative" />
+      <column caption="Usertype" datatype="string" name="[usertype]" role="dimension" type="nominal" />
+      <column-instance column="[end station name]" derivation="None" name="[none:end station name:nk]" pivot="key" type="nominal" />
+      <column-instance column="[start station name]" derivation="None" name="[none:start station name:nk]" pivot="key" type="nominal" />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id="" count="-1" enabled="true" units="records">
+        <connection access_mode="readonly" author-locale="en_US" class="hyper" dbname="Data/TableauTemp/TEMP_18ux8nb0tmgmpj17oq32z1vbqe0m.hyper" default-settings="hyper" schema="Extract" sslmode="" tablename="Extract" update-time="06/25/2021 03:04:45 AM" updated-database="C:/Users/212611~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0nghf930zyai8z1b0zy4x1haexhe.hyper" username="tableau_internal_user">
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>439247</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>tripduration</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[tripduration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tripduration</remote-alias>
+              <ordinal>1</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12605</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>starttime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[starttime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>starttime</remote-alias>
+              <ordinal>2</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>363692</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>stoptime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[stoptime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stoptime</remote-alias>
+              <ordinal>3</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>363692</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start station id</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station latitude</remote-alias>
+              <ordinal>6</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station longitude</remote-alias>
+              <ordinal>7</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end station id</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station latitude</remote-alias>
+              <ordinal>10</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station longitude</remote-alias>
+              <ordinal>11</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>bikeid</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[bikeid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bikeid</remote-alias>
+              <ordinal>12</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6589</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>usertype</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usertype]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usertype</remote-alias>
+              <ordinal>13</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>birth year</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[birth year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>birth year</remote-alias>
+              <ordinal>14</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>gender</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>15</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>ride_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ride_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ride_id</remote-alias>
+              <ordinal>16</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>182347</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>rideable_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rideable_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rideable_type</remote-alias>
+              <ordinal>17</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>started_at</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[started_at]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>started_at</remote-alias>
+              <ordinal>18</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>182347</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>ended_at</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ended_at]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ended_at</remote-alias>
+              <ordinal>19</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>182347</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start_station_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start_station_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_station_name</remote-alias>
+              <ordinal>20</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>158</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start_station_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start_station_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_station_id</remote-alias>
+              <ordinal>21</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>158</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end_station_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end_station_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_station_name</remote-alias>
+              <ordinal>22</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>157</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end_station_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end_station_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_station_id</remote-alias>
+              <ordinal>23</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>157</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start_lat</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start_lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_lat</remote-alias>
+              <ordinal>24</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>267</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>start_lng</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start_lng]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_lng</remote-alias>
+              <ordinal>25</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>275</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end_lat</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end_lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_lat</remote-alias>
+              <ordinal>26</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>294</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>end_lng</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end_lng]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_lng</remote-alias>
+              <ordinal>27</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>284</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>28</ordinal>
+              <family>clean_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag="0" name="LEN_RUS" />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage="0.5" _.fcp.SchemaViewerObjectModel.false...measure-percentage="0.4" dim-ordering="alphabetic" measure-ordering="alphabetic" show-structure="true" />
+      <style>
+        <style-rule element="mark">
+          <encoding attr="color" field="[none:start station name:nk]" type="palette">
+            <map to="#499894">
+              <bucket>"Manila &amp; 1st"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>%null%</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Columbus Dr at Exchange Pl"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Lafayette Park"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Morris Canal"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Glenwood Ave"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"JC Medical Center"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Monmouth and 6th"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"Dey St"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"Harborside"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Brunswick St"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Journal Square"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Lincoln Park"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Dixon Mills"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"Newport Pkwy"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"Riverview Park"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Bergen Ave"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Paulus Hook"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Hoboken Ave at Monmouth St"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Warren St"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"JCBS Depot"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Marin Light Rail"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Pershing Field"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Van Vorst Park"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Baldwin at Montgomery"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Heights Elevator"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"McGinley Square"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Sip Ave"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Union St"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Hilltop"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Jersey &amp; 3rd"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Fairmount Ave"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Newark Ave"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Astor Place"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Washington St"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Christ Hospital"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Communipaw &amp; Berry Lane"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Hamilton Park"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Jersey &amp; 6th St"</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>"Jackson Square"</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>"Liberty Light Rail"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Grand St"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"5 Corners Library"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"City Hall"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Grove St PATH"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Montgomery St"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Columbus Drive"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"York St"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Brunswick &amp; 6th"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Oakland Ave"</bucket>
+            </map>
+            <map to="#ff9da7">
+              <bucket>"Leonard Gordon Park"</bucket>
+            </map>
+            <map to="#ff9da7">
+              <bucket>"Newport PATH"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Essex Light Rail"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:end station name:nk]" type="palette">
+            <map to="#499894">
+              <bucket>"Astor Place"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Clinton St &amp; Joralemon St"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Greenwich St &amp; W Houston St"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Park Pl &amp; Franklin Ave"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"W 21 St &amp; 6 Ave"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"West St &amp; Liberty St"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Broadway &amp; W 160 St"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Columbus Dr at Exchange Pl"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Edgecombe Ave &amp; W 141 St"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Jersey &amp; 3rd"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Mott St &amp; Prince St"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"St James Pl &amp; Pearl St"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"W 53 St &amp; 10 Ave"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"W Broadway &amp; Spring St"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"6 Ave &amp; W 33 St"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Central Park S &amp; 6 Ave"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Front St &amp; Jay St"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"JC Medical Center"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Little West St &amp; 1 Pl"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Riverside Dr &amp; W 78 St"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Van Vorst Park"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Washington St &amp; Gansevoort St"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"Harborside"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"Morningside Ave &amp; W 123 St"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Barrow St &amp; Hudson St"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"DeKalb Ave &amp; Hudson Ave"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Harrison St &amp; Hudson St"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Manila &amp; 1st"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"W 45 St &amp; 8 Ave"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"York St"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Atlantic Ave &amp; Fort Greene Pl"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Fort Washington Ave &amp; W 173 St"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Lenox Ave &amp; W 111 St"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Paulus Hook"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"W 30 St &amp; 10 Ave"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"West Thames St"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"10 Ave &amp; W 28 St"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Christ Hospital"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Front St &amp; Maiden Ln"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"North Moore St &amp; Greenwich St"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Vesey Pl &amp; River Terrace"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Water - Whitehall Plaza"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"1 Ave &amp; E 5 St"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"Newport Pkwy"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Broadway &amp; W 51 St"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"E 85 St &amp; York Ave"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Liberty State Park"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Pier 40 Dock Station"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"South St &amp; Gouverneur Ln"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Brunswick &amp; 6th"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Essex Light Rail"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Jersey &amp; 6th St"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Murray St &amp; Greenwich St"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"St Nicholas Ave &amp; E 134 St"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Wall St &amp; South St"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Broadway &amp; Moylan Pl"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Broadway &amp; W 122 St"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"E 31 St &amp; 3 Ave"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Hoboken Ave at Monmouth St"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Marin Light Rail"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Monmouth and 6th"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Riverview Park"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"12 Ave &amp; W 40 St"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Christopher St &amp; Greenwich St"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Glenwood Ave"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"NYCBS DEPOT - DELANCEY"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"W 120 St &amp; Claremont Ave"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Watts St &amp; Greenwich St"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>%null%</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Bergen Ave"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Dey St"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Heights Elevator"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Pier 40 - Hudson River Park"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Sip Ave"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"W 47 St &amp; 10 Ave"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Broadway &amp; Battery Pl"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Dixon Mills"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Lexington Ave &amp; E 29 St"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"McGinley Square"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"W 52 St &amp; 6 Ave"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Broadway &amp; W 49 St"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"E 39 St &amp; 2 Ave"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Jackson Square"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Montgomery St"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"W 95 St &amp; Broadway"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Brunswick St"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"E 123 St &amp; Lexington Ave"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"JCBS Depot"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Morris Canal"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"St James Pl &amp; Oliver St"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"W 169 St &amp; Fort Washington Ave"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Baldwin at Montgomery"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Columbus Drive"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Hamilton Park"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Lenox Ave &amp; W 144 St"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Lincoln Park"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Riverside Dr &amp; W 138 St"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"W 34 St &amp; 11 Ave"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Willoughby Ave &amp; Hall St"</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>"Hicks St &amp; Montague St"</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>"Liberty Light Rail"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Adam Clayton Powell Blvd &amp; W 126 St"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"City Hall"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Grand St"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Oakland Ave"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"W 13 St &amp; 7 Ave"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"West St &amp; Chambers St"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"5 Ave &amp; E 88 St"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Fairmount Ave"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Grove St PATH"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Journal Square"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Newark Ave"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Union St"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"W 4 St &amp; 7 Ave S"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Warren St"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Broadway &amp; E 14 St"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Driggs Ave &amp; N 9 St"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Hilltop"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Mercer St &amp; Spring St"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"W 129 St &amp; Convent Ave"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Barclay St &amp; Church St"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Communipaw &amp; Berry Lane"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Leonard Gordon Park"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Pershing Field"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"W 40 St &amp; 5 Ave"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Withers St &amp; Kingsland Ave"</bucket>
+            </map>
+            <map to="#ff9da7">
+              <bucket>"1 Ave &amp; E 16 St"</bucket>
+            </map>
+            <map to="#ff9da7">
+              <bucket>"Newport PATH"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"5 Corners Library"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Cabrini Blvd &amp; W 177 St"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Lafayette Park"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Pier 40 X2"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Van Brunt St &amp; Wolcott St"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Washington St"</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key="[Country].[Name]" value="&quot;United States&quot;" />
+      </semantic-values>
+      <field-sort-info field-sort-order-type="custom-order">
+        <field-sort-custom-order field="F1" />
+        <field-sort-custom-order field="tripduration" />
+        <field-sort-custom-order field="starttime" />
+        <field-sort-custom-order field="stoptime" />
+        <field-sort-custom-order field="start station id" />
+        <field-sort-custom-order field="start station name" />
+        <field-sort-custom-order field="start station latitude" />
+        <field-sort-custom-order field="start station longitude" />
+        <field-sort-custom-order field="end station id" />
+        <field-sort-custom-order field="end station name" />
+        <field-sort-custom-order field="end station latitude" />
+        <field-sort-custom-order field="end station longitude" />
+        <field-sort-custom-order field="bikeid" />
+        <field-sort-custom-order field="usertype" />
+        <field-sort-custom-order field="birth year" />
+        <field-sort-custom-order field="Calculation_1974547018868379648" />
+        <field-sort-custom-order field="gender" />
+        <field-sort-custom-order field="ride_id" />
+        <field-sort-custom-order field="rideable_type" />
+        <field-sort-custom-order field="started_at" />
+        <field-sort-custom-order field="ended_at" />
+        <field-sort-custom-order field="start_station_name" />
+        <field-sort-custom-order field="start_station_id" />
+        <field-sort-custom-order field="end_station_name" />
+        <field-sort-custom-order field="end_station_id" />
+        <field-sort-custom-order field="start_lat" />
+        <field-sort-custom-order field="start_lng" />
+        <field-sort-custom-order field="end_lat" />
+        <field-sort-custom-order field="end_lng" />
+        <field-sort-custom-order field="member_casual" />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption="clean_data.csv" id="clean_data.csv_A8CB5A3FD05D4D3687E6B23E478FB2C7">
+            <properties context="">
+              <relation connection="textscan.1sai1px1ogawez1g8bmf90tu10o4" name="clean_data.csv" table="[clean_data#csv]" type="table">
+                <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+                  <column datatype="integer" name="F1" ordinal="0" />
+                  <column datatype="real" name="tripduration" ordinal="1" />
+                  <column datatype="datetime" name="starttime" ordinal="2" />
+                  <column datatype="datetime" name="stoptime" ordinal="3" />
+                  <column datatype="real" name="start station id" ordinal="4" />
+                  <column datatype="string" name="start station name" ordinal="5" />
+                  <column datatype="real" name="start station latitude" ordinal="6" />
+                  <column datatype="real" name="start station longitude" ordinal="7" />
+                  <column datatype="real" name="end station id" ordinal="8" />
+                  <column datatype="string" name="end station name" ordinal="9" />
+                  <column datatype="real" name="end station latitude" ordinal="10" />
+                  <column datatype="real" name="end station longitude" ordinal="11" />
+                  <column datatype="real" name="bikeid" ordinal="12" />
+                  <column datatype="string" name="usertype" ordinal="13" />
+                  <column datatype="real" name="birth year" ordinal="14" />
+                  <column datatype="real" name="gender" ordinal="15" />
+                  <column datatype="string" name="ride_id" ordinal="16" />
+                  <column datatype="string" name="rideable_type" ordinal="17" />
+                  <column datatype="string" name="started_at" ordinal="18" />
+                  <column datatype="string" name="ended_at" ordinal="19" />
+                  <column datatype="string" name="start_station_name" ordinal="20" />
+                  <column datatype="string" name="start_station_id" ordinal="21" />
+                  <column datatype="string" name="end_station_name" ordinal="22" />
+                  <column datatype="string" name="end_station_id" ordinal="23" />
+                  <column datatype="string" name="start_lat" ordinal="24" />
+                  <column datatype="string" name="start_lng" ordinal="25" />
+                  <column datatype="string" name="end_lat" ordinal="26" />
+                  <column datatype="string" name="end_lng" ordinal="27" />
+                  <column datatype="string" name="member_casual" ordinal="28" />
+                </columns>
+              </relation>
+            </properties>
+            <properties context="extract">
+              <relation name="Extract" table="[Extract].[Extract]" type="table" />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name="Tableau" />
+  </mapsources>
+  <actions>
+    </actions>
+  <worksheets>
+    <worksheet name="Bottom 10 Stations - End">
+      <repository-location id="Bottom10Stations-End" path="/workbooks/Citi-bike" revision="" />
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bottom 10 Stations - End</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="clean_data" name="federated.1x4cg220zswnce1b47xi10rs3rs4" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1x4cg220zswnce1b47xi10rs3rs4">
+            <column caption="Bikeid" datatype="real" name="[bikeid]" role="measure" type="quantitative" />
+            <column-instance column="[end station id]" derivation="Count" name="[cnt:end station id:qk]" pivot="key" type="quantitative" />
+            <column caption="End Station Id" datatype="real" name="[end station id]" role="measure" type="quantitative" />
+            <column caption="End Station Name" datatype="string" name="[end station name]" role="dimension" type="nominal" />
+            <column-instance column="[end station name]" derivation="None" name="[none:end station name:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]">
+            <groupfilter count="10" end="bottom" function="end" units="records" user:ui-marker="end" user:ui-top-by-field="true">
+              <groupfilter direction="DESC" expression="SUM([bikeid])" function="order" user:ui-marker="order">
+                <groupfilter function="level-members" level="[none:end station name:nk]" user:ui-enumeration="all" user:ui-marker="enumerate" />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <natural-sort column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]" direction="DESC" />
+          <slices>
+            <column>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane id="2" selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]" />
+              <text column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-cull" value="true" />
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]</rows>
+        <cols>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</cols>
+      </table>
+      <simple-id uuid="{D1D0762E-2288-4B7D-A763-F57387056809}" />
+    </worksheet>
+    <worksheet name="Bottom 10 Stations - Start">
+      <repository-location id="Bottom10Stations-Start" path="/workbooks/Citi-bike" revision="" />
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bottom 10 Stations - Start</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="clean_data" name="federated.1x4cg220zswnce1b47xi10rs3rs4" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1x4cg220zswnce1b47xi10rs3rs4">
+            <column caption="Bikeid" datatype="real" name="[bikeid]" role="measure" type="quantitative" />
+            <column-instance column="[start station id]" derivation="Count" name="[cnt:start station id:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[start station name]" derivation="None" name="[none:start station name:nk]" pivot="key" type="nominal" />
+            <column caption="Start Station Id" datatype="real" name="[start station id]" role="measure" type="quantitative" />
+            <column caption="Start Station Name" datatype="string" name="[start station name]" role="dimension" type="nominal" />
+            <column-instance column="[bikeid]" derivation="Sum" name="[sum:bikeid:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]">
+            <groupfilter count="10" end="bottom" function="end" units="records" user:ui-marker="end" user:ui-top-by-field="true">
+              <groupfilter direction="DESC" expression="COUNT([start station id])" function="order" user:ui-marker="order">
+                <groupfilter function="level-members" level="[none:start station name:nk]" user:ui-enumeration="all" user:ui-marker="enumerate" />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]" direction="ASC" using="[federated.1x4cg220zswnce1b47xi10rs3rs4].[sum:bikeid:qk]" />
+          <slices>
+            <column>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]" />
+              <text column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+                <format attr="mark-labels-cull" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]</rows>
+        <cols>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</cols>
+      </table>
+      <simple-id uuid="{95501DDA-608B-47B9-8F2B-176D28D73F11}" />
+    </worksheet>
+    <worksheet name="Top 10 Stations - End">
+      <repository-location id="Top10Stations-End" path="/workbooks/Citi-bike" revision="" />
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 Stations - End</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="clean_data" name="federated.1x4cg220zswnce1b47xi10rs3rs4" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1x4cg220zswnce1b47xi10rs3rs4">
+            <column caption="Bikeid" datatype="real" name="[bikeid]" role="measure" type="quantitative" />
+            <column-instance column="[end station id]" derivation="Count" name="[cnt:end station id:qk]" pivot="key" type="quantitative" />
+            <column caption="End Station Id" datatype="real" name="[end station id]" role="measure" type="quantitative" />
+            <column caption="End Station Name" datatype="string" name="[end station name]" role="dimension" type="nominal" />
+            <column-instance column="[end station name]" derivation="None" name="[none:end station name:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]">
+            <groupfilter count="10" end="top" function="end" units="records" user:ui-marker="end" user:ui-top-by-field="true">
+              <groupfilter direction="DESC" expression="SUM([bikeid])" function="order" user:ui-marker="order">
+                <groupfilter function="level-members" level="[none:end station name:nk]" user:ui-enumeration="all" user:ui-marker="enumerate" />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <natural-sort column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]" direction="ASC" />
+          <slices>
+            <column>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane id="2" selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]" />
+              <text column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-cull" value="true" />
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:end station id:qk]</rows>
+        <cols>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</cols>
+      </table>
+      <simple-id uuid="{0714FA7C-DA80-49C1-AB7A-648C1C8EEF16}" />
+    </worksheet>
+    <worksheet name="Top 10 Stations - Start">
+      <repository-location id="Top10Stations-Start" path="/workbooks/Citi-bike" revision="" />
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 Stations - Start</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="clean_data" name="federated.1x4cg220zswnce1b47xi10rs3rs4" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1x4cg220zswnce1b47xi10rs3rs4">
+            <column-instance column="[start station id]" derivation="Count" name="[cnt:start station id:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[start station name]" derivation="None" name="[none:start station name:nk]" pivot="key" type="nominal" />
+            <column caption="Start Station Id" datatype="real" name="[start station id]" role="measure" type="quantitative" />
+            <column caption="Start Station Name" datatype="string" name="[start station name]" role="dimension" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]">
+            <groupfilter count="10" end="top" function="end" units="records" user:ui-marker="end" user:ui-top-by-field="true">
+              <groupfilter direction="DESC" expression="COUNT([start station id])" function="order" user:ui-marker="order">
+                <groupfilter function="level-members" level="[none:start station name:nk]" user:ui-enumeration="all" user:ui-marker="enumerate" />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <natural-sort column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]" direction="ASC" />
+          <slices>
+            <column>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]" />
+              <text column="[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+                <format attr="mark-labels-cull" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x4cg220zswnce1b47xi10rs3rs4].[cnt:start station id:qk]</rows>
+        <cols>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</cols>
+      </table>
+      <simple-id uuid="{FDC4F1BE-FEAC-46C0-8A16-9A08294DB674}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Top 10 and Bottom 10">
+      <repository-location id="Top10andBottom10" path="/workbooks/Citi-bike" revision="" />
+      <style />
+      <size maxheight="860" maxwidth="650" minheight="560" minwidth="420" />
+      <zones>
+        <zone h="100000" id="4" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="97142" id="7" param="horz" type-v2="layout-flow" w="97538" x="1231" y="1429">
+            <zone h="97142" id="5" type-v2="layout-basic" w="97538" x="1231" y="1429">
+              <zone h="48571" id="3" name="Top 10 Stations - Start" w="48769" x="1231" y="1429">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone h="48571" id="9" name="Top 10 Stations - End" w="48769" x="50000" y="1429">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone h="48571" id="11" name="Bottom 10 Stations - Start" w="48769" x="1231" y="50000">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone h="48571" id="12" name="Bottom 10 Stations - End" w="48769" x="50000" y="50000">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr="border-color" value="#000000" />
+            <format attr="border-style" value="none" />
+            <format attr="border-width" value="0" />
+            <format attr="margin" value="8" />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated="true" name="Phone">
+          <size maxheight="1200" minheight="1200" sizing-mode="vscroll" />
+          <zones>
+            <zone h="100000" id="26" type-v2="layout-basic" w="100000" x="0" y="0">
+              <zone h="97142" id="25" param="vert" type-v2="layout-flow" w="97538" x="1231" y="1429">
+                <zone fixed-size="280" h="48571" id="3" is-fixed="true" name="Top 10 Stations - Start" w="48769" x="1231" y="1429">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="280" h="48571" id="9" is-fixed="true" name="Top 10 Stations - End" w="48769" x="50000" y="1429">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="280" h="48571" id="11" is-fixed="true" name="Bottom 10 Stations - Start" w="48769" x="1231" y="50000">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="280" h="48571" id="12" is-fixed="true" name="Bottom 10 Stations - End" w="48769" x="50000" y="50000">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr="border-color" value="#000000" />
+                <format attr="border-style" value="none" />
+                <format attr="border-width" value="0" />
+                <format attr="margin" value="8" />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid="{A70394C6-373B-403B-8104-987964BD5FFF}" />
+    </dashboard>
+  </dashboards>
+  <windows source-height="30">
+    <window class="worksheet" name="Top 10 Stations - Start">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="0" param="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</field>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{9DBCFC2B-8152-4640-A45B-17B914358996}" />
+    </window>
+    <window class="worksheet" name="Top 10 Stations - End">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="2" param="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</field>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</field>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{76D39271-75B5-4B7A-A532-DA1CC4FDA46B}" />
+    </window>
+    <window class="worksheet" name="Bottom 10 Stations - Start">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="0" param="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</field>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{97C138B6-9ED2-4EB1-82A2-97A6E5537D86}" />
+    </window>
+    <window class="worksheet" name="Bottom 10 Stations - End">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="2" param="[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</field>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</field>
+            <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[yr:starttime:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{92867D35-0C96-4F8F-B443-3830B08661A9}" />
+    </window>
+    <window class="dashboard" name="Top 10 and Bottom 10">
+      <viewpoints>
+        <viewpoint name="Bottom 10 Stations - End">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Bottom 10 Stations - Start">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Top 10 Stations - End">
+          <zoom type="entire-view" />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:end station name:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name="Top 10 Stations - Start">
+          <zoom type="entire-view" />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1x4cg220zswnce1b47xi10rs3rs4].[none:start station name:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id="-1" />
+      <simple-id uuid="{4456845D-5D4D-4313-BF95-3E6284EF5FE6}" />
+    </window>
+    </windows>
+</workbook>

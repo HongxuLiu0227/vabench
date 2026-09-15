@@ -1,0 +1,355 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "AvgMoviePie",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+      "slices": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "2014",
+        "2018"
+      ],
+      "title_runs": [
+        {
+          "text": "Average by Studio",
+          "style": {
+            "fontsize": "10"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "1100",
+          "y": "16875",
+          "w": "14000",
+          "h": "29750",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.011,
+            "y_ratio": 0.1688,
+            "w_ratio": 0.14,
+            "h_ratio": 0.2975
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter1",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "ACTION",
+              "type": "sheet",
+              "worksheet": "AvgMoviePie"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "exclude": "AvgMoviePie",
+              "special-fields": "all",
+              "target": "ACTION"
+            },
+            "field_captions": [],
+            "target": "ACTION"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "10250",
+        "w": "49200",
+        "h": "44375",
+        "aspect_ratio": 1.1087,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.1025,
+          "w_ratio": 0.492,
+          "h_ratio": 0.4437
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "DMovie",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+      "cols_field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+      "series_field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+      "slices": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Average by Studio",
+          "style": {
+            "fontsize": "10"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "54625",
+        "w": "49200",
+        "h": "44375",
+        "aspect_ratio": 1.1087,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.5463,
+          "w_ratio": 0.492,
+          "h_ratio": 0.4437
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "DMovieYear",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+      "cols_field": "([federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk] * [federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk])",
+      "series_field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+      "slices": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Average by Studio and Year",
+          "style": {
+            "fontsize": "10"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Years"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "10250",
+        "w": "49200",
+        "h": "88750",
+        "aspect_ratio": 0.5544,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.1025,
+          "w_ratio": 0.492,
+          "h_ratio": 0.8875
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "ACTION",
+        "type": "sheet",
+        "worksheet": "AvgMoviePie"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "AvgMoviePie",
+        "special-fields": "all",
+        "target": "ACTION"
+      },
+      "field_captions": [],
+      "target": "ACTION"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "ACTION",
+      "viewpoint_name": "AvgMoviePie",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "AvgMoviePie",
+      "viewpoint_name": "AvgMoviePie",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "DMovie",
+      "viewpoint_name": "DMovie",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "DMovieYear",
+      "viewpoint_name": "DMovieYear",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 1,
+      "vertical_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "AvgMoviePie"
+    ],
+    "legend_anchor_positions": {
+      "AvgMoviePie": "overlay"
+    },
+    "axis_title_worksheets": [
+      "DMovieYear"
+    ],
+    "interaction_worksheets": [
+      "AvgMoviePie",
+      "DMovie",
+      "DMovieYear"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

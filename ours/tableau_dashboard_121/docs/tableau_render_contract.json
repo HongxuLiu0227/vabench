@@ -1,0 +1,363 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Bar",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.0azm2i115epm0e12562z51akj8sy].[none:Category:nk] / [federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk])",
+      "cols_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "series_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2_B52BE09F781347ACBD05D360AE2C5123]",
+            "caption": "Filter1",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Bar"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0azm2i115epm0e12562z51akj8sy].[ctd:Sub-Category:ok]",
+          "[federated.0azm2i115epm0e12562z51akj8sy].[none:Category:nk]",
+          "[federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "49200",
+        "h": "61748",
+        "aspect_ratio": 0.7968,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.492,
+          "h_ratio": 0.6175
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Highlight Table",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk]",
+      "cols_field": "[federated.0azm2i115epm0e12562z51akj8sy].[none:Market:nk]",
+      "series_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0azm2i115epm0e12562z51akj8sy].[none:Market:nk]",
+          "[federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Line",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "cols_field": "[federated.0azm2i115epm0e12562z51akj8sy].[tmn:Order Date:qk]",
+      "series_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0azm2i115epm0e12562z51akj8sy].[yr:Order Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "1000",
+        "w": "49200",
+        "h": "61750",
+        "aspect_ratio": 0.7968,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.01,
+          "w_ratio": 0.492,
+          "h_ratio": 0.6175
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Scatterplot",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Profit:qk]",
+      "cols_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "series_field": "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "62750",
+        "w": "98400",
+        "h": "36250",
+        "aspect_ratio": 2.7145,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.6275,
+          "w_ratio": 0.984,
+          "h_ratio": 0.3625
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action2_B52BE09F781347ACBD05D360AE2C5123]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Bar"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Bar",
+      "viewpoint_name": "Bar",
+      "fields": [
+        "[federated.0azm2i115epm0e12562z51akj8sy].[ctd:Sub-Category:ok]",
+        "[federated.0azm2i115epm0e12562z51akj8sy].[none:Category:nk]",
+        "[federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Line",
+      "viewpoint_name": "Line",
+      "fields": [
+        "[federated.0azm2i115epm0e12562z51akj8sy].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Highlight Table",
+      "viewpoint_name": "Highlight Table",
+      "fields": [
+        "[federated.0azm2i115epm0e12562z51akj8sy].[none:Market:nk]",
+        "[federated.0azm2i115epm0e12562z51akj8sy].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Scatterplot",
+      "viewpoint_name": "Scatterplot",
+      "fields": [
+        "[federated.0azm2i115epm0e12562z51akj8sy].[sum:Sales:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 1,
+      "custom_tableau_view": 2,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Bar",
+      "Highlight Table",
+      "Line",
+      "Scatterplot"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

@@ -1,0 +1,1024 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.3.0 (20193.19.0821.2225)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Close",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[avg:close:qk]",
+        "fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya]",
+          "[avg:close:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+        "fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya]",
+          "[tmn:date:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[Action (MONTH(Date))]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[Action (MONTH(Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[Action (MONTH(Date))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tmn:date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+            "title": "Date"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Go to home",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Max close",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_1729663792037629953:qk]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_1729663792037629953:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tdy:date:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "quantitative",
+          "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_1729663792037629953:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_1729663792037629953:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "151.63999999999999"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "151.63999999999999"
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Max open",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_509469767997857792:qk]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_509469767997857792:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tdy:date:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "quantitative",
+          "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_509469767997857792:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[usr:Calculation_509469767997857792:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "152.30000000000001"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "152.30000000000001"
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Open",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[avg:open:qk]",
+        "fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya]",
+          "[avg:open:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+        "fields": [
+          "[federated.1av1a3o0myrsjb18ja7fa0yd1qya]",
+          "[tmn:date:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "label",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+            "title": "Date"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Exploring data patterns",
+      "zones": [
+        {
+          "id": "3",
+          "name": "Open",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "22007",
+          "y": "19560",
+          "w": "76060",
+          "h": "35086",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Max open",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1683",
+          "y": "23227",
+          "w": "16459",
+          "h": "14425",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "62",
+          "y": "-122",
+          "w": "100187",
+          "h": "9413",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#b4b4b4"
+          },
+          "text_runs": [
+            {
+              "text": "Exploring data patterns",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Exploring data patterns"
+        },
+        {
+          "id": "18",
+          "name": "Close",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "21820",
+          "y": "63447",
+          "w": "76309",
+          "h": "36797",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Max close",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "125",
+          "y": "65159",
+          "w": "17207",
+          "h": "21149",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "56172",
+          "y": "12592",
+          "w": "20075",
+          "h": "4645",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Average monthly open stock prices",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            }
+          ],
+          "text": "Average monthly open stock prices"
+        },
+        {
+          "id": "25",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "2120",
+          "y": "12225",
+          "w": "17768",
+          "h": "6601",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Maximum open stock price and day of occurance",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            }
+          ],
+          "text": "Maximum open stock price and day of occurance"
+        },
+        {
+          "id": "26",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "57170",
+          "y": "58680",
+          "w": "20012",
+          "h": "3667",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Average monthly close stock prices",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            }
+          ],
+          "text": "Average monthly close stock prices"
+        },
+        {
+          "id": "27",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "3928",
+          "y": "56846",
+          "w": "15960",
+          "h": "6479",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Maximum close stock price and day of occurance",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            }
+          ],
+          "text": "Maximum close stock price and day of occurance"
+        },
+        {
+          "id": "40",
+          "name": "Go to home",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "91910",
+          "y": "1222",
+          "w": "6596",
+          "h": "7090",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "15",
+      "x": "62",
+      "y": "-122",
+      "w": "100187",
+      "h": "9413",
+      "text": "Exploring data patterns",
+      "text_runs": [
+        {
+          "text": "Exploring data patterns",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "24",
+      "x": "56172",
+      "y": "12592",
+      "w": "20075",
+      "h": "4645",
+      "text": "Average monthly open stock prices",
+      "text_runs": [
+        {
+          "text": "Average monthly open stock prices",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "25",
+      "x": "2120",
+      "y": "12225",
+      "w": "17768",
+      "h": "6601",
+      "text": "Maximum open stock price and day of occurance",
+      "text_runs": [
+        {
+          "text": "Maximum open stock price and day of occurance",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "26",
+      "x": "57170",
+      "y": "58680",
+      "w": "20012",
+      "h": "3667",
+      "text": "Average monthly close stock prices",
+      "text_runs": [
+        {
+          "text": "Average monthly close stock prices",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Exploring data patterns",
+      "id": "27",
+      "x": "3928",
+      "y": "56846",
+      "w": "15960",
+      "h": "6479",
+      "text": "Maximum close stock price and day of occurance",
+      "text_runs": [
+        {
+          "text": "Maximum close stock price and day of occurance",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "11"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Exploring data patterns",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "3",
+          "name": "Open",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "22007",
+          "y": "19560",
+          "w": "76060",
+          "h": "35086",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Max open",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1683",
+          "y": "23227",
+          "w": "16459",
+          "h": "14425",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "62",
+          "y": "-122",
+          "w": "100187",
+          "h": "9413",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#b4b4b4"
+          },
+          "text_runs": [
+            {
+              "text": "Exploring data patterns",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Exploring data patterns"
+        },
+        {
+          "id": "18",
+          "name": "Close",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "21820",
+          "y": "63447",
+          "w": "76309",
+          "h": "36797",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Max close",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "125",
+          "y": "65159",
+          "w": "17207",
+          "h": "21149",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "56172",
+          "y": "12592",
+          "w": "20075",
+          "h": "4645",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Average monthly open stock prices",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            }
+          ],
+          "text": "Average monthly open stock prices"
+        },
+        {
+          "id": "25",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "2120",
+          "y": "12225",
+          "w": "17768",
+          "h": "6601",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Maximum open stock price and day of occurance",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            }
+          ],
+          "text": "Maximum open stock price and day of occurance"
+        },
+        {
+          "id": "26",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "57170",
+          "y": "58680",
+          "w": "20012",
+          "h": "3667",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Average monthly close stock prices",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            }
+          ],
+          "text": "Average monthly close stock prices"
+        },
+        {
+          "id": "27",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "3928",
+          "y": "56846",
+          "w": "15960",
+          "h": "6479",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Maximum close stock price and day of occurance",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "11"
+              }
+            }
+          ],
+          "text": "Maximum close stock price and day of occurance"
+        },
+        {
+          "id": "40",
+          "name": "Go to home",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "91910",
+          "y": "1222",
+          "w": "6596",
+          "h": "7090",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Exploring data patterns",
+        "type": "sheet",
+        "worksheet": "Open"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Exploring data patterns"
+      },
+      "field_captions": [],
+      "target": "Exploring data patterns"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Exploring data patterns",
+        "type": "sheet",
+        "worksheet": "Close"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Exploring data patterns"
+      },
+      "field_captions": [],
+      "target": "Exploring data patterns"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Close",
+      "viewpoint_name": "Close",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Go to home",
+      "viewpoint_name": "Go to home",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Max close",
+      "viewpoint_name": "Max close",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Max open",
+      "viewpoint_name": "Max open",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[tmn:date:qk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Open",
+      "viewpoint_name": "Open",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:symbol:nk]",
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[yr:date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 5,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 5
+  }
+}

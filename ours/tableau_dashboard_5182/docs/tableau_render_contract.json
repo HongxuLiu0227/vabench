@@ -1,0 +1,247 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Dynamic Title",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.11puer61m90mpg19d40mw1ku60q8].[Action (Conference,School)]",
+      "slices": [
+        "[federated.11puer61m90mpg19d40mw1ku60q8].[Action (Conference,School)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.11puer61m90mpg19d40mw1ku60q8].[usr:Calculation_1314769640457560064:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "98400",
+        "h": "8250",
+        "aspect_ratio": 11.9273,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.984,
+          "h_ratio": 0.0825
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Scatterplot",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.11puer61m90mpg19d40mw1ku60q8].[sum:bpm:qk]",
+      "cols_field": "[federated.11puer61m90mpg19d40mw1ku60q8].[sum:sec_duration:qk]",
+      "series_field": "[federated.11puer61m90mpg19d40mw1ku60q8].[none:conference:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [
+        "Beats per minute"
+      ],
+      "axis_title_cols": [
+        "Duration (in seconds)"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.11puer61m90mpg19d40mw1ku60q8].[none:conference:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83300",
+          "y": "27875",
+          "w": "14000",
+          "h": "14875",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.833,
+            "y_ratio": 0.2787,
+            "w_ratio": 0.14,
+            "h_ratio": 0.1487
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Scatterplot"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.11puer61m90mpg19d40mw1ku60q8].[none:conference:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "9250",
+        "w": "98400",
+        "h": "89750",
+        "aspect_ratio": 1.0964,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.0925,
+          "w_ratio": 0.984,
+          "h_ratio": 0.8975
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Scatterplot"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Scatterplot",
+      "viewpoint_name": "Scatterplot",
+      "fields": [
+        "[federated.11puer61m90mpg19d40mw1ku60q8].[none:conference:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Dynamic Title",
+      "viewpoint_name": "Dynamic Title",
+      "fields": [
+        "[federated.11puer61m90mpg19d40mw1ku60q8].[usr:Calculation_1314769640457560064:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Scatterplot",
+      "fields": [
+        "[federated.11puer61m90mpg19d40mw1ku60q8].[none:conference:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Scatterplot"
+    ],
+    "legend_anchor_positions": {
+      "Scatterplot": "overlay"
+    },
+    "axis_title_worksheets": [
+      "Scatterplot"
+    ],
+    "interaction_worksheets": [
+      "Dynamic Title",
+      "Scatterplot"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

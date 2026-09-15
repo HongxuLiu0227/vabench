@@ -1,0 +1,1902 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2018.1.2 (20181.18.0615.1128)",
+      "source-platform": "mac",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Avg. Home Run with Height & Weight ",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[avg:HR:qk]",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[avg:HR:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0cm6yct0ncco8t141ckgf003l5lm].[none:height:ok] / [federated.0cm6yct0ncco8t141ckgf003l5lm].[none:weight:ok])",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[none:height:ok]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[none:weight:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[handedness]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[name]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Bad/Good Height",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Bad/Good Weight",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:weight:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Batting Avg",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[sum:avg:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[none:name:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:handedness:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "OverView",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Multiple Values]",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[Multiple Values]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk] / [federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names])",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[none:handedness:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[:Measure Names]"
+        ]
+      },
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+            "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+            "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+            "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Number of Records:qk]",
+            "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Calculation_41447206859923456:qk]"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Number of Records:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Calculation_41447206859923456:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[handedness]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[name]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[height]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[weight]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[io:Bad Weight:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Relation btw Weight and Height",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness)]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+      ],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[avg:HR:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:weight:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[handedness]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[handedness]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[name]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[height]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[weight]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[io:Bad Hight:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[io:Bad Weight:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Relation btw Weight and Height with respect to the Handedness",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:weight:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[height]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[weight]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[io:Bad Weight:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:handedness:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 3",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Multiple Values]",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[Multiple Values]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm]",
+          "[none:handedness:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Before Feedback Analysis/Story",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "title",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "4084",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard-nav",
+          "x": "651",
+          "y": "5074",
+          "w": "98698",
+          "h": "19926",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard",
+          "x": "651",
+          "y": "25000",
+          "w": "98698",
+          "h": "74010",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Result Of Final Analysis",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "25",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "22",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "16",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "OverView",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "22290",
+          "y": "990",
+          "w": "67699",
+          "h": "49006",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "651",
+          "y": "990",
+          "w": "21639",
+          "h": "49006",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Relation btw Weight and Height with respect to the Handedness",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "651",
+          "y": "49996",
+          "w": "21639",
+          "h": "49014",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "filter",
+          "x": "89989",
+          "y": "990",
+          "w": "9360",
+          "h": "15223",
+          "param": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "filter",
+          "x": "89989",
+          "y": "16213",
+          "w": "9360",
+          "h": "17076",
+          "param": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "Avg. Home Run with Height & Weight ",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "22290",
+          "y": "49996",
+          "w": "77059",
+          "h": "49014",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "filter",
+          "x": "89989",
+          "y": "33289",
+          "w": "9360",
+          "h": "16707",
+          "param": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness)]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Before Feedback Analysis/Story",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "title",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "4084",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard-nav",
+          "x": "651",
+          "y": "5074",
+          "w": "98698",
+          "h": "19926",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard",
+          "x": "651",
+          "y": "25000",
+          "w": "98698",
+          "h": "74010",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "Result Of Final Analysis",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "25",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "22",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "16",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "10",
+          "zone_type": "layout-flow",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "651",
+          "y": "990",
+          "w": "98698",
+          "h": "98020",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "OverView",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "22290",
+          "y": "990",
+          "w": "67699",
+          "h": "49006",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "651",
+          "y": "990",
+          "w": "21639",
+          "h": "49006",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Relation btw Weight and Height with respect to the Handedness",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "651",
+          "y": "49996",
+          "w": "21639",
+          "h": "49014",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "filter",
+          "x": "89989",
+          "y": "990",
+          "w": "9360",
+          "h": "15223",
+          "param": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "filter",
+          "x": "89989",
+          "y": "16213",
+          "w": "9360",
+          "h": "17076",
+          "param": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "Avg. Home Run with Height & Weight ",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "22290",
+          "y": "49996",
+          "w": "77059",
+          "h": "49014",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "Relation btw Weight and Height",
+          "parent_id": "3",
+          "zone_type": "filter",
+          "x": "89989",
+          "y": "33289",
+          "w": "9360",
+          "h": "16707",
+          "param": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness)]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Result Of Final Analysis",
+        "type": "sheet",
+        "worksheet": "Avg. Home Run with Height & Weight "
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Result Of Final Analysis"
+      },
+      "field_captions": [],
+      "target": "Result Of Final Analysis"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Result Of Final Analysis",
+        "type": "sheet",
+        "worksheet": "Relation btw Weight and Height with respect to the Handedness"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Result Of Final Analysis"
+      },
+      "field_captions": [],
+      "target": "Result Of Final Analysis"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "OverView",
+      "viewpoint_name": "OverView",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Batting Avg",
+      "viewpoint_name": "Batting Avg",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bad/Good Height",
+      "viewpoint_name": "Bad/Good Height",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Hight]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bad/Good Weight",
+      "viewpoint_name": "Bad/Good Weight",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Relation btw Weight and Height",
+      "viewpoint_name": "Relation btw Weight and Height",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Hight]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Weight]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Relation btw Weight and Height with respect to the Handedness",
+      "viewpoint_name": "Relation btw Weight and Height with respect to the Handedness",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg. Home Run with Height & Weight ",
+      "viewpoint_name": "Avg. Home Run with Height & Weight ",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:height:ok]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:weight:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Result Of Final Analysis",
+      "viewpoint_name": "OverView",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 8,
+    "dashboard_count": 2,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 9
+  }
+}

@@ -1,0 +1,2028 @@
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" source-build="9.3.3 (9300.16.0606.1812)" source-platform="win" version="9.3">
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <datasources>
+    <datasource caption="DfTRoadSafety_Accidents_2014" inline="true" name="textscan.1ats9d2064dxax15btitd1ugifpt" version="9.3">
+      <connection class="textscan" directory="Data/Tableau Assignment" filename="DfTRoadSafety_Accidents_2014.csv" password="" server="">
+        <relation name="DfTRoadSafety_Accidents_2014.csv" table="[DfTRoadSafety_Accidents_2014#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="string" name="Accident_Index" ordinal="0" />
+            <column datatype="integer" name="Location_Easting_OSGR" ordinal="1" />
+            <column datatype="integer" name="Location_Northing_OSGR" ordinal="2" />
+            <column datatype="real" name="Longitude" ordinal="3" />
+            <column datatype="real" name="Latitude" ordinal="4" />
+            <column datatype="string" name="Police_Force" ordinal="5" />
+            <column datatype="string" name="Accident_Severity" ordinal="6" />
+            <column datatype="integer" name="Number_of_Vehicles" ordinal="7" />
+            <column datatype="integer" name="Number_of_Casualties" ordinal="8" />
+            <column datatype="date" name="Date" ordinal="9" />
+            <column datatype="integer" name="Day_of_Week" ordinal="10" />
+            <column datatype="datetime" name="Time" ordinal="11" />
+            <column datatype="string" name="Local_Authority_(District)" ordinal="12" />
+            <column datatype="string" name="Local_Authority_(Highway)" ordinal="13" />
+            <column datatype="string" name="1st_Road_Class" ordinal="14" />
+            <column datatype="string" name="1st_Road_Number" ordinal="15" />
+            <column datatype="string" name="Road_Type" ordinal="16" />
+            <column datatype="string" name="Speed_limit" ordinal="17" />
+            <column datatype="string" name="Junction_Detail" ordinal="18" />
+            <column datatype="string" name="Junction_Control" ordinal="19" />
+            <column datatype="string" name="2nd_Road_Class" ordinal="20" />
+            <column datatype="string" name="2nd_Road_Number" ordinal="21" />
+            <column datatype="string" name="Pedestrian_Crossing-Human_Control" ordinal="22" />
+            <column datatype="string" name="Pedestrian_Crossing-Physical_Facilities" ordinal="23" />
+            <column datatype="string" name="Light_Conditions" ordinal="24" />
+            <column datatype="string" name="Weather_Conditions" ordinal="25" />
+            <column datatype="string" name="Road_Surface_Conditions" ordinal="26" />
+            <column datatype="string" name="Special_Conditions_at_Site" ordinal="27" />
+            <column datatype="string" name="Carriageway_Hazards" ordinal="28" />
+            <column datatype="string" name="Urban_or_Rural_Area" ordinal="29" />
+            <column datatype="string" name="Did_Police_Officer_Attend_Scene_of_Accident" ordinal="30" />
+            <column datatype="string" name="LSOA_of_Accident_Location" ordinal="31" />
+            <column datatype="string" name="Sex Of Casualty" ordinal="32" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Accident_Index</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Accident_Index]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Accident_Index</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Location_Easting_OSGR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Location_Easting_OSGR]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Location_Easting_OSGR</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"sint64"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Location_Northing_OSGR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Location_Northing_OSGR]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Location_Northing_OSGR</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"sint64"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"double"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"double"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Police_Force</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Police_Force]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Police_Force</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Accident_Severity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Accident_Severity]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Accident_Severity</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Number_of_Vehicles</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number_of_Vehicles]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Number_of_Vehicles</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"sint64"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Number_of_Casualties</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number_of_Casualties]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Number_of_Casualties</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"sint64"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"date"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Day_of_Week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day_of_Week]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Day_of_Week</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"sint64"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Time</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[Time]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"duration"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Local_Authority_(District)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Local_Authority_(District)]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Local_Authority_(District)</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Local_Authority_(Highway)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Local_Authority_(Highway)]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Local_Authority_(Highway)</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>1st_Road_Class</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[1st_Road_Class]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>1st_Road_Class</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>1st_Road_Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[1st_Road_Number]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>1st_Road_Number</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Road_Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Road_Type]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Road_Type</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Speed_limit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Speed_limit]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Speed_limit</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Junction_Detail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Junction_Detail]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Junction_Detail</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Junction_Control</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Junction_Control]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Junction_Control</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>2nd_Road_Class</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[2nd_Road_Class]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>2nd_Road_Class</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>2nd_Road_Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[2nd_Road_Number]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>2nd_Road_Number</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Pedestrian_Crossing-Human_Control</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pedestrian_Crossing-Human_Control]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Pedestrian_Crossing-Human_Control</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Pedestrian_Crossing-Physical_Facilities</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pedestrian_Crossing-Physical_Facilities]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Pedestrian_Crossing-Physical_Facilities</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Light_Conditions</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Light_Conditions]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Light_Conditions</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Weather_Conditions</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Weather_Conditions]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Weather_Conditions</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Road_Surface_Conditions</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Road_Surface_Conditions]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Road_Surface_Conditions</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Special_Conditions_at_Site</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Special_Conditions_at_Site]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Special_Conditions_at_Site</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Carriageway_Hazards</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Carriageway_Hazards]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Carriageway_Hazards</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Urban_or_Rural_Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Urban_or_Rural_Area]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Urban_or_Rural_Area</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Did_Police_Officer_Attend_Scene_of_Accident</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Did_Police_Officer_Attend_Scene_of_Accident]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Did_Police_Officer_Attend_Scene_of_Accident</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>LSOA_of_Accident_Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LSOA_of_Accident_Location]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>LSOA_of_Accident_Location</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Sex Of Casualty</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex Of Casualty]</local-name>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias>Sex Of Casualty</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteCollation">"en_US"</attribute>
+              <attribute datatype="string" name="DebugRemoteMetadata (compression)">"heap"</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (size)">4294967292</attribute>
+              <attribute datatype="integer" name="DebugRemoteMetadata (storagewidth)">8</attribute>
+              <attribute datatype="string" name="DebugRemoteType">"str"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="capability">
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[DfTRoadSafety_Accidents_2014.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="character-set">"UTF-8"</attribute>
+              <attribute datatype="string" name="collation">"en_US"</attribute>
+              <attribute datatype="string" name="field-delimiter">","</attribute>
+              <attribute datatype="string" name="header-row">"true"</attribute>
+              <attribute datatype="string" name="locale">"en_US"</attribute>
+              <attribute datatype="string" name="single-char">""</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="1st Road Class" datatype="string" name="[1st_Road_Class]" role="dimension" type="nominal" />
+      <column caption="1st Road Number" datatype="string" name="[1st_Road_Number]" role="dimension" type="nominal" />
+      <column caption="2nd Road Class" datatype="string" name="[2nd_Road_Class]" role="dimension" type="nominal" />
+      <column caption="2nd Road Number" datatype="string" name="[2nd_Road_Number]" role="dimension" type="nominal" />
+      <column aggregation="CountD" caption="Accident Index" datatype="string" default-role="measure" default-type="quantitative" hidden="true" name="[Accident_Index]" role="dimension" type="nominal" />
+      <column caption="Accident Severity" datatype="string" name="[Accident_Severity]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;1&quot;" value="Fatal" />
+          <alias key="&quot;2&quot;" value="Serious" />
+          <alias key="&quot;3&quot;" value="Slight" />
+        </aliases>
+      </column>
+      <column caption="Carriageway Hazards" datatype="string" name="[Carriageway_Hazards]" role="dimension" type="nominal" />
+      <column datatype="date" name="[Date]" role="dimension" type="ordinal" />
+      <column caption="Day of Week" datatype="integer" name="[Day_of_Week]" role="dimension" type="ordinal">
+        <aliases>
+          <alias key="1" value="Sunday" />
+          <alias key="2" value="Monday" />
+          <alias key="3" value="Tuesday" />
+          <alias key="4" value="Wednesday" />
+          <alias key="5" value="Thursday" />
+          <alias key="6" value="Friday" />
+          <alias key="7" value="Saturday" />
+        </aliases>
+      </column>
+      <column caption="Did Police Officer Attend Scene of Accident" datatype="string" name="[Did_Police_Officer_Attend_Scene_of_Accident]" role="dimension" type="nominal" />
+      <column caption="Junction Control" datatype="string" name="[Junction_Control]" role="dimension" type="nominal" />
+      <column caption="Junction Detail" datatype="string" name="[Junction_Detail]" role="dimension" type="nominal" />
+      <column caption="LSOA of Accident Location" datatype="string" name="[LSOA_of_Accident_Location]" role="dimension" semantic-role="[AreaCode].[Name]" type="nominal" />
+      <column aggregation="Avg" datatype="real" name="[Latitude]" role="dimension" semantic-role="[Geographical].[Latitude]" type="quantitative" />
+      <column datatype="string" name="[Light Conditions (group)]" role="dimension" type="nominal">
+        <calculation class="categorical-bin" column="[Light_Conditions]" />
+      </column>
+      <column caption="Light Conditions" datatype="string" name="[Light_Conditions]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;1&quot;" value="Daylight" />
+          <alias key="&quot;4&quot;" value="Darkness - lights lit" />
+          <alias key="&quot;5&quot;" value="Darkness - light unlit" />
+          <alias key="&quot;6&quot;" value="Darkness - No lighting" />
+          <alias key="&quot;7&quot;" value="Darkness - Lighting Unknown" />
+        </aliases>
+      </column>
+      <column caption="Local Authority (District)" datatype="string" name="[Local_Authority_(District)]" role="dimension" type="nominal" />
+      <column caption="Local Authority (Highway)" datatype="string" name="[Local_Authority_(Highway)]" role="dimension" type="nominal" />
+      <column caption="Location Easting OSGR" datatype="integer" default-format="*000" name="[Location_Easting_OSGR]" role="dimension" semantic-role="[AreaCode].[Name]" type="ordinal" />
+      <column caption="Location Northing OSGR" datatype="integer" default-format="*000" name="[Location_Northing_OSGR]" role="dimension" semantic-role="[AreaCode].[Name]" type="ordinal" />
+      <column aggregation="Avg" datatype="real" name="[Longitude]" role="dimension" semantic-role="[Geographical].[Longitude]" type="quantitative" />
+      <column caption="Number of Accidents" datatype="integer" name="[Number of Records]" role="measure" type="quantitative" user:auto-column="numrec">
+        <calculation class="tableau" formula="1" />
+      </column>
+      <column caption="Number of Casualties" datatype="integer" name="[Number_of_Casualties]" role="measure" type="quantitative" />
+      <column caption="Number of Vehicles" datatype="integer" name="[Number_of_Vehicles]" role="measure" type="quantitative" />
+      <column caption="Pedestrian Crossing-Human Control" datatype="string" name="[Pedestrian_Crossing-Human_Control]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;0&quot;" value="None within 50 Meters" />
+          <alias key="&quot;1&quot;" value="Control by school Authorities" />
+          <alias key="&quot;2&quot;" value="Control by others" />
+        </aliases>
+      </column>
+      <column caption="Pedestrian Crossing-Physical Facilities" datatype="string" name="[Pedestrian_Crossing-Physical_Facilities]" role="dimension" type="nominal" />
+      <column caption="Police Force" datatype="string" name="[Police_Force]" role="dimension" type="nominal" />
+      <column caption="Road Surface Conditions" datatype="string" name="[Road_Surface_Conditions]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;-1&quot;" value="Data Missing" />
+          <alias key="&quot;1&quot;" value="Dry" />
+          <alias key="&quot;2&quot;" value="Wet or Damp" />
+          <alias key="&quot;3&quot;" value="Snow" />
+          <alias key="&quot;4&quot;" value="Frost or Ice" />
+          <alias key="&quot;5&quot;" value="Flood over 3cm deep" />
+        </aliases>
+      </column>
+      <column caption="Road Type" datatype="string" name="[Road_Type]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;1&quot;" value="Roundabout" />
+          <alias key="&quot;2&quot;" value="One way street" />
+          <alias key="&quot;3&quot;" value="Dual carriageway" />
+          <alias key="&quot;6&quot;" value="Single Carriageway" />
+          <alias key="&quot;7&quot;" value="Slip Road" />
+          <alias key="&quot;9&quot;" value="Unknown" />
+        </aliases>
+      </column>
+      <column datatype="string" name="[Sex Of Casualty]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;1&quot;" value="Male" />
+          <alias key="&quot;2&quot;" value="Female" />
+        </aliases>
+      </column>
+      <column caption="Special Conditions at Site" datatype="string" name="[Special_Conditions_at_Site]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;-1&quot;" value="Data Missing" />
+          <alias key="&quot;0&quot;" value="None" />
+          <alias key="&quot;1&quot;" value="Auto traffic signal out" />
+          <alias key="&quot;2&quot;" value="Auto signal part defective" />
+          <alias key="&quot;3&quot;" value="Road sign marking obscured" />
+          <alias key="&quot;4&quot;" value="Roadworks" />
+          <alias key="&quot;5&quot;" value="Road surface defective" />
+          <alias key="&quot;6&quot;" value="Oil or diesel" />
+          <alias key="&quot;7&quot;" value="Mud" />
+        </aliases>
+      </column>
+      <column caption="Speed limit" datatype="string" name="[Speed_limit]" role="dimension" type="nominal" />
+      <column datatype="datetime" name="[Time]" role="dimension" type="ordinal" />
+      <column caption="Urban or Rural Area" datatype="string" name="[Urban_or_Rural_Area]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;1&quot;" value="Urban" />
+          <alias key="&quot;2&quot;" value="Rural" />
+        </aliases>
+      </column>
+      <column caption="Weather Conditions" datatype="string" name="[Weather_Conditions]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;1&quot;" value="Fine No High winds" />
+          <alias key="&quot;2&quot;" value="Raining No High winds" />
+          <alias key="&quot;3&quot;" value="Snowing no high winds" />
+          <alias key="&quot;4&quot;" value="Fine + high winds" />
+          <alias key="&quot;5&quot;" value="Raining + high winds" />
+          <alias key="&quot;6&quot;" value="Snowing + high winds" />
+          <alias key="&quot;7&quot;" value="Fog or mist" />
+          <alias key="&quot;8&quot;" value="Other" />
+          <alias key="&quot;9&quot;" value="Unknown" />
+        </aliases>
+      </column>
+      <column-instance column="[Time]" derivation="Hour" name="[hr:Time:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[Accident_Severity]" derivation="None" name="[none:Accident_Severity:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Day_of_Week]" derivation="None" name="[none:Day_of_Week:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[Day_of_Week]" derivation="None" name="[none:Day_of_Week:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[LSOA_of_Accident_Location]" derivation="None" name="[none:LSOA_of_Accident_Location:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Latitude]" derivation="None" name="[none:Latitude:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[Light_Conditions]" derivation="None" name="[none:Light_Conditions:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Longitude]" derivation="None" name="[none:Longitude:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[Pedestrian_Crossing-Human_Control]" derivation="None" name="[none:Pedestrian_Crossing-Human_Control:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Road_Type]" derivation="None" name="[none:Road_Type:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Sex Of Casualty]" derivation="None" name="[none:Sex Of Casualty:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Speed_limit]" derivation="None" name="[none:Speed_limit:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Urban_or_Rural_Area]" derivation="None" name="[none:Urban_or_Rural_Area:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Weather_Conditions]" derivation="None" name="[none:Weather_Conditions:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Number_of_Casualties]" derivation="Sum" name="[pcto:sum:Number_of_Casualties:qk:2]" pivot="key" type="quantitative">
+        <table-calc ordering-type="Columns" type="PctTotal" />
+      </column-instance>
+      <column-instance column="[Number_of_Casualties]" derivation="Sum" name="[pcto:sum:Number_of_Casualties:qk:4]" pivot="key" type="quantitative">
+        <table-calc ordering-type="Table" type="PctTotal" />
+      </column-instance>
+      <column-instance column="[Number_of_Casualties]" derivation="Sum" name="[pcto:sum:Number_of_Casualties:qk:5]" pivot="key" type="quantitative">
+        <table-calc ordering-type="RowInPane" type="PctTotal" />
+      </column-instance>
+      <column-instance column="[Number_of_Casualties]" derivation="Sum" name="[pcto:sum:Number_of_Casualties:qk]" pivot="key" type="quantitative">
+        <table-calc ordering-type="Rows" type="PctTotal" />
+      </column-instance>
+      <column-instance column="[Number_of_Casualties]" derivation="Sum" name="[pcva:sum:Number_of_Casualties:qk]" pivot="key" type="quantitative">
+        <table-calc diff-options="Relative" ordering-type="Rows" type="PctValue">
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column="[Date]" derivation="Quarter" name="[qr:Date:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[Number of Records]" derivation="Sum" name="[sum:Number of Records:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[Number_of_Casualties]" derivation="Sum" name="[sum:Number_of_Casualties:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[Number_of_Vehicles]" derivation="Sum" name="[sum:Number_of_Vehicles:qk]" pivot="key" type="quantitative" />
+      <group caption="Action (Accident Severity,Latitude,Longitude)" hidden="true" name="[Action (Accident Severity,Latitude,Longitude)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[Accident_Severity]" />
+          <groupfilter function="level-members" level="[none:Latitude:ok]" />
+          <groupfilter function="level-members" level="[none:Longitude:ok]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Accident Severity,QUARTER(Date))" hidden="true" name="[Action (Accident Severity,QUARTER(Date))]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[Accident_Severity]" />
+          <groupfilter function="level-members" level="[qr:Date:ok]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Day of Week)" hidden="true" name="[Action (Day of Week)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Day_of_Week:ok]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Day of Week,Urban or Rural Area)" hidden="true" name="[Action (Day of Week,Urban or Rural Area)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Day_of_Week:ok]" />
+          <groupfilter function="level-members" level="[Urban_or_Rural_Area]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Latitude,Longitude,Road Type)" hidden="true" name="[Action (Latitude,Longitude,Road Type)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Latitude:ok]" />
+          <groupfilter function="level-members" level="[none:Longitude:ok]" />
+          <groupfilter function="level-members" level="[Road_Type]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Light Conditions (group),Speed limit,Weather Conditions)" hidden="true" name="[Action (Light Conditions (group),Speed limit,Weather Conditions)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[Light Conditions (group)]" />
+          <groupfilter function="level-members" level="[Speed_limit]" />
+          <groupfilter function="level-members" level="[Weather_Conditions]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Light Conditions (group),Weather Conditions)" hidden="true" name="[Action (Light Conditions (group),Weather Conditions)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[Light Conditions (group)]" />
+          <groupfilter function="level-members" level="[Weather_Conditions]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Light Conditions,HOUR(Time)) 1" hidden="true" name="[Action (Light Conditions,HOUR(Time)) 1]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[Light_Conditions]" />
+          <groupfilter function="level-members" level="[hr:Time:ok]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Light Conditions,HOUR(Time))" hidden="true" name="[Action (Light Conditions,HOUR(Time))]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Light_Conditions:nk]" />
+          <groupfilter function="level-members" level="[hr:Time:ok]" />
+        </groupfilter>
+      </group>
+      <group caption="Action (Road Surface Conditions,Weather Conditions)" hidden="true" name="[Action (Road Surface Conditions,Weather Conditions)]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[Road_Surface_Conditions]" />
+          <groupfilter function="level-members" level="[Weather_Conditions]" />
+        </groupfilter>
+      </group>
+      <group hidden="true" name="[Exclusions (Day of Week,Sex Of Casualty,Urban or Rural Area)]" name-style="unqualified" user:auto-column="exclude">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Day_of_Week:qk]" />
+          <groupfilter function="level-members" level="[none:Sex Of Casualty:nk]" />
+          <groupfilter function="level-members" level="[none:Urban_or_Rural_Area:nk]" />
+        </groupfilter>
+      </group>
+      <group hidden="true" name="[Inclusions (Day of Week,Sex Of Casualty,Urban or Rural Area)]" name-style="unqualified" user:auto-column="include">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Day_of_Week:qk]" />
+          <groupfilter function="level-members" level="[none:Sex Of Casualty:nk]" />
+          <groupfilter function="level-members" level="[none:Urban_or_Rural_Area:nk]" />
+        </groupfilter>
+      </group>
+      <group hidden="true" name="[Inclusions (HOUR(Time),Light Conditions,Light Conditions (group))]" name-style="unqualified" user:auto-column="include">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[hr:Time:ok]" />
+          <groupfilter function="level-members" level="[none:Light_Conditions:nk]" />
+          <groupfilter function="level-members" level="[Light Conditions (group)]" />
+        </groupfilter>
+      </group>
+      <group name="[Set 1]" name-style="unqualified" user:ui-builder="lasso-group">
+        <groupfilter function="reorder-dimensionality">
+          <groupfilter function="union">
+            <groupfilter function="crossjoin">
+              <groupfilter function="union">
+                <groupfilter function="member" level="[Light_Conditions]" member="&quot;1&quot;" />
+                <groupfilter function="member" level="[Light_Conditions]" member="&quot;4&quot;" />
+                <groupfilter function="member" level="[Light_Conditions]" member="&quot;5&quot;" />
+                <groupfilter function="member" level="[Light_Conditions]" member="&quot;6&quot;" />
+              </groupfilter>
+              <groupfilter function="union">
+                <groupfilter function="member" level="[hr:Time:ok]" member="8" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="9" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="10" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="11" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="12" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="13" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="14" />
+              </groupfilter>
+            </groupfilter>
+            <groupfilter function="crossjoin">
+              <groupfilter function="member" level="[Light_Conditions]" member="&quot;7&quot;" />
+              <groupfilter function="union">
+                <groupfilter function="member" level="[hr:Time:ok]" member="8" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="10" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="11" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="12" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="13" />
+                <groupfilter function="member" level="[hr:Time:ok]" member="14" />
+              </groupfilter>
+            </groupfilter>
+          </groupfilter>
+          <order>
+            <hierarchy name="[hr:Time:ok]" />
+            <hierarchy name="[Light_Conditions]" />
+          </order>
+        </groupfilter>
+      </group>
+      <layout dim-ordering="alphabetic" dim-percentage="0.752556" group-percentage="0.0388548" measure-ordering="alphabetic" measure-percentage="0.208589" show-aliased-fields="true" show-structure="true" user-set-layout="true" />
+      <style>
+        <style-rule element="mark">
+          <encoding attr="color" field="[none:Sex Of Casualty:nk]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"1"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"-1"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"2"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Pedestrian_Crossing-Human_Control:nk]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"0"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"2"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"1"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[:Measure Names]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[none:LSOA_of_Accident_Location:nk]"</bucket>
+            </map>
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[pcto:sum:Number_of_Casualties:qk:2]"</bucket>
+            </map>
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[pcto:sum:Number_of_Casualties:qk:4]"</bucket>
+            </map>
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[pcto:sum:Number_of_Casualties:qk:5]"</bucket>
+            </map>
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[pcto:sum:Number_of_Casualties:qk]"</bucket>
+            </map>
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[pcva:sum:Number_of_Casualties:qk]"</bucket>
+            </map>
+            <map to="#1f77b4">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number_of_Casualties:qk]"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number_of_Vehicles:qk]:1"</bucket>
+            </map>
+            <map to="#d62728">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number_of_Vehicles:qk]"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Road_Type:nk]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"1"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"3"</bucket>
+            </map>
+            <map to="#8c564b">
+              <bucket>"9"</bucket>
+            </map>
+            <map to="#9467bd">
+              <bucket>"7"</bucket>
+            </map>
+            <map to="#d62728">
+              <bucket>"6"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"2"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Urban_or_Rural_Area:nk]" type="palette">
+            <map to="#2ca02c">
+              <bucket>"1"</bucket>
+            </map>
+            <map to="#d62728">
+              <bucket>"2"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Speed_limit:nk]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"20"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"40"</bucket>
+            </map>
+            <map to="#8c564b">
+              <bucket>"70"</bucket>
+            </map>
+            <map to="#9467bd">
+              <bucket>"60"</bucket>
+            </map>
+            <map to="#d62728">
+              <bucket>"50"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"30"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Weather_Conditions:nk]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"1"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"3"</bucket>
+            </map>
+            <map to="#7f7f7f">
+              <bucket>"8"</bucket>
+            </map>
+            <map to="#8c564b">
+              <bucket>"6"</bucket>
+            </map>
+            <map to="#9467bd">
+              <bucket>"5"</bucket>
+            </map>
+            <map to="#bcbd22">
+              <bucket>"9"</bucket>
+            </map>
+            <map to="#d62728">
+              <bucket>"4"</bucket>
+            </map>
+            <map to="#e377c2">
+              <bucket>"7"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"2"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Accident_Severity:nk]" type="palette">
+            <map to="#1f77b4">
+              <bucket>"1"</bucket>
+            </map>
+            <map to="#2ca02c">
+              <bucket>"3"</bucket>
+            </map>
+            <map to="#ff7f0e">
+              <bucket>"2"</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key="[Country].[Name]" value="&quot;United States&quot;" />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name="Tableau" />
+  </mapsources>
+  <actions>
+    <action caption="Effect of Weather &lt;[Weather_Conditions]&gt;" name="[Action4]">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="Dashboard2" type="sheet" />
+      <command command="tsc:tsl-filter">
+        <param name="special-fields" value="all" />
+        <param name="target" value="Dashboard2" />
+      </command>
+    </action>
+    </actions>
+  <worksheets>
+    <worksheet name="Q2_Weather">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#0b2255">No. of Accidents in different Weather conditions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="DfTRoadSafety_Accidents_2014" name="textscan.1ats9d2064dxax15btitd1ugifpt" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.1ats9d2064dxax15btitd1ugifpt">
+            <column datatype="string" name="[Light Conditions (group)]" role="dimension" type="nominal">
+              <calculation class="categorical-bin" column="[Light_Conditions]" />
+            </column>
+            <column caption="Light Conditions" datatype="string" name="[Light_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;1&quot;" value="Daylight" />
+                <alias key="&quot;4&quot;" value="Darkness - lights lit" />
+                <alias key="&quot;5&quot;" value="Darkness - light unlit" />
+                <alias key="&quot;6&quot;" value="Darkness - No lighting" />
+                <alias key="&quot;7&quot;" value="Darkness - Lighting Unknown" />
+              </aliases>
+            </column>
+            <column caption="Number of Accidents" datatype="integer" name="[Number of Records]" role="measure" type="quantitative" user:auto-column="numrec">
+              <calculation class="tableau" formula="1" />
+            </column>
+            <column caption="Road Surface Conditions" datatype="string" name="[Road_Surface_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;-1&quot;" value="Data Missing" />
+                <alias key="&quot;1&quot;" value="Dry" />
+                <alias key="&quot;2&quot;" value="Wet or Damp" />
+                <alias key="&quot;3&quot;" value="Snow" />
+                <alias key="&quot;4&quot;" value="Frost or Ice" />
+                <alias key="&quot;5&quot;" value="Flood over 3cm deep" />
+              </aliases>
+            </column>
+            <column caption="Speed limit" datatype="string" name="[Speed_limit]" role="dimension" type="nominal" />
+            <column caption="Weather Conditions" datatype="string" name="[Weather_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;1&quot;" value="Fine No High winds" />
+                <alias key="&quot;2&quot;" value="Raining No High winds" />
+                <alias key="&quot;3&quot;" value="Snowing no high winds" />
+                <alias key="&quot;4&quot;" value="Fine + high winds" />
+                <alias key="&quot;5&quot;" value="Raining + high winds" />
+                <alias key="&quot;6&quot;" value="Snowing + high winds" />
+                <alias key="&quot;7&quot;" value="Fog or mist" />
+                <alias key="&quot;8&quot;" value="Other" />
+                <alias key="&quot;9&quot;" value="Unknown" />
+              </aliases>
+            </column>
+            <column-instance column="[Weather_Conditions]" derivation="None" name="[none:Weather_Conditions:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Number of Records]" derivation="Sum" name="[sum:Number of Records:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]">
+            <groupfilter function="crossjoin" user:ui-enumeration="all" user:ui-marker="enumerate">
+              <groupfilter function="level-members" level="[Light Conditions (group)]" />
+              <groupfilter function="level-members" level="[Speed_limit]" />
+              <groupfilter function="level-members" level="[Weather_Conditions]" />
+            </groupfilter>
+          </filter>
+          <filter class="categorical" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]">
+            <groupfilter function="crossjoin" user:ui-enumeration="all" user:ui-marker="enumerate">
+              <groupfilter function="level-members" level="[Road_Surface_Conditions]" />
+              <groupfilter function="level-members" level="[Weather_Conditions]" />
+            </groupfilter>
+          </filter>
+          <sort class="computed" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]" direction="DESC" using="[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]" />
+          <slices>
+            <column>[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]</column>
+            <column>[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="pane">
+            <format attr="band-color" scope="cols" value="#ffffff" />
+          </style-rule>
+          <style-rule element="table">
+            <format attr="band-size" scope="cols" value="1" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id="2">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+          </pane>
+        </panes>
+        <rows>[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]</rows>
+        <cols>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</cols>
+        <annotations>
+          <annotation class="area" id="1" text-pinx="0.5" text-piny="0.5" text-width-delta="-18">
+            <formatted-text>
+              <run fontalignment="0" fontsize="12">Most accidents occured in Fine no high wind condition</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class="axis">
+                <x-coord cell-offset="0.424312">
+                  <node-reference>
+                    <fields>
+                      <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>"2"</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value="116307.94263565892">
+                  <node-reference>
+                    <axis>[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class="axis">
+                <x-coord cell-offset="0.378441">
+                  <node-reference>
+                    <fields>
+                      <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>"7"</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value="89988.674418604642">
+                  <node-reference>
+                    <axis>[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x="0.5" y="0.5" />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+    <worksheet name="Sheet 28">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#0b2255">Effect of Light condition, Speed and Weather on Number of Accidents</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="DfTRoadSafety_Accidents_2014" name="textscan.1ats9d2064dxax15btitd1ugifpt" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.1ats9d2064dxax15btitd1ugifpt">
+            <column datatype="string" name="[Light Conditions (group)]" role="dimension" type="nominal">
+              <calculation class="categorical-bin" column="[Light_Conditions]" />
+            </column>
+            <column caption="Light Conditions" datatype="string" name="[Light_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;1&quot;" value="Daylight" />
+                <alias key="&quot;4&quot;" value="Darkness - lights lit" />
+                <alias key="&quot;5&quot;" value="Darkness - light unlit" />
+                <alias key="&quot;6&quot;" value="Darkness - No lighting" />
+                <alias key="&quot;7&quot;" value="Darkness - Lighting Unknown" />
+              </aliases>
+            </column>
+            <column caption="Number of Accidents" datatype="integer" name="[Number of Records]" role="measure" type="quantitative" user:auto-column="numrec">
+              <calculation class="tableau" formula="1" />
+            </column>
+            <column caption="Road Surface Conditions" datatype="string" name="[Road_Surface_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;-1&quot;" value="Data Missing" />
+                <alias key="&quot;1&quot;" value="Dry" />
+                <alias key="&quot;2&quot;" value="Wet or Damp" />
+                <alias key="&quot;3&quot;" value="Snow" />
+                <alias key="&quot;4&quot;" value="Frost or Ice" />
+                <alias key="&quot;5&quot;" value="Flood over 3cm deep" />
+              </aliases>
+            </column>
+            <column caption="Speed limit" datatype="string" name="[Speed_limit]" role="dimension" type="nominal" />
+            <column caption="Weather Conditions" datatype="string" name="[Weather_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;1&quot;" value="Fine No High winds" />
+                <alias key="&quot;2&quot;" value="Raining No High winds" />
+                <alias key="&quot;3&quot;" value="Snowing no high winds" />
+                <alias key="&quot;4&quot;" value="Fine + high winds" />
+                <alias key="&quot;5&quot;" value="Raining + high winds" />
+                <alias key="&quot;6&quot;" value="Snowing + high winds" />
+                <alias key="&quot;7&quot;" value="Fog or mist" />
+                <alias key="&quot;8&quot;" value="Other" />
+                <alias key="&quot;9&quot;" value="Unknown" />
+              </aliases>
+            </column>
+            <column-instance column="[Speed_limit]" derivation="None" name="[none:Speed_limit:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Weather_Conditions]" derivation="None" name="[none:Weather_Conditions:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Number of Records]" derivation="Sum" name="[sum:Number of Records:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]">
+            <groupfilter function="crossjoin" user:ui-enumeration="all" user:ui-marker="enumerate">
+              <groupfilter function="level-members" level="[Light Conditions (group)]" />
+              <groupfilter function="level-members" level="[Weather_Conditions]" />
+            </groupfilter>
+          </filter>
+          <filter class="categorical" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]">
+            <groupfilter function="crossjoin" user:ui-enumeration="all" user:ui-marker="enumerate">
+              <groupfilter function="level-members" level="[Road_Surface_Conditions]" />
+              <groupfilter function="level-members" level="[Weather_Conditions]" />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]</column>
+            <column>[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]" />
+              <size column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-cull" value="true" />
+                <format attr="mark-labels-show" value="false" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]</rows>
+        <cols>[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="sheet13">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#0b2255">Impact of Weather and Road Surface Conditions on Number of Accidents</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="DfTRoadSafety_Accidents_2014" name="textscan.1ats9d2064dxax15btitd1ugifpt" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.1ats9d2064dxax15btitd1ugifpt">
+            <column datatype="string" name="[Light Conditions (group)]" role="dimension" type="nominal">
+              <calculation class="categorical-bin" column="[Light_Conditions]" />
+            </column>
+            <column caption="Light Conditions" datatype="string" name="[Light_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;1&quot;" value="Daylight" />
+                <alias key="&quot;4&quot;" value="Darkness - lights lit" />
+                <alias key="&quot;5&quot;" value="Darkness - light unlit" />
+                <alias key="&quot;6&quot;" value="Darkness - No lighting" />
+                <alias key="&quot;7&quot;" value="Darkness - Lighting Unknown" />
+              </aliases>
+            </column>
+            <column caption="Number of Accidents" datatype="integer" name="[Number of Records]" role="measure" type="quantitative" user:auto-column="numrec">
+              <calculation class="tableau" formula="1" />
+            </column>
+            <column caption="Road Surface Conditions" datatype="string" name="[Road_Surface_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;-1&quot;" value="Data Missing" />
+                <alias key="&quot;1&quot;" value="Dry" />
+                <alias key="&quot;2&quot;" value="Wet or Damp" />
+                <alias key="&quot;3&quot;" value="Snow" />
+                <alias key="&quot;4&quot;" value="Frost or Ice" />
+                <alias key="&quot;5&quot;" value="Flood over 3cm deep" />
+              </aliases>
+            </column>
+            <column caption="Speed limit" datatype="string" name="[Speed_limit]" role="dimension" type="nominal" />
+            <column caption="Weather Conditions" datatype="string" name="[Weather_Conditions]" role="dimension" type="nominal">
+              <aliases>
+                <alias key="&quot;1&quot;" value="Fine No High winds" />
+                <alias key="&quot;2&quot;" value="Raining No High winds" />
+                <alias key="&quot;3&quot;" value="Snowing no high winds" />
+                <alias key="&quot;4&quot;" value="Fine + high winds" />
+                <alias key="&quot;5&quot;" value="Raining + high winds" />
+                <alias key="&quot;6&quot;" value="Snowing + high winds" />
+                <alias key="&quot;7&quot;" value="Fog or mist" />
+                <alias key="&quot;8&quot;" value="Other" />
+                <alias key="&quot;9&quot;" value="Unknown" />
+              </aliases>
+            </column>
+            <column-instance column="[Road_Surface_Conditions]" derivation="None" name="[none:Road_Surface_Conditions:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Weather_Conditions]" derivation="None" name="[none:Weather_Conditions:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Number of Records]" derivation="Sum" name="[sum:Number of Records:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]">
+            <groupfilter function="crossjoin" user:ui-enumeration="all" user:ui-marker="enumerate">
+              <groupfilter function="level-members" level="[Light Conditions (group)]" />
+              <groupfilter function="level-members" level="[Speed_limit]" />
+              <groupfilter function="level-members" level="[Weather_Conditions]" />
+            </groupfilter>
+          </filter>
+          <filter class="categorical" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]">
+            <groupfilter function="crossjoin" user:ui-enumeration="all" user:ui-marker="enumerate">
+              <groupfilter function="level-members" level="[Light Conditions (group)]" />
+              <groupfilter function="level-members" level="[Weather_Conditions]" />
+            </groupfilter>
+          </filter>
+          <sort class="computed" column="[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Surface_Conditions:nk]" direction="ASC" using="[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]" />
+          <slices>
+            <column>[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]</column>
+            <column>[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+          </pane>
+        </panes>
+        <rows>[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]</rows>
+        <cols>([textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk] / [textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Surface_Conditions:nk])</cols>
+        <annotations>
+          <annotation class="point" id="1" mark-position="1" pullback="0" text-width="314">
+            <formatted-text>
+              <run bold="true" fontcolor="#820000" fontsize="12">
+Weather and Road Surface conditions together contribute to most number of accidents</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class="axis">
+                <x-coord cell-offset="0.343643">
+                  <node-reference>
+                    <fields>
+                      <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+                      <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Surface_Conditions:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>"1"</bucket>
+                      <bucket>"1"</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value="98783.507890961264">
+                  <node-reference>
+                    <axis>[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x="196" y="-20" />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Dashboard2">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment="0" fontcolor="#ff0000">Impact of Weather on Number of Accidents</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element="table">
+          <format attr="background-color" value="#ffe791" />
+        </style-rule>
+      </style>
+      <zones>
+        <zone h="100000" id="2" type="layout-basic" w="100000" x="0" y="0">
+          <zone h="100000" id="15" param="horz" type="layout-flow" w="100000" x="0" y="0">
+            <zone h="100000" id="12" param="horz" type="layout-flow" w="86219" x="0" y="0">
+              <zone h="100000" id="9" param="horz" type="layout-flow" w="86219" x="0" y="0">
+                <zone h="100000" id="3" param="vert" type="layout-flow" w="86219" x="0" y="0">
+                  <zone h="6689" id="1" type="title" w="86219" x="0" y="0" />
+                  <zone h="92642" id="4" type="layout-basic" w="86219" x="0" y="6689">
+                    <zone h="46321" id="5" name="Q2_Weather" show-title="true" w="43110" x="0" y="6689" />
+                    <zone h="46321" id="13" name="Sheet 28" show-title="true" w="86219" x="0" y="53010" />
+                    <zone h="46321" id="18" name="sheet13" show-title="true" w="43109" x="43110" y="6689" />
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size="160" h="100000" id="14" is-fixed="true" param="vert" type="layout-flow" w="13781" x="86219" y="0">
+              <zone h="34616" id="16" name="Sheet 28" pane-specification-id="0" param="[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]" type="color" w="13781" x="86219" y="0" />
+              <zone h="20569" id="17" name="Sheet 28" pane-specification-id="0" param="[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]" type="size" w="13781" x="86219" y="34616" />
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+    </dashboards>
+  <windows source-height="28">
+    <window class="worksheet" name="Q2_Weather">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+        </edge>
+        <edge name="bottom">
+          <strip size="56">
+            <card type="caption" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool="2" />
+      </viewpoint>
+    </window>
+    <window class="dashboard" name="Dashboard2">
+      <viewpoints>
+        <viewpoint name="Q2_Weather">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Sheet 28">
+          <zoom type="entire-view" />
+          <highlight>
+            <color-one-way>
+              <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name="sheet13">
+          <zoom type="entire-view" />
+        </viewpoint>
+      </viewpoints>
+      <active id="14" />
+    </window>
+    <window class="worksheet" hidden="true" name="Sheet 28">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+            <card pane-specification-id="0" param="[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]" type="color" />
+            <card pane-specification-id="0" param="[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]" type="size" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+        <highlight>
+          <color-one-way>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class="worksheet" hidden="true" name="sheet13">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Light_Conditions:nk]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Surface_Conditions:nk]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Road_Type:nk]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]</field>
+            <field>[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height="192" name="Dashboard2" width="192">
+      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
+    </thumbnail>
+    </thumbnails>
+</workbook>

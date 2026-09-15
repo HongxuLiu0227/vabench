@@ -1,0 +1,846 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.1.1 (20211.21.0420.1112)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 13",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[usr:Calculation_1279303814258806785:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[yr:stoptime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Total Recorded Trips",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Recorded Trips",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 13 (2)",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[usr:Calculation_1279303814258806785:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[yr:stoptime:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "1"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "2"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "3"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Recorded Trips - First Quarter",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Recorded Trips - First Quarter",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 13 (3)",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[pcdf:usr:Calculation_1279303814258806785:qk]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[pcdf:usr:Calculation_1279303814258806785:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[yr:stoptime:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [
+        {
+          "diff-options": "Relative",
+          "level-address": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]",
+          "ordering-field": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[stoptime]",
+          "ordering-type": "Field",
+          "type": "PctDiff",
+          "column_instance": "[pcdf:usr:Calculation_1279303814258806785:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Percent Ridership Growth",
+          "style": {}
+        }
+      ],
+      "title_text": "Percent Ridership Growth",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 13 (4)",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[pcdf:usr:Calculation_1279303814258806785:qk]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[pcdf:usr:Calculation_1279303814258806785:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]",
+        "fields": [
+          "[federated.0ylwmbt19c6uw817qmb561v42rlx]",
+          "[yr:stoptime:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [
+        {
+          "diff-options": "Relative",
+          "level-address": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]",
+          "ordering-field": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[stoptime]",
+          "ordering-type": "Field",
+          "type": "PctDiff",
+          "column_instance": "[pcdf:usr:Calculation_1279303814258806785:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "1"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "2"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "3"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[mn:stoptime:ok]",
+                      "member": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Percent Ridership Growth - First Quarter",
+          "style": {}
+        }
+      ],
+      "title_text": "Percent Ridership Growth - First Quarter",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 3",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "499",
+          "y": "978",
+          "w": "99002",
+          "h": "98044",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "499",
+          "y": "978",
+          "w": "89027",
+          "h": "98044",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "89526",
+          "y": "978",
+          "w": "9975",
+          "h": "98044",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 13",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "499",
+          "y": "978",
+          "w": "44514",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 13 (3)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "45013",
+          "y": "978",
+          "w": "44513",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sheet 13 (2)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "499",
+          "y": "50000",
+          "w": "44514",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Sheet 13 (4)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "45013",
+          "y": "50000",
+          "w": "44513",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sheet 13",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "89526",
+          "y": "978",
+          "w": "9975",
+          "h": "9902",
+          "param": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 3",
+      "size": {
+        "minheight": "560",
+        "minwidth": "420",
+        "sizing-mode": "range"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "499",
+          "y": "978",
+          "w": "99002",
+          "h": "98044",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "499",
+          "y": "978",
+          "w": "89027",
+          "h": "98044",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "89526",
+          "y": "978",
+          "w": "9975",
+          "h": "98044",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 13",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "499",
+          "y": "978",
+          "w": "44514",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 13 (3)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "45013",
+          "y": "978",
+          "w": "44513",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sheet 13 (2)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "499",
+          "y": "50000",
+          "w": "44514",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Sheet 13 (4)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "45013",
+          "y": "50000",
+          "w": "44513",
+          "h": "49022",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sheet 13",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "89526",
+          "y": "978",
+          "w": "9975",
+          "h": "9902",
+          "param": "[federated.0ylwmbt19c6uw817qmb561v42rlx].[usr:Calculation_1279303814258806785:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action3_0797FA6D268F4C0DA055FC37A3DD4861]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Sheet 1"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Start Station Name",
+        "target": "Sheet 1"
+      },
+      "field_captions": [
+        "Start Station Name"
+      ],
+      "target": "Sheet 1"
+    },
+    {
+      "name": "[Action6_47B2B76702364E709C87A55894ABA08C]",
+      "caption": "Highlight1",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 3",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 3"
+      },
+      "field_captions": [],
+      "target": "Dashboard 3"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 13",
+      "viewpoint_name": "Sheet 13",
+      "fields": [
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]",
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 13 (3)",
+      "viewpoint_name": "Sheet 13 (3)",
+      "fields": [
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]",
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 13 (2)",
+      "viewpoint_name": "Sheet 13 (2)",
+      "fields": [
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]",
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 13 (4)",
+      "viewpoint_name": "Sheet 13 (4)",
+      "fields": [
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[mn:stoptime:ok]",
+        "[federated.0ylwmbt19c6uw817qmb561v42rlx].[yr:stoptime:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 4
+  }
+}

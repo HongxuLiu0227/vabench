@@ -1,0 +1,1068 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "# Patterns in the Cluster",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:Number of Records:qk]",
+      "cols_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "series_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "No. of Patterns",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "# Patterns"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "82500",
+          "y": "1750",
+          "w": "11000",
+          "h": "4625",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.825,
+            "y_ratio": 0.0175,
+            "w_ratio": 0.11,
+            "h_ratio": 0.0462
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter1",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Cluster Profiles",
+              "type": "sheet",
+              "worksheet": "# Patterns in the Cluster"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "exclude": "# Patterns in the Cluster,# Units Sold,Avg Price in the cluster,Sales ,Sheet 9",
+              "on-empty": "none",
+              "single-select": "",
+              "special-fields": "all",
+              "target": "Cluster Profiles"
+            },
+            "field_captions": [],
+            "target": "Cluster Profiles"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "8750",
+        "w": "32500",
+        "h": "45125",
+        "aspect_ratio": 0.7202,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.0875,
+          "w_ratio": 0.325,
+          "h_ratio": 0.4512
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "# Units Sold",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:units:qk]",
+      "cols_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "series_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "No. of Units Sold",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+        ]
+      },
+      "zone": {
+        "x": "33300",
+        "y": "53875",
+        "w": "32950",
+        "h": "45125",
+        "aspect_ratio": 0.7302,
+        "normalized": {
+          "x_ratio": 0.333,
+          "y_ratio": 0.5387,
+          "w_ratio": 0.3295,
+          "h_ratio": 0.4512
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Avg Price in the cluster",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_94857087572549639:qk]",
+      "cols_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "series_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Average Unit Price",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "Avg Price"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+        ]
+      },
+      "zone": {
+        "x": "66250",
+        "y": "53875",
+        "w": "32950",
+        "h": "45125",
+        "aspect_ratio": 0.7302,
+        "normalized": {
+          "x_ratio": 0.6625,
+          "y_ratio": 0.5387,
+          "w_ratio": 0.3295,
+          "h_ratio": 0.4512
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "MAE Values",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+      "slices": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:month_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532371968:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Solid",
+        "SUMMER"
+      ],
+      "title_runs": [
+        {
+          "text": "MAE",
+          "style": {
+            "fontalignment": "2"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "Model Predictions",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533715459:qk]",
+      "cols_field": "([federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533387778:qk] + [federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533715459:qk])",
+      "series_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087539785733:nk]",
+      "slices": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532371968:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:color_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087539785733:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:month_ID:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [
+        "LOW Varaince",
+        "High Variance",
+        "Medium Variance",
+        "Low Variance",
+        "%all%"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "LOW Varaince",
+          "High Variance",
+          "Medium Variance",
+          "Low Variance",
+          "%all%"
+        ]
+      },
+      "filter_members": [
+        "Solid",
+        "SUMMER"
+      ],
+      "title_runs": [
+        {
+          "text": "Model Predictions - <",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "[Parameters].[Parameter 2]",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Predictions"
+      ],
+      "axis_title_cols": [
+        "Actuals"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Highlight 1 (generated)",
+            "kind": "highlight_brush",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "type": "sheet",
+              "worksheet": "Model Predictions"
+            },
+            "command": "tsc:brush",
+            "params": {
+              "field-captions": "Color - MAE",
+              "target": "Model Predictions"
+            },
+            "field_captions": [
+              "Color - MAE"
+            ],
+            "target": "Model Predictions"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087539785733:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532371968:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533387778:qk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533715459:qk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:color_ID:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:month_ID:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Name of the Patterns",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:COLOR_DESCRIPTION:nk]",
+      "cols_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[:Measure Names]",
+      "series_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[Action (Cluster)]",
+      "slices": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[Action (Cluster)]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_3941634857562062848:nk:1]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[:Measure Names]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:totalsales:qk]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:Totalsales (copy)_2338775607562293248:qk]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:Totalsales (copy)_2338775607562293248:qk]",
+        "3",
+        "true"
+      ],
+      "title_runs": [
+        {
+          "text": "Top 10 Patterns",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:COLOR_DESCRIPTION:nk]",
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:Calculation_3941634857564180481:nk]",
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:Calculation_94857087571648518:nk]",
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_3941634857562062848:nk:1]",
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_3941634857562062848:nk]"
+        ]
+      },
+      "zone": {
+        "x": "66250",
+        "y": "8750",
+        "w": "32950",
+        "h": "45125",
+        "aspect_ratio": 0.7302,
+        "normalized": {
+          "x_ratio": 0.6625,
+          "y_ratio": 0.0875,
+          "w_ratio": 0.3295,
+          "h_ratio": 0.4512
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales ",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:totalsales:qk]",
+      "cols_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "series_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Total Sales",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "Sales ($)"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "Sheet 10",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+      "cols_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[:Measure Names]",
+      "series_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[:Measure Names]",
+      "slices": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[:Measure Names]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[sum:CumulativeUnits:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[ctd:color_ID:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "Sheet 9",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[avg:count_merchantclass:qk]",
+      "cols_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "series_field": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Number of Merchant Classes",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "# Merchant Class"
+      ],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+        ]
+      },
+      "zone": {
+        "x": "33300",
+        "y": "8750",
+        "w": "32950",
+        "h": "45125",
+        "aspect_ratio": 0.7302,
+        "normalized": {
+          "x_ratio": 0.333,
+          "y_ratio": 0.0875,
+          "w_ratio": 0.3295,
+          "h_ratio": 0.4512
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Summary",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[:Measure Names]",
+      "cols_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+      "series_field": "[federated.06zw2ru072erjo14l70v61ngkhc8].[:Measure Names]",
+      "slices": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[:Measure Names]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:month_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532371968:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:Calculation_1057431142530928640:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:MAE Liner Pred (copy)_1057431142531407874:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:MAE Decision Pred (copy)_1057431142531837955:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:MAE Decision Pred (copy)_1057431142532128772:qk]"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:Calculation_1057431142530928640:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:MAE Liner Pred (copy)_1057431142531407874:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:MAE Decision Pred (copy)_1057431142531837955:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[avg:MAE Decision Pred (copy)_1057431142532128772:qk]",
+        "Solid",
+        "SUMMER"
+      ],
+      "title_runs": [
+        {
+          "text": "Summary",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:cluster.1:ok]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:cluster.2:ok]",
+          "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Cluster Profiles",
+      "id": "11",
+      "x": "800",
+      "y": "1000",
+      "w": "98400",
+      "h": "7750",
+      "text": "Cluster Profiles - Based on first 3-week Performance",
+      "text_runs": [
+        {
+          "text": "Cluster Profiles - Based on first 3-week Performance",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontsize": "16"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Model Performance",
+      "id": "12",
+      "x": "800",
+      "y": "1000",
+      "w": "82400",
+      "h": "7999",
+      "text": "MODEL PERFORMANCE",
+      "text_runs": [
+        {
+          "text": "MODEL PERFORMANCE",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontsize": "14"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Cluster Profiles",
+        "type": "sheet",
+        "worksheet": "# Patterns in the Cluster"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "# Patterns in the Cluster,# Units Sold,Avg Price in the cluster,Sales ,Sheet 9",
+        "on-empty": "none",
+        "single-select": "",
+        "special-fields": "all",
+        "target": "Cluster Profiles"
+      },
+      "field_captions": [],
+      "target": "Cluster Profiles"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Model Predictions"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Color - MAE",
+        "target": "Model Predictions"
+      },
+      "field_captions": [
+        "Color - MAE"
+      ],
+      "target": "Model Predictions"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Model Performance",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Color - MAE",
+        "target": "Model Performance"
+      },
+      "field_captions": [
+        "Color - MAE"
+      ],
+      "target": "Model Performance"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Cluster Profiles",
+      "viewpoint_name": "# Patterns in the Cluster",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Name of the Patterns",
+      "viewpoint_name": "Name of the Patterns",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:COLOR_DESCRIPTION:nk]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:Calculation_3941634857564180481:nk]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:Calculation_94857087571648518:nk]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_3941634857562062848:nk:1]",
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_3941634857562062848:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Model Performance",
+      "viewpoint_name": "Model Predictions",
+      "fields": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087539785733:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "# Patterns in the Cluster",
+      "viewpoint_name": "# Patterns in the Cluster",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "# Units Sold",
+      "viewpoint_name": "# Units Sold",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg Price in the cluster",
+      "viewpoint_name": "Avg Price in the cluster",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Model Predictions",
+      "viewpoint_name": "Model Predictions",
+      "fields": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532371968:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533387778:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533715459:qk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:color_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:month_ID:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales ",
+      "viewpoint_name": "Sales ",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 9",
+      "viewpoint_name": "Sheet 9",
+      "fields": [
+        "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Summary",
+      "viewpoint_name": "Summary",
+      "fields": [
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:cluster.1:ok]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:cluster.2:ok]",
+        "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 10,
+    "dashboard_text_zone_count": 2,
+    "intent_counts": {
+      "vertical_ranked_bar": 5,
+      "custom_tableau_view": 4,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "# Patterns in the Cluster"
+    ],
+    "legend_anchor_positions": {
+      "# Patterns in the Cluster": "above"
+    },
+    "axis_title_worksheets": [
+      "# Patterns in the Cluster",
+      "Avg Price in the cluster",
+      "Model Predictions",
+      "Sales ",
+      "Sheet 9"
+    ],
+    "interaction_worksheets": [
+      "# Patterns in the Cluster",
+      "# Units Sold",
+      "Avg Price in the cluster",
+      "Model Predictions",
+      "Name of the Patterns",
+      "Sheet 9",
+      "Summary"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 10
+  }
+}

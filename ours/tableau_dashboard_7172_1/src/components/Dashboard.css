@@ -1,0 +1,227 @@
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  color: #333;
+  text-align: center;
+}
+
+.dashboard-worksheets {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Worksheet Section */
+.worksheet-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.worksheet-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.worksheet-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.worksheet-legend {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+/* Worksheet Container */
+.worksheet-container {
+  width: 100%;
+}
+
+.worksheet-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+/* Chart Legend */
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-right {
+  align-items: flex-start;
+}
+
+.legend-bottom {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-left {
+  align-items: flex-end;
+}
+
+.legend-top {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legend-right .legend-items,
+.legend-left .legend-items {
+  align-items: flex-start;
+}
+
+.legend-bottom .legend-items,
+.legend-top .legend-items {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4e79a7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #d32f2f;
+  font-weight: 500;
+  margin: 0;
+}
+
+.error-hint {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Tooltip */
+.tooltip {
+  animation: fadeIn 0.15s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 12px;
+  }
+
+  .dashboard-title {
+    font-size: 22px;
+  }
+
+  .dashboard-worksheets {
+    gap: 20px;
+  }
+
+  .worksheet-section {
+    padding: 12px;
+  }
+
+  .worksheet-wrapper {
+    flex-direction: column;
+  }
+
+  .worksheet-legend {
+    width: 100%;
+  }
+
+  .chart-legend.legend-right .legend-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

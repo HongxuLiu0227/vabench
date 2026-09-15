@@ -1,0 +1,555 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.3.3 (20203.20.1110.1623)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Gender Trips by Hour of Day",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Start Station ID:qk]",
+        "fields": [
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav]",
+          "[cnt:Start Station ID:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:qk]",
+        "fields": [
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav]",
+          "[hr:Start Time:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (Gender,DAY(Start Time (copy)))]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (DAY(Start Time (copy)))]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time (copy)))]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time))]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (DAY(Start Time (copy)))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (DAY(Start Time (copy)))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[tdy:Start Time (copy)_33495564085821443:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (Gender,DAY(Start Time (copy)))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (Gender,DAY(Start Time (copy)))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Gender]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tdy:Start Time (copy)_33495564085821443:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time (copy)))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time (copy)))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[wd:Start Time (copy)_33495564085821443:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[tdy:Start Time (copy)_33495564085821443:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[Action (WEEKDAY(Start Time (copy)),DAY(Start Time))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[wd:Start Time (copy)_33495564085821443:ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[dy:Start Time:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Gender:nk]",
+                      "member": "\"1\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Gender:nk]",
+                      "member": "\"2\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Trips by Hour of Day",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Trips by Hour of Day",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Trips by Day of Month",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Start Station ID:qk]",
+        "fields": [
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav]",
+          "[cnt:Start Station ID:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+        "fields": [
+          "[federated.0ujdlxc0lan7461gxy9en0zkpsav]",
+          "[dy:Start Time:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Trips by Day of Month",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Trips by Day of Month",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 3",
+      "zones": [
+        {
+          "id": "3",
+          "name": "Gender Trips by Hour of Day",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "-197",
+          "y": "-151",
+          "w": "51378",
+          "h": "100904",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "Gender Trips by Hour of Day",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "9350",
+          "y": "9036",
+          "w": "12205",
+          "h": "11747",
+          "param": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "5",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Trips by Day of Month",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "53445",
+          "y": "-301",
+          "w": "46654",
+          "h": "100753",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Trips by Day of Month",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "85433",
+          "y": "9629",
+          "w": "13780",
+          "h": "23898",
+          "param": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "4",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 3",
+      "size": {
+        "maxheight": "964",
+        "maxwidth": "1016",
+        "sizing-mode": "range"
+      },
+      "zones": [
+        {
+          "id": "3",
+          "name": "Gender Trips by Hour of Day",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "-197",
+          "y": "-151",
+          "w": "51378",
+          "h": "100904",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "Gender Trips by Hour of Day",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "9350",
+          "y": "9036",
+          "w": "12205",
+          "h": "11747",
+          "param": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "5",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Trips by Day of Month",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "53445",
+          "y": "-301",
+          "w": "46654",
+          "h": "100753",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Trips by Day of Month",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "85433",
+          "y": "9629",
+          "w": "13780",
+          "h": "23898",
+          "param": "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "4",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 3",
+        "type": "sheet",
+        "worksheet": "Trips by Day of Month"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 3"
+      },
+      "field_captions": [],
+      "target": "Dashboard 3"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 3",
+      "viewpoint_name": "Gender Trips by Hour of Day",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 3",
+      "viewpoint_name": "Trips by Day of Month",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender Trips by Hour of Day",
+      "viewpoint_name": "Gender Trips by Hour of Day",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[MDY(Start Time) Set]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[io:MDY(Start Time) Set:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[md:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[none:Gender:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Trips by Day of Month",
+      "viewpoint_name": "Trips by Day of Month",
+      "fields": [
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[MDY(Start Time) Set]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[cnt:Gender:qk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[dy:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[hr:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[io:MDY(Start Time) Set:nk]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[md:Start Time:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[wd:Start Time (copy)_33495564085821443:ok]",
+        "[federated.0ujdlxc0lan7461gxy9en0zkpsav].[yr:Start Time:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

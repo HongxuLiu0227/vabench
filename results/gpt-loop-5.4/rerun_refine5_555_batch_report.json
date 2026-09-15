@@ -1,0 +1,116 @@
+{
+  "reference_root": "/Users/liuhongxu/Documents/vabench/ours",
+  "candidate_roots": [
+    "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4"
+  ],
+  "dashboards": [
+    "tableau_dashboard_refine5_555"
+  ],
+  "summary": {
+    "cases_total": 1,
+    "cases_ok": 1,
+    "models": [
+      {
+        "model": "gpt-loop-5.4",
+        "cases_total": 1,
+        "cases_ok": 1,
+        "avg_s_data": 1.0,
+        "avg_s_int": 0.0
+      }
+    ],
+    "dashboards": [
+      {
+        "dashboard": "tableau_dashboard_refine5_555",
+        "cases_total": 1,
+        "cases_ok": 1,
+        "avg_s_data": 1.0,
+        "avg_s_int": 0.0
+      }
+    ]
+  },
+  "cases": [
+    {
+      "model": "gpt-loop-5.4",
+      "dashboard": "tableau_dashboard_refine5_555",
+      "candidate_project": "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4/tableau_dashboard_refine5_555",
+      "status": "ok",
+      "s_data": 1.0,
+      "s_int": 0.0,
+      "data_file_match": true,
+      "compiled_episode_count": 0,
+      "error": null
+    }
+  ],
+  "full_reports": [
+    {
+      "model": "gpt-loop-5.4",
+      "dashboard": "tableau_dashboard_refine5_555",
+      "status": "ok",
+      "report": {
+        "reference_project": "/Users/liuhongxu/Documents/vabench/ours/tableau_dashboard_refine5_555",
+        "candidate_project": "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4/tableau_dashboard_refine5_555",
+        "data_binding": {
+          "score": 1.0,
+          "data_file_match": true,
+          "reference_data_files": [
+            "p121_Data_to_Clean_Orders.csv"
+          ],
+          "candidate_data_files": [
+            "p121_Data_to_Clean_Orders.csv"
+          ],
+          "per_view": [
+            {
+              "worksheet_id": "ws_p121_scatterplot",
+              "worksheet_name": "P121__scatterplot",
+              "score": 1.0,
+              "matched_title": "0",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            },
+            {
+              "worksheet_id": "ws_p121_bar",
+              "worksheet_name": "P121__bar",
+              "score": 1.0,
+              "matched_title": "Jan 2011",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            },
+            {
+              "worksheet_id": "ws_p1225_total_sales_each_year",
+              "worksheet_name": "P1225__total_sales_each_year",
+              "score": 1.0,
+              "matched_title": "2011",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            },
+            {
+              "worksheet_id": "ws_p121_line",
+              "worksheet_name": "P121__line",
+              "score": 1.0,
+              "matched_title": "0",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            }
+          ]
+        },
+        "compiled_episode_count": 0,
+        "episode_compilation_trace": {
+          "attempted_marks": 0,
+          "skipped_worksheets": []
+        },
+        "interaction": {
+          "score": 0.0,
+          "episodes": []
+        }
+      }
+    }
+  ]
+}

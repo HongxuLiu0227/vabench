@@ -1,0 +1,798 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2018.1.0 (20181.18.0416.1335)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Plot of Sales",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Profit:qk]",
+        "fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Sales:qk]",
+        "fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Category:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Segment]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales by Market",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Country:nk]",
+        "fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6]",
+          "[none:Country:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Sales:qk]",
+        "fields": [
+          "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Profit:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[Action (Segment)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Segment]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales by Segment",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[pcto:sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:sum:Sales:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "10"
+          }
+        }
+      ],
+      "title_text": "<Sheet Name>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Sales Dashboard",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "1000",
+          "y": "1333",
+          "w": "98000",
+          "h": "48499",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Sales by Market",
+          "parent_id": "2",
+          "zone_type": "",
+          "x": "1000",
+          "y": "49832",
+          "w": "98000",
+          "h": "48835",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "1000",
+          "y": "1333",
+          "w": "78000",
+          "h": "48499",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "79000",
+          "y": "1333",
+          "w": "20000",
+          "h": "48499",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "title",
+          "x": "1000",
+          "y": "1333",
+          "w": "78000",
+          "h": "7000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "layout-basic",
+          "x": "1000",
+          "y": "8333",
+          "w": "78000",
+          "h": "41499",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sales by Market",
+          "parent_id": "7",
+          "zone_type": "filter",
+          "x": "79000",
+          "y": "1333",
+          "w": "20000",
+          "h": "21166",
+          "param": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Plot of Sales",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "40000",
+          "y": "8333",
+          "w": "39000",
+          "h": "41499",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Sales by Segment",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1000",
+          "y": "8333",
+          "w": "39000",
+          "h": "41499",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Sales Dashboard",
+      "size": {
+        "maxheight": "600",
+        "maxwidth": "800",
+        "minheight": "600",
+        "minwidth": "800",
+        "preset-index": "3",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "1000",
+          "y": "1333",
+          "w": "98000",
+          "h": "48499",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Sales by Market",
+          "parent_id": "2",
+          "zone_type": "",
+          "x": "1000",
+          "y": "49832",
+          "w": "98000",
+          "h": "48835",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "1000",
+          "y": "1333",
+          "w": "78000",
+          "h": "48499",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "8",
+          "zone_type": "layout-flow",
+          "x": "79000",
+          "y": "1333",
+          "w": "20000",
+          "h": "48499",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "title",
+          "x": "1000",
+          "y": "1333",
+          "w": "78000",
+          "h": "7000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "3",
+          "zone_type": "layout-basic",
+          "x": "1000",
+          "y": "8333",
+          "w": "78000",
+          "h": "41499",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sales by Market",
+          "parent_id": "7",
+          "zone_type": "filter",
+          "x": "79000",
+          "y": "1333",
+          "w": "20000",
+          "h": "21166",
+          "param": "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Plot of Sales",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "40000",
+          "y": "8333",
+          "w": "39000",
+          "h": "41499",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "Sales by Segment",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1000",
+          "y": "8333",
+          "w": "39000",
+          "h": "41499",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Sales Dashboard",
+        "type": "sheet",
+        "worksheet": "Sales by Segment"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Sales Dashboard"
+      },
+      "field_captions": [],
+      "target": "Sales Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Segment",
+      "viewpoint_name": "Sales by Segment",
+      "fields": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Plot of Sales",
+      "viewpoint_name": "Plot of Sales",
+      "fields": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Category:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Market",
+      "viewpoint_name": "Sales by Market",
+      "fields": [
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Country:nk]",
+        "[federated.0qwmwnk1pi2ni61h1vh0209mr4v6].[none:Market:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

@@ -1,0 +1,1535 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "source-build": "2020.4.3 (20204.21.0315.1000)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://data.kenyahmis.org"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "County: Distributon",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[none:DisplayCounty:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:Calculation_714102023265128449:qk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[sum:Calculation_714102023265128449:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]"
+      ],
+      "encodings": {
+        "lod": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Overview Expected EMR Sites County (copy):qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:NoOfPatients (copy):qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "pane",
+        "table",
+        "worksheet",
+        "dropline",
+        "refline",
+        "zeroline",
+        "table-div",
+        "title",
+        "quick-filter",
+        "quick-filter-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+              "context": "true",
+              "filter-group": "12"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayAgency:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+              "context": "true",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayCounty:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+              "context": "true",
+              "filter-group": "11"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayMechanism:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "d",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#ffffff",
+            "fontname": "Verdana",
+            "fontsize": "8"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Distribution of",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": " EMR Sites by County",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "f",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#ffffff",
+            "fontname": "Verdana",
+            "fontsize": "8"
+          }
+        }
+      ],
+      "title_text": "d Distribution of EMR Sites by County f",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:Calculation_714102023265128449:qk]",
+            "title": "Number of Facilities by County"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "County: PKV Recency",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[none:DisplayCounty:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy 3):qk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[usr:County Percent Uploads Proportions (copy 3):qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy 2):nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Overview Expected EMR Sites County (copy):qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:Calculation_714102023265128449:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy 3):qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Number of Sites Uploaded CT (copy):qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "pane",
+        "table",
+        "worksheet",
+        "dropline",
+        "refline",
+        "zeroline",
+        "table-div",
+        "title",
+        "quick-filter",
+        "quick-filter-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+              "context": "true",
+              "filter-group": "12"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayAgency:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+              "context": "true",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayCounty:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+              "context": "true",
+              "filter-group": "11"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayMechanism:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate_MPI:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "expression": "Month([UploadDate_MPI])=Month([Parameters].[Parameter 1])\r\nAND Year([UploadDate_MPI])=Year([Parameters].[Parameter 1])\r\nOR\r\n(Day([UploadDate_MPI])>=1 AND Day([UploadDate_MPI])<=5\r\nAND Month([UploadDate_MPI])=MONTH((Dateadd('month', 1, [Parameters].[Parameter 1])))\r\nAND Year([UploadDate_MPI])=Year([Parameters].[Parameter 1]))",
+                  "function": "filter",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "filter-by"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:UploadDate_MPI:ok]",
+                      "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Overall Reporting - PKVs by County",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "Overall Reporting - PKVs by County <[Parameters].[Parameter 1]>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy 3):qk]",
+            "title": "% PKV Uploads"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "County:Overall rate",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[none:DisplayCounty:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_714102023265861635:qk]",
+        "fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd]",
+          "[usr:Calculation_714102023265861635:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Overview Expected EMR Sites County (copy):qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:NoOfPatients (copy):qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:Calculation_714102023265128449:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell",
+        "header",
+        "label",
+        "pane",
+        "table",
+        "worksheet",
+        "dropline",
+        "refline",
+        "zeroline",
+        "table-div",
+        "title",
+        "legend",
+        "legend-title",
+        "legend-title-text",
+        "quick-filter",
+        "quick-filter-title"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Above 67\\%",
+            "34 - 66\\%",
+            "Below 34\\%",
+            "%all%"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+              "context": "true",
+              "filter-group": "12"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayAgency:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+              "context": "true",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayCounty:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+              "context": "true",
+              "filter-group": "11"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:DisplayMechanism:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:UploadDate:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "expression": "Month([UploadDate])=Month([Parameters].[Parameter 1])\r\nAND Year([UploadDate])=Year([Parameters].[Parameter 1])\r\nOR\r\n(Day([UploadDate])>=1 AND Day([UploadDate])<=5\r\nAND Month([UploadDate])=MONTH((Dateadd('month', 1, [Parameters].[Parameter 1])))\r\nAND Year([UploadDate])=Year([Parameters].[Parameter 1]))",
+                  "function": "filter",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "filter-by"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:UploadDate:ok]",
+                      "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Overall Reporting Care & Treatment by County",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "<[Parameters].[Parameter 1]> ",
+          "style": {
+            "fontalignment": "1",
+            "fontname": "Verdana",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "title_text": "Overall Reporting Care & Treatment by County <[Parameters].[Parameter 1]>",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_714102023265861635:qk]",
+            "title": "% C&T Uploads"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": true,
+        "legend_fields": [
+          "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]"
+        ],
+        "legend_title": "",
+        "legend_title_alignment": "center"
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By County",
+      "zones": [
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "438",
+          "y": "676",
+          "w": "99475",
+          "h": "9459",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "County: Distributon",
+          "parent_id": "12",
+          "zone_type": "filter",
+          "x": "438",
+          "y": "676",
+          "w": "24869",
+          "h": "9459",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "County: Distributon",
+          "parent_id": "12",
+          "zone_type": "filter",
+          "x": "25307",
+          "y": "676",
+          "w": "24869",
+          "h": "9459",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "County: Distributon",
+          "parent_id": "12",
+          "zone_type": "filter",
+          "x": "50176",
+          "y": "676",
+          "w": "24869",
+          "h": "9459",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "paramctrl",
+          "x": "75045",
+          "y": "676",
+          "w": "24868",
+          "h": "9459",
+          "param": "[Parameters].[Parameter 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "87",
+          "y": "10811",
+          "w": "99394",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "87",
+          "y": "10811",
+          "w": "33132",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#f5f5f5",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "33219",
+          "y": "10811",
+          "w": "33131",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#f5f5f5",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "66350",
+          "y": "10811",
+          "w": "33131",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#f5f5f5",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "2",
+          "name": "County: Distributon",
+          "parent_id": "1",
+          "zone_type": "",
+          "x": "174",
+          "y": "10980",
+          "w": "32958",
+          "h": "71621",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "County:Overall rate",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "33306",
+          "y": "10980",
+          "w": "32957",
+          "h": "71621",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "County: PKV Recency",
+          "parent_id": "10",
+          "zone_type": "",
+          "x": "66437",
+          "y": "10980",
+          "w": "32957",
+          "h": "71621",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "346",
+          "y": "83615",
+          "w": "99221",
+          "h": "15878",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "text",
+          "x": "346",
+          "y": "83615",
+          "w": "78874",
+          "h": "15878",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "The ",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "Overall reporting rate",
+              "style": {
+                "bold": "true",
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "0"
+              }
+            },
+            {
+              "text": "PKVs = Patient Key Value",
+              "style": {
+                "bold": "true",
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "0"
+              }
+            },
+            {
+              "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​"
+        },
+        {
+          "id": "20",
+          "name": "County:Overall rate",
+          "parent_id": "21",
+          "zone_type": "color",
+          "x": "79220",
+          "y": "83615",
+          "w": "20347",
+          "h": "15878",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+          "show_title": "",
+          "legend_item_layout": "grid",
+          "pane_specification_id": "7",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard:By County",
+      "id": "18",
+      "x": "346",
+      "y": "83615",
+      "w": "78874",
+      "h": "15878",
+      "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+      "text_runs": [
+        {
+          "text": "The ",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "Overall reporting rate",
+          "style": {
+            "bold": "true",
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "0"
+          }
+        },
+        {
+          "text": "PKVs = Patient Key Value",
+          "style": {
+            "bold": "true",
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "0"
+          }
+        },
+        {
+          "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+          "style": {
+            "fontalignment": "0",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "10"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Reporting Rates_Optimization:Dashboard:By County",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "438",
+          "y": "676",
+          "w": "99475",
+          "h": "9459",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "County: Distributon",
+          "parent_id": "12",
+          "zone_type": "filter",
+          "x": "438",
+          "y": "676",
+          "w": "24869",
+          "h": "9459",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "County: Distributon",
+          "parent_id": "12",
+          "zone_type": "filter",
+          "x": "25307",
+          "y": "676",
+          "w": "24869",
+          "h": "9459",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "County: Distributon",
+          "parent_id": "12",
+          "zone_type": "filter",
+          "x": "50176",
+          "y": "676",
+          "w": "24869",
+          "h": "9459",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "12",
+          "zone_type": "paramctrl",
+          "x": "75045",
+          "y": "676",
+          "w": "24868",
+          "h": "9459",
+          "param": "[Parameters].[Parameter 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#ffffff"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "87",
+          "y": "10811",
+          "w": "99394",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "87",
+          "y": "10811",
+          "w": "33132",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#f5f5f5",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "33219",
+          "y": "10811",
+          "w": "33131",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#f5f5f5",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "66350",
+          "y": "10811",
+          "w": "33131",
+          "h": "71959",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#f5f5f5",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "2",
+          "name": "County: Distributon",
+          "parent_id": "1",
+          "zone_type": "",
+          "x": "174",
+          "y": "10980",
+          "w": "32958",
+          "h": "71621",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "County:Overall rate",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "33306",
+          "y": "10980",
+          "w": "32957",
+          "h": "71621",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "County: PKV Recency",
+          "parent_id": "10",
+          "zone_type": "",
+          "x": "66437",
+          "y": "10980",
+          "w": "32957",
+          "h": "71621",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "0"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "21",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-flow",
+          "x": "346",
+          "y": "83615",
+          "w": "99221",
+          "h": "15878",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "21",
+          "zone_type": "text",
+          "x": "346",
+          "y": "83615",
+          "w": "78874",
+          "h": "15878",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "The ",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "Overall reporting rate",
+              "style": {
+                "bold": "true",
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "0"
+              }
+            },
+            {
+              "text": "PKVs = Patient Key Value",
+              "style": {
+                "bold": "true",
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": " is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "0"
+              }
+            },
+            {
+              "text": "PKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​",
+              "style": {
+                "fontalignment": "0",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "10"
+              }
+            }
+          ],
+          "text": "The Overall reporting rate refers to the proportion of EMR sites that submitted the most recent report i.e. The Jan 2020 overall reporting rate is the number of EMR sites that uploaded data to the NDW in Jan 2020 and so forth.\nPKVs = Patient Key Value is a concatenation of a patients Gender + Soundex value of Firstname​ + Double Metaphone value of Lastname​ + Date of Birth\nPKVs transmitted to the NDWH along with HTS and care and treatment data to allow for Deduplication at the National level ​and Linking patient records within and across facilities.​"
+        },
+        {
+          "id": "20",
+          "name": "County:Overall rate",
+          "parent_id": "21",
+          "zone_type": "color",
+          "x": "79220",
+          "y": "83615",
+          "w": "20347",
+          "h": "15878",
+          "param": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+          "show_title": "",
+          "legend_item_layout": "grid",
+          "pane_specification_id": "7",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 1,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

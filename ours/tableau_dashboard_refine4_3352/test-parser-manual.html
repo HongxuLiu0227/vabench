@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Parser Manual Test</title>
+  <style>
+    body {
+      font-family: monospace;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 { color: #333; }
+    h2 { color: #666; margin-top: 30px; }
+    .success { color: green; }
+    .error { color: red; }
+    .info { color: blue; }
+    pre {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .result {
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 4px solid #ccc;
+    }
+    .result.pass { border-left-color: green; }
+    .result.fail { border-left-color: red; }
+  </style>
+</head>
+<body>
+  <h1>CSV Parser Manual Test</h1>
+  <div id="results"></div>
+
+  <script type="module">
+    // Parser functions (copied from csvParser.ts)
+    function normalizeHeader(header) {
+      let cleaned = header.replace(/^\uFEFF/, '');
+      cleaned = cleaned.replace(/^"""|"""$/g, '');
+      cleaned = cleaned.replace(/^"|"$/g, '');
+      return cleaned.trim();
+    }
+
+    function splitCSVLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      let quoteChar = '';
+
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        const nextChar = line[i + 1] || '';
+
+        if (char === '"' && nextChar === '"' && line[i + 2] === '"') {
+          if (!inQuotes) {
+            inQuotes = true;
+            quoteChar = '"""';
+            i += 2;
+          } else if (quoteChar === '"""') {
+            inQuotes = false;
+            quoteChar = '';
+            i += 2;
+          } else {
+            current += char;
+          }
+          continue;
+        }
+
+        if (char === '"') {
+          if (!inQuotes) {
+            inQuotes = true;
+            quoteChar = '"';
+          } else if (quoteChar === '"') {
+            inQuotes = false;
+            quoteChar = '';
+          } else {
+            current += char;
+          }
+          continue;
+        }
+
+        if (char === ',' && !inQuotes) {
+          result.push(current);
+          current = '';
+          continue;
+        }
+
+        current += char;
+      }
+
+      if (current || result.length > 0) {
+        result.push(current);
+      }
+
+      return result;
+    }
+
+    function parseNormalizedCSV(csvText, rowTransformer) {
+      const lines = csvText.split(/\r?\n/).filter(line => line.trim());
+      if (lines.length === 0) return [];
+
+      // Find header
+      let headerLineIndex = 0;
+      for (let i = 0; i < Math.min(10, lines.length); i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        const quotedFieldCount = (line.match(/"""/g) || []).length;
+        if (quotedFieldCount >= 6) {
+          headerLineIndex = i;
+          break;
+        }
+      }
+
+      const headerLine = lines[headerLineIndex];
+      const rawHeaders = splitCSVLine(headerLine);
+      const normalizedHeaders = rawHeaders.map(normalizeHeader);
+
+      const result = [];
+      for (let i = headerLineIndex + 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+
+        const values = splitCSVLine(line);
+        if (values.length === 0 || values.length < normalizedHeaders.length - 1) {
+          continue;
+        }
+
+        const record = {};
+        normalizedHeaders.forEach((header, index) => {
+          record[header] = values[index] || '';
+        });
+
+        if (rowTransformer) {
+          try {
+            result.push(rowTransformer(record, normalizedHeaders));
+          } catch (err) {
+            console.warn(`Failed to transform row ${i}:`, err);
+          }
+        } else {
+          result.push(record);
+        }
+      }
+
+      return result;
+    }
+
+    // Test runner
+    const resultsDiv = document.getElementById('results');
+
+    function addResult(testName, passed, details) {
+      const div = document.createElement('div');
+      div.className = `result ${passed ? 'pass' : 'fail'}`;
+      div.innerHTML = `
+        <strong>${passed ? '✓' : '✗'} ${testName}</strong>
+        ${details ? `<pre>${JSON.stringify(details, null, 2)}</pre>` : ''}
+      `;
+      resultsDiv.appendChild(div);
+    }
+
+    async function runTests() {
+      resultsDiv.innerHTML = '<p class="info">Loading CSV data...</p>';
+
+      try {
+        // Load the actual CSV
+        const response = await fetch('/data/TableauTemp_06jfdtn1lakc5a1amq8mn12idbt8.csv');
+        if (!response.ok) {
+          throw new Error(`Failed to load CSV: ${response.statusText}`);
+        }
+
+        const csvText = await response.text();
+        resultsDiv.innerHTML = '';
+
+        // Test 1: Normalize headers
+        addResult(
+          'Header normalization test',
+          normalizeHeader('"""Field Name"""') === 'Field Name',
+          { input: '"""Field Name"""', output: normalizeHeader('"""Field Name"""') }
+        );
+
+        // Test 2: Parse CSV
+        const parsedData = parseNormalizedCSV(csvText, (row) => ({
+          '#': Number(row['#'] || 0),
+          Filename: row['Filename'] || '',
+          'File extension': row['File extension'] || '',
+          Path: row['Path'] || '',
+          Size: Number(row['Size'] || 0),
+          'Date created': row['Date created'] || '',
+        }));
+
+        addResult(
+          'CSV parsing',
+          parsedData.length > 0,
+          { recordCount: parsedData.length, firstRecord: parsedData[0] }
+        );
+
+        // Test 3: Validate required fields
+        const requiredFields = ['#', 'Filename', 'File extension', 'Path', 'Size', 'Date created'];
+        const firstRecord = parsedData[0];
+        const missing = requiredFields.filter(f => !(f in firstRecord));
+
+        addResult(
+          'Required fields present',
+          missing.length === 0,
+          { missing, fieldsPresent: requiredFields.filter(f => f in firstRecord) }
+        );
+
+        // Test 4: Numeric parsing
+        const hasNaN = parsedData.some(d => isNaN(d['#']) || isNaN(d.Size));
+        addResult(
+          'Numeric values parse correctly',
+          !hasNaN,
+          {
+            firstID: parsedData[0]['#'],
+            firstSize: parsedData[0].Size,
+            hasNaN
+          }
+        );
+
+        // Test 5: File extensions
+        const extensions = [...new Set(parsedData.map(d => d['File extension']))];
+        addResult(
+          'File extensions found',
+          extensions.length > 0,
+          { extensions, count: extensions.length }
+        );
+
+        // Test 6: Date parsing
+        const validDates = parsedData.filter(d => d['Date created']).length;
+        addResult(
+          'Dates present',
+          validDates > 0,
+          { validDates, total: parsedData.length }
+        );
+
+        // Summary
+        const allPassed = document.querySelectorAll('.result.pass').length;
+        const totalTests = document.querySelectorAll('.result').length;
+
+        const summary = document.createElement('h2');
+        summary.className = allPassed === totalTests ? 'success' : 'error';
+        summary.textContent = `Results: ${allPassed}/${totalTests} tests passed`;
+        resultsDiv.appendChild(summary);
+
+      } catch (error) {
+        resultsDiv.innerHTML = `
+          <div class="result fail">
+            <strong>✗ Test failed</strong>
+            <pre>${error.message}</pre>
+          </div>
+        `;
+      }
+    }
+
+    // Run tests
+    runTests();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2422 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0104.1204                               -->
+<workbook original-version='18.1' source-build='2020.4.0 (20204.20.1106.0321)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600?rev=1.2' id='cricket_16110753297600' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Cricket (Cricket1)' inline='true' name='federated.132m8ox1o015gq1beqtcj1tugqih' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Cricket1' name='excel-direct.0mv96x80bv9gv61db65v70e8469f'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0mv96x80bv9gv61db65v70e8469f' name='Cricket' table='[Cricket$]' type='table'>
+          <columns gridOrigin='A1:AM10001:no:A1:AM10001:0' header='yes' outcome='6'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='match_id' ordinal='1' />
+            <column datatype='integer' name='inning' ordinal='2' />
+            <column datatype='string' name='batting_team' ordinal='3' />
+            <column datatype='string' name='bowling_team' ordinal='4' />
+            <column datatype='integer' name='over' ordinal='5' />
+            <column datatype='integer' name='ball' ordinal='6' />
+            <column datatype='string' name='batsman' ordinal='7' />
+            <column datatype='string' name='non_striker' ordinal='8' />
+            <column datatype='string' name='bowler' ordinal='9' />
+            <column datatype='integer' name='is_super_over' ordinal='10' />
+            <column datatype='integer' name='wide_runs' ordinal='11' />
+            <column datatype='integer' name='bye_runs' ordinal='12' />
+            <column datatype='integer' name='legbye_runs' ordinal='13' />
+            <column datatype='integer' name='noball_runs' ordinal='14' />
+            <column datatype='integer' name='penalty_runs' ordinal='15' />
+            <column datatype='integer' name='batsman_runs' ordinal='16' />
+            <column datatype='integer' name='extra_runs' ordinal='17' />
+            <column datatype='integer' name='total_runs' ordinal='18' />
+            <column datatype='string' name='player_dismissed' ordinal='19' />
+            <column datatype='string' name='dismissal_kind' ordinal='20' />
+            <column datatype='string' name='fielder' ordinal='21' />
+            <column datatype='integer' name='id' ordinal='22' />
+            <column datatype='integer' name='season' ordinal='23' />
+            <column datatype='string' name='city' ordinal='24' />
+            <column datatype='date' name='date' ordinal='25' />
+            <column datatype='string' name='team1' ordinal='26' />
+            <column datatype='string' name='team2' ordinal='27' />
+            <column datatype='string' name='toss_winner' ordinal='28' />
+            <column datatype='string' name='toss_decision' ordinal='29' />
+            <column datatype='string' name='result' ordinal='30' />
+            <column datatype='integer' name='dl_applied' ordinal='31' />
+            <column datatype='string' name='winner' ordinal='32' />
+            <column datatype='integer' name='win_by_runs' ordinal='33' />
+            <column datatype='integer' name='win_by_wickets' ordinal='34' />
+            <column datatype='string' name='player_of_match' ordinal='35' />
+            <column datatype='string' name='venue' ordinal='36' />
+            <column datatype='string' name='umpire1' ordinal='37' />
+            <column datatype='string' name='umpire2' ordinal='38' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0mv96x80bv9gv61db65v70e8469f' name='Cricket' table='[Cricket$]' type='table'>
+          <columns gridOrigin='A1:AM10001:no:A1:AM10001:0' header='yes' outcome='6'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='match_id' ordinal='1' />
+            <column datatype='integer' name='inning' ordinal='2' />
+            <column datatype='string' name='batting_team' ordinal='3' />
+            <column datatype='string' name='bowling_team' ordinal='4' />
+            <column datatype='integer' name='over' ordinal='5' />
+            <column datatype='integer' name='ball' ordinal='6' />
+            <column datatype='string' name='batsman' ordinal='7' />
+            <column datatype='string' name='non_striker' ordinal='8' />
+            <column datatype='string' name='bowler' ordinal='9' />
+            <column datatype='integer' name='is_super_over' ordinal='10' />
+            <column datatype='integer' name='wide_runs' ordinal='11' />
+            <column datatype='integer' name='bye_runs' ordinal='12' />
+            <column datatype='integer' name='legbye_runs' ordinal='13' />
+            <column datatype='integer' name='noball_runs' ordinal='14' />
+            <column datatype='integer' name='penalty_runs' ordinal='15' />
+            <column datatype='integer' name='batsman_runs' ordinal='16' />
+            <column datatype='integer' name='extra_runs' ordinal='17' />
+            <column datatype='integer' name='total_runs' ordinal='18' />
+            <column datatype='string' name='player_dismissed' ordinal='19' />
+            <column datatype='string' name='dismissal_kind' ordinal='20' />
+            <column datatype='string' name='fielder' ordinal='21' />
+            <column datatype='integer' name='id' ordinal='22' />
+            <column datatype='integer' name='season' ordinal='23' />
+            <column datatype='string' name='city' ordinal='24' />
+            <column datatype='date' name='date' ordinal='25' />
+            <column datatype='string' name='team1' ordinal='26' />
+            <column datatype='string' name='team2' ordinal='27' />
+            <column datatype='string' name='toss_winner' ordinal='28' />
+            <column datatype='string' name='toss_decision' ordinal='29' />
+            <column datatype='string' name='result' ordinal='30' />
+            <column datatype='integer' name='dl_applied' ordinal='31' />
+            <column datatype='string' name='winner' ordinal='32' />
+            <column datatype='integer' name='win_by_runs' ordinal='33' />
+            <column datatype='integer' name='win_by_wickets' ordinal='34' />
+            <column datatype='string' name='player_of_match' ordinal='35' />
+            <column datatype='string' name='venue' ordinal='36' />
+            <column datatype='string' name='umpire1' ordinal='37' />
+            <column datatype='string' name='umpire2' ordinal='38' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AM10001:no:A1:AM10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>match_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[match_id]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>match_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inning</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inning]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>inning</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>batting_team</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[batting_team]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>batting_team</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bowling_team</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bowling_team]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>bowling_team</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>over</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[over]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>over</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ball</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ball]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>ball</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>batsman</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[batsman]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>batsman</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>non_striker</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[non_striker]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>non_striker</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bowler</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bowler]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>bowler</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_super_over</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_super_over]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>is_super_over</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wide_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[wide_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>wide_runs</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bye_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bye_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>bye_runs</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>legbye_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[legbye_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>legbye_runs</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>noball_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[noball_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>noball_runs</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>penalty_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[penalty_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>penalty_runs</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>batsman_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[batsman_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>batsman_runs</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>extra_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[extra_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>extra_runs</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>total_runs</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_dismissed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[player_dismissed]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>player_dismissed</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dismissal_kind</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[dismissal_kind]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>dismissal_kind</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fielder</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[fielder]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>fielder</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[season]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>season</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[team1]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>team1</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[team2]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>team2</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toss_winner</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[toss_winner]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>toss_winner</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toss_decision</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[toss_decision]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>toss_decision</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>result</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[result]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>result</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dl_applied</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dl_applied]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>dl_applied</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>winner</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[winner]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>winner</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>win_by_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[win_by_runs]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>win_by_runs</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>win_by_wickets</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[win_by_wickets]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>win_by_wickets</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_of_match</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[player_of_match]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>player_of_match</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>venue</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[venue]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>venue</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[umpire1]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>umpire1</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[umpire2]</local-name>
+            <parent-name>[Cricket]</parent-name>
+            <remote-alias>umpire2</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Cricket' datatype='table' name='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' role='measure' type='quantitative' />
+      <column caption='Ball' datatype='integer' name='[ball]' role='measure' type='quantitative' />
+      <column datatype='string' name='[batsman]' role='dimension' type='nominal' />
+      <column caption='Batsman Runs' datatype='integer' name='[batsman_runs]' role='measure' type='quantitative' />
+      <column caption='Batting Team' datatype='string' name='[batting_team]' role='dimension' type='nominal' />
+      <column caption='Bowler' datatype='string' name='[bowler]' role='dimension' type='nominal' />
+      <column caption='Bowling Team' datatype='string' name='[bowling_team]' role='dimension' type='nominal' />
+      <column caption='Bye Runs' datatype='integer' name='[bye_runs]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Dismissal Kind' datatype='string' name='[dismissal_kind]' role='dimension' type='nominal' />
+      <column caption='Dl Applied' datatype='integer' name='[dl_applied]' role='measure' type='quantitative' />
+      <column caption='Extra Runs' datatype='integer' name='[extra_runs]' role='measure' type='quantitative' />
+      <column caption='Fielder' datatype='string' name='[fielder]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Inning' datatype='integer' name='[inning]' role='measure' type='quantitative' />
+      <column caption='Is Super Over' datatype='integer' name='[is_super_over]' role='measure' type='quantitative' />
+      <column caption='Legbye Runs' datatype='integer' name='[legbye_runs]' role='measure' type='quantitative' />
+      <column caption='Match Id' datatype='integer' name='[match_id]' role='dimension' type='ordinal' />
+      <column caption='Noball Runs' datatype='integer' name='[noball_runs]' role='measure' type='quantitative' />
+      <column caption='Non Striker' datatype='string' name='[non_striker]' role='dimension' type='nominal' />
+      <column caption='Over' datatype='integer' name='[over]' role='measure' type='quantitative' />
+      <column caption='Penalty Runs' datatype='integer' name='[penalty_runs]' role='measure' type='quantitative' />
+      <column caption='Player Dismissed' datatype='string' name='[player_dismissed]' role='dimension' type='nominal' />
+      <column caption='Player Of Match' datatype='string' name='[player_of_match]' role='dimension' type='nominal' />
+      <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+      <column caption='Season' datatype='integer' name='[season]' role='measure' type='quantitative' />
+      <column caption='Team1' datatype='string' name='[team1]' role='dimension' type='nominal' />
+      <column caption='Team2' datatype='string' name='[team2]' role='dimension' type='nominal' />
+      <column caption='Toss Decision' datatype='string' name='[toss_decision]' role='dimension' type='nominal' />
+      <column caption='Toss Winner' datatype='string' name='[toss_winner]' role='dimension' type='nominal' />
+      <column caption='Total Runs' datatype='integer' name='[total_runs]' role='measure' type='quantitative' />
+      <column caption='Umpire1' datatype='string' name='[umpire1]' role='dimension' type='nominal' />
+      <column caption='Umpire2' datatype='string' name='[umpire2]' role='dimension' type='nominal' />
+      <column caption='Venue' datatype='string' name='[venue]' role='dimension' type='nominal' />
+      <column caption='Wide Runs' datatype='integer' name='[wide_runs]' role='measure' type='quantitative' />
+      <column caption='Win By Runs' datatype='integer' name='[win_by_runs]' role='measure' type='quantitative' />
+      <column caption='Win By Wickets' datatype='integer' name='[win_by_wickets]' role='measure' type='quantitative' />
+      <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+      <column-instance column='[batsman]' derivation='None' name='[none:batsman:nk]' pivot='key' type='nominal' />
+      <column-instance column='[venue]' derivation='None' name='[none:venue:nk]' pivot='key' type='nominal' />
+      <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Winner)' hidden='true' name='[Action (Winner)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[winner]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='Data/TableauTemp/TEMP_1a0b54d0ncxp7o13uhh9c0ssmfny.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/19/2021 04:41:50 PM' updated-database='C:/Users/SAGE/AppData/Local/Temp/TableauTemp/#TableauTemp_10sy36g06m6ggn18i32on12l3ily.hyper' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>179078</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>match_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[match_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>match_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3965</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>inning</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[inning]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>inning</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>batting_team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[batting_team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>batting_team</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bowling_team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bowling_team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bowling_team</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>over</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[over]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>over</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ball</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ball]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ball</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>batsman</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[batsman]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>batsman</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1270</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>non_striker</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[non_striker]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>non_striker</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>980</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bowler</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bowler]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bowler</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1282</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_super_over</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_super_over]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_super_over</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wide_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[wide_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wide_runs</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bye_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bye_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bye_runs</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>legbye_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[legbye_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>legbye_runs</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>noball_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[noball_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>noball_runs</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>penalty_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[penalty_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>penalty_runs</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>batsman_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[batsman_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>batsman_runs</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>extra_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[extra_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>extra_runs</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_runs</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_dismissed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_dismissed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player_dismissed</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2688</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dismissal_kind</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dismissal_kind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dismissal_kind</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fielder</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fielder]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fielder</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1839</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3965</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>season</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[city]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Cricket</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2261</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team1</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team2</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>toss_winner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[toss_winner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>toss_winner</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>toss_decision</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[toss_decision]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>toss_decision</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>result</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[result]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>result</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dl_applied</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dl_applied]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dl_applied</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>winner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[winner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>winner</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>win_by_runs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[win_by_runs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>win_by_runs</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>238</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>win_by_wickets</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[win_by_wickets]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>win_by_wickets</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Cricket</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_of_match</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_of_match]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player_of_match</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>647</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>venue</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[venue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>venue</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>umpire1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[umpire1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>umpire1</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>114</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>umpire2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[umpire2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>umpire2</remote-alias>
+              <ordinal>38</ordinal>
+              <family>Cricket</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:winner:nk]' palette='tableau20_10_0' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rising Pune Supergiant&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pune Warriors&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Kochi Tuskers Kerala&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Deccan Chargers&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Delhi Capitals&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:venue:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Eden Gardens&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MA Chidambaram Stadium, Chepauk&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Maharashtra Cricket Association Stadium&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Subrata Roy Sahara Stadium&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Rajiv Gandhi International Stadium, Uppal&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Wankhede Stadium&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;M Chinnaswamy Stadium&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Punjab Cricket Association Stadium, Mohali&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Feroz Shah Kotla&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Sawai Mansingh Stadium&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:batsman:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;KD Karthik&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AB de Villiers&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;RG Sharma&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CH Gayle&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;R Dravid&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;M Vijay&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MK Pandey&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DA Warner&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SR Watson&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;YK Pathan&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;AM Rahane&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SE Marsh&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SK Raina&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;G Gambhir&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;RV Uthappa&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SR Tendulkar&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;V Kohli&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Yuvraj Singh&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MEK Hussey&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MS Dhoni&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;JH Kallis&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;KA Pollard&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AT Rayudu&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;S Dhawan&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;PA Patel&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;BB McCullum&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Cricket' id='Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129'>
+            <properties context=''>
+              <relation connection='excel-direct.0mv96x80bv9gv61db65v70e8469f' name='Cricket' table='[Cricket$]' type='table'>
+                <columns gridOrigin='A1:AM10001:no:A1:AM10001:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='match_id' ordinal='1' />
+                  <column datatype='integer' name='inning' ordinal='2' />
+                  <column datatype='string' name='batting_team' ordinal='3' />
+                  <column datatype='string' name='bowling_team' ordinal='4' />
+                  <column datatype='integer' name='over' ordinal='5' />
+                  <column datatype='integer' name='ball' ordinal='6' />
+                  <column datatype='string' name='batsman' ordinal='7' />
+                  <column datatype='string' name='non_striker' ordinal='8' />
+                  <column datatype='string' name='bowler' ordinal='9' />
+                  <column datatype='integer' name='is_super_over' ordinal='10' />
+                  <column datatype='integer' name='wide_runs' ordinal='11' />
+                  <column datatype='integer' name='bye_runs' ordinal='12' />
+                  <column datatype='integer' name='legbye_runs' ordinal='13' />
+                  <column datatype='integer' name='noball_runs' ordinal='14' />
+                  <column datatype='integer' name='penalty_runs' ordinal='15' />
+                  <column datatype='integer' name='batsman_runs' ordinal='16' />
+                  <column datatype='integer' name='extra_runs' ordinal='17' />
+                  <column datatype='integer' name='total_runs' ordinal='18' />
+                  <column datatype='string' name='player_dismissed' ordinal='19' />
+                  <column datatype='string' name='dismissal_kind' ordinal='20' />
+                  <column datatype='string' name='fielder' ordinal='21' />
+                  <column datatype='integer' name='id' ordinal='22' />
+                  <column datatype='integer' name='season' ordinal='23' />
+                  <column datatype='string' name='city' ordinal='24' />
+                  <column datatype='date' name='date' ordinal='25' />
+                  <column datatype='string' name='team1' ordinal='26' />
+                  <column datatype='string' name='team2' ordinal='27' />
+                  <column datatype='string' name='toss_winner' ordinal='28' />
+                  <column datatype='string' name='toss_decision' ordinal='29' />
+                  <column datatype='string' name='result' ordinal='30' />
+                  <column datatype='integer' name='dl_applied' ordinal='31' />
+                  <column datatype='string' name='winner' ordinal='32' />
+                  <column datatype='integer' name='win_by_runs' ordinal='33' />
+                  <column datatype='integer' name='win_by_wickets' ordinal='34' />
+                  <column datatype='string' name='player_of_match' ordinal='35' />
+                  <column datatype='string' name='venue' ordinal='36' />
+                  <column datatype='string' name='umpire1' ordinal='37' />
+                  <column datatype='string' name='umpire2' ordinal='38' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter1' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='winner vs count' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='winner vs count' />
+        <param name='on-empty' value='none' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='batman vs runs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Segoe UI Black' fontsize='12' italic='true' underline='true'>Top Batsmen</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40811962?rev=' id='batmanvsruns' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <column datatype='string' name='[batsman]' role='dimension' type='nominal' />
+            <column caption='Batsman Runs' datatype='integer' name='[batsman_runs]' role='measure' type='quantitative' />
+            <column-instance column='[batsman]' derivation='None' name='[none:batsman:nk]' pivot='key' type='nominal' />
+            <column-instance column='[batsman_runs]' derivation='Sum' name='[sum:batsman_runs:qk]' pivot='key' type='quantitative' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]'>
+            <groupfilter function='member' level='[winner]' member='&quot;Kolkata Knight Riders&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]'>
+            <groupfilter count='15' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([batsman_runs])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:batsman:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</column>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]' value='60' />
+            <format attr='title' class='0' field='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]' scope='rows' value='Batsmen Runs' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]</rows>
+        <cols>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</cols>
+      </table>
+      <simple-id uuid='{C448C151-8335-4FC2-8674-0FC260DFA1CC}' />
+    </worksheet>
+    <worksheet name='team vs total runs'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40811960?rev=' id='teamvstotalruns' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <column-instance column='[team1]' derivation='None' name='[none:team1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_runs]' derivation='Sum' name='[sum:total_runs:qk]' pivot='key' type='quantitative' />
+            <column caption='Team1' datatype='string' name='[team1]' role='dimension' type='nominal' />
+            <column caption='Total Runs' datatype='integer' name='[total_runs]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:total_runs:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:total_runs:qk]</rows>
+        <cols>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]</cols>
+      </table>
+      <simple-id uuid='{FC3A0B72-AE84-482A-8C05-7EA964036EBC}' />
+    </worksheet>
+    <worksheet name='venue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Segoe UI Black' fontsize='12' italic='true' underline='true'>Venue (</run>
+            <run bold='true' fontname='Segoe UI Black' fontsize='9' italic='true' underline='true'>Where Match Take place)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40813093?rev=' id='venue' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <_.fcp.ObjectModelTableType.true...column caption='Cricket' datatype='table' name='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[venue]' derivation='None' name='[none:venue:nk]' pivot='key' type='nominal' />
+            <column caption='Venue' datatype='string' name='[venue]' role='dimension' type='nominal' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Cricket' datatype='integer' name='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]'>
+            <groupfilter function='member' level='[winner]' member='&quot;Kolkata Knight Riders&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:venue:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]</column>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]' value='61' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]</rows>
+        <cols>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]</cols>
+      </table>
+      <simple-id uuid='{E2BBB8FC-22C2-41F3-93BB-1CB117D9F483}' />
+    </worksheet>
+    <worksheet name='win by runs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Segoe UI Black' fontsize='12' italic='true' underline='true'>Win By Runs</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40812892?rev=' id='winbyruns' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <column datatype='string' name='[batsman]' role='dimension' type='nominal' />
+            <column-instance column='[batsman]' derivation='None' name='[none:batsman:nk]' pivot='key' type='nominal' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[win_by_runs]' derivation='Sum' name='[sum:win_by_runs:qk]' pivot='key' type='quantitative' />
+            <column caption='Win By Runs' datatype='integer' name='[win_by_runs]' role='measure' type='quantitative' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]'>
+            <groupfilter function='member' level='[winner]' member='&quot;Kolkata Knight Riders&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([win_by_runs])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:batsman:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' direction='DESC' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]' shelf='columns' />
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</column>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' value='10' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]</rows>
+        <cols>([federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk] / [federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk])</cols>
+      </table>
+      <simple-id uuid='{676664AD-6AA2-4862-B17A-AA046CECEA44}' />
+    </worksheet>
+    <worksheet name='win by wickets'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Segoe UI Black' fontsize='12' italic='true' underline='true'>Win By Wickets</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40812893?rev=' id='winbywickets' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <column datatype='string' name='[batsman]' role='dimension' type='nominal' />
+            <column-instance column='[batsman]' derivation='None' name='[none:batsman:nk]' pivot='key' type='nominal' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[win_by_wickets]' derivation='Sum' name='[sum:win_by_wickets:qk]' pivot='key' type='quantitative' />
+            <column caption='Win By Wickets' datatype='integer' name='[win_by_wickets]' role='measure' type='quantitative' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]'>
+            <groupfilter function='member' level='[winner]' member='&quot;Kolkata Knight Riders&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([win_by_wickets])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:batsman:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' direction='DESC' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_wickets:qk]' shelf='columns' />
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_wickets:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</column>
+            <column>[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' value='10' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_wickets:qk]</rows>
+        <cols>([federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk] / [federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk])</cols>
+      </table>
+      <simple-id uuid='{0980E1F0-BAC4-4546-9FBC-976EAC281799}' />
+    </worksheet>
+    <worksheet name='winner vs count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Segoe UI Black' fontsize='12' italic='true' underline='true'>Top Winning Teams</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40811961?rev=' id='winnervscount' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <_.fcp.ObjectModelTableType.true...column caption='Cricket' datatype='table' name='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Cricket' datatype='integer' name='[__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]</rows>
+        <cols>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</cols>
+      </table>
+      <simple-id uuid='{0FD5E2D1-C6BF-40AB-8789-67FF12378C55}' />
+    </worksheet>
+    <worksheet name='winner vs win by runs'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40811959?rev=' id='winnervswinbyruns' path='/workbooks/cricket_16110753297600' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cricket (Cricket1)' name='federated.132m8ox1o015gq1beqtcj1tugqih' />
+          </datasources>
+          <datasource-dependencies datasource='federated.132m8ox1o015gq1beqtcj1tugqih'>
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[win_by_runs]' derivation='Sum' name='[sum:win_by_runs:qk]' pivot='key' type='quantitative' />
+            <column caption='Win By Runs' datatype='integer' name='[win_by_runs]' role='measure' type='quantitative' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]</rows>
+        <cols>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</cols>
+      </table>
+      <simple-id uuid='{E2F88289-C845-47B0-933E-A71A8D729BF9}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/cricket_16110753297600/40811963?rev=' id='Dashboard1' path='/workbooks/cricket_16110753297600' revision='' />
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97298' id='15' param='horz' w='98614' x='693' y='1351'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='97298' id='13' w='98614' x='693' y='1351'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86672' id='5' param='horz' w='98614' x='693' y='11977'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='86672' id='3' w='98614' x='693' y='11977'>
+                  <zone h='43320' id='1' name='winner vs count' w='49261' x='693' y='11977'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43321' id='9' name='win by runs' w='24686' x='49954' y='11977'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43321' id='10' name='win by wickets' w='24667' x='74640' y='11977'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43352' id='12' name='batman vs runs' w='49261' x='693' y='55297'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43351' id='19' name='venue' w='49353' x='49954' y='55298'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='10626' id='11' w='98614' x='693' y='1351'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Times New Roman' fontsize='22' underline='true'>Best Cricket Teams &amp; Players</run>
+                  <run fontalignment='2'>Æ&#10;</run>
+                  <run bold='true' fontalignment='2' fontcolor='#000000' fontname='Times New Roman' fontsize='11' italic='true' underline='true'>-Imam Abdullah Khan</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='23' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97298' id='22' param='vert' w='98614' x='693' y='1351'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='10626' id='11' w='98614' x='693' y='1351'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Times New Roman' fontsize='22' underline='true'>Best Cricket Teams &amp; Players</run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run bold='true' fontalignment='2' fontcolor='#000000' fontname='Times New Roman' fontsize='11' italic='true' underline='true'>-Imam Abdullah Khan</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43320' id='1' is-fixed='true' name='winner vs count' w='49261' x='693' y='11977'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43321' id='9' is-fixed='true' name='win by runs' w='24686' x='49954' y='11977'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43321' id='10' is-fixed='true' name='win by wickets' w='24667' x='74640' y='11977'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43352' id='12' is-fixed='true' name='batman vs runs' w='49261' x='693' y='55297'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43351' id='19' is-fixed='true' name='venue' w='49353' x='49954' y='55298'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{53D43FD9-6C03-412B-940E-A834469B7B68}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='winner vs win by runs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{784CB534-12B3-4FE2-8F47-0C1DA4932336}' />
+    </window>
+    <window class='worksheet' name='team vs total runs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C1EB304C-37D8-4724-BE11-5129E3F6A2FE}' />
+    </window>
+    <window class='worksheet' name='winner vs count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B36F13F5-419F-40AA-A902-1AC3797067C9}' />
+    </window>
+    <window class='worksheet' name='batman vs runs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E369EB3D-36E3-4433-9698-B035F8E6D991}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='batman vs runs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='venue'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='win by runs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='win by wickets'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='winner vs count'>
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]</field>
+                    <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>21644</value>
+                  <value>&quot;Kolkata Knight Riders&quot;</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+      </viewpoints>
+      <active id='1' />
+      <simple-id uuid='{E95B1F45-7E1C-4AEF-BA58-8BB3AAA85246}' />
+    </window>
+    <window class='worksheet' name='win by runs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{800CB70C-CA38-46FF-8E45-23EB5C07D643}' />
+    </window>
+    <window class='worksheet' name='win by wickets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:dismissal_kind:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:result:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{209E4336-2FDD-4546-AF8D-B2699B1C9165}' />
+    </window>
+    <window class='worksheet' name='venue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]</field>
+            <field>[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{46BAF918-9AD5-426A-9102-19A288153E8D}' />
+    </window>
+  </windows>
+</workbook>

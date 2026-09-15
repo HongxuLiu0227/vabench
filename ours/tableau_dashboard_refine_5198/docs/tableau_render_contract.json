@@ -1,0 +1,930 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "+ Retweeteados",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:retweet_count:qk]",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "+ Retweeteados",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Evolución Tipo de Tweets",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk] * [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk])",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[tmi:created_at:qk]",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "negative",
+        "positive"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[yr:created_at:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Favs x Tipo de Tweets",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:favorite_count:qk]",
+      "cols_field": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk] / [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk])",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "negative",
+        "positive"
+      ],
+      "title_runs": [
+        {
+          "text": "Favs x Tipo de Tweets",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "RT x Tipos de Tweets",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:retweet_count:qk]",
+      "cols_field": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk] / [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk])",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "negative",
+        "positive"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Tipos de Tweets x Objeto de Estudio",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[Action (Objeto de Estudio,Label)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filtro 1 (generado)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "type": "sheet",
+              "worksheet": "Tipos de Tweets x Objeto de Estudio"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Tipos de Tweets x Objeto de Estudio"
+            },
+            "field_captions": [],
+            "target": "Tipos de Tweets x Objeto de Estudio"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "50000",
+        "w": "98400",
+        "h": "49000",
+        "aspect_ratio": 2.0082,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.5,
+          "w_ratio": 0.984,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Tweets Favoritos",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:favorite_count:qk]",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Tweets Favoritos",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Tweets por Usuario",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk] * [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk])",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Kirchner",
+        "negative",
+        "positive"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Tweets x Tiempo",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+      "cols_field": "([federated.0c8okpg0coyfqg1d8783s1jnu0wr].[hr:created_at:ok] / [federated.0c8okpg0coyfqg1d8783s1jnu0wr].[mi:created_at:ok])",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Tweets x Tiempo",
+          "style": {
+            "bold": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[:Measure Names]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Users x followers count",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:followers_count:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Users con mayor número de seguidores.",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Usuarios con + Tweets",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+      "cols_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+      "series_field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Usuarios con + Tweets",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83200",
+          "y": "1000",
+          "w": "16000",
+          "h": "13250",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.832,
+            "y_ratio": 0.01,
+            "w_ratio": 0.16,
+            "h_ratio": 0.1325
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Resaltar1",
+            "kind": "highlight_brush",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Usuarios con + Tweets"
+            },
+            "command": "tsc:brush",
+            "params": {
+              "exclude": "Tipos de Tweets x Objeto de Estudio",
+              "field-captions": "ATTR(Full Text),Label,Objeto de Estudio,Usuario",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [
+              "ATTR(Full Text)",
+              "Label",
+              "Objeto de Estudio",
+              "Usuario"
+            ],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+          "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "82400",
+        "h": "49000",
+        "aspect_ratio": 1.6816,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.824,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Resaltar1",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Usuarios con + Tweets"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "exclude": "Tipos de Tweets x Objeto de Estudio",
+        "field-captions": "ATTR(Full Text),Label,Objeto de Estudio,Usuario",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [
+        "ATTR(Full Text)",
+        "Label",
+        "Objeto de Estudio",
+        "Usuario"
+      ],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filtro 1 (generado)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Tipos de Tweets x Objeto de Estudio"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Tipos de Tweets x Objeto de Estudio"
+      },
+      "field_captions": [],
+      "target": "Tipos de Tweets x Objeto de Estudio"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Tipos de Tweets x Objeto de Estudio",
+      "viewpoint_name": "Tipos de Tweets x Objeto de Estudio",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Evolución Tipo de Tweets",
+      "viewpoint_name": "Evolución Tipo de Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[yr:created_at:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Favs x Tipo de Tweets",
+      "viewpoint_name": "Favs x Tipo de Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "RT x Tipos de Tweets",
+      "viewpoint_name": "RT x Tipos de Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Tweets por Usuario",
+      "viewpoint_name": "Tweets por Usuario",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Usuarios con + Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Users x followers count",
+      "viewpoint_name": "Users x followers count",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Tweets Favoritos",
+      "viewpoint_name": "Tweets Favoritos",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "+ Retweeteados",
+      "viewpoint_name": "+ Retweeteados",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Usuarios con + Tweets",
+      "viewpoint_name": "Usuarios con + Tweets",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Tweets x Tiempo",
+      "viewpoint_name": "Tweets x Tiempo",
+      "fields": [
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[:Measure Names]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:flag:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 10,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 6,
+      "vertical_ranked_bar": 3,
+      "custom_tableau_view": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Usuarios con + Tweets"
+    ],
+    "legend_anchor_positions": {
+      "Usuarios con + Tweets": "right"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "+ Retweeteados",
+      "Evolución Tipo de Tweets",
+      "Favs x Tipo de Tweets",
+      "RT x Tipos de Tweets",
+      "Tipos de Tweets x Objeto de Estudio",
+      "Tweets Favoritos",
+      "Tweets por Usuario",
+      "Tweets x Tiempo",
+      "Users x followers count",
+      "Usuarios con + Tweets"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 11
+  }
+}

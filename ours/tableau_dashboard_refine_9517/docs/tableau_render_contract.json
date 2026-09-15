@@ -1,0 +1,714 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "768",
+    "maxwidth": "1366",
+    "minheight": "768",
+    "minwidth": "1366",
+    "preset-index": "0",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "Bottom 10 Customers",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[Sample - Superstore].[none:Customer Name:nk]",
+      "cols_field": "[Sample - Superstore].[sum:Sales:qk]",
+      "series_field": "[Sample - Superstore].[yr:Order Date:ok]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[none:Customer Name:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[Sample - Superstore].[none:Category:nk]",
+          "[Sample - Superstore].[none:Customer Name:nk]",
+          "[Sample - Superstore].[none:Profit (bin):ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Customer Sales & Profits",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[Sample - Superstore].[sum:Profit:qk]",
+      "cols_field": "[Sample - Superstore].[sum:Sales:qk]",
+      "series_field": "[Sample - Superstore].[sum:Profit:qk]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Canon PC1060 Personal Laser Copier",
+        "Copiers"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action4]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Informative dashboard",
+              "type": "sheet",
+              "worksheet": "Customer Sales & Profits"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Informative dashboard"
+            },
+            "field_captions": [],
+            "target": "Informative dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[Sample - Superstore].[none:Category:nk]",
+          "[Sample - Superstore].[none:Customer Name:nk]",
+          "[Sample - Superstore].[none:Product Name:nk]",
+          "[Sample - Superstore].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "50000",
+        "w": "49414",
+        "h": "48958",
+        "aspect_ratio": 1.0093,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.5,
+          "w_ratio": 0.4941,
+          "h_ratio": 0.4896
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales Map",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[Sample - Superstore].[Latitude (generated)]",
+      "cols_field": "[Sample - Superstore].[Longitude (generated)]",
+      "series_field": "[Sample - Superstore].[sum:Sales:qk]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[Sample - Superstore].[none:Category:nk]",
+          "[Sample - Superstore].[none:City:nk]",
+          "[Sample - Superstore].[none:Country:nk]",
+          "[Sample - Superstore].[none:Order Date:qk]",
+          "[Sample - Superstore].[none:Segment:nk]",
+          "[Sample - Superstore].[none:State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Sub Category ",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([Sample - Superstore].[none:Sub-Category:nk] / [Sample - Superstore].[none:Calculation_317222333014716416:nk])",
+      "cols_field": "[Sample - Superstore].[sum:Sales:qk]",
+      "series_field": "[Sample - Superstore].[yr:Order Date:ok]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Calculation_317222333014716416:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Technology"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Informative dashboard",
+              "type": "sheet",
+              "worksheet": "Sales by Sub Category "
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Informative dashboard"
+            },
+            "field_captions": [],
+            "target": "Informative dashboard"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by city",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[Sample - Superstore].[none:City:nk]",
+      "cols_field": "[Sample - Superstore].[sum:Sales:qk]",
+      "series_field": "[Sample - Superstore].[yr:Order Date:ok]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[Action (Top 10 Product,Sub-Category)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Canon PC1060 Personal Laser Copier",
+        "Copiers"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Informative dashboard",
+              "type": "sheet",
+              "worksheet": "Sales by city"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Informative dashboard"
+            },
+            "field_captions": [],
+            "target": "Informative dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[Sample - Superstore].[none:Category:nk]",
+          "[Sample - Superstore].[none:City:nk]",
+          "[Sample - Superstore].[none:Sub-Category:nk]",
+          "[Sample - Superstore].[yr:Order Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "586",
+        "y": "1042",
+        "w": "49414",
+        "h": "97916",
+        "aspect_ratio": 0.5047,
+        "normalized": {
+          "x_ratio": 0.0059,
+          "y_ratio": 0.0104,
+          "w_ratio": 0.4941,
+          "h_ratio": 0.9792
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Top 10 Customers",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[Sample - Superstore].[none:Customer Name:nk]",
+      "cols_field": "[Sample - Superstore].[sum:Sales:qk]",
+      "series_field": "[Sample - Superstore].[yr:Order Date:ok]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]",
+        "[Sample - Superstore].[none:Customer Name:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[Sample - Superstore].[none:Category:nk]",
+          "[Sample - Superstore].[none:Customer Name:nk]",
+          "[Sample - Superstore].[none:Region:nk]",
+          "[Sample - Superstore].[none:State:nk]",
+          "[Sample - Superstore].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "info",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[Sample - Superstore].[yr:Order Date:ok]",
+      "slices": [
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[Sample - Superstore].[none:Calculation_1941051468927434752:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action2]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Informative dashboard",
+        "type": "sheet",
+        "worksheet": "Sales by Sub Category "
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Informative dashboard"
+      },
+      "field_captions": [],
+      "target": "Informative dashboard"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Informative dashboard",
+        "type": "sheet",
+        "worksheet": "Sales by city"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Informative dashboard"
+      },
+      "field_captions": [],
+      "target": "Informative dashboard"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Informative dashboard",
+        "type": "sheet",
+        "worksheet": "Customer Sales & Profits"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Informative dashboard"
+      },
+      "field_captions": [],
+      "target": "Informative dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales Map",
+      "viewpoint_name": "Sales Map",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:City:nk]",
+        "[Sample - Superstore].[none:Country:nk]",
+        "[Sample - Superstore].[none:Order Date:qk]",
+        "[Sample - Superstore].[none:Segment:nk]",
+        "[Sample - Superstore].[none:State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by city",
+      "viewpoint_name": "Sales by city",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:City:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]",
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Sub Category ",
+      "viewpoint_name": "Sales by Sub Category ",
+      "fields": [
+        "[Sample - Superstore].[none:Calculation_317222333014716416:nk]",
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:State:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]",
+        "[Sample - Superstore].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 10 Customers",
+      "viewpoint_name": "Top 10 Customers",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Customer Name:nk]",
+        "[Sample - Superstore].[none:Region:nk]",
+        "[Sample - Superstore].[none:State:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom 10 Customers",
+      "viewpoint_name": "Bottom 10 Customers",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Customer Name:nk]",
+        "[Sample - Superstore].[none:Profit (bin):ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Customer Sales & Profits",
+      "viewpoint_name": "Customer Sales & Profits",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]",
+        "[Sample - Superstore].[none:Customer Name:nk]",
+        "[Sample - Superstore].[none:Product Name:nk]",
+        "[Sample - Superstore].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Informative dashboard",
+      "viewpoint_name": "Sales by city",
+      "fields": [
+        "[Sample - Superstore].[none:Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "info",
+      "viewpoint_name": "info",
+      "fields": [
+        "[Sample - Superstore].[none:Calculation_1941051468927434752:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 7,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 4,
+      "custom_tableau_view": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Bottom 10 Customers",
+      "Customer Sales & Profits",
+      "Sales Map",
+      "Sales by Sub Category ",
+      "Sales by city",
+      "Top 10 Customers",
+      "info"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 8
+  }
+}

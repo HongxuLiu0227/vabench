@@ -1,0 +1,2812 @@
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" original-version="18.1" source-build="2020.2.2 (20202.20.0614.2338)" source-platform="win" version="18.1">
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <datasources>
+    <datasource caption="Sheet1 (Sold_Boats_Report_07-13-2020_11_37_51)" inline="true" name="federated.0xc14ao1st9wyu1h40zo40lm8av6" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="Sold_Boats_Report_07-13-2020_11_37_51" name="excel-direct.1gnkcbo00lwfel18ljlve0jqspzc">
+            <connection class="excel-direct" cleaning="no" compat="no" dataRefreshTime="" filename="Data/Downloads/Sold_Boats_Report_07-13-2020_11_37_51.xlsx" interpretationMode="0" password="" server="" validate="no" />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection="excel-direct.1gnkcbo00lwfel18ljlve0jqspzc" name="Sheet1" table="[Sheet1$]" type="table">
+          <columns gridOrigin="A1:V1006:no:A1:V1006:0" header="yes" outcome="2">
+            <column datatype="integer" name="F1" ordinal="0" />
+            <column datatype="string" name="VesselID_PK" ordinal="1" />
+            <column datatype="string" name="Boat Name" ordinal="2" />
+            <column datatype="string" name="Listing Status" ordinal="3" />
+            <column datatype="string" name="Boat Model" ordinal="4" />
+            <column datatype="string" name="Boat Type" ordinal="5" />
+            <column datatype="string" name="Boat Condition" ordinal="6" />
+            <column datatype="date" date-parse-format="yyyy-MM-dd|#|#|MM/dd/yyyy" name="Listing Date" ordinal="7" />
+            <column datatype="integer" name="Listing Price" ordinal="8" />
+            <column datatype="date" date-parse-format="MM/dd/yyyy" name="Boat_Sold_Date" ordinal="9" />
+            <column datatype="string" name="Sold Price" ordinal="10" />
+            <column datatype="date" date-parse-format="MM/dd/yyyy" name="Boat_Price_Cut_Date" ordinal="11" />
+            <column datatype="integer" name="Price Was" ordinal="12" />
+            <column datatype="string" name="Selling Broker" ordinal="13" />
+            <column datatype="string" name="Listing Broker" ordinal="14" />
+            <column datatype="string" name="Seller" ordinal="15" />
+            <column datatype="string" name="Seller Email" ordinal="16" />
+            <column datatype="string" name="Buyer" ordinal="17" />
+            <column datatype="string" name="BuyerEmail" ordinal="18" />
+            <column datatype="string" name="HullNo" ordinal="19" />
+            <column datatype="integer" name="No of Days" ordinal="20" />
+            <column datatype="string" name="boat_model_name" ordinal="21" />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection="excel-direct.1gnkcbo00lwfel18ljlve0jqspzc" name="Sheet1" table="[Sheet1$]" type="table">
+          <columns gridOrigin="A1:V1006:no:A1:V1006:0" header="yes" outcome="2">
+            <column datatype="integer" name="F1" ordinal="0" />
+            <column datatype="string" name="VesselID_PK" ordinal="1" />
+            <column datatype="string" name="Boat Name" ordinal="2" />
+            <column datatype="string" name="Listing Status" ordinal="3" />
+            <column datatype="string" name="Boat Model" ordinal="4" />
+            <column datatype="string" name="Boat Type" ordinal="5" />
+            <column datatype="string" name="Boat Condition" ordinal="6" />
+            <column datatype="date" date-parse-format="yyyy-MM-dd|#|#|MM/dd/yyyy" name="Listing Date" ordinal="7" />
+            <column datatype="integer" name="Listing Price" ordinal="8" />
+            <column datatype="date" date-parse-format="MM/dd/yyyy" name="Boat_Sold_Date" ordinal="9" />
+            <column datatype="string" name="Sold Price" ordinal="10" />
+            <column datatype="date" date-parse-format="MM/dd/yyyy" name="Boat_Price_Cut_Date" ordinal="11" />
+            <column datatype="integer" name="Price Was" ordinal="12" />
+            <column datatype="string" name="Selling Broker" ordinal="13" />
+            <column datatype="string" name="Listing Broker" ordinal="14" />
+            <column datatype="string" name="Seller" ordinal="15" />
+            <column datatype="string" name="Seller Email" ordinal="16" />
+            <column datatype="string" name="Buyer" ordinal="17" />
+            <column datatype="string" name="BuyerEmail" ordinal="18" />
+            <column datatype="string" name="HullNo" ordinal="19" />
+            <column datatype="integer" name="No of Days" ordinal="20" />
+            <column datatype="string" name="boat_model_name" ordinal="21" />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class="capability">
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="context">6</attribute>
+              <attribute datatype="string" name="gridOrigin">"A1:V1006:no:A1:V1006:0"</attribute>
+              <attribute datatype="boolean" name="header">true</attribute>
+              <attribute datatype="integer" name="outcome">2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"I8"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>VesselID_PK</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[VesselID_PK]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>VesselID_PK</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Boat Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Boat Name]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Boat Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Listing Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Listing Status]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Listing Status</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Boat Model</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Boat Model]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Boat Model</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Boat Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Boat Type]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Boat Type</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Boat Condition</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Boat Condition]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Boat Condition</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Listing Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Listing Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Listing Date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Listing Price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Listing Price]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Listing Price</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"I8"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Boat_Sold_Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Boat_Sold_Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Boat_Sold_Date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Sold Price</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sold Price]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sold Price</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Boat_Price_Cut_Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Boat_Price_Cut_Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Boat_Price_Cut_Date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Price Was</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price Was]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Price Was</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"I8"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Selling Broker</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Selling Broker]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Selling Broker</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Listing Broker</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Listing Broker]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Listing Broker</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Seller</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Seller]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Seller</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Seller Email</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Seller Email]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Seller Email</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Buyer</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Buyer]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Buyer</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>BuyerEmail</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BuyerEmail]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>BuyerEmail</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>HullNo</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[HullNo]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>HullNo</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>No of Days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[No of Days]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>No of Days</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"I8"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>boat_model_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[boat_model_name]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>boat_model_name</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag="1" name="LEN_RUS_S2" />
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"WSTR"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column datatype="string" name="[Boat Condition]" role="dimension" type="nominal" />
+      <column caption="Boat Price Cut Date" datatype="date" name="[Boat_Price_Cut_Date]" role="dimension" type="ordinal" />
+      <column caption="Boat Sold Date" datatype="date" name="[Boat_Sold_Date]" role="dimension" type="ordinal" />
+      <column caption="Buyer Email" datatype="string" name="[BuyerEmail]" role="dimension" type="nominal" />
+      <column caption="Price Cut Percent" datatype="real" name="[Calculation_1106478137490472960]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="-([Listing Price] - [Price Was])/[Price Was]" />
+      </column>
+      <column caption="DaysBoughtAfterPriceCut" datatype="integer" name="[Calculation_1145603158923091968]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="[Boat_Sold_Date]-[Boat_Price_Cut_Date]" />
+      </column>
+      <column caption="DaysBoughtAfterListing" datatype="integer" name="[Calculation_1145603158940704770]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="[Boat_Sold_Date]-[Listing Date]" />
+      </column>
+      <column caption="HasPriceCut" datatype="boolean" name="[Calculation_1145603158979420163]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="not isnull([Boat_Price_Cut_Date])" />
+        <aliases>
+          <alias key="false" value="No Price Cut" />
+          <alias key="true" value="Price Cut" />
+        </aliases>
+      </column>
+      <column caption="SoldAtPercentofListing" datatype="real" name="[Calculation_1145603158995693572]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="[Sold Price - Split 2]/[Listing Price]" />
+      </column>
+      <column caption="DaysUntilPriceCut" datatype="integer" name="[Calculation_1180787531334811648]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="[Listing Date]-[Boat_Sold_Date]" />
+      </column>
+      <column aggregation="None" caption="Bought Withing So Many Days of Listing" datatype="integer" name="[DaysBoughtAfterListing (bin) 2]" role="dimension" type="ordinal">
+        <calculation class="bin" decimals="0" formula="[Calculation_1145603158940704770]" peg="0" size="7" />
+      </column>
+      <column aggregation="None" caption="Days Bought After Listing" datatype="integer" name="[DaysBoughtAfterListing (bin)]" role="dimension" type="quantitative">
+        <calculation class="bin" decimals="2" formula="[Calculation_1145603158940704770]" peg="0" size="155" />
+      </column>
+      <column aggregation="None" caption="Bought Withing So Many Days of Price Cut" datatype="integer" name="[DaysBoughtAfterPriceCut (bin) 2]" role="dimension" type="ordinal">
+        <calculation class="bin" decimals="0" formula="[Calculation_1145603158923091968]" peg="0" size="7" />
+      </column>
+      <column aggregation="None" caption="Days Bought After Price Cut" datatype="integer" name="[DaysBoughtAfterPriceCut (bin)]" role="dimension" type="quantitative">
+        <calculation class="bin" decimals="1" formula="[Calculation_1145603158923091968]" peg="0" size="99" />
+      </column>
+      <column aggregation="None" caption="DaysUntilPriceCut (bin) 2" datatype="integer" name="[DaysUntilPriceCut (bin) 2]" role="dimension" type="ordinal">
+        <calculation class="bin" decimals="0" formula="[Calculation_1180787531334811648]" peg="0" size="7" />
+      </column>
+      <column aggregation="None" datatype="integer" name="[DaysUntilPriceCut (bin)]" role="dimension" type="quantitative">
+        <calculation class="bin" decimals="2" formula="[Calculation_1180787531334811648]" peg="0" size="155" />
+      </column>
+      <column aggregation="CountD" caption="Hull No" datatype="string" name="[HullNo]" role="dimension" type="nominal" />
+      <column datatype="string" name="[Listing Broker]" role="dimension" type="nominal" />
+      <column aggregation="None" datatype="integer" name="[No of Days (bin)]" role="dimension" type="quantitative">
+        <calculation class="bin" decimals="2" formula="[No of Days]" peg="0" size="165" />
+      </column>
+      <column datatype="integer" name="[No of Days]" role="measure" type="quantitative" />
+      <column aggregation="None" datatype="integer" name="[Price Cut Percent (bin)]" role="dimension" type="quantitative">
+        <calculation class="bin" decimals="-2" formula="[Calculation_1106478137490472960]" peg="0" size="0.01" />
+      </column>
+      <column datatype="integer" name="[Price Was]" role="measure" type="quantitative" />
+      <column datatype="string" name="[Selling Broker]" role="dimension" type="nominal" />
+      <column caption="Sold Price - Split 1" datatype="string" name="[Sold Price - Split 1]" role="dimension" type="nominal" user:SplitFieldIndex="1" user:SplitFieldOrigin="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[Sold Price]">
+        <calculation class="tableau" formula="TRIM( SPLIT( [Sold Price], &quot; &quot;, 1 ) )" />
+      </column>
+      <column caption="Sold Price - Split 2" datatype="integer" name="[Sold Price - Split 2]" role="measure" type="quantitative" user:SplitFieldIndex="2" user:SplitFieldOrigin="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[Sold Price]">
+        <calculation class="tableau" formula="INT( SPLIT( [Sold Price], &quot; &quot;, 2 ) )" />
+      </column>
+      <column aggregation="None" datatype="integer" name="[SoldAtPercentofListing (bin)]" role="dimension" type="quantitative">
+        <calculation class="bin" decimals="-2" formula="[Calculation_1145603158995693572]" peg="0" size="0.05" />
+      </column>
+      <column caption="VesselID PK" datatype="string" name="[VesselID_PK]" role="dimension" type="nominal" />
+      <_.fcp.ObjectModelTableType.true...column caption="Sheet1" datatype="table" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+      <column caption="Boat Model Maker" datatype="string" name="[boat_model_name]" role="dimension" type="nominal" />
+      <column-instance column="[Sold Price - Split 2]" derivation="Avg" name="[avg:Sold Price - Split 2:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[Boat Condition]" derivation="None" name="[none:Boat Condition:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Calculation_1145603158979420163]" derivation="None" name="[none:Calculation_1145603158979420163:nk]" pivot="key" type="nominal" />
+      <column-instance column="[DaysBoughtAfterListing (bin) 2]" derivation="None" name="[none:DaysBoughtAfterListing (bin) 2:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[DaysBoughtAfterPriceCut (bin) 2]" derivation="None" name="[none:DaysBoughtAfterPriceCut (bin) 2:ok]" pivot="key" type="ordinal" />
+      <column-instance column="[Listing Broker]" derivation="None" name="[none:Listing Broker:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Selling Broker]" derivation="None" name="[none:Selling Broker:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Sold Price - Split 2]" derivation="None" name="[none:Sold Price - Split 2:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[boat_model_name]" derivation="None" name="[none:boat_model_name:nk]" pivot="key" type="nominal" />
+      <column-instance column="[Price Was]" derivation="Sum" name="[sum:Price Was:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[Sold Price - Split 2]" derivation="Sum" name="[sum:Sold Price - Split 2:qk]" pivot="key" type="quantitative" />
+      <column-instance column="[Boat_Sold_Date]" derivation="Year" name="[yr:Boat_Sold_Date:ok]" pivot="key" type="ordinal" />
+      <group hidden="true" name="[Exclusions (Listing Broker,YEAR(Boat Sold Date))]" name-style="unqualified" user:auto-column="exclude">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[none:Listing Broker:nk]" />
+          <groupfilter function="level-members" level="[yr:Boat_Sold_Date:ok]" />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage="0.5" _.fcp.SchemaViewerObjectModel.false...measure-percentage="0.4" dim-ordering="alphabetic" measure-ordering="alphabetic" show-structure="true" />
+      <style>
+        <style-rule element="mark">
+          <encoding attr="color" field="[none:DaysBoughtAfterPriceCut (bin) 2:ok]" palette="orange_10_0" type="palette">
+            <map to="#9e3d22">
+              <bucket>2</bucket>
+            </map>
+            <map to="#a03e22">
+              <bucket>3</bucket>
+            </map>
+            <map to="#a34022">
+              <bucket>4</bucket>
+            </map>
+            <map to="#a64122">
+              <bucket>5</bucket>
+            </map>
+            <map to="#a94322">
+              <bucket>6</bucket>
+            </map>
+            <map to="#ac4422">
+              <bucket>7</bucket>
+            </map>
+            <map to="#af4623">
+              <bucket>8</bucket>
+            </map>
+            <map to="#b24723">
+              <bucket>9</bucket>
+            </map>
+            <map to="#b54923">
+              <bucket>10</bucket>
+            </map>
+            <map to="#b84a23">
+              <bucket>11</bucket>
+            </map>
+            <map to="#bb4c23">
+              <bucket>12</bucket>
+            </map>
+            <map to="#be4e23">
+              <bucket>13</bucket>
+            </map>
+            <map to="#c14f22">
+              <bucket>14</bucket>
+            </map>
+            <map to="#c35122">
+              <bucket>15</bucket>
+            </map>
+            <map to="#c65222">
+              <bucket>16</bucket>
+            </map>
+            <map to="#c95422">
+              <bucket>17</bucket>
+            </map>
+            <map to="#cc5522">
+              <bucket>18</bucket>
+            </map>
+            <map to="#ce5722">
+              <bucket>19</bucket>
+            </map>
+            <map to="#d15921">
+              <bucket>20</bucket>
+            </map>
+            <map to="#d45a21">
+              <bucket>21</bucket>
+            </map>
+            <map to="#d75c21">
+              <bucket>22</bucket>
+            </map>
+            <map to="#da5e20">
+              <bucket>23</bucket>
+            </map>
+            <map to="#dd5f20">
+              <bucket>24</bucket>
+            </map>
+            <map to="#e06120">
+              <bucket>25</bucket>
+            </map>
+            <map to="#e26320">
+              <bucket>26</bucket>
+            </map>
+            <map to="#e46620">
+              <bucket>27</bucket>
+            </map>
+            <map to="#e66820">
+              <bucket>28</bucket>
+            </map>
+            <map to="#e86a20">
+              <bucket>29</bucket>
+            </map>
+            <map to="#ea6c20">
+              <bucket>30</bucket>
+            </map>
+            <map to="#ed6f20">
+              <bucket>31</bucket>
+            </map>
+            <map to="#ed7221">
+              <bucket>33</bucket>
+            </map>
+            <map to="#ee7523">
+              <bucket>34</bucket>
+            </map>
+            <map to="#ef7825">
+              <bucket>35</bucket>
+            </map>
+            <map to="#f07c26">
+              <bucket>36</bucket>
+            </map>
+            <map to="#f17f28">
+              <bucket>37</bucket>
+            </map>
+            <map to="#f2822a">
+              <bucket>38</bucket>
+            </map>
+            <map to="#f2852c">
+              <bucket>39</bucket>
+            </map>
+            <map to="#f3892e">
+              <bucket>42</bucket>
+            </map>
+            <map to="#f38c30">
+              <bucket>43</bucket>
+            </map>
+            <map to="#f48f32">
+              <bucket>44</bucket>
+            </map>
+            <map to="#f49334">
+              <bucket>45</bucket>
+            </map>
+            <map to="#f59637">
+              <bucket>47</bucket>
+            </map>
+            <map to="#f5993a">
+              <bucket>49</bucket>
+            </map>
+            <map to="#f59c3d">
+              <bucket>50</bucket>
+            </map>
+            <map to="#f5a03f">
+              <bucket>51</bucket>
+            </map>
+            <map to="#f5a342">
+              <bucket>55</bucket>
+            </map>
+            <map to="#f5a645">
+              <bucket>61</bucket>
+            </map>
+            <map to="#f5a94a">
+              <bucket>62</bucket>
+            </map>
+            <map to="#f6ac4f">
+              <bucket>63</bucket>
+            </map>
+            <map to="#f7ae55">
+              <bucket>65</bucket>
+            </map>
+            <map to="#f8b15a">
+              <bucket>71</bucket>
+            </map>
+            <map to="#f8b360">
+              <bucket>75</bucket>
+            </map>
+            <map to="#f9b665">
+              <bucket>78</bucket>
+            </map>
+            <map to="#fab96b">
+              <bucket>83</bucket>
+            </map>
+            <map to="#fbbb70">
+              <bucket>84</bucket>
+            </map>
+            <map to="#fcbe75">
+              <bucket>86</bucket>
+            </map>
+            <map to="#fdc07a">
+              <bucket>91</bucket>
+            </map>
+            <map to="#fec37f">
+              <bucket>94</bucket>
+            </map>
+            <map to="#ffc685">
+              <bucket>132</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[:Measure Names]" type="palette">
+            <map to="#4e79a7">
+              <bucket>"[federated.0xc14ao1st9wyu1h40zo40lm8av6].[avg:Sold Price - Split 2:qk]"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"[federated.0xc14ao1st9wyu1h40zo40lm8av6].[sum:Price Was:qk]"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"[federated.0xc14ao1st9wyu1h40zo40lm8av6]"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Sold Price - Split 2:qk]"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"[federated.0xc14ao1st9wyu1h40zo40lm8av6].[sum:Sold Price - Split 2:qk]"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:DaysBoughtAfterListing (bin) 2:ok]" palette="green_gold_10_0" type="palette">
+            <map to="#146c36">
+              <bucket>293</bucket>
+            </map>
+            <map to="#156c36">
+              <bucket>288</bucket>
+            </map>
+            <map to="#166d37">
+              <bucket>255</bucket>
+            </map>
+            <map to="#176e38">
+              <bucket>237</bucket>
+            </map>
+            <map to="#196f39">
+              <bucket>235</bucket>
+            </map>
+            <map to="#1a7039">
+              <bucket>232</bucket>
+            </map>
+            <map to="#1b713a">
+              <bucket>223</bucket>
+            </map>
+            <map to="#1d713b">
+              <bucket>219</bucket>
+            </map>
+            <map to="#1e723c">
+              <bucket>205</bucket>
+            </map>
+            <map to="#1f733c">
+              <bucket>203</bucket>
+            </map>
+            <map to="#20743d">
+              <bucket>193</bucket>
+            </map>
+            <map to="#22753e">
+              <bucket>187</bucket>
+            </map>
+            <map to="#23763f">
+              <bucket>180</bucket>
+            </map>
+            <map to="#24763f">
+              <bucket>176</bucket>
+            </map>
+            <map to="#257740">
+              <bucket>168</bucket>
+            </map>
+            <map to="#277841">
+              <bucket>158</bucket>
+            </map>
+            <map to="#287942">
+              <bucket>153</bucket>
+            </map>
+            <map to="#297a42">
+              <bucket>151</bucket>
+            </map>
+            <map to="#2a7b43">
+              <bucket>142</bucket>
+            </map>
+            <map to="#2b7c44">
+              <bucket>140</bucket>
+            </map>
+            <map to="#2c7d45">
+              <bucket>137</bucket>
+            </map>
+            <map to="#2d7e46">
+              <bucket>134</bucket>
+            </map>
+            <map to="#2e7f46">
+              <bucket>133</bucket>
+            </map>
+            <map to="#2f8047">
+              <bucket>132</bucket>
+            </map>
+            <map to="#308048">
+              <bucket>131</bucket>
+            </map>
+            <map to="#318149">
+              <bucket>128</bucket>
+            </map>
+            <map to="#328249">
+              <bucket>127</bucket>
+            </map>
+            <map to="#33834a">
+              <bucket>123</bucket>
+            </map>
+            <map to="#34844a">
+              <bucket>122</bucket>
+            </map>
+            <map to="#35854b">
+              <bucket>121</bucket>
+            </map>
+            <map to="#36864b">
+              <bucket>119</bucket>
+            </map>
+            <map to="#37874b">
+              <bucket>117</bucket>
+            </map>
+            <map to="#38884c">
+              <bucket>116</bucket>
+            </map>
+            <map to="#39894c">
+              <bucket>115</bucket>
+            </map>
+            <map to="#3a8a4c">
+              <bucket>114</bucket>
+            </map>
+            <map to="#3b8b4d">
+              <bucket>109</bucket>
+            </map>
+            <map to="#3b8b4d">
+              <bucket>112</bucket>
+            </map>
+            <map to="#3c8c4e">
+              <bucket>107</bucket>
+            </map>
+            <map to="#3d8d4e">
+              <bucket>106</bucket>
+            </map>
+            <map to="#3e8e4e">
+              <bucket>105</bucket>
+            </map>
+            <map to="#3f8f4f">
+              <bucket>103</bucket>
+            </map>
+            <map to="#40904f">
+              <bucket>102</bucket>
+            </map>
+            <map to="#41914f">
+              <bucket>99</bucket>
+            </map>
+            <map to="#429250">
+              <bucket>94</bucket>
+            </map>
+            <map to="#439350">
+              <bucket>90</bucket>
+            </map>
+            <map to="#449450">
+              <bucket>89</bucket>
+            </map>
+            <map to="#459551">
+              <bucket>88</bucket>
+            </map>
+            <map to="#469651">
+              <bucket>87</bucket>
+            </map>
+            <map to="#469751">
+              <bucket>86</bucket>
+            </map>
+            <map to="#479851">
+              <bucket>85</bucket>
+            </map>
+            <map to="#489952">
+              <bucket>84</bucket>
+            </map>
+            <map to="#499a52">
+              <bucket>83</bucket>
+            </map>
+            <map to="#4a9b52">
+              <bucket>82</bucket>
+            </map>
+            <map to="#4b9c53">
+              <bucket>81</bucket>
+            </map>
+            <map to="#4d9d53">
+              <bucket>78</bucket>
+            </map>
+            <map to="#4f9d53">
+              <bucket>77</bucket>
+            </map>
+            <map to="#509e53">
+              <bucket>76</bucket>
+            </map>
+            <map to="#529f54">
+              <bucket>75</bucket>
+            </map>
+            <map to="#53a054">
+              <bucket>74</bucket>
+            </map>
+            <map to="#55a154">
+              <bucket>73</bucket>
+            </map>
+            <map to="#57a154">
+              <bucket>72</bucket>
+            </map>
+            <map to="#58a254">
+              <bucket>71</bucket>
+            </map>
+            <map to="#5aa355">
+              <bucket>70</bucket>
+            </map>
+            <map to="#5ba455">
+              <bucket>69</bucket>
+            </map>
+            <map to="#5da455">
+              <bucket>68</bucket>
+            </map>
+            <map to="#5fa555">
+              <bucket>67</bucket>
+            </map>
+            <map to="#61a656">
+              <bucket>66</bucket>
+            </map>
+            <map to="#63a756">
+              <bucket>65</bucket>
+            </map>
+            <map to="#65a856">
+              <bucket>63</bucket>
+            </map>
+            <map to="#67a956">
+              <bucket>62</bucket>
+            </map>
+            <map to="#69aa56">
+              <bucket>61</bucket>
+            </map>
+            <map to="#6bab56">
+              <bucket>60</bucket>
+            </map>
+            <map to="#6dab56">
+              <bucket>59</bucket>
+            </map>
+            <map to="#70ac56">
+              <bucket>58</bucket>
+            </map>
+            <map to="#72ad56">
+              <bucket>57</bucket>
+            </map>
+            <map to="#74ae56">
+              <bucket>56</bucket>
+            </map>
+            <map to="#76af56">
+              <bucket>55</bucket>
+            </map>
+            <map to="#78b056">
+              <bucket>54</bucket>
+            </map>
+            <map to="#7ab156">
+              <bucket>53</bucket>
+            </map>
+            <map to="#7cb257">
+              <bucket>52</bucket>
+            </map>
+            <map to="#7eb257">
+              <bucket>51</bucket>
+            </map>
+            <map to="#81b357">
+              <bucket>50</bucket>
+            </map>
+            <map to="#83b457">
+              <bucket>49</bucket>
+            </map>
+            <map to="#85b557">
+              <bucket>48</bucket>
+            </map>
+            <map to="#87b557">
+              <bucket>47</bucket>
+            </map>
+            <map to="#89b657">
+              <bucket>46</bucket>
+            </map>
+            <map to="#8bb758">
+              <bucket>45</bucket>
+            </map>
+            <map to="#8db758">
+              <bucket>44</bucket>
+            </map>
+            <map to="#90b858">
+              <bucket>43</bucket>
+            </map>
+            <map to="#92b958">
+              <bucket>42</bucket>
+            </map>
+            <map to="#94b958">
+              <bucket>41</bucket>
+            </map>
+            <map to="#96ba58">
+              <bucket>40</bucket>
+            </map>
+            <map to="#98bb59">
+              <bucket>39</bucket>
+            </map>
+            <map to="#9abb59">
+              <bucket>38</bucket>
+            </map>
+            <map to="#9dbc59">
+              <bucket>37</bucket>
+            </map>
+            <map to="#9fbd59">
+              <bucket>36</bucket>
+            </map>
+            <map to="#a1bd59">
+              <bucket>35</bucket>
+            </map>
+            <map to="#a4be5a">
+              <bucket>34</bucket>
+            </map>
+            <map to="#a6be5a">
+              <bucket>33</bucket>
+            </map>
+            <map to="#a8bf5a">
+              <bucket>32</bucket>
+            </map>
+            <map to="#abc05a">
+              <bucket>31</bucket>
+            </map>
+            <map to="#adc05b">
+              <bucket>30</bucket>
+            </map>
+            <map to="#afc15b">
+              <bucket>29</bucket>
+            </map>
+            <map to="#b1c15b">
+              <bucket>28</bucket>
+            </map>
+            <map to="#b4c25b">
+              <bucket>27</bucket>
+            </map>
+            <map to="#b6c35c">
+              <bucket>26</bucket>
+            </map>
+            <map to="#b8c35c">
+              <bucket>25</bucket>
+            </map>
+            <map to="#bbc45c">
+              <bucket>24</bucket>
+            </map>
+            <map to="#bdc45c">
+              <bucket>23</bucket>
+            </map>
+            <map to="#bfc55d">
+              <bucket>22</bucket>
+            </map>
+            <map to="#c2c55d">
+              <bucket>21</bucket>
+            </map>
+            <map to="#c4c65d">
+              <bucket>20</bucket>
+            </map>
+            <map to="#c7c65e">
+              <bucket>19</bucket>
+            </map>
+            <map to="#c9c75e">
+              <bucket>18</bucket>
+            </map>
+            <map to="#cbc75e">
+              <bucket>17</bucket>
+            </map>
+            <map to="#cec85f">
+              <bucket>16</bucket>
+            </map>
+            <map to="#d0c85f">
+              <bucket>15</bucket>
+            </map>
+            <map to="#d2c95f">
+              <bucket>14</bucket>
+            </map>
+            <map to="#d5ca60">
+              <bucket>13</bucket>
+            </map>
+            <map to="#d7ca60">
+              <bucket>12</bucket>
+            </map>
+            <map to="#d9cb60">
+              <bucket>11</bucket>
+            </map>
+            <map to="#dccb61">
+              <bucket>10</bucket>
+            </map>
+            <map to="#decc61">
+              <bucket>9</bucket>
+            </map>
+            <map to="#e1cc62">
+              <bucket>8</bucket>
+            </map>
+            <map to="#e3cd62">
+              <bucket>7</bucket>
+            </map>
+            <map to="#e5cd63">
+              <bucket>6</bucket>
+            </map>
+            <map to="#e8ce63">
+              <bucket>5</bucket>
+            </map>
+            <map to="#eace64">
+              <bucket>4</bucket>
+            </map>
+            <map to="#eccf64">
+              <bucket>3</bucket>
+            </map>
+            <map to="#efcf65">
+              <bucket>2</bucket>
+            </map>
+            <map to="#f1d065">
+              <bucket>1</bucket>
+            </map>
+            <map to="#f4d166">
+              <bucket>0</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Listing Broker:nk]" type="palette">
+            <map to="#4e79a7">
+              <bucket>"Brent Hermann"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Monte Cottrell"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"John Anderson"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"Michael Auton"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"Mike Auton"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"The Catamaran Company"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Michael Harris"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Nick Conner"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Robin Hodges"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Mike Nystrum"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"The Moorings Yacht Brokerage"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Christine Buttigieg"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Howard Clarke"</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>"Peter Gulick"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Caroline Laviolette"</bucket>
+            </map>
+            <map to="#ff9da7">
+              <bucket>"Staley Weidman"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Selling Broker:nk]" type="palette">
+            <map to="#499894">
+              <bucket>"Brent Hermann"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Galati Yacht Sales"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Marine Service Center"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Southeast Yacht Sales"</bucket>
+            </map>
+            <map to="#499894">
+              <bucket>"Vallarta Yachts"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>%null%</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"Edwards Yacht Sales"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"John Anderson"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"NG Yachting"</bucket>
+            </map>
+            <map to="#4e79a7">
+              <bucket>"The Multihulls Company"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Andrew Walker"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Florida Yacht Group"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"LENTON YACHTS"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Sail Away Catamarans"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Triton Yacht Sales"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Catamaran Guru"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Great Blue Yachts LLC"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Michael Auton"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Staley Weidman"</bucket>
+            </map>
+            <map to="#79706e">
+              <bucket>"Whiteaker Yacht Sales"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Brian Anderson"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Gemini Catamarans"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"MarineMax"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Southern Trades Yacht Company"</bucket>
+            </map>
+            <map to="#86bcb6">
+              <bucket>"Venture Yacht Sales Inc"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Bluenose Yacht Sales"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Florida Yachts International"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Lisa Ferrara"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"Sail California"</bucket>
+            </map>
+            <map to="#8cd17d">
+              <bucket>"United Yacht Sales"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Denison Yachts"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Hytech Marine"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"Neff Yachts"</bucket>
+            </map>
+            <map to="#9d7660">
+              <bucket>"The Moorings Yacht Brokerage"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"26 North Yachts"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Expedition Yachts Int."</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Jordan Yacht &amp; Ship Company"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"Nick Conner"</bucket>
+            </map>
+            <map to="#a0cbe8">
+              <bucket>"TMM Yacht Sales"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Dan VanZanten"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Horizon Yacht Sales"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Monte Cottrell"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"The Catamaran Company"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Bow to Stern Yachts"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Flying Cloud Yachts"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Little Yacht Sales"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"Sea Lake Yachts"</bucket>
+            </map>
+            <map to="#b6992d">
+              <bucket>"United Yachts Sales"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Chris Block"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Great Lakes Sailing"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Michael Harris"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Steve Moore"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Wright Yacht Sales"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Crown &amp; Anchor Marine"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Hank Hampton"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Mike Auton"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Stuart Yacht Sales"</bucket>
+            </map>
+            <map to="#d37295">
+              <bucket>"Yacht Sales West"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"David Brotherton"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Howard Clarke"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"Nautic Group"</bucket>
+            </map>
+            <map to="#d4a6c8">
+              <bucket>"The Finish Line"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Dream Yacht Charter"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Jennifer Jolly"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"Neptune Yacht Sales &amp; Services"</bucket>
+            </map>
+            <map to="#d7b5a6">
+              <bucket>"The Multihull Company"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"BVI Yacht Sales"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Geoff Chapin and David Crowle"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Massey Yacht Sales"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"St. Barts Yachts"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Well Found Yachts"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Breakwater Yacht Sales"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Frank Gordon Yacht Sales"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Marblehead Yacht Sales"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Signature Yachts"</bucket>
+            </map>
+            <map to="#f1ce63">
+              <bucket>"Universal Yacht Sales"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"123 Hulls Yacht Sales"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Finish Line OTC"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Just Catamarans"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Outside Broker"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Tom Eelkema"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Cruising Yachts Sail California"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Helms Yacht Sales"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Mike Nystrum"</bucket>
+            </map>
+            <map to="#fabfd2">
+              <bucket>"Sunrine Sail Brokerage"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Caroline Laviolette"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Great Blue Yachts"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"MiCats Multihull UK"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"St. Petersburg Yacht Sales"</bucket>
+            </map>
+            <map to="#ff9d9a">
+              <bucket>"Well Suited CATCO"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"A&amp;M Yacht Sales, Inc"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Florida Yacht Brokers Assoc"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Karl Weiss"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Peter Gulick"</bucket>
+            </map>
+            <map to="#ffbe7d">
+              <bucket>"Tom Knoedler"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Calculation_1145603158979420163:nk]" type="palette">
+            <map to="#59a14f">
+              <bucket>false</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:boat_model_name:nk]" type="palette">
+            <map to="#4e79a7">
+              <bucket>"Lagoon"</bucket>
+            </map>
+            <map to="#59a14f">
+              <bucket>"Privilege"</bucket>
+            </map>
+            <map to="#76b7b2">
+              <bucket>"Legacy"</bucket>
+            </map>
+            <map to="#9c755f">
+              <bucket>"Catana"</bucket>
+            </map>
+            <map to="#b07aa1">
+              <bucket>"Telstar"</bucket>
+            </map>
+            <map to="#bab0ac">
+              <bucket>"Voyage"</bucket>
+            </map>
+            <map to="#e15759">
+              <bucket>"Gemini"</bucket>
+            </map>
+            <map to="#edc948">
+              <bucket>"Hunter"</bucket>
+            </map>
+            <map to="#f28e2b">
+              <bucket>"Leopard"</bucket>
+            </map>
+            <map to="#ff9da7">
+              <bucket>"Manta"</bucket>
+            </map>
+          </encoding>
+          <encoding attr="color" field="[none:Boat Condition:nk]" palette="nuriel_stone_10_0" type="palette">
+            <map to="#91dcea">
+              <bucket>"Used"</bucket>
+            </map>
+            <map to="#fd6f30">
+              <bucket>"New"</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key="[Country].[Name]" value="&quot;United States&quot;" />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption="Sheet1" id="Sheet1_5BB2B7D5BAE74821AECCBA852430F757">
+            <properties context="">
+              <relation connection="excel-direct.1gnkcbo00lwfel18ljlve0jqspzc" name="Sheet1" table="[Sheet1$]" type="table">
+                <columns gridOrigin="A1:V1006:no:A1:V1006:0" header="yes" outcome="2">
+                  <column datatype="integer" name="F1" ordinal="0" />
+                  <column datatype="string" name="VesselID_PK" ordinal="1" />
+                  <column datatype="string" name="Boat Name" ordinal="2" />
+                  <column datatype="string" name="Listing Status" ordinal="3" />
+                  <column datatype="string" name="Boat Model" ordinal="4" />
+                  <column datatype="string" name="Boat Type" ordinal="5" />
+                  <column datatype="string" name="Boat Condition" ordinal="6" />
+                  <column datatype="date" date-parse-format="yyyy-MM-dd|#|#|MM/dd/yyyy" name="Listing Date" ordinal="7" />
+                  <column datatype="integer" name="Listing Price" ordinal="8" />
+                  <column datatype="date" date-parse-format="MM/dd/yyyy" name="Boat_Sold_Date" ordinal="9" />
+                  <column datatype="string" name="Sold Price" ordinal="10" />
+                  <column datatype="date" date-parse-format="MM/dd/yyyy" name="Boat_Price_Cut_Date" ordinal="11" />
+                  <column datatype="integer" name="Price Was" ordinal="12" />
+                  <column datatype="string" name="Selling Broker" ordinal="13" />
+                  <column datatype="string" name="Listing Broker" ordinal="14" />
+                  <column datatype="string" name="Seller" ordinal="15" />
+                  <column datatype="string" name="Seller Email" ordinal="16" />
+                  <column datatype="string" name="Buyer" ordinal="17" />
+                  <column datatype="string" name="BuyerEmail" ordinal="18" />
+                  <column datatype="string" name="HullNo" ordinal="19" />
+                  <column datatype="integer" name="No of Days" ordinal="20" />
+                  <column datatype="string" name="boat_model_name" ordinal="21" />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption="Highlight 1 (generated)" name="[Action1]">
+      <activation auto-clear="true" type="on-select" />
+      <source type="sheet" worksheet="Number of Boats Sold By Brokers(Price Cut)" />
+      <command command="tsc:brush">
+        <param name="field-captions" value="HasPriceCut" />
+        <param name="target" value="Number of Boats Sold By Brokers(Price Cut)" />
+      </command>
+    </action>
+    <action caption="Highlight 2 (generated)" name="[Action2]">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="Brokers Stats" type="sheet" />
+      <command command="tsc:brush">
+        <param name="field-captions" value="HasPriceCut" />
+        <param name="target" value="Brokers Stats" />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name="Number of Boats Sold By Brokers(Price Cut)">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Sheet1 (Sold_Boats_Report_07-13-2020_11_37_51)" name="federated.0xc14ao1st9wyu1h40zo40lm8av6" />
+          </datasources>
+          <datasource-dependencies datasource="federated.0xc14ao1st9wyu1h40zo40lm8av6">
+            <column caption="Boat Price Cut Date" datatype="date" name="[Boat_Price_Cut_Date]" role="dimension" type="ordinal" />
+            <column caption="Boat Sold Date" datatype="date" name="[Boat_Sold_Date]" role="dimension" type="ordinal" />
+            <column caption="HasPriceCut" datatype="boolean" name="[Calculation_1145603158979420163]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="not isnull([Boat_Price_Cut_Date])" />
+              <aliases>
+                <alias key="false" value="No Price Cut" />
+                <alias key="true" value="Price Cut" />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption="Sheet1" datatype="integer" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+            <column datatype="string" name="[Selling Broker]" role="dimension" type="nominal" />
+            <_.fcp.ObjectModelTableType.true...column caption="Sheet1" datatype="table" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+            <column-instance column="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" derivation="Count" name="[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Boat_Sold_Date]" derivation="None" name="[none:Boat_Sold_Date:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_1145603158979420163]" derivation="None" name="[none:Calculation_1145603158979420163:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Selling Broker]" derivation="None" name="[none:Selling Broker:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="quantitative" column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]" included-values="in-range">
+            <min>#2012-01-21#</min>
+            <max>#2020-07-06#</max>
+          </filter>
+          <filter class="categorical" column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]">
+            <groupfilter function="union" user:ui-domain="relevant" user:ui-enumeration="inclusive" user:ui-marker="enumerate">
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Brent Hermann&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Caroline Laviolette&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Chris Block&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;John Anderson&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Michael Harris&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Mike Auton&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Mike Nystrum&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Monte Cottrell&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Peter Gulick&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Staley Weidman&quot;" />
+            </groupfilter>
+          </filter>
+          <computed-sort column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]" direction="DESC" using="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" />
+          <slices>
+            <column>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</column>
+            <column>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="axis">
+            <format attr="display" class="0" field="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" scope="cols" value="true" />
+            <format attr="title" class="0" field="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" scope="cols" value="Number of Boats Sold" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]" />
+              <text column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-cull" value="true" />
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</rows>
+        <cols>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</cols>
+        <mark-labels>
+          <mark-label id="0" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>31</value>
+                <value>false</value>
+                <value>"Peter Gulick"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="2" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>19</value>
+                <value>true</value>
+                <value>"Peter Gulick"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="3" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>43</value>
+                <value>true</value>
+                <value>"Brent Hermann"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="4" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>57</value>
+                <value>false</value>
+                <value>"Brent Hermann"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="5" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>9</value>
+                <value>true</value>
+                <value>"Monte Cottrell"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="6" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5</value>
+                <value>true</value>
+                <value>"Mike Nystrum"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="7" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>13</value>
+                <value>false</value>
+                <value>"Chris Block"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid="{254D776E-5C91-469D-96AC-D7B0E13F3A34}" />
+    </worksheet>
+    <worksheet name="Number of Boats Sold By Brokers(Sail vs Power)">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Sheet1 (Sold_Boats_Report_07-13-2020_11_37_51)" name="federated.0xc14ao1st9wyu1h40zo40lm8av6" />
+          </datasources>
+          <datasource-dependencies datasource="federated.0xc14ao1st9wyu1h40zo40lm8av6">
+            <column datatype="string" name="[Boat Type]" role="dimension" type="nominal" />
+            <column caption="Boat Sold Date" datatype="date" name="[Boat_Sold_Date]" role="dimension" type="ordinal" />
+            <_.fcp.ObjectModelTableType.false...column caption="Sheet1" datatype="integer" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+            <column datatype="string" name="[Selling Broker]" role="dimension" type="nominal" />
+            <_.fcp.ObjectModelTableType.true...column caption="Sheet1" datatype="table" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+            <column-instance column="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" derivation="Count" name="[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Boat Type]" derivation="None" name="[none:Boat Type:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Boat_Sold_Date]" derivation="None" name="[none:Boat_Sold_Date:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Selling Broker]" derivation="None" name="[none:Selling Broker:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="quantitative" column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]" included-values="in-range">
+            <min>#2012-01-21#</min>
+            <max>#2020-07-06#</max>
+          </filter>
+          <filter class="categorical" column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]">
+            <groupfilter function="union" user:ui-domain="relevant" user:ui-enumeration="inclusive" user:ui-marker="enumerate">
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Brent Hermann&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Caroline Laviolette&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Chris Block&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;John Anderson&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Michael Harris&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Mike Auton&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Mike Nystrum&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Monte Cottrell&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Peter Gulick&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Staley Weidman&quot;" />
+            </groupfilter>
+          </filter>
+          <computed-sort column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]" direction="DESC" using="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" />
+          <slices>
+            <column>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</column>
+            <column>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="axis">
+            <format attr="display" class="0" field="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" scope="cols" value="true" />
+            <format attr="title" class="0" field="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" scope="cols" value="Number of Boats Sold" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]" />
+              <text column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-cull" value="true" />
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</rows>
+        <cols>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</cols>
+        <mark-labels>
+          <mark-label id="0" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>93</value>
+                <value>"Sail"</value>
+                <value>"Brent Hermann"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="1" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>33</value>
+                <value>"Sail"</value>
+                <value>"Monte Cottrell"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="2" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>13</value>
+                <value>"Sail"</value>
+                <value>"Mike Auton"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid="{0099CF11-ACFE-4089-8D56-4E4F577BED4B}" />
+    </worksheet>
+    <worksheet name="Number of Boats Sold By Brokers(Used vs New)">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Sheet1 (Sold_Boats_Report_07-13-2020_11_37_51)" name="federated.0xc14ao1st9wyu1h40zo40lm8av6" />
+          </datasources>
+          <datasource-dependencies datasource="federated.0xc14ao1st9wyu1h40zo40lm8av6">
+            <column datatype="string" name="[Boat Condition]" role="dimension" type="nominal" />
+            <column caption="Boat Sold Date" datatype="date" name="[Boat_Sold_Date]" role="dimension" type="ordinal" />
+            <_.fcp.ObjectModelTableType.false...column caption="Sheet1" datatype="integer" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+            <column datatype="string" name="[Selling Broker]" role="dimension" type="nominal" />
+            <_.fcp.ObjectModelTableType.true...column caption="Sheet1" datatype="table" name="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" role="measure" type="quantitative" />
+            <column-instance column="[__tableau_internal_object_id__].[Sheet1_5BB2B7D5BAE74821AECCBA852430F757]" derivation="Count" name="[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Boat Condition]" derivation="None" name="[none:Boat Condition:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Boat_Sold_Date]" derivation="None" name="[none:Boat_Sold_Date:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Selling Broker]" derivation="None" name="[none:Selling Broker:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="quantitative" column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]" included-values="in-range">
+            <min>#2012-01-21#</min>
+            <max>#2020-07-06#</max>
+          </filter>
+          <filter class="categorical" column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]">
+            <groupfilter function="union" user:ui-domain="relevant" user:ui-enumeration="inclusive" user:ui-marker="enumerate">
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Brent Hermann&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Caroline Laviolette&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Chris Block&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;John Anderson&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Michael Harris&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Mike Auton&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Mike Nystrum&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Monte Cottrell&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Peter Gulick&quot;" />
+              <groupfilter function="member" level="[none:Selling Broker:nk]" member="&quot;Staley Weidman&quot;" />
+            </groupfilter>
+          </filter>
+          <computed-sort column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]" direction="DESC" using="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" />
+          <slices>
+            <column>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</column>
+            <column>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="axis">
+            <format attr="display" class="0" field="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" scope="cols" value="true" />
+            <format attr="title" class="0" field="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" scope="cols" value="Number of Boats Sold" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <color column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]" />
+              <text column="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-cull" value="true" />
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</rows>
+        <cols>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</cols>
+        <mark-labels>
+          <mark-label id="0" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>30</value>
+                <value>"Used"</value>
+                <value>"Monte Cottrell"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="1" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>47</value>
+                <value>"Used"</value>
+                <value>"Peter Gulick"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="2" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>13</value>
+                <value>"Used"</value>
+                <value>"Mike Auton"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="8" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>77</value>
+                <value>"Used"</value>
+                <value>"Brent Hermann"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="9" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>7</value>
+                <value>"Used"</value>
+                <value>"Mike Nystrum"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="10" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3</value>
+                <value>"New"</value>
+                <value>"Chris Block"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id="11" label-state="on">
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[__tableau_internal_object_id__].[cnt:Sheet1_5BB2B7D5BAE74821AECCBA852430F757:qk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+                  <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>17</value>
+                <value>"Used"</value>
+                <value>"Chris Block"</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid="{5B0C61EF-25A7-4FFA-8799-DC39D7439A0B}" />
+    </worksheet>
+    </worksheets>
+  <dashboards>
+    <dashboard name="Brokers Stats">
+      <style />
+      <size maxheight="1169" maxwidth="827" minheight="1169" minwidth="827" preset-index="15" sizing-mode="fixed" />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type="layout-basic" _.fcp.SetMembershipControl.true...type-v2="layout-basic" h="100000" id="4" w="100000" x="0" y="0">
+          <zone _.fcp.SetMembershipControl.false...type="layout-flow" _.fcp.SetMembershipControl.true...type-v2="layout-flow" h="98632" id="7" param="horz" w="98066" x="967" y="684">
+            <zone _.fcp.SetMembershipControl.false...type="layout-basic" _.fcp.SetMembershipControl.true...type-v2="layout-basic" h="98632" id="5" w="98066" x="967" y="684">
+              <zone h="36198" id="9" name="Number of Boats Sold By Brokers(Price Cut)" w="87470" x="967" y="25340">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone h="37778" id="11" name="Number of Boats Sold By Brokers(Used vs New)" w="87470" x="967" y="61538">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone h="24656" id="3" name="Number of Boats Sold By Brokers(Sail vs Power)" w="87470" x="967" y="684">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type="color" _.fcp.SetMembershipControl.true...type-v2="color" h="37778" id="12" name="Number of Boats Sold By Brokers(Used vs New)" pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]" w="10596" x="88437" y="61538">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type="color" _.fcp.SetMembershipControl.true...type-v2="color" h="36198" id="10" name="Number of Boats Sold By Brokers(Price Cut)" pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]" w="10596" x="88437" y="25340">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type="color" _.fcp.SetMembershipControl.true...type-v2="color" h="24656" id="8" name="Number of Boats Sold By Brokers(Sail vs Power)" pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]" w="10596" x="88437" y="684">
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr="border-color" value="#000000" />
+            <format attr="border-style" value="none" />
+            <format attr="border-width" value="0" />
+            <format attr="margin" value="8" />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated="true" name="Phone">
+          <size maxheight="1100" minheight="1100" sizing-mode="vscroll" />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type="layout-basic" _.fcp.SetMembershipControl.true...type-v2="layout-basic" h="100000" id="14" w="100000" x="0" y="0">
+              <zone _.fcp.SetMembershipControl.false...type="layout-flow" _.fcp.SetMembershipControl.true...type-v2="layout-flow" h="98632" id="13" param="vert" w="98066" x="967" y="684">
+                <zone fixed-size="280" h="24656" id="3" is-fixed="true" name="Number of Boats Sold By Brokers(Sail vs Power)" w="87470" x="967" y="684">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type="color" _.fcp.SetMembershipControl.true...type-v2="color" h="24656" id="8" name="Number of Boats Sold By Brokers(Sail vs Power)" pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]" w="10596" x="88437" y="684">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="280" h="36198" id="9" is-fixed="true" name="Number of Boats Sold By Brokers(Price Cut)" w="87470" x="967" y="25340">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type="color" _.fcp.SetMembershipControl.true...type-v2="color" h="36198" id="10" name="Number of Boats Sold By Brokers(Price Cut)" pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]" w="10596" x="88437" y="25340">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="280" h="37778" id="11" is-fixed="true" name="Number of Boats Sold By Brokers(Used vs New)" w="87470" x="967" y="61538">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type="color" _.fcp.SetMembershipControl.true...type-v2="color" h="37778" id="12" name="Number of Boats Sold By Brokers(Used vs New)" pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]" w="10596" x="88437" y="61538">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr="border-color" value="#000000" />
+                <format attr="border-style" value="none" />
+                <format attr="border-width" value="0" />
+                <format attr="margin" value="8" />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid="{C575D4B6-7316-4389-8644-E30995F54C0A}" />
+    </dashboard>
+    </dashboards>
+  <windows source-height="30">
+    <window class="worksheet" name="Number of Boats Sold By Brokers(Sail vs Power)">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{0CB93BAB-2399-492D-B4A2-1A960F13B8C0}" />
+    </window>
+    <window class="worksheet" name="Number of Boats Sold By Brokers(Price Cut)">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Calculation_1145603158979420163:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{F07AA781-4306-4DA7-A98D-936CCB0DDAA0}" />
+    </window>
+    <window class="worksheet" name="Number of Boats Sold By Brokers(Used vs New)">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+        <edge name="right">
+          <strip size="160">
+            <card pane-specification-id="0" param="[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]" type="color" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[:Measure Names]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat_Sold_Date:qk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Selling Broker:nk]</field>
+            <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[yr:Boat_Price_Cut_Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{993DA90D-04A4-4269-8DF2-E6E1915A0E00}" />
+    </window>
+    <window class="dashboard" name="Brokers Stats">
+      <viewpoints>
+        <viewpoint name="Number of Boats Sold By Brokers(Price Cut)" />
+        <viewpoint name="Number of Boats Sold By Brokers(Sail vs Power)">
+          <highlight>
+            <color-one-way>
+              <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Type:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name="Number of Boats Sold By Brokers(Used vs New)">
+          <highlight>
+            <color-one-way>
+              <field>[federated.0xc14ao1st9wyu1h40zo40lm8av6].[none:Boat Condition:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id="-1" />
+      <simple-id uuid="{63D51A5A-33C0-43D8-8BCC-EE14A9797163}" />
+    </window>
+    </windows>
+  <thumbnails>
+    <thumbnail height="192" name="Brokers Stats" width="192">
+      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
+      xQAAAABJRU5ErkJggg==
+    </thumbnail>
+    </thumbnails>
+</workbook>

@@ -1,0 +1,1793 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.1.0 (20201.20.0219.0753)",
+      "source-platform": "mac",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Age - Overall Pie",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Calculation_155374220794097667:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "\"18-24 years old\"",
+                  "function": "range",
+                  "level": "[none:Age:nk]",
+                  "to": "\"75 years or older\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Age",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Age",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Amount of  Negative",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "pane",
+        "table",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Amount of  Negative %",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_384635586009165824:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "label",
+        "table",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Amount of Positive",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_1536853401494085638:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "table",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Amount of Positive %",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_384635586009579521:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "table",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Ethnicity - Overall Pie",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Calculation_155374220794097667:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Caucasian/White",
+            "Asian",
+            "Aboriginal, First Nations, Inuit, Metis",
+            "Hispanic or Latino",
+            "African American/Black",
+            "Native Hawaiian or Other Pacific Islander",
+            "American Indian or Alaska Native",
+            "Other"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Ethnicity:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Ethnicity:nk]",
+                      "member": "\"Null\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Ethnicity",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Ethnicity",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Gender-Overall Pie",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Calculation_155374220794097667:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Gender:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Gender:nk]",
+                      "member": "\"Null\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Gender",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Gender",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Marital status - Overall Pie",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Calculation_155374220794097667:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "worksheet",
+        "refline"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "Single",
+            "Married",
+            "Common-law",
+            "Separated",
+            "Other"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Marital status:nk]",
+                      "member": "\"Common-law\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Marital status:nk]",
+                      "member": "\"Married\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "from": "\"Other\"",
+                      "function": "range",
+                      "level": "[none:Marital status:nk]",
+                      "to": "\"Single\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Marital Status",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Marital Status",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "94",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "95",
+          "name": "",
+          "parent_id": "94",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "6000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "61",
+          "name": "",
+          "parent_id": "94",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "7000",
+          "w": "98400",
+          "h": "92000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "58",
+          "name": "",
+          "parent_id": "61",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "7000",
+          "w": "82400",
+          "h": "92000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "60",
+          "name": "",
+          "parent_id": "61",
+          "zone_type": "layout-flow",
+          "x": "83200",
+          "y": "7000",
+          "w": "16000",
+          "h": "92000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "43",
+          "name": "",
+          "parent_id": "58",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "7000",
+          "w": "82400",
+          "h": "92000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "62",
+          "name": "Gender-Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "7000",
+          "w": "16000",
+          "h": "10750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "1",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "64",
+          "name": "Age - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "17750",
+          "w": "16000",
+          "h": "20750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "66",
+          "name": "Marital status - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "38500",
+          "w": "16000",
+          "h": "15750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "67",
+          "name": "Marital status - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "size",
+          "x": "83200",
+          "y": "54250",
+          "w": "16000",
+          "h": "5750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "69",
+          "name": "Ethnicity - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "60000",
+          "w": "16000",
+          "h": "23250",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "41",
+          "name": "",
+          "parent_id": "43",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "7000",
+          "w": "82400",
+          "h": "92000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Amount of Positive",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "800",
+          "y": "7000",
+          "w": "41200",
+          "h": "13750",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "59",
+          "name": "Gender-Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "800",
+          "y": "20750",
+          "w": "41200",
+          "h": "37750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "63",
+          "name": "Age - Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "42000",
+          "y": "20750",
+          "w": "41200",
+          "h": "37750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "65",
+          "name": "Marital status - Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "800",
+          "y": "58500",
+          "w": "41200",
+          "h": "40500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "68",
+          "name": "Ethnicity - Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "42000",
+          "y": "58500",
+          "w": "41200",
+          "h": "40500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "70",
+          "name": "Amount of  Negative",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "42000",
+          "y": "7000",
+          "w": "41200",
+          "h": "13750",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "77",
+          "name": "Amount of Positive %",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "9800",
+          "y": "8250",
+          "w": "9700",
+          "h": "9500",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "78",
+          "name": "Amount of  Negative %",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "50000",
+          "y": "7750",
+          "w": "10600",
+          "h": "10125",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "94",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "95",
+          "name": "",
+          "parent_id": "94",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "6000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "61",
+          "name": "",
+          "parent_id": "94",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "7000",
+          "w": "98400",
+          "h": "92000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "58",
+          "name": "",
+          "parent_id": "61",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "7000",
+          "w": "82400",
+          "h": "92000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "60",
+          "name": "",
+          "parent_id": "61",
+          "zone_type": "layout-flow",
+          "x": "83200",
+          "y": "7000",
+          "w": "16000",
+          "h": "92000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "43",
+          "name": "",
+          "parent_id": "58",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "7000",
+          "w": "82400",
+          "h": "92000",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "62",
+          "name": "Gender-Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "7000",
+          "w": "16000",
+          "h": "10750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "1",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "64",
+          "name": "Age - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "17750",
+          "w": "16000",
+          "h": "20750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "66",
+          "name": "Marital status - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "38500",
+          "w": "16000",
+          "h": "15750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "67",
+          "name": "Marital status - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "size",
+          "x": "83200",
+          "y": "54250",
+          "w": "16000",
+          "h": "5750",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "69",
+          "name": "Ethnicity - Overall Pie",
+          "parent_id": "60",
+          "zone_type": "color",
+          "x": "83200",
+          "y": "60000",
+          "w": "16000",
+          "h": "23250",
+          "param": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "41",
+          "name": "",
+          "parent_id": "43",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "7000",
+          "w": "82400",
+          "h": "92000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Amount of Positive",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "800",
+          "y": "7000",
+          "w": "41200",
+          "h": "13750",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "59",
+          "name": "Gender-Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "800",
+          "y": "20750",
+          "w": "41200",
+          "h": "37750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "63",
+          "name": "Age - Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "42000",
+          "y": "20750",
+          "w": "41200",
+          "h": "37750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "65",
+          "name": "Marital status - Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "800",
+          "y": "58500",
+          "w": "41200",
+          "h": "40500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "68",
+          "name": "Ethnicity - Overall Pie",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "42000",
+          "y": "58500",
+          "w": "41200",
+          "h": "40500",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "70",
+          "name": "Amount of  Negative",
+          "parent_id": "41",
+          "zone_type": "",
+          "x": "42000",
+          "y": "7000",
+          "w": "41200",
+          "h": "13750",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "77",
+          "name": "Amount of Positive %",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "9800",
+          "y": "8250",
+          "w": "9700",
+          "h": "9500",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "78",
+          "name": "Amount of  Negative %",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "50000",
+          "y": "7750",
+          "w": "10600",
+          "h": "10125",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action17]",
+      "caption": "Filter 8 (generated) 1 2",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet",
+        "worksheet": "Amount of Positive"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    },
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Marital status - Bar"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Marital status",
+        "target": "Marital status - Bar"
+      },
+      "field_captions": [
+        "Marital status"
+      ],
+      "target": "Marital status - Bar"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Highlight 3 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Age",
+        "target": "Dashboard"
+      },
+      "field_captions": [
+        "Age"
+      ],
+      "target": "Dashboard"
+    },
+    {
+      "name": "[Action6]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Age -Score - Bar"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Age",
+        "target": "Age -Score - Bar"
+      },
+      "field_captions": [
+        "Age"
+      ],
+      "target": "Age -Score - Bar"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender-Overall Pie",
+      "viewpoint_name": "Gender-Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Calculation_1536853401516253194:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Age - Overall Pie",
+      "viewpoint_name": "Age - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[attr:Positive-Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Response ID:ok]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_1536853401494085638:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Marital status - Overall Pie",
+      "viewpoint_name": "Marital status - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Ethnicity - Overall Pie",
+      "viewpoint_name": "Ethnicity - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of Positive %",
+      "viewpoint_name": "Amount of Positive %",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of Positive",
+      "viewpoint_name": "Amount of Positive",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of  Negative %",
+      "viewpoint_name": "Amount of  Negative %",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of  Negative",
+      "viewpoint_name": "Amount of  Negative",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Ethnicity - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Gender-Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Marital status - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 8,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 11
+  }
+}

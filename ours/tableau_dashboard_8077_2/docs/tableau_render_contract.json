@@ -1,0 +1,446 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "900",
+    "maxwidth": "1100",
+    "minheight": "900",
+    "minwidth": "1100",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "Bottom Stations",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+      "cols_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+      "series_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+      "slices": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Bottom 10 Stations by Start Station (Count)",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Popularity of Stations",
+              "type": "sheet",
+              "worksheet": "Bottom Stations"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Popularity of Stations"
+            },
+            "field_captions": [],
+            "target": "Popularity of Stations"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "49999",
+        "y": "60147",
+        "w": "49274",
+        "h": "38964",
+        "aspect_ratio": 1.2646,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.6015,
+          "w_ratio": 0.4927,
+          "h_ratio": 0.3896
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Map 1",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station latitude:qk]",
+      "cols_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station longitude:qk]",
+      "series_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+      "slices": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Exclusions (end station latitude,end station longitude,end station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "0.0",
+        "0.0",
+        "Indiana",
+        "JSQ Don't Use",
+        "WS Don't Use"
+      ],
+      "title_runs": [
+        {
+          "text": "Popularity of End Station",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "73909",
+          "y": "53889",
+          "w": "24818",
+          "h": "5667",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.7391,
+            "y_ratio": 0.5389,
+            "w_ratio": 0.2482,
+            "h_ratio": 0.0567
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Popularity of Stations",
+              "type": "sheet",
+              "worksheet": "Map 1"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Popularity of Stations"
+            },
+            "field_captions": [],
+            "target": "Popularity of Stations"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]",
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station latitude:qk]",
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station longitude:qk]",
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station name:nk]",
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "727",
+        "y": "889",
+        "w": "98546",
+        "h": "59258",
+        "aspect_ratio": 1.663,
+        "normalized": {
+          "x_ratio": 0.0073,
+          "y_ratio": 0.0089,
+          "w_ratio": 0.9855,
+          "h_ratio": 0.5926
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Top Stations",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+      "cols_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+      "series_field": "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:bikeid (copy)_705939293799452673:qk]",
+      "slices": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (start station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[Action (end station latitude,end station longitude,end station name)]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Top 10 Stations by Start Station (Count)",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Popularity of Stations",
+              "type": "sheet",
+              "worksheet": "Top Stations"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Popularity of Stations"
+            },
+            "field_captions": [],
+            "target": "Popularity of Stations"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "727",
+        "y": "60147",
+        "w": "49272",
+        "h": "38964",
+        "aspect_ratio": 1.2646,
+        "normalized": {
+          "x_ratio": 0.0073,
+          "y_ratio": 0.6015,
+          "w_ratio": 0.4927,
+          "h_ratio": 0.3896
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Popularity of Stations",
+        "type": "sheet",
+        "worksheet": "Map 1"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Popularity of Stations"
+      },
+      "field_captions": [],
+      "target": "Popularity of Stations"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Popularity of Stations",
+        "type": "sheet",
+        "worksheet": "Bottom Stations"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Popularity of Stations"
+      },
+      "field_captions": [],
+      "target": "Popularity of Stations"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Popularity of Stations",
+        "type": "sheet",
+        "worksheet": "Top Stations"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Popularity of Stations"
+      },
+      "field_captions": [],
+      "target": "Popularity of Stations"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Map 1",
+      "viewpoint_name": "Map 1",
+      "fields": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[cnt:end station id:qk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[mn:stoptime:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:birth year:ok]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station latitude:qk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station longitude:qk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:end station name:nk]",
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top Stations",
+      "viewpoint_name": "Top Stations",
+      "fields": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bottom Stations",
+      "viewpoint_name": "Bottom Stations",
+      "fields": [
+        "[federated.02mw22n0f3ayp71e2zu0c1mty079].[none:start station name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 2,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Map 1"
+    ],
+    "legend_anchor_positions": {
+      "Map 1": "overlay"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Bottom Stations",
+      "Map 1",
+      "Top Stations"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 3
+  }
+}

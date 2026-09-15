@@ -1,0 +1,901 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.2.0 (20192.19.0815.1412)",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "http://localhost:9100"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Items with Category",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "(([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Name:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]) * [federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk])",
+        "fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Item Name:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Pay Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[sum:Sales_Qty:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk])",
+        "fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Item Category:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Sales Type:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "header"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Items with Category",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "title_text": "Items with Category",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Pay type with year",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk] / ([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Country:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]))",
+        "fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Sales Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Customer Country:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Item Category:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[tyr:Sales Date:ok] * [federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk])",
+        "fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[tyr:Sales Date:ok]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[sum:Sales_Qty:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "refline",
+        "map"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Years with Product sales",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Years with Product sales",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales Type",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Amt:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Channel Type:nk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "label",
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Sales types",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Sales types",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales with Items",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]",
+        "fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[sum:Sales_Qty:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Department:nk])",
+        "fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Item Category:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic]",
+          "[none:Department:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Products Sales",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "title_text": "Products Sales",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "26",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "22",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "title",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "6000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Sales Type",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1300",
+          "y": "7375",
+          "w": "41800",
+          "h": "43125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Sales Type",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "35500",
+          "y": "7875",
+          "w": "16300",
+          "h": "7250",
+          "param": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "Sales with Items",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "45800",
+          "y": "7375",
+          "w": "43200",
+          "h": "43250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "Sales with Items",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "89400",
+          "y": "7000",
+          "w": "9200",
+          "h": "9750",
+          "param": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "Items with Category",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1600",
+          "y": "52625",
+          "w": "39600",
+          "h": "45250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "27",
+          "name": "Items with Category",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "41700",
+          "y": "52625",
+          "w": "6600",
+          "h": "45375",
+          "param": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "32",
+          "name": "Pay type with year",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "49000",
+          "y": "52750",
+          "w": "49400",
+          "h": "45250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "26",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "22",
+          "name": "",
+          "parent_id": "26",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "22",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-flow",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "97750",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "title",
+          "x": "900",
+          "y": "1125",
+          "w": "98200",
+          "h": "6000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "Sales Type",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1300",
+          "y": "7375",
+          "w": "41800",
+          "h": "43125",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "Sales Type",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "35500",
+          "y": "7875",
+          "w": "16300",
+          "h": "7250",
+          "param": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "Sales with Items",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "45800",
+          "y": "7375",
+          "w": "43200",
+          "h": "43250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "23",
+          "name": "Sales with Items",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "89400",
+          "y": "7000",
+          "w": "9200",
+          "h": "9750",
+          "param": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "Items with Category",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "1600",
+          "y": "52625",
+          "w": "39600",
+          "h": "45250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "27",
+          "name": "Items with Category",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "41700",
+          "y": "52625",
+          "w": "6600",
+          "h": "45375",
+          "param": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "32",
+          "name": "Pay type with year",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "49000",
+          "y": "52750",
+          "w": "49400",
+          "h": "45250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "solid",
+            "border-width": "1"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Pay Type",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [
+        "Pay Type"
+      ],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales Type",
+      "viewpoint_name": "Sales Type",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Channel Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Amt:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales with Items",
+      "viewpoint_name": "Sales with Items",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Department:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Items with Category",
+      "viewpoint_name": "Items with Category",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Location:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Name:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Manager:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Pay type with year",
+      "viewpoint_name": "Pay type with year",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Country:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Employee Country:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[yr:Sales Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Items with Category",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sales Type",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sales with Items",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 7
+  }
+}

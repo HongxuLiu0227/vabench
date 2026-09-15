@@ -1,0 +1,1775 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "900",
+    "maxwidth": "700",
+    "minheight": "900",
+    "minwidth": "700",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "いいねユーザ日別",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:いいね数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "フィルター 2 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "いいねユーザ日別"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "いいね数",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137308614656:nk]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "いいね数(ユーザ別)",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:いいね数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "https://twitter.com/M97LLAx87Vt3C1c",
+        "https://twitter.com/sugar_masami"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action6]",
+            "caption": "フィルター 5 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "いいね数(ユーザ別)"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "いいね数(投稿別)",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:いいね数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "コメントユーザ(ユーザ別)",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:コメント数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action10]",
+            "caption": "フィルター 8 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "コメントユーザ(ユーザ別)"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "コメントユーザ(投稿別)",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:コメント数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "https://twitter.com/akari_0711/status/1199143813639364608"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action9]",
+            "caption": "フィルター 7 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "コメントユーザ(投稿別)"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "コメントユーザ日別",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:コメント数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action4]",
+            "caption": "フィルター 4 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "コメントユーザ日別"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "コメント数",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137311887363:nk]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "データ数",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "ユーザ別投稿数ランキング",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "> ",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "投稿数"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "フィルター 1 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "ユーザ別投稿数ランキング"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "リツイート(ユーザ別)",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[avg:リツイート数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action7]",
+            "caption": "フィルター 6 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "リツイート(ユーザ別)"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "リツイート(投稿別)",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:リツイート数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "リツイート日別",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[sum:リツイート数:qk]",
+      "cols_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:qk]",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "フィルター 3 (生成済み)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Twitterデータの可視化",
+              "type": "sheet",
+              "worksheet": "リツイート日別"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Twitterデータの可視化"
+            },
+            "field_captions": [],
+            "target": "Twitterデータの可視化"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "リツート数",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137310105601:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "収集データ",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#555555"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[max:投稿日時:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[qr:投稿日時:ok]",
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "検索ワード",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+      "slices": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (日(投稿日時))]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (ユーザプロフィールURL)]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[Action (投稿URL/キャプチャー)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sheet Name",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0nnqf130tzgecx1a44up50632gpd].[none:検索ワード:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action10]",
+      "caption": "フィルター 8 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "コメントユーザ(ユーザ別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action1]",
+      "caption": "フィルター 1 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "ユーザ別投稿数ランキング"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "フィルター 2 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "いいねユーザ日別"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "フィルター 3 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "リツイート日別"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "フィルター 4 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "コメントユーザ日別"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action5]",
+      "caption": "ユーザ別投稿数ランキング プロフィール遷移",
+      "kind": "custom_action",
+      "activation": {},
+      "source": {
+        "datasource": "federated.0nnqf130tzgecx1a44up50632gpd",
+        "type": "datasource"
+      },
+      "command": "",
+      "params": {},
+      "field_captions": [],
+      "target": ""
+    },
+    {
+      "name": "[Action6]",
+      "caption": "フィルター 5 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "いいね数(ユーザ別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action7]",
+      "caption": "フィルター 6 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "リツイート(ユーザ別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    },
+    {
+      "name": "[Action8]",
+      "caption": "投稿別URL",
+      "kind": "custom_action",
+      "activation": {},
+      "source": {
+        "datasource": "federated.0nnqf130tzgecx1a44up50632gpd",
+        "type": "datasource"
+      },
+      "command": "",
+      "params": {},
+      "field_captions": [],
+      "target": ""
+    },
+    {
+      "name": "[Action9]",
+      "caption": "フィルター 7 (生成済み)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Twitterデータの可視化",
+        "type": "sheet",
+        "worksheet": "コメントユーザ(投稿別)"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Twitterデータの可視化"
+      },
+      "field_captions": [],
+      "target": "Twitterデータの可視化"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "Twitterデータの可視化",
+      "viewpoint_name": "リツート数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "検索ワード",
+      "viewpoint_name": "検索ワード",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:検索ワード:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "収集データ",
+      "viewpoint_name": "収集データ",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[max:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[qr:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "ユーザ別投稿数ランキング",
+      "viewpoint_name": "ユーザ別投稿数ランキング",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[cnt:Number of Records:qk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいね数",
+      "viewpoint_name": "いいね数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137308614656:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいねユーザ日別",
+      "viewpoint_name": "いいねユーザ日別",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいね数(投稿別)",
+      "viewpoint_name": "いいね数(投稿別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "いいね数(ユーザ別)",
+      "viewpoint_name": "いいね数(ユーザ別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:いいね数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツート数",
+      "viewpoint_name": "リツート数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137310105601:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツイート日別",
+      "viewpoint_name": "リツイート日別",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[tdy:投稿日時:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツイート(投稿別)",
+      "viewpoint_name": "リツイート(投稿別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "リツイート(ユーザ別)",
+      "viewpoint_name": "リツイート(ユーザ別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:リツイート数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメント数",
+      "viewpoint_name": "コメント数",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:Calculation_269090137311887363:nk]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメントユーザ日別",
+      "viewpoint_name": "コメントユーザ日別",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[yr:投稿日時:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメントユーザ(投稿別)",
+      "viewpoint_name": "コメントユーザ(投稿別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:投稿URL/キャプチャー:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "コメントユーザ(ユーザ別)",
+      "viewpoint_name": "コメントユーザ(ユーザ別)",
+      "fields": [
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:コメント数:ok]",
+        "[federated.0nnqf130tzgecx1a44up50632gpd].[none:ユーザプロフィールURL:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 16,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 10,
+      "vertical_ranked_bar": 6
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [
+      "ユーザ別投稿数ランキング"
+    ],
+    "interaction_worksheets": [
+      "いいねユーザ日別",
+      "いいね数",
+      "いいね数(ユーザ別)",
+      "いいね数(投稿別)",
+      "コメントユーザ(ユーザ別)",
+      "コメントユーザ(投稿別)",
+      "コメントユーザ日別",
+      "コメント数",
+      "ユーザ別投稿数ランキング",
+      "リツイート(ユーザ別)",
+      "リツイート(投稿別)",
+      "リツイート日別",
+      "リツート数",
+      "収集データ",
+      "検索ワード"
+    ],
+    "dashboard_action_count": 10,
+    "highlight_binding_count": 16
+  }
+}

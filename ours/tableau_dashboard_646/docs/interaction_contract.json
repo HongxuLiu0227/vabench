@@ -1,0 +1,571 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_646/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:36.419325Z"
+  },
+  "dashboard": {
+    "name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+    "worksheet_count": 5
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_averaged_global_sales_by_genre",
+        "name": "Averaged Global sales by Genre",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Averaged Global sales by Genre"
+        }
+      },
+      {
+        "id": "ws_game_sales_overview_of_the_year_1980_2016",
+        "name": "Game sales overview of the year 1980-2016",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Game sales overview of the year 1980-2016"
+        }
+      },
+      {
+        "id": "ws_popular_video_games_between_1980_1999",
+        "name": "Popular Video Games between 1980-1999",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Popular Video Games between 1980-1999"
+        }
+      },
+      {
+        "id": "ws_popular_video_games_between_1999_2016",
+        "name": "Popular Video Games between 1999-2016",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "Popular Video Games between 1999-2016"
+        }
+      },
+      {
+        "id": "ws_publisher_and_sales_performance",
+        "name": "Publisher and sales performance",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Publisher and sales performance"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_genre",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Genre:nk]",
+        "normalized": "Genre",
+        "role": "dimension"
+      },
+      {
+        "id": "field_global_sales",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[avg:Global_Sales:qk]",
+        "normalized": "Global_Sales",
+        "role": "measure"
+      },
+      {
+        "id": "field_platform",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[attr:Platform:nk]",
+        "normalized": "Platform",
+        "role": "dimension"
+      },
+      {
+        "id": "field_name",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Name:nk]",
+        "normalized": "Name",
+        "role": "dimension"
+      },
+      {
+        "id": "field_publisher",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Publisher:nk]",
+        "normalized": "Publisher",
+        "role": "dimension"
+      },
+      {
+        "id": "field_year",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year:ok]",
+        "normalized": "Year",
+        "role": "dimension"
+      },
+      {
+        "id": "field_year_copy_413205318226034688",
+        "raw": "[federated.0yrk2r51de03wg19dphp80w7wm3o].[none:Year (copy)_413205318226034688:qk]",
+        "normalized": "Year (copy)_413205318226034688",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_averaged_global_sales_by_genre"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_game_sales_overview_of_the_year_1980_2016"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_popular_video_games_between_1980_1999"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_popular_video_games_between_1999_2016"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 3,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_005",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_publisher_and_sales_performance"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 4,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "source_worksheet_name": "Game sales overview of the year 1980-2016"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "source_worksheet_name": "Publisher and sales performance"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "source_worksheet_name": "Popular Video Games between 1980-1999"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      },
+      {
+        "id": "da_004",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "source_worksheet_name": "Popular Video Games between 1999-2016"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 3
+        }
+      },
+      {
+        "id": "da_005",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "source_worksheet_name": "Averaged Global sales by Genre"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+          "target_name_raw": "Dashboard: A look at the sales trend of Games from 1980-2016"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 4
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Averaged Global sales by Genre",
+        "viewpoint_name": "Averaged Global sales by Genre",
+        "field_ids": [
+          "field_platform",
+          "field_genre",
+          "field_name",
+          "field_platform",
+          "field_publisher",
+          "field_year",
+          "field_year"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Game sales overview of the year 1980-2016",
+        "viewpoint_name": "Game sales overview of the year 1980-2016",
+        "field_ids": [
+          "field_genre",
+          "field_name",
+          "field_publisher",
+          "field_year"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Publisher and sales performance",
+        "viewpoint_name": "Publisher and sales performance",
+        "field_ids": [
+          "field_platform",
+          "field_publisher"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "Popular Video Games between 1980-1999",
+        "viewpoint_name": "Popular Video Games between 1980-1999",
+        "field_ids": [
+          "field_genre",
+          "field_year_copy_413205318226034688"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Popular Video Games between 1999-2016",
+        "viewpoint_name": "Popular Video Games between 1999-2016",
+        "field_ids": [
+          "field_genre",
+          "field_year_copy_413205318226034688"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "dashboard",
+        "window_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "viewpoint_name": "Averaged Global sales by Genre",
+        "field_ids": [
+          "field_name"
+        ],
+        "modes": [
+          "bucket-selection"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "dashboard",
+        "window_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "viewpoint_name": "Game sales overview of the year 1980-2016",
+        "field_ids": [
+          "field_genre"
+        ],
+        "modes": [
+          "bucket-selection"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      },
+      {
+        "id": "hb_008",
+        "window_class": "dashboard",
+        "window_name": "Dashboard: A look at the sales trend of Games from 1980-2016",
+        "viewpoint_name": "Publisher and sales performance",
+        "field_ids": [
+          "field_publisher"
+        ],
+        "modes": [
+          "bucket-selection"
+        ],
+        "source_ref": {
+          "binding_index": 7
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_averaged_global_sales_by_genre",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_genre",
+          "field_name",
+          "field_platform",
+          "field_publisher",
+          "field_year"
+        ]
+      },
+      {
+        "worksheet_id": "ws_game_sales_overview_of_the_year_1980_2016",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_genre",
+          "field_name",
+          "field_publisher",
+          "field_year"
+        ]
+      },
+      {
+        "worksheet_id": "ws_popular_video_games_between_1980_1999",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_genre",
+          "field_year_copy_413205318226034688"
+        ]
+      },
+      {
+        "worksheet_id": "ws_popular_video_games_between_1999_2016",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_genre",
+          "field_year_copy_413205318226034688"
+        ]
+      },
+      {
+        "worksheet_id": "ws_publisher_and_sales_performance",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_platform",
+          "field_publisher"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 5,
+    "worksheet_action_count": 5,
+    "dashboard_action_count": 5,
+    "highlight_binding_count": 8,
+    "field_count": 7
+  }
+}

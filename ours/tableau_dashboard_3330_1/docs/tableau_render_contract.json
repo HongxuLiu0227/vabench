@@ -1,0 +1,993 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Age - Overall Pie",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "18-24 years old",
+        "75 years or older"
+      ],
+      "title_runs": [
+        {
+          "text": "Age",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83200",
+          "y": "17750",
+          "w": "16000",
+          "h": "20750",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.832,
+            "y_ratio": 0.1775,
+            "w_ratio": 0.16,
+            "h_ratio": 0.2075
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[attr:Positive-Score:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Response ID:ok]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_1536853401494085638:qk]"
+        ]
+      },
+      "zone": {
+        "x": "42000",
+        "y": "20750",
+        "w": "41200",
+        "h": "37750",
+        "aspect_ratio": 1.0914,
+        "normalized": {
+          "x_ratio": 0.42,
+          "y_ratio": 0.2075,
+          "w_ratio": 0.412,
+          "h_ratio": 0.3775
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Amount of  Negative",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+        ]
+      },
+      "zone": {
+        "x": "42000",
+        "y": "7000",
+        "w": "41200",
+        "h": "13750",
+        "aspect_ratio": 2.9964,
+        "normalized": {
+          "x_ratio": 0.42,
+          "y_ratio": 0.07,
+          "w_ratio": 0.412,
+          "h_ratio": 0.1375
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Amount of  Negative %",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "7750",
+        "w": "10600",
+        "h": "10125",
+        "aspect_ratio": 1.0469,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.0775,
+          "w_ratio": 0.106,
+          "h_ratio": 0.1013
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Amount of Positive",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action17]",
+            "caption": "Filter 8 (generated) 1 2",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard",
+              "type": "sheet",
+              "worksheet": "Amount of Positive"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard"
+            },
+            "field_captions": [],
+            "target": "Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "7000",
+        "w": "41200",
+        "h": "13750",
+        "aspect_ratio": 2.9964,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.07,
+          "w_ratio": 0.412,
+          "h_ratio": 0.1375
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Amount of Positive %",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+        ]
+      },
+      "zone": {
+        "x": "9800",
+        "y": "8250",
+        "w": "9700",
+        "h": "9500",
+        "aspect_ratio": 1.0211,
+        "normalized": {
+          "x_ratio": 0.098,
+          "y_ratio": 0.0825,
+          "w_ratio": 0.097,
+          "h_ratio": 0.095
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Ethnicity - Overall Pie",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "Caucasian/White",
+        "Asian",
+        "Aboriginal, First Nations, Inuit, Metis",
+        "Hispanic or Latino",
+        "African American/Black",
+        "Native Hawaiian or Other Pacific Islander",
+        "American Indian or Alaska Native",
+        "Other"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "Caucasian/White",
+          "Asian",
+          "Aboriginal, First Nations, Inuit, Metis",
+          "Hispanic or Latino",
+          "African American/Black",
+          "Native Hawaiian or Other Pacific Islander",
+          "American Indian or Alaska Native",
+          "Other"
+        ]
+      },
+      "filter_members": [
+        "Null"
+      ],
+      "title_runs": [
+        {
+          "text": "Ethnicity",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83200",
+          "y": "60000",
+          "w": "16000",
+          "h": "23250",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.832,
+            "y_ratio": 0.6,
+            "w_ratio": 0.16,
+            "h_ratio": 0.2325
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+        ]
+      },
+      "zone": {
+        "x": "42000",
+        "y": "58500",
+        "w": "41200",
+        "h": "40500",
+        "aspect_ratio": 1.0173,
+        "normalized": {
+          "x_ratio": 0.42,
+          "y_ratio": 0.585,
+          "w_ratio": 0.412,
+          "h_ratio": 0.405
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Gender-Overall Pie",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Null"
+      ],
+      "title_runs": [
+        {
+          "text": "Gender",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83200",
+          "y": "7000",
+          "w": "16000",
+          "h": "10750",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.832,
+            "y_ratio": 0.07,
+            "w_ratio": 0.16,
+            "h_ratio": 0.1075
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Calculation_1536853401516253194:qk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "20750",
+        "w": "41200",
+        "h": "37750",
+        "aspect_ratio": 1.0914,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.2075,
+          "w_ratio": 0.412,
+          "h_ratio": 0.3775
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Marital status - Overall Pie",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+      "slices": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "Single",
+        "Married",
+        "Common-law",
+        "Separated",
+        "Other"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "Single",
+          "Married",
+          "Common-law",
+          "Separated",
+          "Other"
+        ]
+      },
+      "filter_members": [
+        "Common-law",
+        "Married",
+        "Other",
+        "Single"
+      ],
+      "title_runs": [
+        {
+          "text": "Marital Status",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "83200",
+          "y": "38500",
+          "w": "16000",
+          "h": "15750",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.832,
+            "y_ratio": 0.385,
+            "w_ratio": 0.16,
+            "h_ratio": 0.1575
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+          "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "58500",
+        "w": "41200",
+        "h": "40500",
+        "aspect_ratio": 1.0173,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.585,
+          "w_ratio": 0.412,
+          "h_ratio": 0.405
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action17]",
+      "caption": "Filter 8 (generated) 1 2",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet",
+        "worksheet": "Amount of Positive"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    },
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Marital status - Bar"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Marital status",
+        "target": "Marital status - Bar"
+      },
+      "field_captions": [
+        "Marital status"
+      ],
+      "target": "Marital status - Bar"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Highlight 3 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Age",
+        "target": "Dashboard"
+      },
+      "field_captions": [
+        "Age"
+      ],
+      "target": "Dashboard"
+    },
+    {
+      "name": "[Action6]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Age -Score - Bar"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Age",
+        "target": "Age -Score - Bar"
+      },
+      "field_captions": [
+        "Age"
+      ],
+      "target": "Age -Score - Bar"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender-Overall Pie",
+      "viewpoint_name": "Gender-Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Calculation_1536853401516253194:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Age - Overall Pie",
+      "viewpoint_name": "Age - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[attr:Positive-Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Response ID:ok]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Calculation_1536853401494085638:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Marital status - Overall Pie",
+      "viewpoint_name": "Marital status - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Ethnicity - Overall Pie",
+      "viewpoint_name": "Ethnicity - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of Positive %",
+      "viewpoint_name": "Amount of Positive %",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of Positive",
+      "viewpoint_name": "Amount of Positive",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of  Negative %",
+      "viewpoint_name": "Amount of  Negative %",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Amount of  Negative",
+      "viewpoint_name": "Amount of  Negative",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[:Measure Names]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[Multiple Values]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[ctd:Response ID:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:After a performance,  consume non-prescription depressants:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Age:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Annual income:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Education:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Employment status as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Shows a year:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Years of experience as a musician:nk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Negative Score:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[sum:Number of Records:qk]",
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[usr:Total-P (copy)_1536853401496895496:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Ethnicity - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Ethnicity:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Gender-Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard",
+      "viewpoint_name": "Marital status - Overall Pie",
+      "fields": [
+        "[federated.0h94xko0pl9x8910ftstx1lvfab0].[none:Marital status:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 8,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 8
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Age - Overall Pie",
+      "Ethnicity - Overall Pie",
+      "Gender-Overall Pie",
+      "Marital status - Overall Pie"
+    ],
+    "legend_anchor_positions": {
+      "Age - Overall Pie": "right",
+      "Ethnicity - Overall Pie": "right",
+      "Gender-Overall Pie": "above",
+      "Marital status - Overall Pie": "above"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Age - Overall Pie",
+      "Amount of  Negative",
+      "Amount of  Negative %",
+      "Amount of Positive",
+      "Amount of Positive %",
+      "Ethnicity - Overall Pie",
+      "Gender-Overall Pie",
+      "Marital status - Overall Pie"
+    ],
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 11
+  }
+}

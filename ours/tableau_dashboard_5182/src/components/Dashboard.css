@@ -1,0 +1,55 @@
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.dashboard-content {
+  background-color: #ffffff;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  max-height: 800px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-section {
+  width: 100%;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.scatterplot-section {
+  flex: 1;
+  padding: 16px 20px;
+  overflow: hidden;
+}
+
+.scatterplot-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+}
+
+.loading-message,
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #666666;
+}
+
+.error-message {
+  color: #d32f2f;
+}

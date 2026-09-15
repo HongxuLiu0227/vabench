@@ -1,0 +1,1200 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.4.0 (20194.19.1010.1202)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Customer Overview",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+        "fields": [
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[none:Region:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names] * [federated.11oeaww0axzaij1b29ohm0h7pnml].[Multiple Values])",
+        "fields": [
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[:Measure Names]",
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[Multiple Values]"
+        ]
+      },
+      "slices": [
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[ctd:Customer Name:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Quantity:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813629575169:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "quick-filter"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813629575169:qk]",
+            "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+            "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Quantity:qk]",
+            "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]",
+            "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}op": "manual"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813629575169:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Quantity:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[:Measure Names]",
+                      "member": "\"[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Category:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Region:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+              "filter-group": "5"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Segment:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[yr:Order Date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Customer Rank",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Customer Name:nk]",
+        "fields": [
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[none:Customer Name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+        "fields": [
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Region)]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Customer Name)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[rank:sum:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Columns",
+          "rank-options": "Competition,Descending",
+          "type": "Rank",
+          "column_instance": "[rank:sum:Sales:qk]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Customer Name)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Customer Name)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Customer Name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Region)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Region)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Region]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Category:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+              "filter-group": "5"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Segment:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[yr:Order Date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sales and Profit by Customers",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]",
+        "fields": [
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+        "fields": [
+          "[federated.11oeaww0axzaij1b29ohm0h7pnml]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Region)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Customer Name:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Region)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[Action (Region)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Region]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+              "filter-group": "4"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Category:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+              "filter-group": "5"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Segment:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+              "filter-group": "3"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[yr:Order Date:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "28041",
+          "w": "98614",
+          "h": "70608",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Customer Overview",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "26690",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "28041",
+          "w": "86233",
+          "h": "70608",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "86926",
+          "y": "28041",
+          "w": "12381",
+          "h": "70608",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sales and Profit by Customers",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "28041",
+          "w": "41645",
+          "h": "70608",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Customer Rank",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "42338",
+          "y": "28041",
+          "w": "44588",
+          "h": "70608",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Customer Overview",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "86926",
+          "y": "28041",
+          "w": "12381",
+          "h": "9459",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Customer Overview",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "86926",
+          "y": "37500",
+          "w": "12381",
+          "h": "18243",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Customer Overview",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "86926",
+          "y": "55743",
+          "w": "12381",
+          "h": "21452",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sales and Profit by Customers",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "86926",
+          "y": "77195",
+          "w": "12381",
+          "h": "10979",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "2",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "28041",
+          "w": "98614",
+          "h": "70608",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Customer Overview",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "26690",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "28041",
+          "w": "86233",
+          "h": "70608",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-flow",
+          "x": "86926",
+          "y": "28041",
+          "w": "12381",
+          "h": "70608",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sales and Profit by Customers",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "693",
+          "y": "28041",
+          "w": "41645",
+          "h": "70608",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Customer Rank",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "42338",
+          "y": "28041",
+          "w": "44588",
+          "h": "70608",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Customer Overview",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "86926",
+          "y": "28041",
+          "w": "12381",
+          "h": "9459",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "Customer Overview",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "86926",
+          "y": "37500",
+          "w": "12381",
+          "h": "18243",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Customer Overview",
+          "parent_id": "6",
+          "zone_type": "filter",
+          "x": "86926",
+          "y": "55743",
+          "w": "12381",
+          "h": "21452",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sales and Profit by Customers",
+          "parent_id": "6",
+          "zone_type": "color",
+          "x": "86926",
+          "y": "77195",
+          "w": "12381",
+          "h": "10979",
+          "param": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "2",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter Region",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet",
+        "worksheet": "Customer Overview"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "Customer Overview",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Highlight Customer",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-hover"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "exclude": "Customer Overview",
+        "field-captions": "Customer Name",
+        "target": "Dashboard"
+      },
+      "field_captions": [
+        "Customer Name"
+      ],
+      "target": "Dashboard"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter Lower",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard",
+        "type": "sheet",
+        "worksheet": "Sales and Profit by Customers"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "Customer Overview,Sales and Profit by Customers",
+        "target": "Dashboard"
+      },
+      "field_captions": [],
+      "target": "Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales and Profit by Customers",
+      "viewpoint_name": "Sales and Profit by Customers",
+      "fields": [
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Customer Name:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Customer Rank",
+      "viewpoint_name": "Customer Rank",
+      "fields": [
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Customer Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Customer Overview",
+      "viewpoint_name": "Customer Overview",
+      "fields": [
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Customer Name:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+        "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 3
+  }
+}

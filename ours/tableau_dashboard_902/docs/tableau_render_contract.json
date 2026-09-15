@@ -1,0 +1,510 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 2",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:event:nk]",
+      "cols_field": "([federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:ok] * [federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk])",
+      "series_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Воронка",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:ok]",
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:event:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "38375",
+        "w": "61100",
+        "h": "60625",
+        "aspect_ratio": 1.0078,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.3837,
+          "w_ratio": 0.611,
+          "h_ratio": 0.6062
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 3",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]",
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (control)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Каналы",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sheet 3"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+        ]
+      },
+      "zone": {
+        "x": "61899",
+        "y": "1000",
+        "w": "37301",
+        "h": "37375",
+        "aspect_ratio": 0.998,
+        "normalized": {
+          "x_ratio": 0.619,
+          "y_ratio": 0.01,
+          "w_ratio": 0.373,
+          "h_ratio": 0.3738
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 4",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (campaign,channel)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Группы",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sheet 4"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:nk]",
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "61099",
+        "h": "37375",
+        "aspect_ratio": 1.6348,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.611,
+          "h_ratio": 0.3738
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 5",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+      "cols_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]",
+      "series_field": "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]",
+      "slices": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[Action (channel)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Кампании",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sheet 5"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]",
+          "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]"
+        ]
+      },
+      "zone": {
+        "x": "61900",
+        "y": "38375",
+        "w": "37300",
+        "h": "60625",
+        "aspect_ratio": 0.6153,
+        "normalized": {
+          "x_ratio": 0.619,
+          "y_ratio": 0.3837,
+          "w_ratio": 0.373,
+          "h_ratio": 0.6062
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 4"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 3"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 5"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:ok]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:event:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:control:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[usr:Calculation_5721612283639615488:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 5",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 5",
+      "viewpoint_name": "Sheet 5",
+      "fields": [
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:campaign:nk]",
+        "[federated.0lrh8aw00t1hqv121atbu1ioyt17].[none:channel:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 2,
+      "custom_tableau_view": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Sheet 2",
+      "Sheet 3",
+      "Sheet 4",
+      "Sheet 5"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 6
+  }
+}

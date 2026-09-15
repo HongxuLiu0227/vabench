@@ -1,0 +1,1097 @@
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" original-version="18.1" source-build="2019.3.0 (20193.19.0821.2225)" source-platform="win" version="18.1">
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable="true" predowngraded="true" />
+    <NavigationAction />
+    <SheetIdentifierTracking ignorable="true" predowngraded="true" />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <style>
+    <style-rule element="gridline">
+      <format attr="stroke-color" value="#ffffff" />
+      <format attr="line-visibility" value="off" />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption="prices-split-adjusted" inline="true" name="federated.1av1a3o0myrsjb18ja7fa0yd1qya" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="prices-split-adjusted" name="textscan.1axwqt21heke26181kd6x1ww2v53">
+            <connection class="textscan" directory="C:/Purdue/Courses/Fall/Fall 2/Big Data/Final project" filename="DIS.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.1axwqt21heke26181kd6x1ww2v53" name="DIS.csv" table="[DIS#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="date" name="date" ordinal="0" />
+            <column datatype="real" name="open" ordinal="1" />
+            <column datatype="real" name="high" ordinal="2" />
+            <column datatype="real" name="low" ordinal="3" />
+            <column datatype="real" name="close" ordinal="4" />
+            <column datatype="integer" name="volume" ordinal="5" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="capability">
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="character-set">"UTF-8"</attribute>
+              <attribute datatype="string" name="collation">"en_US"</attribute>
+              <attribute datatype="string" name="field-delimiter">","</attribute>
+              <attribute datatype="string" name="header-row">"true"</attribute>
+              <attribute datatype="string" name="locale">"en_US"</attribute>
+              <attribute datatype="string" name="single-char">""</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[open]</local-name>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias>open</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>high</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high]</local-name>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias>high</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low]</local-name>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias>low</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[close]</local-name>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias>close</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[volume]</local-name>
+            <parent-name>[DIS.csv]</parent-name>
+            <remote-alias>volume</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column caption="Go to explore" datatype="string" name="[Calculation_1169247112984809473]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="&quot;Exploring data patterns&quot;" />
+      </column>
+      <column caption="Go to methodology" datatype="string" name="[Calculation_1169247112985636866]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="&quot;Methodology&quot;" />
+      </column>
+      <column caption="Go to results" datatype="string" name="[Calculation_1169247112986378243]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="&quot;Results and Model accuracy&quot;" />
+      </column>
+      <column caption="Go to home" datatype="string" name="[Calculation_1169247112986927108]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="&quot;Home&quot;" />
+      </column>
+      <column caption="Max close" datatype="real" name="[Calculation_1729663792037629953]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="MAX([close])" />
+      </column>
+      <column caption="Max open" datatype="real" name="[Calculation_509469767997857792]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="MAX([open])" />
+      </column>
+      <column datatype="integer" name="[Number of Records]" role="measure" type="quantitative" user:auto-column="numrec">
+        <calculation class="tableau" formula="1" />
+      </column>
+      <column caption="Close" datatype="real" name="[close]" role="measure" type="quantitative" />
+      <column caption="Date" datatype="date" name="[date]" role="dimension" type="ordinal" />
+      <column caption="High" datatype="real" name="[high]" role="measure" type="quantitative" />
+      <column caption="Low" datatype="real" name="[low]" role="measure" type="quantitative" />
+      <column caption="Open" datatype="real" name="[open]" role="measure" type="quantitative" />
+      <column caption="Volume" datatype="integer" name="[volume]" role="measure" type="quantitative" />
+      <column-instance column="[date]" derivation="Month-Trunc" name="[tmn:date:ok]" pivot="key" type="ordinal" />
+      <group caption="Action (MONTH(Date))" hidden="true" name="[Action (MONTH(Date))]" name-style="unqualified" user:auto-column="sheet_link">
+        <groupfilter function="crossjoin">
+          <groupfilter function="level-members" level="[tmn:date:ok]" />
+        </groupfilter>
+      </group>
+      <extract count="-1" enabled="true" units="records">
+        <connection access_mode="readonly" authentication="auth-none" author-locale="en_US" class="hyper" dbname="Data/Datasources/prices-split-adjusted.hyper" default-settings="yes" schema="Extract" sslmode="" tablename="Extract" update-time="11/28/2019 11:37:17 PM" username="tableau_internal_user">
+          <relation name="Extract" table="[Extract].[Extract]" type="table" />
+          <refresh>
+            <refresh-event add-from-file-path="prices-split-adjusted" increment-value="%null%" refresh-type="create" rows-inserted="14578" timestamp-start="2019-11-28 23:37:17.001" />
+          </refresh>
+          <metadata-records>
+            <metadata-record class="column">
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>DIS.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>14578</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>open</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[open]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>open</remote-alias>
+              <ordinal>1</ordinal>
+              <family>DIS.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3945</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>high</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[high]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>high</remote-alias>
+              <ordinal>2</ordinal>
+              <family>DIS.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3960</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>low</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low</remote-alias>
+              <ordinal>3</ordinal>
+              <family>DIS.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3722</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>close</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>close</remote-alias>
+              <ordinal>4</ordinal>
+              <family>DIS.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3804</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class="column">
+              <remote-name>volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>volume</remote-alias>
+              <ordinal>5</ordinal>
+              <family>DIS.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4855</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering="alphabetic" dim-percentage="0.426332" measure-ordering="alphabetic" measure-percentage="0.573668" show-structure="true" />
+      <semantic-values>
+        <semantic-value key="[Country].[Name]" value="&quot;United States&quot;" />
+      </semantic-values>
+    </datasource>
+    <datasource caption="Sheet1 (prediction)" inline="true" name="federated.0lvyz3e14xqiuk0zls8fu0uuqig1" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="prediction" name="google-sheets.1ns0wwp1auw7z21anhtsq197ymtl">
+            <connection REDIRECT_URI="urn:ietf:wg:oauth:2.0:oob" SCOPE="email profile https://www.googleapis.com/auth/drive.readonly" class="google-sheets" cleaning="no" compat="no" dataRefreshTime="" filename="prediction" googleSheetId="1LwTilYt1JRrOtCXMvu1agi03PeXmAT42MVUy8B1dLvU" interpretationMode="8" mimeType="application/vnd.google-apps.spreadsheet" server="" server-oauth="" username="samir.husain26@gmail.com" validate="no" />
+          </named-connection>
+        </named-connections>
+        <relation connection="google-sheets.1ns0wwp1auw7z21anhtsq197ymtl" name="Sheet1" table="[Sheet1$]" type="table">
+          <columns gridOrigin="A1:C9:no:A1:C9:0" header="yes" outcome="2">
+            <column datatype="real" name="close" ordinal="0" />
+            <column datatype="date" name="Date" ordinal="1" />
+            <column datatype="real" name="open" ordinal="2" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[close]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>close</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"R8"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"DATE"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[open]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>open</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="DebugRemoteType">"R8"</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="capability">
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="integer" name="context">0</attribute>
+              <attribute datatype="string" name="gridOrigin">"A1:C9:no:A1:C9:0"</attribute>
+              <attribute datatype="boolean" name="header">true</attribute>
+              <attribute datatype="integer" name="outcome">2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column datatype="integer" name="[Number of Records]" role="measure" type="quantitative" user:auto-column="numrec">
+        <calculation class="tableau" formula="1" />
+      </column>
+      <column caption="Close" datatype="real" name="[close]" role="measure" type="quantitative" />
+      <column caption="Open" datatype="real" name="[open]" role="measure" type="quantitative" />
+      <layout dim-ordering="alphabetic" dim-percentage="0.451411" measure-ordering="alphabetic" measure-percentage="0.548589" show-structure="true" />
+      <semantic-values>
+        <semantic-value key="[Country].[Name]" value="&quot;United States&quot;" />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <nav-action caption="Go to Explore" name="[Action3]">
+      <activation type="on-select" />
+      <source dashboard="Title" type="sheet">
+        <exclude-sheet name="Go to explore" />
+        <exclude-sheet name="Go to methodology" />
+        <exclude-sheet name="Go to results" />
+      </source>
+      <params>
+        <param name="sheet" value="Exploring data patterns" />
+      </params>
+    </nav-action>
+    <nav-action caption="Go to methodology" name="[Action4]">
+      <activation type="on-select" />
+      <source dashboard="Title" type="sheet" worksheet="Go to methodology" />
+      <params>
+        <param name="sheet" value="Methodology" />
+        <param name="single-select" value="" />
+      </params>
+    </nav-action>
+    <nav-action caption="Go to results" name="[Action5]">
+      <activation type="on-select" />
+      <source dashboard="Title" type="sheet" worksheet="Go to results" />
+      <params>
+        <param name="sheet" value="Results and model accuracy" />
+      </params>
+    </nav-action>
+    <nav-action caption="Go to home" name="[Action6]">
+      <activation type="on-select" />
+      <source dashboard="Exploring data patterns" type="sheet" />
+      <params>
+        <param name="sheet" value="Title" />
+      </params>
+    </nav-action>
+    <nav-action caption="Go to explore" name="[Action7]">
+      <activation type="on-select" />
+      <source dashboard="Title" type="sheet" worksheet="Go to explore" />
+      <params>
+        <param name="sheet" value="Exploring data patterns" />
+      </params>
+    </nav-action>
+    <nav-action caption="Go to home" name="[Action8]">
+      <activation type="on-select" />
+      <source type="all">
+        <exclude-sheet name="Close" />
+        <exclude-sheet name="Go to explore" />
+        <exclude-sheet name="Go to methodology" />
+        <exclude-sheet name="Go to results" />
+        <exclude-sheet name="Max close" />
+        <exclude-sheet name="Max open" />
+        <exclude-sheet name="Open" />
+      </source>
+      <params>
+        <param name="sheet" value="Title" />
+      </params>
+    </nav-action>
+  </actions>
+  <worksheets>
+    <worksheet name="Go to home">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="prices-split-adjusted" name="federated.1av1a3o0myrsjb18ja7fa0yd1qya" />
+          </datasources>
+          <datasource-dependencies datasource="federated.1av1a3o0myrsjb18ja7fa0yd1qya">
+            <column caption="Go to home" datatype="string" name="[Calculation_1169247112986927108]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="&quot;Home&quot;" />
+            </column>
+            <column-instance column="[Calculation_1169247112986927108]" derivation="None" name="[none:Calculation_1169247112986927108:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="cell">
+            <format attr="width" value="338" />
+            <format attr="height" value="36" />
+          </style-rule>
+          <style-rule element="table">
+            <format attr="background-color" value="#b4b4b4" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <text column="[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]" />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname="Calibri" fontsize="15">&lt;</run>
+                <run fontname="Calibri" fontsize="15">[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]</run>
+                <run fontname="Calibri" fontsize="15">&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+                <format attr="mark-labels-cull" value="true" />
+              </style-rule>
+              <style-rule element="pane">
+                <format attr="minwidth" value="-1" />
+                <format attr="maxwidth" value="-1" />
+                <format attr="minheight" value="-1" />
+                <format attr="maxheight" value="-1" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{5804E54A-1EAE-407E-A2DC-C94177A390AB}" />
+    </worksheet>
+    <worksheet name="Results - pred close">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Sheet1 (prediction)" name="federated.0lvyz3e14xqiuk0zls8fu0uuqig1" />
+          </datasources>
+          <datasource-dependencies datasource="federated.0lvyz3e14xqiuk0zls8fu0uuqig1">
+            <column datatype="date" name="[Date]" role="dimension" type="ordinal" />
+            <column caption="Close" datatype="real" name="[close]" role="measure" type="quantitative" />
+            <column-instance column="[close]" derivation="Sum" name="[sum:close:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Date]" derivation="Day-Trunc" name="[tdy:Date:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="axis">
+            <encoding attr="space" class="0" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:close:qk]" field-type="quantitative" min="114.0" range-type="fixedmin" scope="rows" type="space" />
+            <format attr="title" class="0" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:close:qk]" scope="rows" value="" />
+            <format attr="title" class="0" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]" scope="cols" value="Date" />
+          </style-rule>
+          <style-rule element="table">
+            <format attr="background-color" value="#e6e6e6" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <text column="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:close:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+                <format attr="mark-labels-cull" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:close:qk]</rows>
+        <cols>[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]</cols>
+      </table>
+      <simple-id uuid="{9B6B8F2B-FCB1-4503-B1B6-D323E98E11B4}" />
+    </worksheet>
+    <worksheet name="Results - pred open">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Sheet1 (prediction)" name="federated.0lvyz3e14xqiuk0zls8fu0uuqig1" />
+          </datasources>
+          <datasource-dependencies datasource="federated.0lvyz3e14xqiuk0zls8fu0uuqig1">
+            <column datatype="date" name="[Date]" role="dimension" type="ordinal" />
+            <column caption="Open" datatype="real" name="[open]" role="measure" type="quantitative" />
+            <column-instance column="[open]" derivation="Sum" name="[sum:open:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Date]" derivation="Day-Trunc" name="[tdy:Date:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="axis">
+            <format attr="title" class="0" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]" scope="rows" value="" />
+            <encoding attr="space" class="0" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]" field-type="quantitative" min="114.0" range-type="fixedmin" scope="rows" type="space" />
+            <format attr="width" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]" value="80" />
+            <format attr="title" class="0" field="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]" scope="cols" value="Date" />
+          </style-rule>
+          <style-rule element="table">
+            <format attr="background-color" value="#e6e6e6" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option="selection-relaxation-allow">
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Automatic" />
+            <encodings>
+              <text column="[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+                <format attr="mark-labels-cull" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]</rows>
+        <cols>[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]</cols>
+      </table>
+      <simple-id uuid="{CEC51B25-7A6A-4AC2-B286-886D7B195F29}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Results and model accuracy">
+      <style>
+        <style-rule element="table">
+          <format attr="background-color" value="#000000" />
+        </style-rule>
+        <style-rule element="dash-text">
+          <format attr="text-orientation" id="dash-text_47" value="-90" />
+          <format attr="text-orientation" id="dash-text_56" value="-90" />
+        </style-rule>
+      </style>
+      <size sizing-mode="automatic" />
+      <zones>
+        <zone h="36186" id="48" type="empty" w="98130" x="561" y="16870">
+          <zone-style>
+            <format attr="border-color" value="#000000" />
+            <format attr="border-style" value="none" />
+            <format attr="border-width" value="0" />
+            <format attr="background-color" value="#e6e6e6" />
+          </zone-style>
+        </zone>
+        <zone h="8802" id="3" type="text" w="99813" x="187" y="0">
+          <formatted-text>
+            <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Results and Model accuracy</run>
+          </formatted-text>
+          <zone-style>
+            <format attr="border-color" value="#000000" />
+            <format attr="border-style" value="none" />
+            <format attr="border-width" value="0" />
+            <format attr="background-color" value="#b4b4b4" />
+          </zone-style>
+        </zone>
+        <zone forceUpdate="true" h="11614" id="4" type="text" w="13529" x="78803" y="25550">
+          <formatted-text>
+            <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Train : 0.36</run>
+            <run fontalignment="1">Æ
+</run>
+            <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Test: 1.54</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate="true" h="3667" id="5" type="text" w="24377" x="73691" y="11002">
+          <formatted-text>
+            <run fontalignment="1" fontcolor="#b4b4b4" fontname="Calibri" fontsize="15">Root Mean Square Error</run>
+          </formatted-text>
+        </zone>
+        <zone h="6968" id="12" name="Go to home" show-title="false" w="9726" x="89713" y="733" />
+        <zone forceUpdate="true" h="23350" id="47" type="text" w="2618" x="3741" y="20782">
+          <formatted-text>
+            <run bold="true" fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Open Stock</run>
+          </formatted-text>
+        </zone>
+        <zone h="38998" id="53" type="empty" w="98005" x="935" y="57946">
+          <zone-style>
+            <format attr="border-color" value="#000000" />
+            <format attr="border-style" value="none" />
+            <format attr="border-width" value="0" />
+            <format attr="background-color" value="#e6e6e6" />
+          </zone-style>
+        </zone>
+        <zone h="18949" id="56" type="text" w="3117" x="3803" y="67482">
+          <formatted-text>
+            <run bold="true" fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Close Stock</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate="true" h="9046" id="57" type="text" w="8666" x="81484" y="72372">
+          <formatted-text>
+            <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Train: 0.38</run>
+            <run fontalignment="1">Æ
+</run>
+            <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Test: 2.69</run>
+          </formatted-text>
+        </zone>
+        <zone h="33252" id="63" name="Results - pred close" show-title="false" w="51060" x="18080" y="19193" />
+        <zone h="33252" id="64" name="Results - pred open" show-title="false" w="51559" x="17394" y="59780" />
+        <zone h="7335" id="67" type="text" w="55985" x="810" y="9291">
+          <formatted-text>
+            <run fontcolor="#898989" fontname="Calibri" fontsize="12" italic="true">Uses google excel as the data source. Sign in to Google to see predicted charts.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated="true" name="Phone">
+          <size maxheight="1100" minheight="1100" sizing-mode="vscroll" />
+          <zones>
+            <zone h="100000" id="74" type="layout-basic" w="100000" x="0" y="0">
+              <zone h="98076" id="75" param="vert" type="layout-flow" w="99002" x="499" y="962">
+                <zone h="8802" id="3" type="text" w="99813" x="187" y="0">
+                  <formatted-text>
+                    <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Results and Model accuracy</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                    <format attr="background-color" value="#b4b4b4" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="56" h="6968" id="12" is-fixed="true" name="Go to home" show-title="false" w="9726" x="89713" y="733">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone h="7335" id="67" type="text" w="55985" x="810" y="9291">
+                  <formatted-text>
+                    <run fontcolor="#898989" fontname="Calibri" fontsize="12" italic="true">Uses google excel as the data source. Sign in to Google to see predicted charts.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate="true" h="3667" id="5" type="text" w="24377" x="73691" y="11002">
+                  <formatted-text>
+                    <run fontalignment="1" fontcolor="#b4b4b4" fontname="Calibri" fontsize="15">Root Mean Square Error</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="266" h="33252" id="63" is-fixed="true" name="Results - pred close" show-title="false" w="51060" x="18080" y="19193">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate="true" h="23350" id="47" type="text" w="2618" x="3741" y="20782">
+                  <formatted-text>
+                    <run bold="true" fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Open Stock</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate="true" h="11614" id="4" type="text" w="13529" x="78803" y="25550">
+                  <formatted-text>
+                    <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Train : 0.36</run>
+                    <run fontalignment="1">Æ
+</run>
+                    <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Test: 1.54</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="266" h="33252" id="64" is-fixed="true" name="Results - pred open" show-title="false" w="51559" x="17394" y="59780">
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone h="18949" id="56" type="text" w="3117" x="3803" y="67482">
+                  <formatted-text>
+                    <run bold="true" fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Close Stock</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate="true" h="9046" id="57" type="text" w="8666" x="81484" y="72372">
+                  <formatted-text>
+                    <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Train: 0.38</run>
+                    <run fontalignment="1">Æ
+</run>
+                    <run fontalignment="1" fontcolor="#000000" fontname="Calibri" fontsize="15">Test: 2.69</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="border-color" value="#000000" />
+                    <format attr="border-style" value="none" />
+                    <format attr="border-width" value="0" />
+                    <format attr="margin" value="4" />
+                    <format attr="padding" value="0" />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr="border-color" value="#000000" />
+                <format attr="border-style" value="none" />
+                <format attr="border-width" value="0" />
+                <format attr="margin" value="8" />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid="{7A78FC7E-F165-4571-AB0F-C1B4093231CA}" />
+    </dashboard>
+    </dashboards>
+  <windows source-height="75">
+    <window class="dashboard" name="Results and model accuracy">
+      <viewpoints>
+        <viewpoint name="Go to home">
+          <zoom type="entire-view" />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields />
+                    <y-fields />
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>"Home"</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+        <viewpoint name="Results - pred close">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Results - pred open">
+          <zoom type="entire-view" />
+        </viewpoint>
+      </viewpoints>
+      <active id="12" />
+      <simple-id uuid="{64E3D0EC-3F13-40A3-B889-07778F9FC697}" />
+    </window>
+    <window class="worksheet" hidden="true" name="Go to home">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="30">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{A4CF40C5-2FFF-444A-AD01-F80563BA4281}" />
+    </window>
+    <window class="worksheet" hidden="true" name="Results - pred close">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="30">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{454863C7-A58F-4FB3-B1C7-604A8D7DA8C1}" />
+    </window>
+    <window class="worksheet" hidden="true" name="Results - pred open">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="30">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid="{F72A09FB-7B47-4F5A-A5DE-7FAD44C5D856}" />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height="192" name="Results and model accuracy" width="192">
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+    </thumbnails>
+</workbook>

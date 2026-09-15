@@ -1,0 +1,358 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_1968/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:34.388006Z"
+  },
+  "dashboard": {
+    "name": "Dashboard",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_customer_overview",
+        "name": "Customer Overview",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "Customer Overview"
+        }
+      },
+      {
+        "id": "ws_customer_rank",
+        "name": "Customer Rank",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Customer Rank"
+        }
+      },
+      {
+        "id": "ws_sales_and_profit_by_customers",
+        "name": "Sales and Profit by Customers",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Sales and Profit by Customers"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_region",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Region:nk]",
+        "normalized": "Region",
+        "role": "dimension"
+      },
+      {
+        "id": "field_federated_11oeaww0axzaij1b29ohm0h7pnml_measure_names_federated_11oeaww0axzaij1b29ohm0h7pnml_multiple_values",
+        "raw": "([federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names] * [federated.11oeaww0axzaij1b29ohm0h7pnml].[Multiple Values])",
+        "normalized": "([federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names] * [federated.11oeaww0axzaij1b29ohm0h7pnml].[Multiple Values])",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_345932813618278400",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[usr:Calculation_345932813618278400:qk]",
+        "normalized": "Calculation_345932813618278400",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_category",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Category:nk]",
+        "normalized": "Category",
+        "role": "dimension"
+      },
+      {
+        "id": "field_customer_name",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Customer Name:nk]",
+        "normalized": "Customer Name",
+        "role": "dimension"
+      },
+      {
+        "id": "field_segment",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[none:Segment:nk]",
+        "normalized": "Segment",
+        "role": "dimension"
+      },
+      {
+        "id": "field_sales",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Sales:qk]",
+        "normalized": "Sales",
+        "role": "measure"
+      },
+      {
+        "id": "field_profit",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[sum:Profit:qk]",
+        "normalized": "Profit",
+        "role": "measure"
+      },
+      {
+        "id": "field_order_date",
+        "raw": "[federated.11oeaww0axzaij1b29ohm0h7pnml].[yr:Order Date:ok]",
+        "normalized": "Order Date",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_customer_overview"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_sales_and_profit_by_customers"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": "Customer Overview"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-hover",
+          "event_semantic": "hover",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [
+          "field_customer_name"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard",
+          "source_worksheet_name": "Sales and Profit by Customers"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard",
+          "target_name_raw": "Dashboard"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Sales and Profit by Customers",
+        "viewpoint_name": "Sales and Profit by Customers",
+        "field_ids": [
+          "field_category",
+          "field_customer_name",
+          "field_region",
+          "field_segment",
+          "field_order_date"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Customer Rank",
+        "viewpoint_name": "Customer Rank",
+        "field_ids": [
+          "field_customer_name"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Customer Overview",
+        "viewpoint_name": "Customer Overview",
+        "field_ids": [
+          "field_measure_names",
+          "field_category",
+          "field_customer_name",
+          "field_region",
+          "field_segment"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter",
+        "highlight"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_customer_overview",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_category",
+          "field_customer_name",
+          "field_measure_names",
+          "field_region",
+          "field_segment"
+        ]
+      },
+      {
+        "worksheet_id": "ws_customer_rank",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_customer_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_sales_and_profit_by_customers",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_category",
+          "field_customer_name",
+          "field_order_date",
+          "field_region",
+          "field_segment"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 2,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 3,
+    "field_count": 10
+  }
+}

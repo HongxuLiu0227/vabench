@@ -1,0 +1,65 @@
+.line-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.line-chart {
+  overflow: visible;
+}
+
+.chart-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  fill: #333;
+}
+
+.x-axis .domain,
+.y-axis .domain {
+  stroke: #666;
+  stroke-width: 1;
+}
+
+.x-axis .tick line,
+.y-axis .tick line {
+  stroke: #e0e0e0;
+}
+
+.x-axis .tick text,
+.y-axis .tick text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 12px;
+  fill: #666;
+}
+
+.y-axis-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  fill: #555;
+}
+
+.data-point {
+  transition: all 0.15s ease-in-out;
+}
+
+.data-point:hover {
+  filter: brightness(0.9);
+}
+
+.line-path {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.value-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 500;
+  pointer-events: none;
+}

@@ -1,0 +1,372 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "1660",
+    "maxwidth": "1920",
+    "minheight": "1660",
+    "minwidth": "1520",
+    "sizing-mode": "range"
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:vote_direction:qk]",
+      "cols_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+      "series_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+      "slices": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "CThomas",
+        "EKagan",
+        "JGRoberts",
+        "NMGorsuch",
+        "RBGinsburg",
+        "SAAlito",
+        "SGBreyer",
+        "SSotomayor"
+      ],
+      "title_runs": [
+        {
+          "text": "SCOTUS Votes 1991 - 2017",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "591",
+          "y": "641",
+          "w": "10396",
+          "h": "11987",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.0089,
+            "y_ratio": 0.0065,
+            "w_ratio": 0.1571,
+            "h_ratio": 0.1215
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:caseId:nk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:qk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:qk]"
+        ]
+      },
+      "zone": {
+        "x": "7797",
+        "y": "783",
+        "w": "52924",
+        "h": "31687",
+        "aspect_ratio": 1.6702,
+        "normalized": {
+          "x_ratio": 0.1179,
+          "y_ratio": 0.0079,
+          "w_ratio": 0.8,
+          "h_ratio": 0.3211
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 3",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]",
+      "cols_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+      "series_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+      "slices": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "1",
+        "10",
+        "12",
+        "CThomas",
+        "EKagan",
+        "JGRoberts",
+        "NMGorsuch",
+        "RBGinsburg",
+        "SAAlito",
+        "SGBreyer",
+        "SSotomayor"
+      ],
+      "title_runs": [
+        {
+          "text": "Precedent Changing Votes (1949 - 2018)",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+        ]
+      },
+      "zone": {
+        "x": "7206",
+        "y": "35120",
+        "w": "56054",
+        "h": "32470",
+        "aspect_ratio": 1.7263,
+        "normalized": {
+          "x_ratio": 0.1089,
+          "y_ratio": 0.3559,
+          "w_ratio": 0.8473,
+          "h_ratio": 0.3291
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 4",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:Number of Records:qk]",
+      "cols_field": "([federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk] * [federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk])",
+      "series_field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+      "slices": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "CThomas",
+        "EKagan",
+        "JGRoberts",
+        "NMGorsuch",
+        "RBGinsburg",
+        "SAAlito",
+        "SGBreyer",
+        "SSotomayor",
+        "0",
+        "2"
+      ],
+      "title_runs": [
+        {
+          "text": "Total Career Votes to Date",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [
+        "Votes"
+      ],
+      "axis_title_cols": [
+        "Year"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+        ]
+      },
+      "zone": {
+        "x": "236",
+        "y": "68072",
+        "w": "65918",
+        "h": "30602",
+        "aspect_ratio": 2.154,
+        "normalized": {
+          "x_ratio": 0.0036,
+          "y_ratio": 0.6899,
+          "w_ratio": 0.9964,
+          "h_ratio": 0.3101
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {},
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:caseId:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:qk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 1,
+      "line_chart": 1,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Sheet 1"
+    ],
+    "legend_anchor_positions": {
+      "Sheet 1": "overlay"
+    },
+    "axis_title_worksheets": [
+      "Sheet 4"
+    ],
+    "interaction_worksheets": [
+      "Sheet 1",
+      "Sheet 3",
+      "Sheet 4"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

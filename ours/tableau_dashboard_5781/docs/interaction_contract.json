@@ -1,0 +1,682 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_5781/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:36.253917Z"
+  },
+  "dashboard": {
+    "name": "Cluster Profiles",
+    "worksheet_count": 10
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_patterns_in_the_cluster",
+        "name": "# Patterns in the Cluster",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "# Patterns in the Cluster"
+        }
+      },
+      {
+        "id": "ws_units_sold",
+        "name": "# Units Sold",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "# Units Sold"
+        }
+      },
+      {
+        "id": "ws_avg_price_in_the_cluster",
+        "name": "Avg Price in the cluster",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Avg Price in the cluster"
+        }
+      },
+      {
+        "id": "ws_mae_values",
+        "name": "MAE Values",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "MAE Values"
+        }
+      },
+      {
+        "id": "ws_model_predictions",
+        "name": "Model Predictions",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Model Predictions"
+        }
+      },
+      {
+        "id": "ws_name_of_the_patterns",
+        "name": "Name of the Patterns",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 5,
+          "worksheet_name": "Name of the Patterns"
+        }
+      },
+      {
+        "id": "ws_sales",
+        "name": "Sales",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 6,
+          "worksheet_name": "Sales"
+        }
+      },
+      {
+        "id": "ws_sheet_10",
+        "name": "Sheet 10",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 7,
+          "worksheet_name": "Sheet 10"
+        }
+      },
+      {
+        "id": "ws_sheet_9",
+        "name": "Sheet 9",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 8,
+          "worksheet_name": "Sheet 9"
+        }
+      },
+      {
+        "id": "ws_summary",
+        "name": "Summary",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 9,
+          "worksheet_name": "Summary"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_number_of_records",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:Number of Records:qk]",
+        "normalized": "Number of Records",
+        "role": "measure"
+      },
+      {
+        "id": "field_cluster",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:cluster:ok]",
+        "normalized": "cluster",
+        "role": "dimension"
+      },
+      {
+        "id": "field_units",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:units:qk]",
+        "normalized": "units",
+        "role": "measure"
+      },
+      {
+        "id": "field_calculation_94857087572549639",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_94857087572549639:qk]",
+        "normalized": "Calculation_94857087572549639",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_94857087532646401",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532646401:nk]",
+        "normalized": "Calculation_94857087532646401",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_94857087533715459",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533715459:qk]",
+        "normalized": "Calculation_94857087533715459",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_94857087533387778",
+        "raw": "([federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533387778:qk] + [federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087533715459:qk])",
+        "normalized": "Calculation_94857087533387778",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_94857087539785733",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087539785733:nk]",
+        "normalized": "Calculation_94857087539785733",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_94857087532371968",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Calculation_94857087532371968:nk]",
+        "normalized": "Calculation_94857087532371968",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_season_id",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:Season_ID:nk]",
+        "normalized": "Season_ID",
+        "role": "dimension"
+      },
+      {
+        "id": "field_color_id",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:color_ID:nk]",
+        "normalized": "color_ID",
+        "role": "dimension"
+      },
+      {
+        "id": "field_merchant_id",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:merchant_ID:nk]",
+        "normalized": "merchant_ID",
+        "role": "dimension"
+      },
+      {
+        "id": "field_month_id",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:month_ID:nk]",
+        "normalized": "month_ID",
+        "role": "dimension"
+      },
+      {
+        "id": "field_color_mae",
+        "raw": "Color - MAE",
+        "normalized": "Color - MAE",
+        "role": "dimension"
+      },
+      {
+        "id": "field_color_description",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:COLOR_DESCRIPTION:nk]",
+        "normalized": "COLOR_DESCRIPTION",
+        "role": "dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_action_cluster",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[Action (Cluster)]",
+        "normalized": "Action (Cluster)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_3941634857564180481",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:Calculation_3941634857564180481:nk]",
+        "normalized": "Calculation_3941634857564180481",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_94857087571648518",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[none:Calculation_94857087571648518:nk]",
+        "normalized": "Calculation_94857087571648518",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_3941634857562062848",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[usr:Calculation_3941634857562062848:nk:1]",
+        "normalized": "Calculation_3941634857562062848",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_totalsales",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[sum:totalsales:qk]",
+        "normalized": "totalsales",
+        "role": "measure"
+      },
+      {
+        "id": "field_count_merchantclass",
+        "raw": "[federated.122jyyo0azry0c19lsg5k1llllnb].[avg:count_merchantclass:qk]",
+        "normalized": "count_merchantclass",
+        "role": "measure"
+      },
+      {
+        "id": "field_cluster_1",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:cluster.1:ok]",
+        "normalized": "cluster.1",
+        "role": "dimension"
+      },
+      {
+        "id": "field_cluster_2",
+        "raw": "[federated.06zw2ru072erjo14l70v61ngkhc8].[none:cluster.2:ok]",
+        "normalized": "cluster.2",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_patterns_in_the_cluster"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Cluster Profiles",
+          "target_name_raw": "Cluster Profiles"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_model_predictions"
+        },
+        "target": {
+          "target_type": "worksheet",
+          "target_worksheet_id": "ws_model_predictions",
+          "target_dashboard_name": null,
+          "target_name_raw": "Model Predictions"
+        },
+        "driving_field_ids": [
+          "field_color_mae"
+        ],
+        "source_ref": {
+          "worksheet_index": 4,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Cluster Profiles",
+          "source_worksheet_name": "# Patterns in the Cluster"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Cluster Profiles",
+          "target_name_raw": "Cluster Profiles"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Cluster Profiles",
+          "source_worksheet_name": "Model Predictions"
+        },
+        "target": {
+          "target_type": "worksheet",
+          "target_worksheet_id": "ws_model_predictions",
+          "target_dashboard_name": null,
+          "target_name_raw": "Model Predictions"
+        },
+        "driving_field_ids": [
+          "field_color_mae"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Model Performance",
+          "source_worksheet_name": null
+        },
+        "target": {
+          "target_type": "unknown",
+          "target_worksheet_id": null,
+          "target_dashboard_name": null,
+          "target_name_raw": "Model Performance"
+        },
+        "driving_field_ids": [
+          "field_color_mae"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "dashboard",
+        "window_name": "Cluster Profiles",
+        "viewpoint_name": "# Patterns in the Cluster",
+        "field_ids": [
+          "field_cluster"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Name of the Patterns",
+        "viewpoint_name": "Name of the Patterns",
+        "field_ids": [
+          "field_color_description",
+          "field_calculation_3941634857564180481",
+          "field_calculation_94857087571648518",
+          "field_cluster",
+          "field_calculation_3941634857562062848",
+          "field_calculation_3941634857562062848"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "dashboard",
+        "window_name": "Model Performance",
+        "viewpoint_name": "Model Predictions",
+        "field_ids": [
+          "field_calculation_94857087539785733"
+        ],
+        "modes": [
+          "bucket-selection"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "# Patterns in the Cluster",
+        "viewpoint_name": "# Patterns in the Cluster",
+        "field_ids": [
+          "field_cluster"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "# Units Sold",
+        "viewpoint_name": "# Units Sold",
+        "field_ids": [
+          "field_cluster"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "worksheet",
+        "window_name": "Avg Price in the cluster",
+        "viewpoint_name": "Avg Price in the cluster",
+        "field_ids": [
+          "field_cluster"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "worksheet",
+        "window_name": "Model Predictions",
+        "viewpoint_name": "Model Predictions",
+        "field_ids": [
+          "field_calculation_94857087532371968",
+          "field_calculation_94857087532646401",
+          "field_calculation_94857087533387778",
+          "field_calculation_94857087533715459",
+          "field_season_id",
+          "field_color_id",
+          "field_merchant_id",
+          "field_month_id"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      },
+      {
+        "id": "hb_008",
+        "window_class": "worksheet",
+        "window_name": "Sales ",
+        "viewpoint_name": "Sales ",
+        "field_ids": [
+          "field_cluster"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 7
+        }
+      },
+      {
+        "id": "hb_009",
+        "window_class": "worksheet",
+        "window_name": "Sheet 9",
+        "viewpoint_name": "Sheet 9",
+        "field_ids": [
+          "field_cluster"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 8
+        }
+      },
+      {
+        "id": "hb_010",
+        "window_class": "worksheet",
+        "window_name": "Summary",
+        "viewpoint_name": "Summary",
+        "field_ids": [
+          "field_calculation_94857087532646401",
+          "field_season_id",
+          "field_cluster_1",
+          "field_cluster_2",
+          "field_merchant_id"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 9
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter",
+        "highlight"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_patterns_in_the_cluster",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_cluster"
+        ]
+      },
+      {
+        "worksheet_id": "ws_units_sold",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_cluster"
+        ]
+      },
+      {
+        "worksheet_id": "ws_avg_price_in_the_cluster",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_cluster"
+        ]
+      },
+      {
+        "worksheet_id": "ws_mae_values",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_model_predictions",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_94857087532371968",
+          "field_calculation_94857087532646401",
+          "field_calculation_94857087533387778",
+          "field_calculation_94857087533715459",
+          "field_calculation_94857087539785733",
+          "field_color_id",
+          "field_color_mae",
+          "field_merchant_id",
+          "field_month_id",
+          "field_season_id"
+        ]
+      },
+      {
+        "worksheet_id": "ws_name_of_the_patterns",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_3941634857562062848",
+          "field_calculation_3941634857564180481",
+          "field_calculation_94857087571648518",
+          "field_cluster",
+          "field_color_description"
+        ]
+      },
+      {
+        "worksheet_id": "ws_sales",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_sheet_10",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_sheet_9",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_cluster"
+        ]
+      },
+      {
+        "worksheet_id": "ws_summary",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_calculation_94857087532646401",
+          "field_cluster_1",
+          "field_cluster_2",
+          "field_merchant_id",
+          "field_season_id"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 10,
+    "worksheet_action_count": 2,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 10,
+    "field_count": 24
+  }
+}

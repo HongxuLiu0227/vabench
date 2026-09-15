@@ -1,0 +1,528 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": " Histogram to find the Employee Monthly Hours Distribution Level",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[cnt:Average Montly Hours (bin):qk]",
+      "cols_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Average Montly Hours (bin) 1:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "Department Wise Distribution",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+      "cols_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]",
+      "series_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "HR Dashboard",
+              "type": "sheet",
+              "worksheet": "Department Wise Distribution"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "HR Dashboard"
+            },
+            "field_captions": [],
+            "target": "HR Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]"
+        ]
+      },
+      "zone": {
+        "x": "499",
+        "y": "66341",
+        "w": "49500",
+        "h": "32681",
+        "aspect_ratio": 1.5146,
+        "normalized": {
+          "x_ratio": 0.005,
+          "y_ratio": 0.6634,
+          "w_ratio": 0.495,
+          "h_ratio": 0.3268
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Employee Project Count Turnover Distribution",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+      "cols_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Number Project:ok]",
+      "series_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "88408",
+          "y": "33658",
+          "w": "11093",
+          "h": "32683",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.8841,
+            "y_ratio": 0.3366,
+            "w_ratio": 0.1109,
+            "h_ratio": 0.3268
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "HR Dashboard",
+              "type": "sheet",
+              "worksheet": "Employee Project Count Turnover Distribution"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "HR Dashboard"
+            },
+            "field_captions": [],
+            "target": "HR Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+          "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Number Project:ok]"
+        ]
+      },
+      "zone": {
+        "x": "499",
+        "y": "33658",
+        "w": "87909",
+        "h": "32683",
+        "aspect_ratio": 2.6897,
+        "normalized": {
+          "x_ratio": 0.005,
+          "y_ratio": 0.3366,
+          "w_ratio": 0.8791,
+          "h_ratio": 0.3268
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Employee turnover depending on years worked distribution",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+      "cols_field": "([federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok] / [federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok])",
+      "series_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "HR Dashboard",
+              "type": "sheet",
+              "worksheet": "Employee turnover depending on years worked distribution"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "HR Dashboard"
+            },
+            "field_captions": [],
+            "target": "HR Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]"
+        ]
+      },
+      "zone": {
+        "x": "49999",
+        "y": "66341",
+        "w": "49502",
+        "h": "32681",
+        "aspect_ratio": 1.5147,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.6634,
+          "w_ratio": 0.495,
+          "h_ratio": 0.3268
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Histogram to find the Employee Statisfaction level",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[cnt:Satisfaction Level:qk]",
+      "cols_field": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Satisfaction Level (bin) 1:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "499",
+        "y": "978",
+        "w": "49500",
+        "h": "32680",
+        "aspect_ratio": 1.5147,
+        "normalized": {
+          "x_ratio": 0.005,
+          "y_ratio": 0.0098,
+          "w_ratio": 0.495,
+          "h_ratio": 0.3268
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "HR Dashboard",
+        "type": "sheet",
+        "worksheet": "Department Wise Distribution"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "HR Dashboard"
+      },
+      "field_captions": [],
+      "target": "HR Dashboard"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "HR Dashboard",
+        "type": "sheet",
+        "worksheet": "Employee turnover depending on years worked distribution"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "HR Dashboard"
+      },
+      "field_captions": [],
+      "target": "HR Dashboard"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "HR Dashboard",
+        "type": "sheet",
+        "worksheet": "Employee Project Count Turnover Distribution"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "HR Dashboard"
+      },
+      "field_captions": [],
+      "target": "HR Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Department Wise Distribution",
+      "viewpoint_name": "Department Wise Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Employee Project Count Turnover Distribution",
+      "viewpoint_name": "Employee Project Count Turnover Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Number Project:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Employee turnover depending on years worked distribution",
+      "viewpoint_name": "Employee turnover depending on years worked distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "HR Dashboard",
+      "viewpoint_name": "Department Wise Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "HR Dashboard",
+      "viewpoint_name": "Employee Project Count Turnover Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "HR Dashboard",
+      "viewpoint_name": "Employee turnover depending on years worked distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 5
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Employee Project Count Turnover Distribution"
+    ],
+    "legend_anchor_positions": {
+      "Employee Project Count Turnover Distribution": "right"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Department Wise Distribution",
+      "Employee Project Count Turnover Distribution",
+      "Employee turnover depending on years worked distribution"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 6
+  }
+}

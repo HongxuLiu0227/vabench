@@ -1,0 +1,263 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "824",
+    "maxwidth": "1434",
+    "minheight": "724",
+    "minwidth": "1334",
+    "sizing-mode": "range"
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[min:Size:qk]",
+      "cols_field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+      "series_field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [
+        "%all%",
+        ".wma",
+        ".mp3",
+        ".m4b"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Diff File Extentions with Min size",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "33332",
+          "y": "1105",
+          "w": "8068",
+          "h": "37983",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.3333,
+            "y_ratio": 0.0111,
+            "w_ratio": 0.0807,
+            "h_ratio": 0.3798
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[attr:File extension:nk]",
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]"
+        ]
+      },
+      "zone": {
+        "x": "566",
+        "y": "1105",
+        "w": "32766",
+        "h": "97790",
+        "aspect_ratio": 0.3351,
+        "normalized": {
+          "x_ratio": 0.0057,
+          "y_ratio": 0.0111,
+          "w_ratio": 0.3277,
+          "h_ratio": 0.9779
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 2",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[min:#:qk]",
+      "cols_field": "([federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok] / [federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[qr:Date created:ok])",
+      "series_field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Years and Quarters Vs Min of '#'",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "33332",
+          "y": "39088",
+          "w": "8068",
+          "h": "49448",
+          "relative_position": "left",
+          "normalized": {
+            "x_ratio": 0.3333,
+            "y_ratio": 0.3909,
+            "w_ratio": 0.0807,
+            "h_ratio": 0.4945
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]"
+        ]
+      },
+      "zone": {
+        "x": "41400",
+        "y": "1105",
+        "w": "58034",
+        "h": "97790",
+        "aspect_ratio": 0.5935,
+        "normalized": {
+          "x_ratio": 0.414,
+          "y_ratio": 0.0111,
+          "w_ratio": 0.5803,
+          "h_ratio": 0.9779
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored left the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_FCF2FCA0D956459F87B0C8B781627DA8]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "YEAR(Date created)",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [
+        "YEAR(Date created)"
+      ],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[attr:File extension:nk]",
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 1,
+      "line_chart": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Sheet 1",
+      "Sheet 2"
+    ],
+    "legend_anchor_positions": {
+      "Sheet 1": "right",
+      "Sheet 2": "left"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Sheet 1",
+      "Sheet 2"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

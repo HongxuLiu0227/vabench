@@ -1,0 +1,60 @@
+.exemplo1-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Tableau', Arial, sans-serif;
+}
+
+.exemplo1-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ffffff;
+}
+
+.exemplo1-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.exemplo1-table thead {
+  position: sticky;
+  top: 0;
+  background: #2d2d2d;
+  z-index: 10;
+}
+
+.exemplo1-table th {
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 1px solid #444;
+}
+
+.exemplo1-table td {
+  padding: 6px 12px;
+  border-bottom: 1px solid #333;
+}
+
+.exemplo1-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.exemplo1-table tbody tr:hover {
+  background-color: #3a3a3a !important;
+}
+
+.exemplo1-table tbody tr.highlighted {
+  background-color: #4a4a4a;
+  opacity: 1;
+}
+
+.exemplo1-table tbody tr.dimmed {
+  opacity: 0.3;
+}

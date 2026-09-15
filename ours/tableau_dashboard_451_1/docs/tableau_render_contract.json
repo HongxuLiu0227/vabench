@@ -1,0 +1,247 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000",
+    "preset-index": "1",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "Map Sale",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Latitude (generated)]",
+      "cols_field": "[federated.1xne2po0ilkfwt1feprz80g0671q].[Longitude (generated)]",
+      "series_field": "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+      "slices": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[Action (Region)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "2017"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:City:nk]",
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Country/Region:nk]",
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:State:nk]",
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "1500",
+        "y": "1500",
+        "w": "97800",
+        "h": "63375",
+        "aspect_ratio": 1.5432,
+        "normalized": {
+          "x_ratio": 0.015,
+          "y_ratio": 0.015,
+          "w_ratio": 0.9809,
+          "h_ratio": 0.6353
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sale Region",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Region:nk]",
+      "cols_field": "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+      "series_field": "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+      "slices": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Profit:qk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[usr:Calculation_536209883642138625:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Profit:qk]",
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[usr:Calculation_536209883642138625:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Sales:qk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[sum:Profit:qk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[usr:Calculation_536209883642138625:qk]",
+        "2017"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-hover"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sale Region"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+          "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Region:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1600",
+        "y": "65375",
+        "w": "50700",
+        "h": "15875",
+        "aspect_ratio": 3.1937,
+        "normalized": {
+          "x_ratio": 0.016,
+          "y_ratio": 0.6554,
+          "w_ratio": 0.5085,
+          "h_ratio": 0.1591
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-hover"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sale Region"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Map Sale",
+      "viewpoint_name": "Map Sale",
+      "fields": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:City:nk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Country/Region:nk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:State:nk]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sale Region",
+      "viewpoint_name": "Sale Region",
+      "fields": [
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[:Measure Names]",
+        "[federated.1xne2po0ilkfwt1feprz80g0671q].[none:Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Map Sale",
+      "Sale Region"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

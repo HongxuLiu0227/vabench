@@ -1,0 +1,1632 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.4.0 (20204.20.1106.0321)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "chart_type": "Line",
+      "rows": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[sum:suicides_no:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:year:qk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[none:year:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[age]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:gdp_for_year ($):ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:gdp_for_year ($):ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:country:nk]",
+                  "member": "\"Thailand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates Per Year",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        }
+      ],
+      "title_text": "Suicide Rates Per Year",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 2",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[sum:suicides_no:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:generation:nk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[none:generation:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[age]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:gdp_for_year ($):ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:gdp_for_year ($):ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:year:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:country:nk]",
+                  "member": "\"Thailand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates Between Sex and Generations",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        }
+      ],
+      "title_text": "Suicide Rates Between Sex and Generations",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 3",
+      "chart_type": "Square",
+      "rows": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[none:age:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($))]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:gdp_for_year ($):ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (gdp_for_year ($),year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action3]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:gdp_for_year ($):ok]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:year:ok]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:year:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:country:nk]",
+                  "member": "\"Thailand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates By Ages",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        }
+      ],
+      "title_text": "Suicide Rates By Ages",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 4",
+      "chart_type": "Line",
+      "rows": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[sum:suicides_no:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:gdp_for_year ($):qk]",
+        "fields": [
+          "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf]",
+          "[none:gdp_for_year ($):qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]"
+      ],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (age)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[age]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[Action (year)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:year:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:country:nk]",
+                  "member": "\"Thailand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Suicide Rates By GDP",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt Bold"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {}
+        }
+      ],
+      "title_text": "Suicide Rates By GDP",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "20",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "16",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "8246",
+          "w": "99034",
+          "h": "90825",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "text",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "7317",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#f0f3fa"
+          },
+          "text_runs": [
+            {
+              "text": "Suicide Trends In Thailand",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#75a1c7",
+                "fontname": "Prompt SemiBold",
+                "fontsize": "36"
+              }
+            }
+          ],
+          "text": "Suicide Trends In Thailand"
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "8246",
+          "w": "58841",
+          "h": "90825",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "59324",
+          "y": "8246",
+          "w": "40193",
+          "h": "90825",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 1",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "8246",
+          "w": "58841",
+          "h": "45413",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#75a1c7",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Sheet 4",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "53659",
+          "w": "58841",
+          "h": "45412",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "59324",
+          "y": "8246",
+          "w": "40193",
+          "h": "45413",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "59324",
+          "y": "53659",
+          "w": "40193",
+          "h": "45412",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sheet 3",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "59324",
+          "y": "8246",
+          "w": "40193",
+          "h": "38444",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#75a1c7",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 2",
+          "parent_id": "18",
+          "zone_type": "",
+          "x": "59324",
+          "y": "53659",
+          "w": "40193",
+          "h": "45412",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#75a1c7",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Story 1",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "title",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "4878",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard-nav",
+          "x": "483",
+          "y": "5807",
+          "w": "99034",
+          "h": "11731",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard",
+          "x": "483",
+          "y": "17538",
+          "w": "99034",
+          "h": "81533",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "12",
+      "x": "483",
+      "y": "929",
+      "w": "99034",
+      "h": "7317",
+      "text": "Suicide Trends In Thailand",
+      "text_runs": [
+        {
+          "text": "Suicide Trends In Thailand",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#75a1c7",
+            "fontname": "Prompt SemiBold",
+            "fontsize": "36"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "20",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "16",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "8246",
+          "w": "99034",
+          "h": "90825",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "text",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "7317",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4",
+            "background-color": "#f0f3fa"
+          },
+          "text_runs": [
+            {
+              "text": "Suicide Trends In Thailand",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#75a1c7",
+                "fontname": "Prompt SemiBold",
+                "fontsize": "36"
+              }
+            }
+          ],
+          "text": "Suicide Trends In Thailand"
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "483",
+          "y": "8246",
+          "w": "58841",
+          "h": "90825",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "59324",
+          "y": "8246",
+          "w": "40193",
+          "h": "90825",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Sheet 1",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "8246",
+          "w": "58841",
+          "h": "45413",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#75a1c7",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Sheet 4",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "483",
+          "y": "53659",
+          "w": "58841",
+          "h": "45412",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#a0cbe8",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "59324",
+          "y": "8246",
+          "w": "40193",
+          "h": "45413",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "17",
+          "zone_type": "layout-flow",
+          "x": "59324",
+          "y": "53659",
+          "w": "40193",
+          "h": "45412",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Sheet 3",
+          "parent_id": "6",
+          "zone_type": "",
+          "x": "59324",
+          "y": "8246",
+          "w": "40193",
+          "h": "38444",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#75a1c7",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 2",
+          "parent_id": "18",
+          "zone_type": "",
+          "x": "59324",
+          "y": "53659",
+          "w": "40193",
+          "h": "45412",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#75a1c7",
+            "border-style": "solid",
+            "border-width": "1",
+            "margin": "4",
+            "background-color": "#f3faf9"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "Story 1",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "98142",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "title",
+          "x": "483",
+          "y": "929",
+          "w": "99034",
+          "h": "4878",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard-nav",
+          "x": "483",
+          "y": "5807",
+          "w": "99034",
+          "h": "11731",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "1",
+          "zone_type": "flipboard",
+          "x": "483",
+          "y": "17538",
+          "w": "99034",
+          "h": "81533",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 1"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 2"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sheet 4"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:generation:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:sex:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:suicides_no:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:age:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:country:nk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:gdp_for_year ($):qk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[none:year:qk]",
+        "[federated.1xdgsy21nx11aw18vwq0q1q7a7kf].[sum:gdp_per_capita ($):qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 2,
+    "dashboard_text_zone_count": 1,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 4
+  }
+}

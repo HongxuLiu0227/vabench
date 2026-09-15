@@ -1,0 +1,397 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "List of EMR Sites / DWH Uploads (3)",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayFacilityName:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869476466693:nk] / ([federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869483032587:nk] / [federated.0se4v9q15j8hfi17f25m50pn59wd].[none:SiteabstractionDate (copy):nk])))))",
+      "cols_field": "",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869478662153:nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayFacilityName:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869216702466:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869478662153:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[Action (Upload Status - Calc)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "CT & PKVs Uploaded",
+        "Only CT Uploaded; No PKVs",
+        "Not Uploaded this month",
+        "Never Uploaded to DWH"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "CT & PKVs Uploaded",
+          "Only CT Uploaded; No PKVs",
+          "Not Uploaded this month",
+          "Never Uploaded to DWH"
+        ]
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "EMR Sites / DWH CT & PKV Uploads Last 3 Months",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#911a1c",
+            "fontname": "Tableau Medium",
+            "fontsize": "18"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Recency Date: Is the latest visit date in the EMR DB that shows the last interaction in the EMR",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "11"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "34595",
+        "y": "14950",
+        "w": "65141",
+        "h": "85050",
+        "aspect_ratio": 0.7659,
+        "normalized": {
+          "x_ratio": 0.3459,
+          "y_ratio": 0.1495,
+          "w_ratio": 0.6514,
+          "h_ratio": 0.8505
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "Summary Stats",
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869478662153:nk]",
+      "cols_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Fixed Site (copy):qk]",
+      "series_field": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:Calculation_1593429869478662153:nk]",
+      "slices": [
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayMechanism:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayFacilityName:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Summary Statistics",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Click on bars to filter",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#911a1c",
+            "fontname": "Tableau Regular",
+            "fontsize": "10",
+            "italic": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+              "type": "sheet",
+              "worksheet": "Summary Stats"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)"
+            },
+            "field_captions": [],
+            "target": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "615",
+        "y": "14787",
+        "w": "33277",
+        "h": "54147",
+        "aspect_ratio": 0.6146,
+        "normalized": {
+          "x_ratio": 0.0062,
+          "y_ratio": 0.1479,
+          "w_ratio": 0.3328,
+          "h_ratio": 0.5415
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+      "id": "19",
+      "x": "352",
+      "y": "8970",
+      "w": "99648",
+      "h": "5814",
+      "text": "EMR Facilities Upload Status - <[Parameters].[Parameter 4]>",
+      "text_runs": [
+        {
+          "text": "EMR Facilities Upload Status - <",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#911a1c",
+            "fontname": "Tableau Medium",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": "[Parameters].[Parameter 4]",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#911a1c",
+            "fontname": "Tableau Medium",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": ">",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#911a1c",
+            "fontname": "Tableau Medium",
+            "fontsize": "14"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+      "id": "18",
+      "x": "527",
+      "y": "69770",
+      "w": "33629",
+      "h": "30061",
+      "text": "Definitions\nEMR Recency Date is an indicator of when the EMR was last updated. If the date is 4 months ago, it either means that that’s the last time a facility had a patient, or the last time the EMR was updated.\nLatest Upload Date: Is the last time the EMR was uploaded to the DWH\nLatest PKV Date: Is the last time the PKVs were uploaded to the DWH",
+      "text_runs": [
+        {
+          "text": "Definitions",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10",
+            "underline": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "EMR Recency Date",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": " ",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "11"
+          }
+        },
+        {
+          "text": "is an indicator of when the EMR was last updated. If the date is 4 months ago, it either means that that’s the last time a facility had a patient, or the last time the EMR was updated.",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "Latest Upload Date",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ": Is the last time the EMR was uploaded to the DWH",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "Latest PKV Date",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": ": Is the last time the PKVs were uploaded to the DWH",
+          "style": {
+            "fontcolor": "#000000",
+            "fontname": "Tableau Regular",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action2]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)",
+        "type": "sheet",
+        "worksheet": "Summary Stats"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)"
+      },
+      "field_captions": [],
+      "target": "Reporting Rates_Optimization:Dashboard: Facility Upload Status (CT + PKV)"
+    }
+  ],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 2,
+    "intent_counts": {
+      "custom_tableau_view": 1,
+      "horizontal_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Summary Stats"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 0
+  }
+}

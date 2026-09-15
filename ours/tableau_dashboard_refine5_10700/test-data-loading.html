@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Data Loading</title>
+</head>
+<body>
+    <h1>Testing Data Loading</h1>
+    <div id="output"></div>
+
+    <script type="module">
+        import { csv } from 'https://cdn.skypack.dev/d3-dsv';
+
+        async function testData() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>Loading data...</p>';
+
+            try {
+                const response = await fetch('/data/Diabetes_Cleaned.csv');
+                if (!response.ok) {
+                    throw new Error(`Failed to load: ${response.statusText}`);
+                }
+
+                let csvText = await response.text();
+
+                // Remove BOM
+                if (csvText.charCodeAt(0) === 0xFEFF) {
+                    csvText = csvText.slice(1);
+                    output.innerHTML += '<p>✅ BOM removed</p>';
+                }
+
+                // Pre-process triple quotes
+                csvText = csvText.replace(/"""/g, '"');
+                output.innerHTML += '<p>✅ Triple quotes pre-processed</p>';
+
+                // Parse CSV
+                const rawData = csv(csvText);
+                output.innerHTML += `<p>✅ Parsed ${rawData.length} rows</p>`;
+
+                // Check headers
+                const headers = Object.keys(rawData[0]);
+                output.innerHTML += `<p>✅ Found ${headers.length} columns</p>`;
+
+                // Check required fields
+                const requiredFields = ['diag_1', 'diag_2', 'diag_3', 'readmitted'];
+                const missingFields = requiredFields.filter(f => !headers.includes(f));
+
+                if (missingFields.length > 0) {
+                    output.innerHTML += `<p>❌ Missing fields: ${missingFields.join(', ')}</p>`;
+                } else {
+                    output.innerHTML += `<p>✅ All required fields present: ${requiredFields.join(', ')}</p>`;
+                }
+
+                // Show sample
+                output.innerHTML += '<h2>Sample Data:</h2>';
+                output.innerHTML += '<pre>' + JSON.stringify(rawData[0], null, 2).substring(0, 500) + '...</pre>';
+
+            } catch (error) {
+                output.innerHTML += `<p>❌ Error: ${error.message}</p>`;
+                console.error(error);
+            }
+        }
+
+        testData();
+    </script>
+</body>
+</html>

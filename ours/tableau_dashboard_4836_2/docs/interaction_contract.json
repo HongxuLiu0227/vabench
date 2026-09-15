@@ -1,0 +1,138 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_4836_2/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:35.769829Z"
+  },
+  "dashboard": {
+    "name": "Reporting Rates_Optimization:Dashboard:By County",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_county_distributon",
+        "name": "County: Distributon",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "County: Distributon"
+        }
+      },
+      {
+        "id": "ws_county_pkv_recency",
+        "name": "County: PKV Recency",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "County: PKV Recency"
+        }
+      },
+      {
+        "id": "ws_county_overall_rate",
+        "name": "County:Overall rate",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "County:Overall rate"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_displaycounty",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayCounty:nk]",
+        "normalized": "DisplayCounty",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_714102023265128449",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[sum:Calculation_714102023265128449:qk]",
+        "normalized": "Calculation_714102023265128449",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_displayagency",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[none:DisplayAgency:nk]",
+        "normalized": "DisplayAgency",
+        "role": "dimension"
+      },
+      {
+        "id": "field_county_percent_uploads_proportions_copy_3",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Percent Uploads Proportions (copy 3):qk]",
+        "normalized": "County Percent Uploads Proportions (copy 3)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_county_color_copy_2",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:County Color (copy 2):nk]",
+        "normalized": "County Color (copy 2)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_calculation_714102023265861635",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_714102023265861635:qk]",
+        "normalized": "Calculation_714102023265861635",
+        "role": "derived_dimension"
+      },
+      {
+        "id": "field_calculation_557601975853465601",
+        "raw": "[federated.0se4v9q15j8hfi17f25m50pn59wd].[usr:Calculation_557601975853465601:nk]",
+        "normalized": "Calculation_557601975853465601",
+        "role": "derived_dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [],
+    "dashboard_actions": [],
+    "highlight_bindings": []
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [],
+      "default_trigger_event": "unknown",
+      "default_auto_clear": null
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_county_distributon",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_county_pkv_recency",
+        "supports": [],
+        "focus_field_ids": []
+      },
+      {
+        "worksheet_id": "ws_county_overall_rate",
+        "supports": [],
+        "focus_field_ids": []
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0,
+    "field_count": 7
+  }
+}

@@ -1,0 +1,794 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.1.2 (20201.20.0326.1623)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": " Histogram to find the Employee Monthly Hours Distribution Level",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[cnt:Average Montly Hours (bin):qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[cnt:Average Montly Hours (bin):qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Average Montly Hours (bin) 1:qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[none:Average Montly Hours (bin) 1:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Department Wise Distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[none:Sales:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Employee Project Count Turnover Distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Number Project:ok]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[none:Number Project:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Employee turnover depending on years worked distribution",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[sum:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok] / [federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok])",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[none:Left:ok]",
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[none:Time Spend Company (group):ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Histogram to find the Employee Statisfaction level",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[cnt:Satisfaction Level:qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[cnt:Satisfaction Level:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Satisfaction Level (bin) 1:qk]",
+        "fields": [
+          "[federated.076m9lh1sw1llm1h35vp214914rz]",
+          "[none:Satisfaction Level (bin) 1:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.076m9lh1sw1llm1h35vp214914rz].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "HR Dashboard",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "499",
+          "y": "978",
+          "w": "99002",
+          "h": "98044",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "9",
+          "zone_type": "layout-basic",
+          "x": "499",
+          "y": "978",
+          "w": "99002",
+          "h": "98044",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Histogram to find the Employee Statisfaction level",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "499",
+          "y": "978",
+          "w": "49500",
+          "h": "32680",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": " Histogram to find the Employee Monthly Hours Distribution Level",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "49999",
+          "y": "978",
+          "w": "49502",
+          "h": "32680",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Department Wise Distribution",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "499",
+          "y": "66341",
+          "w": "49500",
+          "h": "32681",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Employee turnover depending on years worked distribution",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "49999",
+          "y": "66341",
+          "w": "49502",
+          "h": "32681",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Employee Project Count Turnover Distribution",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "499",
+          "y": "33658",
+          "w": "87909",
+          "h": "32683",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Employee Project Count Turnover Distribution",
+          "parent_id": "7",
+          "zone_type": "color",
+          "x": "88408",
+          "y": "33658",
+          "w": "11093",
+          "h": "32683",
+          "param": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "HR Dashboard",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "499",
+          "y": "978",
+          "w": "99002",
+          "h": "98044",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "9",
+          "zone_type": "layout-basic",
+          "x": "499",
+          "y": "978",
+          "w": "99002",
+          "h": "98044",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Histogram to find the Employee Statisfaction level",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "499",
+          "y": "978",
+          "w": "49500",
+          "h": "32680",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": " Histogram to find the Employee Monthly Hours Distribution Level",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "49999",
+          "y": "978",
+          "w": "49502",
+          "h": "32680",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Department Wise Distribution",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "499",
+          "y": "66341",
+          "w": "49500",
+          "h": "32681",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "Employee turnover depending on years worked distribution",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "49999",
+          "y": "66341",
+          "w": "49502",
+          "h": "32681",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "Employee Project Count Turnover Distribution",
+          "parent_id": "7",
+          "zone_type": "",
+          "x": "499",
+          "y": "33658",
+          "w": "87909",
+          "h": "32683",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "Employee Project Count Turnover Distribution",
+          "parent_id": "7",
+          "zone_type": "color",
+          "x": "88408",
+          "y": "33658",
+          "w": "11093",
+          "h": "32683",
+          "param": "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "HR Dashboard",
+        "type": "sheet",
+        "worksheet": "Department Wise Distribution"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "HR Dashboard"
+      },
+      "field_captions": [],
+      "target": "HR Dashboard"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "HR Dashboard",
+        "type": "sheet",
+        "worksheet": "Employee turnover depending on years worked distribution"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "HR Dashboard"
+      },
+      "field_captions": [],
+      "target": "HR Dashboard"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "HR Dashboard",
+        "type": "sheet",
+        "worksheet": "Employee Project Count Turnover Distribution"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "HR Dashboard"
+      },
+      "field_captions": [],
+      "target": "HR Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Department Wise Distribution",
+      "viewpoint_name": "Department Wise Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Employee Project Count Turnover Distribution",
+      "viewpoint_name": "Employee Project Count Turnover Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]",
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Number Project:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Employee turnover depending on years worked distribution",
+      "viewpoint_name": "Employee turnover depending on years worked distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "HR Dashboard",
+      "viewpoint_name": "Department Wise Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Sales:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "HR Dashboard",
+      "viewpoint_name": "Employee Project Count Turnover Distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Left:ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "HR Dashboard",
+      "viewpoint_name": "Employee turnover depending on years worked distribution",
+      "fields": [
+        "[federated.076m9lh1sw1llm1h35vp214914rz].[none:Time Spend Company (group):ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 5,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 6
+  }
+}

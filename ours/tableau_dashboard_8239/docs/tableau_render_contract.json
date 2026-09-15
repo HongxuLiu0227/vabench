@@ -1,0 +1,1283 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "720",
+    "maxwidth": "1280",
+    "minheight": "720",
+    "minwidth": "1280",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "Month",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[mn:Order Date:ok]",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Month\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2_F42BF7BA39D14B478D84D5225E6B574D]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Month"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Calculation_6943002545466433537:nk]"
+        ]
+      },
+      "zone": {
+        "x": "5781",
+        "y": "3472",
+        "w": "85469",
+        "h": "3750",
+        "aspect_ratio": 22.7917,
+        "normalized": {
+          "x_ratio": 0.0578,
+          "y_ratio": 0.0347,
+          "w_ratio": 0.8547,
+          "h_ratio": 0.0375
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Orders by Region & Category",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[cnt:Order ID:qk]",
+      "cols_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Region:nk]",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Orders by Region & Category",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action7_464E3E1F155341D59B7E012848E01761]",
+            "caption": "Filter 7 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Orders by Region & Category"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]",
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Order ID:nk]"
+        ]
+      },
+      "zone": {
+        "x": "57734",
+        "y": "67917",
+        "w": "32031",
+        "h": "31806",
+        "aspect_ratio": 1.0071,
+        "normalized": {
+          "x_ratio": 0.5773,
+          "y_ratio": 0.6792,
+          "w_ratio": 0.3203,
+          "h_ratio": 0.3181
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Profit % by Category",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Profit % by Category",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "68438",
+          "y": "54167",
+          "w": "9297",
+          "h": "10833",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.6844,
+            "y_ratio": 0.5417,
+            "w_ratio": 0.093,
+            "h_ratio": 0.1083
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action5_86FEFDEEC9AB45E7A3EA25A5B0051500]",
+            "caption": "Filter 5 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Profit % by Category"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "54375",
+        "y": "35972",
+        "w": "18281",
+        "h": "34028",
+        "aspect_ratio": 0.5372,
+        "normalized": {
+          "x_ratio": 0.5437,
+          "y_ratio": 0.3597,
+          "w_ratio": 0.1828,
+          "h_ratio": 0.3403
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Profit by Markets",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:State:nk]",
+      "cols_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[sum:Profit:qk]",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Profit by Markets",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action4_C134AB4B88114150982898730FE21459]",
+            "caption": "Filter 4 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Profit by Markets"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "156",
+        "y": "30000",
+        "w": "25156",
+        "h": "69722",
+        "aspect_ratio": 0.3608,
+        "normalized": {
+          "x_ratio": 0.0016,
+          "y_ratio": 0.3,
+          "w_ratio": 0.2516,
+          "h_ratio": 0.6972
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Profit by Year",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[sum:Profit:qk]",
+      "cols_field": "([federated.0r0vorq1eq42zb19jd94c0imcrwu].[yr:Order Date:ok] / [federated.0r0vorq1eq42zb19jd94c0imcrwu].[mn:Order Date:ok])",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Profit by Year",
+          "style": {
+            "bold": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action8_F6285CDB1EF04E52A1CC3125EABAA49B]",
+            "caption": "Filter 8 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Profit by Year"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "50547",
+        "y": "6944",
+        "w": "45391",
+        "h": "27500",
+        "aspect_ratio": 1.6506,
+        "normalized": {
+          "x_ratio": 0.5055,
+          "y_ratio": 0.0694,
+          "w_ratio": 0.4539,
+          "h_ratio": 0.275
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales Quantity",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Sales Quantity",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "29453",
+        "y": "19028",
+        "w": "16250",
+        "h": "11250",
+        "aspect_ratio": 1.4444,
+        "normalized": {
+          "x_ratio": 0.2945,
+          "y_ratio": 0.1903,
+          "w_ratio": 0.1625,
+          "h_ratio": 0.1125
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "Sales Quantity by Markets",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:State:nk]",
+      "cols_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[sum:Quantity:qk]",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Sales Quantity by Markets",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3_5BCEAAA1BE954DE3B01EE5C3AB92D4E3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Sales Quantity by Markets"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "27266",
+        "y": "30139",
+        "w": "25078",
+        "h": "69722",
+        "aspect_ratio": 0.3597,
+        "normalized": {
+          "x_ratio": 0.2727,
+          "y_ratio": 0.3014,
+          "w_ratio": 0.2508,
+          "h_ratio": 0.6972
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Top 5 items by Sales",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Sub-Category:nk]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Sub-Category:nk]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Top 5 items by Sales",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action6_3CD3C655A4004B46A64A62843E834A3C]",
+            "caption": "Filter 6 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Top 5 items by Sales"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "77109",
+        "y": "36250",
+        "w": "18594",
+        "h": "33750",
+        "aspect_ratio": 0.5509,
+        "normalized": {
+          "x_ratio": 0.7711,
+          "y_ratio": 0.3625,
+          "w_ratio": 0.1859,
+          "h_ratio": 0.3375
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Total Profit",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,YEAR(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Total Profit",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "6875",
+        "y": "19306",
+        "w": "13984",
+        "h": "11667",
+        "aspect_ratio": 1.1986,
+        "normalized": {
+          "x_ratio": 0.0688,
+          "y_ratio": 0.1931,
+          "w_ratio": 0.1398,
+          "h_ratio": 0.1167
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "Year",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[yr:Order Date:ok]",
+      "series_field": "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+      "slices": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Blank,MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (State)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category,Region)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Category)]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (YEAR(Order Date),MONTH(Order Date))]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[Action (Sub-Category)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Year",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1_27BFFAA8C9AE479B8B2A2B4DBE96B5FE]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Superstore Sales Insight Dashboard",
+              "type": "sheet",
+              "worksheet": "Year"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Superstore Sales Insight Dashboard"
+            },
+            "field_captions": [],
+            "target": "Superstore Sales Insight Dashboard"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Calculation_6943002545466433537:nk]"
+        ]
+      },
+      "zone": {
+        "x": "40234",
+        "y": "-417",
+        "w": "17891",
+        "h": "3889",
+        "aspect_ratio": 4.6004,
+        "normalized": {
+          "x_ratio": 0.4023,
+          "y_ratio": -0.0042,
+          "w_ratio": 0.1789,
+          "h_ratio": 0.0389
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Superstore Sales Insight Dashboard",
+      "id": "19",
+      "x": "781",
+      "y": "8056",
+      "w": "26094",
+      "h": "10278",
+      "text": "Sales Insights Dashboard",
+      "text_runs": [
+        {
+          "text": "Sales ",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#8138f7",
+            "fontsize": "20"
+          }
+        },
+        {
+          "text": "Insights Dashboard",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontsize": "20"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Superstore Sales Insight Dashboard",
+      "id": "20",
+      "x": "25313",
+      "y": "9028",
+      "w": "24922",
+      "h": "8889",
+      "text": "Data Viz. for Tableau Dataset:\n\nSample - Superstore",
+      "text_runs": [
+        {
+          "text": "Data Viz. for Tableau Dataset:",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Sample - Superstore",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#8138f7",
+            "fontsize": "12"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Superstore Sales Insight Dashboard",
+      "id": "21",
+      "x": "85703",
+      "y": "7500",
+      "w": "9141",
+      "h": "4167",
+      "text": "© Sagar Tanna",
+      "text_runs": [
+        {
+          "text": "© Sagar Tanna",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#8138f7",
+            "fontsize": "12"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_27BFFAA8C9AE479B8B2A2B4DBE96B5FE]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Year"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action2_F42BF7BA39D14B478D84D5225E6B574D]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Month"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action3_5BCEAAA1BE954DE3B01EE5C3AB92D4E3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Sales Quantity by Markets"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action4_C134AB4B88114150982898730FE21459]",
+      "caption": "Filter 4 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Profit by Markets"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action5_86FEFDEEC9AB45E7A3EA25A5B0051500]",
+      "caption": "Filter 5 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Profit % by Category"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action6_3CD3C655A4004B46A64A62843E834A3C]",
+      "caption": "Filter 6 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Top 5 items by Sales"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action7_464E3E1F155341D59B7E012848E01761]",
+      "caption": "Filter 7 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Orders by Region & Category"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    },
+    {
+      "name": "[Action8_F6285CDB1EF04E52A1CC3125EABAA49B]",
+      "caption": "Filter 8 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Superstore Sales Insight Dashboard",
+        "type": "sheet",
+        "worksheet": "Profit by Year"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Superstore Sales Insight Dashboard"
+      },
+      "field_captions": [],
+      "target": "Superstore Sales Insight Dashboard"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales Quantity by Markets",
+      "viewpoint_name": "Sales Quantity by Markets",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top 5 items by Sales",
+      "viewpoint_name": "Top 5 items by Sales",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Orders by Region & Category",
+      "viewpoint_name": "Orders by Region & Category",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]",
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Order ID:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Profit % by Category",
+      "viewpoint_name": "Profit % by Category",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Year",
+      "viewpoint_name": "Year",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Calculation_6943002545466433537:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Month",
+      "viewpoint_name": "Month",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Calculation_6943002545466433537:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Superstore Sales Insight Dashboard",
+      "viewpoint_name": "Profit % by Category",
+      "fields": [
+        "[federated.0r0vorq1eq42zb19jd94c0imcrwu].[none:Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 10,
+    "dashboard_text_zone_count": 3,
+    "intent_counts": {
+      "custom_tableau_view": 6,
+      "vertical_ranked_bar": 2,
+      "horizontal_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Profit % by Category"
+    ],
+    "legend_anchor_positions": {
+      "Profit % by Category": "overlay"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Month",
+      "Orders by Region & Category",
+      "Profit % by Category",
+      "Profit by Markets",
+      "Profit by Year",
+      "Sales Quantity by Markets",
+      "Top 5 items by Sales",
+      "Year"
+    ],
+    "dashboard_action_count": 8,
+    "highlight_binding_count": 7
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "P121__scatterplot",
+      "dashboard_name": "Synthetic Dashboard 495",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[ds_p9517_sample_superstore].[sum:Profit:qk]",
+      "cols_field": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+      "series_field": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Scatterplot",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "49200",
+        "h": "61748",
+        "aspect_ratio": 0.7968,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.492,
+          "h_ratio": 0.6175
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "P9517__sales_by_sub_category",
+      "dashboard_name": "Synthetic Dashboard 495",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([ds_p9517_sample_superstore].[none:Sub-Category:nk] / [ds_p9517_sample_superstore].[none:Calculation_317222333014716416:nk])",
+      "cols_field": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Sales by Sub Category",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "50000",
+        "y": "1000",
+        "w": "49200",
+        "h": "61750",
+        "aspect_ratio": 0.7968,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.01,
+          "w_ratio": 0.492,
+          "h_ratio": 0.6175
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "P121__bar",
+      "dashboard_name": "Synthetic Dashboard 495",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([ds_p9517_sample_superstore].[none:Category:nk] / [ds_p9517_sample_superstore].[none:Sub-Category:nk])",
+      "cols_field": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+      "series_field": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Bar",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "800",
+        "y": "62750",
+        "w": "98400",
+        "h": "36250",
+        "aspect_ratio": 2.7145,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.6275,
+          "w_ratio": 0.984,
+          "h_ratio": 0.3625
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 1,
+      "horizontal_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [],
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

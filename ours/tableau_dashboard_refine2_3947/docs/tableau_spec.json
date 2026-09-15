@@ -1,0 +1,868 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "include-phone-layouts": "false",
+      "original-version": "18.1",
+      "source-build": "2019.2.0 (20192.19.0515.1630)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:vote_direction:qk]",
+        "fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[cnt:vote_direction:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[none:justiceName:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:vote_direction:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:issueArea:ok]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"CThomas\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"EKagan\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"JGRoberts\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"NMGorsuch\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"RBGinsburg\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SAAlito\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SGBreyer\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SSotomayor\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "SCOTUS Votes 1991 - 2017",
+          "style": {}
+        }
+      ],
+      "title_text": "SCOTUS Votes 1991 - 2017",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 3",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]",
+        "fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[sum:precedentAlteration:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+        "fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[none:issueArea:ok]"
+        ]
+      },
+      "slices": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[sum:precedentAlteration:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "cell"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "from": "1",
+                      "function": "range",
+                      "level": "[none:issueArea:ok]",
+                      "to": "10"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:issueArea:ok]",
+                      "member": "12"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"CThomas\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"EKagan\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"JGRoberts\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"NMGorsuch\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"RBGinsburg\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SAAlito\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SGBreyer\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SSotomayor\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Precedent Changing Votes (1949 - 2018)",
+          "style": {}
+        }
+      ],
+      "title_text": "Precedent Changing Votes (1949 - 2018)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 4",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:Number of Records:qk]",
+        "fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[cnt:Number of Records:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk] * [federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk])",
+        "fields": [
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[none:justiceName:nk]",
+          "[federated.1xqbuif0zy7qie17waup21fe5cdu]",
+          "[none:term:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "union",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"CThomas\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"EKagan\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"JGRoberts\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"NMGorsuch\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"RBGinsburg\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SAAlito\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SGBreyer\""
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:justiceName:nk]",
+                      "member": "\"SSotomayor\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "0",
+                  "function": "range",
+                  "level": "[none:vote_direction:ok]",
+                  "to": "2",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Career Votes to Date",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Career Votes to Date",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[cnt:Number of Records:qk]",
+            "title": "Votes"
+          }
+        ],
+        "cols": [
+          {
+            "field": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]",
+            "title": "Year"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "1",
+          "name": "Sheet 1",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "7797",
+          "y": "783",
+          "w": "52924",
+          "h": "31687",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sheet 3",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "7206",
+          "y": "35120",
+          "w": "56054",
+          "h": "32470",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 3",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "49025",
+          "y": "33133",
+          "w": "14235",
+          "h": "5241",
+          "param": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Sheet 1",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "591",
+          "y": "641",
+          "w": "10396",
+          "h": "11987",
+          "param": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "1",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Sheet 1",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "48848",
+          "y": "1474",
+          "w": "9451",
+          "h": "2821",
+          "param": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sheet 4",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "236",
+          "y": "68072",
+          "w": "65918",
+          "h": "30602",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "1660",
+        "maxwidth": "1920",
+        "minheight": "1660",
+        "minwidth": "1520",
+        "sizing-mode": "range"
+      },
+      "zones": [
+        {
+          "id": "1",
+          "name": "Sheet 1",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "7797",
+          "y": "783",
+          "w": "52924",
+          "h": "31687",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sheet 3",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "7206",
+          "y": "35120",
+          "w": "56054",
+          "h": "32470",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Sheet 3",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "49025",
+          "y": "33133",
+          "w": "14235",
+          "h": "5241",
+          "param": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Sheet 1",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "591",
+          "y": "641",
+          "w": "10396",
+          "h": "11987",
+          "param": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "1",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Sheet 1",
+          "parent_id": null,
+          "zone_type": "filter",
+          "x": "48848",
+          "y": "1474",
+          "w": "9451",
+          "h": "2821",
+          "param": "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "Sheet 4",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "236",
+          "y": "68072",
+          "w": "65918",
+          "h": "30602",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {},
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:caseId:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:qk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:issueArea:ok]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 4",
+      "viewpoint_name": "Sheet 4",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:justiceName:nk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:term:qk]",
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1xqbuif0zy7qie17waup21fe5cdu].[none:vote_direction:ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

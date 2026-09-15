@@ -1,0 +1,131 @@
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.dashboard-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.chart-zone {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 400px;
+  position: relative;
+}
+
+.chart-zone-top {
+  flex: 1;
+}
+
+.chart-zone-bottom {
+  flex: 1;
+}
+
+.dashboard-info {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border-left: 4px solid #ffaa00;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.dashboard-info strong {
+  color: #333;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #ffaa00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p,
+.error-message {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .chart-zone {
+    padding: 15px;
+    min-height: 350px;
+  }
+
+  .dashboard-info {
+    font-size: 12px;
+  }
+}

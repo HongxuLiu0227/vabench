@@ -1,0 +1,622 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": " Number of participants",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+      "cols_field": "([federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk] / [federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk])",
+      "series_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]",
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [
+        "start",
+        "step_1",
+        "step_2",
+        "step_3",
+        "confirm",
+        "%all%"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Participants at Each Stage: Control vs Test",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "balance vs age",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:bal:qk]",
+      "cols_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+      "series_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "F",
+        "M",
+        "start"
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants per Gender: Control vs Test",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "balance vs age (2)",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+      "cols_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[:Measure Names]",
+      "series_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[:Measure Names]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417541140484:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:bal:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417540866050:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[avg:Calculation_503488417541140484:qk]",
+        "Test",
+        "Age 17-30",
+        "F",
+        "M",
+        "start"
+      ],
+      "title_runs": [
+        {
+          "text": "Group 1 Age: Balance Filter Above Average",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Calculation_503488417541140484:qk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "50000",
+        "w": "49200",
+        "h": "49000",
+        "aspect_ratio": 1.0041,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.5,
+          "w_ratio": 0.492,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "gender",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+      "cols_field": "([federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk] / [federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk])",
+      "series_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "F",
+        "M",
+        "start"
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants per Gender: Control vs Test",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "gender %",
+      "chart_intent": "vertical_stacked_percentage_bar",
+      "rows_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[pcto:cnt:client_id:qk:11]",
+      "cols_field": "([federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk] / [federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk])",
+      "series_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Action (Variation)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": true,
+        "aggregate_by_series_field": true,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "F",
+        "M",
+        "start"
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants per Gender: Control vs Test",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "50000",
+        "w": "49200",
+        "h": "49000",
+        "aspect_ratio": 1.0041,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.5,
+          "w_ratio": 0.492,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render one vertical stacked bar per category.",
+        "Normalize each category bar to 100%.",
+        "Aggregate by series_field so each category has one segment per series category.",
+        "Do not reinterpret stacked-percentage bars as heatmap/table matrices or grouped bars.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "total number of participants",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[cnt:client_id:qk]",
+      "cols_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+      "series_field": "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]",
+      "slices": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "start"
+      ],
+      "title_runs": [
+        {
+          "text": "Total Number of Participants: Control vs Test",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "total number of participants"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "exclude": "balance vs age (2)",
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+          "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+        ]
+      },
+      "zone": {
+        "x": "800",
+        "y": "1000",
+        "w": "49200",
+        "h": "49000",
+        "aspect_ratio": 1.0041,
+        "normalized": {
+          "x_ratio": 0.008,
+          "y_ratio": 0.01,
+          "w_ratio": 0.492,
+          "h_ratio": 0.49
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "total number of participants"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "balance vs age (2)",
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": " Number of participants",
+      "viewpoint_name": " Number of participants",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "total number of participants",
+      "viewpoint_name": "total number of participants",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "gender",
+      "viewpoint_name": "gender",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "gender %",
+      "viewpoint_name": "gender %",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "balance vs age",
+      "viewpoint_name": "balance vs age",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "balance vs age (2)",
+      "viewpoint_name": "balance vs age (2)",
+      "fields": [
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[Clnt Age (group)]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[ctd:client_id:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Calculation_503488417541140484:qk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:Variation:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:client_id:ok]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:gendr:nk]",
+        "[federated.0rs4ltd193x5a718ruzc40qfpfhz].[none:process_step:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 6,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 3,
+      "custom_tableau_view": 2,
+      "vertical_stacked_percentage_bar": 1
+    },
+    "stacked_percentage_worksheets": [
+      "gender %"
+    ],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "balance vs age",
+      "balance vs age (2)",
+      "gender",
+      "gender %",
+      "total number of participants"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 6
+  }
+}

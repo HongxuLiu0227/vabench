@@ -1,0 +1,2028 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Backup",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Online Backup",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "25000",
+        "y": "54875",
+        "w": "13800",
+        "h": "14750",
+        "aspect_ratio": 0.9356,
+        "normalized": {
+          "x_ratio": 0.25,
+          "y_ratio": 0.5487,
+          "w_ratio": 0.138,
+          "h_ratio": 0.1475
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Churn rate",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "([federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344581492999:qk] + [federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344581746953:qk])",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Citizen",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[Multiple Values]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+      "slices": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344589979918:qk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[sum:SeniorCitizen:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]"
+        ]
+      },
+      "zone": {
+        "x": "49200",
+        "y": "11875",
+        "w": "20500",
+        "h": "14375",
+        "aspect_ratio": 1.4261,
+        "normalized": {
+          "x_ratio": 0.492,
+          "y_ratio": 0.1187,
+          "w_ratio": 0.205,
+          "h_ratio": 0.1437
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Contract",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "25200",
+        "y": "27000",
+        "w": "22500",
+        "h": "18750",
+        "aspect_ratio": 1.2,
+        "normalized": {
+          "x_ratio": 0.252,
+          "y_ratio": 0.27,
+          "w_ratio": 0.225,
+          "h_ratio": 0.1875
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Dependents",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [
+        "Yes",
+        "No"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "73200",
+        "y": "11875",
+        "w": "20500",
+        "h": "14375",
+        "aspect_ratio": 1.4261,
+        "normalized": {
+          "x_ratio": 0.732,
+          "y_ratio": 0.1187,
+          "w_ratio": 0.205,
+          "h_ratio": 0.1437
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Device Protection",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "<Sheet Name>",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1300",
+        "y": "52500",
+        "w": "22300",
+        "h": "17000",
+        "aspect_ratio": 1.3118,
+        "normalized": {
+          "x_ratio": 0.013,
+          "y_ratio": 0.525,
+          "w_ratio": 0.223,
+          "h_ratio": 0.17
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Gender",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1_8A6B2C65DAAF4B398CE4F5D983319641]",
+            "caption": "Highlight 1 (generated)",
+            "kind": "highlight_brush",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "type": "sheet",
+              "worksheet": "Gender"
+            },
+            "command": "tsc:brush",
+            "params": {
+              "field-captions": "Gender",
+              "target": "Gender"
+            },
+            "field_captions": [
+              "Gender"
+            ],
+            "target": "Gender"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1200",
+        "y": "11875",
+        "w": "20500",
+        "h": "14375",
+        "aspect_ratio": 1.4261,
+        "normalized": {
+          "x_ratio": 0.012,
+          "y_ratio": 0.1187,
+          "w_ratio": 0.205,
+          "h_ratio": 0.1437
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Movies",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Streaming Movies",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "53000",
+        "y": "54875",
+        "w": "15700",
+        "h": "14125",
+        "aspect_ratio": 1.1115,
+        "normalized": {
+          "x_ratio": 0.53,
+          "y_ratio": 0.5487,
+          "w_ratio": 0.157,
+          "h_ratio": 0.1412
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Partner",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [
+        "Yes",
+        "No"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "25200",
+        "y": "11875",
+        "w": "20500",
+        "h": "14375",
+        "aspect_ratio": 1.4261,
+        "normalized": {
+          "x_ratio": 0.252,
+          "y_ratio": 0.1187,
+          "w_ratio": 0.205,
+          "h_ratio": 0.1437
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Payment Method",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "71900",
+        "y": "27000",
+        "w": "26400",
+        "h": "18750",
+        "aspect_ratio": 1.408,
+        "normalized": {
+          "x_ratio": 0.719,
+          "y_ratio": 0.27,
+          "w_ratio": 0.264,
+          "h_ratio": 0.1875
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Phone service",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "([federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344621695264:qk] + [federated.19jtpq90ymq6fq14rs9nt1hebysn].[usr:Calculation_1852668344621789474:qk])",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Security",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Online Security",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "38600",
+        "y": "54875",
+        "w": "13500",
+        "h": "14500",
+        "aspect_ratio": 0.931,
+        "normalized": {
+          "x_ratio": 0.386,
+          "y_ratio": 0.5487,
+          "w_ratio": 0.135,
+          "h_ratio": 0.145
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Support",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Tech Support",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "85000",
+        "y": "54875",
+        "w": "12900",
+        "h": "12875",
+        "aspect_ratio": 1.0019,
+        "normalized": {
+          "x_ratio": 0.85,
+          "y_ratio": 0.5487,
+          "w_ratio": 0.129,
+          "h_ratio": 0.1288
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "TV",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Streaming TV",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "70200",
+        "y": "54875",
+        "w": "12800",
+        "h": "13875",
+        "aspect_ratio": 0.9225,
+        "normalized": {
+          "x_ratio": 0.702,
+          "y_ratio": 0.5487,
+          "w_ratio": 0.128,
+          "h_ratio": 0.1388
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "churn",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]"
+        ]
+      },
+      "zone": {
+        "x": "2100",
+        "y": "87500",
+        "w": "21400",
+        "h": "3750",
+        "aspect_ratio": 5.7067,
+        "normalized": {
+          "x_ratio": 0.021,
+          "y_ratio": 0.875,
+          "w_ratio": 0.214,
+          "h_ratio": 0.0375
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "churn (2)",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "internet service",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "48800",
+        "y": "27000",
+        "w": "23300",
+        "h": "14000",
+        "aspect_ratio": 1.6643,
+        "normalized": {
+          "x_ratio": 0.488,
+          "y_ratio": 0.27,
+          "w_ratio": 0.233,
+          "h_ratio": 0.14
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "lines",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [
+        "Yes",
+        "No",
+        "No phone service"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1200",
+        "y": "27000",
+        "w": "22500",
+        "h": "18750",
+        "aspect_ratio": 1.2,
+        "normalized": {
+          "x_ratio": 0.012,
+          "y_ratio": 0.27,
+          "w_ratio": 0.225,
+          "h_ratio": 0.1875
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "phs",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+        ]
+      },
+      "zone": {
+        "x": "47300",
+        "y": "87000",
+        "w": "28200",
+        "h": "3125",
+        "aspect_ratio": 9.024,
+        "normalized": {
+          "x_ratio": 0.473,
+          "y_ratio": 0.87,
+          "w_ratio": 0.282,
+          "h_ratio": 0.0312
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "phs (2)",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[__tableau_internal_object_id__].[cnt:WA_Fn-UseC_-Telco-Customer-Churn.csv_C6004F48DA344B86B670C3533F69FD51:qk]",
+      "series_field": "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+          "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "5",
+      "x": "800",
+      "y": "1000",
+      "w": "98400",
+      "h": "7125",
+      "text": "Telco Customer Churn, a telephone company business scenario\n                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers",
+      "text_runs": [
+        {
+          "text": "                     Telco Customer Churn",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#f28e2b",
+            "fontname": "Tableau Bold",
+            "fontsize": "18"
+          }
+        },
+        {
+          "text": ", ",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "a",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#4e79a7",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": " ",
+          "style": {
+            "fontalignment": "1",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": "telephone company business scenario",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#4e79a7",
+            "fontsize": "14"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "                             Customer attrition, also known as customer churn, or customer defection, is the loss of customers",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontsize": "8"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "34",
+      "x": "1700",
+      "y": "46125",
+      "w": "24000",
+      "h": "3750",
+      "text": "Managed Services Usage",
+      "text_runs": [
+        {
+          "text": "Managed Services Usage",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "82",
+      "x": "1800",
+      "y": "76125",
+      "w": "20300",
+      "h": "8125",
+      "text": "Churn Rate\n\nOrange indicates customers lost",
+      "text_runs": [
+        {
+          "text": "Churn Rate",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontname": "Tableau Bold",
+            "fontsize": "15"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "Orange ",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#f28e2b",
+            "fontname": "Tableau Bold",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "indicates customers lost",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontname": "Tableau Bold",
+            "fontsize": "10"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "85",
+      "x": "47000",
+      "y": "76125",
+      "w": "28300",
+      "h": "8125",
+      "text": "Phone Service Usage\n\nOrange indicates customers not using service",
+      "text_runs": [
+        {
+          "text": "Phone Service Usage",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontsize": "15"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "\n",
+          "style": {}
+        },
+        {
+          "text": "Orange ",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#f28e2b",
+            "fontsize": "10"
+          }
+        },
+        {
+          "text": "indicates customers not using service",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#000000",
+            "fontsize": "10"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "86",
+      "x": "36200",
+      "y": "96250",
+      "w": "22100",
+      "h": "3750",
+      "text": "Project Data Source: Kaggle",
+      "text_runs": [
+        {
+          "text": " Project Data Source:",
+          "style": {
+            "fontname": "Tableau Bold",
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": " Kaggle ",
+          "style": {
+            "fontcolor": "#b6992d",
+            "fontname": "Tableau Bold",
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": " ",
+          "style": {
+            "fontname": "Tableau Bold",
+            "fontsize": "12"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "102",
+      "x": "1700",
+      "y": "9500",
+      "w": "24800",
+      "h": "3750",
+      "text": "Customer Demographics",
+      "text_runs": [
+        {
+          "text": "Customer Demographics",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#4e79a7",
+            "fontsize": "15"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_8A6B2C65DAAF4B398CE4F5D983319641]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "type": "sheet",
+        "worksheet": "Gender"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Gender",
+        "target": "Gender"
+      },
+      "field_captions": [
+        "Gender"
+      ],
+      "target": "Gender"
+    },
+    {
+      "name": "[Action2_62D114801E8C45B3A97E5AFD74148F3A]",
+      "caption": "Highlight 2 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Gender",
+      "viewpoint_name": "Gender",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Partner",
+      "viewpoint_name": "Partner",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Citizen",
+      "viewpoint_name": "Citizen",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Dependents",
+      "viewpoint_name": "Dependents",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "lines",
+      "viewpoint_name": "lines",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Contract",
+      "viewpoint_name": "Contract",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "internet service",
+      "viewpoint_name": "internet service",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:InternetService:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Payment Method",
+      "viewpoint_name": "Payment Method",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Device Protection",
+      "viewpoint_name": "Device Protection",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Backup",
+      "viewpoint_name": "Backup",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Security",
+      "viewpoint_name": "Security",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineSecurity:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Movies",
+      "viewpoint_name": "Movies",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingMovies:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "TV",
+      "viewpoint_name": "TV",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:StreamingTV:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Support",
+      "viewpoint_name": "Support",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:OnlineBackup:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PaymentMethod:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:TechSupport:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:gender:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Churn rate",
+      "viewpoint_name": "Churn rate",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Phone service",
+      "viewpoint_name": "Phone service",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "churn",
+      "viewpoint_name": "churn",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "churn (2)",
+      "viewpoint_name": "churn (2)",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "phs",
+      "viewpoint_name": "phs",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "phs (2)",
+      "viewpoint_name": "phs (2)",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[:Measure Names]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[attr:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn (copy)_1852668344639775025:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Dependents:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Partner:nk]",
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:PhoneService:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Contract",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Contract:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Device Protection",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:DeviceProtection:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "churn",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:Churn:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "lines",
+      "fields": [
+        "[federated.19jtpq90ymq6fq14rs9nt1hebysn].[none:MultipleLines:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 20,
+    "dashboard_text_zone_count": 6,
+    "intent_counts": {
+      "horizontal_ranked_bar": 13,
+      "custom_tableau_view": 7
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Backup",
+      "Churn rate",
+      "Citizen",
+      "Contract",
+      "Dependents",
+      "Device Protection",
+      "Gender",
+      "Movies",
+      "Partner",
+      "Payment Method",
+      "Phone service",
+      "Security",
+      "Support",
+      "TV",
+      "churn",
+      "churn (2)",
+      "internet service",
+      "lines",
+      "phs",
+      "phs (2)"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 24
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "860",
+    "maxwidth": "650",
+    "minheight": "560",
+    "minwidth": "420"
+  },
+  "worksheets": [
+    {
+      "name": "Annual % by Type & Year",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "pie_chart",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+      "slices": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[tyr:Date Made Public:qk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "DISC",
+        "UNKN"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "71384",
+          "y": "50968",
+          "w": "27385",
+          "h": "26378",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.7138,
+            "y_ratio": 0.5097,
+            "w_ratio": 0.2738,
+            "h_ratio": 0.2638
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Annual % by Type & Year"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+        ]
+      },
+      "zone": {
+        "x": "36309",
+        "y": "1192",
+        "w": "35075",
+        "h": "48808",
+        "aspect_ratio": 0.7186,
+        "normalized": {
+          "x_ratio": 0.3631,
+          "y_ratio": 0.0119,
+          "w_ratio": 0.3508,
+          "h_ratio": 0.4881
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Information Source for Breach",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]",
+      "cols_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+      "series_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+      "slices": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "%null%"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "71384",
+          "y": "1192",
+          "w": "27385",
+          "h": "38897",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.7138,
+            "y_ratio": 0.0119,
+            "w_ratio": 0.2738,
+            "h_ratio": 0.389
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "50000",
+        "w": "70153",
+        "h": "48808",
+        "aspect_ratio": 1.4373,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.5,
+          "w_ratio": 0.7015,
+          "h_ratio": 0.4881
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Types of Breach",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[cnt:Total Records:qk]",
+      "cols_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+      "series_field": "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+      "slices": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[Action (YEAR(Date Made Public),Type of breach)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx].[:Measure Names]",
+          "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "1192",
+        "w": "35078",
+        "h": "48808",
+        "aspect_ratio": 0.7187,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.0119,
+          "w_ratio": 0.3508,
+          "h_ratio": 0.4881
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Annual % by Type & Year"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Types of Breach",
+      "viewpoint_name": "Types of Breach",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[:Measure Names]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "YTD",
+      "viewpoint_name": "YTD",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Location:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Date made Public",
+      "viewpoint_name": "Date made Public",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[qr:Date Made Public:ok]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Information Source for Breach",
+      "viewpoint_name": "Information Source for Breach",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Annual % by Type & Year",
+      "viewpoint_name": "Annual % by Type & Year",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]",
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[yr:Date Made Public:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Annual % by Type & Year",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Type of breach:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Information Source for Breach",
+      "fields": [
+        "[federated.0ywgyjs0gtcd061djvygu022q3tx].[none:Information Source:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "pie_chart": 1,
+      "vertical_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Annual % by Type & Year",
+      "Information Source for Breach"
+    ],
+    "legend_anchor_positions": {
+      "Annual % by Type & Year": "below",
+      "Information Source for Breach": "above"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Annual % by Type & Year",
+      "Information Source for Breach",
+      "Types of Breach"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 7
+  }
+}

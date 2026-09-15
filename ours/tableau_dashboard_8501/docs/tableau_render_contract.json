@@ -1,0 +1,377 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "500",
+    "maxwidth": "900",
+    "minheight": "500",
+    "minwidth": "900",
+    "sizing-mode": "fixed"
+  },
+  "worksheets": [
+    {
+      "name": "9a_Min_age_position",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[min:Age:qk]",
+      "cols_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+      "series_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+      "slices": [
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Players at the position with Minimal Age",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#ff9da7",
+            "fontname": "Times New Roman",
+            "fontsize": "16"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "9_AGE_POSITION",
+              "type": "sheet",
+              "worksheet": "9a_Min_age_position"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "9_AGE_POSITION"
+            },
+            "field_captions": [],
+            "target": "9_AGE_POSITION"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "889",
+        "y": "8600",
+        "w": "49111",
+        "h": "44895",
+        "aspect_ratio": 1.0939,
+        "normalized": {
+          "x_ratio": 0.0089,
+          "y_ratio": 0.086,
+          "w_ratio": 0.4911,
+          "h_ratio": 0.449
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "9b_Max_age_position",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[max:Age:qk]",
+      "cols_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+      "series_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+      "slices": [
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "%null%"
+      ],
+      "title_runs": [
+        {
+          "text": "Players at the position with Maximal Age",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#edc948",
+            "fontname": "Times New Roman",
+            "fontsize": "16"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "9_AGE_POSITION",
+              "type": "sheet",
+              "worksheet": "9b_Max_age_position"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "9_AGE_POSITION"
+            },
+            "field_captions": [],
+            "target": "9_AGE_POSITION"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "50000",
+        "y": "8600",
+        "w": "49111",
+        "h": "44895",
+        "aspect_ratio": 1.0939,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.086,
+          "w_ratio": 0.4911,
+          "h_ratio": 0.449
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "9c_Avg_age_position",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[avg:Age:qk]",
+      "cols_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+      "series_field": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+      "slices": [
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": " Average Age at the Position",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#76b7b2",
+            "fontname": "Times New Roman",
+            "fontsize": "16"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "9_AGE_POSITION",
+              "type": "sheet",
+              "worksheet": "9c_Avg_age_position"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "9_AGE_POSITION"
+            },
+            "field_captions": [],
+            "target": "9_AGE_POSITION"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "889",
+        "y": "53495",
+        "w": "98222",
+        "h": "44905",
+        "aspect_ratio": 2.1873,
+        "normalized": {
+          "x_ratio": 0.0089,
+          "y_ratio": 0.535,
+          "w_ratio": 0.9822,
+          "h_ratio": 0.4491
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "9_AGE_POSITION",
+        "type": "sheet",
+        "worksheet": "9a_Min_age_position"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "9_AGE_POSITION"
+      },
+      "field_captions": [],
+      "target": "9_AGE_POSITION"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "9_AGE_POSITION",
+        "type": "sheet",
+        "worksheet": "9b_Max_age_position"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "9_AGE_POSITION"
+      },
+      "field_captions": [],
+      "target": "9_AGE_POSITION"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "9_AGE_POSITION",
+        "type": "sheet",
+        "worksheet": "9c_Avg_age_position"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "9_AGE_POSITION"
+      },
+      "field_captions": [],
+      "target": "9_AGE_POSITION"
+    }
+  ],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "custom_tableau_view": 2,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "9a_Min_age_position",
+      "9b_Max_age_position",
+      "9c_Avg_age_position"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 0
+  }
+}

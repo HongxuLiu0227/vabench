@@ -1,0 +1,1038 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.3.0 (20193.19.0821.2225)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Go to home",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Results - pred close",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:close:qk]",
+        "fields": [
+          "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1]",
+          "[sum:close:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]",
+        "fields": [
+          "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1]",
+          "[tdy:Date:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:close:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]",
+            "title": "Date"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Results - pred open",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]",
+        "fields": [
+          "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1]",
+          "[sum:open:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]",
+        "fields": [
+          "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1]",
+          "[tdy:Date:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "text": [
+          {
+            "column": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[sum:open:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "table"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[tdy:Date:qk]",
+            "title": "Date"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Results and model accuracy",
+      "zones": [
+        {
+          "id": "48",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "empty",
+          "x": "561",
+          "y": "16870",
+          "w": "98130",
+          "h": "36186",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#e6e6e6"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "187",
+          "y": "0",
+          "w": "99813",
+          "h": "8802",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#b4b4b4"
+          },
+          "text_runs": [
+            {
+              "text": "Results and Model accuracy",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Results and Model accuracy"
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "78803",
+          "y": "25550",
+          "w": "13529",
+          "h": "11614",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Train : 0.36",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Test: 1.54",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Train : 0.36\nTest: 1.54"
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "73691",
+          "y": "11002",
+          "w": "24377",
+          "h": "3667",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Root Mean Square Error",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Root Mean Square Error"
+        },
+        {
+          "id": "12",
+          "name": "Go to home",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "89713",
+          "y": "733",
+          "w": "9726",
+          "h": "6968",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "47",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "3741",
+          "y": "20782",
+          "w": "2618",
+          "h": "23350",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Open Stock",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Open Stock"
+        },
+        {
+          "id": "53",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "empty",
+          "x": "935",
+          "y": "57946",
+          "w": "98005",
+          "h": "38998",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#e6e6e6"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "56",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "3803",
+          "y": "67482",
+          "w": "3117",
+          "h": "18949",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Close Stock",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Close Stock"
+        },
+        {
+          "id": "57",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "81484",
+          "y": "72372",
+          "w": "8666",
+          "h": "9046",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Train: 0.38",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Test: 2.69",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Train: 0.38\nTest: 2.69"
+        },
+        {
+          "id": "63",
+          "name": "Results - pred close",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "18080",
+          "y": "19193",
+          "w": "51060",
+          "h": "33252",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "64",
+          "name": "Results - pred open",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "17394",
+          "y": "59780",
+          "w": "51559",
+          "h": "33252",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "67",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "810",
+          "y": "9291",
+          "w": "55985",
+          "h": "7335",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Uses google excel as the data source. Sign in to Google to see predicted charts.",
+              "style": {
+                "fontcolor": "#898989",
+                "fontname": "Calibri",
+                "fontsize": "12",
+                "italic": "true"
+              }
+            }
+          ],
+          "text": "Uses google excel as the data source. Sign in to Google to see predicted charts."
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "3",
+      "x": "187",
+      "y": "0",
+      "w": "99813",
+      "h": "8802",
+      "text": "Results and Model accuracy",
+      "text_runs": [
+        {
+          "text": "Results and Model accuracy",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "4",
+      "x": "78803",
+      "y": "25550",
+      "w": "13529",
+      "h": "11614",
+      "text": "Train : 0.36\nTest: 1.54",
+      "text_runs": [
+        {
+          "text": "Train : 0.36",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Test: 1.54",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "5",
+      "x": "73691",
+      "y": "11002",
+      "w": "24377",
+      "h": "3667",
+      "text": "Root Mean Square Error",
+      "text_runs": [
+        {
+          "text": "Root Mean Square Error",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#b4b4b4",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "47",
+      "x": "3741",
+      "y": "20782",
+      "w": "2618",
+      "h": "23350",
+      "text": "Open Stock",
+      "text_runs": [
+        {
+          "text": "Open Stock",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "56",
+      "x": "3803",
+      "y": "67482",
+      "w": "3117",
+      "h": "18949",
+      "text": "Close Stock",
+      "text_runs": [
+        {
+          "text": "Close Stock",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "57",
+      "x": "81484",
+      "y": "72372",
+      "w": "8666",
+      "h": "9046",
+      "text": "Train: 0.38\nTest: 2.69",
+      "text_runs": [
+        {
+          "text": "Train: 0.38",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Test: 2.69",
+          "style": {
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Calibri",
+            "fontsize": "15"
+          }
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Results and model accuracy",
+      "id": "67",
+      "x": "810",
+      "y": "9291",
+      "w": "55985",
+      "h": "7335",
+      "text": "Uses google excel as the data source. Sign in to Google to see predicted charts.",
+      "text_runs": [
+        {
+          "text": "Uses google excel as the data source. Sign in to Google to see predicted charts.",
+          "style": {
+            "fontcolor": "#898989",
+            "fontname": "Calibri",
+            "fontsize": "12",
+            "italic": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Results and model accuracy",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "48",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "empty",
+          "x": "561",
+          "y": "16870",
+          "w": "98130",
+          "h": "36186",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#e6e6e6"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "187",
+          "y": "0",
+          "w": "99813",
+          "h": "8802",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#b4b4b4"
+          },
+          "text_runs": [
+            {
+              "text": "Results and Model accuracy",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Results and Model accuracy"
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "78803",
+          "y": "25550",
+          "w": "13529",
+          "h": "11614",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Train : 0.36",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Test: 1.54",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Train : 0.36\nTest: 1.54"
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "73691",
+          "y": "11002",
+          "w": "24377",
+          "h": "3667",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Root Mean Square Error",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#b4b4b4",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Root Mean Square Error"
+        },
+        {
+          "id": "12",
+          "name": "Go to home",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "89713",
+          "y": "733",
+          "w": "9726",
+          "h": "6968",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "47",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "3741",
+          "y": "20782",
+          "w": "2618",
+          "h": "23350",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Open Stock",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Open Stock"
+        },
+        {
+          "id": "53",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "empty",
+          "x": "935",
+          "y": "57946",
+          "w": "98005",
+          "h": "38998",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "background-color": "#e6e6e6"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "56",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "3803",
+          "y": "67482",
+          "w": "3117",
+          "h": "18949",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Close Stock",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Close Stock"
+        },
+        {
+          "id": "57",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "81484",
+          "y": "72372",
+          "w": "8666",
+          "h": "9046",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Train: 0.38",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Test: 2.69",
+              "style": {
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Calibri",
+                "fontsize": "15"
+              }
+            }
+          ],
+          "text": "Train: 0.38\nTest: 2.69"
+        },
+        {
+          "id": "63",
+          "name": "Results - pred close",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "18080",
+          "y": "19193",
+          "w": "51060",
+          "h": "33252",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "64",
+          "name": "Results - pred open",
+          "parent_id": null,
+          "zone_type": "",
+          "x": "17394",
+          "y": "59780",
+          "w": "51559",
+          "h": "33252",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "67",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "text",
+          "x": "810",
+          "y": "9291",
+          "w": "55985",
+          "h": "7335",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [
+            {
+              "text": "Uses google excel as the data source. Sign in to Google to see predicted charts.",
+              "style": {
+                "fontcolor": "#898989",
+                "fontname": "Calibri",
+                "fontsize": "12",
+                "italic": "true"
+              }
+            }
+          ],
+          "text": "Uses google excel as the data source. Sign in to Google to see predicted charts."
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Go to home",
+      "viewpoint_name": "Go to home",
+      "fields": [
+        "[federated.1av1a3o0myrsjb18ja7fa0yd1qya].[none:Calculation_1169247112986927108:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Results - pred close",
+      "viewpoint_name": "Results - pred close",
+      "fields": [
+        "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[yr:Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Results - pred open",
+      "viewpoint_name": "Results - pred open",
+      "fields": [
+        "[federated.0lvyz3e14xqiuk0zls8fu0uuqig1].[yr:Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 7,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 3
+  }
+}

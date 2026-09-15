@@ -1,0 +1,873 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "CustomerName by Contex Filter",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.14xopvj0hljvvr121wbdb1sj0phz].[none:City:nk] / [federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Customer Name:nk])",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:City:nk]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:City:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Customer Name:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Aberdeen",
+        "Yuma"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:City:nk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Customer Name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Category with Filter",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Region)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category,Sub-Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by Product Names with Filter",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "Sales by Region",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Region:nk]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category,Sub-Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (State)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Sales by Region",
+          "style": {
+            "fontcolor": "#666666",
+            "fontname": "Tableau Book",
+            "fontsize": "14"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "28706",
+          "y": "2091",
+          "w": "9434",
+          "h": "10221",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.2871,
+            "y_ratio": 0.0209,
+            "w_ratio": 0.0943,
+            "h_ratio": 0.1022
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sales by Region"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+        ]
+      },
+      "zone": {
+        "x": "539",
+        "y": "929",
+        "w": "42959",
+        "h": "49071",
+        "aspect_ratio": 0.8754,
+        "normalized": {
+          "x_ratio": 0.0054,
+          "y_ratio": 0.0093,
+          "w_ratio": 0.4296,
+          "h_ratio": 0.4907
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales by States",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:State:nk]",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Region)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category,Sub-Category)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sales by States"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Country/Region:nk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:State:nk]"
+        ]
+      },
+      "zone": {
+        "x": "43497",
+        "y": "50000",
+        "w": "42959",
+        "h": "49071",
+        "aspect_ratio": 0.8754,
+        "normalized": {
+          "x_ratio": 0.435,
+          "y_ratio": 0.5,
+          "w_ratio": 0.4296,
+          "h_ratio": 0.4907
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales&Profit Crosstab",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "([federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk] / [federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk])",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Region)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category,Sub-Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales&Profit by Subcategory",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk] / [federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk])",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Region)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (State)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sales&Profit by Subcategory"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "43498",
+        "y": "929",
+        "w": "42958",
+        "h": "49071",
+        "aspect_ratio": 0.8754,
+        "normalized": {
+          "x_ratio": 0.435,
+          "y_ratio": 0.0093,
+          "w_ratio": 0.4296,
+          "h_ratio": 0.4907
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales&Profits by Product Name",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk]",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Region)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category,Sub-Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (State)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "539",
+        "y": "50000",
+        "w": "42958",
+        "h": "49071",
+        "aspect_ratio": 0.8754,
+        "normalized": {
+          "x_ratio": 0.0054,
+          "y_ratio": 0.5,
+          "w_ratio": 0.4296,
+          "h_ratio": 0.4907
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales&Profits by Subcategory&Product Name",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "([federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk] / [federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk])",
+      "cols_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+      "series_field": "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+      "slices": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[:Measure Names]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[Action (Category,Sub-Category)]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Sales:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk]",
+          "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales by Region"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales by States"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales&Profit by Subcategory"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Region",
+      "viewpoint_name": "Sales by Region",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[sum:Profit:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales&Profit by Subcategory",
+      "viewpoint_name": "Sales&Profit by Subcategory",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales&Profit Crosstab",
+      "viewpoint_name": "Sales&Profit Crosstab",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales&Profits by Subcategory&Product Name",
+      "viewpoint_name": "Sales&Profits by Subcategory&Product Name",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by Category with Filter",
+      "viewpoint_name": "Sales by Category with Filter",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Category:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "CustomerName by Contex Filter",
+      "viewpoint_name": "CustomerName by Contex Filter",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:City:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Customer Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales&Profits by Product Name",
+      "viewpoint_name": "Sales&Profits by Product Name",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Product Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales by States",
+      "viewpoint_name": "Sales by States",
+      "fields": [
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:Country/Region:nk]",
+        "[federated.14xopvj0hljvvr121wbdb1sj0phz].[none:State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 9,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 3,
+      "vertical_ranked_bar": 3,
+      "custom_tableau_view": 3
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Sales by Region"
+    ],
+    "legend_anchor_positions": {
+      "Sales by Region": "overlay"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "CustomerName by Contex Filter",
+      "Sales by Category with Filter",
+      "Sales by Region",
+      "Sales by States",
+      "Sales&Profit Crosstab",
+      "Sales&Profit by Subcategory",
+      "Sales&Profits by Product Name",
+      "Sales&Profits by Subcategory&Product Name"
+    ],
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 8
+  }
+}

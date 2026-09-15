@@ -1,0 +1,568 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.1.1 (20211.21.0420.1112)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Sheet 1",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[min:Size:qk]",
+        "fields": [
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2]",
+          "[min:Size:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+        "fields": [
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2]",
+          "[none:File extension:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[min:Size:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+          "direction": "ASC",
+          "buckets": [
+            "%all%",
+            ".wma",
+            ".mp3",
+            ".m4b"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Diff File Extentions with Min size",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "title_text": "Diff File Extentions with Min size",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Sheet 2",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[min:#:qk]",
+        "fields": [
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2]",
+          "[min:#:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok] / [federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[qr:Date created:ok])",
+        "fields": [
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2]",
+          "[yr:Date created:ok]",
+          "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2]",
+          "[qr:Date created:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[min:#:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "legend-title-text"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Years and Quarters Vs Min of '#'",
+          "style": {
+            "bold": "true"
+          }
+        }
+      ],
+      "title_text": "Years and Quarters Vs Min of '#'",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "566",
+          "y": "1105",
+          "w": "40834",
+          "h": "97790",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Sheet 2",
+          "parent_id": "2",
+          "zone_type": "",
+          "x": "41400",
+          "y": "1105",
+          "w": "58034",
+          "h": "97790",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "566",
+          "y": "1105",
+          "w": "32766",
+          "h": "97790",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-flow",
+          "x": "33332",
+          "y": "1105",
+          "w": "8068",
+          "h": "97790",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Sheet 1",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "566",
+          "y": "1105",
+          "w": "32766",
+          "h": "97790",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Sheet 1",
+          "parent_id": "4",
+          "zone_type": "color",
+          "x": "33332",
+          "y": "1105",
+          "w": "8068",
+          "h": "37983",
+          "param": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sheet 2",
+          "parent_id": "4",
+          "zone_type": "color",
+          "x": "33332",
+          "y": "39088",
+          "w": "8068",
+          "h": "49448",
+          "param": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "maxheight": "824",
+        "maxwidth": "1434",
+        "minheight": "724",
+        "minwidth": "1334",
+        "sizing-mode": "range"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "566",
+          "y": "1105",
+          "w": "40834",
+          "h": "97790",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "Sheet 2",
+          "parent_id": "2",
+          "zone_type": "",
+          "x": "41400",
+          "y": "1105",
+          "w": "58034",
+          "h": "97790",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "566",
+          "y": "1105",
+          "w": "32766",
+          "h": "97790",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-flow",
+          "x": "33332",
+          "y": "1105",
+          "w": "8068",
+          "h": "97790",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Sheet 1",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "566",
+          "y": "1105",
+          "w": "32766",
+          "h": "97790",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "Sheet 1",
+          "parent_id": "4",
+          "zone_type": "color",
+          "x": "33332",
+          "y": "1105",
+          "w": "8068",
+          "h": "37983",
+          "param": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Sheet 2",
+          "parent_id": "4",
+          "zone_type": "color",
+          "x": "33332",
+          "y": "39088",
+          "w": "8068",
+          "h": "49448",
+          "param": "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_FCF2FCA0D956459F87B0C8B781627DA8]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "YEAR(Date created)",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [
+        "YEAR(Date created)"
+      ],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[attr:File extension:nk]",
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 2",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 1",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[none:File extension:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sheet 2",
+      "fields": [
+        "[federated.1bz57tv0fdrdbw16vbh6k09ofyi2].[yr:Date created:ok]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

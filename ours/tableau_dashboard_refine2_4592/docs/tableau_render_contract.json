@@ -1,0 +1,580 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Line chart",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "line_chart",
+      "rows_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+      "cols_field": "([federated.0rvcsld1bk0txg17inoxj0v7uuv9].[yr:Order_Date:ok] / [federated.0rvcsld1bk0txg17inoxj0v7uuv9].[mn:Order_Date:ok])",
+      "series_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action4]",
+            "caption": "Filter 4 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Line chart"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[yr:Order_Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "16464",
+        "y": "49942",
+        "w": "83053",
+        "h": "49129",
+        "aspect_ratio": 1.6905,
+        "normalized": {
+          "x_ratio": 0.1646,
+          "y_ratio": 0.4954,
+          "w_ratio": 0.8305,
+          "h_ratio": 0.4873
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales rep vs Units",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Units Sold:qk]",
+      "cols_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]",
+      "series_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "181",
+          "y": "67480",
+          "w": "10682",
+          "h": "33333",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.0018,
+            "y_ratio": 0.6694,
+            "w_ratio": 0.1068,
+            "h_ratio": 0.3306
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "Sales rep vs Units"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "929",
+        "w": "49517",
+        "h": "49013",
+        "aspect_ratio": 1.0103,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.0092,
+          "w_ratio": 0.4952,
+          "h_ratio": 0.4862
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "datatable",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+      "cols_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]",
+      "series_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]",
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Units Sold:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action3]",
+            "caption": "Filter 3 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "datatable"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]"
+        ]
+      },
+      "zone": {
+        "x": "483",
+        "y": "49942",
+        "w": "15981",
+        "h": "49129",
+        "aspect_ratio": 0.3253,
+        "normalized": {
+          "x_ratio": 0.0048,
+          "y_ratio": 0.4954,
+          "w_ratio": 0.1598,
+          "h_ratio": 0.4873
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "sales rep vs revenue",
+      "dashboard_name": "Dashboard 1",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[sum:Calculation_1414411819444039680:qk]",
+      "cols_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]",
+      "series_field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+      "slices": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Sales representative)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (Item)]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[Action (YEAR(Order_Date),MONTH(Order_Date))]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "724",
+          "y": "73519",
+          "w": "8449",
+          "h": "14750",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.0072,
+            "y_ratio": 0.7293,
+            "w_ratio": 0.0845,
+            "h_ratio": 0.1463
+          }
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Dashboard 1",
+              "type": "sheet",
+              "worksheet": "sales rep vs revenue"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Dashboard 1"
+            },
+            "field_captions": [],
+            "target": "Dashboard 1"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+          "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+        ]
+      },
+      "zone": {
+        "x": "50000",
+        "y": "929",
+        "w": "49517",
+        "h": "49013",
+        "aspect_ratio": 1.0103,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.0092,
+          "w_ratio": 0.4952,
+          "h_ratio": 0.4862
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Sales rep vs Units"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "sales rep vs revenue"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "datatable"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    },
+    {
+      "name": "[Action4]",
+      "caption": "Filter 4 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "Line chart"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales rep vs Units",
+      "viewpoint_name": "Sales rep vs Units",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "sales rep vs revenue",
+      "viewpoint_name": "sales rep vs revenue",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales region vs Revenue",
+      "viewpoint_name": "Sales region vs Revenue",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales Region:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales representative:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "datatable",
+      "viewpoint_name": "datatable",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[:Measure Names]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sales rep vs Units",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "sales rep vs revenue",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Line chart",
+      "viewpoint_name": "Line chart",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[yr:Order_Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Treemap",
+      "viewpoint_name": "Treemap",
+      "fields": [
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Item:nk]",
+        "[federated.0rvcsld1bk0txg17inoxj0v7uuv9].[none:Sales Region:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "line_chart": 1,
+      "vertical_ranked_bar": 2,
+      "custom_tableau_view": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Sales rep vs Units",
+      "sales rep vs revenue"
+    ],
+    "legend_anchor_positions": {
+      "Sales rep vs Units": "below",
+      "sales rep vs revenue": "below"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Line chart",
+      "Sales rep vs Units",
+      "datatable",
+      "sales rep vs revenue"
+    ],
+    "dashboard_action_count": 4,
+    "highlight_binding_count": 8
+  }
+}

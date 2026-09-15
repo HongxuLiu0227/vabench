@@ -1,0 +1,631 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_refine_5198/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:38.829924Z"
+  },
+  "dashboard": {
+    "name": "Dashboard 1",
+    "worksheet_count": 10
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_retweeteados",
+        "name": "+ Retweeteados",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "+ Retweeteados"
+        }
+      },
+      {
+        "id": "ws_evoluci_n_tipo_de_tweets",
+        "name": "Evolución Tipo de Tweets",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "Evolución Tipo de Tweets"
+        }
+      },
+      {
+        "id": "ws_favs_x_tipo_de_tweets",
+        "name": "Favs x Tipo de Tweets",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "Favs x Tipo de Tweets"
+        }
+      },
+      {
+        "id": "ws_rt_x_tipos_de_tweets",
+        "name": "RT x Tipos de Tweets",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 3,
+          "worksheet_name": "RT x Tipos de Tweets"
+        }
+      },
+      {
+        "id": "ws_tipos_de_tweets_x_objeto_de_estudio",
+        "name": "Tipos de Tweets x Objeto de Estudio",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 4,
+          "worksheet_name": "Tipos de Tweets x Objeto de Estudio"
+        }
+      },
+      {
+        "id": "ws_tweets_favoritos",
+        "name": "Tweets Favoritos",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 5,
+          "worksheet_name": "Tweets Favoritos"
+        }
+      },
+      {
+        "id": "ws_tweets_por_usuario",
+        "name": "Tweets por Usuario",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 6,
+          "worksheet_name": "Tweets por Usuario"
+        }
+      },
+      {
+        "id": "ws_tweets_x_tiempo",
+        "name": "Tweets x Tiempo",
+        "chart_intent": "vertical_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 7,
+          "worksheet_name": "Tweets x Tiempo"
+        }
+      },
+      {
+        "id": "ws_users_x_followers_count",
+        "name": "Users x followers count",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 8,
+          "worksheet_name": "Users x followers count"
+        }
+      },
+      {
+        "id": "ws_usuarios_con_tweets",
+        "name": "Usuarios con + Tweets",
+        "chart_intent": "horizontal_ranked_bar",
+        "source_ref": {
+          "worksheet_index": 9,
+          "worksheet_name": "Usuarios con + Tweets"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_full_text",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:full_text:nk]",
+        "normalized": "full_text",
+        "role": "dimension"
+      },
+      {
+        "id": "field_retweet_count",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:retweet_count:qk]",
+        "normalized": "retweet_count",
+        "role": "measure"
+      },
+      {
+        "id": "field_flag",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[attr:flag:nk]",
+        "normalized": "flag",
+        "role": "dimension"
+      },
+      {
+        "id": "field_label",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:label:nk]",
+        "normalized": "label",
+        "role": "dimension"
+      },
+      {
+        "id": "field_created_at",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[tmi:created_at:qk]",
+        "normalized": "created_at",
+        "role": "dimension"
+      },
+      {
+        "id": "field_favorite_count",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:favorite_count:qk]",
+        "normalized": "favorite_count",
+        "role": "measure"
+      },
+      {
+        "id": "field_number_of_records",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:Number of Records:qk]",
+        "normalized": "Number of Records",
+        "role": "measure"
+      },
+      {
+        "id": "field_name",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[none:name:nk]",
+        "normalized": "name",
+        "role": "dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_followers_count",
+        "raw": "[federated.0c8okpg0coyfqg1d8783s1jnu0wr].[sum:followers_count:qk]",
+        "normalized": "followers_count",
+        "role": "measure"
+      },
+      {
+        "id": "field_attr_full_text",
+        "raw": "ATTR(Full Text)",
+        "normalized": "ATTR(Full Text)",
+        "role": "dimension"
+      },
+      {
+        "id": "field_label_2",
+        "raw": "Label",
+        "normalized": "Label",
+        "role": "dimension"
+      },
+      {
+        "id": "field_objeto_de_estudio",
+        "raw": "Objeto de Estudio",
+        "normalized": "Objeto de Estudio",
+        "role": "dimension"
+      },
+      {
+        "id": "field_usuario",
+        "raw": "Usuario",
+        "normalized": "Usuario",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_tipos_de_tweets_x_objeto_de_estudio"
+        },
+        "target": {
+          "target_type": "worksheet",
+          "target_worksheet_id": "ws_tipos_de_tweets_x_objeto_de_estudio",
+          "target_dashboard_name": null,
+          "target_name_raw": "Tipos de Tweets x Objeto de Estudio"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 4,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_usuarios_con_tweets"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [
+          "field_attr_full_text",
+          "field_label_2",
+          "field_objeto_de_estudio",
+          "field_usuario"
+        ],
+        "source_ref": {
+          "worksheet_index": 9,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "highlight_brush",
+        "kind_semantic": "highlight",
+        "command": "tsc:brush",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Usuarios con + Tweets"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "Dashboard 1",
+          "target_name_raw": "Dashboard 1"
+        },
+        "driving_field_ids": [
+          "field_attr_full_text",
+          "field_label_2",
+          "field_objeto_de_estudio",
+          "field_usuario"
+        ],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "Dashboard 1",
+          "source_worksheet_name": "Tipos de Tweets x Objeto de Estudio"
+        },
+        "target": {
+          "target_type": "worksheet",
+          "target_worksheet_id": "ws_tipos_de_tweets_x_objeto_de_estudio",
+          "target_dashboard_name": null,
+          "target_name_raw": "Tipos de Tweets x Objeto de Estudio"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "Tipos de Tweets x Objeto de Estudio",
+        "viewpoint_name": "Tipos de Tweets x Objeto de Estudio",
+        "field_ids": [
+          "field_flag",
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "Evolución Tipo de Tweets",
+        "viewpoint_name": "Evolución Tipo de Tweets",
+        "field_ids": [
+          "field_flag",
+          "field_label",
+          "field_created_at"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "Favs x Tipo de Tweets",
+        "viewpoint_name": "Favs x Tipo de Tweets",
+        "field_ids": [
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      },
+      {
+        "id": "hb_004",
+        "window_class": "worksheet",
+        "window_name": "RT x Tipos de Tweets",
+        "viewpoint_name": "RT x Tipos de Tweets",
+        "field_ids": [
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 3
+        }
+      },
+      {
+        "id": "hb_005",
+        "window_class": "worksheet",
+        "window_name": "Tweets por Usuario",
+        "viewpoint_name": "Tweets por Usuario",
+        "field_ids": [
+          "field_flag",
+          "field_label",
+          "field_name"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 4
+        }
+      },
+      {
+        "id": "hb_006",
+        "window_class": "dashboard",
+        "window_name": "Dashboard 1",
+        "viewpoint_name": "Usuarios con + Tweets",
+        "field_ids": [
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 5
+        }
+      },
+      {
+        "id": "hb_007",
+        "window_class": "worksheet",
+        "window_name": "Users x followers count",
+        "viewpoint_name": "Users x followers count",
+        "field_ids": [
+          "field_flag",
+          "field_full_text",
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 6
+        }
+      },
+      {
+        "id": "hb_008",
+        "window_class": "worksheet",
+        "window_name": "Tweets Favoritos",
+        "viewpoint_name": "Tweets Favoritos",
+        "field_ids": [
+          "field_flag",
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 7
+        }
+      },
+      {
+        "id": "hb_009",
+        "window_class": "worksheet",
+        "window_name": "+ Retweeteados",
+        "viewpoint_name": "+ Retweeteados",
+        "field_ids": [
+          "field_flag",
+          "field_flag",
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 8
+        }
+      },
+      {
+        "id": "hb_010",
+        "window_class": "worksheet",
+        "window_name": "Usuarios con + Tweets",
+        "viewpoint_name": "Usuarios con + Tweets",
+        "field_ids": [
+          "field_flag",
+          "field_full_text",
+          "field_label",
+          "field_name"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 9
+        }
+      },
+      {
+        "id": "hb_011",
+        "window_class": "worksheet",
+        "window_name": "Tweets x Tiempo",
+        "viewpoint_name": "Tweets x Tiempo",
+        "field_ids": [
+          "field_measure_names",
+          "field_flag",
+          "field_full_text",
+          "field_label"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 10
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter",
+        "highlight"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_retweeteados",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_flag",
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_evoluci_n_tipo_de_tweets",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_created_at",
+          "field_flag",
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_favs_x_tipo_de_tweets",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_rt_x_tipos_de_tweets",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_tipos_de_tweets_x_objeto_de_estudio",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_flag",
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_tweets_favoritos",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_flag",
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_tweets_por_usuario",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_flag",
+          "field_label",
+          "field_name"
+        ]
+      },
+      {
+        "worksheet_id": "ws_tweets_x_tiempo",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_flag",
+          "field_full_text",
+          "field_label",
+          "field_measure_names"
+        ]
+      },
+      {
+        "worksheet_id": "ws_users_x_followers_count",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_flag",
+          "field_full_text",
+          "field_label"
+        ]
+      },
+      {
+        "worksheet_id": "ws_usuarios_con_tweets",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_attr_full_text",
+          "field_flag",
+          "field_full_text",
+          "field_label",
+          "field_label_2",
+          "field_name",
+          "field_objeto_de_estudio",
+          "field_usuario"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 10,
+    "worksheet_action_count": 2,
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 11,
+    "field_count": 14
+  }
+}

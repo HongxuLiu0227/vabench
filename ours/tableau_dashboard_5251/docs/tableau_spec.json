@@ -1,0 +1,735 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.1.7 (20191.19.0817.2236)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "AvgMoviePie",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "from": "2014",
+                  "function": "range",
+                  "level": "[yr:years:ok]",
+                  "to": "2018",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Average by Studio",
+          "style": {
+            "fontsize": "10"
+          }
+        }
+      ],
+      "title_text": "Average by Studio",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "DMovie",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+        "fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38]",
+          "[avg:gross:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38]",
+          "[none:studios:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[studios]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Average by Studio",
+          "style": {
+            "fontsize": "10"
+          }
+        }
+      ],
+      "title_text": "Average by Studio",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "DMovieYear",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+        "fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38]",
+          "[avg:gross:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk] * [federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk])",
+        "fields": [
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38]",
+          "[none:studios:nk]",
+          "[federated.0mx0qbt16kjcpf139uqn317i6u38]",
+          "[tyr:years:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[avg:gross:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[Action (Studios)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[studios]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Average by Studio and Year",
+          "style": {
+            "fontsize": "10"
+          }
+        }
+      ],
+      "title_text": "Average by Studio and Year",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]",
+            "title": "Years"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "ACTION",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "9250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "10250",
+          "w": "98400",
+          "h": "88750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "10250",
+          "w": "98400",
+          "h": "88750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "AvgMoviePie",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "10250",
+          "w": "49200",
+          "h": "44375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "DMovieYear",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "10250",
+          "w": "49200",
+          "h": "88750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "DMovie",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "54625",
+          "w": "49200",
+          "h": "44375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "AvgMoviePie",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "1100",
+          "y": "16875",
+          "w": "14000",
+          "h": "29750",
+          "param": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "ACTION",
+      "size": {
+        "maxheight": "800",
+        "maxwidth": "1000",
+        "minheight": "800",
+        "minwidth": "1000"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "98000",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "title",
+          "x": "800",
+          "y": "1000",
+          "w": "98400",
+          "h": "9250",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "800",
+          "y": "10250",
+          "w": "98400",
+          "h": "88750",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "800",
+          "y": "10250",
+          "w": "98400",
+          "h": "88750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "AvgMoviePie",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "10250",
+          "w": "49200",
+          "h": "44375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "DMovieYear",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "10250",
+          "w": "49200",
+          "h": "88750",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "DMovie",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "800",
+          "y": "54625",
+          "w": "49200",
+          "h": "44375",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "AvgMoviePie",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "1100",
+          "y": "16875",
+          "w": "14000",
+          "h": "29750",
+          "param": "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "ACTION",
+        "type": "sheet",
+        "worksheet": "AvgMoviePie"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "AvgMoviePie",
+        "special-fields": "all",
+        "target": "ACTION"
+      },
+      "field_captions": [],
+      "target": "ACTION"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "dashboard",
+      "window_name": "ACTION",
+      "viewpoint_name": "AvgMoviePie",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "AvgMoviePie",
+      "viewpoint_name": "AvgMoviePie",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[yr:years:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "DMovie",
+      "viewpoint_name": "DMovie",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "DMovieYear",
+      "viewpoint_name": "DMovieYear",
+      "fields": [
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[none:studios:nk]",
+        "[federated.0mx0qbt16kjcpf139uqn317i6u38].[tyr:years:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 4
+  }
+}

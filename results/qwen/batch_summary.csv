@@ -1,0 +1,289 @@
+model,dashboard,candidate_project,status,s_data,s_int,data_file_match,compiled_episode_count,error
+qwen,tableau_dashboard_10115,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_10115,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_10115:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+src/components/Dashboard.tsx(28,25): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+"
+qwen,tableau_dashboard_10845,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_10845,ok,0.055208333333333325,0.0,True,4,
+qwen,tableau_dashboard_1107_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1107_1,ok,0.05833333333333333,0.0,True,1,
+qwen,tableau_dashboard_1107_3,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1107_3,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_1107_3:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+src/services/dataService.ts(67,21): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/services/dataService.ts(244,21): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+"
+qwen,tableau_dashboard_121,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_121,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_1223_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1223_2,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_1225,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1225,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_1229,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1229,ok,0.00043749999999999995,0.0,True,0,
+qwen,tableau_dashboard_1230,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1230,ok,0.02395023148148148,0.0,True,0,
+qwen,tableau_dashboard_1378_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1378_1,ok,0.024999999999999998,0.0,True,0,
+qwen,tableau_dashboard_1378_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1378_2,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+    - locator resolved to 3 elements. Proceeding with the first one: <svg width=""800"" height=""280"" class=""chart""></svg>
+"
+qwen,tableau_dashboard_1473_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1473_2,ok,0.0651448697501329,0.0,True,0,
+qwen,tableau_dashboard_147_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_147_1,ok,0.2969392844857241,0.494,True,1,
+qwen,tableau_dashboard_1497,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1497,ok,0.0,0.0,False,3,
+qwen,tableau_dashboard_160,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_160,error,,,,,"reference episode compilation failed: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_1664,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1664,ok,0.11282692307692307,0.0,True,1,
+qwen,tableau_dashboard_1665,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1665,ok,0.3425252525252525,0.4089690170940171,True,1,
+qwen,tableau_dashboard_1968,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1968,ok,0.14491026638989793,0.16121899696834616,True,2,
+qwen,tableau_dashboard_1979,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_1979,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_1979:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+src/App.tsx(5,1): error TS6133: 'React' is declared but its value is never read.
+src/components/charts/BreakdownPieChart.tsx(6,8): error TS6133: 'React' is declared but its value is never read.
+src/components/charts/BreakdownPieChart.tsx(118,20): error TS2345: Argument of type 'Arc<any, DefaultArcObject>' is not assignable to parameter of type 'string | number | boolean | readonly (string | number)[] | ValueFn<SVGPathElement, PieArcDatum<{ indicator: string; value: number; }>, string | number | boolean | readonly (string | number)[] | null> | null'.
+  Type 'Arc<any, DefaultArcObject>' is not assignable to type 'ValueFn<SVGPathElement, PieArcDatum<{ indicator: string; value: number; }>, string | number | boolean | readonly (string | number)[] | null>'.
+    Types of parameters 'd' and 'datum' are incompatible.
+      Type 'PieArcDatum<{ indicator: string; value: number; }>' is missing the following properties from type 'DefaultArcObject': innerRadius, outerRadius
+src/components/charts/BreakdownPieChart.tsx(128,28): error TS6133: 'event' is declared but its value is never read.
+src/components/charts/BreakdownPieChart.tsx(143,68): error TS2345: Argument of type 'PieArcDatum<{ indicator: string; value: number; }>' is not assignable to parameter of type 'DefaultArcObject'.
+  Type 'PieArcDatum<{ indicator: string; value: number; }>' is missing the following properties from type 'DefaultArcObject': innerRadius, outerRadius
+src/components/charts/GrowthRatesChart.tsx(6,8): error TS6133: 'React' is declared but its value is never read.
+src/components/charts/GrowthRatesChart.tsx(151,26): error TS6133: 'event' is declared but its value is never read.
+src/components/charts/ProvincesMapChart.tsx(6,8): error TS6133: 'React' is declared but its value is never read.
+src/components/charts/Tooltip.tsx(40,9): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'onMouseEnter' does not exist in type 'Partial<unknown> & Attributes'.
+src/components/charts/TotalDemandChart.tsx(6,8): error TS6133: 'React' is declared but its value is never read.
+src/components/charts/TotalDemandChart.tsx(127,26): error TS6133: 'event' is declared but its value is never read.
+src/components/dashboard/Dashboard.tsx(6,8): error TS6133: 'React' is declared but its value is never read.
+src/components/dashboard/Dashboard.tsx(62,9): error TS2353: Object literal may only specify known properties, and 'onDoubleClick' does not exist in type 'Properties<string | number, string & {}>'.
+src/components/dashboard/Legend.tsx(5,1): error TS6133: 'React' is declared but its value is never read.
+src/components/dashboard/LocationFilter.tsx(5,1): error TS6133: 'React' is declared but its value is never read.
+src/context/DashboardContext.tsx(5,8): error TS6133: 'React' is declared but its value is never read.
+src/services/__tests__/dataLoader.test.ts(84,33): error TS2304: Cannot find name 'IndicatorType'.
+src/services/__tests__/dataLoader.test.ts(93,27): error TS2304: Cannot find name 'LocationGroup'.
+"
+qwen,tableau_dashboard_2010,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_2010,ok,0.12622807017543858,0.0,True,0,
+qwen,tableau_dashboard_2685,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_2685,ok,0.06388594888594888,0.0,True,0,
+qwen,tableau_dashboard_269,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_269,ok,0.03231488555017967,0.0,True,3,
+qwen,tableau_dashboard_2819,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_2819,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_2936_3,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_2936_3,ok,0.6999071207430341,0.25061793174613917,True,4,
+qwen,tableau_dashboard_3014,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3014,ok,0.2623052959501557,0.0,True,0,
+qwen,tableau_dashboard_303_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_303_1,ok,0.554074074074074,0.014616520430473885,True,3,
+qwen,tableau_dashboard_303_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_303_2,ok,0.6125351500351499,0.21406500682710358,True,3,
+qwen,tableau_dashboard_303_4,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_303_4,ok,0.2702338064260619,0.3586313429328023,True,3,
+qwen,tableau_dashboard_3259,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3259,ok,0.0575486111111111,0.0,True,1,
+qwen,tableau_dashboard_3330_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3330_1,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_3330_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3330_2,ok,0.35,0.0,True,4,
+qwen,tableau_dashboard_3430_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3430_2,ok,0.3655454890289449,0.4020580791424306,True,4,
+qwen,tableau_dashboard_3430_3,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3430_3,ok,0.2274517202678122,0.0,True,0,
+qwen,tableau_dashboard_3480_3,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3480_3,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_3533,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3533,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_357,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_357,ok,0.5406944444444445,0.0,True,0,
+qwen,tableau_dashboard_3572,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3572,ok,0.3123378161050506,0.0,True,0,
+qwen,tableau_dashboard_3980_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3980_1,ok,0.11807692307692308,0.0,True,0,
+qwen,tableau_dashboard_3980_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3980_2,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_3980_2:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+src/services/dataLoader.ts(45,21): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/services/dataLoader.ts(194,21): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+"
+qwen,tableau_dashboard_3980_4,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_3980_4,ok,0.4650009712509712,0.2527651515151514,True,1,
+qwen,tableau_dashboard_451_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_451_1,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_4836,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_4836,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_4836_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_4836_1,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_4836_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_4836_2,ok,0.5467490302695647,0.0,True,0,
+qwen,tableau_dashboard_4836_3,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_4836_3,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_4838,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_4838,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_5182,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5182,ok,0.42072463768115936,0.0,True,0,
+qwen,tableau_dashboard_5251,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5251,ok,0.0,0.0,False,1,
+qwen,tableau_dashboard_5417,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5417,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_5417_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5417_2,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_5417_4,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5417_4,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_5417_5,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5417_5,ok,0.20473856209150323,0.0,True,0,
+qwen,tableau_dashboard_5781,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_5781,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_602,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_602,ok,0.6620151515151514,0.0,True,1,
+qwen,tableau_dashboard_6033,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_6033,ok,0.054655636783378224,0.0,True,0,
+qwen,tableau_dashboard_646,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_646,ok,0.274754061156235,0.5449343627792876,True,4,
+qwen,tableau_dashboard_6490,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_6490,ok,0.7259027777777778,0.45,True,1,
+qwen,tableau_dashboard_696_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_696_1,ok,0.16666666666666666,0.0,True,0,
+qwen,tableau_dashboard_696_3,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_696_3,ok,0.4892156862745098,0.0,True,0,
+qwen,tableau_dashboard_7172_1,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_7172_1,ok,0.6773564341973685,0.0,True,1,
+qwen,tableau_dashboard_8077_2,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_8077_2,ok,0.5608333333333332,0.21315658234993015,True,3,
+qwen,tableau_dashboard_8239,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_8239,ok,0.04931635154061624,0.11697619047619048,True,5,
+qwen,tableau_dashboard_8501,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_8501,ok,0.0,0.0,False,3,
+qwen,tableau_dashboard_902,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_902,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine2_3947,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine2_3947,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine2_4592,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine2_4592,ok,0.2243938189526425,0.009915865384615375,True,3,
+qwen,tableau_dashboard_refine4_3352,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine4_3352,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_refine4_3352:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+src/hooks/useData.ts(33,47): error TS2344: Type 'DataRecord' does not satisfy the constraint 'Record<string, unknown>'.
+  Index signature for type 'string' is missing in type 'DataRecord'.
+src/hooks/useData.ts(49,43): error TS2345: Argument of type 'DataRecord[]' is not assignable to parameter of type 'Record<string, unknown>[]'.
+  Type 'DataRecord' is not assignable to type 'Record<string, unknown>'.
+    Index signature for type 'string' is missing in type 'DataRecord'.
+src/hooks/useData.ts(204,17): error TS2345: Argument of type '{ year: number; minId: number; }[]' is not assignable to parameter of type 'SetStateAction<Sheet2Data[]>'.
+  Type '{ year: number; minId: number; }[]' is not assignable to type 'Sheet2Data[]'.
+    Property 'quarter' is missing in type '{ year: number; minId: number; }' but required in type 'Sheet2Data'.
+"
+qwen,tableau_dashboard_refine4_3512,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine4_3512,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_refine4_3512:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+src/components/AnnualByTypeYearChart.tsx(86,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(selector: string): Selection<BaseType, unknown, HTMLElement, any>', gave the following error.
+    Argument of type 'EventTarget' is not assignable to parameter of type 'string'.
+  Overload 2 of 2, '(node: BaseType): Selection<BaseType, unknown, null, undefined>', gave the following error.
+    Argument of type 'EventTarget' is not assignable to parameter of type 'BaseType'.
+      Type 'EventTarget' is missing the following properties from type 'Window': clientInformation, closed, customElements, devicePixelRatio, and 202 more.
+src/components/AnnualByTypeYearChart.tsx(122,42): error TS2339: Property 'data' does not exist on type 'unknown'.
+src/components/AnnualByTypeYearChart.tsx(122,64): error TS2339: Property 'data' does not exist on type 'unknown'.
+src/components/AnnualByTypeYearChart.tsx(122,81): error TS2339: Property 'data' does not exist on type 'unknown'.
+src/components/AnnualByTypeYearChart.tsx(122,106): error TS2339: Property 'data' does not exist on type 'unknown'.
+src/components/InformationSourceChart.tsx(67,41): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable: Iterable<Record<string, string | number>>, accessor: (datum: Record<string, string | number>, index: number, array: Iterable<Record<string, string | number>>) => string): string', gave the following error.
+    Type 'string | number' is not assignable to type 'string'.
+      Type 'number' is not assignable to type 'string'.
+  Overload 2 of 4, '(iterable: Iterable<Record<string, string | number>>, accessor: (datum: Record<string, string | number>, index: number, array: Iterable<Record<string, string | number>>) => Numeric): Numeric', gave the following error.
+    Type 'string | number' is not assignable to type 'Numeric'.
+      Type 'string' is not assignable to type 'Numeric'.
+src/components/InformationSourceChart.tsx(69,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+"
+qwen,tableau_dashboard_refine5_10700,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_10700,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_refine5_10700:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+scripts/validateTableauSource.ts(11,10): error TS2305: Module '""d3-dsv""' has no exported member 'csv'.
+src/components/charts/HorizontalStackedPercentageBar.tsx(104,14): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'Iterable<NumberValue>'.
+  The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
+    Type 'IteratorResult<string, any>' is not assignable to type 'IteratorResult<NumberValue, any>'.
+      Type 'IteratorYieldResult<string>' is not assignable to type 'IteratorResult<NumberValue, any>'.
+        Type 'IteratorYieldResult<string>' is not assignable to type 'IteratorYieldResult<NumberValue>'.
+          Type 'string' is not assignable to type 'NumberValue'.
+src/services/dataService.ts(179,29): error TS2352: Conversion of type 'TransformedDiabetesRecord' to type 'Record<string, unknown>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Index signature for type 'string' is missing in type 'TransformedDiabetesRecord'.
+"
+qwen,tableau_dashboard_refine5_155,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_155,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_157,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_157,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_163,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_163,ok,0.1745833333333333,0.0,True,0,
+qwen,tableau_dashboard_refine5_167,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_167,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_171,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_171,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_177,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_177,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_182,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_182,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_184,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_184,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_186,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_186,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_190,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_190,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_196,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_196,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_201,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_201,ok,0.024999999999999998,0.0,True,0,
+qwen,tableau_dashboard_refine5_204,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_204,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_206,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_206,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_216,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_216,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_225,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_225,ok,0.37054874401913873,0.0,True,0,
+qwen,tableau_dashboard_refine5_391,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_391,ok,0.25060515996578103,0.0,True,0,
+qwen,tableau_dashboard_refine5_405,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_405,error,,,,,"reference episode compilation failed: Build failed for /root/autodl-tmp/chi26-image2code/samples/ours/tableau_dashboard_refine5_405:
+
+> vite_template_tmp@0.0.0 build
+> tsc -b && vite build
+
+scripts/tableau-source-validator.ts(212,7): error TS2322: Type 'unknown[]' is not assignable to type 'Record<string, string | number>[]'.
+  Type 'unknown' is not assignable to type 'Record<string, string | number>'.
+    Index signature for type 'string' is missing in type '{}'.
+scripts/tableau-source-validator.ts(422,9): error TS2561: Object literal may only specify known properties, but 'valid_rows' does not exist in type '{ name: string; validRows: number; hasData: boolean; }'. Did you mean to write 'validRows'?
+scripts/validate-data-ingestion.ts(125,13): error TS2367: This comparison appears to be unintentional because the types '""Quotes"" | ""Delimiter"" | ""FieldMismatch""' and '""error""' have no overlap.
+scripts/validate-data-ingestion.ts(168,35): error TS2304: Cannot find name 'idx'.
+scripts/validate-data-ingestion.ts(178,33): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
+    Argument of type 'unknown' is not assignable to parameter of type 'string | number | Date'.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
+    Argument of type 'unknown' is not assignable to parameter of type 'string | number'.
+scripts/validate-data-ingestion.ts(180,35): error TS2304: Cannot find name 'idx'.
+scripts/validate-data-ingestion.ts(212,34): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
+    Argument of type 'unknown' is not assignable to parameter of type 'string | number | Date'.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
+    Argument of type 'unknown' is not assignable to parameter of type 'string | number'.
+"
+qwen,tableau_dashboard_refine5_415,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_415,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_425,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_425,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_451,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_451,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_455,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_455,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_460,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_460,ok,0.0,0.0,False,0,
+qwen,tableau_dashboard_refine5_483,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_483,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_495,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_495,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_505,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_505,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_520,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_520,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_555,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_555,ok,1.0,0.0,True,0,
+qwen,tableau_dashboard_refine5_565,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_565,ok,0.049999999999999996,0.0,True,0,
+qwen,tableau_dashboard_refine5_586,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_586,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine5_603,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine5_603,error,,,,,"Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(""svg, canvas"") to be visible
+"
+qwen,tableau_dashboard_refine_334,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine_334,ok,0.0,0.0,True,0,
+qwen,tableau_dashboard_refine_5198,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine_5198,ok,0.07053308823529411,0.0,True,0,
+qwen,tableau_dashboard_refine_9517,/root/autodl-tmp/chi26-image2code/samples/qwen/tableau_dashboard_refine_9517,ok,0.0,0.6440492740867338,False,1,

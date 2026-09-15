@@ -1,0 +1,87 @@
+================================================================================
+TABLEAU SOURCE INGESTION FIX - SUMMARY
+================================================================================
+
+OBJECTIVE:
+Make Tableau source ingestion deterministic and correct before QA/build stages.
+
+================================================================================
+ISSUE IDENTIFIED
+================================================================================
+
+The CSV file contains a UTF-8 BOM (Byte Order Mark) character at the start.
+The d3-dsv library's csvParse function was not handling this BOM, causing the
+first header to be parsed as "﻿Row ID" instead of "Row ID".
+
+This caused:
+- Field lookup failures (column names didn't match)
+- Silent parsing errors
+- Potential all-zero charts, NaN filters, and Jan 1970 timelines
+
+================================================================================
+FIX APPLIED
+================================================================================
+
+File: src/services/dataService.ts
+Function: parseCSV()
+
+Added BOM detection and removal before CSV parsing:
+
+  function parseCSV(text: string): RawCSVRow[] {
+    // Remove BOM if present (UTF-8 BOM is 0xEF,0xBB,0xBF)
+    let cleanedText = text;
+    if (text.charCodeAt(0) === 0xFEFF) {
+      cleanedText = text.slice(1);
+    }
+    
+    return csvParse(cleanedText) as unknown as RawCSVRow[];
+  }
+
+================================================================================
+VALIDATION RESULTS
+================================================================================
+
+✅ CSV File: 9,994 rows, 21 columns, 2.46 MB
+✅ BOM Detection: Successfully detected and removed
+✅ Required Fields: All 7 fields from Tableau spec present
+✅ Data Quality: No NaN values, no all-zero measures, no Jan 1970 dates
+✅ Aggregations: All three worksheet aggregations work correctly
+✅ Build Status: Successful (279.56 kB bundle, 90.15 kB gzipped)
+✅ Compliance: All data in public/data/, no violations
+
+================================================================================
+DATA VERIFICATION
+================================================================================
+
+Customer Overview (4 regions):
+- South:     512 customers, $391,721.91 sales
+- West:      686 customers, $725,457.82 sales
+- Central:   629 customers, $501,239.89 sales
+- East:      674 customers, $678,781.24 sales
+
+Scatterplot (1,850 products):
+- Top product: Canon imageCLASS 2200 - $61,599.82 sales
+
+Discount Overview (4 regions):
+- South:     14.7% avg discount
+- West:      10.9% avg discount
+- Central:   24.0% avg discount
+- East:      14.5% avg discount
+
+================================================================================
+PREVENTION OF COMMON ISSUES
+================================================================================
+
+✅ Prevents all-zero charts    - Verified non-zero Sales/Profit/Quantity
+✅ Prevents NaN filters         - All fields parse correctly
+✅ Prevents Jan 1970 timelines  - Dates parse to valid 2015-2018 range
+
+================================================================================
+STATUS
+================================================================================
+
+✅ READY FOR QA AND BUILD STAGES
+
+The Tableau source ingestion is now deterministic and correct.
+
+================================================================================

@@ -1,0 +1,382 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.4.2 (20204.21.0217.1203)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Usertype by age",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[none:usertype:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[avg:Calculation_1234830743585095680:qk]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[avg:Calculation_1234830743585095680:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (GenderNames,usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (GenderNames,usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (GenderNames,usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "crossjoin",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Calculation_1049057258591756288]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[usertype]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Usertype by gender",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk] / [federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk])",
+        "fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[none:usertype:nk]",
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp]",
+          "[none:Calculation_1049057258591756288:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (usertype)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (usertype)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (usertype)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[usertype]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action4]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard-usertype",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Usertype by age",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1103",
+          "w": "97538",
+          "h": "27587",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Usertype by gender",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "28690",
+          "w": "97538",
+          "h": "70207",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard-usertype",
+      "size": {
+        "maxheight": "860",
+        "maxwidth": "650",
+        "minheight": "560",
+        "minwidth": "420"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Usertype by age",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "1103",
+          "w": "97538",
+          "h": "27587",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "Usertype by gender",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "1231",
+          "y": "28690",
+          "w": "97538",
+          "h": "70207",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action4]",
+      "caption": "Filter3",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard-usertype",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard-usertype"
+      },
+      "field_captions": [],
+      "target": "Dashboard-usertype"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Usertype by age",
+      "viewpoint_name": "Usertype by age",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Usertype by gender",
+      "viewpoint_name": "Usertype by gender",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk]",
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

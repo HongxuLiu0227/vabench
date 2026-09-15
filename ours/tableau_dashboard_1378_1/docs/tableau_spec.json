@@ -1,0 +1,502 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "locale": "en_GB",
+      "original-version": "18.1",
+      "source-build": "2018.2.2 (20182.18.0925.2120)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "G: Number of Records per Diagnosis",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "",
+        "fields": []
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]"
+      ],
+      "encodings": {
+        "size": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+            "pane_index": 0
+          }
+        ],
+        "tooltip": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Average Covered Charges :qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Average Medicare Payments:qk]",
+            "pane_index": 0
+          }
+        ],
+        "text": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "mark",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "quantitative",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "613"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "3023"
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "G: Total Discharges vs Diagnosis",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Total Discharges :qk]",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[sum:Total Discharges :qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "fields": [
+          "[federated.1km3k6705qm2tv158tss61u3dc2z]",
+          "[none:DRG Definition - Split 2:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Diagnosis)]"
+      ],
+      "encodings": {
+        "tooltip": [
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Average Covered Charges :qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Average Medicare Payments:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Diagnosis)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1km3k6705qm2tv158tss61u3dc2z].[Action (Diagnosis)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[DRG Definition - Split 2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action2]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "G: Number of Records per Diagnosis and Total Discharges",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "6",
+          "zone_type": "layout-basic",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "G: Total Discharges vs Diagnosis",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "468",
+          "y": "50001",
+          "w": "99064",
+          "h": "49247",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "G: Number of Records per Diagnosis",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "49249",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "G: Number of Records per Diagnosis",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "83850",
+          "y": "1504",
+          "w": "14394",
+          "h": "10338",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "G: Number of Records per Diagnosis and Total Discharges",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "6",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": "6",
+          "zone_type": "layout-basic",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "98496",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "G: Total Discharges vs Diagnosis",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "468",
+          "y": "50001",
+          "w": "99064",
+          "h": "49247",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "G: Number of Records per Diagnosis",
+          "parent_id": "4",
+          "zone_type": "",
+          "x": "468",
+          "y": "752",
+          "w": "99064",
+          "h": "49249",
+          "param": "",
+          "show_title": "false",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "G: Number of Records per Diagnosis",
+          "parent_id": null,
+          "zone_type": "color",
+          "x": "83850",
+          "y": "1504",
+          "w": "14394",
+          "h": "10338",
+          "param": "[federated.1km3k6705qm2tv158tss61u3dc2z].[sum:Number of Records:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "G: Number of Records per Diagnosis and Total Discharges",
+        "type": "sheet",
+        "worksheet": "G: Number of Records per Diagnosis"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "G: Number of Records per Diagnosis and Total Discharges"
+      },
+      "field_captions": [],
+      "target": "G: Number of Records per Diagnosis and Total Discharges"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "G: Total Discharges vs Diagnosis",
+      "viewpoint_name": "G: Total Discharges vs Diagnosis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "G: Number of Records per Diagnosis",
+      "viewpoint_name": "G: Number of Records per Diagnosis",
+      "fields": [
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[Sepsis]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:DRG Definition - Split 2:nk]",
+        "[federated.1km3k6705qm2tv158tss61u3dc2z].[none:Provider State:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

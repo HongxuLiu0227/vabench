@@ -1,0 +1,466 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "800",
+    "maxwidth": "1000",
+    "minheight": "800",
+    "minwidth": "1000"
+  },
+  "worksheets": [
+    {
+      "name": "Items with Category",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "(([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Name:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]) * [federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk])",
+      "cols_field": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk])",
+      "series_field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Items with Category",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "41700",
+          "y": "52625",
+          "w": "6600",
+          "h": "45375",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.417,
+            "y_ratio": 0.5262,
+            "w_ratio": 0.066,
+            "h_ratio": 0.4537
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Location:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Name:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Manager:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]"
+        ]
+      },
+      "zone": {
+        "x": "1600",
+        "y": "52625",
+        "w": "39600",
+        "h": "45250",
+        "aspect_ratio": 0.8751,
+        "normalized": {
+          "x_ratio": 0.016,
+          "y_ratio": 0.5262,
+          "w_ratio": 0.396,
+          "h_ratio": 0.4525
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Pay type with year",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk] / ([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Country:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]))",
+      "cols_field": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[tyr:Sales Date:ok] * [federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk])",
+      "series_field": "",
+      "slices": [],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Years with Product sales",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Country:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Employee Country:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[yr:Sales Date:ok]"
+        ]
+      },
+      "zone": {
+        "x": "49000",
+        "y": "52750",
+        "w": "49400",
+        "h": "45250",
+        "aspect_ratio": 1.0917,
+        "normalized": {
+          "x_ratio": 0.49,
+          "y_ratio": 0.5275,
+          "w_ratio": 0.494,
+          "h_ratio": 0.4525
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales Type",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Sales types",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "35500",
+          "y": "7875",
+          "w": "16300",
+          "h": "7250",
+          "relative_position": "overlay",
+          "normalized": {
+            "x_ratio": 0.355,
+            "y_ratio": 0.0788,
+            "w_ratio": 0.163,
+            "h_ratio": 0.0725
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Channel Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Amt:qk]"
+        ]
+      },
+      "zone": {
+        "x": "1300",
+        "y": "7375",
+        "w": "41800",
+        "h": "43125",
+        "aspect_ratio": 0.9693,
+        "normalized": {
+          "x_ratio": 0.013,
+          "y_ratio": 0.0737,
+          "w_ratio": 0.418,
+          "h_ratio": 0.4313
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored overlay the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sales with Items",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]",
+      "cols_field": "([federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk] / [federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Department:nk])",
+      "series_field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Products Sales",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "89400",
+          "y": "7000",
+          "w": "9200",
+          "h": "9750",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.894,
+            "y_ratio": 0.07,
+            "w_ratio": 0.092,
+            "h_ratio": 0.0975
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Department:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+          "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]"
+        ]
+      },
+      "zone": {
+        "x": "45800",
+        "y": "7375",
+        "w": "43200",
+        "h": "43250",
+        "aspect_ratio": 0.9988,
+        "normalized": {
+          "x_ratio": 0.458,
+          "y_ratio": 0.0737,
+          "w_ratio": 0.432,
+          "h_ratio": 0.4325
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Pay Type",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [
+        "Pay Type"
+      ],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales Type",
+      "viewpoint_name": "Sales Type",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Channel Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Amt:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sales with Items",
+      "viewpoint_name": "Sales with Items",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Department:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Items with Category",
+      "viewpoint_name": "Items with Category",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Location:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Name:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Manager:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[sum:Sales_Qty:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Pay type with year",
+      "viewpoint_name": "Pay type with year",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Customer Country:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Employee Country:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]",
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[yr:Sales Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Items with Category",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Pay Type:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sales Type",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Sales Type:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "Sales with Items",
+      "fields": [
+        "[federated.07pow0c0ytbl181cit8kw1rpmhic].[none:Item Category:nk]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 2,
+      "horizontal_ranked_bar": 1,
+      "custom_tableau_view": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Items with Category",
+      "Sales Type",
+      "Sales with Items"
+    ],
+    "legend_anchor_positions": {
+      "Items with Category": "right",
+      "Sales Type": "overlay",
+      "Sales with Items": "right"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Items with Category",
+      "Pay type with year",
+      "Sales Type",
+      "Sales with Items"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 7
+  }
+}

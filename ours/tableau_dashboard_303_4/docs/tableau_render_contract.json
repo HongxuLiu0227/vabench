@@ -1,0 +1,473 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {},
+  "worksheets": [
+    {
+      "name": "Q2_Weather",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+      "cols_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+      "series_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "No. of Accidents in different Weather conditions",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "86219",
+          "y": "0",
+          "w": "13781",
+          "h": "4348",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.8622,
+            "y_ratio": 0.0,
+            "w_ratio": 0.1378,
+            "h_ratio": 0.0435
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+        ]
+      },
+      "zone": {
+        "x": "0",
+        "y": "6689",
+        "w": "43110",
+        "h": "46321",
+        "aspect_ratio": 0.9307,
+        "normalized": {
+          "x_ratio": 0.0,
+          "y_ratio": 0.0669,
+          "w_ratio": 0.4311,
+          "h_ratio": 0.4632
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Q7_Speed",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number_of_Casualties:qk]",
+      "cols_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+      "series_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Effect of Speed on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "86219",
+          "y": "4348",
+          "w": "13781",
+          "h": "23913",
+          "relative_position": "above",
+          "normalized": {
+            "x_ratio": 0.8622,
+            "y_ratio": 0.0435,
+            "w_ratio": 0.1378,
+            "h_ratio": 0.2391
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]"
+        ]
+      },
+      "zone": {
+        "x": "0",
+        "y": "53010",
+        "w": "43110",
+        "h": "46321",
+        "aspect_ratio": 0.9307,
+        "normalized": {
+          "x_ratio": 0.0,
+          "y_ratio": 0.5301,
+          "w_ratio": 0.4311,
+          "h_ratio": 0.4632
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored above the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 28",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+      "cols_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+      "series_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Road Surface Conditions,Weather Conditions)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [
+        {
+          "text": "Effect of Light condition, Speed and Weather on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": true,
+        "field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "86219",
+          "y": "28261",
+          "w": "13781",
+          "h": "33947",
+          "relative_position": "right",
+          "normalized": {
+            "x_ratio": 0.8622,
+            "y_ratio": 0.2826,
+            "w_ratio": 0.1378,
+            "h_ratio": 0.3395
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]"
+        ]
+      },
+      "zone": {
+        "x": "43110",
+        "y": "53010",
+        "w": "43109",
+        "h": "46321",
+        "aspect_ratio": 0.9307,
+        "normalized": {
+          "x_ratio": 0.4311,
+          "y_ratio": 0.5301,
+          "w_ratio": 0.4311,
+          "h_ratio": 0.4632
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored right the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 29",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[sum:Number of Records:qk]",
+      "cols_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Day_of_Week:qk]",
+      "series_field": "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+      "slices": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions (group),Speed limit,Weather Conditions)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time))]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Action (Light Conditions,HOUR(Time)) 1]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "1",
+        "11"
+      ],
+      "title_runs": [
+        {
+          "text": "Impact of Day of the week on Number of Accidents",
+          "style": {
+            "fontcolor": "#0b2255"
+          }
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[hr:Time:ok]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Day_of_Week:qk]",
+          "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Urban_or_Rural_Area:nk]"
+        ]
+      },
+      "zone": {
+        "x": "43110",
+        "y": "6689",
+        "w": "43109",
+        "h": "46321",
+        "aspect_ratio": 0.9307,
+        "normalized": {
+          "x_ratio": 0.4311,
+          "y_ratio": 0.0669,
+          "w_ratio": 0.4311,
+          "h_ratio": 0.4632
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "No. of Accidents in Light conditions <[Light Conditions (group)]>",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard4",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard4"
+      },
+      "field_captions": [],
+      "target": "Dashboard4"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "No. of Accidents at speed<[Speed_limit]>",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true"
+      },
+      "source": {
+        "dashboard": "Dashboard4",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard4"
+      },
+      "field_captions": [],
+      "target": "Dashboard4"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Q2_Weather",
+      "viewpoint_name": "Q2_Weather",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Q7_Speed",
+      "viewpoint_name": "Q7_Speed",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Accident_Severity:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard4",
+      "viewpoint_name": "Q2_Weather",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard4",
+      "viewpoint_name": "Q7_Speed",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard4",
+      "viewpoint_name": "Sheet 28",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 28",
+      "viewpoint_name": "Sheet 28",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[Light Conditions (group)]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Speed_limit:nk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Weather_Conditions:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 29",
+      "viewpoint_name": "Sheet 29",
+      "fields": [
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[hr:Time:ok]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Day_of_Week:qk]",
+        "[textscan.1ats9d2064dxax15btitd1ugifpt].[none:Urban_or_Rural_Area:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 1,
+      "custom_tableau_view": 1,
+      "horizontal_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Q2_Weather",
+      "Q7_Speed",
+      "Sheet 28"
+    ],
+    "legend_anchor_positions": {
+      "Q2_Weather": "above",
+      "Q7_Speed": "above",
+      "Sheet 28": "right"
+    },
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Q2_Weather",
+      "Q7_Speed",
+      "Sheet 28",
+      "Sheet 29"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 7
+  }
+}

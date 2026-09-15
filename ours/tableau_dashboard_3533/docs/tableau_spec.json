@@ -1,0 +1,1400 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2020.4.0 (20204.20.1106.0321)",
+      "source-platform": "win",
+      "version": "18.1",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "batman vs runs",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[sum:batsman_runs:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:batsman:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[winner]",
+                  "member": "\"Kolkata Knight Riders\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "15",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([batsman_runs])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:batsman:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-manual-selection": "true",
+                          "{http://www.tableausoftware.com/xml/user}ui-manual-selection-all-when-empty": "true",
+                          "{http://www.tableausoftware.com/xml/user}ui-manual-selection-is-empty": "true",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top Batsmen",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "title_text": "Top Batsmen",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:batsman_runs:qk]",
+            "title": "Batsmen Runs"
+          }
+        ],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "team vs total runs",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:total_runs:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[sum:total_runs:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:team1:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "venue",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:venue:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[winner]",
+                  "member": "\"Kolkata Knight Riders\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "10",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "COUNT([__tableau_internal_object_id__].[Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:venue:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Venue (",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        },
+        {
+          "text": "Where Match Take place)",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "9",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "title_text": "Venue (Where Match Take place)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "win by runs",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[sum:win_by_runs:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk] / [federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk])",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:winner:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:batsman:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[winner]",
+                  "member": "\"Kolkata Knight Riders\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "20",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([win_by_runs])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:batsman:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Win By Runs",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "title_text": "Win By Runs",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "win by wickets",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_wickets:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[sum:win_by_wickets:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk] / [federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk])",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:winner:nk]",
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:batsman:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "header",
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[Action (Winner)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[winner]",
+                  "member": "\"Kolkata Knight Riders\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "count": "20",
+                  "end": "top",
+                  "function": "end",
+                  "units": "records",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "end",
+                  "{http://www.tableausoftware.com/xml/user}ui-top-by-field": "true"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "direction": "DESC",
+                      "expression": "SUM([win_by_wickets])",
+                      "function": "order",
+                      "{http://www.tableausoftware.com/xml/user}ui-marker": "order"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "level-members",
+                          "level": "[none:batsman:nk]",
+                          "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                          "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Win By Wickets",
+          "style": {
+            "bold": "true",
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "title_text": "Win By Wickets",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "winner vs count",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[__tableau_internal_object_id__].[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[__tableau_internal_object_id__]",
+          "[cnt:Cricket_DEEF6E2BDA6C44AC874DAF1C301A5129:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:winner:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "worksheet"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Top Winning Teams",
+          "style": {
+            "fontname": "Segoe UI Black",
+            "fontsize": "12",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ],
+      "title_text": "Top Winning Teams",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "winner vs win by runs",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[sum:win_by_runs:qk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[sum:win_by_runs:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]",
+        "fields": [
+          "[federated.132m8ox1o015gq1beqtcj1tugqih]",
+          "[none:winner:nk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "11977",
+          "w": "98614",
+          "h": "86672",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "text",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "10626",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Best Cricket Teams & Players",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Times New Roman",
+                "fontsize": "22",
+                "underline": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "2"
+              }
+            },
+            {
+              "text": "-Imam Abdullah Khan",
+              "style": {
+                "bold": "true",
+                "fontalignment": "2",
+                "fontcolor": "#000000",
+                "fontname": "Times New Roman",
+                "fontsize": "11",
+                "italic": "true",
+                "underline": "true"
+              }
+            }
+          ],
+          "text": "Best Cricket Teams & Players\n-Imam Abdullah Khan"
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "11977",
+          "w": "98614",
+          "h": "86672",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "winner vs count",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "693",
+          "y": "11977",
+          "w": "49261",
+          "h": "43320",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "win by runs",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "49954",
+          "y": "11977",
+          "w": "24686",
+          "h": "43321",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "win by wickets",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "74640",
+          "y": "11977",
+          "w": "24667",
+          "h": "43321",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "batman vs runs",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "693",
+          "y": "55297",
+          "w": "49261",
+          "h": "43352",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "venue",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "49954",
+          "y": "55298",
+          "w": "49353",
+          "h": "43351",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Dashboard 1",
+      "id": "11",
+      "x": "693",
+      "y": "1351",
+      "w": "98614",
+      "h": "10626",
+      "text": "Best Cricket Teams & Players\n-Imam Abdullah Khan",
+      "text_runs": [
+        {
+          "text": "Best Cricket Teams & Players",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#000000",
+            "fontname": "Times New Roman",
+            "fontsize": "22",
+            "underline": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "2"
+          }
+        },
+        {
+          "text": "-Imam Abdullah Khan",
+          "style": {
+            "bold": "true",
+            "fontalignment": "2",
+            "fontcolor": "#000000",
+            "fontname": "Times New Roman",
+            "fontsize": "11",
+            "italic": "true",
+            "underline": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Dashboard 1",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "97298",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "layout-flow",
+          "x": "693",
+          "y": "11977",
+          "w": "98614",
+          "h": "86672",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "13",
+          "zone_type": "text",
+          "x": "693",
+          "y": "1351",
+          "w": "98614",
+          "h": "10626",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Best Cricket Teams & Players",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#000000",
+                "fontname": "Times New Roman",
+                "fontsize": "22",
+                "underline": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "2"
+              }
+            },
+            {
+              "text": "-Imam Abdullah Khan",
+              "style": {
+                "bold": "true",
+                "fontalignment": "2",
+                "fontcolor": "#000000",
+                "fontname": "Times New Roman",
+                "fontsize": "11",
+                "italic": "true",
+                "underline": "true"
+              }
+            }
+          ],
+          "text": "Best Cricket Teams & Players\n-Imam Abdullah Khan"
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "693",
+          "y": "11977",
+          "w": "98614",
+          "h": "86672",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "winner vs count",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "693",
+          "y": "11977",
+          "w": "49261",
+          "h": "43320",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "win by runs",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "49954",
+          "y": "11977",
+          "w": "24686",
+          "h": "43321",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "10",
+          "name": "win by wickets",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "74640",
+          "y": "11977",
+          "w": "24667",
+          "h": "43321",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "batman vs runs",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "693",
+          "y": "55297",
+          "w": "49261",
+          "h": "43352",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "venue",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "49954",
+          "y": "55298",
+          "w": "49353",
+          "h": "43351",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter1",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard 1",
+        "type": "sheet",
+        "worksheet": "winner vs count"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "exclude": "winner vs count",
+        "on-empty": "none",
+        "special-fields": "all",
+        "target": "Dashboard 1"
+      },
+      "field_captions": [],
+      "target": "Dashboard 1"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "winner vs win by runs",
+      "viewpoint_name": "winner vs win by runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "team vs total runs",
+      "viewpoint_name": "team vs total runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "winner vs count",
+      "viewpoint_name": "winner vs count",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "batman vs runs",
+      "viewpoint_name": "batman vs runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Dashboard 1",
+      "viewpoint_name": "venue",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "win by runs",
+      "viewpoint_name": "win by runs",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team1:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:team2:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "win by wickets",
+      "viewpoint_name": "win by wickets",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:batsman:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:dismissal_kind:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:result:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "venue",
+      "viewpoint_name": "venue",
+      "fields": [
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:venue:nk]",
+        "[federated.132m8ox1o015gq1beqtcj1tugqih].[none:winner:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 7,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 1,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 8
+  }
+}

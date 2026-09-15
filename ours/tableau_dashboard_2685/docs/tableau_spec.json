@@ -1,0 +1,567 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "10.4",
+      "source-build": "10.4.2 (10400.17.1206.1554)",
+      "source-platform": "win",
+      "version": "10.4",
+      "{http://www.w3.org/XML/1998/namespace}base": "https://public.tableau.com"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Monthly Profit",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0zqvufs1onacp51cma8k0197mcg4].[sum:Profit:qk]",
+        "fields": [
+          "[federated.0zqvufs1onacp51cma8k0197mcg4]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0zqvufs1onacp51cma8k0197mcg4].[my:Order Date:ok]",
+        "fields": [
+          "[federated.0zqvufs1onacp51cma8k0197mcg4]",
+          "[my:Order Date:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "label"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top  Products",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0zqvufs1onacp51cma8k0197mcg4].[none:Product Name:nk]",
+        "fields": [
+          "[federated.0zqvufs1onacp51cma8k0197mcg4]",
+          "[none:Product Name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0zqvufs1onacp51cma8k0197mcg4].[sum:Profit:qk]",
+        "fields": [
+          "[federated.0zqvufs1onacp51cma8k0197mcg4]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[Action (MY(Order Date))]",
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Products]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Action (MY(Order Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Action (MY(Order Date))]",
+              "context": "true"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[my:Order Date:ok]",
+                  "member": "201009",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Products]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Products]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Product Name]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top Products by Profit",
+          "style": {
+            "fontsize": "26"
+          }
+        }
+      ],
+      "title_text": "Top Products by Profit",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Top Customers",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.0zqvufs1onacp51cma8k0197mcg4].[none:Customer Name:nk]",
+        "fields": [
+          "[federated.0zqvufs1onacp51cma8k0197mcg4]",
+          "[none:Customer Name:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.0zqvufs1onacp51cma8k0197mcg4].[sum:Profit:qk]",
+        "fields": [
+          "[federated.0zqvufs1onacp51cma8k0197mcg4]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[Action (MY(Order Date))]",
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Customers]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Action (MY(Order Date))]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Action (MY(Order Date))]",
+              "context": "true"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[my:Order Date:ok]",
+                  "member": "201009",
+                  "{http://www.tableausoftware.com/xml/user}ui-action-filter": "[Action1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Customers]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Customers]"
+            }
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Top Ten Customers by Profit",
+          "style": {
+            "fontsize": "26"
+          }
+        }
+      ],
+      "title_text": "Top Ten Customers by Profit",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Dashboard Viz",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "625",
+          "y": "1280",
+          "w": "98750",
+          "h": "97440",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "625",
+          "y": "1280",
+          "w": "98750",
+          "h": "97440",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Top Customers",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "41693",
+          "w": "49375",
+          "h": "57027",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Top  Products",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "625",
+          "y": "41693",
+          "w": "49375",
+          "h": "57027",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "Monthly Profit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "625",
+          "y": "1280",
+          "w": "98750",
+          "h": "40413",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Dashboard Viz",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "625",
+          "y": "1280",
+          "w": "98750",
+          "h": "97440",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "625",
+          "y": "1280",
+          "w": "98750",
+          "h": "97440",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "1",
+          "name": "Top Customers",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "41693",
+          "w": "49375",
+          "h": "57027",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Top  Products",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "625",
+          "y": "41693",
+          "w": "49375",
+          "h": "57027",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "4",
+          "name": "Monthly Profit",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "625",
+          "y": "1280",
+          "w": "98750",
+          "h": "40413",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard Viz",
+        "type": "sheet",
+        "worksheet": "Monthly Profit"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard Viz"
+      },
+      "field_captions": [],
+      "target": "Dashboard Viz"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Top Customers",
+      "viewpoint_name": "Top Customers",
+      "fields": [
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Customers]",
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[none:Customer Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Top  Products",
+      "viewpoint_name": "Top  Products",
+      "fields": [
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[Top 10 Products]",
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[none:Product Name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Monthly Profit",
+      "viewpoint_name": "Monthly Profit",
+      "fields": [
+        "[federated.0zqvufs1onacp51cma8k0197mcg4].[yr:Order Date:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 3
+  }
+}

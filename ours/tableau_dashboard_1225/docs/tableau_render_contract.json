@@ -1,0 +1,363 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Total Profits Each Year",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+      "cols_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[yr:Order Date:ok]",
+      "series_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+      "slices": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "50000",
+        "y": "1054",
+        "w": "49407",
+        "h": "48942",
+        "aspect_ratio": 1.0095,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.0105,
+          "w_ratio": 0.4941,
+          "h_ratio": 0.4894
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "Total Profits by Sub-Categories",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk] / [federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk])",
+      "cols_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+      "series_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Profit:qk]",
+      "slices": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [
+        "Copiers",
+        "Phones",
+        "Accessories",
+        "Paper",
+        "Binders",
+        "Chairs",
+        "Storage",
+        "Appliances",
+        "Furnishings",
+        "Envelopes",
+        "Art",
+        "Labels",
+        "Machines",
+        "Fasteners",
+        "Supplies",
+        "Bookcases",
+        "Tables",
+        "%all%"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "593",
+        "y": "49996",
+        "w": "49407",
+        "h": "48950",
+        "aspect_ratio": 1.0093,
+        "normalized": {
+          "x_ratio": 0.0059,
+          "y_ratio": 0.5,
+          "w_ratio": 0.4941,
+          "h_ratio": 0.4895
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise."
+      ]
+    },
+    {
+      "name": "Total Sales Each Year",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+      "cols_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[yr:Order Date:ok]",
+      "series_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+      "slices": [],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Sales and Profits",
+              "type": "sheet",
+              "worksheet": "Total Sales Each Year"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Sales and Profits"
+            },
+            "field_captions": [],
+            "target": "Sales and Profits"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "50000",
+        "y": "49996",
+        "w": "49407",
+        "h": "48950",
+        "aspect_ratio": 1.0093,
+        "normalized": {
+          "x_ratio": 0.5,
+          "y_ratio": 0.5,
+          "w_ratio": 0.4941,
+          "h_ratio": 0.4895
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Total Sales by Sub-Categories",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk] / [federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk])",
+      "cols_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+      "series_field": "[federated.1y5sksx1v7xong1ajck090hysarw].[sum:Sales:qk]",
+      "slices": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[Action (YEAR(Order Date))]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [
+        "Phones",
+        "Chairs",
+        "Storage",
+        "Tables",
+        "Binders",
+        "Machines",
+        "Accessories",
+        "Copiers",
+        "Bookcases",
+        "Appliances",
+        "Furnishings",
+        "Paper",
+        "Supplies",
+        "Art",
+        "Envelopes",
+        "Labels",
+        "Fasteners",
+        "%all%"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk]",
+          "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk]"
+        ]
+      },
+      "zone": {
+        "x": "593",
+        "y": "1054",
+        "w": "49407",
+        "h": "48942",
+        "aspect_ratio": 1.0095,
+        "normalized": {
+          "x_ratio": 0.0059,
+          "y_ratio": 0.0105,
+          "w_ratio": 0.4941,
+          "h_ratio": 0.4894
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Sales and Profits",
+        "type": "sheet",
+        "worksheet": "Total Sales Each Year"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Sales and Profits"
+      },
+      "field_captions": [],
+      "target": "Sales and Profits"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Sales by Sub-Categories",
+      "viewpoint_name": "Total Sales by Sub-Categories",
+      "fields": [
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Category:nk]",
+        "[federated.1y5sksx1v7xong1ajck090hysarw].[none:Sub-Category:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 2,
+      "horizontal_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Total Sales Each Year",
+      "Total Sales by Sub-Categories"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 1
+  }
+}

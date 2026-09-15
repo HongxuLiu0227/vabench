@@ -1,0 +1,424 @@
+{
+  "reference_root": "/Users/liuhongxu/Documents/vabench/ours",
+  "candidate_roots": [
+    "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4"
+  ],
+  "dashboards": [
+    "tableau_dashboard_10845",
+    "tableau_dashboard_147_1"
+  ],
+  "summary": {
+    "cases_total": 2,
+    "cases_ok": 2,
+    "models": [
+      {
+        "model": "gpt-loop-5.4",
+        "cases_total": 2,
+        "cases_ok": 2,
+        "avg_s_data": 0.07577119883040936,
+        "avg_s_int": 0.14875
+      }
+    ],
+    "dashboards": [
+      {
+        "dashboard": "tableau_dashboard_10845",
+        "cases_total": 1,
+        "cases_ok": 1,
+        "avg_s_data": 0.0575,
+        "avg_s_int": 0.2975
+      },
+      {
+        "dashboard": "tableau_dashboard_147_1",
+        "cases_total": 1,
+        "cases_ok": 1,
+        "avg_s_data": 0.09404239766081872,
+        "avg_s_int": 0.0
+      }
+    ]
+  },
+  "cases": [
+    {
+      "model": "gpt-loop-5.4",
+      "dashboard": "tableau_dashboard_10845",
+      "candidate_project": "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4/tableau_dashboard_10845",
+      "status": "ok",
+      "s_data": 0.0575,
+      "s_int": 0.2975,
+      "data_file_match": true,
+      "compiled_episode_count": 4,
+      "error": null
+    },
+    {
+      "model": "gpt-loop-5.4",
+      "dashboard": "tableau_dashboard_147_1",
+      "candidate_project": "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4/tableau_dashboard_147_1",
+      "status": "ok",
+      "s_data": 0.09404239766081872,
+      "s_int": 0.0,
+      "data_file_match": true,
+      "compiled_episode_count": 1,
+      "error": null
+    }
+  ],
+  "full_reports": [
+    {
+      "model": "gpt-loop-5.4",
+      "dashboard": "tableau_dashboard_10845",
+      "status": "ok",
+      "report": {
+        "reference_project": "/Users/liuhongxu/Documents/vabench/ours/tableau_dashboard_10845",
+        "candidate_project": "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4/tableau_dashboard_10845",
+        "data_binding": {
+          "score": 0.0575,
+          "data_file_match": true,
+          "reference_data_files": [
+            "TEMP_1ivazc70g79b4o17qlddt0m84lj6.csv"
+          ],
+          "candidate_data_files": [
+            "TEMP_1ivazc70g79b4o17qlddt0m84lj6.csv"
+          ],
+          "per_view": [
+            {
+              "worksheet_id": "ws_daily_cases",
+              "worksheet_name": "Daily Cases",
+              "score": 0.09999999999999999,
+              "matched_title": "January 20",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            },
+            {
+              "worksheet_id": "ws_top_10",
+              "worksheet_name": "Top 10",
+              "score": 0.03,
+              "matched_title": "North America",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            },
+            {
+              "worksheet_id": "ws_total_cases",
+              "worksheet_name": "Total Cases",
+              "score": 0.075,
+              "matched_title": "United States",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            },
+            {
+              "worksheet_id": "ws_total_deaths",
+              "worksheet_name": "Total Deaths",
+              "score": 0.024999999999999998,
+              "matched_title": "Europe",
+              "missing": false,
+              "diagnostics": [
+                "view title matched heuristically"
+              ]
+            }
+          ]
+        },
+        "compiled_episode_count": 4,
+        "episode_compilation_trace": {
+          "attempted_marks": 8,
+          "skipped_worksheets": []
+        },
+        "interaction": {
+          "score": 0.2975,
+          "episodes": [
+            {
+              "episode_id": "ep_ws_daily_cases",
+              "passed": false,
+              "score": 0.0,
+              "source_worksheet_id": "ws_daily_cases",
+              "source_worksheet_name": "Daily Cases",
+              "selected_mark_title": "2020-11: 164.1",
+              "view_results": [
+                {
+                  "worksheet_id": "ws_top_10",
+                  "worksheet_name": "Top 10",
+                  "passed": false,
+                  "score": 0.0,
+                  "change_detected": false,
+                  "delta_similarity": 0.0,
+                  "reference_changed_count": 10,
+                  "candidate_changed_count": 0,
+                  "diagnostics": [
+                    "affected view did not change enough: ws_top_10",
+                    "post-state mismatch: ws_top_10"
+                  ]
+                },
+                {
+                  "worksheet_id": "ws_total_deaths",
+                  "worksheet_name": "Total Deaths",
+                  "passed": false,
+                  "score": 0.0,
+                  "change_detected": false,
+                  "delta_similarity": 0.0,
+                  "reference_changed_count": 10,
+                  "candidate_changed_count": 0,
+                  "diagnostics": [
+                    "affected view did not change enough: ws_total_deaths",
+                    "post-state mismatch: ws_total_deaths"
+                  ]
+                }
+              ],
+              "diagnostics": [
+                "affected view did not change enough: ws_top_10",
+                "post-state mismatch: ws_top_10",
+                "affected view did not change enough: ws_total_deaths",
+                "post-state mismatch: ws_total_deaths"
+              ]
+            },
+            {
+              "episode_id": "ep_ws_top_10",
+              "passed": false,
+              "score": 0.3875,
+              "source_worksheet_id": "ws_top_10",
+              "source_worksheet_name": "Top 10",
+              "selected_mark_title": null,
+              "view_results": [
+                {
+                  "worksheet_id": "ws_total_cases",
+                  "worksheet_name": "Total Cases",
+                  "passed": false,
+                  "score": 0.49583333333333335,
+                  "change_detected": true,
+                  "delta_similarity": 0.08333333333333333,
+                  "reference_changed_count": 2,
+                  "candidate_changed_count": 10,
+                  "diagnostics": [
+                    "post-state mismatch: ws_total_cases"
+                  ]
+                },
+                {
+                  "worksheet_id": "ws_total_deaths",
+                  "worksheet_name": "Total Deaths",
+                  "passed": false,
+                  "score": 0.2791666666666667,
+                  "change_detected": true,
+                  "delta_similarity": 0.016666666666666666,
+                  "reference_changed_count": 10,
+                  "candidate_changed_count": 1,
+                  "diagnostics": [
+                    "post-state mismatch: ws_total_deaths"
+                  ]
+                }
+              ],
+              "diagnostics": [
+                "post-state mismatch: ws_total_cases",
+                "post-state mismatch: ws_total_deaths"
+              ]
+            },
+            {
+              "episode_id": "ep_ws_total_cases",
+              "passed": false,
+              "score": 0.2791666666666667,
+              "source_worksheet_id": "ws_total_cases",
+              "source_worksheet_name": "Total Cases",
+              "selected_mark_title": null,
+              "view_results": [
+                {
+                  "worksheet_id": "ws_total_deaths",
+                  "worksheet_name": "Total Deaths",
+                  "passed": false,
+                  "score": 0.2791666666666667,
+                  "change_detected": true,
+                  "delta_similarity": 0.016666666666666666,
+                  "reference_changed_count": 10,
+                  "candidate_changed_count": 1,
+                  "diagnostics": [
+                    "post-state mismatch: ws_total_deaths"
+                  ]
+                }
+              ],
+              "diagnostics": [
+                "post-state mismatch: ws_total_deaths"
+              ]
+            },
+            {
+              "episode_id": "ep_ws_total_deaths",
+              "passed": false,
+              "score": 0.5233333333333333,
+              "source_worksheet_id": "ws_total_deaths",
+              "source_worksheet_name": "Total Deaths",
+              "selected_mark_title": null,
+              "view_results": [
+                {
+                  "worksheet_id": "ws_top_10",
+                  "worksheet_name": "Top 10",
+                  "passed": false,
+                  "score": 0.6241666666666666,
+                  "change_detected": true,
+                  "delta_similarity": 0.31666666666666665,
+                  "reference_changed_count": 10,
+                  "candidate_changed_count": 41,
+                  "diagnostics": [
+                    "post-state mismatch: ws_top_10"
+                  ]
+                },
+                {
+                  "worksheet_id": "ws_total_cases",
+                  "worksheet_name": "Total Cases",
+                  "passed": false,
+                  "score": 0.49583333333333335,
+                  "change_detected": true,
+                  "delta_similarity": 0.08333333333333333,
+                  "reference_changed_count": 2,
+                  "candidate_changed_count": 10,
+                  "diagnostics": [
+                    "post-state mismatch: ws_total_cases"
+                  ]
+                },
+                {
+                  "worksheet_id": "ws_daily_cases",
+                  "worksheet_name": "Daily Cases",
+                  "passed": false,
+                  "score": 0.45,
+                  "change_detected": true,
+                  "delta_similarity": 0.0,
+                  "reference_changed_count": 2,
+                  "candidate_changed_count": 14,
+                  "diagnostics": [
+                    "post-state mismatch: ws_daily_cases"
+                  ]
+                }
+              ],
+              "diagnostics": [
+                "post-state mismatch: ws_top_10",
+                "post-state mismatch: ws_total_cases",
+                "post-state mismatch: ws_daily_cases"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "gpt-loop-5.4",
+      "dashboard": "tableau_dashboard_147_1",
+      "status": "ok",
+      "report": {
+        "reference_project": "/Users/liuhongxu/Documents/vabench/ours/tableau_dashboard_147_1",
+        "candidate_project": "/Users/liuhongxu/Documents/vabench/gpt-loop-5.4/tableau_dashboard_147_1",
+        "data_binding": {
+          "score": 0.09404239766081872,
+          "data_file_match": true,
+          "reference_data_files": [
+            "JC-201701-citibike-tripdata.csv",
+            "JC-201702-citibike-tripdata.csv",
+            "JC-201703-citibike-tripdata.csv",
+            "JC-201704-citibike-tripdata.csv",
+            "JC-201705-citibike-tripdata.csv",
+            "JC-201706-citibike-tripdata.csv",
+            "JC-201707-citibike-tripdata.csv",
+            "JC-201708%20citibike-tripdata.csv",
+            "JC-201709-citibike-tripdata.csv",
+            "JC-201710-citibike-tripdata.csv",
+            "JC-201711-citibike-tripdata.csv",
+            "JC-201712-citibike-tripdata.csv"
+          ],
+          "candidate_data_files": [
+            "JC-201701-citibike-tripdata.csv",
+            "JC-201702-citibike-tripdata.csv",
+            "JC-201703-citibike-tripdata.csv",
+            "JC-201704-citibike-tripdata.csv",
+            "JC-201705-citibike-tripdata.csv",
+            "JC-201706-citibike-tripdata.csv",
+            "JC-201707-citibike-tripdata.csv",
+            "JC-201708%20citibike-tripdata.csv",
+            "JC-201709-citibike-tripdata.csv",
+            "JC-201710-citibike-tripdata.csv",
+            "JC-201711-citibike-tripdata.csv",
+            "JC-201712-citibike-tripdata.csv"
+          ],
+          "per_view": [
+            {
+              "worksheet_id": "ws_end_station_map",
+              "worksheet_name": "End Station Map",
+              "score": 0.28212719298245614,
+              "matched_title": "End Station Map",
+              "missing": false,
+              "diagnostics": []
+            },
+            {
+              "worksheet_id": "ws_trips_by_end_station_bottom_10",
+              "worksheet_name": "Trips by End Station-Bottom 10",
+              "score": 0.0,
+              "matched_title": null,
+              "missing": true,
+              "diagnostics": [
+                "candidate view could not be matched"
+              ]
+            },
+            {
+              "worksheet_id": "ws_trips_by_end_station_top_10",
+              "worksheet_name": "Trips by End Station-Top 10",
+              "score": 0.0,
+              "matched_title": null,
+              "missing": true,
+              "diagnostics": [
+                "candidate view could not be matched"
+              ]
+            }
+          ]
+        },
+        "compiled_episode_count": 1,
+        "episode_compilation_trace": {
+          "attempted_marks": 18,
+          "skipped_worksheets": [
+            "ws_trips_by_end_station_bottom_10",
+            "ws_trips_by_end_station_top_10"
+          ]
+        },
+        "interaction": {
+          "score": 0.0,
+          "episodes": [
+            {
+              "episode_id": "ep_ws_end_station_map",
+              "passed": false,
+              "score": 0.0,
+              "source_worksheet_id": "ws_end_station_map",
+              "source_worksheet_name": "End Station Map",
+              "selected_mark_title": "paulus hook, 8182 trips",
+              "view_results": [
+                {
+                  "worksheet_id": "ws_trips_by_end_station_bottom_10",
+                  "worksheet_name": "Trips by End Station-Bottom 10",
+                  "passed": false,
+                  "score": 0.0,
+                  "change_detected": false,
+                  "delta_similarity": 0.0,
+                  "reference_changed_count": 9,
+                  "candidate_changed_count": 0,
+                  "diagnostics": [
+                    "affected view missing: ws_trips_by_end_station_bottom_10"
+                  ]
+                },
+                {
+                  "worksheet_id": "ws_trips_by_end_station_top_10",
+                  "worksheet_name": "Trips by End Station-Top 10",
+                  "passed": false,
+                  "score": 0.0,
+                  "change_detected": false,
+                  "delta_similarity": 0.0,
+                  "reference_changed_count": 9,
+                  "candidate_changed_count": 0,
+                  "diagnostics": [
+                    "affected view missing: ws_trips_by_end_station_top_10"
+                  ]
+                }
+              ],
+              "diagnostics": [
+                "affected view missing: ws_trips_by_end_station_bottom_10",
+                "affected view missing: ws_trips_by_end_station_top_10"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

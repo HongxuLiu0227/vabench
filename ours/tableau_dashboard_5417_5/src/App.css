@@ -1,0 +1,31 @@
+/* App-specific styles for Tableau dashboard */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* PlatMeta styles */
+.plat-meta-container {
+  width: 100%;
+  height: 100%;
+}
+
+.plat-meta-container svg {
+  display: block;
+  width: 100%;
+}
+
+/* PlatCrit and PlatUsers styles */
+.plat-crit-container,
+.plat-users-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+}

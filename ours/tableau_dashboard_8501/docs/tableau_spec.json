@@ -1,0 +1,779 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2019.3.3 (20193.19.1211.1636)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "9a_Min_age_position",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[min:Age:qk]",
+        "fields": [
+          "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)]",
+          "[min:Age:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "fields": [
+          "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)]",
+          "[none:Position:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "caption",
+        "title"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Position]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Position:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-exclude": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Players at the position with Minimal Age",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#ff9da7",
+            "fontname": "Times New Roman",
+            "fontsize": "16"
+          }
+        }
+      ],
+      "title_text": "Players at the position with Minimal Age",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "9b_Max_age_position",
+      "chart_type": "Square",
+      "rows": {
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[max:Age:qk]",
+        "fields": [
+          "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)]",
+          "[max:Age:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "fields": [
+          "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)]",
+          "[none:Position:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Position]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Position:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[none:Position:nk]",
+                      "member": "%null%"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Players at the position with Maximal Age",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#edc948",
+            "fontname": "Times New Roman",
+            "fontsize": "16"
+          }
+        }
+      ],
+      "title_text": "Players at the position with Maximal Age",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "9c_Avg_age_position",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[avg:Age:qk]",
+        "fields": [
+          "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)]",
+          "[avg:Age:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "fields": [
+          "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)]",
+          "[none:Position:nk]"
+        ]
+      },
+      "slices": [
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+        "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+      ],
+      "encodings": {},
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[Action (Position)]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Position]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.17dyhqi0wn62yv1br3v0i16zaf0c (copy)].[none:Position:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[none:Position:nk]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-exclude": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": " Average Age at the Position",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#76b7b2",
+            "fontname": "Times New Roman",
+            "fontsize": "16"
+          }
+        }
+      ],
+      "title_text": "Average Age at the Position",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "9_AGE_POSITION",
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "889",
+          "y": "1600",
+          "w": "98222",
+          "h": "96800",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "title",
+          "x": "889",
+          "y": "1600",
+          "w": "98222",
+          "h": "7000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "889",
+          "y": "8600",
+          "w": "98222",
+          "h": "89800",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "11",
+          "zone_type": "layout-flow",
+          "x": "889",
+          "y": "8600",
+          "w": "98222",
+          "h": "89800",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "889",
+          "y": "8600",
+          "w": "98222",
+          "h": "89800",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "9c_Avg_age_position",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "889",
+          "y": "53495",
+          "w": "98222",
+          "h": "44905",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "9a_Min_age_position",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "889",
+          "y": "8600",
+          "w": "49111",
+          "h": "44895",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "9b_Max_age_position",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "50000",
+          "y": "8600",
+          "w": "49111",
+          "h": "44895",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "9_AGE_POSITION",
+      "size": {
+        "maxheight": "500",
+        "maxwidth": "900",
+        "minheight": "500",
+        "minwidth": "900",
+        "sizing-mode": "fixed"
+      },
+      "zones": [
+        {
+          "id": "2",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "2",
+          "zone_type": "layout-flow",
+          "x": "889",
+          "y": "1600",
+          "w": "98222",
+          "h": "96800",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "16",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "title",
+          "x": "889",
+          "y": "1600",
+          "w": "98222",
+          "h": "7000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "",
+          "parent_id": "15",
+          "zone_type": "layout-flow",
+          "x": "889",
+          "y": "8600",
+          "w": "98222",
+          "h": "89800",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "11",
+          "zone_type": "layout-flow",
+          "x": "889",
+          "y": "8600",
+          "w": "98222",
+          "h": "89800",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "layout-basic",
+          "x": "889",
+          "y": "8600",
+          "w": "98222",
+          "h": "89800",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "9c_Avg_age_position",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "889",
+          "y": "53495",
+          "w": "98222",
+          "h": "44905",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "9a_Min_age_position",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "889",
+          "y": "8600",
+          "w": "49111",
+          "h": "44895",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "13",
+          "name": "9b_Max_age_position",
+          "parent_id": "3",
+          "zone_type": "",
+          "x": "50000",
+          "y": "8600",
+          "w": "49111",
+          "h": "44895",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "9_AGE_POSITION",
+        "type": "sheet",
+        "worksheet": "9a_Min_age_position"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "9_AGE_POSITION"
+      },
+      "field_captions": [],
+      "target": "9_AGE_POSITION"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "9_AGE_POSITION",
+        "type": "sheet",
+        "worksheet": "9b_Max_age_position"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "9_AGE_POSITION"
+      },
+      "field_captions": [],
+      "target": "9_AGE_POSITION"
+    },
+    {
+      "name": "[Action3]",
+      "caption": "Filter 3 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "9_AGE_POSITION",
+        "type": "sheet",
+        "worksheet": "9c_Avg_age_position"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "9_AGE_POSITION"
+      },
+      "field_captions": [],
+      "target": "9_AGE_POSITION"
+    }
+  ],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 3,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 0
+  }
+}

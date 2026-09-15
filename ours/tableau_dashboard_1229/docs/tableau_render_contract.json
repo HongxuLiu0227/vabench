@@ -1,0 +1,715 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Avg. Home Run with Height & Weight ",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[avg:HR:qk]",
+      "cols_field": "([federated.0cm6yct0ncco8t141ckgf003l5lm].[none:height:ok] / [federated.0cm6yct0ncco8t141ckgf003l5lm].[none:weight:ok])",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]",
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action1]",
+            "caption": "Filter 1 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Result Of Final Analysis",
+              "type": "sheet",
+              "worksheet": "Avg. Home Run with Height & Weight "
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Result Of Final Analysis"
+            },
+            "field_captions": [],
+            "target": "Result Of Final Analysis"
+          }
+        ],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Bad/Good Height",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Hight]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Bad/Good Weight",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Batting Avg",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+      "cols_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "OverView",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Multiple Values]",
+      "cols_field": "([federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk] / [federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names])",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Number of Records:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Calculation_41447206859923456:qk]"
+      ],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Number of Records:qk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Calculation_41447206859923456:qk]"
+        ]
+      },
+      "filter_members": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:avg:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:height:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:HR:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Number of Records:qk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[sum:Calculation_41447206859923456:qk]"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Relation btw Weight and Height",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness)]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Handedness,Name)]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Hight]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Weight]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Relation btw Weight and Height with respect to the Handedness",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "",
+      "cols_field": "",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+      "slices": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Action (Height,Weight (lbs))]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [
+          {
+            "name": "[Action2]",
+            "caption": "Filter 2 (generated)",
+            "kind": "filter_action",
+            "activation": {
+              "auto-clear": "true",
+              "type": "on-select"
+            },
+            "source": {
+              "dashboard": "Result Of Final Analysis",
+              "type": "sheet",
+              "worksheet": "Relation btw Weight and Height with respect to the Handedness"
+            },
+            "command": "tsc:tsl-filter",
+            "params": {
+              "special-fields": "all",
+              "target": "Result Of Final Analysis"
+            },
+            "field_captions": [],
+            "target": "Result Of Final Analysis"
+          }
+        ],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Sheet 3",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Multiple Values]",
+      "cols_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+      "series_field": "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+      "slices": [],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+          "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action1]",
+      "caption": "Filter 1 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Result Of Final Analysis",
+        "type": "sheet",
+        "worksheet": "Avg. Home Run with Height & Weight "
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Result Of Final Analysis"
+      },
+      "field_captions": [],
+      "target": "Result Of Final Analysis"
+    },
+    {
+      "name": "[Action2]",
+      "caption": "Filter 2 (generated)",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Result Of Final Analysis",
+        "type": "sheet",
+        "worksheet": "Relation btw Weight and Height with respect to the Handedness"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Result Of Final Analysis"
+      },
+      "field_captions": [],
+      "target": "Result Of Final Analysis"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "OverView",
+      "viewpoint_name": "OverView",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Sheet 3",
+      "viewpoint_name": "Sheet 3",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Batting Avg",
+      "viewpoint_name": "Batting Avg",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bad/Good Height",
+      "viewpoint_name": "Bad/Good Height",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Hight]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Hight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Bad/Good Weight",
+      "viewpoint_name": "Bad/Good Weight",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Relation btw Weight and Height",
+      "viewpoint_name": "Relation btw Weight and Height",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Hight]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[Bad Weight]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Relation btw Weight and Height with respect to the Handedness",
+      "viewpoint_name": "Relation btw Weight and Height with respect to the Handedness",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[io:Bad Weight:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:name:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Avg. Home Run with Height & Weight ",
+      "viewpoint_name": "Avg. Home Run with Height & Weight ",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:handedness:nk]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:height:ok]",
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[none:weight:ok]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Result Of Final Analysis",
+      "viewpoint_name": "OverView",
+      "fields": [
+        "[federated.0cm6yct0ncco8t141ckgf003l5lm].[:Measure Names]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 8,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "vertical_ranked_bar": 2,
+      "custom_tableau_view": 6
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Avg. Home Run with Height & Weight ",
+      "Bad/Good Height",
+      "Bad/Good Weight",
+      "Batting Avg",
+      "OverView",
+      "Relation btw Weight and Height",
+      "Relation btw Weight and Height with respect to the Handedness",
+      "Sheet 3"
+    ],
+    "dashboard_action_count": 2,
+    "highlight_binding_count": 9
+  }
+}

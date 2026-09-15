@@ -1,0 +1,589 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.3.3 (20213.21.1018.0949)",
+      "source-platform": "win",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "P121__scatterplot",
+      "chart_type": "Circle",
+      "rows": {
+        "raw": "[ds_p9517_sample_superstore].[sum:Profit:qk]",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[sum:Profit:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ],
+        "size": [
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Quantity:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[ds_p9517_sample_superstore].[none:Product Name:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Scatterplot",
+          "style": {}
+        }
+      ],
+      "title_text": "Scatterplot",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "P121__bar",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([ds_p9517_sample_superstore].[none:Category:nk] / [ds_p9517_sample_superstore].[none:Sub-Category:nk])",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[none:Category:nk]",
+          "[ds_p9517_sample_superstore]",
+          "[none:Sub-Category:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "mark"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Bar",
+          "style": {}
+        }
+      ],
+      "title_text": "Bar",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "P1225__total_sales_each_year",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[sum:Sales:qk]"
+        ]
+      },
+      "cols": {
+        "raw": "[ds_p9517_sample_superstore].[yr:Order Date:ok]",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[yr:Order Date:ok]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Total Sales Each Year",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Sales Each Year",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "P1968__customer_overview",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[ds_p9517_sample_superstore].[none:Region:nk]",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[none:Region:nk]"
+        ]
+      },
+      "cols": {
+        "raw": "([ds_p9517_sample_superstore].[:Measure Names] * [ds_p9517_sample_superstore].[Multiple Values])",
+        "fields": [
+          "[ds_p9517_sample_superstore]",
+          "[:Measure Names]",
+          "[ds_p9517_sample_superstore]",
+          "[Multiple Values]"
+        ]
+      },
+      "slices": [],
+      "encodings": {
+        "color": [
+          {
+            "column": "[ds_p9517_sample_superstore].[usr:Calculation_5571209093911105:qk]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[ds_p9517_sample_superstore].[ctd:Customer Name:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Quantity:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p9517_sample_superstore].[usr:Sales:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p9517_sample_superstore].[sum:Profit:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[ds_p9517_sample_superstore].[usr:Calculation_5571209093911105:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "mark",
+        "quick-filter"
+      ],
+      "table_calc": [],
+      "manual_sort": [
+        {
+          "column": "[ds_p9517_sample_superstore].[:Measure Names]",
+          "direction": "ASC",
+          "buckets": [
+            "[ds_p9517_sample_superstore].[usr:Sales:qk]",
+            "[ds_p9517_sample_superstore].[sum:Sales:qk]",
+            "[ds_p9517_sample_superstore].[sum:Quantity:qk]",
+            "[ds_p9517_sample_superstore].[sum:Profit:qk]",
+            "[ds_p9517_sample_superstore].[usr:Calculation_5571209093911105:qk]"
+          ]
+        }
+      ],
+      "filter": [],
+      "title_runs": [
+        {
+          "text": "Customer Overview",
+          "style": {}
+        }
+      ],
+      "title_text": "Customer Overview",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Synthetic Dashboard 155",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "P121__scatterplot",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "P121__bar",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "P1225__total_sales_each_year",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "P1968__customer_overview",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboards": [
+    {
+      "name": "Synthetic Dashboard 155",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "593",
+          "y": "1054",
+          "w": "98814",
+          "h": "97892",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "P121__scatterplot",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "11",
+          "name": "P121__bar",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "12",
+          "name": "P1225__total_sales_each_year",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "593",
+          "y": "49996",
+          "w": "49407",
+          "h": "48950",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "P1968__customer_overview",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "50000",
+          "y": "1054",
+          "w": "49407",
+          "h": "48942",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [],
+  "highlight_bindings": [],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 0,
+    "dashboard_action_count": 0,
+    "highlight_binding_count": 0
+  }
+}

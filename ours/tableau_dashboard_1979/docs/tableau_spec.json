@@ -1,0 +1,1934 @@
+{
+  "schema_version": "tableau_spec_v1",
+  "workbook": {
+    "tag": "workbook",
+    "attributes": {
+      "original-version": "18.1",
+      "source-build": "2021.3.3 (20213.21.1018.0949)",
+      "source-platform": "mac",
+      "version": "18.1"
+    }
+  },
+  "worksheets": [
+    {
+      "name": "Breakdown of Where Tourism Demand Comes From - ",
+      "chart_type": "Pie",
+      "rows": {
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[Location (group) 1]"
+        ]
+      },
+      "cols": {
+        "raw": "",
+        "fields": []
+      },
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+            "pane_index": 0
+          }
+        ],
+        "wedge-size": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[pcto:sum:Value:qk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "cell",
+        "label",
+        "worksheet"
+      ],
+      "table_calc": [
+        {
+          "ordering-type": "Rows",
+          "type": "PctTotal",
+          "column_instance": "[pcto:sum:Value:qk]"
+        }
+      ],
+      "manual_sort": [
+        {
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "direction": "ASC",
+          "buckets": [
+            "British Columbia",
+            "Ontario",
+            "Alberta",
+            "Quebec"
+          ]
+        }
+      ],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-manual-selection-all-when-empty": "true",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[Location (group) 1]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "member",
+                      "level": "[Location (group) 1]",
+                      "member": "\"Other\""
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Indicators:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "union"
+                    },
+                    "children": [
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:Indicators:nk]",
+                          "member": "\"Exports\""
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:Indicators:nk]",
+                          "member": "\"Imports\""
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "function": "member",
+                          "level": "[none:Indicators:nk]",
+                          "member": "\"International imports\""
+                        }
+                      },
+                      {
+                        "tag": "groupfilter",
+                        "attributes": {
+                          "from": "\"Interprovincial imports\"",
+                          "function": "range",
+                          "level": "[none:Indicators:nk]",
+                          "to": "\"Tourism product ratio\""
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [],
+      "title_text": "",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Provinces with Highest Demand (2017)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Latitude (generated)]",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[Latitude (generated)]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Longitude (generated)]",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[Longitude (generated)]"
+        ]
+      },
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "encodings": {
+        "lod": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+            "pane_index": 0
+          },
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+            "pane_index": 0
+          }
+        ],
+        "color": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+            "pane_index": 0
+          }
+        ],
+        "geometry": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Geometry (generated)]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label",
+        "mark",
+        "legend-title",
+        "legend-title-text",
+        "map-layer",
+        "map",
+        "map-data-layer"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:Indicators:nk]",
+                  "member": "\"Total demand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "quantitative",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "quantitative",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+              "included-values": "in-range"
+            },
+            "children": [
+              {
+                "tag": "min",
+                "attributes": {},
+                "text": "#2017-01-01 00:00:00#"
+              },
+              {
+                "tag": "max",
+                "attributes": {},
+                "text": "#2017-01-01 00:00:00#"
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Provinces with Highest Tourism Demand",
+          "style": {
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": " ",
+          "style": {}
+        }
+      ],
+      "title_text": "Provinces with Highest Tourism Demand",
+      "axis_titles": {
+        "rows": [],
+        "cols": [],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": "auto"
+      }
+    },
+    {
+      "name": "Provincial Tourism Growth Rates (2014-17)",
+      "chart_type": "Automatic",
+      "rows": {
+        "raw": "([federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk] * [federated.1jxzz030pj39fl1gdog6e0w941ap].[pcdf:max:Value:qk:1])",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[none:Indicators:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[pcdf:max:Value:qk:1]"
+        ]
+      },
+      "cols": {
+        "raw": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[tyr:Year:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+            "pane_index": 0
+          }
+        ],
+        "lod": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "label",
+        "worksheet",
+        "legend-title-text"
+      ],
+      "table_calc": [
+        {
+          "diff-options": "Relative,Compounded",
+          "ordering-field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Year]",
+          "ordering-type": "Field",
+          "type": "PctDiff",
+          "column_instance": "[pcdf:max:Value:qk:1]"
+        }
+      ],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:Indicators:nk]",
+                  "member": "\"Total demand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Provinical Tourism Growth Rates",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "title_text": "Provinical Tourism Growth Rates",
+      "axis_titles": {
+        "rows": [
+          {
+            "field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[pcdf:max:Value:qk:1]",
+            "title": "Tourism Demand Growth Rates"
+          }
+        ],
+        "cols": [
+          {
+            "field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+            "title": "Year (2014 - 2017)"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": ""
+      }
+    },
+    {
+      "name": "Total Tourism Demand (2014-17)",
+      "chart_type": "Bar",
+      "rows": {
+        "raw": "([federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk] / [federated.1jxzz030pj39fl1gdog6e0w941ap].[yr:Year:ok])",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[none:Location:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[yr:Year:ok]"
+        ]
+      },
+      "cols": {
+        "raw": "([federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk] * [federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk])",
+        "fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[none:Indicators:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap]",
+          "[max:Value:qk]"
+        ]
+      },
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+      ],
+      "encodings": {
+        "color": [
+          {
+            "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+            "pane_index": 0
+          }
+        ]
+      },
+      "reference_lines": [],
+      "style_rule_elements": [
+        "axis",
+        "header",
+        "label",
+        "worksheet",
+        "dropline",
+        "gridline",
+        "zeroline",
+        "legend-title",
+        "legend-title-text"
+      ],
+      "table_calc": [],
+      "manual_sort": [],
+      "filter": [
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "level-members",
+                  "level": "[Location (group) 1]",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "all",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "member",
+                  "level": "[none:Indicators:nk]",
+                  "member": "\"Total demand\"",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "relevant",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "inclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "class": "categorical",
+          "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+          "expression": {
+            "tag": "filter",
+            "attributes": {
+              "class": "categorical",
+              "column": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]"
+            },
+            "children": [
+              {
+                "tag": "groupfilter",
+                "attributes": {
+                  "function": "except",
+                  "{http://www.tableausoftware.com/xml/user}ui-domain": "database",
+                  "{http://www.tableausoftware.com/xml/user}ui-enumeration": "exclusive",
+                  "{http://www.tableausoftware.com/xml/user}ui-marker": "enumerate"
+                },
+                "children": [
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "level-members",
+                      "level": "[none:Location:nk]"
+                    }
+                  },
+                  {
+                    "tag": "groupfilter",
+                    "attributes": {
+                      "function": "empty-level",
+                      "member": "[none:Location:nk]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title_runs": [
+        {
+          "text": "Total Tourism Demand  (2014-17)",
+          "style": {
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "title_text": "Total Tourism Demand (2014-17)",
+      "axis_titles": {
+        "rows": [],
+        "cols": [
+          {
+            "field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+            "title": "Total Tourism Demand (In Millions)"
+          }
+        ],
+        "other": []
+      },
+      "legend_spec": {
+        "has_legend_rule": false,
+        "legend_fields": [],
+        "legend_title": "",
+        "legend_title_alignment": "auto"
+      }
+    }
+  ],
+  "dashboard_zones": [
+    {
+      "dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "667",
+          "y": "1276",
+          "w": "98666",
+          "h": "97448",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "title",
+          "x": "667",
+          "y": "1276",
+          "w": "98666",
+          "h": "9569",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "667",
+          "y": "10845",
+          "w": "98666",
+          "h": "87879",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "667",
+          "y": "10845",
+          "w": "73083",
+          "h": "87879",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "87879",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Total Tourism Demand (2014-17)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "667",
+          "y": "10845",
+          "w": "35811",
+          "h": "46723",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Provincial Tourism Growth Rates (2014-17)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "36478",
+          "y": "10845",
+          "w": "37272",
+          "h": "46723",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "text",
+          "x": "37202",
+          "y": "57568",
+          "w": "36548",
+          "h": "41156",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Conclusion:",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#59a14f"
+              }
+            },
+            {
+              "text": "\n\n",
+              "style": {}
+            },
+            {
+              "text": "Q#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#59a14f"
+              }
+            },
+            {
+              "text": "\n\n",
+              "style": {}
+            },
+            {
+              "text": "Q#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces.",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#59a14f"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            }
+          ],
+          "text": "Conclusion:\n\nQ#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*\n\nQ#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces."
+        },
+        {
+          "id": "45",
+          "name": "Breakdown of Where Tourism Demand Comes From - ",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "667",
+          "y": "57568",
+          "w": "36535",
+          "h": "41156",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-basic",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "87879",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "46710",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "73750",
+          "y": "57555",
+          "w": "25583",
+          "h": "41169",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "text",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "21691",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "HOW TO INTERACT WITH DASHBOARD: ",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Hover mouse for certain stats",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "or ",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Use these Legends below to interact",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "-",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "reset by double clicking (all)",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            }
+          ],
+          "text": "HOW TO INTERACT WITH DASHBOARD: \nHover mouse for certain stats\nor \nUse these Legends below to interact\n-\nreset by double clicking (all)"
+        },
+        {
+          "id": "23",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "bitmap",
+          "x": "73750",
+          "y": "32536",
+          "w": "25583",
+          "h": "25019",
+          "param": "Image/red-canoes-of-lake-louise-banff-national-park-canada-ola-allen.jpeg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Total Tourism Demand (2014-17)",
+          "parent_id": "25",
+          "zone_type": "filter",
+          "x": "73750",
+          "y": "57555",
+          "w": "25583",
+          "h": "15480",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Total Tourism Demand (2014-17)",
+          "parent_id": "25",
+          "zone_type": "color",
+          "x": "73750",
+          "y": "73035",
+          "w": "25583",
+          "h": "15480",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "46",
+          "name": "Breakdown of Where Tourism Demand Comes From - ",
+          "parent_id": "25",
+          "zone_type": "color",
+          "x": "73750",
+          "y": "88515",
+          "w": "25583",
+          "h": "6700",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "47",
+          "name": "Breakdown of Where Tourism Demand Comes From - ",
+          "parent_id": "25",
+          "zone_type": "size",
+          "x": "73750",
+          "y": "95215",
+          "w": "25583",
+          "h": "3509",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[pcto:sum:Value:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "id": "30",
+      "x": "37202",
+      "y": "57568",
+      "w": "36548",
+      "h": "41156",
+      "text": "Conclusion:\n\nQ#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*\n\nQ#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces.",
+      "text_runs": [
+        {
+          "text": "Conclusion:",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#59a14f"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {}
+        },
+        {
+          "text": "Q#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#59a14f"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {}
+        },
+        {
+          "text": "Q#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces.",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#59a14f"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "id": "20",
+      "x": "73750",
+      "y": "10845",
+      "w": "25583",
+      "h": "21691",
+      "text": "HOW TO INTERACT WITH DASHBOARD: \nHover mouse for certain stats\nor \nUse these Legends below to interact\n-\nreset by double clicking (all)",
+      "text_runs": [
+        {
+          "text": "HOW TO INTERACT WITH DASHBOARD: ",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Hover mouse for certain stats",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "or ",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Use these Legends below to interact",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "-",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "reset by double clicking (all)",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "size": {
+        "sizing-mode": "automatic"
+      },
+      "zones": [
+        {
+          "id": "4",
+          "name": "",
+          "parent_id": null,
+          "zone_type": "layout-basic",
+          "x": "0",
+          "y": "0",
+          "w": "100000",
+          "h": "100000",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "8"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "14",
+          "name": "",
+          "parent_id": "4",
+          "zone_type": "layout-flow",
+          "x": "667",
+          "y": "1276",
+          "w": "98666",
+          "h": "97448",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "15",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "title",
+          "x": "667",
+          "y": "1276",
+          "w": "98666",
+          "h": "9569",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "7",
+          "name": "",
+          "parent_id": "14",
+          "zone_type": "layout-flow",
+          "x": "667",
+          "y": "10845",
+          "w": "98666",
+          "h": "87879",
+          "param": "horz",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "5",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "667",
+          "y": "10845",
+          "w": "73083",
+          "h": "87879",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "18",
+          "name": "",
+          "parent_id": "7",
+          "zone_type": "layout-basic",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "87879",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "3",
+          "name": "Total Tourism Demand (2014-17)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "667",
+          "y": "10845",
+          "w": "35811",
+          "h": "46723",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "9",
+          "name": "Provincial Tourism Growth Rates (2014-17)",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "36478",
+          "y": "10845",
+          "w": "37272",
+          "h": "46723",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "30",
+          "name": "",
+          "parent_id": "5",
+          "zone_type": "text",
+          "x": "37202",
+          "y": "57568",
+          "w": "36548",
+          "h": "41156",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "Conclusion:",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#59a14f"
+              }
+            },
+            {
+              "text": "\n\n",
+              "style": {}
+            },
+            {
+              "text": "Q#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#59a14f"
+              }
+            },
+            {
+              "text": "\n\n",
+              "style": {}
+            },
+            {
+              "text": "Q#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces.",
+              "style": {
+                "bold": "true",
+                "fontcolor": "#59a14f"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {}
+            }
+          ],
+          "text": "Conclusion:\n\nQ#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*\n\nQ#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces."
+        },
+        {
+          "id": "45",
+          "name": "Breakdown of Where Tourism Demand Comes From - ",
+          "parent_id": "5",
+          "zone_type": "",
+          "x": "667",
+          "y": "57568",
+          "w": "36535",
+          "h": "41156",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "24",
+          "name": "",
+          "parent_id": "18",
+          "zone_type": "layout-basic",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "87879",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "19",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "46710",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "25",
+          "name": "",
+          "parent_id": "24",
+          "zone_type": "layout-flow",
+          "x": "73750",
+          "y": "57555",
+          "w": "25583",
+          "h": "41169",
+          "param": "vert",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {},
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "20",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "text",
+          "x": "73750",
+          "y": "10845",
+          "w": "25583",
+          "h": "21691",
+          "param": "",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [
+            {
+              "text": "HOW TO INTERACT WITH DASHBOARD: ",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Hover mouse for certain stats",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "or ",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "Use these Legends below to interact",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "-",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            },
+            {
+              "text": "reset by double clicking (all)",
+              "style": {
+                "bold": "true",
+                "fontalignment": "1",
+                "fontcolor": "#59a14f",
+                "fontname": "Tableau Bold",
+                "fontsize": "8",
+                "italic": "true"
+              }
+            },
+            {
+              "text": "\n",
+              "style": {
+                "fontalignment": "1"
+              }
+            }
+          ],
+          "text": "HOW TO INTERACT WITH DASHBOARD: \nHover mouse for certain stats\nor \nUse these Legends below to interact\n-\nreset by double clicking (all)"
+        },
+        {
+          "id": "23",
+          "name": "",
+          "parent_id": "19",
+          "zone_type": "bitmap",
+          "x": "73750",
+          "y": "32536",
+          "w": "25583",
+          "h": "25019",
+          "param": "Image/red-canoes-of-lake-louise-banff-national-park-canada-ola-allen.jpeg",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "17",
+          "name": "Total Tourism Demand (2014-17)",
+          "parent_id": "25",
+          "zone_type": "filter",
+          "x": "73750",
+          "y": "57555",
+          "w": "25583",
+          "h": "15480",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "8",
+          "name": "Total Tourism Demand (2014-17)",
+          "parent_id": "25",
+          "zone_type": "color",
+          "x": "73750",
+          "y": "73035",
+          "w": "25583",
+          "h": "15480",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "46",
+          "name": "Breakdown of Where Tourism Demand Comes From - ",
+          "parent_id": "25",
+          "zone_type": "color",
+          "x": "73750",
+          "y": "88515",
+          "w": "25583",
+          "h": "6700",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        },
+        {
+          "id": "47",
+          "name": "Breakdown of Where Tourism Demand Comes From - ",
+          "parent_id": "25",
+          "zone_type": "size",
+          "x": "73750",
+          "y": "95215",
+          "w": "25583",
+          "h": "3509",
+          "param": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[pcto:sum:Value:qk]",
+          "show_title": "",
+          "legend_item_layout": "",
+          "pane_specification_id": "0",
+          "zone_style": {
+            "border-color": "#000000",
+            "border-style": "none",
+            "border-width": "0",
+            "margin": "4"
+          },
+          "text_runs": [],
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_6BD579987B534E5197CAF25E50D93815]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Location (group) 1",
+        "target": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?"
+      },
+      "field_captions": [
+        "Location (group) 1"
+      ],
+      "target": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Tourism Demand (2014-17)",
+      "viewpoint_name": "Total Tourism Demand (2014-17)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Products:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Provincial Tourism Growth Rates (2014-17)",
+      "viewpoint_name": "Provincial Tourism Growth Rates (2014-17)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Provinces with Highest Demand (2017)",
+      "viewpoint_name": "Provinces with Highest Demand (2017)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "viewpoint_name": "Breakdown of Where Tourism Demand Comes From - ",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "viewpoint_name": "Total Tourism Demand (2014-17)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Breakdown of Where Tourism Demand Comes From - ",
+      "viewpoint_name": "Breakdown of Where Tourism Demand Comes From - ",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_count": 1,
+    "dashboard_text_zone_count": 2,
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 6
+  }
+}

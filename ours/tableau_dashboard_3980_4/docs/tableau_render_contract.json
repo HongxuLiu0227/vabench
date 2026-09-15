@@ -1,0 +1,204 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "maxheight": "860",
+    "maxwidth": "650",
+    "minheight": "560",
+    "minwidth": "420"
+  },
+  "worksheets": [
+    {
+      "name": "Usertype by age",
+      "dashboard_name": "Dashboard-usertype",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]",
+      "cols_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[avg:Calculation_1234830743585095680:qk]",
+      "series_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]",
+      "slices": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (GenderNames,usertype)]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "1103",
+        "w": "97538",
+        "h": "27587",
+        "aspect_ratio": 3.5357,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.011,
+          "w_ratio": 0.9754,
+          "h_ratio": 0.2759
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Usertype by gender",
+      "dashboard_name": "Dashboard-usertype",
+      "chart_intent": "vertical_ranked_bar",
+      "rows_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[__tableau_internal_object_id__].[cnt:_6A3F8AF9D57442BFAC88113923A51491:qk]",
+      "cols_field": "([federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk] / [federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk])",
+      "series_field": "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk]",
+      "slices": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[Action (usertype)]"
+      ],
+      "bar_orientation": "vertical",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk]",
+          "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]"
+        ]
+      },
+      "zone": {
+        "x": "1231",
+        "y": "28690",
+        "w": "97538",
+        "h": "70207",
+        "aspect_ratio": 1.3893,
+        "normalized": {
+          "x_ratio": 0.0123,
+          "y_ratio": 0.2869,
+          "w_ratio": 0.9754,
+          "h_ratio": 0.7021
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [],
+  "dashboard_actions": [
+    {
+      "name": "[Action4]",
+      "caption": "Filter3",
+      "kind": "filter_action",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Dashboard-usertype",
+        "type": "sheet"
+      },
+      "command": "tsc:tsl-filter",
+      "params": {
+        "special-fields": "all",
+        "target": "Dashboard-usertype"
+      },
+      "field_captions": [],
+      "target": "Dashboard-usertype"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Usertype by age",
+      "viewpoint_name": "Usertype by age",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Usertype by gender",
+      "viewpoint_name": "Usertype by gender",
+      "fields": [
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:Calculation_1049057258591756288:nk]",
+        "[federated.1uacfzz159odbl1dth55b0zhj2kp].[none:usertype:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 2,
+    "dashboard_text_zone_count": 0,
+    "intent_counts": {
+      "horizontal_ranked_bar": 1,
+      "vertical_ranked_bar": 1
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [],
+    "legend_anchor_positions": {},
+    "axis_title_worksheets": [],
+    "interaction_worksheets": [
+      "Usertype by age",
+      "Usertype by gender"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 2
+  }
+}

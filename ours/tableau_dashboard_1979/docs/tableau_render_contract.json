@@ -1,0 +1,601 @@
+{
+  "schema_version": "tableau_render_contract_v1",
+  "dashboard_size": {
+    "sizing-mode": "automatic"
+  },
+  "worksheets": [
+    {
+      "name": "Breakdown of Where Tourism Demand Comes From - ",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+      "cols_field": "",
+      "series_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [
+        "British Columbia",
+        "Ontario",
+        "Alberta",
+        "Quebec"
+      ],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Other",
+        "Exports",
+        "Imports",
+        "International imports",
+        "Interprovincial imports",
+        "Tourism product ratio"
+      ],
+      "title_runs": [],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": []
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible."
+      ]
+    },
+    {
+      "name": "Provinces with Highest Demand (2017)",
+      "chart_intent": "custom_tableau_view",
+      "rows_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Latitude (generated)]",
+      "cols_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Longitude (generated)]",
+      "series_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "bar_orientation": "unknown",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Total demand"
+      ],
+      "title_runs": [
+        {
+          "text": "Provinces with Highest Tourism Demand",
+          "style": {
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": " ",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+        ]
+      },
+      "zone": {
+        "x": "",
+        "y": "",
+        "w": "",
+        "h": "",
+        "aspect_ratio": null,
+        "normalized": {}
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Provincial Tourism Growth Rates (2014-17)",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk] * [federated.1jxzz030pj39fl1gdog6e0w941ap].[pcdf:max:Value:qk:1])",
+      "cols_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]",
+      "series_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Total demand"
+      ],
+      "title_runs": [
+        {
+          "text": "Provinical Tourism Growth Rates",
+          "style": {
+            "fontsize": "12"
+          }
+        }
+      ],
+      "axis_title_rows": [
+        "Tourism Demand Growth Rates"
+      ],
+      "axis_title_cols": [
+        "Year (2014 - 2017)"
+      ],
+      "legend": {
+        "required": false,
+        "field": "",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "",
+          "y": "",
+          "w": "",
+          "h": "",
+          "relative_position": "unknown",
+          "normalized": {}
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+        ]
+      },
+      "zone": {
+        "x": "36478",
+        "y": "10845",
+        "w": "37272",
+        "h": "46723",
+        "aspect_ratio": 0.7977,
+        "normalized": {
+          "x_ratio": 0.3648,
+          "y_ratio": 0.1085,
+          "w_ratio": 0.3727,
+          "h_ratio": 0.4672
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    },
+    {
+      "name": "Total Tourism Demand (2014-17)",
+      "chart_intent": "horizontal_ranked_bar",
+      "rows_field": "([federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk] / [federated.1jxzz030pj39fl1gdog6e0w941ap].[yr:Year:ok])",
+      "cols_field": "([federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk] * [federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk])",
+      "series_field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+      "slices": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+      ],
+      "bar_orientation": "horizontal",
+      "category_order": [],
+      "series_order": [],
+      "stacking": {
+        "normalized_to_percent": false,
+        "aggregate_by_series_field": false,
+        "expected_series_values": []
+      },
+      "filter_members": [
+        "Total demand",
+        "[none:Location:nk]"
+      ],
+      "title_runs": [
+        {
+          "text": "Total Tourism Demand  (2014-17)",
+          "style": {
+            "fontsize": "12"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ],
+      "axis_title_rows": [],
+      "axis_title_cols": [
+        "Total Tourism Demand (In Millions)"
+      ],
+      "legend": {
+        "required": true,
+        "field": "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+        "layout": "",
+        "title": "",
+        "zone": {
+          "x": "73750",
+          "y": "73035",
+          "w": "25583",
+          "h": "15480",
+          "relative_position": "below",
+          "normalized": {
+            "x_ratio": 0.7375,
+            "y_ratio": 0.7304,
+            "w_ratio": 0.2558,
+            "h_ratio": 0.1548
+          }
+        }
+      },
+      "interaction": {
+        "actions": [],
+        "highlight_fields": [
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Products:nk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Year:qk]",
+          "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+        ]
+      },
+      "zone": {
+        "x": "667",
+        "y": "10845",
+        "w": "35811",
+        "h": "46723",
+        "aspect_ratio": 0.7665,
+        "normalized": {
+          "x_ratio": 0.0067,
+          "y_ratio": 0.1085,
+          "w_ratio": 0.3581,
+          "h_ratio": 0.4672
+        }
+      },
+      "fidelity_rules": [
+        "Preserve title wording and emphasis from title_runs.",
+        "Preserve full category labels; no clipped leading/trailing characters.",
+        "Use dynamic chart margins so axis labels are fully visible.",
+        "Render axis titles exactly as defined in the Tableau axis style rules.",
+        "Sort bars descending by displayed measure unless manual_sort dictates otherwise.",
+        "Render the worksheet legend in the dashboard with the same category mapping.",
+        "Keep legend anchored below the worksheet based on dashboard zones; avoid global legend hoisting.",
+        "Preserve on-select highlight interactions and keep auto-clear behavior for selection state."
+      ]
+    }
+  ],
+  "dashboard_text_zones": [
+    {
+      "dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "id": "30",
+      "x": "37202",
+      "y": "57568",
+      "w": "36548",
+      "h": "41156",
+      "text": "Conclusion:\n\nQ#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*\n\nQ#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces.",
+      "text_runs": [
+        {
+          "text": "Conclusion:",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#59a14f"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {}
+        },
+        {
+          "text": "Q#1 Highest Growth: Of the selected high demand provinces highlighted British Columbia has the highest tourism demand growth rate of 25% from 2014-2017. *note: Although technically the smaller greyed out provinces show a higher growth rate, their total demand compared to my chosen coloured privinces are so small I chose not to focus on them*",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#59a14f"
+          }
+        },
+        {
+          "text": "\n\n",
+          "style": {}
+        },
+        {
+          "text": "Q#2 Where are majority of tourist origins: Using BC as an example, most of the tourists come from within the province (domestic) or internationally. About 41% and 38%  each respectively and BC only has about 20% of tourist demand from other canadian provinces.",
+          "style": {
+            "bold": "true",
+            "fontcolor": "#59a14f"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {}
+        }
+      ]
+    },
+    {
+      "dashboard_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "id": "20",
+      "x": "73750",
+      "y": "10845",
+      "w": "25583",
+      "h": "21691",
+      "text": "HOW TO INTERACT WITH DASHBOARD: \nHover mouse for certain stats\nor \nUse these Legends below to interact\n-\nreset by double clicking (all)",
+      "text_runs": [
+        {
+          "text": "HOW TO INTERACT WITH DASHBOARD: ",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Hover mouse for certain stats",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "or ",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "Use these Legends below to interact",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "-",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        },
+        {
+          "text": "reset by double clicking (all)",
+          "style": {
+            "bold": "true",
+            "fontalignment": "1",
+            "fontcolor": "#59a14f",
+            "fontname": "Tableau Bold",
+            "fontsize": "8",
+            "italic": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "style": {
+            "fontalignment": "1"
+          }
+        }
+      ]
+    }
+  ],
+  "dashboard_actions": [
+    {
+      "name": "[Action1_6BD579987B534E5197CAF25E50D93815]",
+      "caption": "Highlight 1 (generated)",
+      "kind": "highlight_brush",
+      "activation": {
+        "auto-clear": "true",
+        "type": "on-select"
+      },
+      "source": {
+        "dashboard": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+        "type": "sheet"
+      },
+      "command": "tsc:brush",
+      "params": {
+        "field-captions": "Location (group) 1",
+        "target": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?"
+      },
+      "field_captions": [
+        "Location (group) 1"
+      ],
+      "target": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?"
+    }
+  ],
+  "highlight_bindings": [
+    {
+      "window_class": "worksheet",
+      "window_name": "Total Tourism Demand (2014-17)",
+      "viewpoint_name": "Total Tourism Demand (2014-17)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Products:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Provincial Tourism Growth Rates (2014-17)",
+      "viewpoint_name": "Provincial Tourism Growth Rates (2014-17)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Provinces with Highest Demand (2017)",
+      "viewpoint_name": "Provinces with Highest Demand (2017)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[max:Value:qk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Location:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "viewpoint_name": "Breakdown of Where Tourism Demand Comes From - ",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    },
+    {
+      "window_class": "dashboard",
+      "window_name": "Tourism In Canada - What Provinces have the highest growth rates from 2014-17? Where do most of the tourists originate from in BC?",
+      "viewpoint_name": "Total Tourism Demand (2014-17)",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[Location (group) 1]"
+      ],
+      "modes": [
+        "bucket-selection"
+      ]
+    },
+    {
+      "window_class": "worksheet",
+      "window_name": "Breakdown of Where Tourism Demand Comes From - ",
+      "viewpoint_name": "Breakdown of Where Tourism Demand Comes From - ",
+      "fields": [
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[none:Indicators:nk]",
+        "[federated.1jxzz030pj39fl1gdog6e0w941ap].[tyr:Year:qk]"
+      ],
+      "modes": [
+        "color-one-way"
+      ]
+    }
+  ],
+  "summary": {
+    "worksheet_count": 4,
+    "dashboard_text_zone_count": 2,
+    "intent_counts": {
+      "custom_tableau_view": 2,
+      "horizontal_ranked_bar": 2
+    },
+    "stacked_percentage_worksheets": [],
+    "legend_required_worksheets": [
+      "Total Tourism Demand (2014-17)"
+    ],
+    "legend_anchor_positions": {
+      "Total Tourism Demand (2014-17)": "below"
+    },
+    "axis_title_worksheets": [
+      "Provincial Tourism Growth Rates (2014-17)",
+      "Total Tourism Demand (2014-17)"
+    ],
+    "interaction_worksheets": [
+      "Provinces with Highest Demand (2017)",
+      "Provincial Tourism Growth Rates (2014-17)",
+      "Total Tourism Demand (2014-17)"
+    ],
+    "dashboard_action_count": 1,
+    "highlight_binding_count": 6
+  }
+}

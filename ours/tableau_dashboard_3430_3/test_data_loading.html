@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Data Loading Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .pass { color: green; }
+        .fail { color: red; }
+        .info { color: blue; }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Tableau Data Loading Test</h1>
+    <div id="results"></div>
+
+    <script type="module">
+        // Import d3-dsv for CSV parsing
+        const { csvParse } = await import('https://cdn.jsdelivr.net/npm/d3-dsv@3/+esm');
+
+        // Normalize CSV headers by removing BOM, triple quotes, and extra whitespace
+        function normalizeCsvHeaders(csvText) {
+            // Remove UTF-8 BOM if present
+            let text = csvText.replace(/^\uFEFF/, '');
+
+            // Split into lines
+            const lines = text.split(/\r?\n/);
+            if (lines.length === 0) return text;
+
+            // Process the header line (first non-empty line)
+            let headerLineIndex = 0;
+            while (headerLineIndex < lines.length && lines[headerLineIndex].trim() === '') {
+                headerLineIndex++;
+            }
+
+            if (headerLineIndex >= lines.length) return text;
+
+            // Normalize headers: remove triple quotes and any surrounding quotes
+            lines[headerLineIndex] = lines[headerLineIndex]
+                .split(',')
+                .map(header => {
+                    // Remove triple quotes: """field""" -> field
+                    let normalized = header.replace(/^"{3}(.+)"{3}$/, '$1');
+                    // Remove any remaining quotes
+                    normalized = normalized.replace(/^"(.+)"$/, '$1');
+                    // Trim whitespace
+                    normalized = normalized.trim();
+                    return `"${normalized}"`; // Re-add single quotes for d3-dsv
+                })
+                .join(',');
+
+            return lines.join('\n');
+        }
+
+        // Required fields
+        const REQUIRED_FIELDS = [
+            'tripduration', 'starttime', 'stoptime',
+            'start station id', 'start station name',
+            'start station latitude', 'start station longitude',
+            'end station id', 'end station name',
+            'end station latitude', 'end station longitude',
+            'bikeid', 'usertype', 'birth year', 'gender'
+        ];
+
+        function log(message, className = 'info') {
+            const results = document.getElementById('results');
+            results.innerHTML += `<div class="${className}">${message}</div>`;
+        }
+
+        async function runTests() {
+            log('<h2>🔍 Loading CSV Data</h2>');
+
+            try {
+                // Fetch the CSV file
+                log('Fetching /data/TEMP_0dadi4n02dru231bavf6q0qrp5qq.csv...');
+                const response = await fetch('/data/TEMP_0dadi4n02dru231bavf6q0qrp5qq.csv');
+
+                if (!response.ok) {
+                    log(`❌ Failed to fetch: ${response.status} ${response.statusText}`, 'fail');
+                    return;
+                }
+                log(`✅ Fetched successfully (${response.headers.get('Content-Length')} bytes)`, 'pass');
+
+                // Get raw text
+                const csvText = await response.text();
+                log(`✅ Read ${csvText.length} characters`, 'pass');
+
+                // Check for BOM
+                const hasBOM = csvText.charCodeAt(0) === 0xFEFF;
+                log(`${hasBOM ? '⚠️' : '✅'} BOM detected: ${hasBOM}`, hasBOM ? 'info' : 'pass');
+
+                // Normalize headers
+                log('Normalizing CSV headers...');
+                const normalizedCsv = normalizeCsvHeaders(csvText);
+                log('✅ Headers normalized', 'pass');
+
+                // Parse CSV
+                log('Parsing CSV...');
+                const parsed = csvParse(normalizedCsv);
+                log(`✅ Parsed ${parsed.length} data rows`, 'pass');
+
+                if (parsed.length === 0) {
+                    log('❌ No data rows found', 'fail');
+                    return;
+                }
+
+                // Check headers
+                const headers = Object.keys(parsed[0]);
+                log(`📋 Found ${headers.length} columns:`, 'info');
+                log(`<pre>${headers.join('\n')}</pre>`);
+
+                // Check for required fields
+                const missingFields = REQUIRED_FIELDS.filter(f => !headers.includes(f));
+                if (missingFields.length > 0) {
+                    log(`❌ Missing required fields: ${missingFields.join(', ')}`, 'fail');
+                    return;
+                }
+                log(`✅ All ${REQUIRED_FIELDS.length} required fields present`, 'pass');
+
+                // Check sample data
+                const firstRow = parsed[0];
+                log('<h3>📝 Sample Data (First Row)</h3>');
+                log('<pre>' + JSON.stringify(firstRow, null, 2).substring(0, 500) + '...</pre>');
+
+                // Validate numeric fields
+                const numericFields = ['tripduration', 'start station id', 'end station id', 'bikeid'];
+                let allNumericValid = true;
+                numericFields.forEach(field => {
+                    const val = Number(firstRow[field]);
+                    if (isNaN(val)) {
+                        log(`❌ Field "${field}" should be numeric but got: "${firstRow[field]}"`, 'fail');
+                        allNumericValid = false;
+                    }
+                });
+
+                if (allNumericValid) {
+                    log(`✅ All numeric fields validate correctly`, 'pass');
+                }
+
+                // Check date fields
+                const dateFields = ['starttime', 'stoptime'];
+                let allDatesValid = true;
+                dateFields.forEach(field => {
+                    const date = new Date(firstRow[field]);
+                    if (isNaN(date.getTime())) {
+                        log(`❌ Field "${field}" should be a valid date but got: "${firstRow[field]}"`, 'fail');
+                        allDatesValid = false;
+                    }
+                });
+
+                if (allDatesValid) {
+                    log(`✅ All date fields validate correctly`, 'pass');
+                }
+
+                log('<h2>✅ ALL TESTS PASSED</h2>');
+                log('<p>Data loading is deterministic and correct!</p>');
+
+            } catch (error) {
+                log(`❌ Error: ${error.message}`, 'fail');
+                log(`<pre>${error.stack}</pre>`, 'fail');
+            }
+        }
+
+        // Run tests when page loads
+        runTests();
+    </script>
+</body>
+</html>

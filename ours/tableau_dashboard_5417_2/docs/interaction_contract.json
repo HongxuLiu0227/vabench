@@ -1,0 +1,363 @@
+{
+  "schema_version": "interaction_contract_v2",
+  "provenance": {
+    "source_type": "tableau_render_contract",
+    "source_schema_version": "tableau_render_contract_v1",
+    "source_path": "/root/autodl-tmp/chi26-image2code/generated-react-app/tableau_dashboard_5417_2/docs/tableau_render_contract.json",
+    "extractor": {
+      "name": "tableau-interaction-extractor",
+      "version": "1.1.0"
+    },
+    "generated_at": "2026-04-01T04:00:36.090155Z"
+  },
+  "dashboard": {
+    "name": "game",
+    "worksheet_count": 3
+  },
+  "catalog": {
+    "worksheets": [
+      {
+        "id": "ws_game_crit",
+        "name": "game_crit",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 0,
+          "worksheet_name": "game_crit"
+        }
+      },
+      {
+        "id": "ws_game_meta",
+        "name": "game_meta",
+        "chart_intent": "line_chart",
+        "source_ref": {
+          "worksheet_index": 1,
+          "worksheet_name": "game_meta"
+        }
+      },
+      {
+        "id": "ws_game_users",
+        "name": "game_users",
+        "chart_intent": "custom_tableau_view",
+        "source_ref": {
+          "worksheet_index": 2,
+          "worksheet_name": "game_users"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "id": "field_game",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:game:nk]",
+        "normalized": "game",
+        "role": "dimension"
+      },
+      {
+        "id": "field_measure_names",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[:Measure Names]",
+        "normalized": ":Measure Names",
+        "role": "dimension"
+      },
+      {
+        "id": "field_adhoccluster",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:AdhocCluster:1:ok]",
+        "normalized": "AdhocCluster",
+        "role": "dimension"
+      },
+      {
+        "id": "field_positive_critics",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[sum:positive_critics:qk]",
+        "normalized": "positive_critics",
+        "role": "measure"
+      },
+      {
+        "id": "field_metascore",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[avg:metascore:qk]",
+        "normalized": "metascore",
+        "role": "measure"
+      },
+      {
+        "id": "field_release_date",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[tmn:release_date:qk]",
+        "normalized": "release_date",
+        "role": "dimension"
+      },
+      {
+        "id": "field_platform",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[none:platform:nk]",
+        "normalized": "platform",
+        "role": "dimension"
+      },
+      {
+        "id": "field_action_game_mes_release_date",
+        "raw": "[federated.0oq0q4l11yebx014hr9c90j9cj6u].[Action (game,MES(release_date))]",
+        "normalized": "Action (game,MES(release_date))",
+        "role": "dimension"
+      }
+    ]
+  },
+  "interactions": {
+    "worksheet_actions": [
+      {
+        "id": "wa_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_game_crit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "game",
+          "target_name_raw": "game"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 0,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_game_meta"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "game",
+          "target_name_raw": "game"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 1,
+          "action_index": 0
+        }
+      },
+      {
+        "id": "wa_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_worksheet_id": "ws_game_users"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "game",
+          "target_name_raw": "game"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "worksheet_index": 2,
+          "action_index": 0
+        }
+      }
+    ],
+    "dashboard_actions": [
+      {
+        "id": "da_001",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "game",
+          "source_worksheet_name": "game_meta"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "game",
+          "target_name_raw": "game"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 0
+        }
+      },
+      {
+        "id": "da_002",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "game",
+          "source_worksheet_name": "game_crit"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "game",
+          "target_name_raw": "game"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 1
+        }
+      },
+      {
+        "id": "da_003",
+        "kind_raw": "filter_action",
+        "kind_semantic": "filter",
+        "command": "tsc:tsl-filter",
+        "trigger": {
+          "event_raw": "on-select",
+          "event_semantic": "select",
+          "auto_clear": true,
+          "source_type": "sheet",
+          "source_dashboard_name": "game",
+          "source_worksheet_name": "game_users"
+        },
+        "target": {
+          "target_type": "dashboard",
+          "target_worksheet_id": null,
+          "target_dashboard_name": "game",
+          "target_name_raw": "game"
+        },
+        "driving_field_ids": [],
+        "source_ref": {
+          "dashboard_action_index": 2
+        }
+      }
+    ],
+    "highlight_bindings": [
+      {
+        "id": "hb_001",
+        "window_class": "worksheet",
+        "window_name": "game_meta",
+        "viewpoint_name": "game_meta",
+        "field_ids": [
+          "field_adhoccluster",
+          "field_adhoccluster",
+          "field_game",
+          "field_platform"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 0
+        }
+      },
+      {
+        "id": "hb_002",
+        "window_class": "worksheet",
+        "window_name": "game_crit",
+        "viewpoint_name": "game_crit",
+        "field_ids": [
+          "field_adhoccluster",
+          "field_game",
+          "field_positive_critics"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 1
+        }
+      },
+      {
+        "id": "hb_003",
+        "window_class": "worksheet",
+        "window_name": "game_users",
+        "viewpoint_name": "game_users",
+        "field_ids": [
+          "field_adhoccluster",
+          "field_game",
+          "field_positive_critics"
+        ],
+        "modes": [
+          "color-one-way"
+        ],
+        "source_ref": {
+          "binding_index": 2
+        }
+      }
+    ]
+  },
+  "semantics": {
+    "global": {
+      "supported_interaction_types": [
+        "filter"
+      ],
+      "default_trigger_event": "select",
+      "default_auto_clear": true
+    },
+    "per_worksheet": [
+      {
+        "worksheet_id": "ws_game_crit",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_adhoccluster",
+          "field_game",
+          "field_positive_critics"
+        ]
+      },
+      {
+        "worksheet_id": "ws_game_meta",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_adhoccluster",
+          "field_game",
+          "field_platform"
+        ]
+      },
+      {
+        "worksheet_id": "ws_game_users",
+        "supports": [
+          "highlight"
+        ],
+        "focus_field_ids": [
+          "field_adhoccluster",
+          "field_game",
+          "field_positive_critics"
+        ]
+      }
+    ]
+  },
+  "llm_hints": {
+    "plain_language_summary": [
+      "This dashboard uses selection-driven highlight interactions.",
+      "Highlight or action state auto-clears.",
+      "Cross-view emphasis is coordinated through shared binding fields.",
+      "The main linking dimensions are derived from Tableau interaction fields."
+    ],
+    "frontend_generation_hints": [
+      "Implement mark-driven highlight behavior based on shared interaction fields.",
+      "Use shared dashboard state for coordinated highlighting and action propagation.",
+      "Prefer highlight/emphasis over hard filtering unless filter actions are explicit."
+    ]
+  },
+  "stats": {
+    "worksheet_count": 3,
+    "worksheet_action_count": 3,
+    "dashboard_action_count": 3,
+    "highlight_binding_count": 3,
+    "field_count": 8
+  }
+}
