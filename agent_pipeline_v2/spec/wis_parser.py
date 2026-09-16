@@ -34,6 +34,8 @@ DERIVATION_CODES = {
     "avg": "Avg",
     "cnt": "Count",
     "ctd": "CountD",
+    "cum": "Cumulative",
+    "pcto": "PercentOfTotal",
     "min": "Min",
     "max": "Max",
     "med": "Median",
@@ -73,6 +75,7 @@ class FieldRef:
     raw: str
     datasource: Optional[str] = None
     derivation: str = "None"
+    derivation_code: str = ""            # raw code, e.g. "tmn", "ctd"
     name: str = ""
     field_type: Optional[str] = None       # nominal / ordinal / quantitative
     is_action_placeholder: bool = False    # [Action (a,b)] pseudo-field
@@ -84,6 +87,7 @@ class FieldRef:
             "raw": self.raw,
             "datasource": self.datasource,
             "derivation": self.derivation,
+            "derivation_code": self.derivation_code,
             "name": self.name,
             "field_type": self.field_type,
             "is_action_placeholder": self.is_action_placeholder,
@@ -126,12 +130,14 @@ def decode_field_ref(raw: str) -> FieldRef:
     if len(sub) >= 3:
         # [deriv:Name:type]; names may themselves contain ':' — join the middle
         deriv_code, type_code = sub[0], sub[-1]
-        ref.derivation = DERIVATION_CODES.get(deriv_code.strip().lower(), deriv_code)
+        ref.derivation_code = deriv_code.strip().lower()
+        ref.derivation = DERIVATION_CODES.get(ref.derivation_code, deriv_code)
         ref.name = ":".join(sub[1:-1]).strip()
         ref.field_type = TYPE_CODES.get(type_code.strip().lower())
     elif len(sub) == 2:
         deriv_code, name = sub
-        ref.derivation = DERIVATION_CODES.get(deriv_code.strip().lower(), deriv_code)
+        ref.derivation_code = deriv_code.strip().lower()
+        ref.derivation = DERIVATION_CODES.get(ref.derivation_code, deriv_code)
         ref.name = name.strip()
     else:
         ref.name = field_part
@@ -496,6 +502,30 @@ def parse_dashboards(root: ET.Element) -> List[Dict[str, Any]]:
 # Layer 2: resolution with confidence
 # ---------------------------------------------------------------------------
 
+# temporal derivations: raw codes start with 't' (tmn=month, tyr=year, ...),
+# mapped names cover the date-part / date-trunc family
+TEMPORAL_DERIVATIONS = {
+    "Year", "Quarter", "Month", "Day", "Hour", "Week", "Weekday", "MDY",
+    "Year-Trunc", "Quarter-Trunc", "Month-Trunc", "Day-Trunc", "Week-Trunc", "Hour-Trunc",
+}
+
+
+def _is_temporal(ref: Dict[str, Any], column_roles: Optional[Dict[str, Dict[str, str]]] = None) -> bool:
+    """A field is temporal if its derivation is a date part/truncation,
+    or the worksheet declares its datatype as date/datetime."""
+    if ref.get("derivation") in TEMPORAL_DERIVATIONS:
+        return True
+    code = ref.get("derivation_code") or ""
+    if code.startswith("t") and code not in ("", "none"):
+        return True
+    if column_roles:
+        name = ref.get("name") or ""
+        entry = column_roles.get(name) or column_roles.get(name.strip("[]"))
+        if entry and entry.get("datatype") in ("date", "datetime"):
+            return True
+    return False
+
+
 def _field_role(ref: Dict[str, Any], column_roles: Optional[Dict[str, Dict[str, str]]] = None) -> str:
     """nominal/ordinal -> dimension-ish; quantitative -> measure-ish.
 
@@ -524,39 +554,78 @@ def _field_role(ref: Dict[str, Any], column_roles: Optional[Dict[str, Dict[str, 
     return "unknown"
 
 
+MAP_DECLARED_CLASSES = {"multipolygon", "polygon", "map"}
+MAP_SYMBOL_SHAPES = {"circle", "square", "shape"}
+
+
+def _map_result(declared: str, channels: set, *, confidence: str, rule: str) -> Dict[str, Any]:
+    """Build a map mark result, keeping the subtype info generation needs."""
+    declared_lower = declared.lower()
+    filled = declared_lower in MAP_DECLARED_CLASSES or "geometry" in channels
+    symbol_shape = declared_lower if declared_lower in MAP_SYMBOL_SHAPES else "circle"
+    return {
+        "declared": declared or "Automatic",
+        "resolved": "map",
+        "map_subtype": "filled" if filled else "symbol",
+        "symbol_shape": None if filled else symbol_shape,
+        "confidence": confidence,
+        "rule": rule,
+    }
+
+
 def resolve_mark(panes: List[Dict[str, Any]], rows_tree: Dict[str, Any], cols_tree: Dict[str, Any],
                  column_roles: Optional[Dict[str, Dict[str, str]]] = None) -> Dict[str, Any]:
     """Resolve the mark class. Explicit if declared; otherwise apply Tableau's
     Automatic-mark rules and label the result 'inferred' with the rule name."""
     declared = panes[0]["mark_class"] if panes else ""
+
+    channels = set()
+    for pane in panes:
+        channels.update(pane.get("encodings", {}).keys())
+
+    row_fields = shelf_fields(rows_tree)
+    col_fields = shelf_fields(cols_tree)
+    field_names = {f.get("name", "") for f in row_fields + col_fields}
+    has_latlong = {"Latitude (generated)", "Longitude (generated)"} <= field_names
+
+    # maps: declared geo classes, generated lat/long pairs, or geometry encodings
+    if declared and declared.lower() in MAP_DECLARED_CLASSES:
+        return _map_result(declared, channels, confidence="explicit", rule="declared")
+    if has_latlong or "geometry" in channels:
+        confidence = "explicit" if declared and declared != "Automatic" else "inferred"
+        return _map_result(declared, channels, confidence=confidence, rule="lat_long_or_geometry")
+
     if declared and declared != "Automatic":
         return {"declared": declared, "resolved": declared.lower(), "confidence": "explicit", "rule": "declared"}
     if not panes:
         return {"declared": "", "resolved": "unknown", "confidence": "missing", "rule": "no_pane"}
 
-    row_fields = shelf_fields(rows_tree)
-    col_fields = shelf_fields(cols_tree)
-    row_roles = [_field_role(f, column_roles) for f in row_fields]
-    col_roles = [_field_role(f, column_roles) for f in col_fields]
+    # temporal fields behave as ordinal dimensions
+    def role_of(f: Dict[str, Any]) -> str:
+        if _is_temporal(f, column_roles):
+            return "temporal"
+        return _field_role(f, column_roles)
+
+    row_roles = [role_of(f) for f in row_fields]
+    col_roles = [role_of(f) for f in col_fields]
     row_measures = sum(r == "measure" for r in row_roles)
     col_measures = sum(r == "measure" for r in col_roles)
-    row_dims = sum(r == "dimension" for r in row_roles)
-    col_dims = sum(r == "dimension" for r in col_roles)
+    row_dims = sum(r in ("dimension", "temporal") for r in row_roles)
+    col_dims = sum(r in ("dimension", "temporal") for r in col_roles)
+    has_temporal = any(r == "temporal" for r in row_roles + col_roles)
 
     # encoding-driven marks: no shelves, but the channel combination tells the story
     if not row_fields and not col_fields:
-        channels = set()
-        for pane in panes:
-            channels.update(pane.get("encodings", {}).keys())
         if {"size", "color", "text"} <= channels:
             return {"declared": "Automatic", "resolved": "treemap", "confidence": "inferred", "rule": "size_color_text_no_shelves"}
-        if "geometry" in channels:
-            return {"declared": "Automatic", "resolved": "map", "confidence": "inferred", "rule": "geometry_encoding"}
         if "text" in channels:
             return {"declared": "Automatic", "resolved": "text", "confidence": "inferred", "rule": "text_only_no_shelves"}
         return {"declared": "Automatic", "resolved": "unknown", "confidence": "missing", "rule": "empty_shelves"}
 
     # Tableau Automatic mark rules (simplified Show Me logic)
+    if has_temporal and (row_measures + col_measures) >= 1:
+        # Tableau's Automatic mark for time series is a line
+        return {"declared": "Automatic", "resolved": "line", "confidence": "inferred", "rule": "temporal_plus_measure"}
     if row_measures >= 1 and col_measures >= 1:
         return {"declared": "Automatic", "resolved": "circle", "confidence": "inferred", "rule": "measure_vs_measure"}
     if row_dims >= 1 and col_measures >= 1:
@@ -700,13 +769,23 @@ def build_wis(twb_path: str | Path) -> Dict[str, Any]:
 
     # link actions to worksheet filters
     for action in actions_raw:
-        linked = [
-            ws["name"]
-            for ws in worksheets
-            for f in ws["filters"]
-            if f.get("linked_action") and f["linked_action"] == action.get("name")
-        ]
+        linked = []
+        for ws in worksheets:
+            for f in ws["filters"]:
+                if f.get("linked_action") and f["linked_action"] == action.get("name"):
+                    if ws["name"] not in linked:
+                        linked.append(ws["name"])
         action["linked_worksheets"] = linked
+
+    # mark which worksheets actually appear on a dashboard (sheet zones)
+    on_dash = {
+        z.get("name", "")
+        for d in dashboards
+        for z in d["zones"]
+        if z["type"] == "sheet" and z.get("name")
+    }
+    for ws in worksheets:
+        ws["on_dashboard"] = ws["name"] in on_dash
 
     # confidence summary
     confidence = {"explicit": 0, "inferred": 0, "missing": 0}
