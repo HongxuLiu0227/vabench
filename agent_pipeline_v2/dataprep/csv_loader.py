@@ -140,7 +140,11 @@ def load_enriched_dataset(
 
     with csv_path.open("r", encoding="utf-8-sig", errors="replace", newline="") as fh:
         # strip NUL bytes — a few corpus CSVs contain them and break csv.reader
-        reader = csv.reader(line.replace("\x00", "") for line in fh)
+        lines = (line.replace("\x00", "") for line in fh)
+        first = next(lines, "")
+        # delimiter sniffing: corpus contains both , and ; separated files
+        delimiter = ";" if first.count(";") > first.count(",") else ","
+        reader = csv.reader(iter([first, *lines]), delimiter=delimiter)
         raw_header = next(reader)
         columns = [_clean_cell(h) for h in raw_header]
         raw_rows: List[List[str]] = []

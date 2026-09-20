@@ -33,6 +33,14 @@ DATE_TRUNC_CODES = {
     "tyr": "year", "tqr": "quarter", "tmn": "month", "twk": "week", "tdy": "day", "thr": "hour",
 }
 
+# "count of records" pseudo-field:  cnt:<csv-stem>.csv_<hex>  — Tableau generates
+# it for row counts of an extract; there is no such column in the CSV
+_COUNT_PSEUDO_RE = re.compile(r"\.csv_[0-9a-f]{8,}$", re.IGNORECASE)
+
+
+def _is_count_pseudo_field(name: str) -> bool:
+    return bool(_COUNT_PSEUDO_RE.search(name or ""))
+
 ROW_LEVEL_MARKS = {"circle", "map"}   # scatter / symbol map need raw rows
 
 
@@ -90,14 +98,21 @@ def _translate_filter(flt: Dict[str, Any]) -> Optional[Dict[str, Any]]:
                 out.append(v.strip('"'))
         return out
 
+    # 日期部分筛选（如 [yr:Order Date] 筛 2018）→ 引擎按年/月部分比较
+    date_part = DATE_PART_DERIVATIONS.get(column.get("derivation") or "")
+
     if func == "except":
-        return {"field": name, "op": "not_in", "values": clean(members)}
-    if func in ("union", "member", "level-members", "crossjoin", "all"):
+        spec: Dict[str, Any] = {"field": name, "op": "not_in", "values": clean(members)}
+    elif func in ("union", "member", "level-members", "crossjoin", "all"):
         values = clean(members)
-        if values:
-            return {"field": name, "op": "in", "values": values}
-        return None  # level-members/all → keep everything
-    return None
+        if not values:
+            return None  # level-members/all → keep everything
+        spec = {"field": name, "op": "in", "values": values}
+    else:
+        return None
+    if date_part:
+        spec["date_part"] = date_part
+    return spec
 
 
 def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dict[str, Any]:
@@ -140,6 +155,14 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
         deriv = field.get("derivation") or "None"
         if not key or field.get("is_action_placeholder"):
             return
+        # "count of records" 伪字段 → 行数统计（CSV 里没有这一列）
+        if _is_count_pseudo_field(key):
+            agg_id = f"rowcount:{key}"
+            if agg_id not in seen_agg:
+                op = "cumulative" if deriv == "Cumulative" else "count"
+                aggregates.append({"field": "__rowcount__", "op": op, "as": f"count_{key}"})
+                seen_agg.add(agg_id)
+            return
         if deriv in AGG_OPS:
             agg_id = f"{AGG_OPS[deriv]}:{key}"
             if agg_id in seen_agg:
@@ -155,8 +178,9 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
     for field in shelf_fields:
         if field.get("is_measure_names"):
             continue
-        if _is_measure(field) and (field.get("derivation") or "None") in AGG_OPS:
-            add_measure(field)
+        # 日期派生字段永远是维度（时间轴），不管类型码怎么写
+        if _date_key(field) is not None:
+            add_dimension(field)
         elif _is_measure(field):
             add_measure(field)
         else:

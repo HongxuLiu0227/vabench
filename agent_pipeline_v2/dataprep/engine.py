@@ -75,6 +75,8 @@ def _group_key(row: Dict[str, Any], g: Dict[str, Any]) -> Any:
 
 def _apply_filter(row: Dict[str, Any], flt: Dict[str, Any]) -> bool:
     value = row.get(flt["field"])
+    if flt.get("date_part"):
+        value = _date_part_value(value, flt["date_part"])
     op = flt.get("op")
     values = flt.get("values", [])
 
@@ -83,7 +85,17 @@ def _apply_filter(row: Dict[str, Any], flt: Dict[str, Any]) -> bool:
             return v is None or v == "" or v == "%null%"
         if v is None:
             return False
-        return str(v) == str(target)
+        if isinstance(v, (int, float)) and isinstance(target, str):
+            try:
+                target = float(target)
+            except ValueError:
+                pass
+        elif isinstance(v, str) and isinstance(target, (int, float)):
+            try:
+                v = float(v)
+            except ValueError:
+                pass
+        return v == target
 
     if op == "in":
         return any(matches(value, t) for t in values)
@@ -94,6 +106,27 @@ def _apply_filter(row: Dict[str, Any], flt: Dict[str, Any]) -> bool:
     if op == "eq":
         return matches(value, flt.get("value"))
     raise QueryError(f"unknown filter op {op!r}")
+
+
+def _date_part_value(value: Any, part: str) -> Any:
+    dt = _date_value(value)
+    if dt is None:
+        return None
+    if part == "year":
+        return dt.year
+    if part == "quarter":
+        return (dt.month - 1) // 3 + 1
+    if part == "month":
+        return dt.month
+    if part == "day":
+        return dt.day
+    if part == "week":
+        return int(dt.strftime("%U"))
+    if part == "weekday":
+        return dt.isoweekday()
+    if part == "hour":
+        return dt.hour if isinstance(dt, datetime) else 0
+    return None
 
 
 def _numeric(values: List[Any]) -> List[float]:
@@ -113,7 +146,9 @@ def _numeric(values: List[Any]) -> List[float]:
     return out
 
 
-def _aggregate(op: str, values: List[Any]) -> Any:
+def _aggregate(op: str, values: List[Any], field: str = "") -> Any:
+    if field == "__rowcount__":
+        return len(values)
     if op == "countd":
         return len({str(v) for v in values if v is not None})
     if op == "count":
@@ -152,7 +187,10 @@ def run_query(rows: List[Dict[str, Any]], spec: Dict[str, Any]) -> List[Dict[str
         for r in filtered:
             record: Dict[str, Any] = {}
             for agg in aggregates:
-                record[agg["as"]] = r.get(agg["field"])
+                if agg.get("field") == "__rowcount__":
+                    record[agg["as"]] = 1  # 行级视图里每行即一条记录
+                else:
+                    record[agg["as"]] = r.get(agg["field"])
             out.append(record)
         return _post_process(out, spec)
 
@@ -168,7 +206,7 @@ def run_query(rows: List[Dict[str, Any]], spec: Dict[str, Any]) -> List[Dict[str
         for g, k in zip(group_by, key):
             record[g["as"]] = k
         for agg in aggregates:
-            record[agg["as"]] = _aggregate(agg["op"], [m.get(agg["field"]) for m in members])
+            record[agg["as"]] = _aggregate(agg["op"], [m.get(agg["field"]) for m in members], agg.get("field", ""))
         out.append(record)
 
     return _post_process(out, spec)
