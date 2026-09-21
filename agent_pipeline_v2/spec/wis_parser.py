@@ -183,7 +183,7 @@ def parse_shelf_expression(raw: str) -> Dict[str, Any]:
                     break
             tokens.append(raw[i:j])
             i = j
-        elif ch in "*+()":
+        elif ch in "*+/()":
             tokens.append(ch)
             i += 1
         elif ch.isspace():
@@ -197,7 +197,9 @@ def parse_shelf_expression(raw: str) -> Dict[str, Any]:
     def parse_expr() -> Dict[str, Any]:
         nonlocal pos
         node = parse_term()
-        while pos < len(tokens) and tokens[pos] in ("*", "+"):
+        while pos < len(tokens) and tokens[pos] in ("*", "+", "/"):
+            # '*' nests (cross), '+' concatenates (concat), '/' separates panes —
+            # all still contribute their fields to the shelf
             op = "cross" if tokens[pos] == "*" else "concat"
             pos += 1
             rhs = parse_term()

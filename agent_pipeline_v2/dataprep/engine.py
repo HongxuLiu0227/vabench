@@ -182,7 +182,7 @@ def run_query(rows: List[Dict[str, Any]], spec: Dict[str, Any]) -> List[Dict[str
     aggregates = spec.get("aggregates", [])
 
     # 2. row-level passthrough (scatter / symbol map)
-    if spec.get("row_level") or not group_by:
+    if spec.get("row_level"):
         out = []
         for r in filtered:
             record: Dict[str, Any] = {}
@@ -193,6 +193,13 @@ def run_query(rows: List[Dict[str, Any]], spec: Dict[str, Any]) -> List[Dict[str
                     record[agg["as"]] = r.get(agg["field"])
             out.append(record)
         return _post_process(out, spec)
+
+    # 2b. grand total: no group_by + aggregates → single aggregated row (KPI cards)
+    if not group_by:
+        record = {}
+        for agg in aggregates:
+            record[agg["as"]] = _aggregate(agg["op"], [m.get(agg["field"]) for m in filtered], agg.get("field", ""))
+        return _post_process([record], spec)
 
     # 3. group + aggregate
     buckets: Dict[Any, List[Dict[str, Any]]] = {}
