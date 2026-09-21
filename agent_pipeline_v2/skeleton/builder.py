@@ -124,6 +124,44 @@ def _pascal(name: str) -> str:
     return "".join(p[:1].upper() + p[1:] for p in parts if p) or "View"
 
 
+def interaction_roles(wis: Dict[str, Any], specs: List[Dict[str, Any]],
+                      rename: Dict[str, str]) -> Dict[str, Dict[str, Any]]:
+    """Per-view interaction role for the viewgen prompt and assembly wiring."""
+    roles: Dict[str, Dict[str, Any]] = {}
+    ws_by_name = {w["name"]: w for w in wis.get("worksheets", [])}
+    spec_by_name = {s["view_name"]: s for s in specs}
+
+    def source_field_for(ws_name: str) -> Optional[str]:
+        ws = ws_by_name.get(ws_name)
+        if not ws:
+            return None
+        for f in ws.get("fields_used", []):
+            if f.get("field_type") in ("nominal", "ordinal") and not f.get("is_action_placeholder"):
+                return _clean(f["name"], rename)
+        return None
+
+    for a in wis.get("actions", []):
+        src_ws = a.get("source", {}).get("worksheet", "")
+        field = source_field_for(src_ws)
+        src_spec = spec_by_name.get(src_ws)
+        if src_spec and field:
+            roles[src_spec["view_id"]] = {
+                "role": "source",
+                "field": field,
+                "command": a.get("command", ""),
+                "auto_clear": a.get("activation", {}).get("auto-clear") == "true",
+            }
+        for target in a.get("linked_worksheets", []):
+            tgt_spec = spec_by_name.get(target)
+            if tgt_spec and field and tgt_spec["view_id"] not in roles:
+                roles[tgt_spec["view_id"]] = {
+                    "role": "target",
+                    "field": field,
+                    "command": a.get("command", ""),
+                }
+    return roles
+
+
 def _pct(value: str) -> float:
     try:
         return float(value) / 1000.0  # 0..100000 → percentage with 2 decimals
@@ -333,6 +371,11 @@ def build_project(
     views_json = {s["view_id"]: s for s in clean_specs}
     (specs_dir / "views.json").write_text(
         json.dumps(views_json, ensure_ascii=False, indent=2, default=str), encoding="utf-8"
+    )
+    # interaction roles (consumed by stage ④ prompts)
+    roles = interaction_roles(wis, clean_specs, rename)
+    (specs_dir / "interactions.json").write_text(
+        json.dumps(roles, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     # view stubs + dashboard
