@@ -753,6 +753,7 @@ def build_wis(twb_path: str | Path) -> Dict[str, Any]:
             "filters": resolve_filters(ws["filters"]),
             "slices": [decode_field_ref(s).as_dict() for s in ws["slices_raw"]],
             "style_rules": ws["style_rules"],
+            "pane_styles": [s for p in ws["panes"] for s in p.get("styles", [])],
             "calculated_fields": ws["calculated_fields"],
         })
 

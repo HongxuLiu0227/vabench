@@ -41,6 +41,43 @@ COLOR_GUIDANCE = """配色规则：
 """
 
 
+def _visual_block(spec: Dict[str, Any]) -> str:
+    """Render spec['visual'] (translated from WIS) into prompt instructions."""
+    visual = spec.get("visual") or {}
+    if not visual:
+        return ""
+    lines: List[str] = []
+    if visual.get("orientation") == "horizontal":
+        lines.append("- 方向：横向条形图（类别在 y 轴，数值在 x 轴）。")
+    elif visual.get("orientation") == "vertical":
+        lines.append("- 方向：纵向柱状图（类别在 x 轴，数值在 y 轴）。")
+    if visual.get("facet_rows"):
+        lines.append(
+            f"- 分面：按 {visual['facet_rows']} 把图拆成上下排列的多个子面板，"
+            f"每个面板只画该取值的数据，共享同一坐标刻度。"
+        )
+    if visual.get("facet_cols"):
+        lines.append(
+            f"- 分面：按 {visual['facet_cols']} 把图拆成左右排列的多个子面板，"
+            f"每个面板只画该取值的数据，共享同一坐标刻度。"
+        )
+    # 颜色优先级：有颜色字段时按字段着色（显式 mark-color 多为标签/默认色，
+    # 不应盖过分类色）；没有颜色字段时才用显式色当主色
+    if visual.get("color_field"):
+        lines.append(f"- 颜色：按 {visual['color_field']} 字段着色（分类用 d3.schemeTableau10 或原作近似色，数值用 d3.interpolateBlues），并画图例。")
+    elif visual.get("explicit_colors"):
+        colors = ", ".join(visual["explicit_colors"])
+        lines.append(f"- 颜色：必须使用显式颜色 {colors} 作为主色。")
+    if visual.get("show_labels"):
+        lines.append("- 数据标签：每个图形元素上显示其数值（如 15,144 这种千分位格式）。")
+    for at in visual.get("axis_titles", []):
+        scope = "x 轴" if at.get("scope") == "cols" else "y 轴" if at.get("scope") == "rows" else "轴"
+        lines.append(f"- {scope}标题：{at['title']}")
+    if visual.get("title"):
+        lines.append(f"- 视图标题：{visual['title']}")
+    return "\n## 视觉规范（来自 workbook 原始样式，严格遵守）\n" + "\n".join(lines) + "\n" if lines else ""
+
+
 def build_view_prompt(
     spec: Dict[str, Any],
     data_sample: List[Dict[str, Any]],
@@ -66,7 +103,7 @@ def build_view_prompt(
 ```json
 {json.dumps(data_sample[:3], ensure_ascii=False, indent=1, default=str)}
 ```
-
+{_visual_block(spec)}
 ## 协议与硬约束
 {PROTOCOL_BLOCK}
 - 用 TypeScript + D3（项目已装 d3，import * as d3 from 'd3'）。
