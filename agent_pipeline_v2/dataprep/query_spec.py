@@ -9,6 +9,8 @@ from __future__ import annotations
 import re
 from typing import Any, Dict, List, Optional
 
+from ..spec.wis_parser import decode_field_ref
+
 __all__ = ["derive_query_spec", "derive_view_specs"]
 
 # derivation → aggregate op understood by engine.py
@@ -80,6 +82,16 @@ def _translate_filter(flt: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         return None
     column = flt.get("column") or {}
     if column.get("is_action_placeholder"):
+        return None
+    # [Measure Names] 筛选 = "这个视图只显示这几个度量"，不是行过滤
+    if column.get("is_measure_names"):
+        measures = []
+        for m in flt.get("members") or []:
+            m = m.strip('"')
+            ref = decode_field_ref(m) if "[" in m else None
+            measures.append(ref.name if ref else m)
+        return {"field": "__measure_names__", "op": "measures", "values": measures}
+    if (column.get("name") or "") in ("Multiple Values", "Measure Values"):
         return None
     func = flt.get("function", "")
     members = flt.get("members") or []
@@ -195,10 +207,21 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
             add_dimension(field)
 
     filters: List[Dict[str, Any]] = []
+    allowed_measures: Optional[set] = None
     for flt in worksheet.get("filters", []):
         translated = _translate_filter(flt)
-        if translated is not None:
-            filters.append(translated)
+        if translated is None:
+            continue
+        if translated["field"] == "__measure_names__":
+            allowed_measures = set(translated["values"])
+            continue
+        filters.append(translated)
+
+    # Measure Names 筛选 → 收窄 aggregates 到选中的度量
+    if allowed_measures:
+        trimmed = [a for a in aggregates if a["field"] in allowed_measures]
+        if trimmed:
+            aggregates = trimmed
 
     sort = [{"field": g["as"], "order": "asc"} for g in group_by[:1]]
 

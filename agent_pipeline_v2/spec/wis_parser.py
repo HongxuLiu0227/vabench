@@ -121,10 +121,6 @@ def decode_field_ref(raw: str) -> FieldRef:
         ref.is_action_placeholder = True
         ref.name = field_part
         return ref
-    if field_part in ("Measure Names", "Measure Values"):
-        ref.is_measure_names = True
-        ref.name = field_part
-        return ref
 
     sub = field_part.split(":")
     if len(sub) >= 3:
@@ -146,6 +142,9 @@ def decode_field_ref(raw: str) -> FieldRef:
             ref.field_type = "quantitative"
         elif field_part.endswith("(group)"):
             ref.field_type = "nominal"
+    # [Measure Names]/[Measure Values]/[Multiple Values] 伪字段（含 [none:Measure Names:nk] 形态）
+    if ref.name in ("Measure Names", "Measure Values", "Multiple Values"):
+        ref.is_measure_names = True
     return ref
 
 
