@@ -98,8 +98,10 @@ def _visual_block(spec: Dict[str, Any]) -> str:
         )
     # 颜色优先级：有颜色字段时按字段着色（显式 mark-color 多为标签/默认色，
     # 不应盖过分类色）；没有颜色字段时才用显式色当主色
-    if visual.get("color_field"):
-        lines.append(f"- 颜色：按 {visual['color_field']} 字段着色（分类用 d3.schemeTableau10 或原作近似色，数值用 d3.interpolateBlues），并画图例。")
+    if visual.get("color_field") and visual.get("color_type") == "sequential":
+        lines.append(f"- 颜色：按 {visual['color_field']} 用**连续色阶**着色（如 d3.interpolateBlues），禁止用分类色板，并配连续色图例。")
+    elif visual.get("color_field"):
+        lines.append(f"- 颜色：按 {visual['color_field']} **分类**着色（如 d3.schemeTableau10），并画分类图例。")
     elif visual.get("explicit_colors"):
         colors = ", ".join(visual["explicit_colors"])
         lines.append(f"- 颜色：必须使用显式颜色 {colors} 作为主色。")

@@ -71,9 +71,14 @@ def derive_visual_spec(ws: Dict[str, Any]) -> Dict[str, Any]:
     if cols_expr.get("op") == "cross" and col_dims and col_measures:
         facet_cols = col_dims[0]["name"]
 
-    # colors: explicit pane colors + palette + color field
+    # colors: explicit pane colors + palette + color field + scale type
     color_entries = (ws.get("encodings") or {}).get("color", [])
     color_field = color_entries[0]["field"]["name"] if color_entries else None
+    color_type = None
+    if color_entries:
+        ftype = color_entries[0]["field"].get("field_type")
+        # 颜色尺类型是可推导的结论：数值 → 连续色阶；维度 → 分类色
+        color_type = "sequential" if ftype == "quantitative" else "categorical"
     explicit_colors: List[str] = []
     palette = None
     for entry in color_entries:
@@ -99,6 +104,7 @@ def derive_visual_spec(ws: Dict[str, Any]) -> Dict[str, Any]:
         "facet_rows": facet_rows,
         "facet_cols": facet_cols,
         "color_field": color_field,
+        "color_type": color_type,
         "explicit_colors": explicit_colors,
         "palette": palette,
         "show_labels": show_labels,
