@@ -193,9 +193,14 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
         # 日期派生字段永远是维度（时间轴），不管类型码怎么写
         if _date_key(field) is not None:
             add_dimension(field)
-        elif _is_measure(field):
+        elif (field.get("derivation") or "None") in AGG_OPS:
+            # 有聚合派生的才是数值（Tableau 的"绿药丸"）
+            add_measure(field)
+        elif field.get("field_type") == "quantitative" and mark in ROW_LEVEL_MARKS:
+            # 散点/地图的行级数值（不分组）
             add_measure(field)
         else:
+            # None 派生的其余字段 = 离散维度（Tableau 的"蓝药丸"，如年份轴）
             add_dimension(field)
 
     for field in color_fields + size_fields + text_fields:

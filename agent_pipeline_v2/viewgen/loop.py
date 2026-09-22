@@ -106,7 +106,11 @@ def generate_view(
 
 
 def view_comp_name(spec: Dict[str, Any]) -> str:
-    return re.sub(r"[^A-Za-z0-9]", "", spec["view_id"].title().replace("_", ""))
+    name = re.sub(r"[^A-Za-z0-9]", "", spec["view_id"].title().replace("_", ""))
+    # JS 标识符不能以数字开头（如 9a_min_age_position）
+    if name and name[0].isdigit():
+        name = "View" + name
+    return name
 
 
 def _tsc_errors_by_file(project_dir: Path) -> Dict[str, List[str]]:

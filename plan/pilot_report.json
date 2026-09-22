@@ -1,0 +1,103 @@
+[
+  {
+    "dir": "10394_dash_dashboard0.png__TableauWorkbook",
+    "views": 2,
+    "views_ok": 2,
+    "attempts": {
+      "endstations": 1,
+      "startstations": 1
+    },
+    "build_ok": true,
+    "guidance": "- 两个地图视图统一使用无填充圆圈（描边样式）、一致的圆圈大小与透明度（如 0.7），保证跨视图视觉密度可比。\n- 坐标轴与网格线统一为浅灰细线（约 1px），轴线标签字号与字重两视图保持一致。\n- 经纬度数值标签统一保留四位小数，站点 id 等计数类标签使用千分位格式。\n- 图例统一放置在视图右上角、垂直排列，标题/图例/坐标轴标签的字号层级在两视图间完全一致。\n- 跨视图选择联动时，未选中的圆圈统一降透明度至约 0.15 并保留描边，选中项以原始颜色高亮，两视图反馈规则相同。\n- 两视图之间的间距与各自内边距保持一致，留白节奏统一，布局由组件按父容器自适应。",
+    "tickets": [],
+    "elapsed": 130.7,
+    "out_dir": "output/gen_v2/pilot_10394",
+    "render": "plan/pilot_renders/pilot_10394.png"
+  },
+  {
+    "dir": "8501_dash_dashboard0.png__Dashboard9",
+    "views": 3,
+    "views_ok": 3,
+    "attempts": {
+      "9a_min_age_position": 1,
+      "9b_max_age_position": 1,
+      "9c_avg_age_position": 1
+    },
+    "build_ok": false,
+    "guidance": "1. 三个视图的 Position 轴标签统一采用相同样式（字号、字重、旋转角度一致），保证跨视图对齐比较时类别易读。\n\n2. Age 数值标签统一保留 1 位小数（Avg）或不带小数（Min/Max 为整数），全 dashboard 数字格式规则一致。\n\n3. 坐标轴统一使用浅灰细轴线与浅灰网格线，刻度线弱化处理，突出标记本身。\n\n4. 交互联动：在任一视图 on-select 触发筛选后，其余视图中未选中的 Position 标记以约 30% 透明度淡出，选中的保持全不透明。\n\n5. 视图间留白节奏统一：各组件内边距与标题-图表间距保持一致，布局由组件按父容器自适应，不设定固定尺寸。",
+    "tickets": [
+      "9a_Min_age_position: on-select → tsc:tsl-filter 的「影响」目标为空，未指定其余视图，导致全局要求4的跨视图选中/淡出联动无法生效。",
+      "9b_Max_age_position: on-select → tsc:tsl-filter 的「影响」目标为空，未指定其余视图，导致全局要求4的跨视图选中/淡出联动无法生效。",
+      "9c_Avg_age_position: on-select → tsc:tsl-filter 的「影响」目标为空，未指定其余视图，导致全局要求4的跨视图选中/淡出联动无法生效。"
+    ],
+    "elapsed": 114.0,
+    "out_dir": "output/gen_v2/pilot_8501"
+  },
+  {
+    "dir": "10115_dash_dashboard0.png__Suicide_20Trends",
+    "views": 4,
+    "views_ok": 4,
+    "attempts": {
+      "sheet_1": 1,
+      "sheet_2": 1,
+      "sheet_3": 1,
+      "sheet_4": 1
+    },
+    "build_ok": true,
+    "guidance": "- 所有视图的数值轴标签统一使用千分位格式（如 12,500），坐标轴与网格线采用浅灰细线，主刻度线不外凸。\n- 各视图标题与轴标题字号、字重保持一致（标题加粗、轴标题常规），且均左对齐于视图绘图区上方。\n- Sheet 1 与 Sheet 4 的折线样式统一：线宽一致、数据点标记形状一致，悬停时显示数值提示。\n- 交互联动时，未被选中的数据项在被影响的视图中降低透明度以突出选中部分，选中项保持原有颜色不透明度。\n- 各视图之间保持一致的留白节奏，图例统一放置在各自视图的右上角或底部并水平排列，内容均随父容器自适应。",
+    "tickets": [
+      "Sheet 2 & Sheet 3: Sheet 2 与 Sheet 3 均按 suicides_no 着色，但由不同子 agent 生成，未保证使用统一的色板与数值色标范围，跨视图颜色语义不一致。",
+      "Sheet 1 & Sheet 4: 全局要求 Sheet 1 与 Sheet 4 折线样式统一（线宽、数据点标记形状、悬停提示），但两者分别由独立子 agent 生成，未见落实统一样式的措施，存在样式漂移风险。",
+      "Sheet 2: Sheet 2 的 on-select 联动交互影响目标为空，与其余视图的联动闭环不一致，用户在该视图的选择不会传播到任何视图。",
+      "全局: 数值轴千分位格式、浅灰细网格线、标题/轴标题字号字重与左对齐、图例统一放置等全局样式要求需各子 agent 独立遵守，缺乏统一约束校验，存在跨视图视觉不一致风险。"
+    ],
+    "elapsed": 130.2,
+    "out_dir": "output/gen_v2/pilot_10115",
+    "render": "plan/pilot_renders/pilot_10115.png"
+  },
+  {
+    "dir": "3572_dash_dashboard0.png__Human_20Resources",
+    "views": 5,
+    "views_ok": 5,
+    "attempts": {
+      "histogram_to_find_the_employee_monthly_hours_distribution_level": 1,
+      "department_wise_distribution": 1,
+      "employee_project_count_turnover_distribution": 1,
+      "employee_turnover_depending_on_years_worked_distribution": 1,
+      "histogram_to_find_the_employee_statisfaction_level": 1
+    },
+    "build_ok": true,
+    "guidance": "- 所有视图统一字号层级：轴标题加粗、轴刻度常规字重，数值标签使用千分位分隔符（如 12,345）。\n- 坐标轴统一使用浅灰细线、隐藏次要网格线，仅保留水平（或垂直）主轴参考线，且各视图保持一致。\n- 图例统一放置于视图顶部或右侧并水平排列；「Employee turnover depending on years worked distribution」的分组条形用默认分类色板区分组，条形间距在各 bar 视图中保持一致。\n- 交互选中时，未选中的条形/圆点统一降低透明度以突出选中项，被取消过滤的视图平滑过渡恢复。\n- 视图之间保持均匀的留白节奏，标题对齐方式统一（如全部左对齐），「circ",
+    "tickets": [
+      "Department Wise Distribution / Employee Project Count Turnover Distribution / Employee turnover depending on years worked distribution: 三个 on-select 过滤交互的「影响」目标均为空，跨视图联动过滤实际未指向任何视图，选中高亮/透明度衰减的全局交互要求无法落地",
+      "Histogram to find the Employee Monthly Hours Distribution Level: 该直方图使用两个 bin 字段（Average Montly Hours (bin) 与 (bin) 1），而满意度直方图为原始字段计数加单个 (bin) 1，两个 circle 直方图的轴结构不一致，无法保证统一的轴标签与刻度样式",
+      "Department Wise Distribution: 按维度 Sales 自身着色会产生与部门数量等长的冗长图例，与其他两个 bar 视图按 Left/Time Spend Company (group) 少量类别着色的图例规模与风格明显不统一，破坏图例统一放置与水平排列的全局要求"
+    ],
+    "elapsed": 356.5,
+    "out_dir": "output/gen_v2/pilot_3572",
+    "render": "plan/pilot_renders/pilot_3572.png"
+  },
+  {
+    "dir": "19_dash_dashboard0.png__Nihad_dashboard",
+    "views": 6,
+    "views_ok": 6,
+    "attempts": {
+      "assists_by_position": 1,
+      "boxplot_of_height_by_position": 1,
+      "boxplot_of_weight_by_position": 1,
+      "goals_by_position": 1,
+      "shots_on_goal_by_position": 1,
+      "the_count_of_players_playing_in_different_positions": 1
+    },
+    "build_ok": true,
+    "guidance": "- 所有六个视图共享 Position 维度，需统一位置的类目排序（如按足球惯用的 Goalkeeper→Defender→Midfielder→Forward 固定顺序），且各视图颜色均按 WIS 的\"颜色按 Position\"，同一位置在所有视图中保持同色。\n- 数值轴标签统一采用千分位分隔格式，均值类指标（Avg Goals/Assists/Shots）保留一位小数，计数与求和类指标（Count/Sum）显示整数。\n- 坐标轴统一使用浅灰细线轴线与刻度，去除多余网格线或仅保留横向浅色网格线，轴标题字号、字重各视图保持一致。\n- 标题为\"BoxPlot of height/weight\"的",
+    "tickets": [
+      "BoxPlot of height by  position: 标题为 BoxPlot 但实际为 bar，且按 Sum 聚合，缺少副标题或轴注明确说明聚合方式，与标题语义存在歧义。",
+      "BoxPlot of weight by position: 标题为 BoxPlot 但实际为 bar，且按 Sum 聚合，缺少副标题或轴注明确说明聚合方式，与标题语义存在歧义。",
+      "全局: 交互配置的触发视图为空（on-select 来源未指定视图名），brush 联动缺少明确的触发源与跨视图选中/降透明度反馈规则落实，交互可能未生效。"
+    ],
+    "elapsed": 101.6,
+    "out_dir": "output/gen_v2/pilot_19",
+    "render": "plan/pilot_renders/pilot_19.png"
+  }
+]

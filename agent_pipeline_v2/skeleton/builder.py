@@ -123,7 +123,11 @@ def clean_spec(spec: Dict[str, Any], rename: Dict[str, str]) -> Dict[str, Any]:
 
 def _pascal(name: str) -> str:
     parts = re.split(r"[^A-Za-z0-9]+", name.strip())
-    return "".join(p[:1].upper() + p[1:] for p in parts if p) or "View"
+    result = "".join(p[:1].upper() + p[1:] for p in parts if p) or "View"
+    # JS 标识符不能以数字开头（如 9a_min_age_position）
+    if result[0].isdigit():
+        result = "View" + result
+    return result
 
 
 def interaction_roles(wis: Dict[str, Any], specs: List[Dict[str, Any]],
