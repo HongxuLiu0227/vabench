@@ -41,6 +41,41 @@ COLOR_GUIDANCE = """配色规则：
 """
 
 
+def _view_overview(spec: Dict[str, Any]) -> str:
+    """生成一段连贯的中文视图概述（全部从 spec 翻译，不是创作）。"""
+    mark = spec.get("mark", "unknown")
+    visual = spec.get("visual") or {}
+    group_fields = [g["as"] for g in spec.get("group_by", [])]
+    agg_fields = [a["as"] for a in spec.get("aggregates", [])]
+
+    mark_cn = {
+        "bar": "柱状图", "line": "折线图", "circle": "散点图", "pie": "饼图",
+        "treemap": "矩形树图", "square": "热力方块图", "text": "KPI 文本卡",
+        "area": "面积图", "map": "地图", "unknown": "图表",
+    }.get(mark, "图表")
+
+    parts: List[str] = [f"这是一个{mark_cn}（{mark}）。"]
+    if visual.get("facet_rows"):
+        parts.append(f"它按 {visual['facet_rows']} 拆成上下排列的多个子面板；")
+    elif visual.get("facet_cols"):
+        parts.append(f"它按 {visual['facet_cols']} 拆成左右排列的多个子面板；")
+    if group_fields:
+        parts.append(f"每个（子）面板中，按 {'、'.join(group_fields)} 分组，")
+    if agg_fields:
+        parts.append(f"展示 {'、'.join(agg_fields)}。")
+    if visual.get("orientation") == "horizontal":
+        parts.append("柱子横向排列（类别在 y 轴）。")
+    elif visual.get("orientation") == "vertical":
+        parts.append("柱子纵向排列（类别在 x 轴）。")
+    if visual.get("color_field"):
+        parts.append(f"按 {visual['color_field']} 着色并带图例。")
+    if visual.get("show_labels"):
+        parts.append("每个图形元素上标注类别名和数值。")
+    if visual.get("title"):
+        parts.append(f"视图标题为「{visual['title']}」。")
+    return "".join(parts)
+
+
 def _visual_block(spec: Dict[str, Any]) -> str:
     """Render spec['visual'] (translated from WIS) into prompt instructions."""
     visual = spec.get("visual") or {}
@@ -92,6 +127,9 @@ def build_view_prompt(
     agg_desc = ", ".join(f"{a['as']}（{a['op']} {a['field']}）" for a in spec.get("aggregates", []))
 
     prompt = f"""你要为 dashboard 编写一个独立的 React 视图组件：{spec.get('view_name', '')}。
+
+## 视图概述
+{_view_overview(spec)}
 
 ## 图类型
 {mark}。{guidance}
