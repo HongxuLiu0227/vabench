@@ -32,7 +32,12 @@ def _generate(state: WorkerState) -> Dict[str, Any]:
         errors=errors,
     )
     if job.get("global_guidance"):
-        prompt += f"\n## 全局一致性要求（主管 agent 统一下发，所有视图共用）\n{job['global_guidance']}\n"
+        prompt += (
+            "\n## 全局一致性建议（补充参考，非强制）\n"
+            "以下建议用于统一各视图的观感细节。凡与 WIS 视觉规范冲突的，"
+            "一律以 WIS 为准；本建议不得推翻 WIS 已明确的颜色、图类型与布局。\n"
+            f"{job['global_guidance']}\n"
+        )
 
     raw = llm.invoke(prompt).content
     code = extract_code(raw if isinstance(raw, str) else str(raw))
