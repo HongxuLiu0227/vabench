@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from agent_pipeline_v2.dataprep.engine import run_query  # noqa: E402
 from agent_pipeline_v2.dataprep.csv_loader import EnrichedDataset, CoercionReport  # noqa: E402
 from .driver import OpenAICompatDriver  # noqa: E402
-from .loop import generate_view  # noqa: E402
+from .loop import generate_views_batch  # noqa: E402
 
 
 def _role_text(role: Dict[str, Any]) -> str:
@@ -55,21 +55,29 @@ def main() -> None:
     driver = OpenAICompatDriver()
 
     view_ids = [args.only] if args.only else list(specs.keys())
-    results = []
+    jobs = []
     for vid in view_ids:
         spec = specs[vid]
         sample = run_query(rows, spec)[:3]
-        role_text = _role_text(roles.get(vid, {}))
-        print(f"▶ 生成 {spec['view_name']} ({spec['mark']})...", flush=True)
-        result = generate_view(project, spec, sample, driver,
-                               interaction_role=role_text, max_attempts=args.attempts)
-        status = "✅" if result.success else "❌"
-        print(f"  {status} attempts={result.attempts}", flush=True)
-        if result.problems:
-            for p in result.problems[:3]:
+        jobs.append({
+            "spec": spec,
+            "data_sample": sample,
+            "interaction_role": _role_text(roles.get(vid, {})),
+        })
+
+    print(f"▶ 并发生成 {len(jobs)} 个视图（workers=4）...", flush=True)
+    results_raw = generate_views_batch(project, jobs, driver, max_attempts=args.attempts, workers=4)
+
+    results = []
+    for r in results_raw:
+        spec = specs[r.view_id]
+        status = "✅" if r.success else "❌"
+        print(f"  {status} {spec['view_name']} attempts={r.attempts}", flush=True)
+        if r.problems:
+            for p in r.problems[:3]:
                 print(f"     {p[:100]}", flush=True)
-        results.append({"view_id": vid, "success": result.success, "attempts": result.attempts,
-                        "problems": result.problems})
+        results.append({"view_id": r.view_id, "success": r.success, "attempts": r.attempts,
+                        "problems": r.problems})
 
     ok = sum(1 for r in results if r["success"])
     print(f"\n完成: {ok}/{len(results)} 视图生成成功")
