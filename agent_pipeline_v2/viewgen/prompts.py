@@ -26,7 +26,7 @@ MARK_GUIDANCE = {
     "line": "用 SVG <path> 画线（d3 line + scaleLinear/scalePoint）。",
     "circle": "用 SVG <circle> 画散点（d3 scaleLinear）。",
     "pie": "用 SVG <path> 画扇形（d3 pie + arc）。",
-    "treemap": "用 d3 treemap 布局；类型上叶子节点用 d3.HierarchyRectangularNode<行类型>（d3.treemap(...)(root).leaves() 的元素才有 x0/y0/x1/y1 属性）；每个块上用类别名做标签（如国家名），块足够大时再附数值。",
+    "treemap": "用 d3 treemap 布局；类型上叶子节点用 d3.HierarchyRectangularNode<行类型>（d3.treemap(...)(root).leaves() 的元素才有 x0/y0/x1/y1 属性）；每个块上用类别名做标签（如国家名）——**类别名字号必须清晰可读（不小于 13px，块越大字越大）**，块足够大时另起一行附数值。",
     "square": "用 SVG <rect> 网格/热力色块（颜色深浅编码数值）。",
     "text": "渲染大号 KPI 数字/文本，不需要坐标轴。",
     "area": "用 SVG <path> 画面积（d3 area）。",
@@ -150,6 +150,12 @@ def build_view_prompt(
 - 组件必须撑满父容器（width/height 100%），用 SVG viewBox 自适应。
 - 不许 fetch、不许聚合/过滤数据、不许 import 项目其他文件（除了 'd3'、'react'）。
 - 输出**只包含这一个 .tsx 文件的完整代码**，用 ```tsx 代码块包裹。
+
+## 悬浮交互（必须实现）
+- 鼠标悬浮在任何图形元素（柱子/方块/点/扇形）上时：
+  a) 该元素**高亮**（如加深描边或提高不透明度，其余元素可略微淡化）；
+  b) 显示 **tooltip**（悬浮提示框，跟随鼠标），内容为该元素的类别名和数值（千分位格式）。
+- 鼠标移出后恢复原状。tooltip 用简单的绝对定位 div 实现即可，样式简洁（白底、细边框、阴影）。
 {COLOR_GUIDANCE}
 """
     if interaction_role:
