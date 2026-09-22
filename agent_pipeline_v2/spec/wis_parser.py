@@ -588,11 +588,16 @@ def resolve_mark(panes: List[Dict[str, Any]], rows_tree: Dict[str, Any], cols_tr
     col_fields = shelf_fields(cols_tree)
     field_names = {f.get("name", "") for f in row_fields + col_fields}
     has_latlong = {"Latitude (generated)", "Longitude (generated)"} <= field_names
+    # 真实经纬度列也算（列名含 latitude/longitude，如 "end station latitude"）
+    lower_names = {n.lower() for n in field_names}
+    has_geo_cols = (
+        any("latitude" in n for n in lower_names) and any("longitude" in n for n in lower_names)
+    )
 
     # maps: declared geo classes, generated lat/long pairs, or geometry encodings
     if declared and declared.lower() in MAP_DECLARED_CLASSES:
         return _map_result(declared, channels, confidence="explicit", rule="declared")
-    if has_latlong or "geometry" in channels:
+    if has_latlong or has_geo_cols or "geometry" in channels:
         confidence = "explicit" if declared and declared != "Automatic" else "inferred"
         return _map_result(declared, channels, confidence=confidence, rule="lat_long_or_geometry")
 

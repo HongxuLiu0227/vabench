@@ -181,8 +181,9 @@ def run_query(rows: List[Dict[str, Any]], spec: Dict[str, Any]) -> List[Dict[str
     group_by = spec.get("group_by", [])
     aggregates = spec.get("aggregates", [])
 
-    # 2. row-level passthrough (scatter / symbol map)
-    if spec.get("row_level"):
+    # 2. row-level passthrough (scatter / symbol map / raw ops without grouping)
+    has_raw = any(a.get("op") == "raw" for a in aggregates)
+    if spec.get("row_level") or (not group_by and has_raw):
         out = []
         for r in filtered:
             record: Dict[str, Any] = {}

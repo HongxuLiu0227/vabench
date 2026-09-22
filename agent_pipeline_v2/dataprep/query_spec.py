@@ -66,6 +66,13 @@ def _date_key(field: Dict[str, Any]) -> Optional[Dict[str, str]]:
     return None
 
 
+def _is_bin_field(field: Dict[str, Any]) -> bool:
+    """Tableau 分箱字段（直方图横轴）——名字含 "(bin)"（含 "(bin) 1" 变体），
+    或计算副本的 _bin/_bin_1 形态。"""
+    name = (field.get("name") or "").strip().lower()
+    return "(bin)" in name or bool(re.search(r"_bin(_\d+)?$", name))
+
+
 def _walk_shelf_fields(tree: Dict[str, Any]) -> List[Dict[str, Any]]:
     out: List[Dict[str, Any]] = []
     if tree.get("op") == "field" and isinstance(tree.get("field"), dict):
@@ -192,6 +199,9 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
             continue
         # 日期派生字段永远是维度（时间轴），不管类型码怎么写
         if _date_key(field) is not None:
+            add_dimension(field)
+        elif _is_bin_field(field):
+            # 分箱字段是直方图的横轴维度
             add_dimension(field)
         elif (field.get("derivation") or "None") in AGG_OPS:
             # 有聚合派生的才是数值（Tableau 的"绿药丸"）
