@@ -240,6 +240,18 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
 
     sort = [{"field": g["as"], "order": "asc"} for g in group_by[:1]]
 
+    # 地图语义：重复位置（如同一站点的多条行程记录）+ 有聚合度量时，
+    # 按位置分组聚合（Tableau 每个位置一个 mark，数值编码到 size/color），
+    # 而不是行级直通（几十万行会把浏览器卡死，且视觉上全部叠在一个点上）
+    if mark == "map":
+        non_raw = [a for a in aggregates if a["op"] != "raw"]
+        raw_fields = [a for a in aggregates if a["op"] == "raw"]
+        if raw_fields:
+            for a in raw_fields:
+                if not any(g["field"] == a["field"] for g in group_by):
+                    group_by.append({"field": a["field"], "as": a["as"]})
+            aggregates = non_raw
+
     spec = {
         "view_id": _slug(name),
         "view_name": name,
@@ -249,14 +261,15 @@ def derive_query_spec(worksheet: Dict[str, Any], datasource_caption: str) -> Dic
         "aggregates": aggregates,
         "filters": filters,
         "sort": sort,
-        "row_level": mark in ROW_LEVEL_MARKS and not aggregates,
         "channels": {
             "color": [f["name"] for f in color_fields],
             "size": [f["name"] for f in size_fields],
             "text": [f["name"] for f in text_fields],
         },
     }
-    # row-level marks still need their measures as raw columns
+    # row_level 必须在地图分组规则之后判定：有分组的行级图（散点）才是行级，
+    # 被地图分组规则消费过的不再是行级
+    spec["row_level"] = mark in ROW_LEVEL_MARKS and not group_by
     if spec["row_level"]:
         for agg in aggregates:
             agg["op"] = "raw"
