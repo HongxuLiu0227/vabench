@@ -17,7 +17,7 @@ __all__ = ["LLMDriver", "APIConfig", "OpenAICompatDriver", "load_env"]
 
 
 class LLMDriver(Protocol):
-    def generate(self, prompt: str, *, temperature: float = 0.0) -> str: ...
+    def generate(self, prompt: str, *, temperature: Optional[float] = None) -> str: ...
 
 
 def load_env(env_path: str | Path = ".env") -> None:
@@ -57,12 +57,14 @@ class OpenAICompatDriver:
         self.config = config or APIConfig.from_env()
         self.timeout = timeout
 
-    def generate(self, prompt: str, *, temperature: float = 0.0) -> str:
-        body = {
+    def generate(self, prompt: str, *, temperature: Optional[float] = None) -> str:
+        body: dict = {
             "model": self.config.model,
             "messages": [{"role": "user", "content": prompt}],
-            "temperature": temperature,
         }
+        # 有的模型限制 temperature 取值（如 k3 只允许 1）——不传时用服务端默认
+        if temperature is not None:
+            body["temperature"] = temperature
         req = urllib.request.Request(
             f"{self.config.base_url}/chat/completions",
             data=json.dumps(body).encode("utf-8"),

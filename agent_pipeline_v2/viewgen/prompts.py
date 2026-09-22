@@ -26,7 +26,7 @@ MARK_GUIDANCE = {
     "line": "用 SVG <path> 画线（d3 line + scaleLinear/scalePoint）。",
     "circle": "用 SVG <circle> 画散点（d3 scaleLinear）。",
     "pie": "用 SVG <path> 画扇形（d3 pie + arc）。",
-    "treemap": "用嵌套矩形（d3 treemap 或直接按面积比例布局）；每个块上用类别名做标签（如国家名），块足够大时再附数值。",
+    "treemap": "用 d3 treemap 布局；类型上叶子节点用 d3.HierarchyRectangularNode<行类型>（d3.treemap(...)(root).leaves() 的元素才有 x0/y0/x1/y1 属性）；每个块上用类别名做标签（如国家名），块足够大时再附数值。",
     "square": "用 SVG <rect> 网格/热力色块（颜色深浅编码数值）。",
     "text": "渲染大号 KPI 数字/文本，不需要坐标轴。",
     "area": "用 SVG <path> 画面积（d3 area）。",

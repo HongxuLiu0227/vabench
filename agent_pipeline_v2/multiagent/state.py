@@ -27,13 +27,14 @@ def _load_env(env_path: str = ".env") -> None:
             os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
-def make_llm(temperature: float = 0.0, **kwargs: Any) -> ChatOpenAI:
+def make_llm(**kwargs: Any) -> ChatOpenAI:
+    # 不传 temperature：有的模型限制取值（如 k3 只允许 1），用服务端默认
+    kwargs.pop("temperature", None)
     _load_env()
     return ChatOpenAI(
         model=os.environ.get("MODEL_NAME", ""),
         api_key=os.environ.get("LLM_KEY", ""),
         base_url=os.environ.get("LLM_BASE_URL", ""),
-        temperature=temperature,
         **kwargs,
     )
 

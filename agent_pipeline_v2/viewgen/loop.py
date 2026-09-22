@@ -41,7 +41,8 @@ MARK_ELEMENTS = {
 FORBIDDEN_PATTERNS = [
     (re.compile(r"fetch\s*\("), "不许 fetch（数据已由 props.data 提供）"),
     (re.compile(r"from\s+['\"]\.\./"), "不许 import 项目内其他文件"),
-    (re.compile(r"\.groupBy\(|\.reduce\("), "不许自己聚合数据"),
+    # .reduce 是通用工具，只禁止"手写聚合"的典型形态
+    (re.compile(r"\.reduce\(\s*\(\s*(sum|total|acc)\s*,", re.IGNORECASE), "不许自己聚合数据"),
 ]
 
 
